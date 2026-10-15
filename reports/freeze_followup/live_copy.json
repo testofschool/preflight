@@ -1,0 +1,11 @@
+{
+  "V4_body": "Five-seed held-out vote both-bad AUC 0.668329 < 0.68. Cold-start IRT 0.714796 ≥ 0.696622 baseline; strict train-only TF-IDF 0.715403. The composite fails its first condition. Evaluation, stdout.",
+  "V4_status": "FAIL; exact 0.72 UNVERIFIABLE",
+  "V8_body": "0/3 known-defect clips validated. One owner clip was inspected and reviewed as a negative control, with no independently confirmed intrinsic defect; it does not count toward V8. All nine owner shots are resident and independently screened; 0 clips have a confirmed intrinsic defect in the sampled references. Accuracy is UNVERIFIABLE from these fixtures. Availability, frozen negative-control reference.",
+  "V8_status": "NOT RUN",
+  "coldStart": "First request after idle may take ~20 s (cold start, min-instances 0).",
+  "documentOverflow": false,
+  "mode": "CLOUD MODE",
+  "sessionVisible": true,
+  "url": "https://preflight-jcgro45veq-as.a.run.app/architecture"
+}

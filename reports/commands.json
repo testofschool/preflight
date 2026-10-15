@@ -312,5 +312,44 @@
     "exit_code": 0,
     "stdout_file": "logs/browser_postcheck_flagged_qa.txt",
     "note": "0newmodelcalls;notV8."
+  },
+  {
+    "name": "freeze_billing_console",
+    "method": "Authenticated Cloud Billing live-cost report grouped byservice; sole linkedproject/account matched to authorized gcloud config without emittingidentifiers",
+    "receipt": "reports/freeze_followup/spend.json",
+    "native_evidence": "Sibling evidence/preflight-20261016/billing-console",
+    "application_model_calls": 0
+  },
+  {
+    "name": "freeze_copy_build",
+    "method": "One CloudOperations gcloud build with runtime-only image/account substitution; inputdigest retained separately",
+    "receipt": "reports/freeze_followup/cloud_build.json",
+    "exit_code": 0
+  },
+  {
+    "name": "freeze_copy_deploy",
+    "method": "Existing Cloud Run service updated onlyto newimage; nativebefore/after spec compared excludingimage",
+    "receipt": "reports/freeze_followup/cloud_run.json",
+    "stdout_file": "logs/freeze_copy_deploy.txt",
+    "exit_code": 0
+  },
+  {
+    "name": "freeze_live_copy",
+    "method": "Real browser GET/navigation plus renderedDOMwording equality to canonicalV4/V8; no inferencePOST",
+    "receipt": "reports/freeze_followup/copy_checks.json",
+    "exit_code": 0
+  },
+  {
+    "name": "freeze_verifier_regressions",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_verify_postcheck.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/verification_helper_tests.txt",
+    "note": "19offline tests; fakeHTTP/temporarysources only;0realAPI/modelcalls"
   }
 ]

@@ -272,5 +272,12 @@
     "build_receipt": "reports/cloud_build.json"
   },
   "reporting_scope": "This ledger records native receipt evidence and explicit limits; it does not claim full handoff acceptance. Historical Track A receipts are preserved separately in reports/track_a_before_postcheck.",
-  "verification_attempts_receipt": "reports/verification_attempts.json"
+  "verification_attempts_receipt": "reports/verification_attempts.json",
+  "feature_freeze_followup": {
+    "report": "reports/freeze_followup/REPORT.md",
+    "current_copy_fix_config": "reports/freeze_followup/cloud_run.json",
+    "baseline_feature_evidence_retained": true,
+    "V4_V8_results_unchanged": true,
+    "V4_V8_canonical_report_text_unchanged": true
+  }
 }

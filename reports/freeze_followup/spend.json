@@ -1,0 +1,40 @@
+{
+  "observed_at_kst": "2026-10-16T08:48:26+09:00",
+  "source": "Authenticated Google Cloud Billing console, Live costs, grouped by service",
+  "project_id": "[REDACTED]",
+  "billing_account_id": "[REDACTED]",
+  "configured_project_link_verified": true,
+  "account_has_one_linked_project": true,
+  "displayed_period": "2026-10-01 through 2026-10-15",
+  "currency": "KRW",
+  "rows": [
+    {
+      "service": "Vertex AI",
+      "posted_actual_cost_krw_display": "₩0",
+      "live_estimate_krw_display": "~₩884"
+    },
+    {
+      "service": "Cloud Run",
+      "posted_actual_cost_krw_display": "₩0",
+      "live_estimate_krw_display": "~₩26"
+    }
+  ],
+  "headline_posted_actual_cost_krw_display": "₩0",
+  "headline_live_cost_krw_display": "~₩910.4",
+  "table_subtotal_krw_display": "~₩910",
+  "precision": "Service rows and table subtotal are rounded separately by the console; do not treat their rounded sum as exact.",
+  "interpretation": "Posted actual cost is zero so far; this is not zero incurred cost. Live estimates are directional, cover eligible SKUs, exclude credits and may change when fully monetized. Actual billed spend remains unfinalized.",
+  "scope": "Project-wide Vertex AI and Cloud Run service costs in the displayed window; does not isolate other project resources or include all GCP services.",
+  "earlier_actual_cost_view": "Standard service report displayed ₩0 and no rows; live-cost report supplied the nonzero estimates.",
+  "evidence": [
+    "live-services-redacted.txt",
+    "project-linkage-redacted.json",
+    "live-services.png",
+    "live-service-totals-viewport.png"
+  ],
+  "billing_cap_changed": false,
+  "bill_payments_performed": false,
+  "new_application_model_calls": 0,
+  "non_evidence_capture": "header-only-crop.png is a failed crop attempt, not a service-total proof",
+  "external_evidence_location": "Sibling evidence/preflight-20261016/billing-console; native screenshots and redacted console text remain outside the source repository."
+}

@@ -1,0 +1,67 @@
+{
+  "scope": "verification helper regression fixes only; no product/runtime/dependency changes",
+  "recorded_at_utc": "2026-10-15T23:54:45.893847+00:00",
+  "files_changed": [
+    "scripts/verify_postcheck.py",
+    "tests/test_verify_postcheck.py"
+  ],
+  "command": "../.preflight-cloud-venv/bin/python -m pytest tests/test_verify_postcheck.py -q",
+  "observed_stdout": "...................                                                      [100%]\n19 passed in 0.10s\n",
+  "tests_passed": 19,
+  "partial_contract": {
+    "flag": "--allow-partial",
+    "clips_permitted": [
+      1,
+      2
+    ],
+    "required_clips_unchanged": 3,
+    "minimum_matches_unchanged": 2,
+    "tolerance_seconds_unchanged": 2,
+    "V8_pass": null,
+    "status": "PARTIAL",
+    "exit_code": 3
+  },
+  "fresh_credit_contract": "Requires native model_calls_this_request>=2, reused_stored_review=false, concurrent_review_discarded=false, and a valid timezone-aware nonfuture human-label freeze preceding the request",
+  "human_reference_attestation": "owner_confirmed=true must be supplied by the human-owner label reference; no actual owner fixtures were created",
+  "persistent_ledger": "Fixed external local ledger is keyed by source SHA only; label hash is immutable metadata; filelock, atomic replace and fsync persist ATTEMPT_STARTED before POST; unknown/repeated sources and changed labels reject across output filenames",
+  "prior_receipt_read_only_check": {
+    "prior_review_source_count": 2,
+    "cached01_ineligible_for_new_label_credit": true,
+    "cached02_ineligible_for_new_label_credit": true,
+    "production_ledger_written": false
+  },
+  "reason_review_contract": "Category/time matches are mechanical only. Full mechanical pass leaves V8_pass=null and exits 3 pending manual visual-reason review; no accuracy success claim is produced by this helper.",
+  "source_sha256": {
+    "scripts/verify_postcheck.py": "cd537dd7938b0552d62bfff7a07a67639275ee615dc7acfe1508e3d7a31dcc62",
+    "tests/test_verify_postcheck.py": "0ce9cb2edc7495ade1c1f6336886561aee1661c1540ba48126f6ec36fddb17a2"
+  },
+  "actual_owner_fixtures_created": 0,
+  "owner_file_reads": 0,
+  "model_calls": 0,
+  "api_calls": 0,
+  "full_cohort_result_contract": {
+    "mechanical_pass": {
+      "mechanical_match_pass": true,
+      "V8_pass": null,
+      "status": "MECHANICAL_PASS_PENDING_MANUAL_REVIEW",
+      "exit_code": 3
+    },
+    "mechanical_fail": {
+      "mechanical_match_pass": false,
+      "V8_pass": false,
+      "status": "MECHANICAL_FAIL",
+      "exit_code": 1
+    },
+    "manual_reason_review_status": "REQUIRED_NOT_PERFORMED_BY_THIS_HELPER",
+    "accuracy_claim_status": "NOT_ESTABLISHED_BY_THIS_HELPER",
+    "no_automatic_final_success": true
+  },
+  "count_metadata_contract": {
+    "model_call_count_complete": "True only when at least one row exists and every observed row has a nonnegative native integer model call count; independent of three-clip completion",
+    "cohort_complete": "True exactly when three clip rows were observed",
+    "partial_rows_with_all_known_call_counts": {
+      "model_call_count_complete": true,
+      "cohort_complete": false
+    }
+  }
+}

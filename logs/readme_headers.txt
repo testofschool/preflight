@@ -1,5 +1,6 @@
 # Preflight
 ## Current evidence
+## Acceptance limits
 ## Run the local fallback
 ## Architecture
 ## Runtime configuration

@@ -1,0 +1,11 @@
+{
+  "feature_freeze_baseline_commit": "c64a3619c96e45ef67354e76472479163839e7e6",
+  "checked_files": 20,
+  "runtime_feature_or_dependency_differences": [],
+  "permitted_runtime_copy_change": [
+    "static/architecture.html"
+  ],
+  "canonical_completion_report_sha256": "a75d3b29cf6f41eeee13b46dcf30dbfb78f7c6df3f065ed8df3b14051ac831ef",
+  "new_application_model_calls": 0,
+  "veo_calls": 0
+}

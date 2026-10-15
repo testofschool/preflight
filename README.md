@@ -2,7 +2,9 @@
 
 Inspect a video prompt before generating a clip, or upload an existing owner-provided clip for a machine review. Preflight retrieves five similar historical prompts, reports a statistical risk signal, and asks a connected Gemini agent for an alternative prompt. The interface presents an alternative only when its estimated risk is strictly lower than the original prompt’s estimate. With machine feedback, that estimate is a mixed heuristic proxy. No video is generated.
 
-**The primary release serves Track A and upload-only Track B.** Open [the live Preflight app](https://preflight-jcgro45veq-as.a.run.app), revision `preflight-00007-q2d`. V3, V5, V6 and V7 are PASS. The latest ten-case rewrite run returned nine strict improvements and one safe abstention, with zero higher-risk returns. Full acceptance is not claimed: V4 remains FAIL, and V8 is NOT_RUN at 0/3 known-defect clips. All nine owner files were hydrated and cached by 2026-10-16 05:09:55 KST. Independent local reference annotation is complete, but the required confirmed known-defect set has not been established.
+**The primary release serves Track A and upload-only Track B.** Open [the live Preflight app](https://preflight-jcgro45veq-as.a.run.app), revision `preflight-00008-g92`. V3, V5, V6 and V7 are PASS. The latest ten-case rewrite run returned nine strict improvements and one safe abstention, with zero higher-risk returns. Overall acceptance remains PARTIAL; the canonical V4 and V8 limits are reproduced below. All nine owner files were hydrated and cached by 2026-10-16 05:09:55 KST. Independent local reference annotation is complete, but the required confirmed known-defect set has not been established.
+
+First request after idle may take ~20 s (cold start, min-instances 0).
 
 ## Current evidence
 
@@ -14,10 +16,19 @@ Observed on 2026-10-16:
 | Agent Platform Sessions | Genuine managed-session create/read health check passed | Minimum supported TTL is 24 hours; this does not prove the full rewrite workflow |
 | Vertex Gemini | Gemini 3.5 Flash runs through Vertex Application Default Credentials in Singapore; real ADK requests succeeded | Statistical improvement does not establish generated-video quality |
 | ADK workflow | V5 PASS: 9/10 strict improvements, above the required 6/10; cat/dog returned `no_safe_rewrite`; zero higher-risk returns. V6 verified six tools and genuine managed sessions for all ten cases, with ten attempts and zero retries | A lower proxy score does not establish generated-video quality or better future predictions |
-| Cloud Run | Primary revision `preflight-00007-q2d` serves both workflows. The latest V3 release-validation report is PASS: one cold request and five warm sample requests all returned HTTP 200 with six tools and verified sessions | Measured cold 19.738130s; warm 4.862889, 4.586187, 4.378278, 4.620390 and 4.329699s. The report records validation revision `preflight-00006-d4s`; final configuration is reported separately below |
-| Track B | Current optimized revision seven completed a fresh cached02 review in 10.346132s with two model calls, flagging a machine-reported physics issue at 4.5s. The earlier cached01 native Pass took 18.950459s on the two-pass image; its stored-review checks took 0.937997s initially and 1.560978s on the primary | The cached02 flag is not independently confirmed. One fresh optimized measurement is not a latency guarantee or V8 evidence; V8 remains NOT_RUN, 0/3 |
+| Cloud Run | Primary revision `preflight-00008-g92` serves both workflows. The latest V3 release-validation report is PASS: one cold request and five warm sample requests all returned HTTP 200 with six tools and verified sessions | Measured cold 19.738130s; warm 4.862889, 4.586187, 4.378278, 4.620390 and 4.329699s. The report records validation revision `preflight-00006-d4s`; final configuration is reported separately below |
+| Track B | Feature-baseline optimized revision seven completed a fresh cached02 review in 10.346132s with two model calls, flagging a machine-reported physics issue at 4.5s. The earlier cached01 native Pass took 18.950459s on the two-pass image; its stored-review checks took 0.937997s initially and 1.560978s on the primary | The cached02 flag is not independently confirmed. One fresh optimized measurement is not a latency guarantee or V8 evidence; see the canonical V8 clause below |
 
 The separate AI Studio API-key planner attempt returned HTTP 402 because prepaid credit was depleted. Production explicitly selects Vertex ADC. It does not silently fall back between credential backends. No credential value or actual cloud project identifier belongs in this repository.
+
+## Acceptance limits
+
+The following status and evidence clauses are copied verbatim from the canonical acceptance ledger in [COMPLETION_REPORT.md](COMPLETION_REPORT.md).
+
+| Check | Status | Evidence and limits |
+| --- | --- | --- |
+| V4 | **FAIL; exact 0.72 UNVERIFIABLE** | Five-seed held-out vote both-bad AUC **0.668329 < 0.68**. Cold-start IRT **0.714796 ≥ 0.696622** baseline; strict train-only TF-IDF **0.715403**. The composite fails its first condition. [Evaluation](artifacts/evaluation.json), [stdout](logs/evaluation.txt). |
+| V8 | **NOT RUN** | **0/3 known-defect clips** validated. One owner clip was inspected and reviewed as a negative control, with no independently confirmed intrinsic defect; it does not count toward V8. All nine owner shots are resident and independently screened; **0** clips have a confirmed intrinsic defect in the sampled references. Accuracy is **UNVERIFIABLE** from these fixtures. [Availability](reports/owner_clip_availability.json), [frozen negative-control reference](reports/postcheck_canary_reference.json). |
 
 ## Run the local fallback
 
@@ -78,7 +89,7 @@ Supply configuration through the runtime environment or the deployment’s crede
 
 Application Default Credentials are required for the production Vertex and Firestore path. Keep credentials and resource identifiers out of source, screenshots, command transcripts, and committed logs. The pre-commit guard scans worktree files and staged blobs for forbidden credential markers without printing values.
 
-Current primary revision `preflight-00007-q2d` uses region `asia-southeast1`, minimum instances zero, concurrency 80, and timeout 40 seconds. The [V3 release-validation report](reports/cloud_latency_postcheck_release.json) measured a 19.738130-second cold request and warm requests of 4.862889, 4.586187, 4.378278, 4.620390 and 4.329699 seconds. That report records validation revision `preflight-00006-d4s` and timeout 38 seconds; those timings were not remeasured on final revision seven. Runtime configuration, cached request timing, local decode timing and uncached inference timing are separate evidence.
+Current primary revision `preflight-00008-g92` uses region `asia-southeast1`, minimum instances zero, concurrency 80, and timeout 40 seconds. The [V3 release-validation report](reports/cloud_latency_postcheck_release.json) measured a 19.738130-second cold request and warm requests of 4.862889, 4.586187, 4.378278, 4.620390 and 4.329699 seconds. That report records validation revision `preflight-00006-d4s` and timeout 38 seconds; those timings were not remeasured on the copy-fix revision. The feature runtime is unchanged; see the [freeze follow-up](reports/freeze_followup/REPORT.md). Runtime configuration, cached request timing, local decode timing and uncached inference timing are separate evidence.
 
 ## Data source and licence
 
@@ -100,7 +111,7 @@ Gemini proposes candidates; the statistical guard decides whether one may be pre
 
 **Limits:** the evidence comes from 2024-era public votes. Preflight does not route between video models, validate current Veo performance, establish money saved, or inspect videos in Track A. Positive discrimination gives the same model ordering for every item. No novel published research result is claimed.
 
-The supplied preregistration defines Q1–Q4 but no both-bad AUC target or evaluation. The supplied results file has a diagnostic prefix before its JSON and does not contain the claimed exact 0.72 both-bad AUC. The declared V4 both-bad diagnostic is **FAIL**: AUC `0.6683289428340439` is below `0.68`. The exact 0.72 reproduction remains **UNVERIFIABLE**. Preregistered cell tests and declared both-bad diagnostics remain separate; thresholds and seeds are not changed to turn a failure into a pass.
+The supplied preregistration defines Q1–Q4 but no both-bad AUC target or evaluation. The supplied results file has a diagnostic prefix before its JSON and does not contain the claimed exact 0.72 both-bad AUC. V4’s canonical status and numerical evidence are reproduced in Acceptance limits above. Preregistered cell tests and declared both-bad diagnostics remain separate; thresholds and seeds are not changed to turn a failure into a pass.
 
 ## Cost assumptions
 
@@ -120,7 +131,7 @@ Paste any of these into the input, or use its sample buttons:
 
 ## Upload-only clip review
 
-Track B reviews a clip that the owner already has and is enabled on the primary public URL. Its [native canary receipt](reports/postcheck_canary_live.json) records one genuine review of resident cached01, followed by stored-review reuse. The [optimized smoke receipt](reports/postcheck_optimized_smoke.json) records a second fresh review, cached02, on revision `preflight-00007-q2d`: 10.346132 seconds and two model calls. Stored review is reused without a new model call. The review control is enabled only when `/api/status` explicitly reports `postcheck` ready. It never requests a Veo generation.
+Track B reviews a clip that the owner already has and is enabled on the primary public URL. Its [native canary receipt](reports/postcheck_canary_live.json) records one genuine review of resident cached01, followed by stored-review reuse. The [optimized smoke receipt](reports/postcheck_optimized_smoke.json) records a second fresh review, cached02, on revision `preflight-00008-g92`: 10.346132 seconds and two model calls. Stored review is reused without a new model call. The review control is enabled only when `/api/status` explicitly reports `postcheck` ready. It never requests a Veo generation.
 
 Choose an MP4 video up to 30 MiB and 30 seconds, inspect it with the local preview controls, and enter its intended prompt. A preflight is not required: the clip has its own required prompt field, with an optional shortcut to reuse the prompt above. The optional model label defaults to `owner-upload` and is displayed as owner-provided information. The file is sent only when Review is pressed, using multipart `POST /postcheck` fields `video`, `prompt`, and `model`.
 
@@ -134,7 +145,7 @@ The current image prepares video and frame evidence in one decode. Local preproc
 
 Cached02’s fresh machine review flagged a physics issue at 4.5 seconds and changed the mixed proxy from `0.2909090909090909` to `0.32636363636363636`; its human-only estimate stayed at `0.2909090909090909`. This machine flag has not been independently confirmed and does not establish a known-defect positive. A separate [primary browser check](reports/browser_postcheck_flagged_qa.json) uploaded cached02 exactly once and reused the stored flag with zero new model calls. It displayed Flagged, the actual reason at `00:04`, and the separate historical 29.1% versus updated 32.6% values. Clicking the timecode sought to 4.5 seconds. Both desktop and mobile rendered without overflow or application errors; local aborted preview-range requests are recorded in the receipt. The original Pass receipt and frozen independent annotations remain unchanged.
 
-**V8 is NOT_RUN: 0/3 known-defect clips.** All nine owner shots were hydrated and cached by 2026-10-16 05:09:55 KST; they are available for local inspection. The earlier manual-unlock/download request is resolved as an access blocker, with no user action pending for clip access. Independent local reference annotation is complete, but it did not establish the required set of confirmed intrinsic defects. Cached01 remains a negative control with no confirmed defects. Clips08 and09 were independently frozen as no-confirmed-defect references after timestamped contact-sheet and targeted-frame inspection. A functional pipeline, machine Pass, or unconfirmed visual suspicion does not satisfy V8 defect-detection acceptance.
+V8’s canonical status and evidence are reproduced in Acceptance limits above. All nine owner shots were hydrated and cached by 2026-10-16 05:09:55 KST; they are available for local inspection. The earlier manual-unlock/download request is resolved as an access blocker, with no user action pending for clip access. Independent local reference annotation is complete, but it did not establish the required set of confirmed intrinsic defects. Cached01 remains a negative control with no confirmed defects. Clips08 and09 were independently frozen as no-confirmed-defect references after timestamped contact-sheet and targeted-frame inspection. A functional pipeline, machine Pass, or unconfirmed visual suspicion does not satisfy V8 defect-detection acceptance.
 
 ## Operational limits
 
@@ -150,4 +161,6 @@ V3 is PASS in the [latest release-validation report](reports/cloud_latency_postc
 
 The [current-release rewrite receipt](reports/rewrites_postcheck_release.json) records V5 PASS: nine of ten strict improvements against a minimum of six, with cat/dog returning `no_safe_rewrite`. All ten tool workflows and managed sessions passed V6; there were ten HTTP attempts, zero retries and zero higher-risk returns. The [postcheck integrity receipt](reports/firestore_integrity_postcheck.json) matches all 1,016 expected historical documents to the exported content with zero differences. The [Firestore counts receipt](reports/firestore_postcheck_counts.json) now records 510 prompts, 508 items and two real verdicts for V7 PASS.
 
-V4 remains FAIL and the exact 0.72 claim remains UNVERIFIABLE. Track A and upload-only Track B are live on the primary URL, with V7 storage/feedback evidence accepted. V8 remains NOT_RUN at 0/3 known-defect clips. One fresh optimized cloud review is measured, while performance on other clips remains UNMEASURED. Component readiness, browser checks, deployment, prediction validity and defect-detection acceptance remain separate claims.
+The canonical V4 and V8 acceptance clauses above remain unchanged. Track A and upload-only Track B are live on the primary URL, with V7 storage/feedback evidence accepted. One fresh optimized cloud review is measured, while performance on other clips remains UNMEASURED. Component readiness, browser checks, deployment, prediction validity and defect-detection acceptance remain separate claims.
+
+The [freeze follow-up](reports/freeze_followup/REPORT.md) records the missing billing-console observation, this copy-only deployment and human-confirmed V8 readiness.

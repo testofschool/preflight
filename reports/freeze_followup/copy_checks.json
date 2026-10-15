@@ -1,0 +1,11 @@
+{
+  "V4_README_verbatim": true,
+  "V4_live_status_verbatim": true,
+  "V4_live_body_verbatim": true,
+  "V8_README_verbatim": true,
+  "V8_live_status_verbatim": true,
+  "V8_live_body_verbatim": true,
+  "cold_start_exact": true,
+  "no_horizontal_overflow": true,
+  "canonical_report_unchanged": true
+}

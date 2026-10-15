@@ -1,0 +1,12 @@
+.git
+**/__pycache__
+.pytest_cache
+.venv
+tests
+logs
+reports
+data
+*.md
+scripts
+artifacts/*initial*
+artifacts/*stdout*

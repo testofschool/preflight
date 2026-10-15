@@ -1,0 +1,46 @@
+{
+  "check": "V1",
+  "complete": true,
+  "errors": [],
+  "excluded_directory_names": [
+    ".cache",
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "node_modules",
+    "venv"
+  ],
+  "files_scanned": {
+    "python-lexical": 28,
+    "text-whitespace": 65
+  },
+  "limitation": "zero overlap does not establish code creation date or independent authorship",
+  "matches": [],
+  "matching_file_count": 0,
+  "methods": {
+    "python-lexical": "exact Python token strings; comments, whitespace, indentation and line breaks excluded",
+    "text-whitespace": "exact UTF-8 tokens split on whitespace for other text files"
+  },
+  "skipped_files": [
+    {
+      "file": "artifacts/dataset.npz",
+      "reason": "binary-or-non-utf8"
+    },
+    {
+      "file": "artifacts/prompt_vectors.npz",
+      "reason": "binary-or-non-utf8"
+    },
+    {
+      "file": "artifacts/vectorizer.joblib",
+      "reason": "binary-or-non-utf8"
+    },
+    {
+      "file": "data/genai_video_test.parquet",
+      "reason": "binary-or-non-utf8"
+    }
+  ],
+  "window_tokens": 20
+}

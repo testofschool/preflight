@@ -1,0 +1,13 @@
+seed  Q1_IRT  Q1_B1  Q2_IRT  Q2_B1  risk_vote_AUC  length_AUC
+0  0.641030  0.699978  0.754138  0.761962  0.609118  0.512973
+1  0.663227  0.735305  0.745509  0.732235  0.558525  0.562877
+2  0.641942  0.704258  0.751309  0.729635  0.691815  0.564284
+3  0.654535  0.718046  0.730312  0.741509  0.592426  0.609059
+4  0.673011  0.697035  0.704644  0.703154  0.524704  0.525759
+Q1 {"mean_irt": 0.6547491548901563, "mean_baseline": 0.7109245089865462, "margin": -0.05617535409638996, "pass": false}
+Q2 {"mean_irt": 0.7371824176793023, "mean_baseline": 0.7336988125847572, "margin": 0.003483605094545039, "pass": true}
+Q3 {"global_best": "StableVideoDiffusion", "share_prompts_with_different_best": 0.0, "positive_discrimination_implication": "Every prompt has the same ability ordering because every discrimination is positive; no prompt-specific model routing"}
+Q4 {"mean_paired_difference": 0.0, "pass": false}
+both_bad_risk {"mean_vote_auc": 0.595317688368965, "mean_negative_length_vote_auc": 0.5549902649529924, "mean_any_both_bad_prompt_auc": 0.5973280599844168, "declared_vote_metric_meets_0_68": false, "exact_handoff_reproduction": "UNVERIFIABLE: binary target and aggregation omitted from supplied preregistration/results"}
+V4 {"numerical_conditions_on_declared_metrics": false, "exact_claim_reproduction": "UNVERIFIABLE", "reason": "Both-bad target and IRT penalty strength are unspecified in supplied preregistration; this fresh run declares both without tuning"}
+converged_fits=11/11

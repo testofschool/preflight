@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ee">
+  <title>Preflight — Check before you generate</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23142b31'/%3E%3Cpath d='M7 23 16 7l9 16H7Z' fill='none' stroke='%23dcf0e8' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/status.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Preflight home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M5 19.5 13.8 5 23 19.5H5Z"/><path d="M9 19.5 14 11l5 8.5M14 19.5v4"/></svg></span>preflight<span class="brand-period">.</span></a>
+      <nav class="header-nav" aria-label="Main navigation"><a href="/architecture">How it works <span aria-hidden="true">↗</span></a><span class="mode-pill pending"><span class="status-dot" aria-hidden="true"></span><span id="mode-label">CONNECTING</span></span></nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> AN EARLY CHECK FOR YOUR VIDEO PROMPT</div>
+        <h1 id="page-title">Before the first frame.</h1>
+        <p class="intro-copy">Look for signs of a difficult prompt before spending on a generation.</p>
+        <div class="connection-row" id="session-row" hidden><span class="session-badge"><span class="status-dot" aria-hidden="true"></span>SESSION ACTIVE</span><span class="session-caption">Agent Platform</span></div>
+      </section>
+
+      <div class="workspace">
+        <section class="prompt-panel" aria-labelledby="prompt-heading">
+          <div class="panel-label"><span class="step-number">01</span><h2 id="prompt-heading">Start with your idea</h2></div>
+          <form id="prompt-form" novalidate>
+            <label for="prompt">Your video prompt</label>
+            <div class="textarea-wrap"><textarea id="prompt" name="prompt" rows="6" maxlength="4000" placeholder="Describe the scene you want to create…" aria-describedby="prompt-hint prompt-error" required></textarea><span id="character-count" class="character-count" aria-hidden="true">0 / 4,000</span></div>
+            <p id="prompt-hint" class="field-hint">A short scene description is enough to start.</p>
+            <p id="prompt-error" class="form-error" role="alert" hidden></p>
+            <div class="sample-header">TRY A SAMPLE <span aria-hidden="true">↙</span></div>
+            <div class="sample-prompts" aria-label="Sample prompts">
+              <button class="sample" type="button" data-prompt="a cat and a dog">A cat and a dog <span aria-hidden="true">↗</span></button>
+              <button class="sample" type="button" data-prompt="a spoon and a laptop">A spoon and a laptop <span aria-hidden="true">↗</span></button>
+              <button class="sample" type="button" data-prompt="a bicycle and a car">A bicycle and a car <span aria-hidden="true">↗</span></button>
+              <button class="sample" type="button" data-prompt="indoor gymnasium">Indoor gymnasium <span aria-hidden="true">↗</span></button>
+              <button class="sample" type="button" data-prompt="a purple clock">A purple clock <span aria-hidden="true">↗</span></button>
+            </div>
+            <button id="check-button" class="primary-button" type="submit"><span id="button-label">Check this prompt</span><span class="button-arrow" aria-hidden="true">→</span><span class="button-spinner" aria-hidden="true"></span></button>
+          </form>
+          <div class="local-note"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="11" rx="2"/><path d="M7 17h6M10 14v3M7 8l2 2 4-4"/></svg><p><span id="runtime-note">Checking service status.</span><br><span>No video is generated.</span></p></div>
+        </section>
+
+        <section class="results-panel" aria-labelledby="results-heading" aria-busy="false">
+          <div class="results-heading-row"><div class="panel-label"><span class="step-number">02</span><h2 id="results-heading">Your preflight</h2></div><span id="result-state" class="result-state">READY WHEN YOU ARE</span></div>
+          <p id="checked-prompt" class="checked-prompt" hidden></p>
+          <div id="results-announcement" class="sr-only" role="status" aria-live="polite"></div>
+          <article class="result-card risk-card" aria-labelledby="risk-heading">
+            <div class="card-topline"><h3 id="risk-heading">Risk</h3><span class="card-index">01 / 03</span></div>
+            <div class="risk-content"><div><div class="risk-reading"><span id="risk-value">—</span><span id="risk-unit" class="risk-unit" hidden>%</span></div><p id="risk-label" class="risk-label">A signal, before you spend.</p></div><div id="risk-symbol" class="risk-symbol" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="36"/><path d="M50 23v31M50 65v2"/></svg></div></div>
+            <div class="risk-track" aria-hidden="true"><span id="risk-fill"></span></div>
+            <p id="risk-detail" class="card-caption">Check a prompt to inspect the available evidence.</p>
+            <p id="risk-history" class="historical-detail" hidden></p>
+            <p class="evidence-boundary">Historical evidence is a signal, not a validated probability of a Veo generation failing.</p>
+          </article>
+          <div class="secondary-cards">
+            <article class="result-card why-card" aria-labelledby="why-heading"><div class="card-topline"><h3 id="why-heading">Why</h3><span class="card-index">02 / 03</span></div><div id="why-content" class="card-body empty-body"><span class="empty-mark" aria-hidden="true">↗</span><p>See the evidence<br>behind the estimate.</p></div><div id="neighbors" class="neighbors" hidden></div></article>
+            <article class="result-card better-card" aria-labelledby="better-heading"><div class="card-topline"><h3 id="better-heading">Better prompt</h3><span class="card-index">03 / 03</span></div><div id="better-content" class="card-body"><span class="feature-tag">CHECKING REWRITE STATUS</span><p class="rewrite-description">A rewrite appears only when it passes the risk check.</p><p class="subtle-copy">A lower estimate does not guarantee a better video.</p></div></article>
+          </div>
+          <div class="cost-line"><span>Illustrative generation budget</span><span id="cost-value">—</span></div>
+          <p id="cost-note" class="cost-note">A generation budget appears after the check. No video is generated.</p>
+        </section>
+      </div>
+
+      <footer class="site-footer"><p><span class="footer-mark" aria-hidden="true">↗</span> A small check. A more informed next step.</p><div><span id="service-status">CHECKING SERVICE STATUS</span><span class="footer-divider" aria-hidden="true">/</span><a href="/architecture">View architecture <span aria-hidden="true">↗</span></a></div></footer>
+    </main>
+  </div>
+</body>
+</html>

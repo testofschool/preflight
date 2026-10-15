@@ -1,0 +1,186 @@
+{
+  "run_type": "final audited local G0 browser QA",
+  "base_url": "http://127.0.0.1:8080",
+  "collected_at": "2026-10-15T16:45:26.926Z",
+  "samples": [
+    {
+      "prompt": "a cat and a dog",
+      "http_status": 200,
+      "supported": true,
+      "p_fail": 0.30666666666666664,
+      "expected_p_fail": 0.30666666666666664,
+      "p_fail_tolerance_pass": true,
+      "visible_percent": "30.7",
+      "expected_visible_percent": "30.7",
+      "visible_matches_api": true,
+      "checked_prompt": "Checked: “a cat and a dog”",
+      "budget": "$4.62",
+      "rewrite_unavailable": true
+    },
+    {
+      "prompt": "a spoon and a laptop",
+      "http_status": 200,
+      "supported": true,
+      "p_fail": 0.5345454545454545,
+      "expected_p_fail": 0.5345454545454545,
+      "p_fail_tolerance_pass": true,
+      "visible_percent": "53.5",
+      "expected_visible_percent": "53.5",
+      "visible_matches_api": true,
+      "checked_prompt": "Checked: “a spoon and a laptop”",
+      "budget": "$6.88",
+      "rewrite_unavailable": true
+    },
+    {
+      "prompt": "a bicycle and a car",
+      "http_status": 200,
+      "supported": true,
+      "p_fail": 0.4333333333333333,
+      "expected_p_fail": 0.4333333333333333,
+      "p_fail_tolerance_pass": true,
+      "visible_percent": "43.3",
+      "expected_visible_percent": "43.3",
+      "visible_matches_api": true,
+      "checked_prompt": "Checked: “a bicycle and a car”",
+      "budget": "$5.65",
+      "rewrite_unavailable": true
+    },
+    {
+      "prompt": "indoor gymnasium",
+      "http_status": 200,
+      "supported": true,
+      "p_fail": 0.065,
+      "expected_p_fail": 0.065,
+      "p_fail_tolerance_pass": true,
+      "visible_percent": "6.5",
+      "expected_visible_percent": "6.5",
+      "visible_matches_api": true,
+      "checked_prompt": "Checked: “indoor gymnasium”",
+      "budget": "$3.42",
+      "rewrite_unavailable": true
+    },
+    {
+      "prompt": "a purple clock",
+      "http_status": 200,
+      "supported": true,
+      "p_fail": 0.05714285714285714,
+      "expected_p_fail": 0.05714285714285714,
+      "p_fail_tolerance_pass": true,
+      "visible_percent": "5.7",
+      "expected_visible_percent": "5.7",
+      "visible_matches_api": true,
+      "checked_prompt": "Checked: “a purple clock”",
+      "budget": "$3.39",
+      "rewrite_unavailable": true
+    }
+  ],
+  "unsupported": {
+    "prompt": "zqxvjklzz qwwwxxtr",
+    "http_status": 200,
+    "supported": false,
+    "p_fail": null,
+    "visible_risk": "—",
+    "risk_unit_hidden": true,
+    "neighbors_hidden": true,
+    "budget": "Unavailable",
+    "state": "LIMITED COVERAGE"
+  },
+  "empty_input": {
+    "message": "Add a prompt or choose a sample to start.",
+    "visible": true,
+    "aria_invalid": "true",
+    "posted_for_empty": false
+  },
+  "desktop": {
+    "width": 1440,
+    "height": 1080,
+    "scroll_width": 1425,
+    "horizontal_overflow": false,
+    "risk": "53.5",
+    "prompt": "Checked: “a spoon and a laptop”"
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "failed_requests": [],
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "scroll_width": 375,
+    "horizontal_overflow": false,
+    "risk": "53.5",
+    "prompt": "Checked: “a spoon and a laptop”",
+    "rewrite_unavailable": true,
+    "risk_boundary": "Risk estimates the historical rate of both videos being rated bad, not a validated probability of a Veo generation failing.",
+    "budget": "$6.88"
+  },
+  "api_status": {
+    "mode": "local-g0",
+    "label": "Local statistical preview",
+    "cloud_run": false,
+    "gemini": false,
+    "adk": false,
+    "agent_platform_session": false,
+    "firestore": false,
+    "postcheck": false,
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "single local process"
+    }
+  },
+  "architecture_mobile": {
+    "url": "http://127.0.0.1:8080/architecture",
+    "title": "How Preflight works",
+    "width": 390,
+    "horizontal_overflow": false,
+    "current_label": true,
+    "planned_label": true
+  },
+  "architecture_desktop": {
+    "width": 1440,
+    "horizontal_overflow": false
+  },
+  "architecture_page_errors": [],
+  "architecture_console_errors": [],
+  "screenshots": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-desktop.png",
+      "sha256": "de8d8756c671c1483e5bff5034d27325f08ecceab3c1746ef5731f0bd18dfa74",
+      "viewport": {
+        "width": 1440,
+        "height": 1080
+      },
+      "full_page": true
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-mobile.png",
+      "sha256": "334019f5e94b87ba21a17ed70637be6be143c3a39c18dc35fac99a3f706ed04d",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "full_page": true
+    }
+  ],
+  "client_timezone": "Asia/Seoul",
+  "client_date": "2026-10-16",
+  "scope": "Functional browser QA of the final local statistical G0 build. No cloud, Gemini, ADK, Firestore, model routing, video generation, or Veo calibration was validated or performed.",
+  "result": "PASS"
+}

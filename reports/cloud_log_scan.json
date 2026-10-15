@@ -1,0 +1,41 @@
+{
+  "revision": "preflight-00003-7k9",
+  "native_log_entries": 31,
+  "text_payload_entries": 8,
+  "forbidden_marker_hits": 0,
+  "project_identifiers_redacted": true,
+  "payloads": [
+    {
+      "timestamp": "2026-10-15T17:15:45.067196Z",
+      "text": "  declaration = tool._get_declaration()"
+    },
+    {
+      "timestamp": "2026-10-15T17:15:45.067186Z",
+      "text": "/usr/local/lib/python3.12/site-packages/google/adk/models/llm_request.py:306: UserWarning: [EXPERIMENTAL] feature FeatureName.JSON_SCHEMA_FOR_FUNC_DECL is enabled."
+    },
+    {
+      "timestamp": "2026-10-15T17:15:43.749834Z",
+      "text": "Default STARTUP TCP probe succeeded after 1 attempt for container \"app-1\" on port 8080."
+    },
+    {
+      "timestamp": "2026-10-15T17:15:43.749484Z",
+      "text": "INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)"
+    },
+    {
+      "timestamp": "2026-10-15T17:15:43.748928Z",
+      "text": "INFO:     Application startup complete."
+    },
+    {
+      "timestamp": "2026-10-15T17:15:38.882399Z",
+      "text": "INFO:     Waiting for application startup."
+    },
+    {
+      "timestamp": "2026-10-15T17:15:38.882371Z",
+      "text": "INFO:     Started server process [1]"
+    },
+    {
+      "timestamp": "2026-10-15T17:15:33.843365Z",
+      "text": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic."
+    }
+  ]
+}

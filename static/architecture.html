@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f4ee"><title>How Preflight works</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23142b31'/%3E%3Cpath d='M7 23 16 7l9 16H7Z' fill='none' stroke='%23dcf0e8' stroke-width='2'/%3E%3C/svg%3E"><link rel="stylesheet" href="/static/styles.css"><script src="/static/status.js" defer></script><script src="/static/architecture.js" defer></script></head>
+<body>
+  <div class="page-shell">
+    <header class="site-header"><a class="brand" href="/" aria-label="Preflight home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M5 19.5 13.8 5 23 19.5H5Z"/><path d="M9 19.5 14 11l5 8.5M14 19.5v4"/></svg></span>preflight<span class="brand-period">.</span></a><nav class="header-nav" aria-label="Main navigation"><a href="/">Back to check <span aria-hidden="true">↗</span></a><span class="mode-pill pending"><span class="status-dot" aria-hidden="true"></span><span id="mode-label">CONNECTING</span></span></nav></header>
+    <main>
+      <section class="intro architecture-intro"><div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> A CLEAR VIEW UNDER THE HOOD</div><h1>Evidence before inference.</h1><p class="intro-copy">A risk check, a guarded rewrite, and a clear view of the connections behind them.</p><div class="connection-row" id="session-row" hidden><span class="session-badge"><span class="status-dot" aria-hidden="true"></span>SESSION ACTIVE</span><span class="session-caption">Agent Platform</span></div></section>
+      <div class="architecture-grid">
+        <section class="architecture-card" aria-labelledby="current-heading"><span id="architecture-mode" class="architecture-tag planned">CHECKING SERVICE STATUS</span><h2 id="current-heading">One prompt. A traceable check.</h2><p id="architecture-description">The current request path appears once the service confirms its mode and connections.</p>
+          <div id="architecture-flow" class="flow-diagram" aria-live="polite">
+            <div class="flow-box inactive"><strong>Loading current configuration</strong><small>No active connections have been confirmed yet.</small></div>
+          </div>
+          <p class="architecture-footnote">Risk uses public historical evidence. A rewrite is presented only when it lowers the historical risk estimate. These checks do not validate Veo success, and no video generation is called.</p>
+        </section>
+        <section class="architecture-card" aria-labelledby="connections-heading"><span class="architecture-tag planned">SERVICE CONNECTIONS</span><h2 id="connections-heading">Status, without assumptions.</h2><p>Each connection is labeled from the service’s current status. An inactive component is not presented as running.</p>
+          <ul id="component-list" class="planned-list"><li><span>…</span><div><strong>Checking connections</strong>Waiting for the current service status.</div></li></ul>
+        </section>
+      </div>
+      <div class="architecture-notice"><span aria-hidden="true">↗</span><p><strong>Evidence has a boundary.</strong> Lower estimated risk is a statistical signal. It does not prove that a new video will improve or that a particular generation model is the best choice.</p></div>
+      <a class="back-link" href="/"><span aria-hidden="true">←</span> Check a prompt</a>
+      <footer class="site-footer"><p><span class="footer-mark" aria-hidden="true">↗</span> A small check. A more informed next step.</p><div><span id="service-status">CHECKING SERVICE STATUS</span><span class="footer-divider" aria-hidden="true">/</span><span>ARCHITECTURE</span></div></footer>
+    </main>
+  </div>
+</body>
+</html>

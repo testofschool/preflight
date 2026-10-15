@@ -1,0 +1,660 @@
+{
+  "protocol": {
+    "source_sha256": "c58ba145070415d084950fe8a80c517fd14e05d3285e371338a66791cee5de94",
+    "source_sha256_verified": true,
+    "preregistered": [
+      "Q1 cell-mean target >= 0.5",
+      "Q2 20% unseen prompts",
+      "Q3 fitted prompt argmax",
+      "Q4 observed outcome of recommendations"
+    ],
+    "settings_declared_before_fit": {
+      "l2_ability": 1.0,
+      "l2_difficulty": 0.1,
+      "l2_discrimination": 1.0,
+      "min_discrimination": 0.3,
+      "max_discrimination": 4.0,
+      "max_iterations": 3000,
+      "gradient_tolerance": 1e-06
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "prompt_split": "floor(20% of sorted prompts), default_rng(100+seed).choice without replacement; sorted remaining prompts train",
+    "cell_split": "independent Bernoulli 30% vector of observed cells only; default_rng(seed)",
+    "vectorizer": "TF-IDF word unigrams and bigrams; Q2 fits vocabulary on all prompts to match attached reference's transductive method; Q2_strict and primary risk fit training prompts only",
+    "neighbours": "cosine top 5; reference default argsort, strict stable training-order ties; arithmetic mean of item parameters and both-bad rates; zero-similarity neighbours included",
+    "cell_weighting": "one per observed cell; not weighted by vote count",
+    "both_bad_preregistration_status": "PREREG and attached results do not specify a both-bad AUC experiment or binary target; exact claimed AUC reproduction is unverifiable",
+    "both_bad_vote_target": "unregistered extension: each held-out human vote is 1 exactly when vote_type is bothbad_vote; all votes for one held-out prompt receive its text-only training-neighbour score",
+    "both_bad_prompt_target": "unregistered extension: held-out prompt has at least one both-bad human vote; no threshold tuning",
+    "length_baseline": "negative character count; sign fixed from supplied short-prompt risk hypothesis; no fitted threshold",
+    "q4_missing_outcomes": "reference method: IRT chooses highest-scored model among models observed for each held-out prompt; baseline chooses global model mean winner when observed, otherwise highest training mean among available models",
+    "q4_paired_extension": "stricter unregistered diagnostic: evaluate only prompts with observed outcomes for BOTH fixed global recommendations; unavailable outcomes excluded and counted",
+    "q4_interpretation": "Positive available-choice gains can arise from different global model orderings plus missing outcomes; they do not demonstrate prompt-specific routing or measured money saved",
+    "historical_scope": "both-bad rate is a relative pairwise-vote statistic, not a calibrated per-generation failure probability",
+    "method_correction": "Initial diagnostic preserved separately. Audited reference constants supplied by independent code reviewer: ability L2=1, difficulty L2=.1, discrimination shrinkage to 1 L2=1; seed-dependent Gaussian initialization; splits corrected before final run. No metric thresholds changed.",
+    "penalty_preregistration_difference": "PREREG names L2 on ability/difficulty but omits strengths and discrimination penalty; discrimination shrinkage is present in supplied reference and is declared here as an undeclared method detail",
+    "solver_difference": "Fresh analytic-gradient L-BFGS-B bounds a directly rather than reference's clipping within an unconstrained objective; close metrics expected, exact floating equality not claimed"
+  },
+  "dataset": {
+    "rows": 1911,
+    "prompts": 508,
+    "models": 10,
+    "observed_cells": 2080,
+    "both_bad_vote_fraction": 0.2129774986917844
+  },
+  "Q1": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_test_cells": 631,
+        "auc_irt": 0.6471714730460429,
+        "auc_model_mean": 0.7295797148943143,
+        "auc_prompt_mean": 0.36514316729477303
+      },
+      {
+        "seed": 1,
+        "n_test_cells": 617,
+        "auc_irt": 0.6319600764493524,
+        "auc_model_mean": 0.7039498832023783,
+        "auc_prompt_mean": 0.37859418135485245
+      },
+      {
+        "seed": 2,
+        "n_test_cells": 648,
+        "auc_irt": 0.6452763263282354,
+        "auc_model_mean": 0.7149300125862924,
+        "auc_prompt_mean": 0.40001525611197986
+      },
+      {
+        "seed": 3,
+        "n_test_cells": 650,
+        "auc_irt": 0.6394005827140811,
+        "auc_model_mean": 0.7204870502709526,
+        "auc_prompt_mean": 0.3673566229156583
+      },
+      {
+        "seed": 4,
+        "n_test_cells": 603,
+        "auc_irt": 0.646994874980587,
+        "auc_model_mean": 0.7059104119983138,
+        "auc_prompt_mean": 0.39357264881414594
+      }
+    ],
+    "mean_irt": 0.6421606667036598,
+    "mean_baseline": 0.7149714145904503,
+    "margin": -0.07281074788679054,
+    "pass": false
+  },
+  "Q2": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 404,
+        "auc_model_mean": 0.6745082631436781,
+        "auc_irt_coldstart": 0.7014954693907619,
+        "zero_vocabulary_queries": 0,
+        "queries_with_fewer_than_five_positive_neighbours": 25
+      },
+      {
+        "seed": 1,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 390,
+        "auc_model_mean": 0.6893071971295905,
+        "auc_irt_coldstart": 0.7254775221612494,
+        "zero_vocabulary_queries": 0,
+        "queries_with_fewer_than_five_positive_neighbours": 17
+      },
+      {
+        "seed": 2,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 411,
+        "auc_model_mean": 0.6863682334810248,
+        "auc_irt_coldstart": 0.7205981506453476,
+        "zero_vocabulary_queries": 0,
+        "queries_with_fewer_than_five_positive_neighbours": 22
+      },
+      {
+        "seed": 3,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 418,
+        "auc_model_mean": 0.6913832042772862,
+        "auc_irt_coldstart": 0.6950589970501475,
+        "zero_vocabulary_queries": 0,
+        "queries_with_fewer_than_five_positive_neighbours": 16
+      },
+      {
+        "seed": 4,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 426,
+        "auc_model_mean": 0.7415434587813621,
+        "auc_irt_coldstart": 0.7313508064516129,
+        "zero_vocabulary_queries": 0,
+        "queries_with_fewer_than_five_positive_neighbours": 11
+      }
+    ],
+    "mean_irt": 0.7147961891398239,
+    "mean_baseline": 0.6966220713625884,
+    "margin": 0.018174117777235543,
+    "pass": true
+  },
+  "Q2_strict": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 404,
+        "auc_model_mean": 0.6745082631436781,
+        "auc_irt_coldstart": 0.7013112982835252,
+        "zero_vocabulary_queries": 15,
+        "queries_with_fewer_than_five_positive_neighbours": 25
+      },
+      {
+        "seed": 1,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 390,
+        "auc_model_mean": 0.6893071971295905,
+        "auc_irt_coldstart": 0.7184993668214436,
+        "zero_vocabulary_queries": 7,
+        "queries_with_fewer_than_five_positive_neighbours": 17
+      },
+      {
+        "seed": 2,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 411,
+        "auc_model_mean": 0.6863682334810248,
+        "auc_irt_coldstart": 0.7232469659025236,
+        "zero_vocabulary_queries": 10,
+        "queries_with_fewer_than_five_positive_neighbours": 22
+      },
+      {
+        "seed": 3,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 418,
+        "auc_model_mean": 0.6913832042772862,
+        "auc_irt_coldstart": 0.6977899151917404,
+        "zero_vocabulary_queries": 9,
+        "queries_with_fewer_than_five_positive_neighbours": 16
+      },
+      {
+        "seed": 4,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 426,
+        "auc_model_mean": 0.7415434587813621,
+        "auc_irt_coldstart": 0.7361671146953406,
+        "zero_vocabulary_queries": 6,
+        "queries_with_fewer_than_five_positive_neighbours": 11
+      }
+    ],
+    "mean_irt": 0.7154029321789146,
+    "mean_baseline": 0.6966220713625884,
+    "margin": 0.01878086081632624,
+    "pass": true
+  },
+  "Q3": {
+    "global_best": "StableVideoDiffusion",
+    "share_prompts_with_different_best": 0.0,
+    "positive_discrimination_implication": "Every prompt has the same ability ordering because every discrimination is positive; no prompt-specific model routing"
+  },
+  "Q4": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_prompts": 101,
+        "n_irt_global_best_unobserved": 55,
+        "n_baseline_global_best_unobserved": 55,
+        "mean_outcome_irt_pick": 0.5749174917491748,
+        "mean_outcome_baseline_pick": 0.5749174917491748,
+        "difference": 0.0,
+        "available_choice_disagreements": 0
+      },
+      {
+        "seed": 1,
+        "n_prompts": 101,
+        "n_irt_global_best_unobserved": 63,
+        "n_baseline_global_best_unobserved": 63,
+        "mean_outcome_irt_pick": 0.6151815181518151,
+        "mean_outcome_baseline_pick": 0.6151815181518151,
+        "difference": 0.0,
+        "available_choice_disagreements": 0
+      },
+      {
+        "seed": 2,
+        "n_prompts": 101,
+        "n_irt_global_best_unobserved": 52,
+        "n_baseline_global_best_unobserved": 52,
+        "mean_outcome_irt_pick": 0.5448844884488449,
+        "mean_outcome_baseline_pick": 0.5448844884488449,
+        "difference": 0.0,
+        "available_choice_disagreements": 0
+      },
+      {
+        "seed": 3,
+        "n_prompts": 101,
+        "n_irt_global_best_unobserved": 62,
+        "n_baseline_global_best_unobserved": 62,
+        "mean_outcome_irt_pick": 0.5259075907590759,
+        "mean_outcome_baseline_pick": 0.5259075907590759,
+        "difference": 0.0,
+        "available_choice_disagreements": 0
+      },
+      {
+        "seed": 4,
+        "n_prompts": 101,
+        "n_irt_global_best_unobserved": 60,
+        "n_baseline_global_best_unobserved": 60,
+        "mean_outcome_irt_pick": 0.6041254125412541,
+        "mean_outcome_baseline_pick": 0.6041254125412541,
+        "difference": 0.0,
+        "available_choice_disagreements": 0
+      }
+    ],
+    "mean_irt": 0.573003300330033,
+    "mean_baseline": 0.573003300330033,
+    "difference": 0.0,
+    "pass": false
+  },
+  "Q4_paired_extension": {
+    "runs": [
+      {
+        "seed": 0,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 46,
+        "n_unmeasured_prompts": 55,
+        "mean_outcome_irt_pick": 0.605072463768116,
+        "mean_outcome_baseline_pick": 0.605072463768116,
+        "difference": 0.0
+      },
+      {
+        "seed": 1,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 38,
+        "n_unmeasured_prompts": 63,
+        "mean_outcome_irt_pick": 0.712280701754386,
+        "mean_outcome_baseline_pick": 0.712280701754386,
+        "difference": 0.0
+      },
+      {
+        "seed": 2,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 49,
+        "n_unmeasured_prompts": 52,
+        "mean_outcome_irt_pick": 0.5663265306122449,
+        "mean_outcome_baseline_pick": 0.5663265306122449,
+        "difference": 0.0
+      },
+      {
+        "seed": 3,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 39,
+        "n_unmeasured_prompts": 62,
+        "mean_outcome_irt_pick": 0.5854700854700855,
+        "mean_outcome_baseline_pick": 0.5854700854700855,
+        "difference": 0.0
+      },
+      {
+        "seed": 4,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 41,
+        "n_unmeasured_prompts": 60,
+        "mean_outcome_irt_pick": 0.6764227642276422,
+        "mean_outcome_baseline_pick": 0.6764227642276422,
+        "difference": 0.0
+      }
+    ],
+    "mean_paired_difference": 0.0,
+    "pass": false
+  },
+  "both_bad_risk": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_test_prompts": 101,
+        "n_test_votes": 344,
+        "both_bad_test_votes": 64,
+        "auc_both_bad_vote": 0.7059709821428571,
+        "auc_both_bad_vote_transductive": 0.6910993303571429,
+        "auc_negative_character_length_vote": 0.4723214285714285,
+        "auc_any_both_bad_prompt_extension": 0.6278688524590164
+      },
+      {
+        "seed": 1,
+        "n_test_prompts": 101,
+        "n_test_votes": 356,
+        "both_bad_test_votes": 73,
+        "auc_both_bad_vote": 0.7077786920954547,
+        "auc_both_bad_vote_transductive": 0.7067379834454717,
+        "auc_negative_character_length_vote": 0.5453555351178663,
+        "auc_any_both_bad_prompt_extension": 0.6973577235772357
+      },
+      {
+        "seed": 2,
+        "n_test_prompts": 101,
+        "n_test_votes": 395,
+        "both_bad_test_votes": 95,
+        "auc_both_bad_vote": 0.7007543859649122,
+        "auc_both_bad_vote_transductive": 0.6827543859649123,
+        "auc_negative_character_length_vote": 0.5343859649122807,
+        "auc_any_both_bad_prompt_extension": 0.6247044917257683
+      },
+      {
+        "seed": 3,
+        "n_test_prompts": 101,
+        "n_test_votes": 411,
+        "both_bad_test_votes": 97,
+        "auc_both_bad_vote": 0.6111366471862894,
+        "auc_both_bad_vote_transductive": 0.6239739969794472,
+        "auc_negative_character_length_vote": 0.5545997767417428,
+        "auc_any_both_bad_prompt_extension": 0.5955188679245282
+      },
+      {
+        "seed": 4,
+        "n_test_prompts": 101,
+        "n_test_votes": 393,
+        "both_bad_test_votes": 84,
+        "auc_both_bad_vote": 0.6160040067807058,
+        "auc_both_bad_vote_transductive": 0.6360379103097549,
+        "auc_negative_character_length_vote": 0.5350785945446139,
+        "auc_any_both_bad_prompt_extension": 0.607927786499215
+      }
+    ],
+    "mean_vote_auc": 0.6683289428340439,
+    "mean_vote_auc_transductive": 0.6681207214113458,
+    "mean_negative_length_vote_auc": 0.5283482599775864,
+    "mean_any_both_bad_prompt_auc": 0.6306755444371527,
+    "declared_vote_metric_meets_0_68": false,
+    "exact_handoff_reproduction": "UNVERIFIABLE: binary target and aggregation omitted from supplied preregistration/results"
+  },
+  "V4": {
+    "numerical_conditions_on_declared_metrics": false,
+    "exact_claim_reproduction": "UNVERIFIABLE",
+    "reason": "Both-bad target and aggregation are absent from the supplied preregistration/results. IRT constants follow the audited reference; direct bounded optimization is a documented solver difference."
+  },
+  "fit_diagnostics": [
+    {
+      "experiment": "Q1",
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 86,
+      "objective": 762.4592496260086,
+      "max_absolute_gradient": 1.6348656513972455,
+      "max_absolute_projected_gradient": 0.00015879217435177395,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1449,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 84,
+      "objective": 885.7742213052973,
+      "max_absolute_gradient": 1.7326930553622666,
+      "max_absolute_projected_gradient": 0.00046207707584455804,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1676,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 1,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 87,
+      "objective": 761.5444160942856,
+      "max_absolute_gradient": 1.580327098633905,
+      "max_absolute_projected_gradient": 0.0001039029082017251,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1463,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 1,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 85,
+      "objective": 901.3522428383316,
+      "max_absolute_gradient": 1.7846559270224498,
+      "max_absolute_projected_gradient": 8.65497503033108e-05,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1690,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 2,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 87,
+      "objective": 745.0696424231714,
+      "max_absolute_gradient": 0.2786727431243139,
+      "max_absolute_projected_gradient": 0.0005264795631907404,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1432,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 2,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 85,
+      "objective": 897.6587842629176,
+      "max_absolute_gradient": 1.7225649967629004,
+      "max_absolute_projected_gradient": 0.0009424906897300689,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1669,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 3,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 84,
+      "objective": 742.8024634206072,
+      "max_absolute_gradient": 0.21142993340378702,
+      "max_absolute_projected_gradient": 0.0007739790921774681,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1430,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 3,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 86,
+      "objective": 884.9175249047473,
+      "max_absolute_gradient": 1.996676165263362,
+      "max_absolute_projected_gradient": 0.000417132034277623,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1662,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 4,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 88,
+      "objective": 771.4995786530386,
+      "max_absolute_gradient": 0.8502321516379068,
+      "max_absolute_projected_gradient": 0.00018002735496081002,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1477,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 4,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 84,
+      "objective": 891.548153537447,
+      "max_absolute_gradient": 1.6993740669349235,
+      "max_absolute_projected_gradient": 0.0005695836289575373,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 1654,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    },
+    {
+      "experiment": "full",
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 92,
+      "objective": 1118.3355081177067,
+      "max_absolute_gradient": 1.789723002483615,
+      "max_absolute_projected_gradient": 0.0012175749516651901,
+      "gradient_note": "Raw gradients can be nonzero at active discrimination bounds; projected gradient accounts for the bounds",
+      "observed_cells": 2080,
+      "settings": {
+        "l2_ability": 1.0,
+        "l2_difficulty": 0.1,
+        "l2_discrimination": 1.0,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "default_rng(seed): ability N(0,.1), full prompt difficulty N(0,.1) then subset, discrimination one",
+      "seed": 0,
+      "solver_method_difference": "L-BFGS-B direct bounds on discrimination, analytic gradient; reference clips unbounded discrimination inside objective"
+    }
+  ]
+}

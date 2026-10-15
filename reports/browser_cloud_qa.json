@@ -1,0 +1,128 @@
+{
+  "type": "actual deployed cloud browser QA",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "collected_at": "2026-10-15T17:17:30.375Z",
+  "status": {
+    "mode": "cloud",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": false,
+    "generations": 0
+  },
+  "samples": [
+    {
+      "prompt": "a spoon and a laptop",
+      "http_status": 200,
+      "elapsed_ms": 4510,
+      "supported": true,
+      "p_fail": 0.5345454545454545,
+      "p_fail_before": 0.5345454545454545,
+      "p_fail_after": 0.36666666666666664,
+      "rewrite_status": "improved",
+      "strict_risk_reduction": true,
+      "visible_risk": "53.5",
+      "visible_checked_prompt": "Checked: “a spoon and a laptop”",
+      "candidate_shown": true,
+      "candidate_matches_response": true,
+      "candidate_hidden_when_unapproved": null,
+      "session_returned": true,
+      "first_post_omits_session": true,
+      "tool_trace_count": 6,
+      "reasons_visible": "Historical neighbours “a spoon and a laptop” and “a tv and a laptop” support a 53.5% mean both-bad vote rate; this is not a calibrated probability that a current video model fails.",
+      "copy_guard": {
+        "button_count": 1,
+        "guard_holds": true,
+        "clipboard_write_instrumented": true,
+        "exact_candidate_copied": true
+      }
+    },
+    {
+      "prompt": "a purple clock",
+      "http_status": 200,
+      "elapsed_ms": 4502,
+      "supported": true,
+      "p_fail": 0.05714285714285714,
+      "p_fail_before": 0.05714285714285714,
+      "p_fail_after": 0.05714285714285714,
+      "rewrite_status": "no_safe_rewrite",
+      "strict_risk_reduction": false,
+      "visible_risk": "5.7",
+      "visible_checked_prompt": "Checked: “a purple clock”",
+      "session_sent": true,
+      "same_session_sent": true,
+      "same_session_returned": true,
+      "tool_trace_count": 6,
+      "candidate_shown": false,
+      "unapproved_candidate_hidden": true,
+      "copy_button_count": 0,
+      "copy_guard_holds": true,
+      "better_card_text": "NO SAFER REWRITENo rewrite passed the historical risk check.Keep your original prompt or try a more specific scene. No alternative is presented as an improvement.",
+      "reasons_visible": "Historical neighbours “a purple clock” and “a green clock” support a 5.7% mean both-bad vote rate; this is not a calibrated probability that a current video model fails."
+    }
+  ],
+  "desktop": {
+    "width": 1440,
+    "height": 1080,
+    "horizontal_overflow": false,
+    "mode": "CLOUD MODE",
+    "session_badge_visible": true
+  },
+  "post_count": 2,
+  "observed": {
+    "page_errors": [],
+    "console_errors": [],
+    "failed_requests": []
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "horizontal_overflow": false,
+    "mode": "CLOUD MODE",
+    "session_badge_visible": true,
+    "candidate_visible": true,
+    "comparison": "53.5% original→36.7% rewrite"
+  },
+  "session_continuity": {
+    "same_session_sent": true,
+    "same_session_returned": true,
+    "opaque_ids_recorded": false
+  },
+  "architecture_mobile": {
+    "width": 390,
+    "horizontal_overflow": false,
+    "active_connection_count": 5,
+    "session_badge_visible": true
+  },
+  "architecture_desktop": {
+    "width": 1440,
+    "horizontal_overflow": false
+  },
+  "client_date": "2026-10-16",
+  "client_timezone": "Asia/Seoul",
+  "result": "PASS within browser QA scope",
+  "scope": "Two actual deployed-cloud POSTs only. UI correctness, guarded rewriting, opaque same-session continuity and responsive rendering; not the independent ten-request V5 acceptance run or Track B/V7.",
+  "copy_test_limit": "Clipboard write was instrumented to compare the exact approved response candidate without overwriting or reading the user's clipboard.",
+  "screenshots": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-cloud-desktop.png",
+      "sha256": "c83faa9ff577a434008c6500049d60beca17a75908bd5f7f57285af844463f61",
+      "viewport": {
+        "width": 1440,
+        "height": 1080
+      },
+      "full_page": true
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-cloud-mobile.png",
+      "sha256": "025f1f3822068763928d9814c7683a48d7eb35a48d012d8c611c731a2ba56f94",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "full_page": true
+    }
+  ]
+}

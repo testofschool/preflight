@@ -1,0 +1,148 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "/Users/felix/Desktop/AI Builder Cup 2026/.preflight-venv/bin/python",
+      "scripts/build_data.py"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/build.txt"
+  },
+  {
+    "name": "evaluation",
+    "command": [
+      "/Users/felix/Desktop/AI Builder Cup 2026/.preflight-venv/bin/python",
+      "scripts/evaluate.py"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/evaluation.txt"
+  },
+  {
+    "name": "tests",
+    "command": [
+      "/Users/felix/Desktop/AI Builder Cup 2026/.preflight-venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/tests.txt"
+  },
+  {
+    "name": "freshness",
+    "command": [
+      "/Users/felix/Desktop/AI Builder Cup 2026/.preflight-venv/bin/python",
+      "scripts/check_freshness.py",
+      "--reference",
+      "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/inputs/pregen_irt.py"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/freshness.txt"
+  },
+  {
+    "name": "secrets",
+    "command": [
+      "/Users/felix/Desktop/AI Builder Cup 2026/.preflight-venv/bin/python",
+      "scripts/check_secrets.py"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/secrets.txt"
+  },
+  {
+    "name": "cloud_tests",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/tests_cloud.txt"
+  },
+  {
+    "name": "firestore_import",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/import_firestore.py"
+    ],
+    "runtime_config": "authorized project via environment only",
+    "exit_code": 0,
+    "stdout_file": "logs/firestore_import.txt"
+  },
+  {
+    "name": "cloud_release",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/release_cloud.py"
+    ],
+    "exit_code": 0,
+    "receipt": "reports/cloud_build.json; reports/cloud_run.json",
+    "note": "Initial timeout60 later calibrated to36 by measure_cloud.py"
+  },
+  {
+    "name": "cold_warm_calibration",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/measure_cloud.py",
+      "--url",
+      "https://preflight-jcgro45veq-as.a.run.app"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/cloud_latency.txt"
+  },
+  {
+    "name": "rewrite_exact_ten_once",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_rewrites.py",
+      "--url",
+      "https://preflight-jcgro45veq-as.a.run.app"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/rewrites_live.txt",
+    "note": "Exactly10requests;0retries; receipt refuses overwrite"
+  },
+  {
+    "name": "firestore_content_integrity",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_store_live.py"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/firestore_integrity.txt"
+  },
+  {
+    "name": "V9_headers",
+    "command": [
+      "rg",
+      "^#",
+      "README.md"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/readme_headers.txt"
+  },
+  {
+    "name": "V10_current_config",
+    "command": [
+      "gcloud",
+      "run",
+      "services",
+      "describe",
+      "preflight",
+      "--region",
+      "asia-southeast1",
+      "--format=json"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/cloud_run_config.txt",
+    "note": "Selected safe fields only; project ID/account/resource paths excluded"
+  },
+  {
+    "name": "actual_cloud_browser",
+    "command": "Browser UI automation, two actual deployed POST requests, instrumented clipboard write",
+    "exit_code": 0,
+    "stdout_file": "logs/browser_cloud_qa.txt"
+  }
+]

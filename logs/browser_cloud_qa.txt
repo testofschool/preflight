@@ -1,0 +1,23 @@
+Actual deployed cloud browser QA — 2026-10-16 Asia/Seoul
+URL: https://preflight-jcgro45veq-as.a.run.app
+Collected UTC: 2026-10-15T17:17:30.375Z
+Scope: two live POSTs only; not the independent ten-case V5 acceptance run and not Track B/V7.
+
+PASS — cloud_run, gemini, adk, agent_platform_session, firestore all true; postcheck=false; generations=0.
+a spoon and a laptop: HTTP 200; UI roundtrip 4510ms; before=0.5345454545454545; after=0.36666666666666664; rewrite_status=improved; visible risk=53.5%; tool_trace_count=6
+a purple clock: HTTP 200; UI roundtrip 4502ms; before=0.05714285714285714; after=0.05714285714285714; rewrite_status=no_safe_rewrite; visible risk=5.7%; tool_trace_count=6
+PASS — spoon/laptop approved candidate matches the actual response; strict decrease53.5%→36.7%.
+PASS — approved-copy event passes the exact candidate to an instrumented clipboard write; actual clipboard not read or overwritten.
+PASS — purple clock has no_safe_rewrite; equal historical rates; no candidate or copy control exposed.
+PASS — second request sends the first opaque session and receives the same session; no raw IDs recorded.
+PASS — desktop1440x1080 and mobile390x844 have no horizontal overflow; Cloud mode and Session active labels visible.
+PASS — architecture route desktop/mobile has no overflow and shows five active connections from live status.
+PASS — no observed page errors, console errors or failed requests.
+
+Screenshots show the actual spoon/laptop response:
+/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-cloud-desktop.png
+SHA256 c83faa9ff577a434008c6500049d60beca17a75908bd5f7f57285af844463f61
+/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-cloud-mobile.png
+SHA256 025f1f3822068763928d9814c7683a48d7eb35a48d012d8c611c731a2ba56f94
+
+No additional POSTs, Veo calls, credentials, raw session IDs, actual project IDs or numbers are included.

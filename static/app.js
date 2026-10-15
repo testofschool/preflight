@@ -1,0 +1,282 @@
+"use strict";
+
+(() => {
+  const form = document.getElementById("prompt-form");
+  const input = document.getElementById("prompt");
+  const button = document.getElementById("check-button");
+  const buttonLabel = document.getElementById("button-label");
+  const error = document.getElementById("prompt-error");
+  const results = document.querySelector(".results-panel");
+  const riskCard = document.querySelector(".risk-card");
+  const state = document.getElementById("result-state");
+  const announcement = document.getElementById("results-announcement");
+  const why = document.getElementById("why-content");
+  const neighbors = document.getElementById("neighbors");
+  const samples = [...document.querySelectorAll(".sample")];
+  let requestId = 0;
+  let lastPrompt = null;
+  let lastState = "READY WHEN YOU ARE";
+  let hasResult = false;
+  let serviceStatus = null;
+  let sessionId = null;
+
+  function clearError() {
+    error.hidden = true;
+    error.textContent = "";
+    input.removeAttribute("aria-invalid");
+  }
+
+  function showError(message, invalidInput = false) {
+    error.textContent = message;
+    error.hidden = false;
+    if (invalidInput) input.setAttribute("aria-invalid", "true");
+  }
+
+  function updateInput() {
+    document.getElementById("character-count").textContent = `${input.value.length.toLocaleString("en-US")} / 4,000`;
+    samples.forEach(sample => sample.classList.toggle("selected", input.value.trim() === sample.dataset.prompt));
+    clearError();
+    if (lastPrompt !== null) state.textContent = input.value.trim() === lastPrompt ? lastState : "PROMPT CHANGED";
+  }
+
+  input.addEventListener("input", updateInput);
+  samples.forEach(sample => sample.addEventListener("click", () => {
+    input.value = sample.dataset.prompt;
+    updateInput();
+    input.focus();
+  }));
+
+  function setLoading(loading) {
+    button.disabled = loading;
+    input.readOnly = loading;
+    samples.forEach(sample => { sample.disabled = loading; });
+    button.classList.toggle("loading", loading);
+    buttonLabel.textContent = loading ? "Checking the evidence…" : "Check this prompt";
+    results.classList.toggle("is-loading", loading);
+    results.setAttribute("aria-busy", String(loading));
+    if (loading) state.textContent = serviceStatus?.mode === "cloud" ? "CHECKING YOUR PROMPT" : "CHECKING EVIDENCE";
+  }
+
+  function finite(value) { return typeof value === "number" && Number.isFinite(value); }
+  function rate(value) { return finite(value) && value >= 0 && value <= 1; }
+  function percent(value) { return `${(value * 100).toFixed(1)}%`; }
+
+  function twoSentences(values) {
+    const text = (Array.isArray(values) ? values : [values]).filter(value => typeof value === "string" && value.trim()).join(" ");
+    if (!text) return "";
+    if (typeof Intl.Segmenter === "function") return [...new Intl.Segmenter("en", {granularity: "sentence"}).segment(text)].slice(0, 2).map(item => item.segment.trim()).join(" ");
+    return (text.match(/[^.!?]+(?:[.!?](?=\s|$)|$)/g) || [text]).slice(0, 2).join(" ").trim();
+  }
+
+  function renderReasons(reasons, fallback) {
+    why.replaceChildren();
+    why.classList.remove("empty-body");
+    const paragraph = document.createElement("p");
+    paragraph.textContent = twoSentences(reasons) || fallback;
+    why.append(paragraph);
+  }
+
+  function rewriteMessage(tagText, message, note) {
+    const content = document.getElementById("better-content");
+    content.replaceChildren();
+    const tag = document.createElement("span");
+    tag.className = "feature-tag";
+    tag.textContent = tagText;
+    const description = document.createElement("p");
+    description.className = "rewrite-description";
+    description.textContent = message;
+    const caption = document.createElement("p");
+    caption.className = "subtle-copy";
+    caption.textContent = note;
+    content.append(tag, description, caption);
+  }
+
+  function renderRewrite(data, prompt) {
+    const before = data.p_fail_before;
+    const after = data.p_fail_after;
+    const candidate = typeof data.rewritten_prompt === "string" ? data.rewritten_prompt.trim() : "";
+    const improved = data.rewrite_status === "improved" && candidate && candidate !== prompt && rate(before) && rate(after) && after < before;
+    document.querySelector(".better-card").classList.toggle("has-rewrite", Boolean(improved));
+    if (!improved) {
+      if (data.rewrite_status === "no_safe_rewrite" || data.rewrite_status === "improved") {
+        rewriteMessage("NO SAFER REWRITE", "No rewrite passed the historical risk check.", "Keep your original prompt or try a more specific scene. No alternative is presented as an improvement.");
+      } else {
+        rewriteMessage("GEMINI REWRITE · UNAVAILABLE", "A rewrite is unavailable for this check.", serviceStatus?.mode === "local-g0" ? "This local build checks historical evidence only." : "The evidence check remains available. No alternative prompt has been approved.");
+      }
+      return;
+    }
+    const content = document.getElementById("better-content");
+    content.replaceChildren();
+    const tag = document.createElement("span");
+    tag.className = "feature-tag improved-tag";
+    tag.textContent = "LOWER HISTORICAL RISK";
+    const quote = document.createElement("p");
+    quote.className = "rewritten-prompt";
+    quote.textContent = candidate;
+    const comparison = document.createElement("div");
+    comparison.className = "rewrite-comparison";
+    comparison.setAttribute("aria-label", `Historical risk: original ${percent(before)}, rewrite ${percent(after)}`);
+    const from = document.createElement("span");
+    from.textContent = `${percent(before)} original`;
+    const arrow = document.createElement("span");
+    arrow.textContent = "→";
+    arrow.setAttribute("aria-hidden", "true");
+    const to = document.createElement("strong");
+    to.textContent = `${percent(after)} rewrite`;
+    comparison.append(from, arrow, to);
+    const copy = document.createElement("button");
+    copy.type = "button";
+    copy.className = "copy-button";
+    copy.textContent = "Copy better prompt ↗";
+    copy.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(candidate);
+        copy.textContent = "Copied ✓";
+        announcement.textContent = "Better prompt copied.";
+      } catch {
+        copy.textContent = "Select the prompt to copy";
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(quote);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        announcement.textContent = "Select and copy the highlighted prompt.";
+      }
+    });
+    const caption = document.createElement("p");
+    caption.className = "subtle-copy";
+    caption.textContent = "A lower historical estimate is not a guarantee of a better video.";
+    content.append(tag, quote, comparison, copy, caption);
+  }
+
+  function renderNeighbors(items, supported) {
+    neighbors.replaceChildren();
+    const validItems = supported && Array.isArray(items) ? items.filter(item => item && typeof item.prompt === "string" && rate(item.both_bad_rate)).slice(0, 3) : [];
+    neighbors.hidden = validItems.length === 0;
+    if (!validItems.length) return;
+    const title = document.createElement("p");
+    title.className = "neighbors-title";
+    title.textContent = "SIMILAR HISTORICAL PROMPTS";
+    neighbors.append(title);
+    validItems.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "neighbor";
+      const text = document.createElement("span");
+      text.textContent = item.prompt;
+      const value = document.createElement("span");
+      value.textContent = percent(item.both_bad_rate);
+      value.title = "Historical both-bad vote rate for this prompt";
+      row.append(text, value);
+      neighbors.append(row);
+    });
+  }
+
+  function renderBudget(data, supported) {
+    const costValue = document.getElementById("cost-value");
+    const costNote = document.getElementById("cost-note");
+    if (!supported || !finite(data.est_cost_usd) || data.est_cost_usd < 0) {
+      costValue.textContent = "Unavailable";
+      costNote.textContent = supported ? "No generation has been requested. A generation budget was not provided." : "No budget is estimated when historical coverage is insufficient. No generation has been requested.";
+      return;
+    }
+    costValue.textContent = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2}).format(data.est_cost_usd);
+    const pricing = data.pricing || {};
+    const duration = finite(pricing.duration_seconds) && pricing.duration_seconds > 0 ? `${pricing.duration_seconds}s` : "video";
+    const attemptCost = finite(pricing.single_attempt_usd) && pricing.single_attempt_usd > 0 ? `$${pricing.single_attempt_usd.toFixed(2)} per ${duration} attempt` : "the configured per-attempt price";
+    costNote.textContent = `Illustration using ${attemptCost} and historical votes, capped at 5 attempts. This is not a Veo cost forecast. No generation has been requested.`;
+  }
+
+  function renderResult(data, prompt) {
+    const supported = data.supported !== false && data.coverage_supported !== false && data.coverage?.status !== "unsupported" && rate(data.p_fail);
+    const value = document.getElementById("risk-value");
+    const unit = document.getElementById("risk-unit");
+    const detail = document.getElementById("risk-detail");
+    const label = document.getElementById("risk-label");
+    riskCard.classList.remove("high-risk", "unsupported");
+    if (!supported) {
+      value.textContent = "—";
+      unit.hidden = true;
+      label.textContent = "Outside the available evidence.";
+      detail.textContent = "There is not enough relevant historical evidence to estimate this prompt. No risk value is assigned.";
+      document.getElementById("risk-fill").style.width = "0%";
+      riskCard.classList.add("unsupported");
+      state.textContent = "LIMITED COVERAGE";
+      renderReasons(data.reasons, "This prompt is outside the local dataset’s coverage. Try one of the sample prompts to inspect supported evidence.");
+      announcement.textContent = "Check complete. Historical coverage is insufficient. No risk value or generation budget is assigned.";
+    } else {
+      value.textContent = (data.p_fail * 100).toFixed(1);
+      unit.hidden = false;
+      label.textContent = typeof data.risk_semantics === "string" && data.risk_semantics.trim() ? "Risk estimate" : "Estimated historical both-bad rate";
+      detail.textContent = typeof data.risk_semantics === "string" && data.risk_semantics.trim() ? data.risk_semantics : "Statistical estimate from public historical votes on related prompts.";
+      document.getElementById("risk-fill").style.width = `${data.p_fail * 100}%`;
+      if (data.p_fail >= 0.5) riskCard.classList.add("high-risk");
+      state.textContent = serviceStatus?.mode === "local-g0" ? "LOCAL CHECK COMPLETE" : "CHECK COMPLETE";
+      renderReasons(data.reasons, "The local estimate is based on public historical votes. It has not been validated against Veo generations.");
+      announcement.textContent = `Check complete. Risk estimate: ${percent(data.p_fail)}. This is not a validated Veo failure probability.`;
+    }
+    renderNeighbors(data.nearest_prompts, supported);
+    renderBudget(data, supported);
+    renderRewrite(data, prompt);
+    const historical = document.getElementById("risk-history");
+    historical.hidden = !supported || !rate(data.historical_p_fail);
+    historical.textContent = rate(data.historical_p_fail) ? `Historical vote estimate: ${percent(data.historical_p_fail)}` : "";
+    hasResult = true;
+    lastPrompt = prompt;
+    lastState = state.textContent;
+    const checkedPrompt = document.getElementById("checked-prompt");
+    checkedPrompt.textContent = `Checked: “${prompt}”`;
+    checkedPrompt.title = prompt;
+    checkedPrompt.hidden = false;
+  }
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (button.disabled) return;
+    clearError();
+    const prompt = input.value.trim();
+    if (!prompt) {
+      showError("Add a prompt or choose a sample to start.", true);
+      input.focus();
+      return;
+    }
+    if (prompt.length > 4000) {
+      showError("Keep your prompt to 4,000 characters or fewer.", true);
+      input.focus();
+      return;
+    }
+    const thisRequest = ++requestId;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 90000);
+    setLoading(true);
+    announcement.textContent = "Checking the historical evidence and available rewrite.";
+    try {
+      const payload = {prompt};
+      if (sessionId) payload.session_id = sessionId;
+      const response = await fetch("/preflight", {method: "POST", credentials: "same-origin", headers: {"Content-Type": "application/json"}, body: JSON.stringify(payload), signal: controller.signal});
+      let data;
+      try { data = await response.json(); } catch { throw new Error("The service returned an unreadable response. Try the check again."); }
+      if (!response.ok) {
+        const serverMessage = typeof data?.detail === "string" ? data.detail : typeof data?.error === "string" ? data.error : null;
+        throw new Error(serverMessage || `The service could not complete this check (${response.status}). Try again.`);
+      }
+      if (!data || typeof data !== "object" || Array.isArray(data)) throw new Error("The service returned an incomplete response. Try the check again.");
+      if (typeof data.session_id === "string" && data.session_id.length > 0) sessionId = data.session_id;
+      if (thisRequest === requestId) renderResult(data, prompt);
+    } catch (exception) {
+      if (thisRequest !== requestId) return;
+      showError(exception.name === "AbortError" ? "The check took too long. Please try again." : exception instanceof TypeError ? "Could not reach the service. Check your connection, then try again." : exception.message || "The check could not be completed. Please try again.");
+      state.textContent = "CHECK NOT COMPLETED";
+      announcement.textContent = "The check could not be completed. No new estimate was created.";
+    } finally {
+      clearTimeout(timeout);
+      if (thisRequest === requestId) setLoading(false);
+    }
+  });
+
+  window.preflightStatusReady.then(status => {
+    serviceStatus = status;
+    if (hasResult) return;
+    if (status?.gemini === true) rewriteMessage("GEMINI REWRITE · CONNECTED", "A rewrite appears only when it passes the historical risk check.", "A lower estimate does not guarantee a better video.");
+    else rewriteMessage("GEMINI REWRITE · UNAVAILABLE", "A rewrite is unavailable in the current mode.", status?.mode === "local-g0" ? "This local build checks historical evidence only." : "The service has not confirmed an active rewrite connection.");
+  });
+})();

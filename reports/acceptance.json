@@ -1,0 +1,119 @@
+{
+  "created_kst": "2026-10-16T02:22:16.598194+09:00",
+  "overall": "PARTIAL_ACCEPTANCE_V4_FAIL_G1_BEFORE_TRACK_B",
+  "track_a": "DEPLOYED_NATIVE_CHECKS_COMPLETE_V4_FAIL",
+  "track_b": "NOT_STARTED_G1",
+  "cloud_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "default_run_app_url": true,
+  "V1": {
+    "status": "PASS",
+    "shared_20_token_files": 0,
+    "receipt": "reports/freshness-final.json"
+  },
+  "V2": {
+    "status": "PASS",
+    "forbidden_marker_hits": 0,
+    "receipt": "reports/secrets-final.json",
+    "native_cloud_log_markers": 0
+  },
+  "V3": {
+    "status": "PASS",
+    "cold_seconds": 12.598004,
+    "warm_seconds": [
+      4.647478,
+      4.363051,
+      4.714395,
+      5.209227,
+      5.09797
+    ],
+    "cloud_samples_measured": 5,
+    "receipt": "reports/cloud_latency.json"
+  },
+  "V4": {
+    "status": "FAIL",
+    "vote_auc": 0.6683289428340439,
+    "minimum": 0.68,
+    "irt_auc": 0.7147961891398239,
+    "baseline_auc": 0.6966220713625884,
+    "exact_0_72_claim": "UNVERIFIABLE"
+  },
+  "V5": {
+    "status": "PASS",
+    "selected_prompts": 10,
+    "completed_prompts": 10,
+    "total_http_attempts": 10,
+    "rate_limit_retries": 0,
+    "strictly_improved_count": 10,
+    "non_higher_verified_count": 10,
+    "higher_risk_returned_count": 0,
+    "tool_workflow_verified_count": 10,
+    "V5_pass": true,
+    "V6_all_ten_verified": true,
+    "no_increase_observed": true,
+    "never_higher_verified": true,
+    "receipt": "reports/rewrites_live.json"
+  },
+  "V6": {
+    "status": "PASS",
+    "completed_tools_per_request": 6,
+    "requests_verified": 10,
+    "session_service": "Agent Platform Sessions",
+    "session_service_active": true,
+    "receipt": "reports/rewrites_live.json"
+  },
+  "V7": {
+    "status": "PARTIAL",
+    "remote_counts": {
+      "prompts_v1": 508,
+      "items_v1": 508,
+      "verdicts_v1": 0
+    },
+    "historical_documents_matching": 1016,
+    "historical_document_differences": 0,
+    "model_abilities_matching": 10,
+    "reason": "No clip verdict before G1; third populated collection still required",
+    "receipt": "reports/firestore_integrity.json"
+  },
+  "V8": {
+    "status": "NOT_RUN",
+    "owner_clips_measured": 0,
+    "reason": "Track B follows G1; clips available, no Veo authorized"
+  },
+  "V9": {
+    "status": "PASS",
+    "evidence": "README.md",
+    "headers_stdout": "logs/readme_headers.txt"
+  },
+  "V10": {
+    "status": "PASS",
+    "deployed_config": {
+      "region": "asia-southeast1",
+      "min_instances": 0,
+      "timeout_seconds": 36,
+      "concurrency": 80,
+      "revision": "preflight-00003-7k9"
+    },
+    "receipt": "reports/cloud_run.json"
+  },
+  "tests": {
+    "passed": 50,
+    "warnings": 2,
+    "subtests_passed": 5,
+    "receipt": "logs/tests_cloud.txt"
+  },
+  "generation_calls": 0,
+  "gates": {
+    "G0": "DISSOLVED_BY_DIRECT_USER_MESSAGE",
+    "G1": "NOTICE_TO_BE_POSTED_THEN_WAIT_ANY_REPLY_OR_2_HOURS",
+    "G2": "HOLDS_NO_VEO"
+  },
+  "source_hash_enforced": true,
+  "cloud_runtime": {
+    "python": "3.12",
+    "adk": "2.12.0",
+    "gemini": "gemini-3.5-flash",
+    "gemini_backend": "Vertex AI",
+    "managed_session_region": "asia-southeast1",
+    "firestore_database": "preflight-aibc"
+  }
+}

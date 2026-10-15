@@ -1,0 +1,47 @@
+{
+  "check": "read-only Firestore historical content integrity",
+  "collections": {
+    "items_v1": {
+      "changed_expected_documents": 0,
+      "document_difference_count": 0,
+      "expected_documents": 508,
+      "expected_field_differences": 0,
+      "extra_feedback_only_documents": 0,
+      "extra_historical_documents": 0,
+      "matching_expected_documents": 508,
+      "missing_expected_documents": 0,
+      "remote_documents": 508,
+      "source_hash_differences": 0
+    },
+    "prompts_v1": {
+      "changed_expected_documents": 0,
+      "document_difference_count": 0,
+      "expected_documents": 508,
+      "expected_field_differences": 0,
+      "extra_feedback_only_documents": 0,
+      "extra_historical_documents": 0,
+      "matching_expected_documents": 508,
+      "missing_expected_documents": 0,
+      "remote_documents": 508,
+      "source_hash_differences": 0
+    }
+  },
+  "document_difference_count": 0,
+  "engine_artifact_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+  "expected_historical_documents": 1016,
+  "export_sha256": {
+    "items_v1": "242fed8091787198976594a1429ef70692b1233b2536e895e1883ec13eca1200",
+    "prompts_v1": "3063da573244f5460b9fc59b20c1a41ca30d61b2cc6c79c12d45e5af934433c2"
+  },
+  "ignored_extra_fields": "Only top-level fields absent from local exports, including separate postcheck feedback, are ignored",
+  "matching_historical_documents": 1016,
+  "metadata": {
+    "ability_value_differences": 0,
+    "document_difference_count": 0,
+    "exists": true,
+    "expected_model_abilities": 10,
+    "extra_model_abilities": 0
+  },
+  "passed": true,
+  "read_only": true
+}

@@ -1,0 +1,486 @@
+{
+  "protocol": {
+    "preregistered": [
+      "Q1 cell-mean target >= 0.5",
+      "Q2 20% unseen prompts",
+      "Q3 fitted prompt argmax",
+      "Q4 observed outcome of recommendations"
+    ],
+    "settings_declared_before_fit": {
+      "l2_ability": 0.1,
+      "l2_difficulty": 0.1,
+      "min_discrimination": 0.3,
+      "max_discrimination": 4.0,
+      "max_iterations": 3000,
+      "gradient_tolerance": 1e-06
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "prompt_split": "floor(20% of prompts), numpy default_rng(seed) permutation; remaining prompts train",
+    "cell_split": "independent Bernoulli 30% mask over matrix cells, observed cells only",
+    "vectorizer": "TF-IDF word unigrams and bigrams; fit only on training prompts in Q2",
+    "neighbours": "cosine top 5; stable training-order ties; arithmetic mean of item parameters and both-bad rates; zero-similarity neighbours included",
+    "cell_weighting": "one per observed cell; not weighted by vote count",
+    "both_bad_preregistration_status": "PREREG and attached results do not specify a both-bad AUC experiment or binary target; exact claimed AUC reproduction is unverifiable",
+    "both_bad_vote_target": "unregistered extension: each held-out human vote is 1 exactly when vote_type is bothbad_vote; all votes for one held-out prompt receive its text-only training-neighbour score",
+    "both_bad_prompt_target": "unregistered extension: held-out prompt has at least one both-bad human vote; no threshold tuning",
+    "length_baseline": "negative character count; sign fixed from supplied short-prompt risk hypothesis; no fitted threshold",
+    "q4_missing_outcomes": "only prompts with observed outcomes for BOTH fixed recommendations; unavailable outcomes are excluded and counted, with no substitute model",
+    "q4_original_exact_reproduction": "unverifiable: prereg does not define missing-outcome policy; this report declares paired observed outcomes",
+    "historical_scope": "both-bad rate is a relative pairwise-vote statistic, not a calibrated per-generation failure probability"
+  },
+  "dataset": {
+    "rows": 1911,
+    "prompts": 508,
+    "models": 10,
+    "observed_cells": 2080,
+    "both_bad_vote_fraction": 0.2129774986917844
+  },
+  "Q1": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_test_cells": 606,
+        "auc_irt": 0.6410298369061256,
+        "auc_model_mean": 0.6999781814214804,
+        "auc_prompt_mean": 0.3671357661048383
+      },
+      {
+        "seed": 1,
+        "n_test_cells": 609,
+        "auc_irt": 0.6632274330729111,
+        "auc_model_mean": 0.7353052567792758,
+        "auc_prompt_mean": 0.3425671435063951
+      },
+      {
+        "seed": 2,
+        "n_test_cells": 633,
+        "auc_irt": 0.6419419959625032,
+        "auc_model_mean": 0.7042583598169135,
+        "auc_prompt_mean": 0.3745977493953749
+      },
+      {
+        "seed": 3,
+        "n_test_cells": 665,
+        "auc_irt": 0.6545352488043518,
+        "auc_model_mean": 0.718046073527801,
+        "auc_prompt_mean": 0.40106239275674493
+      },
+      {
+        "seed": 4,
+        "n_test_cells": 629,
+        "auc_irt": 0.6730112597048901,
+        "auc_model_mean": 0.6970346733872607,
+        "auc_prompt_mean": 0.3811582862485265
+      }
+    ],
+    "mean_irt": 0.6547491548901563,
+    "mean_baseline": 0.7109245089865462,
+    "margin": -0.05617535409638996,
+    "pass": false
+  },
+  "Q2": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 427,
+        "auc_irt_coldstart": 0.7541381593467225,
+        "auc_model_mean": 0.7619620392849261,
+        "zero_vocabulary_queries": 11,
+        "queries_with_fewer_than_five_positive_neighbours": 19
+      },
+      {
+        "seed": 1,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 427,
+        "auc_irt_coldstart": 0.7455091797648923,
+        "auc_model_mean": 0.7322348434817065,
+        "zero_vocabulary_queries": 10,
+        "queries_with_fewer_than_five_positive_neighbours": 19
+      },
+      {
+        "seed": 2,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 402,
+        "auc_irt_coldstart": 0.7513089005235603,
+        "auc_model_mean": 0.7296345003846059,
+        "zero_vocabulary_queries": 7,
+        "queries_with_fewer_than_five_positive_neighbours": 13
+      },
+      {
+        "seed": 3,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 396,
+        "auc_irt_coldstart": 0.7303122087604845,
+        "auc_model_mean": 0.7415087501294397,
+        "zero_vocabulary_queries": 9,
+        "queries_with_fewer_than_five_positive_neighbours": 16
+      },
+      {
+        "seed": 4,
+        "n_train_prompts": 407,
+        "n_test_prompts": 101,
+        "n_test_cells": 434,
+        "auc_irt_coldstart": 0.7046436400008513,
+        "auc_model_mean": 0.703153929643108,
+        "zero_vocabulary_queries": 7,
+        "queries_with_fewer_than_five_positive_neighbours": 21
+      }
+    ],
+    "mean_irt": 0.7371824176793023,
+    "mean_baseline": 0.7336988125847572,
+    "margin": 0.003483605094545039,
+    "pass": true
+  },
+  "Q3": {
+    "global_best": "StableVideoDiffusion",
+    "share_prompts_with_different_best": 0.0,
+    "positive_discrimination_implication": "Every prompt has the same ability ordering because every discrimination is positive; no prompt-specific model routing"
+  },
+  "Q4": {
+    "runs": [
+      {
+        "seed": 0,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 42,
+        "n_unmeasured_prompts": 59,
+        "mean_outcome_irt_pick": 0.7619047619047619,
+        "mean_outcome_baseline_pick": 0.7619047619047619,
+        "difference": 0.0
+      },
+      {
+        "seed": 1,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 41,
+        "n_unmeasured_prompts": 60,
+        "mean_outcome_irt_pick": 0.6544715447154471,
+        "mean_outcome_baseline_pick": 0.6544715447154471,
+        "difference": 0.0
+      },
+      {
+        "seed": 2,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 53,
+        "n_unmeasured_prompts": 48,
+        "mean_outcome_irt_pick": 0.6682389937106917,
+        "mean_outcome_baseline_pick": 0.6682389937106917,
+        "difference": 0.0
+      },
+      {
+        "seed": 3,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 41,
+        "n_unmeasured_prompts": 60,
+        "mean_outcome_irt_pick": 0.7357723577235772,
+        "mean_outcome_baseline_pick": 0.7357723577235772,
+        "difference": 0.0
+      },
+      {
+        "seed": 4,
+        "irt_pick": "StableVideoDiffusion",
+        "baseline_pick": "StableVideoDiffusion",
+        "n_paired_observed_prompts": 39,
+        "n_unmeasured_prompts": 62,
+        "mean_outcome_irt_pick": 0.6965811965811965,
+        "mean_outcome_baseline_pick": 0.6965811965811965,
+        "difference": 0.0
+      }
+    ],
+    "mean_paired_difference": 0.0,
+    "pass": false
+  },
+  "both_bad_risk": {
+    "runs": [
+      {
+        "seed": 0,
+        "n_test_prompts": 101,
+        "n_test_votes": 413,
+        "both_bad_test_votes": 94,
+        "auc_both_bad_vote": 0.6091175882078301,
+        "auc_negative_character_length_vote": 0.5129727206029481,
+        "auc_any_both_bad_prompt_extension": 0.6166272655634358
+      },
+      {
+        "seed": 1,
+        "n_test_prompts": 101,
+        "n_test_votes": 415,
+        "both_bad_test_votes": 79,
+        "auc_both_bad_vote": 0.5585254671488848,
+        "auc_negative_character_length_vote": 0.5628767329716696,
+        "auc_any_both_bad_prompt_extension": 0.6320158102766799
+      },
+      {
+        "seed": 2,
+        "n_test_prompts": 101,
+        "n_test_votes": 336,
+        "both_bad_test_votes": 71,
+        "auc_both_bad_vote": 0.6918150411905395,
+        "auc_negative_character_length_vote": 0.5642838161041721,
+        "auc_any_both_bad_prompt_extension": 0.6423416198877305
+      },
+      {
+        "seed": 3,
+        "n_test_prompts": 101,
+        "n_test_votes": 382,
+        "both_bad_test_votes": 95,
+        "auc_both_bad_vote": 0.5924261874197688,
+        "auc_negative_character_length_vote": 0.6090592334494773,
+        "auc_any_both_bad_prompt_extension": 0.5424641148325359
+      },
+      {
+        "seed": 4,
+        "n_test_prompts": 101,
+        "n_test_votes": 420,
+        "both_bad_test_votes": 83,
+        "auc_both_bad_vote": 0.524704157877802,
+        "auc_negative_character_length_vote": 0.5257588216366952,
+        "auc_any_both_bad_prompt_extension": 0.5531914893617021
+      }
+    ],
+    "mean_vote_auc": 0.595317688368965,
+    "mean_negative_length_vote_auc": 0.5549902649529924,
+    "mean_any_both_bad_prompt_auc": 0.5973280599844168,
+    "declared_vote_metric_meets_0_68": false,
+    "exact_handoff_reproduction": "UNVERIFIABLE: binary target and aggregation omitted from supplied preregistration/results"
+  },
+  "V4": {
+    "numerical_conditions_on_declared_metrics": false,
+    "exact_claim_reproduction": "UNVERIFIABLE",
+    "reason": "Both-bad target and IRT penalty strength are unspecified in supplied preregistration; this fresh run declares both without tuning"
+  },
+  "fit_diagnostics": [
+    {
+      "experiment": "Q1",
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 717,
+      "objective": 599.3131323916718,
+      "max_absolute_gradient": 1.6466997431818264,
+      "observed_cells": 1474,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 0,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 434,
+      "objective": 747.8341824713528,
+      "max_absolute_gradient": 2.3555533968694817,
+      "observed_cells": 1653,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 1,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 687,
+      "objective": 610.5819465080982,
+      "max_absolute_gradient": 1.7001367812774455,
+      "observed_cells": 1471,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 1,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 581,
+      "objective": 735.3395248737228,
+      "max_absolute_gradient": 2.493279104176477,
+      "observed_cells": 1653,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 2,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 971,
+      "objective": 592.3891044003512,
+      "max_absolute_gradient": 2.015577843605238,
+      "observed_cells": 1447,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 2,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 381,
+      "objective": 765.795859105479,
+      "max_absolute_gradient": 2.534560570114855,
+      "observed_cells": 1678,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 3,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 810,
+      "objective": 582.643528105774,
+      "max_absolute_gradient": 1.88701672170854,
+      "observed_cells": 1415,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 3,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 275,
+      "objective": 773.2389584650002,
+      "max_absolute_gradient": 2.412078927680209,
+      "observed_cells": 1684,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q1",
+      "seed": 4,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 801,
+      "objective": 597.0278039653211,
+      "max_absolute_gradient": 1.532437015938557,
+      "observed_cells": 1451,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "Q2",
+      "seed": 4,
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 516,
+      "objective": 737.2261494009159,
+      "max_absolute_gradient": 2.6395383906102223,
+      "observed_cells": 1646,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    },
+    {
+      "experiment": "full",
+      "converged": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 538,
+      "objective": 938.1308825636207,
+      "max_absolute_gradient": 2.5388810592444164,
+      "observed_cells": 2080,
+      "settings": {
+        "l2_ability": 0.1,
+        "l2_difficulty": 0.1,
+        "min_discrimination": 0.3,
+        "max_discrimination": 4.0,
+        "max_iterations": 3000,
+        "gradient_tolerance": 1e-06
+      },
+      "cell_weights": "one per observed cell; cell means are fractional responses",
+      "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+    }
+  ]
+}

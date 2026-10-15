@@ -1,0 +1,26 @@
+Final local G0 browser QA — 2026-10-16 Asia/Seoul
+URL: http://127.0.0.1:8080
+Collected UTC: 2026-10-15T16:45:26.926Z
+Scope: functional browser QA against the final audited local engine; no cloud or video generation.
+
+PASS — five real sample POST responses match expected audited rates within 1e-6; visible percentages match API rounding:
+a cat and a dog: HTTP 200; p_fail=0.30666666666666664; UI=30.7%; illustrative budget=$4.62; Gemini rewrite unavailable=true
+a spoon and a laptop: HTTP 200; p_fail=0.5345454545454545; UI=53.5%; illustrative budget=$6.88; Gemini rewrite unavailable=true
+a bicycle and a car: HTTP 200; p_fail=0.4333333333333333; UI=43.3%; illustrative budget=$5.65; Gemini rewrite unavailable=true
+indoor gymnasium: HTTP 200; p_fail=0.065; UI=6.5%; illustrative budget=$3.42; Gemini rewrite unavailable=true
+a purple clock: HTTP 200; p_fail=0.05714285714285714; UI=5.7%; illustrative budget=$3.39; Gemini rewrite unavailable=true
+
+PASS — unsupported OOV: supported=false; p_fail=null; visible risk=—; percent unit hidden; neighbors hidden; budget=Unavailable.
+PASS — empty input: visible error; aria-invalid=true; no POST request.
+PASS — desktop viewport1440x1080 and mobile390x844: no horizontal overflow.
+PASS — architecture route at desktop and mobile: no overflow; CURRENT LOCAL G0 and PLANNED NOT ACTIVE labels visible.
+PASS — fresh final run: no page errors, console errors, or failed network requests.
+PASS — API status remains mode=local-g0; cloud_run/gemini/adk/agent_platform_session/firestore/postcheck=false; generations=0.
+
+Final screenshot files (prior diagnostic screenshots are excluded from this evidence):
+/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-desktop.png
+SHA256 de8d8756c671c1483e5bff5034d27325f08ecceab3c1746ef5731f0bd18dfa74
+/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-mobile.png
+SHA256 334019f5e94b87ba21a17ed70637be6be143c3a39c18dc35fac99a3f706ed04d
+
+No UI code changed during final QA.

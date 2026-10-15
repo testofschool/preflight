@@ -1,0 +1,15 @@
+seed  Q1_IRT  Q1_B1  Q2_IRT_transductive  Q2_IRT_strict  Q2_B1  risk_vote_AUC_strict  length_AUC
+0  0.647171  0.729580  0.701495  0.701311  0.674508  0.705971  0.472321
+1  0.631960  0.703950  0.725478  0.718499  0.689307  0.707779  0.545356
+2  0.645276  0.714930  0.720598  0.723247  0.686368  0.700754  0.534386
+3  0.639401  0.720487  0.695059  0.697790  0.691383  0.611137  0.554600
+4  0.646995  0.705910  0.731351  0.736167  0.741543  0.616004  0.535079
+Q1 {"mean_irt": 0.6421606667036598, "mean_baseline": 0.7149714145904503, "margin": -0.07281074788679054, "pass": false}
+Q2 {"mean_irt": 0.7147961891398239, "mean_baseline": 0.6966220713625884, "margin": 0.018174117777235543, "pass": true}
+Q2_strict {"mean_irt": 0.7154029321789146, "mean_baseline": 0.6966220713625884, "margin": 0.01878086081632624, "pass": true}
+Q3 {"global_best": "StableVideoDiffusion", "share_prompts_with_different_best": 0.0, "positive_discrimination_implication": "Every prompt has the same ability ordering because every discrimination is positive; no prompt-specific model routing"}
+Q4 {"mean_irt": 0.573003300330033, "mean_baseline": 0.573003300330033, "difference": 0.0, "pass": false}
+Q4_paired_extension {"mean_paired_difference": 0.0, "pass": false}
+both_bad_risk {"mean_vote_auc": 0.6683289428340439, "mean_vote_auc_transductive": 0.6681207214113458, "mean_negative_length_vote_auc": 0.5283482599775864, "mean_any_both_bad_prompt_auc": 0.6306755444371527, "declared_vote_metric_meets_0_68": false, "exact_handoff_reproduction": "UNVERIFIABLE: binary target and aggregation omitted from supplied preregistration/results"}
+V4 {"numerical_conditions_on_declared_metrics": false, "exact_claim_reproduction": "UNVERIFIABLE", "reason": "Both-bad target and IRT penalty strength are unspecified in supplied preregistration; this fresh run declares both without tuning"}
+converged_fits=11/11

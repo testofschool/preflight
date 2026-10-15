@@ -1,0 +1,107 @@
+{
+  "scope": "LOCAL ONLY; V3 Cloud Run warm/cold remains NOT RUN",
+  "created_kst": "2026-10-16T01:44:49.569093+09:00",
+  "pid": 20703,
+  "server_command": [
+    "/Users/felix/Desktop/AI Builder Cup 2026/.preflight-venv/bin/python",
+    "-m",
+    "uvicorn",
+    "app:app",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8080",
+    "--no-access-log"
+  ],
+  "startup_ready_seconds": 1.1586201251484454,
+  "startup_through_first_prediction_seconds": 2.1859774170443416,
+  "first_prediction": {
+    "sample": "a cat and a dog",
+    "label": "first local request",
+    "http_status": 200,
+    "request_seconds": 0.003254,
+    "p_fail": 0.30666666666666664,
+    "neighbours": 5,
+    "rewrite_present": false
+  },
+  "warm_samples": [
+    {
+      "sample": "a cat and a dog",
+      "label": "warm local request",
+      "http_status": 200,
+      "request_seconds": 0.002871,
+      "p_fail": 0.30666666666666664,
+      "neighbours": 5,
+      "rewrite_present": false
+    },
+    {
+      "sample": "a spoon and a laptop",
+      "label": "warm local request",
+      "http_status": 200,
+      "request_seconds": 0.004673,
+      "p_fail": 0.5345454545454545,
+      "neighbours": 5,
+      "rewrite_present": false
+    },
+    {
+      "sample": "a bicycle and a car",
+      "label": "warm local request",
+      "http_status": 200,
+      "request_seconds": 0.002363,
+      "p_fail": 0.4333333333333333,
+      "neighbours": 5,
+      "rewrite_present": false
+    },
+    {
+      "sample": "indoor gymnasium",
+      "label": "warm local request",
+      "http_status": 200,
+      "request_seconds": 0.002505,
+      "p_fail": 0.065,
+      "neighbours": 5,
+      "rewrite_present": false
+    },
+    {
+      "sample": "a purple clock",
+      "label": "warm local request",
+      "http_status": 200,
+      "request_seconds": 0.002991,
+      "p_fail": 0.05714285714285714,
+      "neighbours": 5,
+      "rewrite_present": false
+    }
+  ],
+  "all_local_warm_under_10_seconds": true,
+  "status": {
+    "mode": "local-g0",
+    "label": "Local statistical preview",
+    "cloud_run": false,
+    "gemini": false,
+    "adk": false,
+    "agent_platform_session": false,
+    "firestore": false,
+    "postcheck": false,
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "single local process"
+    }
+  }
+}

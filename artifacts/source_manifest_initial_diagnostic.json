@@ -1,0 +1,42 @@
+{
+  "source_name": "TIGER-Lab/GenAI-Bench video_generation/test",
+  "source_license_declared_by_handoff": "CC-BY-4.0",
+  "source_sha256": "c58ba145070415d084950fe8a80c517fd14e05d3285e371338a66791cee5de94",
+  "rows": 1911,
+  "prompts": 508,
+  "models": 10,
+  "observed_cells": 2080,
+  "density": 0.4094488188976378,
+  "both_bad_votes": 407,
+  "both_bad_vote_fraction": 0.2129774986917844,
+  "vote_categories": {
+    "rightvote": 660,
+    "leftvote": 628,
+    "bothbad_vote": 407,
+    "tievote": 216
+  },
+  "coding": "win 1; loss 0; tie 0.5; both-bad 0 for both sides; cell is arithmetic observation mean",
+  "local_export_counts": {
+    "prompts_v1": 508,
+    "items_v1": 508
+  },
+  "firestore_populated": false,
+  "fit": {
+    "converged": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "iterations": 538,
+    "objective": 938.1308825636207,
+    "max_absolute_gradient": 2.5388810592444164,
+    "observed_cells": 2080,
+    "settings": {
+      "l2_ability": 0.1,
+      "l2_difficulty": 0.1,
+      "min_discrimination": 0.3,
+      "max_discrimination": 4.0,
+      "max_iterations": 3000,
+      "gradient_tolerance": 1e-06
+    },
+    "cell_weights": "one per observed cell; cell means are fractional responses",
+    "initialization": "all ability and difficulty zero; discrimination one; deterministic"
+  }
+}

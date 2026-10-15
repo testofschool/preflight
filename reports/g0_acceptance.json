@@ -1,0 +1,77 @@
+{
+  "created_kst": "2026-10-16T01:51:06.259777+09:00",
+  "overall": "HOLD",
+  "local_g0": "COMPLETE",
+  "cloud_url": null,
+  "local_url": "http://127.0.0.1:8080",
+  "V1": {
+    "status": "PASS",
+    "shared_20_token_files": 0
+  },
+  "V2": {
+    "status": "PASS",
+    "forbidden_marker_hits": 0
+  },
+  "V3": {
+    "status": "NOT_RUN",
+    "cloud_samples_measured": 0,
+    "local_evidence": "reports/local_latency.json"
+  },
+  "V4": {
+    "status": "FAIL",
+    "vote_auc": 0.6683289428340439,
+    "minimum": 0.68,
+    "irt_auc": 0.7147961891398239,
+    "baseline_auc": 0.6966220713625884,
+    "exact_0_72_claim": "UNVERIFIABLE"
+  },
+  "V5": {
+    "status": "NOT_RUN",
+    "rewrites_tested": 0
+  },
+  "V6": {
+    "status": "NOT_RUN",
+    "agent_tool_calls": 0,
+    "session_service_active": false
+  },
+  "V7": {
+    "status": "NOT_RUN",
+    "remote_counts": null,
+    "local_prompts": 508,
+    "local_items": 508,
+    "remote_counts_status": "UNMEASURED"
+  },
+  "V8": {
+    "status": "NOT_RUN",
+    "owner_clips_measured": 0
+  },
+  "V9": {
+    "status": "PASS",
+    "evidence": "README.md"
+  },
+  "V10": {
+    "status": "NOT_RUN",
+    "deployed_config": null
+  },
+  "g0_missing": [
+    "GCP project ID",
+    "runtime Gemini key availability",
+    "explicit Veo billing status",
+    "owner MP4 paths",
+    "private repository URL"
+  ],
+  "track_a": "G0_LOCAL_COMPLETE_CLOUD_PENDING",
+  "track_b": "NOT_STARTED_G0",
+  "tests": {
+    "passed": 30,
+    "warnings": 1
+  },
+  "generation_calls": 0,
+  "runtime": {
+    "python": "3.10.11 (v3.10.11:7d4cc5aa85, Apr  4 2023, 19:05:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "resolved_packages": 33
+  },
+  "preview_pid": 20703,
+  "source_hash_enforced": true
+}

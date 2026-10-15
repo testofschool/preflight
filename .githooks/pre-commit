@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+preflight_root=$(git rev-parse --show-toplevel)
+if [ -x "$preflight_root/.venv/bin/python" ]; then
+    preflight_python="$preflight_root/.venv/bin/python"
+else
+    preflight_python=python3
+fi
+exec "$preflight_python" "$preflight_root/scripts/check_secrets.py" --root "$preflight_root" --include-index

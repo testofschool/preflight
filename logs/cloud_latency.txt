@@ -1,0 +1,12 @@
+calibration_cold | a cat and a dog | HTTP 200 | 17.707208s
+calibration_warm | a cat and a dog | HTTP 200 | 4.811466s
+calibration_warm | a spoon and a laptop | HTTP 200 | 4.752059s
+calibration_warm | a bicycle and a car | HTTP 200 | 5.636945s
+calibration_warm | indoor gymnasium | HTTP 200 | 7.626793s
+calibration_warm | a purple clock | HTTP 200 | 4.672362s
+validation_cold | a cat and a dog | HTTP 200 | 12.598004s
+validation_warm | a cat and a dog | HTTP 200 | 4.647478s
+validation_warm | a spoon and a laptop | HTTP 200 | 4.363051s
+validation_warm | a bicycle and a car | HTTP 200 | 4.714395s
+validation_warm | indoor gymnasium | HTTP 200 | 5.209227s
+validation_warm | a purple clock | HTTP 200 | 5.097970s

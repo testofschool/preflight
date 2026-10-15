@@ -1,0 +1,7 @@
+first local request | a cat and a dog | HTTP 200 | 0.003254s | p_fail=0.306667
+warm local request | a cat and a dog | HTTP 200 | 0.002871s | p_fail=0.306667
+warm local request | a spoon and a laptop | HTTP 200 | 0.004673s | p_fail=0.534545
+warm local request | a bicycle and a car | HTTP 200 | 0.002363s | p_fail=0.433333
+warm local request | indoor gymnasium | HTTP 200 | 0.002505s | p_fail=0.065000
+warm local request | a purple clock | HTTP 200 | 0.002991s | p_fail=0.057143
+local_startup_through_first_prediction=2.185977s

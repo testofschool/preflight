@@ -1,0 +1,49 @@
+{
+  "created_at_utc": "2026-10-15T20:18:02.625308+00:00",
+  "scope": "Independent sampled visual reference screening of all nine owner individual shots; excludes edited compilation",
+  "owner_clips_available": 9,
+  "owner_clips_independently_screened": 9,
+  "known_defect_clips_confirmed": 0,
+  "required_known_defect_clips": 3,
+  "known_defect_accuracy_run": "NOT_RUN",
+  "V8_accuracy": "UNVERIFIABLE_WITH_SUPPLIED_REFERENCE_EVIDENCE",
+  "matched_defects": null,
+  "reason": "No inspected source provided an independently confirmed intrinsic defect eligible for the three-positive-clip test. Ordinary motion blur, occlusion, cuts and intended effects were not forced into positive labels.",
+  "reference_evidence": [
+    {
+      "path": "reports/postcheck_canary_reference.json",
+      "bytes": 4045,
+      "sha256": "920419445256a714e83817a6967cf3184764db6d4ed968d835aed2dccdd23d60"
+    },
+    {
+      "path": "../evidence/preflight-20261016/v8-reference-engine/independent_observations.json",
+      "bytes": 20078,
+      "sha256": "cc226ad1278e19a2b7bd155e854f79bd1d4f0e3ae2ec197feb7cf3a69f97fc58"
+    },
+    {
+      "path": "../evidence/preflight-20261016/v8-reference-audit/04_06_observations_frozen.json",
+      "bytes": 9456,
+      "sha256": "62126fbc208899e8d2108cb27cba882811eb402fc9f9be5caeead58287b988dc"
+    },
+    {
+      "path": "../evidence/preflight-20261016/v8-reference-root/07_observations_frozen.json",
+      "bytes": 1540,
+      "sha256": "b363ef5991687098e86a025507a2e9ffcffe827cc65542cac5534e0c27253d2f"
+    },
+    {
+      "path": "../evidence/preflight-20261016/v8-reference-ui/08-reference.json",
+      "bytes": 5349,
+      "sha256": "6e338a0b86a95975dc6144875aee392d5ac2e6fb57d3a24fdbb5709e818f6f27"
+    },
+    {
+      "path": "../evidence/preflight-20261016/v8-reference-ui/09-reference.json",
+      "bytes": 9651,
+      "sha256": "67dadc120cca9463be3e14a13b86b8fe5d06bb4c52bac6b0054ceb5a9c7a7a90"
+    }
+  ],
+  "limitations": [
+    "Sampled inspection is not exhaustive clean-video certification.",
+    "Machine flags obtained after reference freeze cannot retrospectively become pre-known test labels."
+  ],
+  "model_calls_for_screening": 0
+}

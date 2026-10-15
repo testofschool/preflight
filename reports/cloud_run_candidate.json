@@ -1,0 +1,15 @@
+{
+  "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "default_cloud_run_url": true,
+  "primary_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "candidate": true,
+  "region": "asia-southeast1",
+  "min_instances": 0,
+  "timeout_seconds": 38,
+  "concurrency": 80,
+  "revision": "preflight-00005-tuc",
+  "session_service": "Agent Platform Sessions",
+  "gemini_backend": "Vertex AI",
+  "gemini_model": "gemini-3.5-flash",
+  "veo_calls": 0
+}

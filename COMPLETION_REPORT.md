@@ -1,76 +1,91 @@
-# Preflight — Track A deployment report
+# Preflight — deployed A+B, partial acceptance report
 
-Snapshot: 2026-10-16 KST, before the G1 notice and Track B. **Track A is deployed. Overall acceptance is partial: V4 FAIL; V7 partial; V8 not run.**
+Snapshot: 2026-10-16 KST, after G1 expired and the upload path was deployed. **A+B are live; overall acceptance remains PARTIAL. V4 FAIL, V8 NOT RUN, and the feedback interpretation in A3/B2 is a documented semantic extension.**
 
-Live app: **https://preflight-jcgro45veq-as.a.run.app** — the default Cloud Run `run.app` URL, with no login or custom domain. Private source repository: https://github.com/testofschool/preflight.
+Live app: **https://preflight-jcgro45veq-as.a.run.app** — the default Cloud Run `run.app` URL, no login or custom domain. Private source: https://github.com/testofschool/preflight.
 
-## Scope, authorization and gates
+## Authority, scope and gates
 
-The attached handoff supplied the proposed work contract and expected results; its statements were not treated as evidence of credentials, observed results or billing readiness. The ZIP passed CRC/path checks, its handoff equals the standalone document, and all six originals remain preserved outside the repository. The public dataset bytes remain frozen and hash-checked before fitting or evaluation.
+The attached handoff is the proposed implementation contract, not evidence that its numerical claims, credentials or billing prerequisites are true. The owner directly filled section 0 and authorized A1–A6, then V1–V7/V9/V10, G1 and upload-only B1–B2/V8. The ZIP passed CRC/path checks; its handoff equals the standalone file; all six originals remain preserved outside the repository. Dataset bytes are checked before fitting/evaluation.
 
-The owner subsequently filled section 0 directly, supplied the authorized project and private repository, confirmed runtime key setup and GCP billing linkage, selected Singapore first, and authorized continuation without another G0 question. Dedicated app resources were created; legacy Gemini 2.5 / Agent Platform resources were not repurposed. No project identifier or credential value is committed. The first API-key model request returned HTTP 402 for depleted prepaid credit. Production then explicitly selected Vertex AI with GCP Application Default Credentials and linked billing, as disclosed during execution; it does not silently alternate credential backends, and the AI Studio cap was not raised. The runtime key was transferred through stdin to Secret Manager, never printed, and is not injected into the production Vertex container.
+The URL notice was prepared at **02:24:09 KST**; G1 expired at **04:24:09** and this continuation began after **04:25**. Automatic goal/heartbeat messages were not treated as human replies. The one-time G1 continuation was deleted after firing. No teammate message was sent. [G1 receipt](../evidence/preflight-20261016/g1_notice.json).
 
-**G1:** share the URL and stop for the owner's next message or two hours from that notice, then continue Track B. The owner can forward the link to SIDHANT; no teammate message was sent by the executor. **G2 remains closed:** Veo billing is unconfirmed; total Veo calls **0**. Track B will use the supplied individual owner MP4 shots, excluding the edited compilation.
+Dedicated Singapore resources use the authorized configured project; unrelated legacy resources were not repurposed. Actual project identifiers and credential values are excluded from saved source/logs. An initial AI Studio key request returned HTTP402 for depleted prepaid credit; production explicitly uses Vertex AI with Application Default Credentials and linked GCP billing. The AI Studio cap was not raised. The key was transferred through stdin to Secret Manager and is not injected into this production Vertex container. **G2 holds: Veo calls 0; no generation endpoint.**
 
 ## V1–V10 acceptance ledger
 
 | ID | Result | Actual number and native evidence |
 | --- | --- | --- |
-| V1 | PASS within supplied overlap test | **0** files sharing an exact 20-token shingle with the reference; Python lexical tokens and other UTF-8 whitespace tokens, with four binary artifacts excluded. [Receipt](reports/freshness-final.json). This is not proof of authorship or creation date. |
-| V2 | PASS within marker/exact-value scan scope | **0** forbidden-marker hits in repository/README/logs and staged blobs; exact current key and actual project identifiers also absent. Captured native Cloud Run text logs: **0** marker hits after identifier redaction. [Guard receipt](reports/secrets-final.json), [cloud log receipt](reports/cloud_log_scan.json). |
-| V3 | PASS | Cold **12.598004s**; five warm requests **4.647478, 4.363051, 4.714395, 5.209227, 5.097970s**; all HTTP 200 with genuine tools and verified sessions. [Timed curl receipt](reports/cloud_latency.json), [stdout](logs/cloud_latency.txt). |
-| V4 | **FAIL; exact 0.72 UNVERIFIABLE** | Five-seed held-out both-bad vote AUC **0.668329 < 0.68**. Cold-start IRT **0.714796 ≥ 0.696622** baseline; strict train-only TF-IDF **0.715403**. The composite fails its first condition. [Final evaluation](artifacts/evaluation.json), [stdout](logs/evaluation.txt). |
-| V5 | PASS | **10/10** hardest fitted items yielded strictly lower estimated risk (required ≥6); **0** higher-risk returns, **10** HTTP attempts, **0** retries. [Full safe responses](reports/rewrites_live.json), [stdout](logs/rewrites_live.txt). No generated-video quality improvement is established. |
-| V6 | PASS | **6 completed ADK tool calls on every one of the 10 V5 requests**; genuine Gemini-emitted function calls, Agent Platform managed-session readback verified. One trace below. Same-session continuation separately passed native/browser checks. |
-| V7 | PARTIAL | Native Firestore counts: **508 prompts / 508 items / 0 verdicts**. All **1,016** historical documents and **10** model abilities match local exports, **0** differences. Verdict population waits for real Track B output. [Import stdout](logs/firestore_import.txt), [content integrity](reports/firestore_integrity.json). |
-| V8 | NOT RUN | **0/3** owner clips inspected. Track B has not started before G1. Available clips are not claimed as known-defect validation. |
-| V9 | PASS | README has architecture diagram, source/licence, limits, five samples, cannot-do statement and Agent Platform Sessions named. [Header stdout](logs/readme_headers.txt). |
-| V10 | PASS | Current native config: **asia-southeast1, min 0, timeout 36s, default concurrency 80**, revision `preflight-00003-7k9`. [Configuration](reports/cloud_run.json), [stdout](logs/cloud_run_config.txt). |
+| V1 | PASS within supplied overlap test | **0** repository files with an exact 20-token shingle shared with the reference; four binary artifacts excluded. [Receipt](reports/freshness-final.json), [stdout](logs/freshness-final.txt). This does not prove authorship or creation date. |
+| V2 | PASS within scan scope | **0** forbidden-marker hits, including repository/README/logs/index; exact current credential and project identifier byte scan also zero. Current revision native log scan **0** forbidden markers after identifier redaction. [Guard](reports/secrets-final.json), [log scan](reports/cloud_log_scan_postcheck.json). |
+| V3 | PASS | Cold **19.738130s**; five warm requests **4.862889, 4.586187, 4.378278, 4.620390, 4.329699s**; all HTTP200, genuine tools and verified sessions. Timed on revision `preflight-00006-d4s`, same image as current revision. [Receipt](reports/cloud_latency_postcheck_release.json), [stdout](logs/cloud_latency_postcheck_release.txt). |
+| V4 | **FAIL; exact 0.72 UNVERIFIABLE** | Five-seed held-out vote both-bad AUC **0.668329 < 0.68**. Cold-start IRT **0.714796 ≥ 0.696622** baseline; strict train-only TF-IDF **0.715403**. The composite fails its first condition. [Evaluation](artifacts/evaluation.json), [stdout](logs/evaluation.txt). |
+| V5 | PASS | Current release **9/10** strict estimated-risk reductions (required ≥6), **0** higher-risk returns, all **10/10** non-higher; **10** attempts, **0** retries. Cat/dog safely returned unchanged. [Responses](reports/rewrites_postcheck_release.json), [stdout](logs/rewrites_postcheck_release.txt). No video-quality gain established. |
+| V6 | PASS | All **10/10** V5 requests completed **6** real ADK tools and readback-verified Agent Platform managed sessions. Native signed Gemini function calls; trace below. |
+| V7 | PASS | Native Firestore counts **510 prompts / 508 items / 2 verdicts**. All **1,016** historical documents and **10** abilities match local exports, **0** differences; the two extra prompts hold separately counted real clip feedback. [Counts](reports/firestore_postcheck_counts.json), [integrity](reports/firestore_integrity_postcheck_final.json), [stdout](logs/firestore_integrity_postcheck_final.txt). |
+| V8 | **NOT RUN** | **0/3 known-defect clips** validated. One owner clip was inspected and reviewed as a negative control, with no independently confirmed intrinsic defect; it does not count toward V8. All nine owner shots are resident and independently screened; **0** clips have a confirmed intrinsic defect in the sampled references. Accuracy is **UNVERIFIABLE** from these fixtures. [Availability](reports/owner_clip_availability.json), [frozen negative-control reference](reports/postcheck_canary_reference.json). |
+| V9 | PASS | README includes architecture, data/licence, limits, five samples, cannot-do statements, Agent Platform Sessions and actual B limitations. [Headers](logs/readme_headers.txt). |
+| V10 | PASS | Current native config **asia-southeast1, min0, timeout40s, default concurrency80**, revision `preflight-00007-q2d`; 100% primary traffic. [Config](reports/cloud_run.json), [stdout](logs/cloud_run_config.txt). |
 
-The app can be reviewed and used despite the failed statistical acceptance criterion. This report does not round partial acceptance up to completion.
+[acceptance.json](reports/acceptance.json) is the machine-readable ledger. Historical Track A receipts are preserved in [track_a_before_postcheck](reports/track_a_before_postcheck/). Its former 10/10 rewrite result and 508/508/0 counts are historical, not the current release's result.
 
-## Commands and stdout
+### Commands and recorded stdout
 
-Run from the repository with the sibling `.preflight-cloud-venv` Python 3.12 environment. Runtime project/service configuration is supplied through the environment or captured gcloud output, never literal identifiers in saved command lines. Source the owner's shell configuration silently before the first credentialed call; never print the environment or key.
+Run from this repository with the sibling Python3.12 `.preflight-cloud-venv`. Project configuration is read from the authorized runtime configuration, never literal identifiers in saved command lines. Shell initialization is sourced silently before credentialed operations; environment and credentials are not printed.
 
-| Check | Executed command / method | Recorded stdout |
+| Check | Executed command / method | Recorded stdout / receipt |
 | --- | --- | --- |
 | V1 | `python scripts/check_freshness.py --reference ../evidence/preflight-20261016/inputs/pregen_irt.py` | [freshness-final.txt](logs/freshness-final.txt) |
-| V2 | `python scripts/check_secrets.py --include-index` plus exact-value byte scan and captured native log scan | [secrets-final.txt](logs/secrets-final.txt), [cloud log receipt](reports/cloud_log_scan.json) |
-| V3 + V10 | `python scripts/measure_cloud.py --url https://preflight-jcgro45veq-as.a.run.app` | [cloud_latency.txt](logs/cloud_latency.txt) |
-| V4 | `python scripts/evaluate.py` on frozen bytes | [evaluation.txt](logs/evaluation.txt) |
-| V5 + V6 | `python scripts/verify_rewrites.py --url https://preflight-jcgro45veq-as.a.run.app` | [rewrites_live.txt](logs/rewrites_live.txt) |
-| V7 | `python scripts/import_firestore.py`; `python scripts/verify_store_live.py` | [import](logs/firestore_import.txt), [integrity](logs/firestore_integrity.txt) |
-| V8 | Not run | No fabricated command or stdout |
+| V2 | `python scripts/check_secrets.py --include-index`; exact-value scan in memory; selected native Cloud Run logs | [secrets-final.txt](logs/secrets-final.txt), [log scan](reports/cloud_log_scan_postcheck.json) |
+| V3 | `python scripts/measure_cloud.py --url https://preflight-jcgro45veq-as.a.run.app --validation-only --report reports/cloud_latency_postcheck_release.json --log logs/cloud_latency_postcheck_release.txt` | [timed curl stdout](logs/cloud_latency_postcheck_release.txt) |
+| V4 | `python scripts/evaluate.py`, frozen data, five fixed prompt holdouts | [evaluation.txt](logs/evaluation.txt) |
+| V5/V6 | `python scripts/verify_rewrites.py --url https://preflight-jcgro45veq-as.a.run.app --report reports/rewrites_postcheck_release.json --log logs/rewrites_postcheck_release.txt` | [rewrites_postcheck_release.txt](logs/rewrites_postcheck_release.txt) |
+| V7 | `python scripts/verify_store_live.py` with distinct output paths; native Firestore count aggregations | [integrity stdout](logs/firestore_integrity_postcheck_final.txt), [count receipt](reports/firestore_postcheck_counts.json) |
+| B native canary | `python scripts/verify_postcheck_canary.py --url` with the candidate URL and `--reference reports/postcheck_canary_reference.json` | [postcheck_canary_live.txt](logs/postcheck_canary_live.txt) |
+| B primary cache | Native status/OpenAPI read, then one exact cached multipart upload | [postcheck_primary_cache.json](reports/postcheck_primary_cache.json) |
+| B current-image fresh smoke | `python scripts/verify_postcheck_smoke.py --url https://preflight-jcgro45veq-as.a.run.app --reference reports/postcheck_smoke_reference.json --report reports/postcheck_optimized_smoke.json --log logs/postcheck_optimized_smoke.txt` | [one-upload stdout](logs/postcheck_optimized_smoke.txt) |
+| V8 | **Not run**; `scripts/verify_postcheck.py` is prepared for three frozen known-defect references | No fabricated success or stdout |
 | V9 | `rg '^#' README.md` | [readme_headers.txt](logs/readme_headers.txt) |
-| V10 | `gcloud run services describe preflight --region asia-southeast1 --format=json`, selecting safe fields before writing | [cloud_run_config.txt](logs/cloud_run_config.txt) |
-| Unit/integration | `python -m pytest -q tests` | **50 passed, 2 warnings, 5 subtests passed**; [tests_cloud.txt](logs/tests_cloud.txt) |
-| Browser | Actual desktop/mobile UI, exactly two live POSTs, instrumented copy write | [browser_cloud_qa.json](reports/browser_cloud_qa.json), [stdout](logs/browser_cloud_qa.txt) |
+| V10 | `gcloud run services describe preflight --region asia-southeast1 --format=json`, safe fields selected before writing | [cloud_run_config.txt](logs/cloud_run_config.txt) |
+| Tests | `python -m pytest -q tests` | **71 passed, 2 warnings, 11 subtests**; [tests_postcheck.txt](logs/tests_postcheck.txt) |
+| B browser | One cached Pass and one separately cached Flagged upload; desktop1440/mobile390; preview/4.5s seek succeeded | [Pass receipt](reports/browser_postcheck_qa.json), [Flagged stdout](logs/browser_postcheck_flagged_qa.txt), [Flagged receipt](reports/browser_postcheck_flagged_qa.json) |
 
-[commands.json](reports/commands.json) also preserves the historical G0 execution entries. These commands report the completed runs; do not rerun paid checks merely to read their stdout. The ten-request verifier refuses to overwrite existing receipts. The pytest warnings concern Starlette's HTTPX deprecation and an ADK experimental function-schema feature; neither failed the checks. Fake clients in unit tests are separate from native cloud acceptance receipts.
+[commands.json](reports/commands.json) retains earlier executions and identifies the added current-release checks. The paid rewrite/clip verifiers refuse to overwrite existing result files. These are executed results, not instructions to repeat paid checks. Unit fakes are distinct from native cloud inference. Pytest warnings concern Starlette HTTPX deprecation and ADK experimental function schemas. Browser inspection recorded two local blob range failure events; partial-content responses still decoded the actual preview successfully. No external API/static request failed. Two local integrity CLI attempts failed before remote access because the shell lacked the required project runtime setting; a different output filename did not fix that setting. Loading the already authorized gcloud project into process memory allowed the final read-only comparison to pass. [Literal attempt record](reports/verification_attempts.json).
 
-### Native latency and timeout derivation
+### Native timing and ADK evidence
 
-The cold measurement deployed a new revision with minimum instances zero and deployment health checking disabled, then made its first invocation before any UI/GET access. The [gcloud deploy documentation](https://docs.cloud.google.com/sdk/gcloud/reference/run/deploy) states this mode starts the instance on first invocation. Calibration's slowest sample, including cold startup, was **17.707208s**; the integer timeout was set to `ceil(2 × 17.707208) = 36s`. A new revision at that timeout produced the final V3 results above. No time limit or threshold was relaxed after observing results.
+A new revision, minimum instances0 and deployment health check disabled, was invoked first through timed curl to measure cold startup. V3 was measured on revision6 at timeout38s; the subsequent revision7 changed timeout to40s and kept the exact source image. Current timeout is `ceil(2 × max(17.707208 original calibration, 18.950459 B canary, 19.738130 current A cold)) = 40s`. [Derivation](reports/postcheck_timeout_calibration.json). No acceptance threshold was relaxed. The current primary cache request also passed; a separate fresh current-image upload later measured10.346132s, below the existing slowest sample, so the40s derivation remains unchanged.
 
-### V5 per-prompt stdout summary
-
-Items were selected before requests, by descending difficulty in the frozen engine artifact, with stable artifact-order ties. Every response had six completed tools and a readback-verified managed session. Exactly ten requests were made, without retries.
+The ten hardest prompts were selected before requests by descending frozen fitted difficulty, with stable artifact-order ties. Every row completed six tools and a verified managed session; ten requests, zero retries.
 
 | Rank | Prompt | Before | After | Tools / session |
 | --- | --- | --- | --- | --- |
-| 1 | A person is wrestling | 0.500000 | 0.098529 | 6 / verified |
-| 2 | a spoon and a laptop | 0.534545 | 0.340000 | 6 / verified |
-| 3 | A person is shooting basketball | 0.300000 | 0.063529 | 6 / verified |
-| 4 | a cat and a dog | 0.306667 | 0.097143 | 6 / verified |
-| 5 | A person is hugging | 0.500000 | 0.000000 | 6 / verified |
-| 6 | an orange bird | 0.340000 | 0.297143 | 6 / verified |
-| 7 | A person is squat | 0.500000 | 0.383333 | 6 / verified |
-| 8 | A person is shaking head | 0.500000 | 0.440000 | 6 / verified |
-| 9 | a tv and a laptop | 0.534545 | 0.090000 | 6 / verified |
-| 10 | a bicycle and a car | 0.433333 | 0.224242 | 6 / verified |
+| 1 | A person is wrestling | 0.500000 | 0.058333 | 6 / verified |
+| 2 | a spoon and a laptop | 0.534545 | 0.300000 | 6 / verified |
+| 3 | A person is shooting basketball | 0.300000 | 0.133333 | 6 / verified |
+| 4 | a cat and a dog | 0.306667 | 0.306667 | 6 / verified |
+| 5 | A person is hugging | 0.500000 | 0.250000 | 6 / verified |
+| 6 | an orange bird | 0.340000 | 0.303529 | 6 / verified |
+| 7 | A person is squat | 0.500000 | 0.290000 | 6 / verified |
+| 8 | A person is shaking head | 0.500000 | 0.450000 | 6 / verified |
+| 9 | a tv and a laptop | 0.534545 | 0.275000 | 6 / verified |
+| 10 | a bicycle and a car | 0.433333 | 0.233333 | 6 / verified |
 
-One actual trace: `nearest_prompts → difficulty(original=0.500000) → rewrite → difficulty(candidate1=0.290909) → difficulty(candidate2=0.232143) → difficulty(candidate3=0.098529)`. Three Gemini planner calls emit the real signed function calls; one additional Gemini call generates candidates. The strict reduction guard chooses only an approved candidate. The purple-clock browser request independently exercised the unchanged-risk path, which correctly hid the alternative and copy control. Opaque session IDs in native API receipts are resource IDs, not credentials; authentication cookies and headers were not retained.
+One current native trace: `nearest_prompts → difficulty(original=0.500000) → rewrite → difficulty(candidate1=0.058333) → difficulty(candidate2=0.375000) → difficulty(candidate3=0.273333)`. Gemini emits signed function calls in three planner steps; a fourth model call generates candidates. The strict guard returns only a lower-risk candidate. Cat/dog returned the original with no safe rewrite; the UI hides candidate/copy controls in that case. Session IDs retained in receipts are opaque resource IDs; authentication cookies/headers are excluded.
+
+## Track B behavior, observations and limits
+
+`POST /postcheck` accepts an owner MP4 upload plus its scene prompt and model label. It validates the actual MP4 container, limits30MiB/30s/12million pixels, and supports the owner's4398×1886 clips. A single bounded ffmpeg decode creates a silent512-side/15fps review video and explicit2fps JPEG batches; Gemini reviews both routes with at most three parallel calls and no retry. Defects have typed categories, MM:SS/seconds and a reason. Unreviewable or failed evidence returns an error, not a clean verdict. Default video sampling1fps, missed events shorter than0.5s, downscaled detail and excluded audio are disclosed in the UI/README. Temporary media is bounded and removed; no generation call is made.
+
+The independently inspected `01_wake.mp4` (4,107,887bytes,5.041667s,HEVC4398×1886) has SHA-256 `4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e`. The negative-control reference was frozen before inference. Initial candidate revision4 used the earlier two-pass decoder: actual multipart review **18.950459s**, HTTP200, **2** real Gemini calls,10 frames, no defects returned. Exact repeat **0.937997s**, zero new model calls, same stored review and no duplicate feedback. The following real `/preflight` call took **6.852915s** and used the updated score with six tools and a verified session. These three requests used six model calls total and zero retries. [Full receipt](reports/postcheck_canary_live.json).
+
+The optimized image is now primary revision7. A primary cached request returned HTTP200 in **1.560978s** (the recorded interval includes status/OpenAPI reads), **0** new model calls and no new feedback. The optimized local decoder measured **5.153659s**, with all10JPEGs independently decoded, as recorded in [postcheck_decode_optimized.json](reports/postcheck_decode_optimized.json) / [stdout](logs/postcheck_decode_optimized.txt); that local measurement is separate from cloud inference. A new02 upload on current revision7 measured **10.346132s**, HTTP200, **2** real model calls,10frames and a new durable verdict. [Fresh optimized smoke](reports/postcheck_optimized_smoke.json). The model flagged physics at4.5s and changed the proxy29.0909%→32.6364%; a cached browser check displayed the stored flag and sought to4.5s with **0** new model calls and no duplicate feedback. This proves operational behavior, not detection accuracy.
+
+The pre-inference02 reference had no confirmed defect. A separate, explicitly post-inference [visual adjudication](../evidence/preflight-20261016/v8-reference-engine/02_door/post_inference_adjudication/adjudication.json) **DISAGREED** with the model's narrow claim of an instantaneous camera-side flip: denser frames show continuous door movement and stable corridor geometry. Its prior reference remains unchanged. The automated verdict was retained as observed; it was not silently corrected or credited as a pre-known V8 match. This disagreement illustrates why the machine-feedback proxy is unvalidated. No measured false-positive rate or exhaustive clean-video claim follows from this case.
+
+**A3/B2 literal contract deviation — PARTIAL:** a machine verdict on one clip is not a human pairwise both-bad vote. Historical `both_bad_rate` and all human evidence remain unchanged. The app separately counts clip pass/failure feedback and applies a labelled **MIXED heuristic proxy** to subsequent `p_fail`; `historical_p_fail` retains the original 5-NN estimate. The canary showed21.6667% historical →20.7639% mixed score, feedbackcount1/failures0. Exact unseen prompts use a labelled neighbour prior, not a refitted vectorizer/item model. This demonstrates durable feedback wiring; it does **not** literally recompute human both-bad rates, preserve A3's pure 5-NN definition after feedback, calibrate risk, or establish that future prediction is better. Therefore A3/B2 are not claimed fully compliant with their literal definitions.
+
+**V8 remains NOT RUN,0/3.** OS download requests were issued for the nine individual shots. Finder access initially returned a locked-Mac error and the owner was asked to unlock/Download Now. All nine later became resident at approximately05:09:55 KST without a new human reply; verified local copies/hashes are now available. Independent sampled reference screening of all nine is complete, including targeted denser/native frames where uncertainty arose. No eligible confirmed-positive clip was established. The edited compilation was excluded. No synthetic defects, cuts or ordinary motion blur were labelled as intrinsic defects to force a pass. The [reference availability receipt](reports/postcheck_reference_availability.json) records **9 screened,0 confirmed-positive clips** and hashes of frozen observations. The three-positive-clip accuracy run was therefore not executed. A future valid accuracy test requires three independently confirmed defect references frozen before inference; At least two one-to-one category/time matches within±2s are required; compatible reasons also need inspection. The negative control cannot satisfy that criterion.
 
 ## Statistical reproduction and limits
 
@@ -82,40 +97,44 @@ The reference fits TF-IDF on all prompt text; this transductive path is labelled
 
 Other preregistered findings remain visible: Q1 IRT **0.642161** vs baseline **0.714971**, FAIL; Q3 model-routing share **0**; Q4 observed outcome **0.573003** for both choices, difference **0**, FAIL. Positive discrimination fixes model ordering. No routing, current-Veo calibration, measured savings, novelty literature priority, or generated-video quality claim follows from these results. Historical `initial_diagnostic` artifacts retain the superseded pre-audit settings; canonical final outputs are `artifacts/evaluation.json` and `logs/evaluation.txt`.
 
+
 ## Delivered and not done, per track
 
-**Track A delivered:** fresh data/IRT/retrieval code; frozen source verification; Firestore import with canonical-content comparison; real `/preflight` predictions; Gemini through Vertex AI; Google ADK 2.12 multi-step tool execution; Agent Platform Sessions create/read/reuse; strict rewrite guard; responsive English interface and architecture screen; illustrative price formula; no login; Cloud Run deployment; native latency, rewrite, session and browser receipts; private source packaging. Cloud Build completed successfully with its input hash recorded in [cloud_build.json](reports/cloud_build.json).
+**Track A delivered:** fresh frozen-data ingest/IRT/retrieval; Firestore import and integrity verification; real preflight predictions; genuine ADK/Gemini tools and Agent Platform Sessions; strict rewrite guard; English responsive interface/architecture; default public Cloud Run URL; current latency/rewrite/config evidence; private source packaging. The original deployed A receipts are retained. **Not achieved:** V4risk-AUC threshold, calibrated current-video probabilities, measured savings, prospective rewrite video-quality improvement, or actual invoice cost. The A3 semantic extension above is partial compliance.
 
-**Track A not achieved:** the risk-AUC criterion V4 fails. Predictions are historical retrieval estimates, not calibrated current-model failure probabilities. No prospective generated-video experiment establishes rewrite quality. Actual invoice cost is unmeasured; illustrative Veo budgets exclude Gemini, hosting, tax and discounts.
-
-**Track B not started:** the G1 notice/reply-or-two-hour interval comes first. No clip has been inspected, no video defect/timecode accuracy is claimed, no verdict document exists, and no updated-risk UI flow has shipped. The store contains an idempotent feedback transaction for later use, with tests only; this is not an executed feedback loop. Machine single-clip verdicts must remain separately labelled from human pairwise both-bad votes rather than rewriting historical evidence. Veo generation is prohibited while G2 holds and no `/generate` endpoint exists.
+**Track B delivered:** upload-only actual video plus2fps frame review, bounded decoding/calls, typed verdicts, real Firestore write, exact-cache deduplication, durable updated-score wiring, separated historical/machine evidence, UI preview/results/errors, unit/integration tests, native negative-control/cache/preflight evidence, a fresh optimized-image upload, and actual Pass/Flagged browser checks. **Not achieved:** V8known-defect accuracy; proof that feedback improves predictions; literal B2both-bad recomputation. The asset hydration dependency is resolved; the supplied sampled fixtures do not establish three known-positive references, so V8accuracy remains unverified. The feature remains available while validation is honestly incomplete. Track A was not withheld. G2still holds, totalVeo calls0.
 
 ## Files, sizes and build-input changes
 
-[FILE_INVENTORY.json](reports/FILE_INVENTORY.json) is the full file-level deliverable list, with byte sizes and SHA-256 for every repository file except generated caches and Git metadata. Its own hash is null to avoid recursion; its byte size is included. The [external evidence inventory](../evidence/preflight-20261016/FILES.json) covers preserved inputs, intake/guard receipts and desktop/mobile screenshots. Runtime virtual environments are installed siblings, not repository deliverables. The original G0 report/ledger remain explicitly historical at [g0_completion_report.md](reports/g0_completion_report.md) and [g0_acceptance.json](reports/g0_acceptance.json).
+[FILE_INVENTORY.json](reports/FILE_INVENTORY.json) lists every repository file with byte size and SHA-256, excluding Git/caches/virtual environments. It includes a local ignored server log as an explicitly local artifact; Git inclusion is recorded. Its own hash is null to avoid recursion and its byte size is included. The [external evidence inventory](../evidence/preflight-20261016/FILES.json) covers preserved inputs, intake/G1/final guard/Git receipts, frozen references and actual desktop/mobile screenshots. Runtime venvs are installed siblings. Owner MP4 bytes are outside the repository; [availability](reports/owner_clip_availability.json) records names, sizes and all nine verified hashes. Original G0 records remain historical in `reports/g0_*`; original A records remain in `reports/track_a_before_postcheck/`.
 
-Build inputs created or changed, file by file:
+Build inputs, file by file (all current hashes/sizes are in the inventory):
 
 | File | Change / reason |
 | --- | --- |
-| `requirements.txt` | Fresh direct requirements; FastAPI changed from 0.119.1 to **0.133.0** to resolve cloud ADK/telemetry constraints. A rejected 0.143.2 dependency attempt was not deployed. |
-| `requirements-cloud.txt` | Adds pinned **google-adk[gcp]2.12.0**, **google-cloud-firestore2.34.1**, **google-genai2.31.0**. |
-| `requirements-cloud.lock` | Exact resolved production dependency snapshot; dependency consistency check passed. Used by Docker. |
-| `requirements.lock` | Retained 33-package historical G0/local environment, not the production lock. |
-| `requirements-dev.txt` | Local test dependencies; cloud tests used pytest9.0.3 in the separate cloud venv. |
-| `Dockerfile` | New Python3.12 slim container pinned to `sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1`; production lock, bundled engine artifacts, nonroot UID10001, uvicorn with access logging disabled. |
-| `cloudbuild.yaml` | New reproducible Docker build with runtime image substitution and dedicated build service account. |
-| `.dockerignore` | Excludes Git, caches, tests, evidence and unused artifacts from image context. |
-| `.gcloudignore` | Restricts Cloud Build uploads to runtime build inputs; source data/evidence are not uploaded. |
-| `app.py`, `cloud/*.py` | Cloud startup/readiness, Firestore-backed predictions, shared rolling/cumulative limits, signed Gemini/ADK tool workflow and managed-session persistence; no synthetic fallback. |
-| `preflight_core/*.py`, `scripts/build_data.py` | Fresh bounded IRT/retrieval/provenance implementation; frozen-data mismatch stops before writes. |
-| `data/genai_video_test.parquet` | Supplied frozen bytes, SHA-256 `c58ba145070415d084950fe8a80c517fd14e05d3285e371338a66791cee5de94`. |
-| `artifacts/engine.json`, `vectorizer.joblib`, `prompt_vectors.npz` | Fresh generated fit/retrieval inputs copied into the runtime image. |
-| `static/*.html`, `static/*.js`, `static/styles.css` | English interface with actual connection flags, anonymous session continuity and strict candidate/copy guard. |
-| `scripts/cloud_ops.py`, `release_cloud.py`, `measure_cloud.py` | Dedicated-resource provisioning, identifier-safe build/deploy and native timeout calibration; configuration remains runtime-only. |
+| `requirements.txt` | Fresh direct requirements; FastAPI0.119.1→**0.133.0** to satisfy ADK/telemetry constraints. Rejected0.143.2 attempt was not deployed. |
+| `requirements-cloud.txt` | Pinned ADK[gcp]**2.12.0**, Firestore**2.34.1**, GenAI**2.31.0**; B adds direct **python-multipart0.0.32**, already present transitively in the production lock. |
+| `requirements-cloud.lock` | Exact106-package production resolution; unchanged by B. Docker installs this lock, consistency check passed. |
+| `requirements.lock` | Historical33-package G0/local environment; not production. |
+| `requirements-dev.txt` | Local tests; actual cloud venv used pytest9.0.3. |
+| `Dockerfile` | Python3.12-slim base stays pinned to `sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1`; B adds **ffmpeg7:7.1.5-0+deb13u1**. NonrootUID10001, productionlock/artifacts, access logs disabled. |
+| `cloudbuild.yaml` | Runtime image substitution and dedicated build service account. |
+| `.dockerignore` | Excludes Git/caches/tests/evidence/unused artifacts from image context. |
+| `.gcloudignore` | Restricts upload to runtime build inputs; owner media/data evidence not uploaded. |
+| `app.py` | Cloud readiness, shared20/min and1000cumulative admission; B bounded multipart/tempfiles, per-instance video semaphore1, deterministic cached verdicts and error handling. |
+| `cloud/postcheck.py` | New real Vertex visual review, one-pass ffmpeg video+2fps frames, bounded schema/timeout/concurrency and limitations. |
+| `cloud/store.py` | Separately counted provenance-bearing feedback, idempotent durable review, unchanged historical documents and labelled mixed proxy. |
+| `cloud/rewrite_agent.py` | Signed Gemini/ADK tools with managed sessions; explanation wording reflects separately counted feedback. |
+| `preflight_core/*.py`, `scripts/build_data.py` | Fresh bounded IRT/retrieval/provenance; source mismatch stops before writes. |
+| `data/genai_video_test.parquet` | Frozen SHA-256 `c58ba145070415d084950fe8a80c517fd14e05d3285e371338a66791cee5de94`; unchanged. |
+| `artifacts/engine.json`, `vectorizer.joblib`, `prompt_vectors.npz` | Fresh fit/retrieval runtime inputs; unchanged by B. Engine hash `86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c`. |
+| `static/index.html`, `app.js`, `postcheck.js`, `styles.css` | Upload/preview/defect timecodes/updatedscore UI; historical-vs-mixed evidence labels, strict rewrite/copy guard. |
+| `static/architecture.html`, `architecture.js` | Actual upload/frame/feedback path and disclosed limitations. |
+| `scripts/cloud_ops.py`, `release_cloud.py`, `measure_cloud.py` | Dedicated identifier-safe provisioning/release, candidate deployment and separate validation output files. |
+| `scripts/verify_postcheck.py`, `verify_postcheck_canary.py`, `verify_postcheck_smoke.py`, `verify_decode_local.py` | Frozen-reference no-retry native evidence helpers; V8 script not executed. |
 
-The build input digest and the current runtime-source digest match. Documentation/receipt additions do not change the deployed runtime image. Request admission is shared across instances: at most20 checks per rolling minute and at most1,000 cumulative admitted checks; it can count requests whose later external step fails. Minimum instances0 reduces idle compute but does not make all cloud resources free.
+Current Cloud Build **SUCCESS**, ID `35497462-13c9-4601-bbda-9f0f980d573f`; source digest `7b649f3f6d72564510289f58afa482419c052296c24ee4fab0924f2cfde999aa` matches current runtime inputs. [Build receipt](reports/cloud_build.json). One earlier build was explicitly cancelled and superseded to fix ultrawide decode/concurrent cache handling; that attempt is retained in `reports/build_attempts/`. The final build, current Track A checks, current-primary cache check and runtime digest refer to the optimized image; the uncached B canary remains evidence from the earlier two-pass image. Documentation/receipt changes do not alter it. Shared admission may count requests whose later external step fails. Min0 reduces idle compute; no claim that all cloud resources are free.
 
 ## Factual three-sentence submission description
 
-Preflight runs on Google Cloud Run and retrieves historical prompt outcomes and IRT item parameters from Cloud Firestore, the document database shared with Firebase. A Google ADK 2.12 agent uses Gemini 3.5 Flash through Vertex AI to propose rewrites and calls the difficulty tools to reject candidates whose historical risk score does not fall. Agent Platform Sessions persists anonymous conversation history across checks; video generation and postcheck are not enabled in this Track A build.
+Preflight runs on Google Cloud Run and retrieves historical prompt outcomes and IRT parameters from Cloud Firestore, the document database shared with Firebase. A Google ADK 2.12 agent uses Gemini 3.5 Flash through Vertex AI for tool-checked prompt rewrites, while Agent Platform Sessions persists anonymous conversation history. Uploaded MP4s are reviewed through Gemini video understanding and explicit 2 fps frame batches; timestamped machine verdicts are saved in Firestore and separately counted feedback changes a labelled, uncalibrated risk proxy without overwriting historical human votes.

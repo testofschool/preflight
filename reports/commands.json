@@ -144,5 +144,173 @@
     "command": "Browser UI automation, two actual deployed POST requests, instrumented clipboard write",
     "exit_code": 0,
     "stdout_file": "logs/browser_cloud_qa.txt"
+  },
+  {
+    "name": "postcheck_tests",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/tests_postcheck.txt"
+  },
+  {
+    "name": "postcheck_candidate_release",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/release_cloud.py",
+      "--candidate",
+      "--timeout",
+      "38"
+    ],
+    "exit_code": 0,
+    "receipt": "reports/cloud_build.json; reports/cloud_run_candidate.json",
+    "note": "Final optimized candidate image; earlier cancelled build and two-pass candidate retained separately."
+  },
+  {
+    "name": "postcheck_negative_control_once",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_postcheck_canary.py",
+      "--url",
+      "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+      "--reference",
+      "reports/postcheck_canary_reference.json"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/postcheck_canary_live.txt",
+    "note": "Initial two-pass candidate; one fresh review, one exact cache repeat, one preflight; 3 requests,0retries,6modelcalls. NotV8."
+  },
+  {
+    "name": "postcheck_local_optimized_decode_once",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_decode_local.py",
+      "--reference",
+      "reports/postcheck_canary_reference.json"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/postcheck_decode_optimized.txt",
+    "note": "Exactlyone current prepare_media invocation;0API/modelcalls."
+  },
+  {
+    "name": "postcheck_release_cold_warm",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/measure_cloud.py",
+      "--url",
+      "https://preflight-jcgro45veq-as.a.run.app",
+      "--validation-only",
+      "--report",
+      "reports/cloud_latency_postcheck_release.json",
+      "--log",
+      "logs/cloud_latency_postcheck_release.txt"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/cloud_latency_postcheck_release.txt",
+    "note": "Measured rev6/38s; config-only final rev7timeout40 uses same image."
+  },
+  {
+    "name": "postcheck_release_exact_ten_once",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_rewrites.py",
+      "--url",
+      "https://preflight-jcgro45veq-as.a.run.app",
+      "--report",
+      "reports/rewrites_postcheck_release.json",
+      "--log",
+      "logs/rewrites_postcheck_release.txt"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/rewrites_postcheck_release.txt",
+    "note": "10actualrequests0retries;9strictimprovements0higher."
+  },
+  {
+    "name": "postcheck_store_integrity",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_store_live.py",
+      "--report",
+      "reports/firestore_integrity_postcheck.json",
+      "--log",
+      "logs/firestore_integrity_postcheck.txt"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/firestore_integrity_postcheck.txt"
+  },
+  {
+    "name": "postcheck_native_counts",
+    "method": "Native Firestore aggregation queries, select count values before serializing",
+    "exit_code": 0,
+    "receipt": "reports/firestore_postcheck_counts.json"
+  },
+  {
+    "name": "postcheck_actual_browser",
+    "method": "One actual exact-cache upload to candidate;desktop/mobile preview/UI assertions",
+    "exit_code": 0,
+    "stdout_file": "logs/browser_postcheck_qa.txt",
+    "note": "0newmodelcalls;notV8."
+  },
+  {
+    "name": "postcheck_primary_cache",
+    "method": "GET status/OpenAPI and one exact cached multipart upload to current primary",
+    "exit_code": 0,
+    "receipt": "reports/postcheck_primary_cache.json",
+    "note": "0newmodelcalls;storedreview/feedback reused."
+  },
+  {
+    "name": "postcheck_timeout_configuration",
+    "method": "Fresh native service describe after config-only timeout40 update; safe fields selected",
+    "exit_code": 0,
+    "stdout_file": "logs/cloud_run_config.txt"
+  },
+  {
+    "name": "V8_known_defect_verification",
+    "command_executed": false,
+    "reason": "Eight owner MP4s are nonresident iCloud placeholders; only negativecontrol01 inspectable. Known references absent; no inference fabricated."
+  },
+  {
+    "name": "postcheck_current_fresh_smoke_once",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_postcheck_smoke.py",
+      "--url",
+      "https://preflight-jcgro45veq-as.a.run.app",
+      "--reference",
+      "reports/postcheck_smoke_reference.json",
+      "--report",
+      "reports/postcheck_optimized_smoke.json",
+      "--log",
+      "logs/postcheck_optimized_smoke.txt"
+    ],
+    "exit_code": 0,
+    "stdout_file": "logs/postcheck_optimized_smoke.txt",
+    "note": "One fresh02review,2modelcalls,no retries. Machineflag disputed independently;notV8."
+  },
+  {
+    "name": "postcheck_final_integrity",
+    "command": [
+      "../.preflight-cloud-venv/bin/python",
+      "scripts/verify_store_live.py",
+      "--report",
+      "reports/firestore_integrity_postcheck_final.json",
+      "--log",
+      "logs/firestore_integrity_postcheck_final.txt"
+    ],
+    "runtime_config": "Authorized current gcloud project loaded into expected runtime env setting in process memory before calling main; no identifier saved.",
+    "exit_code": 0,
+    "stdout_file": "logs/firestore_integrity_postcheck_final.txt",
+    "earlier_failed_attempts_receipt": "reports/verification_attempts.json"
+  },
+  {
+    "name": "postcheck_flagged_browser",
+    "method": "Exactlyonecached02primarybrowserupload; actualflag/timecode/4.5sseek;desktop/mobile",
+    "exit_code": 0,
+    "stdout_file": "logs/browser_postcheck_flagged_qa.txt",
+    "note": "0newmodelcalls;notV8."
   }
 ]

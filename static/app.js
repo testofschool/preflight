@@ -60,6 +60,11 @@
   function finite(value) { return typeof value === "number" && Number.isFinite(value); }
   function rate(value) { return finite(value) && value >= 0 && value <= 1; }
   function percent(value) { return `${(value * 100).toFixed(1)}%`; }
+  function hasMixedFeedback(data) {
+    return (finite(data.postcheck_feedback?.count) && data.postcheck_feedback.count > 0)
+      || (typeof data.risk_semantics === "string" && /\bmixed\b/i.test(data.risk_semantics))
+      || (rate(data.historical_p_fail) && rate(data.p_fail) && Math.abs(data.historical_p_fail - data.p_fail) > 1e-12);
+  }
 
   function twoSentences(values) {
     const text = (Array.isArray(values) ? values : [values]).filter(value => typeof value === "string" && value.trim()).join(" ");
@@ -92,6 +97,7 @@
   }
 
   function renderRewrite(data, prompt) {
+    const mixed = hasMixedFeedback(data);
     const before = data.p_fail_before;
     const after = data.p_fail_after;
     const candidate = typeof data.rewritten_prompt === "string" ? data.rewritten_prompt.trim() : "";
@@ -99,7 +105,7 @@
     document.querySelector(".better-card").classList.toggle("has-rewrite", Boolean(improved));
     if (!improved) {
       if (data.rewrite_status === "no_safe_rewrite" || data.rewrite_status === "improved") {
-        rewriteMessage("NO SAFER REWRITE", "No rewrite passed the historical risk check.", "Keep your original prompt or try a more specific scene. No alternative is presented as an improvement.");
+        rewriteMessage("NO SAFER REWRITE", mixed ? "No rewrite passed the estimated risk check." : "No rewrite passed the historical risk check.", "Keep your original prompt or try a more specific scene. No alternative is presented as an improvement.");
       } else {
         rewriteMessage("GEMINI REWRITE · UNAVAILABLE", "A rewrite is unavailable for this check.", serviceStatus?.mode === "local-g0" ? "This local build checks historical evidence only." : "The evidence check remains available. No alternative prompt has been approved.");
       }
@@ -109,13 +115,13 @@
     content.replaceChildren();
     const tag = document.createElement("span");
     tag.className = "feature-tag improved-tag";
-    tag.textContent = "LOWER HISTORICAL RISK";
+    tag.textContent = mixed ? "LOWER ESTIMATED RISK" : "LOWER HISTORICAL RISK";
     const quote = document.createElement("p");
     quote.className = "rewritten-prompt";
     quote.textContent = candidate;
     const comparison = document.createElement("div");
     comparison.className = "rewrite-comparison";
-    comparison.setAttribute("aria-label", `Historical risk: original ${percent(before)}, rewrite ${percent(after)}`);
+    comparison.setAttribute("aria-label", `${mixed ? "Estimated" : "Historical"} risk: original ${percent(before)}, rewrite ${percent(after)}`);
     const from = document.createElement("span");
     from.textContent = `${percent(before)} original`;
     const arrow = document.createElement("span");
@@ -145,7 +151,7 @@
     });
     const caption = document.createElement("p");
     caption.className = "subtle-copy";
-    caption.textContent = "A lower historical estimate is not a guarantee of a better video.";
+    caption.textContent = mixed ? "This estimate mixes human votes and separate machine clip reviews. A lower score does not guarantee a better video." : "A lower historical estimate is not a guarantee of a better video.";
     content.append(tag, quote, comparison, copy, caption);
   }
 
@@ -183,10 +189,11 @@
     const pricing = data.pricing || {};
     const duration = finite(pricing.duration_seconds) && pricing.duration_seconds > 0 ? `${pricing.duration_seconds}s` : "video";
     const attemptCost = finite(pricing.single_attempt_usd) && pricing.single_attempt_usd > 0 ? `$${pricing.single_attempt_usd.toFixed(2)} per ${duration} attempt` : "the configured per-attempt price";
-    costNote.textContent = `Illustration using ${attemptCost} and historical votes, capped at 5 attempts. This is not a Veo cost forecast. No generation has been requested.`;
+    costNote.textContent = `Illustration using ${attemptCost} and ${hasMixedFeedback(data) ? "the mixed risk estimate" : "historical votes"}, capped at 5 attempts. This is not a Veo cost forecast. No generation has been requested.`;
   }
 
   function renderResult(data, prompt) {
+    const mixed = hasMixedFeedback(data);
     const supported = data.supported !== false && data.coverage_supported !== false && data.coverage?.status !== "unsupported" && rate(data.p_fail);
     const value = document.getElementById("risk-value");
     const unit = document.getElementById("risk-unit");
@@ -206,17 +213,18 @@
     } else {
       value.textContent = (data.p_fail * 100).toFixed(1);
       unit.hidden = false;
-      label.textContent = typeof data.risk_semantics === "string" && data.risk_semantics.trim() ? "Risk estimate" : "Estimated historical both-bad rate";
-      detail.textContent = typeof data.risk_semantics === "string" && data.risk_semantics.trim() ? data.risk_semantics : "Statistical estimate from public historical votes on related prompts.";
+      label.textContent = mixed ? "Mixed heuristic risk estimate" : "Estimated historical both-bad rate";
+      detail.textContent = typeof data.risk_semantics === "string" && data.risk_semantics.trim() ? data.risk_semantics : mixed ? "A proxy combining historical human votes with separate machine clip reviews." : "Statistical estimate from public historical votes on related prompts.";
       document.getElementById("risk-fill").style.width = `${data.p_fail * 100}%`;
       if (data.p_fail >= 0.5) riskCard.classList.add("high-risk");
       state.textContent = serviceStatus?.mode === "local-g0" ? "LOCAL CHECK COMPLETE" : "CHECK COMPLETE";
-      renderReasons(data.reasons, "The local estimate is based on public historical votes. It has not been validated against Veo generations.");
+      renderReasons(data.reasons, mixed ? "This estimate combines historical human votes with separate machine clip reviews. It has not been validated against Veo generations." : "The local estimate is based on public historical votes. It has not been validated against Veo generations.");
       announcement.textContent = `Check complete. Risk estimate: ${percent(data.p_fail)}. This is not a validated Veo failure probability.`;
     }
     renderNeighbors(data.nearest_prompts, supported);
     renderBudget(data, supported);
     renderRewrite(data, prompt);
+    document.querySelector(".risk-card .evidence-boundary").textContent = mixed ? "This mixes historical human pairwise votes with separate machine clip verdicts. It is not a validated Veo failure probability." : "Historical evidence is a signal, not a validated probability of a Veo generation failing.";
     const historical = document.getElementById("risk-history");
     historical.hidden = !supported || !rate(data.historical_p_fail);
     historical.textContent = rate(data.historical_p_fail) ? `Historical vote estimate: ${percent(data.historical_p_fail)}` : "";
@@ -276,7 +284,7 @@
   window.preflightStatusReady.then(status => {
     serviceStatus = status;
     if (hasResult) return;
-    if (status?.gemini === true) rewriteMessage("GEMINI REWRITE · CONNECTED", "A rewrite appears only when it passes the historical risk check.", "A lower estimate does not guarantee a better video.");
+    if (status?.gemini === true) rewriteMessage("GEMINI REWRITE · CONNECTED", "A rewrite appears only when it passes the risk check.", "A lower estimate does not guarantee a better video.");
     else rewriteMessage("GEMINI REWRITE · UNAVAILABLE", "A rewrite is unavailable in the current mode.", status?.mode === "local-g0" ? "This local build checks historical evidence only." : "The service has not confirmed an active rewrite connection.");
   });
 })();

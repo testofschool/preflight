@@ -1,33 +1,53 @@
 {
-  "created_kst": "2026-10-16T02:22:16.598194+09:00",
-  "overall": "PARTIAL_ACCEPTANCE_V4_FAIL_G1_BEFORE_TRACK_B",
-  "track_a": "DEPLOYED_NATIVE_CHECKS_COMPLETE_V4_FAIL",
-  "track_b": "NOT_STARTED_G1",
+  "created_kst": "2026-10-16T05:20:34.618949+09:00",
+  "overall": "PARTIAL_ACCEPTANCE_V4_FAIL_V8_NOT_RUN_A3_B2_LITERAL_PARTIAL",
+  "track_a": "DEPLOYED_NATIVE_CHECKS_VERIFIED_V4_FAIL_A3_FEEDBACK_SEMANTIC_EXTENSION",
+  "track_b": "DEPLOYED_UPLOAD_ONLY_OPERATIONAL_CANARY_VERIFIED_V8_NOT_RUN_B2_LITERAL_PARTIAL",
   "cloud_url": "https://preflight-jcgro45veq-as.a.run.app",
   "default_run_app_url": true,
+  "primary_service_scope": "Track A preflight and upload-only Track B; no video generation endpoint",
   "V1": {
     "status": "PASS",
     "shared_20_token_files": 0,
-    "receipt": "reports/freshness-final.json"
+    "receipt": "reports/freshness-final.json",
+    "stdout": "logs/freshness-final.txt",
+    "command": "python scripts/check_freshness.py --reference ../evidence/preflight-20261016/inputs/pregen_irt.py",
+    "method": "Exact 20-token shingles; Python lexical tokens exclude comments/whitespace; other UTF-8 files use whitespace tokens; four binary artifacts explicitly skipped",
+    "limitation": "Zero overlap does not prove authorship or creation date"
   },
   "V2": {
     "status": "PASS",
     "forbidden_marker_hits": 0,
     "receipt": "reports/secrets-final.json",
-    "native_cloud_log_markers": 0
+    "stdout": "logs/secrets-final.txt",
+    "command": "python scripts/check_secrets.py --include-index",
+    "scope": "Byte-marker scan of repository, README, logs, binaries and staged blobs; generated caches and Git metadata excluded; matched values never emitted",
+    "native_cloud_log_markers": 0,
+    "native_cloud_log_receipt": "reports/cloud_log_scan_postcheck.json"
   },
   "V3": {
     "status": "PASS",
-    "cold_seconds": 12.598004,
+    "cold_seconds": 19.73813,
     "warm_seconds": [
-      4.647478,
-      4.363051,
-      4.714395,
-      5.209227,
-      5.09797
+      4.862889,
+      4.586187,
+      4.378278,
+      4.62039,
+      4.329699
     ],
     "cloud_samples_measured": 5,
-    "receipt": "reports/cloud_latency.json"
+    "total_http_requests": 6,
+    "all_http_200": true,
+    "completed_tools_per_request": 6,
+    "all_sessions_verified": true,
+    "validation_revision": "preflight-00006-d4s",
+    "validation_timeout_seconds": 38,
+    "current_revision": "preflight-00007-q2d",
+    "current_timeout_seconds": 40,
+    "scope_note": "Timings were measured on the preceding revision with the same runtime image and 38s timeout; the current revision changes timeout to 40s. These are observed samples, not a latency guarantee.",
+    "receipt": "reports/cloud_latency_postcheck_release.json",
+    "stdout": "logs/cloud_latency_postcheck_release.txt",
+    "command": "python scripts/measure_cloud.py --url https://preflight-jcgro45veq-as.a.run.app --validation-only --report reports/cloud_latency_postcheck_release.json --log logs/cloud_latency_postcheck_release.txt"
   },
   "V4": {
     "status": "FAIL",
@@ -35,7 +55,12 @@
     "minimum": 0.68,
     "irt_auc": 0.7147961891398239,
     "baseline_auc": 0.6966220713625884,
-    "exact_0_72_claim": "UNVERIFIABLE"
+    "composite_pass": false,
+    "exact_0_72_claim": "UNVERIFIABLE",
+    "reason": "The both-bad diagnostic fails its 0.68 threshold; the attached preregistration/results do not define or contain the claimed exact 0.72 test.",
+    "receipt": "artifacts/evaluation.json",
+    "stdout": "logs/evaluation.txt",
+    "command": "python scripts/evaluate.py"
   },
   "V5": {
     "status": "PASS",
@@ -43,7 +68,7 @@
     "completed_prompts": 10,
     "total_http_attempts": 10,
     "rate_limit_retries": 0,
-    "strictly_improved_count": 10,
+    "strictly_improved_count": 9,
     "non_higher_verified_count": 10,
     "higher_risk_returned_count": 0,
     "tool_workflow_verified_count": 10,
@@ -51,7 +76,11 @@
     "V6_all_ten_verified": true,
     "no_increase_observed": true,
     "never_higher_verified": true,
-    "receipt": "reports/rewrites_live.json"
+    "receipt": "reports/rewrites_postcheck_release.json",
+    "stdout": "logs/rewrites_postcheck_release.txt",
+    "selection_rule": "ten largest fitted item difficulties, descending; ties retain artifact row order; selected before any request",
+    "command": "python scripts/verify_rewrites.py --url https://preflight-jcgro45veq-as.a.run.app --report reports/rewrites_postcheck_release.json --log logs/rewrites_postcheck_release.txt",
+    "limitation": "A lower estimated risk score does not establish improved generated-video quality"
   },
   "V6": {
     "status": "PASS",
@@ -59,52 +88,177 @@
     "requests_verified": 10,
     "session_service": "Agent Platform Sessions",
     "session_service_active": true,
-    "receipt": "reports/rewrites_live.json"
+    "all_sessions_readback_verified": true,
+    "gemini_planner_calls_per_request": 3,
+    "gemini_candidate_generation_calls_per_request": 1,
+    "receipt": "reports/rewrites_postcheck_release.json",
+    "stdout": "logs/rewrites_postcheck_release.txt",
+    "trace_excerpt": [
+      {
+        "tool": "nearest_prompts",
+        "completed": true
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.5
+      },
+      {
+        "tool": "rewrite",
+        "completed": true
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.05833333333333333
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.375
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.2733333333333333
+      }
+    ]
   },
   "V7": {
-    "status": "PARTIAL",
+    "status": "PASS",
     "remote_counts": {
-      "prompts_v1": 508,
+      "prompts_v1": 510,
       "items_v1": 508,
-      "verdicts_v1": 0
+      "verdicts_v1": 2
     },
     "historical_documents_matching": 1016,
     "historical_document_differences": 0,
     "model_abilities_matching": 10,
-    "reason": "No clip verdict before G1; third populated collection still required",
-    "receipt": "reports/firestore_integrity.json"
+    "extra_feedback_only_prompt_documents": 2,
+    "verdict_provenance": "Two distinct actual owner uploads:01Pass on earlier image,02Flagged on current image. The latter flag was independently disputed; neither establishes known-defect accuracy.",
+    "counts_receipt": "reports/firestore_postcheck_counts.json",
+    "receipt": "reports/firestore_integrity_postcheck_final.json",
+    "stdout": "logs/firestore_integrity_postcheck_final.txt",
+    "command": "python scripts/verify_store_live.py --report reports/firestore_integrity_postcheck_final.json --log logs/firestore_integrity_postcheck_final.txt",
+    "counts_method": "Native Firestore collection aggregation queries; safe counts retained in counts_receipt",
+    "runtime_config": "Authorized configured gcloud project loaded into the required process environment setting in memory; no literal identifier saved."
   },
   "V8": {
     "status": "NOT_RUN",
-    "owner_clips_measured": 0,
-    "reason": "Track B follows G1; clips available, no Veo authorized"
+    "known_defect_owner_clips_measured": 0,
+    "required_known_defect_owner_clips": 3,
+    "minimum_matched_defects": 2,
+    "tolerance_seconds": 2,
+    "matched_defects": null,
+    "negative_control_owner_clips": 1,
+    "negative_control_does_not_establish_V8": true,
+    "reason": "All nine owner shots are resident and independently sampled, with targeted native/denser windows. No confirmed intrinsic positive defect was established. The required three-known-defect test cannot be scored from these references; the post-inference02machineflag was disputed and is not retrospective V8 credit.",
+    "availability_receipt": "reports/owner_clip_availability.json",
+    "negative_control_reference": "reports/postcheck_canary_reference.json",
+    "negative_control_receipt": "reports/postcheck_canary_live.json",
+    "accuracy_receipt": null,
+    "accuracy_stdout": null,
+    "command": "Not run; no fabricated accuracy command or stdout",
+    "owner_clips_available": 9,
+    "owner_clips_independently_screened": 9,
+    "confirmed_known_defect_clips": 0,
+    "accuracy": "UNVERIFIABLE_WITH_SUPPLIED_REFERENCE_EVIDENCE",
+    "reference_availability_receipt": "reports/postcheck_reference_availability.json",
+    "post_inference_adjudication": "../evidence/preflight-20261016/v8-reference-engine/02_door/post_inference_adjudication/adjudication.json"
   },
   "V9": {
     "status": "PASS",
     "evidence": "README.md",
-    "headers_stdout": "logs/readme_headers.txt"
+    "headers_stdout": "logs/readme_headers.txt",
+    "required_sections_present": [
+      "Architecture",
+      "Data source and licence",
+      "Methods and limits",
+      "Sample prompts",
+      "Operational limits"
+    ],
+    "agent_platform_service_named": "Agent Platform Sessions",
+    "command": "rg '^#' README.md"
   },
   "V10": {
     "status": "PASS",
     "deployed_config": {
       "region": "asia-southeast1",
       "min_instances": 0,
-      "timeout_seconds": 36,
+      "timeout_seconds": 40,
       "concurrency": 80,
-      "revision": "preflight-00003-7k9"
+      "revision": "preflight-00007-q2d"
     },
-    "receipt": "reports/cloud_run.json"
+    "timeout_basis": "ceil(2 * max(all recorded sample requests))",
+    "slowest_recorded_sample_seconds": 19.73813,
+    "calibration_receipt": "reports/postcheck_timeout_calibration.json",
+    "receipt": "reports/cloud_run.json",
+    "stdout": "logs/cloud_run_config.txt",
+    "command": "gcloud run services describe preflight --region asia-southeast1 --format=json; retain safe config fields only"
+  },
+  "literal_contract_deviations": {
+    "A3": {
+      "status": "PARTIAL",
+      "required": "p_fail equals the five-neighbour human pairwise both-bad rate",
+      "implemented": "Before feedback, p_fail equals the historical five-neighbour rate. Once relevant machine feedback exists, p_fail is a separately labelled MIXED heuristic proxy; historical_p_fail preserves the unchanged human-vote estimate.",
+      "source": "cloud/store.py",
+      "receipt": "reports/postcheck_canary_live.json"
+    },
+    "B2": {
+      "status": "PARTIAL",
+      "implemented_and_verified": [
+        "Real verdicts_v1 write",
+        "Idempotent cached reuse without a second feedback record",
+        "Separate machine-feedback counters",
+        "Adjusted risk shown in the UI",
+        "Subsequent preflight reads the adjusted risk"
+      ],
+      "not_literally_completed": "Human pairwise both-bad counts and rates are not recomputed from single-clip machine verdicts. The implemented feedback score is a disclosed heuristic extension, not that human statistic.",
+      "historical_rate_unchanged": 0.21666666666666665,
+      "initial_risk_before": 0.21666666666666665,
+      "initial_adjusted_risk_after": 0.20763888888888885,
+      "subsequent_preflight_p_fail": 0.20763888888888885,
+      "receipt": "reports/postcheck_canary_live.json",
+      "ui_receipt": "reports/browser_postcheck_qa.json",
+      "current_primary_cache_receipt": "reports/postcheck_primary_cache.json"
+    }
+  },
+  "track_b_operational_evidence": {
+    "native_negative_control_review_seconds": 18.950459,
+    "native_negative_control_visual_model_calls": 2,
+    "native_canary_cache_seconds": 0.937997,
+    "native_canary_cache_model_calls": 0,
+    "native_canary_total_http_requests": 3,
+    "native_canary_retries": 0,
+    "native_canary_total_known_model_calls": 6,
+    "native_inference_scope": "One earlier candidate, two-pass decoder, negative-control clip; not an uncached timing measurement of the optimized current-primary decoder",
+    "current_primary_cache_seconds": 1.560978,
+    "current_primary_cache_model_calls": 0,
+    "current_primary_generate_endpoint_absent": true,
+    "canary_receipt": "reports/postcheck_canary_live.json",
+    "cache_receipt": "reports/postcheck_primary_cache.json",
+    "browser_receipt": "reports/browser_postcheck_qa.json",
+    "limitation": "Operational review, cache, persistence and feedback behavior do not establish defect detection recall or exhaustive clean-video certification",
+    "current_primary_uncached_optimized_decoder_seconds": 10.346132,
+    "current_primary_uncached_optimized_model_calls": 2,
+    "current_primary_uncached_optimized_receipt": "reports/postcheck_optimized_smoke.json",
+    "current_primary_fresh_machine_flag_seconds": 4.5,
+    "current_primary_machine_flag_independent_adjudication": "DISAGREED with instantaneous camera-side-flip claim; no prior reference changed or V8 credit",
+    "flagged_browser_receipt": "reports/browser_postcheck_flagged_qa.json",
+    "local_optimized_decode_seconds": 5.153659,
+    "local_decode_receipt": "reports/postcheck_decode_optimized.json"
   },
   "tests": {
-    "passed": 50,
+    "passed": 71,
     "warnings": 2,
-    "subtests_passed": 5,
-    "receipt": "logs/tests_cloud.txt"
+    "subtests_passed": 11,
+    "receipt": "logs/tests_postcheck.txt",
+    "command": "python -m pytest -q tests"
   },
   "generation_calls": 0,
   "gates": {
     "G0": "DISSOLVED_BY_DIRECT_USER_MESSAGE",
-    "G1": "NOTICE_TO_BE_POSTED_THEN_WAIT_ANY_REPLY_OR_2_HOURS",
+    "G1": "DISSOLVED_AFTER_TWO_HOURS",
     "G2": "HOLDS_NO_VEO"
   },
   "source_hash_enforced": true,
@@ -114,6 +268,9 @@
     "gemini": "gemini-3.5-flash",
     "gemini_backend": "Vertex AI",
     "managed_session_region": "asia-southeast1",
-    "firestore_database": "preflight-aibc"
-  }
+    "firestore_database": "preflight-aibc",
+    "build_receipt": "reports/cloud_build.json"
+  },
+  "reporting_scope": "This ledger records native receipt evidence and explicit limits; it does not claim full handoff acceptance. Historical Track A receipts are preserved separately in reports/track_a_before_postcheck.",
+  "verification_attempts_receipt": "reports/verification_attempts.json"
 }

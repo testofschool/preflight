@@ -7,5 +7,6 @@
 ## Methods and limits
 ## Cost assumptions
 ## Sample prompts
+## Upload-only clip review
 ## Operational limits
 ## Verification and continuation

@@ -1,8 +1,8 @@
 # Preflight
 
-Inspect a video prompt before generating a clip. Preflight retrieves five similar historical prompts, reports a statistical risk signal, and asks a connected Gemini agent for an alternative prompt. The interface presents an alternative only when its historical risk estimate is strictly lower than the original prompt’s estimate. No video is generated.
+Inspect a video prompt before generating a clip, or upload an existing owner-provided clip for a machine review. Preflight retrieves five similar historical prompts, reports a statistical risk signal, and asks a connected Gemini agent for an alternative prompt. The interface presents an alternative only when its estimated risk is strictly lower than the original prompt’s estimate. With machine feedback, that estimate is a mixed heuristic proxy. No video is generated.
 
-**Track A is deployed; V3, V5 and V6 are PASS.** Open [the live Preflight app](https://preflight-jcgro45veq-as.a.run.app). The user resolved the former G0 setup gate; local preview remains a fallback. Real Cloud Run requests execute ADK tools, use Gemini through Vertex ADC, and persist/reuse managed sessions. The ten-case live run verified strictly lower historical risk and the genuine tool workflow for all ten cases. Full acceptance is not claimed: V4 remains FAIL, and V7 is partial with zero verdicts. Track B has not started.
+**The primary release serves Track A and upload-only Track B.** Open [the live Preflight app](https://preflight-jcgro45veq-as.a.run.app), revision `preflight-00007-q2d`. V3, V5, V6 and V7 are PASS. The latest ten-case rewrite run returned nine strict improvements and one safe abstention, with zero higher-risk returns. Full acceptance is not claimed: V4 remains FAIL, and V8 is NOT_RUN at 0/3 known-defect clips. All nine owner files were hydrated and cached by 2026-10-16 05:09:55 KST. Independent local reference annotation is complete, but the required confirmed known-defect set has not been established.
 
 ## Current evidence
 
@@ -10,12 +10,12 @@ Observed on 2026-10-16:
 
 | Component | Observed result | Limit |
 | --- | --- | --- |
-| Firestore | Named database `preflight-aibc` in `asia-southeast1`; 508 `prompts_v1` records and 508 `items_v1` records imported; content integrity verified for 1,016/1,016 historical documents with zero differences | `verdicts_v1` has zero records at this snapshot; V7 is partial, not PASS |
+| Firestore | V7 PASS: `preflight-aibc` in `asia-southeast1` contains 510 prompt documents (508 historical plus two feedback-only), 508 item documents, and two real verdicts; all 1,016 historical documents match the retained integrity comparison with zero differences | Machine feedback is separate from the original human pairwise counts; a new feedback-only prompt has no fitted item |
 | Agent Platform Sessions | Genuine managed-session create/read health check passed | Minimum supported TTL is 24 hours; this does not prove the full rewrite workflow |
 | Vertex Gemini | Gemini 3.5 Flash runs through Vertex Application Default Credentials in Singapore; real ADK requests succeeded | Statistical improvement does not establish generated-video quality |
-| ADK workflow | Google ADK 2.12.0 executes genuine signed tool calls; the observed workflow uses three planner calls and one candidate-generation call; V5 and V6 passed all ten live cases | Lower historical risk does not establish generated-video quality |
-| Cloud Run | V3 PASS: five sample requests returned HTTP 200, each with six tool-trace entries and verified sessions | Cold request 12.598004s; warm requests 4.363051–5.209227s; these are observed timings, not a service guarantee |
-| Track B | Not started; G1 opens after any user reply or two hours after the G1 notice, whichever occurs first | No video upload, video verdict, feedback acceptance, or Veo call is claimed |
+| ADK workflow | V5 PASS: 9/10 strict improvements, above the required 6/10; cat/dog returned `no_safe_rewrite`; zero higher-risk returns. V6 verified six tools and genuine managed sessions for all ten cases, with ten attempts and zero retries | A lower proxy score does not establish generated-video quality or better future predictions |
+| Cloud Run | Primary revision `preflight-00007-q2d` serves both workflows. The latest V3 release-validation report is PASS: one cold request and five warm sample requests all returned HTTP 200 with six tools and verified sessions | Measured cold 19.738130s; warm 4.862889, 4.586187, 4.378278, 4.620390 and 4.329699s. The report records validation revision `preflight-00006-d4s`; final configuration is reported separately below |
+| Track B | Current optimized revision seven completed a fresh cached02 review in 10.346132s with two model calls, flagging a machine-reported physics issue at 4.5s. The earlier cached01 native Pass took 18.950459s on the two-pass image; its stored-review checks took 0.937997s initially and 1.560978s on the primary | The cached02 flag is not independently confirmed. One fresh optimized measurement is not a latency guarantee or V8 evidence; V8 remains NOT_RUN, 0/3 |
 
 The separate AI Studio API-key planner attempt returned HTTP 402 because prepaid credit was depleted. Production explicitly selects Vertex ADC. It does not silently fall back between credential backends. No credential value or actual cloud project identifier belongs in this repository.
 
@@ -39,13 +39,20 @@ The deployed cloud path is verified by actual requests:
 
 ```mermaid
 flowchart LR
-    Browser --> Run[Cloud Run service\nlive V3 verified]
-    Run --> Agent[Google ADK agent\nreal tool workflow verified]
-    Agent --> Gemini[Gemini 3.5 Flash\nVertex ADC planner + candidates]
-    Agent --> Store[Firestore\n508 prompts + 508 items]
-    Agent --> Sessions[Agent Platform Sessions\nmanaged create/read + reuse passed]
-    Agent --> Guard[Strict historical-risk reduction guard]
-    Guard --> Result[Risk + Why + approved rewrite\nor no safe rewrite]
+    Browser --> Run[Cloud Run primary service]
+    Run --> Agent[Google ADK agent]
+    Agent --> Gemini[Gemini 3.5 Flash via Vertex ADC]
+    Agent --> Store[Firestore historical evidence and separate feedback]
+    Agent --> Sessions[Managed Agent Platform Sessions]
+    Agent --> Guard[Strict estimated-risk reduction guard]
+    Guard --> Result[Risk and approved rewrite or safe abstention]
+    Browser --> Upload[Existing owner MP4 and its prompt]
+    Upload --> Run
+    Run --> Decode[Bounded one-decode video and 2-fps frame preparation]
+    Decode --> Review[Gemini visual review]
+    Review --> Verdict[Machine verdict and timecoded defects]
+    Verdict --> Store
+    Store --> Feedback[Mixed heuristic risk with human history separate]
 ```
 
 The backend uses bundled lexical retrieval and reads the corresponding historical rates and item parameters from Firestore in cloud mode. The local fallback uses the bundled aggregates directly. The [architecture screen](static/architecture.html) reads `/api/status` and labels each connection from the actual runtime flags. It shows an active session badge only when managed-session readiness is confirmed.
@@ -71,7 +78,7 @@ Supply configuration through the runtime environment or the deployment’s crede
 
 Application Default Credentials are required for the production Vertex and Firestore path. Keep credentials and resource identifiers out of source, screenshots, command transcripts, and committed logs. The pre-commit guard scans worktree files and staged blobs for forbidden credential markers without printing values.
 
-Verified Cloud Run settings are region `asia-southeast1`, minimum instances zero, platform-default concurrency 80, and timeout 36 seconds. The timeout is the ceiling of twice the slowest calibration request: `ceil(2 × 17.707208)`. The separate V3 run measured a 12.598004-second cold request and 4.363051–5.209227-second warm requests. Scaling settings do not establish latency beyond the measured requests.
+Current primary revision `preflight-00007-q2d` uses region `asia-southeast1`, minimum instances zero, concurrency 80, and timeout 40 seconds. The [V3 release-validation report](reports/cloud_latency_postcheck_release.json) measured a 19.738130-second cold request and warm requests of 4.862889, 4.586187, 4.378278, 4.620390 and 4.329699 seconds. That report records validation revision `preflight-00006-d4s` and timeout 38 seconds; those timings were not remeasured on final revision seven. Runtime configuration, cached request timing, local decode timing and uncached inference timing are separate evidence.
 
 ## Data source and licence
 
@@ -87,7 +94,9 @@ The historical risk estimate is the **unweighted mean of five nearest prompt bot
 
 The 2PL fit uses fractional cell outcomes and one likelihood contribution per observed cell. The audited reference objective adds squared ability with coefficient 1, squared difficulty with coefficient 0.1, and squared deviation of discrimination from one with coefficient 1. Positive discrimination is bounded to [0.3, 4]. The fresh solver uses direct bounds and an analytic gradient; the supplied reference used clipping inside an unconstrained solver. Fit settings and optimizer diagnostics are saved with the artifact. Cold-start difficulty and discrimination are the arithmetic mean over the same five text neighbours. Model scores are historical relative cell-response estimates, not calibrated usable-video probabilities.
 
-Gemini proposes candidates; the statistical guard decides whether one may be presented. An `improved` status requires a strict decrease from `p_fail_before` to `p_fail_after`. The interface also checks this inequality before exposing the candidate or its copy control. Otherwise it shows no safe rewrite or an unavailable rewrite. A lower historical score does not establish better generated-video quality.
+Gemini proposes candidates; the statistical guard decides whether one may be presented. An `improved` status requires a strict decrease from `p_fail_before` to `p_fail_after`. The interface also checks this inequality before exposing the candidate or its copy control. Otherwise it shows no safe rewrite or an unavailable rewrite. A lower score does not establish better generated-video quality or better future predictions.
+
+**B2 both-bad semantic deviation:** the original human `both_bad_votes`, `vote_count` and `both_bad_rate` remain unchanged. Separate machine single-clip pass/fail counts can update `p_fail` as a mixed heuristic proxy; a machine failure on one clip is not a human judgment that both compared videos are bad. `historical_p_fail` preserves the human-only statistic. The mixed proxy is unvalidated and does not prove improved future prediction accuracy.
 
 **Limits:** the evidence comes from 2024-era public votes. Preflight does not route between video models, validate current Veo performance, establish money saved, or inspect videos in Track A. Positive discrimination gives the same model ordering for every item. No novel published research result is claimed.
 
@@ -97,7 +106,7 @@ The supplied preregistration defines Q1–Q4 but no both-bad AUC target or evalu
 
 The illustrative scenario uses Veo 3.1 Standard, audio, 720p/1080p, eight seconds at USD 0.40/second, checked on 2026-10-16 against [Google’s Gemini API price page](https://ai.google.dev/gemini-api/docs/pricing#veo-3.1). One attempt is USD 3.20. The budget illustration is `3.20 × min(1 / (1 − p_fail), 5)`; a risk of one uses the cap. Prices can change.
 
-This is a hypothetical budget, not a forecast or a measured saving. Treating the historical both-bad rate as a current Veo failure probability is unvalidated. Gemini rewrite requests, cloud hosting, taxes and discounts are excluded from the displayed video-generation budget. The local fallback incurs no generation fee; the connected workflow can incur Gemini and cloud charges. No Veo generation is called.
+This is a hypothetical budget, not a forecast or a measured saving. Treating either the historical both-bad rate or the mixed machine-feedback proxy as a current Veo failure probability is unvalidated. Gemini rewrite and clip-review requests, cloud hosting, taxes and discounts are excluded from the displayed video-generation budget. The local fallback incurs no generation fee; the connected workflow can incur Gemini and cloud charges. No Veo generation is called.
 
 ## Sample prompts
 
@@ -109,18 +118,36 @@ Paste any of these into the input, or use its sample buttons:
 4. indoor gymnasium
 5. a purple clock
 
+## Upload-only clip review
+
+Track B reviews a clip that the owner already has and is enabled on the primary public URL. Its [native canary receipt](reports/postcheck_canary_live.json) records one genuine review of resident cached01, followed by stored-review reuse. The [optimized smoke receipt](reports/postcheck_optimized_smoke.json) records a second fresh review, cached02, on revision `preflight-00007-q2d`: 10.346132 seconds and two model calls. Stored review is reused without a new model call. The review control is enabled only when `/api/status` explicitly reports `postcheck` ready. It never requests a Veo generation.
+
+Choose an MP4 video up to 30 MiB and 30 seconds, inspect it with the local preview controls, and enter its intended prompt. A preflight is not required: the clip has its own required prompt field, with an optional shortcut to reuse the prompt above. The optional model label defaults to `owner-upload` and is displayed as owner-provided information. The file is sent only when Review is pressed, using multipart `POST /postcheck` fields `video`, `prompt`, and `model`.
+
+The result area separates the machine verdict and timecoded defects from historical human pairwise votes. Before/after values are a feedback-adjusted proxy; they do not mean the public historical both-bad vote rate changed. Null risk is shown as unavailable. A successful response can confirm that machine feedback was recorded; a reused stored review is labeled explicitly and does not claim a new review or feedback record. Errors and abstentions must not appear as a pass.
+
+The requested review sampling rate is 2 fps, compared with the default video sampling rate of 1 fps. The interface uses the sampling rate actually reported in the response. Sampling may miss flicker shorter than 0.5 seconds at 2 fps; a pass does not establish that every frame is defect-free.
+
+For cached01, the initial native review took 18.950459 seconds on the earlier two-pass preprocessing image. Its machine Pass changed the feedback-adjusted proxy from 21.6667% to 20.7639%; the human-only estimate stayed at 21.6667%. The initial cached request took 0.937997 seconds. The UI later showed Pass and explicit reuse, with risk unchanged at `0.20763888888888885` before and after reuse and one feedback record retained. Desktop and mobile had no overflow, page errors or console errors. The owner clip preview decoded successfully; two local blob-range failure events during loading are recorded in the browser receipt, with no API/static-resource failure. No defect timestamp was invented for this passing clip.
+
+The current image prepares video and frame evidence in one decode. Local preprocessing measured 5.154 seconds versus the earlier 10.215 seconds. **This is a local decode measurement, not a 5.154-second cloud review.** The fresh optimized cloud review measured 10.346132 seconds for cached02; latency on the remaining clips is still UNMEASURED.
+
+Cached02’s fresh machine review flagged a physics issue at 4.5 seconds and changed the mixed proxy from `0.2909090909090909` to `0.32636363636363636`; its human-only estimate stayed at `0.2909090909090909`. This machine flag has not been independently confirmed and does not establish a known-defect positive. A separate [primary browser check](reports/browser_postcheck_flagged_qa.json) uploaded cached02 exactly once and reused the stored flag with zero new model calls. It displayed Flagged, the actual reason at `00:04`, and the separate historical 29.1% versus updated 32.6% values. Clicking the timecode sought to 4.5 seconds. Both desktop and mobile rendered without overflow or application errors; local aborted preview-range requests are recorded in the receipt. The original Pass receipt and frozen independent annotations remain unchanged.
+
+**V8 is NOT_RUN: 0/3 known-defect clips.** All nine owner shots were hydrated and cached by 2026-10-16 05:09:55 KST; they are available for local inspection. The earlier manual-unlock/download request is resolved as an access blocker, with no user action pending for clip access. Independent local reference annotation is complete, but it did not establish the required set of confirmed intrinsic defects. Cached01 remains a negative control with no confirmed defects. Clips08 and09 were independently frozen as no-confirmed-defect references after timestamped contact-sheet and targeted-frame inspection. A functional pipeline, machine Pass, or unconfirmed visual suspicion does not satisfy V8 defect-detection acceptance.
+
 ## Operational limits
 
 Prompts are limited to 4,000 characters. Cloud mode uses a shared Firestore transaction to admit at most 20 checks per rolling minute across instances, with a cumulative allowance of at most 1,000 admitted checks. Admission can count a request even if a later external step fails. The local fallback retains a process-local 20-per-minute limiter. These are service-wide budgets, not per-user allowances.
 
-Invalid input receives HTTP 422, exhausted budgets HTTP 429, and an unavailable connected service HTTP 503. There is no login and no public video-generation endpoint. A shared budget is not an authentication system.
+Invalid input receives HTTP 422, exhausted budgets HTTP 429, and an unavailable connected service HTTP 503. Clip uploads are capped at 30 MiB to stay below Cloud Run’s HTTP/1 request limit; the server must also verify the 30-second duration limit. There is no login and no public video-generation endpoint. A shared budget is not an authentication system.
 
 ## Verification and continuation
 
 See [COMPLETION_REPORT.md](COMPLETION_REPORT.md) for the acceptance ledger, commands, receipts, failures and pending checks. [`reports/`](reports/) contains machine-readable receipts and [`logs/`](logs/) contains redacted command output. Earlier local browser and latency receipts prove their recorded local scope only; they must not be relabeled as cloud evidence. Freshness checks compare against the external attachment and do not prove authorship or creation date.
 
-V3 is PASS. The [actual cloud browser receipt](reports/browser_cloud_qa.json) records two additional live requests: spoon/laptop produced an approved reduction from 53.5% to 36.7%; purple clock retained 5.7% and correctly exposed no alternative or copy control. The second request reused the same opaque managed session. Desktop and mobile views had no overflow or observed browser errors. The copy handler was checked using an instrumented clipboard write; the user’s clipboard was neither read nor overwritten.
+V3 is PASS in the [latest release-validation report](reports/cloud_latency_postcheck_release.json). The earlier [cloud browser receipt](reports/browser_cloud_qa.json) records spoon/laptop’s approved reduction from 53.5% to 36.7% and purple clock’s safe abstention at 5.7%, with managed-session reuse. It remains a scoped browser receipt rather than a fresh timing measurement of the final revision. The copy handler was checked using an instrumented clipboard write; the user’s clipboard was neither read nor overwritten.
 
-The [live rewrite receipt](reports/rewrites_live.json) records V5 PASS and V6 verification for all ten selected cases: ten HTTP attempts, zero retries, ten strict historical-risk reductions, ten verified tool workflows, and no higher-risk result returned. The [Firestore integrity receipt](reports/firestore_integrity.json) independently matches all 1,016 expected historical documents to the exported content with zero differences.
+The [current-release rewrite receipt](reports/rewrites_postcheck_release.json) records V5 PASS: nine of ten strict improvements against a minimum of six, with cat/dog returning `no_safe_rewrite`. All ten tool workflows and managed sessions passed V6; there were ten HTTP attempts, zero retries and zero higher-risk returns. The [postcheck integrity receipt](reports/firestore_integrity_postcheck.json) matches all 1,016 expected historical documents to the exported content with zero differences. The [Firestore counts receipt](reports/firestore_postcheck_counts.json) now records 510 prompts, 508 items and two real verdicts for V7 PASS.
 
-V4 remains FAIL and the exact 0.72 claim remains UNVERIFIABLE. V7 is partial with zero verdict records; Track B has not started. G1 opens after any user reply or two hours after the G1 notice, whichever occurs first. Component readiness, browser checks, deployment, and each acceptance gate remain separate claims.
+V4 remains FAIL and the exact 0.72 claim remains UNVERIFIABLE. Track A and upload-only Track B are live on the primary URL, with V7 storage/feedback evidence accepted. V8 remains NOT_RUN at 0/3 known-defect clips. One fresh optimized cloud review is measured, while performance on other clips remains UNMEASURED. Component readiness, browser checks, deployment, prediction validity and defect-detection acceptance remain separate claims.

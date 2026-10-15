@@ -11,7 +11,7 @@
           <div id="architecture-flow" class="flow-diagram" aria-live="polite">
             <div class="flow-box inactive"><strong>Loading current configuration</strong><small>No active connections have been confirmed yet.</small></div>
           </div>
-          <p class="architecture-footnote">Risk uses public historical evidence. A rewrite is presented only when it lowers the historical risk estimate. These checks do not validate Veo success, and no video generation is called.</p>
+          <p class="architecture-footnote">A rewrite is presented only when it lowers the historical risk estimate. When upload review is connected, an existing clip can be reviewed separately and its machine verdict can adjust a feedback proxy. Original human pairwise votes remain separate. No video generation is called.</p>
         </section>
         <section class="architecture-card" aria-labelledby="connections-heading"><span class="architecture-tag planned">SERVICE CONNECTIONS</span><h2 id="connections-heading">Status, without assumptions.</h2><p>Each connection is labeled from the service’s current status. An inactive component is not presented as running.</p>
           <ul id="component-list" class="planned-list"><li><span>…</span><div><strong>Checking connections</strong>Waiting for the current service status.</div></li></ul>

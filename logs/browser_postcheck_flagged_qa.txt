@@ -1,0 +1,23 @@
+Actual primary cached02 machine-flag browser QA — 2026-10-16 Asia/Seoul
+Reference: reports/postcheck_smoke_reference.json
+Native fresh review: reports/postcheck_optimized_smoke.json
+Collected UTC: 2026-10-15T20:17:31.005Z
+Scope: exactly one POST /postcheck, source/prompt/model exactly from the frozen smoke reference; no /preflight or repeated POST.
+
+PASS — local source SHA256/byte size matches the frozen reference.
+PASS — HTTP200, reused_stored_review=true,model_calls_this_request=0.
+PASS — native machine pass_bool=false renders Flagged and STORED REVIEW REUSED.
+PASS — actual physics reason appears at00:04, with original seconds4.5; timecode button seeks to4.5s, seeking=false,readyState4,error=null.
+PASS — cached before/after risk both0.32636363636363636 (UI32.6%); separate historical0.2909090909090909 (UI29.1%); one machine-feedback record retained.
+PASS — desktop1440/mobile390 have no overflow, page errors or console errors; no API/static failures.
+NOTE — two local blob preview range requests emittednet::ERR_ABORTED; preview decoded and seek succeeded.
+
+Machine reason (not an independently confirmed defect): The doors are pushed open outward, but the camera's perspective shifts to the other side of the doors instantly without a cut, causing the doors to suddenly appear on the opposite sides of the frame.
+V8_established=false. Frozen independent visual observations are unchanged. This is functional UI proof, not defect-detection accuracy evidence.
+
+/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-postcheck-flagged-desktop.png
+SHA256 f7156782308bba8df6a8600cdb3c243ff40e8c0ac67ebe07fcf1776e356a892d
+/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-postcheck-flagged-mobile.png
+SHA256 ffe2cea63bb290466613e05846948ea907b0140bc64dbfe800754895ff82b2a2
+
+No additional POST, new Gemini inference or Veo call was made by this browser check. Old Pass receipt/screenshots were preserved.

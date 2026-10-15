@@ -14,8 +14,8 @@
     "venv"
   ],
   "files_scanned": {
-    "python-lexical": 28,
-    "text-whitespace": 65
+    "python-lexical": 35,
+    "text-whitespace": 105
   },
   "limitation": "zero overlap does not establish code creation date or independent authorship",
   "matches": [],

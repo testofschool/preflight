@@ -1,0 +1,478 @@
+{
+  "check": "negative-control postcheck/cache/feedback canary; not V8",
+  "reference_sha256": "920419445256a714e83817a6967cf3184764db6d4ed968d835aed2dccdd23d60",
+  "source_sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+  "request_policy": "one actual review, one identical cache check, one updated-risk preflight; stop on failure; no retries; maximum3 requests"
+}
+{
+  "stage": "initial_postcheck",
+  "attempt": {
+    "attempt": 1,
+    "retry_count": 0,
+    "http_status": 200,
+    "safe_response_headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer",
+      "content-type": "application/json"
+    },
+    "response_bytes_received": 2625,
+    "response": {
+      "pass_bool": true,
+      "defects": [],
+      "reviewed_duration_seconds": 5.041667,
+      "source_sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+      "analysis": {
+        "framework": "Google Gen AI SDK",
+        "backend": "vertex",
+        "model": "gemini-3.5-flash",
+        "sampling_fps": 2,
+        "frame_count": 10,
+        "frame_batch_count": 1,
+        "frame_batch_maximum": 16,
+        "frame_batch_overlap": 1,
+        "actual_model_calls": 2,
+        "max_parallel_model_calls": 3,
+        "source_bytes": 4107887,
+        "source_resolution": {
+          "width": 4398,
+          "height": 1886
+        },
+        "model_video_bytes": 76825,
+        "model_video_max_side_pixels": 512,
+        "model_video_transcode_fps": 15,
+        "audio_reviewed": false,
+        "default_video_sampling_fps": 1,
+        "default_sampling_source": "https://ai.google.dev/gemini-api/docs/generate-content/video-understanding",
+        "limitations": [
+          "Gemini's default video sampling is 1 fps and may miss fast changes; explicit 2-fps image batches supplement that route.",
+          "Events shorter than 0.5 seconds can still occur between sampled frames; downscaling can hide small text or details.",
+          "The automated visual verdict is not human ground truth, and no audio defects are assessed."
+        ],
+        "call_receipts": [
+          {
+            "stage": "video",
+            "elapsed_seconds": 1.22,
+            "interval_start_seconds": 0.0,
+            "interval_end_seconds": 5.041667,
+            "defect_count": 0,
+            "summary": "The video is clean and free of visible defects, showing a smooth camera tilt from the man's hand to his face with consistent details.",
+            "token_usage": {
+              "prompt_token_count": 782,
+              "candidates_token_count": 41,
+              "total_token_count": 823
+            }
+          },
+          {
+            "stage": "frames-1",
+            "elapsed_seconds": 1.534,
+            "interval_start_seconds": 0.0,
+            "interval_end_seconds": 5.0,
+            "defect_count": 0,
+            "summary": "The video is clean and free of defects, showing a smooth camera tilt from the man's hand up to his face with consistent clothing, necklace, and facial features throughout.",
+            "token_usage": {
+              "prompt_token_count": 11351,
+              "candidates_token_count": 59,
+              "total_token_count": 11410
+            }
+          }
+        ],
+        "elapsed_seconds": 17.306
+      },
+      "verdict_id": "e5e17798d57d12bfe56253e6d55b4ac72ab61e942a068b0999ff98c0f5fdc766",
+      "mode": "cloud",
+      "risk_before": 0.21666666666666665,
+      "risk_after": 0.20763888888888885,
+      "historical_p_fail": 0.21666666666666665,
+      "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+      "feedback": {
+        "count": 1,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "exact_unseen_prompt": {
+          "historical_rate": null,
+          "historical_vote_count": 0,
+          "postcheck_count": 1,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": 0.0,
+          "risk_rate": 0.0,
+          "prior_effective_count": 23
+        }
+      },
+      "feedback_recorded": true,
+      "feedback_created": true,
+      "reused_stored_review": false,
+      "model_calls_this_request": 2,
+      "concurrent_review_discarded": false
+    },
+    "elapsed_seconds": 18.950459
+  },
+  "checks": {
+    "source_hash_matches": true,
+    "actual_model_calls_verified": true,
+    "sampling_2fps": true,
+    "vertex_backend": true,
+    "feedback_recorded": true,
+    "feedback_created": true,
+    "fresh_review": true,
+    "feedback_count_present": true,
+    "valid_risk_after": true,
+    "typed_verdict": true,
+    "passed": true,
+    "model_calls_this_request": 2
+  }
+}
+{
+  "stage": "identical_cached_postcheck",
+  "attempt": {
+    "attempt": 1,
+    "retry_count": 0,
+    "http_status": 200,
+    "safe_response_headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer",
+      "content-type": "application/json"
+    },
+    "response_bytes_received": 2625,
+    "response": {
+      "defects": [],
+      "source_sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+      "analysis": {
+        "limitations": [
+          "Gemini's default video sampling is 1 fps and may miss fast changes; explicit 2-fps image batches supplement that route.",
+          "Events shorter than 0.5 seconds can still occur between sampled frames; downscaling can hide small text or details.",
+          "The automated visual verdict is not human ground truth, and no audio defects are assessed."
+        ],
+        "backend": "vertex",
+        "sampling_fps": 2,
+        "frame_batch_count": 1,
+        "default_sampling_source": "https://ai.google.dev/gemini-api/docs/generate-content/video-understanding",
+        "model_video_transcode_fps": 15,
+        "frame_batch_maximum": 16,
+        "source_bytes": 4107887,
+        "framework": "Google Gen AI SDK",
+        "source_resolution": {
+          "height": 1886,
+          "width": 4398
+        },
+        "model": "gemini-3.5-flash",
+        "frame_count": 10,
+        "default_video_sampling_fps": 1,
+        "elapsed_seconds": 17.306,
+        "model_video_max_side_pixels": 512,
+        "frame_batch_overlap": 1,
+        "actual_model_calls": 2,
+        "max_parallel_model_calls": 3,
+        "audio_reviewed": false,
+        "call_receipts": [
+          {
+            "elapsed_seconds": 1.22,
+            "defect_count": 0,
+            "interval_end_seconds": 5.041667,
+            "token_usage": {
+              "candidates_token_count": 41,
+              "prompt_token_count": 782,
+              "total_token_count": 823
+            },
+            "summary": "The video is clean and free of visible defects, showing a smooth camera tilt from the man's hand to his face with consistent details.",
+            "interval_start_seconds": 0.0,
+            "stage": "video"
+          },
+          {
+            "elapsed_seconds": 1.534,
+            "defect_count": 0,
+            "interval_end_seconds": 5.0,
+            "token_usage": {
+              "candidates_token_count": 59,
+              "prompt_token_count": 11351,
+              "total_token_count": 11410
+            },
+            "summary": "The video is clean and free of defects, showing a smooth camera tilt from the man's hand up to his face with consistent clothing, necklace, and facial features throughout.",
+            "interval_start_seconds": 0.0,
+            "stage": "frames-1"
+          }
+        ],
+        "model_video_bytes": 76825
+      },
+      "reviewed_duration_seconds": 5.041667,
+      "pass_bool": true,
+      "verdict_id": "e5e17798d57d12bfe56253e6d55b4ac72ab61e942a068b0999ff98c0f5fdc766",
+      "mode": "cloud",
+      "risk_before": 0.20763888888888885,
+      "risk_after": 0.20763888888888885,
+      "historical_p_fail": 0.21666666666666665,
+      "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+      "feedback": {
+        "count": 1,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "exact_unseen_prompt": {
+          "historical_rate": null,
+          "historical_vote_count": 0,
+          "postcheck_count": 1,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": 0.0,
+          "risk_rate": 0.0,
+          "prior_effective_count": 23
+        }
+      },
+      "feedback_recorded": true,
+      "feedback_created": false,
+      "reused_stored_review": true,
+      "model_calls_this_request": 0,
+      "concurrent_review_discarded": false
+    },
+    "elapsed_seconds": 0.937997
+  },
+  "checks": {
+    "same_verdict": true,
+    "cache_reused": true,
+    "no_new_feedback": true,
+    "zero_new_model_calls": true,
+    "feedback_count_unchanged": true,
+    "feedback_failures_unchanged": true,
+    "identical_stored_review": true,
+    "passed": true,
+    "model_calls_this_request": 0
+  }
+}
+{
+  "stage": "updated_risk_preflight",
+  "attempt": {
+    "attempt": 1,
+    "retry_count": 0,
+    "http_status": 200,
+    "safe_response_headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer",
+      "content-type": "application/json"
+    },
+    "response_bytes_received": 4956,
+    "response": {
+      "p_fail": 0.20763888888888885,
+      "p_success_by_model": {
+        "AnimateDiff": 0.5876063953659165,
+        "AnimateDiffTurbo": 0.1528233704780942,
+        "CogVideoX": 0.4844853839271732,
+        "LaVie": 0.4286777770815338,
+        "ModelScope": 0.13383152488858932,
+        "OpenSora": 0.22006266531905755,
+        "OpenSora12": 0.19341405254632718,
+        "StableVideoDiffusion": 0.7434538230876088,
+        "T2VTurbo": 0.599411751113691,
+        "VideoCrafter2": 0.5828184750285113
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "happy dog wearing a yellow turtleneck, studio, portrait, facing camera, dark background",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.16754528376761493,
+          "vote_count": 1,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "industrial area",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.1647040968938259,
+          "vote_count": 5,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a bird building a nest from twigs and leaves",
+          "rate": 0.08333333333333333,
+          "both_bad_rate": 0.08333333333333333,
+          "similarity": 0.14600062995550275,
+          "vote_count": 12,
+          "risk_rate": 0.08333333333333333,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "Iron Man flying in the sky",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.11307441999216215,
+          "vote_count": 4,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a cat  wearing sunglasses",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.10792455271538154,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": -0.01530744068131129,
+      "discrimination": 0.891966094876952,
+      "reasons": [
+        "Text neighbours \u201chappy dog wearing a yellow turtleneck, studio, portrait, facing camera, dark background\u201d and \u201cindustrial area\u201d support an estimated risk score of 20.8%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 4.04,
+      "supported": true,
+      "coverage": {
+        "matched_features": 16,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 0.16754528376761493,
+        "mean_similarity": 0.13984979666489744,
+        "neighbour_vote_count": 23,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.21666666666666665,
+      "feedback_adjusted_risk": 0.20763888888888885,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 1,
+        "failures": 0,
+        "failure_rate": 0.0,
+        "exact_unseen_prompt": {
+          "historical_rate": null,
+          "historical_vote_count": 0,
+          "postcheck_count": 1,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": 0.0,
+          "risk_rate": 0.0,
+          "prior_effective_count": 23
+        }
+      },
+      "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+      "rewritten_prompt": "Inside a vast industrial building, a young man in a dark jacket and a key necklace is shown. The shot begins on his hand and tilts up to his face as he looks around the space.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.20763888888888885,
+      "p_fail_after": 0.0,
+      "candidate_p_fail": 0.0,
+      "session_id": "7658637523035357184",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.20763888888888885
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.2
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.21666666666666665
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.0
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 258,
+            "candidates_token_count": 95,
+            "total_token_count": 353
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 768,
+            "candidates_token_count": 117,
+            "total_token_count": 885
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 911,
+            "candidates_token_count": 128,
+            "total_token_count": 1039
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 984,
+            "candidates_token_count": 146,
+            "total_token_count": 1130
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "edd3dd9ab871e1a8",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 6.601
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 1.2620508326029798
+    },
+    "elapsed_seconds": 6.852915
+  },
+  "checks": {
+    "updated_risk_used": true,
+    "actual_tools_verified": true,
+    "managed_session_verified": true,
+    "actual_model_calls_verified": true,
+    "passed": true,
+    "model_calls_this_request": 4,
+    "completed_tool_calls": 6
+  }
+}
+{
+  "summary": {
+    "http_requests": 3,
+    "maximum_http_requests": 3,
+    "retries": 0,
+    "canary_pass": true,
+    "known_model_calls_this_batch": 6,
+    "unknown_model_call_requests": 0,
+    "V8_established": false,
+    "scope": "negative-control operational canary; no exhaustive clean-video certification or known-defect recall claim"
+  }
+}

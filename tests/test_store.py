@@ -1,4 +1,5 @@
 import copy
+import hashlib
 import json
 import tempfile
 import unittest
@@ -27,7 +28,7 @@ class Reference:
         self.client = client
         self.path = path
 
-    def get(self, transaction=None):
+    def get(self, transaction=None, timeout=None):
         return Snapshot(self, self.client.documents.get(self.path))
 
     def set(self, value, merge=False, timeout=None):
@@ -148,6 +149,33 @@ class StoreTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.store.record_verdict("prompt 0", "A", True, [], verdict_id="clip-review")
         self.assertEqual(record["postcheck_feedback"]["count"], 1)
+
+    def test_review_provenance_is_cached_idempotently_and_conflicts_are_rejected(self):
+        review = {"pass_bool": False, "defects": [{"category": "flicker", "seconds": 1.5, "timecode": "00:01", "reason": "The brightness changes abruptly."}], "reviewed_duration_seconds": 3.0, "source_sha256": "a" * 64, "analysis": {"sampling_fps": 2, "actual_model_calls": 2}}
+        first = self.store.record_verdict("prompt 0", "A", False, review["defects"], verdict_id="cached-review", review=review)
+        second = self.store.record_verdict("prompt 0", "A", False, review["defects"], verdict_id="cached-review", review=review)
+        self.assertTrue(first["created"])
+        self.assertFalse(second["created"])
+        restored = self.store.get_verdict("cached-review")
+        self.assertEqual(restored["review"], review)
+        self.assertEqual(self.client.documents["prompts_v1/" + prompt_id("prompt 0")]["postcheck_feedback"]["count"], 1)
+        modified = copy.deepcopy(review)
+        modified["analysis"]["actual_model_calls"] = 3
+        with self.assertRaises(ValueError):
+            self.store.record_verdict("prompt 0", "A", False, review["defects"], verdict_id="cached-review", review=modified)
+        self.assertEqual(self.store.get_verdict("cached-review")["review"], review)
+
+    def test_get_missing_and_identifier_validation_and_legacy_fingerprint(self):
+        self.assertIsNone(self.store.get_verdict("missing-review"))
+        for identifier in ("../invalid", "", 3):
+            with self.subTest(identifier=identifier):
+                with self.assertRaises(ValueError):
+                    self.store.get_verdict(identifier)
+        self.store.record_verdict("prompt 0", "A", True, [], verdict_id="legacy-review")
+        restored = self.store.get_verdict("legacy-review")
+        expected = {"prompt": "prompt 0", "model": "A", "pass_bool": True, "defects": [], "source": "gemini_single_clip_postcheck"}
+        self.assertEqual(restored["content_sha256"], hashlib.sha256(json.dumps(expected, sort_keys=True, allow_nan=False).encode()).hexdigest())
+        self.assertNotIn("review", restored)
 
     def test_unseen_prompt_feedback_adjusts_next_query_separately(self):
         self.store.record_verdict("new composition", "B", False, [], verdict_id="new-clip")

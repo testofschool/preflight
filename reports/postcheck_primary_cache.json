@@ -1,0 +1,128 @@
+{
+  "scope": "One current-primary stored-review request after optimized image promotion; no new video model calls",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "http_status": 200,
+  "seconds": 1.560978,
+  "status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "generate_endpoint_absent": true,
+  "response": {
+    "source_sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+    "reviewed_duration_seconds": 5.041667,
+    "analysis": {
+      "call_receipts": [
+        {
+          "elapsed_seconds": 1.22,
+          "defect_count": 0,
+          "stage": "video",
+          "interval_start_seconds": 0.0,
+          "summary": "The video is clean and free of visible defects, showing a smooth camera tilt from the man's hand to his face with consistent details.",
+          "interval_end_seconds": 5.041667,
+          "token_usage": {
+            "total_token_count": 823,
+            "prompt_token_count": 782,
+            "candidates_token_count": 41
+          }
+        },
+        {
+          "elapsed_seconds": 1.534,
+          "defect_count": 0,
+          "stage": "frames-1",
+          "interval_start_seconds": 0.0,
+          "summary": "The video is clean and free of defects, showing a smooth camera tilt from the man's hand up to his face with consistent clothing, necklace, and facial features throughout.",
+          "interval_end_seconds": 5.0,
+          "token_usage": {
+            "total_token_count": 11410,
+            "prompt_token_count": 11351,
+            "candidates_token_count": 59
+          }
+        }
+      ],
+      "model": "gemini-3.5-flash",
+      "frame_batch_overlap": 1,
+      "audio_reviewed": false,
+      "model_video_transcode_fps": 15,
+      "source_resolution": {
+        "height": 1886,
+        "width": 4398
+      },
+      "frame_batch_count": 1,
+      "frame_count": 10,
+      "default_sampling_source": "https://ai.google.dev/gemini-api/docs/generate-content/video-understanding",
+      "model_video_bytes": 76825,
+      "model_video_max_side_pixels": 512,
+      "elapsed_seconds": 17.306,
+      "max_parallel_model_calls": 3,
+      "framework": "Google Gen AI SDK",
+      "sampling_fps": 2,
+      "actual_model_calls": 2,
+      "source_bytes": 4107887,
+      "default_video_sampling_fps": 1,
+      "limitations": [
+        "Gemini's default video sampling is 1 fps and may miss fast changes; explicit 2-fps image batches supplement that route.",
+        "Events shorter than 0.5 seconds can still occur between sampled frames; downscaling can hide small text or details.",
+        "The automated visual verdict is not human ground truth, and no audio defects are assessed."
+      ],
+      "backend": "vertex",
+      "frame_batch_maximum": 16
+    },
+    "pass_bool": true,
+    "defects": [],
+    "verdict_id": "e5e17798d57d12bfe56253e6d55b4ac72ab61e942a068b0999ff98c0f5fdc766",
+    "mode": "cloud",
+    "risk_before": 0.20763888888888885,
+    "risk_after": 0.20763888888888885,
+    "historical_p_fail": 0.21666666666666665,
+    "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+    "feedback": {
+      "count": 1,
+      "failures": 0,
+      "failure_rate": 0.0,
+      "exact_unseen_prompt": {
+        "historical_rate": null,
+        "historical_vote_count": 0,
+        "postcheck_count": 1,
+        "postcheck_failures": 0,
+        "postcheck_failure_rate": 0.0,
+        "risk_rate": 0.0,
+        "prior_effective_count": 23
+      }
+    },
+    "feedback_recorded": true,
+    "feedback_created": false,
+    "reused_stored_review": true,
+    "model_calls_this_request": 0,
+    "concurrent_review_discarded": false
+  },
+  "passed": true
+}

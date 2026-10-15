@@ -47,11 +47,20 @@
       flow.append(split(box("Gemini", status.gemini === true ? "Connected · candidate rewrite" : "Not connected", status.gemini === true), box("Firestore", status.firestore === true ? "Connected · check records" : "Not connected", status.firestore === true)), arrow());
       flow.append(box("Agent Platform Sessions", status.agent_platform_session === true ? "Active · session state" : "Not active", status.agent_platform_session === true), arrow());
       flow.append(box("Risk · Why · Guarded rewrite", "A candidate is shown only after a strict risk reduction.", true, true));
+      if (status.postcheck === true) {
+        const uploadPath = document.createElement("div");
+        uploadPath.className = "flow-branch";
+        const label = document.createElement("p");
+        label.className = "neighbors-title";
+        label.textContent = "INDEPENDENT UPLOAD PATH · NO PREFLIGHT REQUIRED";
+        uploadPath.append(label, box("Owner-provided AI clip + prompt", "POST /postcheck · no video generation"), arrow(), box("Gemini machine review", "Sampled-frame defects and machine verdict"), arrow(), box("Firestore feedback · adjusted risk", "Original human pairwise votes remain separate.", true, true));
+        flow.append(uploadPath);
+      }
     } else {
       description.textContent = "The browser sends your prompt to the local backend. Public historical prompt votes provide the risk estimate when coverage is sufficient. Each cloud connection is listed separately.";
       flow.append(box("Local backend", "POST /preflight"), arrow(), split(box("Historical votes", "Public data · local copy"), box("Statistical estimator", "Prompt coverage + vote signal")), arrow(), box("Risk · Why · Illustrative budget", "Or insufficient evidence when coverage is unsupported", true, true));
     }
-    const components = [["Cloud Run", "cloud_run"], ["Google ADK", "adk"], ["Gemini rewriting", "gemini"], ["Firestore", "firestore"], ["Agent Platform Sessions", "agent_platform_session"]];
+    const components = [["Cloud Run", "cloud_run"], ["Google ADK", "adk"], ["Gemini rewriting", "gemini"], ["Firestore", "firestore"], ["Agent Platform Sessions", "agent_platform_session"], ["Existing clip review", "postcheck"]];
     components.forEach(([name, key], index) => {
       const item = document.createElement("li");
       const count = document.createElement("span");

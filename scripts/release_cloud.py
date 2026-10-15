@@ -60,7 +60,7 @@ def build(operations: CloudOperations) -> str:
                                                                          "--region", REGION, "--format=json"]))
 
 
-def deploy(operations: CloudOperations, image: str, timeout: int) -> None:
+def deploy(operations: CloudOperations, image: str, timeout: int, *, candidate: bool = False) -> None:
     settings = {
         "PREFLIGHT_MODE": "cloud",
         "GOOGLE_CLOUD_PROJECT": operations.project,
@@ -72,36 +72,45 @@ def deploy(operations: CloudOperations, image: str, timeout: int) -> None:
         "PREFLIGHT_GEMINI_MODEL": os.environ.get("PREFLIGHT_GEMINI_MODEL", "gemini-3.5-flash"),
         "PREFLIGHT_TOTAL_REQUEST_LIMIT": "1000",
     }
-    operations.command("deploy Cloud Run", [
+    arguments = [
         "gcloud", "run", "deploy", "preflight", "--image", image, "--region", REGION,
         "--service-account", f"{RUNTIME_ACCOUNT}@{operations.project}.iam.gserviceaccount.com",
         "--set-env-vars", ",".join(f"{name}={value}" for name, value in settings.items()),
         "--min-instances=0", "--max-instances=2", "--cpu=1", "--memory=1Gi",
         "--timeout", str(timeout), "--allow-unauthenticated", "--quiet", "--format=json",
-    ])
+    ]
+    if candidate:
+        arguments.extend(["--no-traffic", "--tag=postcheck-candidate"])
+    operations.command("deploy Cloud Run candidate" if candidate else "deploy Cloud Run", arguments)
     data = json.loads(operations.command("read Cloud Run configuration", ["gcloud", "run", "services", "describe", "preflight",
                                                                          "--region", REGION, "--format=json"]))
     spec = data["spec"]["template"]["spec"]
     annotations = data["spec"]["template"].get("metadata", {}).get("annotations", {})
+    url = data["status"]["url"]
+    if candidate:
+        url = next(row["url"] for row in data["status"]["traffic"] if row.get("tag") == "postcheck-candidate")
     receipt = {
-        "url": data["status"]["url"], "default_cloud_run_url": data["status"]["url"].endswith(".run.app"),
+        "url": url, "default_cloud_run_url": url.endswith(".run.app"),
+        "primary_url": data["status"]["url"], "candidate": candidate,
         "region": REGION, "min_instances": int(annotations.get("autoscaling.knative.dev/minScale", "0")),
         "timeout_seconds": spec["timeoutSeconds"], "concurrency": spec["containerConcurrency"],
         "revision": data["status"]["latestReadyRevisionName"],
         "session_service": "Agent Platform Sessions", "gemini_backend": "Vertex AI",
         "gemini_model": settings["PREFLIGHT_GEMINI_MODEL"], "veo_calls": 0,
     }
-    (ROOT / "reports/cloud_run.json").write_text(json.dumps(receipt, indent=2) + "\n")
+    name = "cloud_run_candidate.json" if candidate else "cloud_run.json"
+    (ROOT / "reports" / name).write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt), flush=True)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--timeout", type=int, default=60)
+    parser.add_argument("--candidate", action="store_true", help="deploy a tagged revision without moving primary traffic")
     arguments = parser.parse_args()
     try:
         operations = CloudOperations()
-        deploy(operations, build(operations), arguments.timeout)
+        deploy(operations, build(operations), arguments.timeout, candidate=arguments.candidate)
     except Exception as error:
         raise SystemExit(str(error)) from None
 

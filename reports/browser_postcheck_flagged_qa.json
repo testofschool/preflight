@@ -1,0 +1,130 @@
+{
+  "scope": "one actual cached02 primary browser POST; no preflight or repeated upload",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "collected_at": "2026-10-15T20:17:31.005Z",
+  "source": {
+    "sha256": "08f950c81d7165038247fa7a0136189f9a42ff77a9cbe1846e04b67ef9291a3b",
+    "bytes": 5224299,
+    "duration_seconds": 5.041667,
+    "exact_reference_prompt": true,
+    "exact_reference_model": true
+  },
+  "post_count": 1,
+  "observed": {
+    "post_paths": [
+      "/postcheck"
+    ],
+    "page_errors": [],
+    "console_errors": [],
+    "request_failures": [
+      {
+        "kind": "local-blob-media-range",
+        "path": "[local-preview]",
+        "reason": "net::ERR_ABORTED"
+      },
+      {
+        "kind": "local-blob-media-range",
+        "path": "[local-preview]",
+        "reason": "net::ERR_ABORTED"
+      }
+    ]
+  },
+  "response": {
+    "http_status": 200,
+    "reused_stored_review": true,
+    "model_calls_this_request": 0,
+    "pass_bool": false,
+    "defect": {
+      "category": "physics",
+      "seconds": 4.5,
+      "timecode": "00:04",
+      "reason": "The doors are pushed open outward, but the camera's perspective shifts to the other side of the doors instantly without a cut, causing the doors to suddenly appear on the opposite sides of the frame."
+    },
+    "risk_before": 0.32636363636363636,
+    "risk_after": 0.32636363636363636,
+    "historical_p_fail": 0.2909090909090909,
+    "feedback_count": 1,
+    "feedback_created": false,
+    "feedback_recorded": true,
+    "sampling_fps": 2,
+    "default_video_sampling_fps": 1
+  },
+  "visible": {
+    "verdict": "Flagged",
+    "state": "STORED REVIEW REUSED",
+    "defects": "00:04physics · The doors are pushed open outward, but the camera's perspective shifts to the other side of the doors instantly without a cut, causing the doors to suddenly appear on the opposite sides of the frame.",
+    "before": "32.6%",
+    "after": "32.6%",
+    "historical": "Separate historical human-vote estimate: 29.1%.",
+    "feedback": "Stored review reused; existing machine feedback retained · 1 machine feedback record.",
+    "sampling": "Reviewed at 2 fps (default video sampling: 1 fps). Sampling may miss flicker shorter than 0.5 seconds."
+  },
+  "seek": {
+    "current_time": 4.5,
+    "seeking": false,
+    "error_code": null,
+    "ready_state": 4
+  },
+  "desktop": {
+    "width": 1440,
+    "height": 1080,
+    "horizontal_overflow": false
+  },
+  "elapsed_ms": 1370,
+  "V8_established": false,
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "horizontal_overflow": false,
+    "verdict": "Flagged",
+    "timecode": "00:04",
+    "current_time": 4.5,
+    "before": "32.6%",
+    "after": "32.6%",
+    "historical": "Separate historical human-vote estimate: 29.1%."
+  },
+  "client_date": "2026-10-16",
+  "client_timezone": "Asia/Seoul",
+  "reference_file": "reports/postcheck_smoke_reference.json",
+  "native_fresh_review_receipt": "reports/postcheck_optimized_smoke.json",
+  "independent_defect_confirmation": false,
+  "limits": "Functional rendering of one stored machine flag, not independent confirmation of a true intrinsic defect. Frozen local observations are unchanged and V8 is not established. No new model inference occurred in this browser request.",
+  "checks": {
+    "exactly_one_postcheck_and_no_preflight": true,
+    "http_200": true,
+    "stored_review_reused": true,
+    "zero_new_model_calls": true,
+    "machine_flag_visible": true,
+    "actual_reason_and_timecode_rendered": true,
+    "time_seek_exact": true,
+    "updated_proxy_retained": true,
+    "historical_estimate_separate": true,
+    "feedback_count_one_retained": true,
+    "desktop_no_overflow": true,
+    "mobile_no_overflow": true,
+    "no_page_or_console_errors": true,
+    "no_api_or_static_failures": true
+  },
+  "result": "PASS within stored-machine-flag UI scope",
+  "preview_network_note": "Two local preview media-range requests were aborted by the browser; the video decoded and seeking to4.5s completed with readyState4 and no media error. No API/static-resource failure occurred.",
+  "screenshots": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-postcheck-flagged-desktop.png",
+      "sha256": "f7156782308bba8df6a8600cdb3c243ff40e8c0ac67ebe07fcf1776e356a892d",
+      "viewport": {
+        "width": 1440,
+        "height": 1080
+      },
+      "capture": "upload-review section at4.5s"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-postcheck-flagged-mobile.png",
+      "sha256": "ffe2cea63bb290466613e05846948ea907b0140bc64dbfe800754895ff82b2a2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "upload-review section at4.5s"
+    }
+  ]
+}

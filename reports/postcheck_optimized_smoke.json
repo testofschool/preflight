@@ -1,0 +1,139 @@
+{
+  "check": "one fresh current-image operational upload; not V8",
+  "started_at_utc": "2026-10-15T20:15:43.653139+00:00",
+  "endpoint": "https://preflight-jcgro45veq-as.a.run.app/postcheck",
+  "reference_sha256": "519be93f1f6a7223d280629aa75d07c3157afe648ca52ad5769a2b5806bf586d",
+  "source_sha256": "08f950c81d7165038247fa7a0136189f9a42ff77a9cbe1846e04b67ef9291a3b",
+  "reference_frozen_at_utc": "2026-10-15T20:15:43.501610+00:00",
+  "source_bytes": 5224299,
+  "revision": "preflight-00007-q2d",
+  "request_policy": "exactly one upload; no retry, cache replay or preflight call",
+  "V8_established": false,
+  "complete": true,
+  "attempt": {
+    "attempt": 1,
+    "retry_count": 0,
+    "http_status": 200,
+    "safe_response_headers": {
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer",
+      "content-type": "application/json"
+    },
+    "response_bytes_received": 2962,
+    "response": {
+      "pass_bool": false,
+      "defects": [
+        {
+          "category": "physics",
+          "seconds": 4.5,
+          "timecode": "00:04",
+          "reason": "The doors are pushed open outward, but the camera's perspective shifts to the other side of the doors instantly without a cut, causing the doors to suddenly appear on the opposite sides of the frame.",
+          "evidence_sources": [
+            "frames-1"
+          ]
+        }
+      ],
+      "reviewed_duration_seconds": 5.041667,
+      "source_sha256": "08f950c81d7165038247fa7a0136189f9a42ff77a9cbe1846e04b67ef9291a3b",
+      "analysis": {
+        "framework": "Google Gen AI SDK",
+        "backend": "vertex",
+        "model": "gemini-3.5-flash",
+        "sampling_fps": 2,
+        "frame_count": 10,
+        "frame_batch_count": 1,
+        "frame_batch_maximum": 16,
+        "frame_batch_overlap": 1,
+        "actual_model_calls": 2,
+        "max_parallel_model_calls": 3,
+        "source_bytes": 5224299,
+        "source_resolution": {
+          "width": 4398,
+          "height": 1886
+        },
+        "model_video_bytes": 109994,
+        "model_video_max_side_pixels": 512,
+        "model_video_transcode_fps": 15,
+        "audio_reviewed": false,
+        "default_video_sampling_fps": 1,
+        "default_sampling_source": "https://ai.google.dev/gemini-api/docs/generate-content/video-understanding",
+        "limitations": [
+          "Gemini's default video sampling is 1 fps and may miss fast changes; explicit 2-fps image batches supplement that route.",
+          "Events shorter than 0.5 seconds can still occur between sampled frames; downscaling can hide small text or details.",
+          "The automated visual verdict is not human ground truth, and no audio defects are assessed."
+        ],
+        "call_receipts": [
+          {
+            "stage": "video",
+            "elapsed_seconds": 0.992,
+            "interval_start_seconds": 0.0,
+            "interval_end_seconds": 5.041667,
+            "defect_count": 0,
+            "summary": "The video is clean and free of visible defects, showing a consistent character walking down a corridor and opening doors with stable physics and identity.",
+            "token_usage": {
+              "prompt_token_count": 782,
+              "candidates_token_count": 40,
+              "total_token_count": 822
+            }
+          },
+          {
+            "stage": "frames-1",
+            "elapsed_seconds": 2.017,
+            "interval_start_seconds": 0.0,
+            "interval_end_seconds": 5.0,
+            "defect_count": 1,
+            "summary": "The video contains a physical inconsistency at the end where the camera perspective instantly shifts to the other side of the doors as they are pushed open, causing a jarring spatial jump.",
+            "token_usage": {
+              "prompt_token_count": 11351,
+              "candidates_token_count": 131,
+              "total_token_count": 11482
+            }
+          }
+        ],
+        "elapsed_seconds": 8.726
+      },
+      "verdict_id": "031489013305da2402886c5e086afe7f6b05914a0d601fe5880994fd40db532d",
+      "mode": "cloud",
+      "risk_before": 0.2909090909090909,
+      "risk_after": 0.32636363636363636,
+      "historical_p_fail": 0.2909090909090909,
+      "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+      "feedback": {
+        "count": 1,
+        "failures": 1,
+        "failure_rate": 1.0,
+        "exact_unseen_prompt": {
+          "historical_rate": null,
+          "historical_vote_count": 0,
+          "postcheck_count": 1,
+          "postcheck_failures": 1,
+          "postcheck_failure_rate": 1.0,
+          "risk_rate": 1.0,
+          "prior_effective_count": 19
+        }
+      },
+      "feedback_recorded": true,
+      "feedback_created": true,
+      "reused_stored_review": false,
+      "model_calls_this_request": 2,
+      "concurrent_review_discarded": false
+    },
+    "elapsed_seconds": 10.346132
+  },
+  "checks": {
+    "source_hash_matches": true,
+    "actual_model_calls_verified": true,
+    "sampling_2fps": true,
+    "vertex_backend": true,
+    "feedback_recorded": true,
+    "feedback_created": true,
+    "fresh_review": true,
+    "feedback_count_present": true,
+    "valid_risk_after": true,
+    "typed_verdict": true,
+    "passed": true,
+    "model_calls_this_request": 2
+  },
+  "finished_at_utc": "2026-10-15T20:15:54.032867+00:00"
+}

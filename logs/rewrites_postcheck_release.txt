@@ -1,0 +1,2102 @@
+{
+  "check": "V5 and V6 real endpoint receipts",
+  "engine_artifact_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+  "selection_rule": "ten largest fitted item difficulties, descending; ties retain artifact row order; selected before any request",
+  "retry_rule": "at most one retry per prompt, only HTTP429 with a valid Retry-After of at most120s; never retry503, timeouts or latency failures"
+}
+{
+  "rank": 1,
+  "prompt_sha256": "6722919c4bbf62fba330965115ce76c7574957b85c0237d18d4e3fc2d8b584f7",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 5.871991,
+    "response_bytes_received": 4386,
+    "response": {
+      "p_fail": 0.5,
+      "p_success_by_model": {
+        "AnimateDiff": 0.4274895913480233,
+        "AnimateDiffTurbo": 0.06859448579099049,
+        "CogVideoX": 0.31896465150534575,
+        "LaVie": 0.26680262074582173,
+        "ModelScope": 0.05830114959507828,
+        "OpenSora": 0.10840704413160186,
+        "OpenSora12": 0.0920008765150145,
+        "StableVideoDiffusion": 0.6233008267120101,
+        "T2VTurbo": 0.44096328291404596,
+        "VideoCrafter2": 0.42208778974766625
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "A person is wrestling",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.9999999999999999,
+          "vote_count": 3,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a person",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.301525738646292,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is sailing",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.29015080399231835,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is barbequing",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.2693120733287478,
+          "vote_count": 4,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is hugging",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.2693120733287478,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.6738390806691307,
+      "discrimination": 0.9997234215398061,
+      "reasons": [
+        "Text neighbours \u201cA person is wrestling\u201d and \u201ca person\u201d support an estimated risk score of 50.0%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 6.4,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 0.9999999999999999,
+        "mean_similarity": 0.4260601378592212,
+        "neighbour_vote_count": 12,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.5,
+      "feedback_adjusted_risk": 0.5,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A single wrestler practicing solo grappling moves on a training dummy in a brightly lit gym.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.5,
+      "p_fail_after": 0.05833333333333333,
+      "candidate_p_fail": 0.05833333333333333,
+      "session_id": "4661491971020292096",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.05833333333333333
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.375
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.2733333333333333
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 229,
+            "candidates_token_count": 37,
+            "total_token_count": 266
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 578,
+            "candidates_token_count": 81,
+            "total_token_count": 659
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 806,
+            "candidates_token_count": 81,
+            "total_token_count": 887
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 711,
+            "candidates_token_count": 99,
+            "total_token_count": 810
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "6722919c4bbf62fb",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 5.287
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 2.0
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 2,
+  "prompt_sha256": "f651d762cb8f5093ff0f5af6b3cc2a95bc71b9c6c9386ef025ab27b8b3e60a34",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.374867,
+    "response_bytes_received": 4493,
+    "response": {
+      "p_fail": 0.5345454545454545,
+      "p_success_by_model": {
+        "AnimateDiff": 0.3969952912461628,
+        "AnimateDiffTurbo": 0.06406396721809739,
+        "CogVideoX": 0.29446042201252903,
+        "LaVie": 0.24592846001522134,
+        "ModelScope": 0.054614376869941444,
+        "OpenSora": 0.10049746389560552,
+        "OpenSora12": 0.08549785320745672,
+        "StableVideoDiffusion": 0.588937369826868,
+        "T2VTurbo": 0.4098945323582642,
+        "VideoCrafter2": 0.391835064962727
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "a spoon and a laptop",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 1.0,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a tv and a laptop",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.4851348148331496,
+          "vote_count": 1,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a laptop and a remote",
+          "rate": 0.4,
+          "both_bad_rate": 0.4,
+          "similarity": 0.25646852756248817,
+          "vote_count": 5,
+          "risk_rate": 0.4,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a laptop, frozen in time",
+          "rate": 0.2727272727272727,
+          "both_bad_rate": 0.2727272727272727,
+          "similarity": 0.17008678735128424,
+          "vote_count": 11,
+          "risk_rate": 0.2727272727272727,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a person and a toothbrush",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.060680905318125616,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.8095107840974407,
+      "discrimination": 0.976971311458599,
+      "reasons": [
+        "Text neighbours \u201ca spoon and a laptop\u201d and \u201ca tv and a laptop\u201d support an estimated risk score of 53.5%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 6.88,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 1.0,
+        "mean_similarity": 0.3944742070130095,
+        "neighbour_vote_count": 20,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.5345454545454545,
+      "feedback_adjusted_risk": 0.5345454545454545,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A person uses a metal spoon to stir a mug of coffee beside an open laptop on a kitchen table, steady camera.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.5345454545454545,
+      "p_fail_after": 0.3,
+      "candidate_p_fail": 0.3,
+      "session_id": "1031590671359672320",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5345454545454545
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.3635294117647059
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.3
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5345454545454545
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 230,
+            "candidates_token_count": 39,
+            "total_token_count": 269
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 650,
+            "candidates_token_count": 76,
+            "total_token_count": 726
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 841,
+            "candidates_token_count": 93,
+            "total_token_count": 934
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 790,
+            "candidates_token_count": 111,
+            "total_token_count": 901
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "f651d762cb8f5093",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 4.021
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 2.1484375
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 3,
+  "prompt_sha256": "aed25e0e3c704746c4a3a497cf200d22b8400dfc93bb6554dbcb062222549edc",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.269086,
+    "response_bytes_received": 4469,
+    "response": {
+      "p_fail": 0.3,
+      "p_success_by_model": {
+        "AnimateDiff": 0.5254446411832628,
+        "AnimateDiffTurbo": 0.10102376579077582,
+        "CogVideoX": 0.41124898323422404,
+        "LaVie": 0.3525021224122105,
+        "ModelScope": 0.08648429939328263,
+        "OpenSora": 0.155680097748656,
+        "OpenSora12": 0.13344865346056523,
+        "StableVideoDiffusion": 0.7084196042033211,
+        "T2VTurbo": 0.5389301610554453,
+        "VideoCrafter2": 0.5199973238739012
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "A person is shooting basketball",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.9999999999999999,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is dunking basketball",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.35022495357101835,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a person",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.23216369611300264,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is sailing",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.22340541602664404,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is barbequing",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.20736036211224773,
+          "vote_count": 4,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.2784881018880553,
+      "discrimination": 0.987373838908907,
+      "reasons": [
+        "Text neighbours \u201cA person is shooting basketball\u201d and \u201cA person is dunking basketball\u201d support an estimated risk score of 30.0%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 4.57,
+      "supported": true,
+      "coverage": {
+        "matched_features": 7,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 0.9999999999999999,
+        "mean_similarity": 0.40263088556458254,
+        "neighbour_vote_count": 10,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.3,
+      "feedback_adjusted_risk": 0.3,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A basketball player shoots a jump shot on an outdoor court, wide angle shot, slow motion, clear sunny day.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.3,
+      "p_fail_after": 0.13333333333333333,
+      "candidate_p_fail": 0.13333333333333333,
+      "session_id": "5614003292209152000",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.3
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.13333333333333333
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.26666666666666666
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.4
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 230,
+            "candidates_token_count": 39,
+            "total_token_count": 269
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 584,
+            "candidates_token_count": 76,
+            "total_token_count": 660
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 807,
+            "candidates_token_count": 94,
+            "total_token_count": 901
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 725,
+            "candidates_token_count": 112,
+            "total_token_count": 837
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "aed25e0e3c704746",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 3.915
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 1.4285714285714286
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 4,
+  "prompt_sha256": "1f956e7ad7f19a8b0e54e19ab329f65be1ed699c8c555f263163fb3cdbf6dcb7",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.427794,
+    "response_bytes_received": 4351,
+    "response": {
+      "p_fail": 0.30666666666666664,
+      "p_success_by_model": {
+        "AnimateDiff": 0.5850844631176245,
+        "AnimateDiffTurbo": 0.11458198718031418,
+        "CogVideoX": 0.46573785587353433,
+        "LaVie": 0.4019161351156522,
+        "ModelScope": 0.09763782916486616,
+        "OpenSora": 0.17831515006481255,
+        "OpenSora12": 0.1524121857564632,
+        "StableVideoDiffusion": 0.7620806105370055,
+        "T2VTurbo": 0.5987441514109548,
+        "VideoCrafter2": 0.5795400996346957
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "a cat and a dog",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 1.0,
+          "vote_count": 10,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a dog",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.40161310786585347,
+          "vote_count": 3,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a cat",
+          "rate": 0.2,
+          "both_bad_rate": 0.2,
+          "similarity": 0.3736122639120544,
+          "vote_count": 5,
+          "risk_rate": 0.2,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "cat",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.3736122639120544,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a bird and a cat",
+          "rate": 0.3333333333333333,
+          "both_bad_rate": 0.3333333333333333,
+          "similarity": 0.204311202186902,
+          "vote_count": 3,
+          "risk_rate": 0.3333333333333333,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.048254041265549816,
+      "discrimination": 1.0308275097779065,
+      "reasons": [
+        "Text neighbours \u201ca cat and a dog\u201d and \u201ca dog\u201d support an estimated risk score of 30.7%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 4.62,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 1.0,
+        "mean_similarity": 0.4706297675753729,
+        "neighbour_vote_count": 22,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.30666666666666664,
+      "feedback_adjusted_risk": 0.30666666666666664,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "a cat and a dog",
+      "rewrite_status": "no_safe_rewrite",
+      "rewrite_message": "no safe rewrite found",
+      "p_fail_before": 0.30666666666666664,
+      "p_fail_after": 0.30666666666666664,
+      "candidate_p_fail": 0.30666666666666664,
+      "session_id": "2830778722494185472",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.30666666666666664
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.30666666666666664
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.30666666666666664
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.44000000000000006
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 230,
+            "candidates_token_count": 39,
+            "total_token_count": 269
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 640,
+            "candidates_token_count": 87,
+            "total_token_count": 727
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 838,
+            "candidates_token_count": 74,
+            "total_token_count": 912
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 786,
+            "candidates_token_count": 106,
+            "total_token_count": 892
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "1f956e7ad7f19a8b",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 4.041
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 1.4423076923076923
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 5,
+  "prompt_sha256": "26cd74edd148169a67044e1598f4fb1ef1c8f04831ce5cca0a0ceb4385356fa8",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.299195,
+    "response_bytes_received": 4380,
+    "response": {
+      "p_fail": 0.5,
+      "p_success_by_model": {
+        "AnimateDiff": 0.44964349298559947,
+        "AnimateDiffTurbo": 0.07891691177398713,
+        "CogVideoX": 0.3415953277664248,
+        "LaVie": 0.2886639008863749,
+        "ModelScope": 0.06747496484324639,
+        "OpenSora": 0.12248935266998989,
+        "OpenSora12": 0.10465259451603597,
+        "StableVideoDiffusion": 0.6393403604884009,
+        "T2VTurbo": 0.46288932979762326,
+        "VideoCrafter2": 0.44432347572417663
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "A person is hugging",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.9999999999999999,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a person",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.301525738646292,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is sailing",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.29015080399231835,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is barbequing",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.2693120733287478,
+          "vote_count": 4,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is ironing",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.2693120733287478,
+          "vote_count": 1,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.5893234744201401,
+      "discrimination": 0.9732505840311536,
+      "reasons": [
+        "Text neighbours \u201cA person is hugging\u201d and \u201ca person\u201d support an estimated risk score of 50.0%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 6.4,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 0.9999999999999999,
+        "mean_similarity": 0.4260601378592212,
+        "neighbour_vote_count": 10,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.5,
+      "feedback_adjusted_risk": 0.5,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A mother warmly embraces her adult daughter in a sunlit living room, holding the hug with a gentle, steady camera shot.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.5,
+      "p_fail_after": 0.25,
+      "candidate_p_fail": 0.25,
+      "session_id": "2355648961806598144",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.25
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.2857516339869281
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.49000000000000005
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 229,
+            "candidates_token_count": 37,
+            "total_token_count": 266
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 577,
+            "candidates_token_count": 69,
+            "total_token_count": 646
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 793,
+            "candidates_token_count": 100,
+            "total_token_count": 893
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 717,
+            "candidates_token_count": 118,
+            "total_token_count": 835
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "26cd74edd148169a",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 3.963
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 2.0
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 6,
+  "prompt_sha256": "2f6ef63d7894637df7d41d52bf6d07f9ab537db309634dede7a50d15861f4943",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.42093,
+    "response_bytes_received": 4462,
+    "response": {
+      "p_fail": 0.33999999999999997,
+      "p_success_by_model": {
+        "AnimateDiff": 0.4747907579615014,
+        "AnimateDiffTurbo": 0.08022593422911041,
+        "CogVideoX": 0.3608260041211444,
+        "LaVie": 0.30437565126702126,
+        "ModelScope": 0.06821044871818319,
+        "OpenSora": 0.12640139797485953,
+        "OpenSora12": 0.10743464633164439,
+        "StableVideoDiffusion": 0.6686997216200691,
+        "T2VTurbo": 0.4886132858430861,
+        "VideoCrafter2": 0.4692289454974523
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "an orange bird",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 1.0,
+          "vote_count": 1,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "an orange",
+          "rate": 0.2,
+          "both_bad_rate": 0.2,
+          "similarity": 0.7360195070436443,
+          "vote_count": 5,
+          "risk_rate": 0.2,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "an orange clock",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.5358519859101099,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a white bird",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.20661392650386803,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a purple bird",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.2034112357413163,
+          "vote_count": 3,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.48165897353922843,
+      "discrimination": 1.0092084653852007,
+      "reasons": [
+        "Text neighbours \u201can orange bird\u201d and \u201can orange\u201d support an estimated risk score of 34.0%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 4.85,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 1.0,
+        "mean_similarity": 0.5363793310397877,
+        "neighbour_vote_count": 12,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.33999999999999997,
+      "feedback_adjusted_risk": 0.33999999999999997,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A vibrant orange canary perched on a mossy tree branch, gently tilting its head in a quiet forest setting, close-up shot.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.33999999999999997,
+      "p_fail_after": 0.3035294117647059,
+      "candidate_p_fail": 0.3035294117647059,
+      "session_id": "7442464740921573376",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.33999999999999997
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.3035294117647059
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.33999999999999997
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.39714285714285713
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 228,
+            "candidates_token_count": 35,
+            "total_token_count": 263
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 575,
+            "candidates_token_count": 90,
+            "total_token_count": 665
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 794,
+            "candidates_token_count": 77,
+            "total_token_count": 871
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 727,
+            "candidates_token_count": 109,
+            "total_token_count": 836
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "2f6ef63d7894637d",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 4.011
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 1.5151515151515151
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 7,
+  "prompt_sha256": "76d7d595eb9c555b2ab50b7d44416aead7ac3d05a91b020088db3e0d5692307d",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 3.824599,
+    "response_bytes_received": 4314,
+    "response": {
+      "p_fail": 0.5,
+      "p_success_by_model": {
+        "AnimateDiff": 0.4399787651759652,
+        "AnimateDiffTurbo": 0.07217048316648214,
+        "CogVideoX": 0.33028122635091606,
+        "LaVie": 0.2771045286733271,
+        "ModelScope": 0.06139235398204666,
+        "OpenSora": 0.11372175857229144,
+        "OpenSora12": 0.09662460752633675,
+        "StableVideoDiffusion": 0.634860383068149,
+        "T2VTurbo": 0.45351188404142523,
+        "VideoCrafter2": 0.43454787321001825
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "A person is squat",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.9999999999999999,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a person",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.301525738646292,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is sailing",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.29015080399231835,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is barbequing",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.2693120733287478,
+          "vote_count": 4,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is hugging",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.2693120733287478,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.6233701575167727,
+      "discrimination": 0.9980777752910575,
+      "reasons": [
+        "Text neighbours \u201cA person is squat\u201d and \u201ca person\u201d support an estimated risk score of 50.0%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 6.4,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 0.9999999999999999,
+        "mean_similarity": 0.4260601378592212,
+        "neighbour_vote_count": 11,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.5,
+      "feedback_adjusted_risk": 0.5,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A person performing a deep squat exercise with proper form in a bright gym",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.5,
+      "p_fail_after": 0.29,
+      "candidate_p_fail": 0.29,
+      "session_id": "7705925319122747392",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.29
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.35
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.41714285714285715
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 229,
+            "candidates_token_count": 37,
+            "total_token_count": 266
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 578,
+            "candidates_token_count": 77,
+            "total_token_count": 655
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 801,
+            "candidates_token_count": 63,
+            "total_token_count": 864
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 686,
+            "candidates_token_count": 78,
+            "total_token_count": 764
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "76d7d595eb9c555b",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 3.475
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 2.0
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 8,
+  "prompt_sha256": "63b3cc4f900db48f3fa0fe15ab755ba07eb45a88118843e52b2b68ec6d7b426b",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 3.990637,
+    "response_bytes_received": 4337,
+    "response": {
+      "p_fail": 0.5,
+      "p_success_by_model": {
+        "AnimateDiff": 0.4442173125423225,
+        "AnimateDiffTurbo": 0.07612019552478505,
+        "CogVideoX": 0.335904095815952,
+        "LaVie": 0.2830952309972698,
+        "ModelScope": 0.06497692223925253,
+        "OpenSora": 0.11873500877887132,
+        "OpenSora12": 0.10125879296833562,
+        "StableVideoDiffusion": 0.6356295870318083,
+        "T2VTurbo": 0.45753701415326486,
+        "VideoCrafter2": 0.4388699600599867
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "A person is shaking head",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 1.0,
+          "vote_count": 1,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a person",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.23957824134184838,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is sailing",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.23054025058188127,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is barbequing",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.21398277039266533,
+          "vote_count": 4,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "A person is hugging",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.21398277039266533,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.6101402641036329,
+      "discrimination": 0.9806572543472253,
+      "reasons": [
+        "Text neighbours \u201cA person is shaking head\u201d and \u201ca person\u201d support an estimated risk score of 50.0%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 6.4,
+      "supported": true,
+      "coverage": {
+        "matched_features": 7,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 1.0,
+        "mean_similarity": 0.37961680654181207,
+        "neighbour_vote_count": 10,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.5,
+      "feedback_adjusted_risk": 0.5,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A woman with a gentle expression shaking her head 'no' in a brightly lit room, captured in a steady medium shot.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.5,
+      "p_fail_after": 0.45,
+      "candidate_p_fail": 0.45,
+      "session_id": "948274078253318144",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.4635294117647059
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.45
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.6
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 230,
+            "candidates_token_count": 39,
+            "total_token_count": 269
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 582,
+            "candidates_token_count": 74,
+            "total_token_count": 656
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 788,
+            "candidates_token_count": 99,
+            "total_token_count": 887
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 726,
+            "candidates_token_count": 117,
+            "total_token_count": 843
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "63b3cc4f900db48f",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 3.654
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 2.0
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 9,
+  "prompt_sha256": "e563f7c8d6da9fa36bac8ed9275bdf08fa436aae6a3a2104d2ebb2fe99e3e865",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.272301,
+    "response_bytes_received": 4522,
+    "response": {
+      "p_fail": 0.5345454545454545,
+      "p_success_by_model": {
+        "AnimateDiff": 0.363771592798832,
+        "AnimateDiffTurbo": 0.045163898702258634,
+        "CogVideoX": 0.25714328492174665,
+        "LaVie": 0.2087629379697057,
+        "ModelScope": 0.037760539811232015,
+        "OpenSora": 0.07503378724599381,
+        "OpenSora12": 0.06250368443764157,
+        "StableVideoDiffusion": 0.5737210745672311,
+        "T2VTurbo": 0.37753579565684914,
+        "VideoCrafter2": 0.35828460487268876
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "a tv and a laptop",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 1.0,
+          "vote_count": 1,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a spoon and a laptop",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 0.4851348148331496,
+          "vote_count": 2,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a laptop and a remote",
+          "rate": 0.4,
+          "both_bad_rate": 0.4,
+          "similarity": 0.26059183820106446,
+          "vote_count": 5,
+          "risk_rate": 0.4,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a potted plant and a tv",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.2361229043833735,
+          "vote_count": 3,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a laptop, frozen in time",
+          "rate": 0.2727272727272727,
+          "both_bad_rate": 0.2727272727272727,
+          "similarity": 0.17282131648213805,
+          "vote_count": 11,
+          "risk_rate": 0.2727272727272727,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 0.9013921208164545,
+      "discrimination": 1.075608987428708,
+      "reasons": [
+        "Text neighbours \u201ca tv and a laptop\u201d and \u201ca spoon and a laptop\u201d support an estimated risk score of 53.5%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 6.88,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 1.0,
+        "mean_similarity": 0.43093417477994517,
+        "neighbour_vote_count": 22,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.5345454545454545,
+      "feedback_adjusted_risk": 0.5345454545454545,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A steady shot showing a smart TV playing a video in the background, with a silver laptop open and active on a kitchen counter in the foreground.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.5345454545454545,
+      "p_fail_after": 0.275,
+      "candidate_p_fail": 0.275,
+      "session_id": "452878119242563584",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.5345454545454545
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.30454545454545456
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.58
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.275
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 230,
+            "candidates_token_count": 39,
+            "total_token_count": 269
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 650,
+            "candidates_token_count": 75,
+            "total_token_count": 725
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 839,
+            "candidates_token_count": 117,
+            "total_token_count": 956
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 813,
+            "candidates_token_count": 135,
+            "total_token_count": 948
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "e563f7c8d6da9fa3",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 3.937
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 2.1484375
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "rank": 10,
+  "prompt_sha256": "3f1f11ff19e6f59cd21380e13c4d584b183993b8a26f45c16e2514e38124bc4d",
+  "attempt": {
+    "attempt": 1,
+    "http_status": 200,
+    "elapsed_seconds": 4.491934,
+    "response_bytes_received": 4546,
+    "response": {
+      "p_fail": 0.4333333333333333,
+      "p_success_by_model": {
+        "AnimateDiff": 0.33010692417625487,
+        "AnimateDiffTurbo": 0.03465364642416973,
+        "CogVideoX": 0.22528175729250044,
+        "LaVie": 0.17938324728843616,
+        "ModelScope": 0.02865452334575251,
+        "OpenSora": 0.059516785039968836,
+        "OpenSora12": 0.048971099889787414,
+        "StableVideoDiffusion": 0.54786880163924,
+        "T2VTurbo": 0.34396379176542213,
+        "VideoCrafter2": 0.3246022863412797
+      },
+      "nearest_prompts": [
+        {
+          "prompt": "a bicycle and a car",
+          "rate": 1.0,
+          "both_bad_rate": 1.0,
+          "similarity": 1.0,
+          "vote_count": 6,
+          "risk_rate": 1.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a bicycle and an airplane",
+          "rate": 0.5,
+          "both_bad_rate": 0.5,
+          "similarity": 0.43195980198345996,
+          "vote_count": 2,
+          "risk_rate": 0.5,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a bicycle",
+          "rate": 0.6666666666666666,
+          "both_bad_rate": 0.6666666666666666,
+          "similarity": 0.3957861747933151,
+          "vote_count": 3,
+          "risk_rate": 0.6666666666666666,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a pink car",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.21298920196335203,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        },
+        {
+          "prompt": "a red car",
+          "rate": 0.0,
+          "both_bad_rate": 0.0,
+          "similarity": 0.21298920196335203,
+          "vote_count": 1,
+          "risk_rate": 0.0,
+          "postcheck_count": 0,
+          "postcheck_failures": 0,
+          "postcheck_failure_rate": null,
+          "evidence_store": "firestore"
+        }
+      ],
+      "difficulty": 1.0076675328463227,
+      "discrimination": 1.130495081766855,
+      "reasons": [
+        "Text neighbours \u201ca bicycle and a car\u201d and \u201ca bicycle and an airplane\u201d support an estimated risk score of 43.3%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+      ],
+      "est_cost_usd": 5.65,
+      "supported": true,
+      "coverage": {
+        "matched_features": 5,
+        "positive_similarity_neighbours": 5,
+        "max_similarity": 1.0,
+        "mean_similarity": 0.4507448761406959,
+        "neighbour_vote_count": 13,
+        "zero_similarity_ties_included": false,
+        "firestore_prompt_documents": 5,
+        "firestore_item_documents": 5
+      },
+      "historical_p_fail": 0.4333333333333333,
+      "feedback_adjusted_risk": 0.4333333333333333,
+      "evidence_store": "firestore",
+      "postcheck_feedback": {
+        "count": 0,
+        "failures": 0,
+        "failure_rate": null,
+        "exact_unseen_prompt": null
+      },
+      "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+      "rewritten_prompt": "A yellow bicycle standing on a kickstand on a suburban driveway as a white SUV is parked nearby, wide shot, natural morning light.",
+      "rewrite_status": "improved",
+      "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+      "p_fail_before": 0.4333333333333333,
+      "p_fail_after": 0.23333333333333334,
+      "candidate_p_fail": 0.23333333333333334,
+      "session_id": "8487299854471528448",
+      "session_service": "Agent Platform Sessions",
+      "session_verified": true,
+      "session_event_count": 8,
+      "tool_trace": [
+        {
+          "tool": "nearest_prompts",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.4333333333333333
+        },
+        {
+          "tool": "rewrite",
+          "completed": true
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.2492424242424242
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.26666666666666666
+        },
+        {
+          "tool": "difficulty",
+          "completed": true,
+          "p_fail": 0.23333333333333334
+        }
+      ],
+      "tool_call_count": 6,
+      "agent_trace": {
+        "framework": "google-adk",
+        "model": "gemini-3.5-flash",
+        "backend": "vertex",
+        "token_usage": [
+          {
+            "stage": "planner",
+            "prompt_token_count": 230,
+            "candidates_token_count": 39,
+            "total_token_count": 269
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 639,
+            "candidates_token_count": 67,
+            "total_token_count": 706
+          },
+          {
+            "stage": "rewrite",
+            "prompt_token_count": 822,
+            "candidates_token_count": 102,
+            "total_token_count": 924
+          },
+          {
+            "stage": "planner",
+            "prompt_token_count": 779,
+            "candidates_token_count": 120,
+            "total_token_count": 899
+          }
+        ],
+        "planner_model_calls": 3,
+        "rewrite_model_calls": 1,
+        "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+        "original_prompt_digest": "3f1f11ff19e6f59c",
+        "candidate_count": 3,
+        "strict_improvement_guard": true,
+        "elapsed_seconds": 4.17
+      },
+      "mode": "cloud",
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "expected_attempts_capped": 1.7647058823529411
+    },
+    "retry_decision": "no retry"
+  }
+}
+{
+  "summary": {
+    "selected_prompts": 10,
+    "completed_prompts": 10,
+    "total_http_attempts": 10,
+    "rate_limit_retries": 0,
+    "strictly_improved_count": 9,
+    "non_higher_verified_count": 10,
+    "higher_risk_returned_count": 0,
+    "tool_workflow_verified_count": 10,
+    "V5_pass": true,
+    "V6_all_ten_verified": true,
+    "no_increase_observed": true,
+    "never_higher_verified": true
+  },
+  "first_verified_tool_trace": [
+    {
+      "tool": "nearest_prompts",
+      "completed": true
+    },
+    {
+      "tool": "difficulty",
+      "completed": true,
+      "p_fail": 0.5
+    },
+    {
+      "tool": "rewrite",
+      "completed": true
+    },
+    {
+      "tool": "difficulty",
+      "completed": true,
+      "p_fail": 0.05833333333333333
+    },
+    {
+      "tool": "difficulty",
+      "completed": true,
+      "p_fail": 0.375
+    },
+    {
+      "tool": "difficulty",
+      "completed": true,
+      "p_fail": 0.2733333333333333
+    }
+  ]
+}

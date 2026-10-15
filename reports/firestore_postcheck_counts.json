@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "prompts_v1": 510,
+    "items_v1": 508,
+    "verdicts_v1": 2
+  },
+  "source": "native Firestore aggregation query",
+  "scope": "After the two distinct real owner uploads; no duplicate feedback from cached requests"
+}

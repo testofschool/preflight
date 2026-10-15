@@ -1,0 +1,119 @@
+{
+  "scope": "one actual cached-owner-clip candidate POST; no preflight POSTs",
+  "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "collected_at": "2026-10-15T19:48:47.453Z",
+  "safety": {
+    "http_status": 200,
+    "reused_stored_review": true,
+    "model_calls_this_request": 0,
+    "required_reuse_and_zero_calls": true
+  },
+  "post_count": 1,
+  "observed": {
+    "page_errors": [],
+    "console_errors": [],
+    "post_paths": [
+      "/postcheck"
+    ],
+    "local_preview_range_failure_events": 2,
+    "failed_api_or_static_requests": []
+  },
+  "source": {
+    "sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+    "bytes": 4107887,
+    "reference_duration_seconds": 5.041667,
+    "exact_reference_prompt": true,
+    "exact_reference_model": true,
+    "preview": {
+      "visible": true,
+      "controls": true,
+      "ready_state": 4,
+      "error_code": null,
+      "duration": 5.041667,
+      "metadata_text": "3.9 MiB · 5.0s"
+    }
+  },
+  "response": {
+    "pass_bool": true,
+    "reused_stored_review": true,
+    "model_calls_this_request": 0,
+    "risk_before": 0.20763888888888885,
+    "risk_after": 0.20763888888888885,
+    "historical_p_fail": 0.21666666666666665,
+    "feedback_count": 1,
+    "feedback_recorded": true,
+    "feedback_created": false,
+    "sampling_fps": 2,
+    "default_video_sampling_fps": 1,
+    "reviewed_duration_seconds": 5.041667
+  },
+  "visible": {
+    "verdict": "Pass",
+    "state": "STORED REVIEW REUSED",
+    "owner_label": "Owner-provided AI clip · Higgsfield owner-made; generation model unspecified · 5.0s reviewed · stored review reused",
+    "before": "20.8%",
+    "after": "20.8%",
+    "historical": "Separate historical human-vote estimate: 21.7%.",
+    "feedback_receipt": "Stored review reused; existing machine feedback retained · 1 machine feedback record.",
+    "sampling_note": "Reviewed at 2 fps (default video sampling: 1 fps). Sampling may miss flicker shorter than 0.5 seconds.",
+    "defects_hidden": true
+  },
+  "desktop": {
+    "width": 1440,
+    "height": 1080,
+    "horizontal_overflow": false
+  },
+  "elapsed_ms": 1243,
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "horizontal_overflow": false,
+    "verdict": "Pass",
+    "stored_review_label": "STORED REVIEW REUSED",
+    "before": "20.8%",
+    "after": "20.8%",
+    "preview_ready_state": 4,
+    "preview_error_code": null
+  },
+  "preview_network_note": "Two local blob media-range requests emitted requestfailed events while the video loaded; the browser resource log shows206PartialContent and the preview reached readyState4 with no media error. No API or static-resource failure was observed.",
+  "client_date": "2026-10-16",
+  "client_timezone": "Asia/Seoul",
+  "reference_file": "reports/postcheck_canary_reference.json",
+  "checks": {
+    "one_postcheck_post_only": true,
+    "stored_review_reused": true,
+    "zero_model_calls_this_request": true,
+    "native_pass_visible": true,
+    "risk_matches_cached_reference": true,
+    "historical_rate_separate": true,
+    "feedback_count_one_retained": true,
+    "actual_sampling_note": true,
+    "preview_decoded": true,
+    "desktop_no_overflow": true,
+    "mobile_no_overflow": true,
+    "no_page_or_console_errors": true,
+    "no_api_or_static_failures": true
+  },
+  "result": "PASS within one-cached-clip browser scope",
+  "limits": "This request reused a native canary verdict and made no new model call. It does not validate fresh visual inference, defect accuracy, all owner clips, or V8. Primary public Track A URL was not promoted.",
+  "screenshots": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-postcheck-desktop.png",
+      "sha256": "b3d23fd80f7e0851772780f0c1b1a56774b5f2f08b4a16922f2c83f526c40813",
+      "viewport": {
+        "width": 1440,
+        "height": 1080
+      },
+      "capture": "upload-review section"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/final-postcheck-mobile.png",
+      "sha256": "4604b034beca8c48a6ffe524a1843a8c147df638460e847153f8d0506feb69fc",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "upload-review section"
+    }
+  ]
+}

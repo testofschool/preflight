@@ -222,6 +222,17 @@ class FirestoreDifficultyStore:
             raise RuntimeError("Attach the bundled vector engine before live prediction")
         return self.live_risk(self.engine.predict(prompt), prompt=prompt)
 
+    @staticmethod
+    def _validate_verdict_identifier(identifier: str) -> None:
+        if not isinstance(identifier, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", identifier):
+            raise ValueError("Invalid verdict identifier")
+
+    def get_verdict(self, verdict_id: str) -> dict | None:
+        """Read a prior internal verdict without changing feedback counters."""
+        self._validate_verdict_identifier(verdict_id)
+        snapshot = self.client.collection("verdicts_v1").document(verdict_id).get(timeout=10)
+        return snapshot.to_dict() if snapshot.exists else None
+
     def record_verdict(
         self,
         prompt: str,
@@ -230,14 +241,21 @@ class FirestoreDifficultyStore:
         defects: list[dict],
         verdict_id: str | None = None,
         source: str = "gemini_single_clip_postcheck",
+        *,
+        review: dict | None = None,
     ) -> dict:
         """Atomically persist one clip verdict and update separate feedback counters."""
         if not isinstance(pass_bool, bool) or not prompt.strip() or not model.strip():
             raise ValueError("A prompt, model and boolean clip verdict are required")
         identifier = verdict_id or uuid.uuid4().hex
-        if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", identifier):
-            raise ValueError("Invalid verdict identifier")
+        self._validate_verdict_identifier(identifier)
         content = {"prompt": prompt, "model": model, "pass_bool": pass_bool, "defects": defects, "source": source}
+        if review is not None:
+            if not isinstance(review, dict):
+                raise ValueError("Review provenance must be a JSON document")
+            # PostcheckService emits this JSON without upload paths or client
+            # credentials. Preserve it verbatim for exact successful retries.
+            content["review"] = copy.deepcopy(review)
         fingerprint = hashlib.sha256(json.dumps(content, sort_keys=True, allow_nan=False).encode()).hexdigest()
         prompt_reference = self.client.collection("prompts_v1").document(prompt_id(prompt))
         verdict_reference = self.client.collection("verdicts_v1").document(identifier)

@@ -1,0 +1,25 @@
+{
+  "attempts": [
+    {
+      "check": "post-smoke local Firestore integrity CLI",
+      "attempts": 2,
+      "exit_code": 2,
+      "cause": "The local shell had no cloud project runtime setting; from_env rejected it before Firestore access. A different output filename did not address the missing setting.",
+      "correction": "Load the already authorized configured gcloud project into process memory, set the expected runtime environment variable, then invoke the same read-only verification. No source or production runtime change.",
+      "captured_output": {
+        "verification_error_type": "ValueError",
+        "complete": false
+      }
+    },
+    {
+      "check": "local final log/digest wrapper startup",
+      "attempts": 1,
+      "exit_code": 1,
+      "exception": "ModuleNotFoundError",
+      "cause": "Importing scripts/release_cloud.py from repository root did not expose its sibling cloud_ops module. This happened before cloud operations.",
+      "correction": "Add the scripts directory to the wrapper process import path before importing the unmodified script."
+    }
+  ],
+  "failed_attempts_do_not_establish_integrity": true,
+  "resolution_receipt": "reports/firestore_integrity_postcheck_final.json"
+}

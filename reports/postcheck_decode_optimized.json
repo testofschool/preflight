@@ -1,0 +1,120 @@
+{
+  "api_calls": 0,
+  "check": "optimized local preparation of frozen resident owner01; no model or API calls",
+  "frame_count": 10,
+  "frames": [
+    {
+      "index": 0,
+      "jpeg_bytes": 9424,
+      "jpeg_signature_valid": true,
+      "seconds": 0.0,
+      "sha256": "3e3ce8346e9ec08d8d42b221d1730595fb3ce8ce579ea71d967942cbab7273e0"
+    },
+    {
+      "index": 1,
+      "jpeg_bytes": 7222,
+      "jpeg_signature_valid": true,
+      "seconds": 0.5,
+      "sha256": "abe6f79bce4c1eb10b3675b215d59f89c23bf473a1f297ad076f4266b429edb8"
+    },
+    {
+      "index": 2,
+      "jpeg_bytes": 6546,
+      "jpeg_signature_valid": true,
+      "seconds": 1.0,
+      "sha256": "8ded4307277730a8167e20dd2e8cbae24854f1a4f731a47e743a04de43ca7fcd"
+    },
+    {
+      "index": 3,
+      "jpeg_bytes": 6671,
+      "jpeg_signature_valid": true,
+      "seconds": 1.5,
+      "sha256": "6a93767c54ffd356f0ef91cd136942163592b1983a5c44ed302433c53a5def9a"
+    },
+    {
+      "index": 4,
+      "jpeg_bytes": 7534,
+      "jpeg_signature_valid": true,
+      "seconds": 2.0,
+      "sha256": "75ab5666f2c0a9e89551d8b545dbb34165c390cbc1b307b722a1a39e435e274d"
+    },
+    {
+      "index": 5,
+      "jpeg_bytes": 8731,
+      "jpeg_signature_valid": true,
+      "seconds": 2.5,
+      "sha256": "6599839b0c6c792555187311be8c1623eb33b11dfe3a0a62319c235f79572455"
+    },
+    {
+      "index": 6,
+      "jpeg_bytes": 10932,
+      "jpeg_signature_valid": true,
+      "seconds": 3.0,
+      "sha256": "55eb6b61ebeddc6d5207b35f92cc0d48ac682b6a84b5bbc2212b731da04ea64a"
+    },
+    {
+      "index": 7,
+      "jpeg_bytes": 10984,
+      "jpeg_signature_valid": true,
+      "seconds": 3.5,
+      "sha256": "3bc060a4dabcef27cc1cdbce035b065a79e3e2ee0a0288eb65f92955e372448f"
+    },
+    {
+      "index": 8,
+      "jpeg_bytes": 9621,
+      "jpeg_signature_valid": true,
+      "seconds": 4.0,
+      "sha256": "86d971c4894854cc0e9103571cfd969210b738eb5e0d5335632c4d48b269bada"
+    },
+    {
+      "index": 9,
+      "jpeg_bytes": 10001,
+      "jpeg_signature_valid": true,
+      "seconds": 4.5,
+      "sha256": "685a76051e5a1c59aa2348324d4ef96cf826868be6a442143d4e2130de7b982b"
+    }
+  ],
+  "independently_decoded_jpegs": 10,
+  "independently_decoded_video_frames": 76,
+  "measured_at_utc": "2026-10-15T20:09:09.733592+00:00",
+  "method": "Current prepare_media: one ffprobe, source hash, one ffmpeg decode; shared512scale and split into15fpsMP4 and2fpsJPEG outputs; decode/filter/encoderthreads1; combinedffmpeg timeout18s",
+  "model_calls": 0,
+  "normalized_metadata": {
+    "format": {
+      "duration": "5.066667",
+      "size": "85367"
+    },
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "avg_frame_rate": "15/1",
+        "codec_name": "h264",
+        "height": 220,
+        "nb_frames": "76",
+        "pix_fmt": "yuvj420p",
+        "width": 512
+      }
+    ]
+  },
+  "normalized_video_bytes": 85367,
+  "normalized_video_sha256": "20d1e4c17cbdf4d07e5458dae49e98c5c695b8b9111211264332f2e70f1f91b1",
+  "passed": true,
+  "prepare_elapsed_seconds": 5.153659,
+  "reference_sha256": "920419445256a714e83817a6967cf3184764db6d4ed968d835aed2dccdd23d60",
+  "reproduction_command": "../.preflight-cloud-venv/bin/python scripts/verify_decode_local.py --reference reports/postcheck_canary_reference.json",
+  "runtime_module_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+  "sampling_fps": 2,
+  "source_bytes": 4107887,
+  "source_duration_seconds": 5.041667,
+  "source_hash_matches_frozen_reference": true,
+  "source_resolution": {
+    "height": 1886,
+    "width": 4398
+  },
+  "source_sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+  "temporary_media_removed": true,
+  "timing_scope": "prepare_elapsed_seconds covers prepare_media only, including its probe/hash/decode/output reads; separate validation time is excluded",
+  "validation_elapsed_seconds": 0.120046,
+  "working_directory": "/Users/felix/Desktop/AI Builder Cup 2026/preflight"
+}

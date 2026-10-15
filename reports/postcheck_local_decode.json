@@ -1,0 +1,13 @@
+{
+  "check": "Actual owner clip local decode; no model call",
+  "source_sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+  "matches_frozen_reference": true,
+  "duration_seconds": 5.041667,
+  "source_width": 4398,
+  "source_height": 1886,
+  "normalized_video_bytes": 77665,
+  "sampled_frames": 10,
+  "sampling_fps": 2,
+  "seconds": 10.215,
+  "model_calls": 0
+}

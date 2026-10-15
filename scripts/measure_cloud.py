@@ -75,16 +75,25 @@ def batch(url: str, label: str) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", required=True)
+    parser.add_argument("--validation-only", action="store_true", help="retain the already measured timeout and test one new cold revision")
+    parser.add_argument("--report", type=Path, default=ROOT / "reports/cloud_latency.json")
+    parser.add_argument("--log", type=Path, default=ROOT / "logs/cloud_latency.txt")
     arguments = parser.parse_args()
     operations = CloudOperations()
     report = {"created_kst": datetime.now(ZoneInfo("Asia/Seoul")).isoformat(),
               "url": arguments.url, "method": "new revision, min instances zero, deploy health check disabled; first invocation triggers startup"}
     try:
-        report["calibration_revision"] = cold_revision(operations)
-        report["calibration"] = batch(arguments.url, "calibration")
-        if len(report["calibration"]) != 6 or not all(row["valid_connected_response"] for row in report["calibration"]):
-            raise RuntimeError("Calibration did not return six connected responses")
-        report["timeout_seconds"] = math.ceil(2 * max(row["seconds"] for row in report["calibration"]))
+        if arguments.validation_only:
+            current = json.loads(operations.command("read existing measured timeout", ["gcloud", "run", "services", "describe", "preflight",
+                                                                                       "--region", REGION, "--format=json"]))
+            report["timeout_seconds"] = current["spec"]["template"]["spec"]["timeoutSeconds"]
+            report["calibration_note"] = "Retains the timeout derived from recorded sample requests; see postcheck_timeout_calibration.json"
+        else:
+            report["calibration_revision"] = cold_revision(operations)
+            report["calibration"] = batch(arguments.url, "calibration")
+            if len(report["calibration"]) != 6 or not all(row["valid_connected_response"] for row in report["calibration"]):
+                raise RuntimeError("Calibration did not return six connected responses")
+            report["timeout_seconds"] = math.ceil(2 * max(row["seconds"] for row in report["calibration"]))
         report["validation_revision"] = cold_revision(operations, timeout=report["timeout_seconds"])
         report["validation"] = batch(arguments.url, "validation")
         rows = report["validation"]
@@ -100,10 +109,10 @@ def main() -> None:
                                 "revision": data["status"]["latestReadyRevisionName"]}
         print(json.dumps({"V3_pass": report["V3_pass"], "V10": report["V10_config"]}), flush=True)
     finally:
-        (ROOT / "reports/cloud_latency.json").write_text(json.dumps(report, indent=2) + "\n")
+        arguments.report.write_text(json.dumps(report, indent=2) + "\n")
         lines = [f"{row['phase']} | {row['prompt']} | HTTP {row['http_status']} | {row['seconds']:.6f}s"
                  for key in ("calibration", "validation") for row in report.get(key, [])]
-        (ROOT / "logs/cloud_latency.txt").write_text("\n".join(lines) + "\n")
+        arguments.log.write_text("\n".join(lines) + "\n")
     if not report.get("V3_pass"):
         raise SystemExit(1)
 

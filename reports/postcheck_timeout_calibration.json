@@ -1,0 +1,14 @@
+{
+  "basis": "Twice slowest observed sample request across both tracks",
+  "original_track_a_slowest_seconds": 17.707208,
+  "current_track_a_slowest_seconds": 19.73813,
+  "owner_clip_review_seconds": 18.950459,
+  "timeout_seconds": 40,
+  "formula": "ceil(2 * max(all recorded sample requests))",
+  "native_receipts": [
+    "reports/track_a_before_postcheck/cloud_latency.json",
+    "reports/cloud_latency_postcheck_release.json",
+    "reports/postcheck_canary_live.json"
+  ],
+  "veo_calls": 0
+}

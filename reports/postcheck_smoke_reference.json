@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-15T20:15:43.501610+00:00",
+  "purpose": "One new current-image operational smoke upload; not the V8 known-defect accuracy test",
+  "id": "02_door",
+  "cached_absolute_path": "/Users/felix/.cache/preflight-aibc/owner-clips/02_door.mp4",
+  "source_bytes": 5224299,
+  "sha256": "08f950c81d7165038247fa7a0136189f9a42ff77a9cbe1846e04b67ef9291a3b",
+  "duration_seconds": 5.041667,
+  "expected_confirmed_defects": [],
+  "prompt": "A young man wearing a dark jacket, a red wrist wrap and a key pendant walks down a narrow industrial corridor toward the camera and pushes open a pair of doors.",
+  "model": "Higgsfield owner-made; generation model unspecified",
+  "reference_scope": "Independent sampled visual inspection found no confirmed intrinsic defect; this is not an exhaustive clean-video certification or known-defect V8 reference.",
+  "independent_observation": "../evidence/preflight-20261016/v8-reference-engine/02_door/independent_observation.json",
+  "independent_observation_sha256": "fe8a94e606ff3a604d982a52d961401be15f225b15dc5be43569203a66cd7c4d",
+  "validation_revision": "preflight-00007-q2d"
+}

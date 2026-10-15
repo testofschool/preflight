@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "purpose": "negative-control pipeline canary; not the V8 known-defect fixture",
+  "frozen_at_utc": "2026-10-15T19:40:28.792772+00:00",
+  "label_provenance": "independent evaluator-authored visual inspection, frozen before any Gemini postcheck prediction for this source",
+  "id": "01_wake",
+  "sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e",
+  "cached_absolute_path": "/Users/felix/.cache/preflight-aibc/owner-clips/01_wake.mp4",
+  "original_owner_path": "/Users/felix/Desktop/higgsfield/outputs/amnesia-seoul/01_wake.mp4",
+  "duration_seconds": 5.041667,
+  "source_bytes": 4107887,
+  "prompt": "A young man wearing a dark jacket and a key necklace stands inside a large industrial building. The camera tilts upward from his hand to his face as he looks around.",
+  "model": "Higgsfield owner-made; generation model unspecified",
+  "expected_confirmed_defects": [],
+  "reference_scope": "No independently confirmed intrinsic defect in the inspected samples. This is not an exhaustive defect-free certification and cannot establish V8.",
+  "reviewed_evidence": "all ten 2-fps chronological frames and first full-resolution native hand frame",
+  "sampling_fps": 2,
+  "frames": [
+    {
+      "seconds": 0.0,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_000.png",
+      "sha256": "d6070148af8f3e36fc6c38fa1a9392bb52e80ec9dbed0b4398d8fa2e55e9d3db"
+    },
+    {
+      "seconds": 0.5,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_001.png",
+      "sha256": "f8266d27fa876bed83ea65daac0297cca2b9c913caac0b8048c430eb33d656c0"
+    },
+    {
+      "seconds": 1.0,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_002.png",
+      "sha256": "d670e921b0b08d62f18cdf3fc78ca5ece3630a590f7018f354c614afab97c7cc"
+    },
+    {
+      "seconds": 1.5,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_003.png",
+      "sha256": "0336422624fed5afd5477590c2f5ca0c60b1f3d4759c98fdded633e577fd2f6c"
+    },
+    {
+      "seconds": 2.0,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_004.png",
+      "sha256": "0443f914eeaccf1699eb25e6b1232aa98adf4787a0e1612aa32a0e2eddba8800"
+    },
+    {
+      "seconds": 2.5,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_005.png",
+      "sha256": "47bf77c3bd1e9906e729e917eb629cec457d4ca0b5c3a570c677508e6c81a9d2"
+    },
+    {
+      "seconds": 3.0,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_006.png",
+      "sha256": "3fcfd2584cbb1c69dc15a02711df3f6622e0da52bdcb85b45d4f0a0349cb8ccc"
+    },
+    {
+      "seconds": 3.5,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_007.png",
+      "sha256": "679dccc4fe6ebb1385f45bc3cec2e63bd2198e2e8a0b75d1176238310281eac4"
+    },
+    {
+      "seconds": 4.0,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_008.png",
+      "sha256": "807c81399c6d71eb5efbe3f4d607fea80355a67e47b283eae098631b50d9d5db"
+    },
+    {
+      "seconds": 4.5,
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frames/frame_009.png",
+      "sha256": "ee7b31cff7bfe76b66b0bdb2a70111865711003aafdb9f81130c82ac49f387ec"
+    }
+  ],
+  "contact_sheet": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/contact_2fps.png",
+  "source_manifest": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preflight-20261016/postcheck-reference/01_wake/frame_manifest.json"
+}

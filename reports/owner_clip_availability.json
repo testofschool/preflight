@@ -1,0 +1,69 @@
+{
+  "checked_at_kst": "2026-10-16T05:11:33.555347+09:00",
+  "scope": "filesystem metadata and verified local cache, not video quality",
+  "clips": [
+    {
+      "file": "01_wake.mp4",
+      "bytes": 4107887,
+      "resident": true,
+      "cached": true,
+      "sha256": "4eada38585ce26dda3d1936e2996d18e4c5487ec6c4230f7e25440b956890c9e"
+    },
+    {
+      "file": "02_door.mp4",
+      "bytes": 5224299,
+      "resident": true,
+      "cached": true,
+      "sha256": "08f950c81d7165038247fa7a0136189f9a42ff77a9cbe1846e04b67ef9291a3b"
+    },
+    {
+      "file": "03_rooftop.mp4",
+      "bytes": 6568358,
+      "resident": true,
+      "cached": true,
+      "sha256": "af7b8aabd31ec3c1d9e0f8ba8e1cff9a5527deb332fb5076e5c7f09c9bdd05bd"
+    },
+    {
+      "file": "04_gap_jump.mp4",
+      "bytes": 9037054,
+      "resident": true,
+      "cached": true,
+      "sha256": "af10ae8db2f311a19ed907246318e44d8ea16f248f5495132df768e9fe9b8093"
+    },
+    {
+      "file": "05_gwanghwamun_bus.mp4",
+      "bytes": 8589735,
+      "resident": true,
+      "cached": true,
+      "sha256": "21267856bb2454cedb9fdae269a6491dc0a0869a8196ad7fab9060cfc4a30d57"
+    },
+    {
+      "file": "06_alley_fight.mp4",
+      "bytes": 6636710,
+      "resident": true,
+      "cached": true,
+      "sha256": "2743f63c068d218e7565a78796d81f0bba9b690a651389a690be0bd92dade05f"
+    },
+    {
+      "file": "07_cheonggyecheon.mp4",
+      "bytes": 9543410,
+      "resident": true,
+      "cached": true,
+      "sha256": "4a29d7a3bd11ab99517667240c42944ab7968bc28892b1fb6a6657059e7e8f8a"
+    },
+    {
+      "file": "08_hangang_shockwave.mp4",
+      "bytes": 9964041,
+      "resident": true,
+      "cached": true,
+      "sha256": "9a8b4747a3763df4e85ef17352a58b092e982ea7ae08ced4cfa3e48d7024443f"
+    },
+    {
+      "file": "09_survivors.mp4",
+      "bytes": 5926003,
+      "resident": true,
+      "cached": true,
+      "sha256": "b31291f463e91bd23659458b3062145271720ac44587429666b5673626e14d14"
+    }
+  ]
+}

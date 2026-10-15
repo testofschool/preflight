@@ -1,0 +1,7 @@
+{
+  "build_id": "baee0462-2fe0-480b-8353-76c96d1643c3",
+  "input_sha256": "e81f996bad0793643d9d23f408141a8245abeb4526eed22d8c8e37a6f898bff9",
+  "region": "asia-southeast1",
+  "status": "CANCELLED",
+  "reason": "Superseded by actual owner ultrawide resolution support and concurrent duplicate handling fixes"
+}

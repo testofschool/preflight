@@ -3,12 +3,26 @@
   "default_cloud_run_url": true,
   "region": "asia-southeast1",
   "min_instances": 0,
-  "timeout_seconds": 36,
+  "timeout_seconds": 40,
   "concurrency": 80,
-  "revision": "preflight-00003-7k9",
+  "revision": "preflight-00007-q2d",
   "session_service": "Agent Platform Sessions",
   "gemini_backend": "Vertex AI",
   "gemini_model": "gemini-3.5-flash",
+  "postcheck": true,
   "veo_calls": 0,
-  "source": "gcloud run services describe, identifiers excluded"
+  "latency_test_revision": "preflight-00006-d4s",
+  "source_image_unchanged_for_timeout_update": true,
+  "traffic": [
+    {
+      "revision": "preflight-00005-tuc",
+      "percent": 0,
+      "tag": "postcheck-candidate"
+    },
+    {
+      "revision": "preflight-00007-q2d",
+      "percent": 100,
+      "tag": null
+    }
+  ]
 }

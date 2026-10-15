@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/static/styles.css">
   <script src="/static/status.js" defer></script>
   <script src="/static/app.js" defer></script>
+  <script src="/static/postcheck.js" defer></script>
 </head>
 <body>
   <div class="page-shell">
@@ -22,6 +23,7 @@
         <div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> AN EARLY CHECK FOR YOUR VIDEO PROMPT</div>
         <h1 id="page-title">Before the first frame.</h1>
         <p class="intro-copy">Look for signs of a difficult prompt before spending on a generation.</p>
+        <a class="clip-review-link" href="#clip-review">Have a clip already? Review it <span aria-hidden="true">↓</span></a>
         <div class="connection-row" id="session-row" hidden><span class="session-badge"><span class="status-dot" aria-hidden="true"></span>SESSION ACTIVE</span><span class="session-caption">Agent Platform</span></div>
       </section>
 
@@ -66,6 +68,31 @@
           <p id="cost-note" class="cost-note">A generation budget appears after the check. No video is generated.</p>
         </section>
       </div>
+
+      <section id="clip-review" class="postcheck-section" aria-labelledby="postcheck-heading">
+        <div class="postcheck-intro"><div><div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> REVIEW A CLIP YOU ALREADY HAVE</div><h2 id="postcheck-heading">After the first frame.</h2><p>Upload an existing AI clip for a machine review. You can start here without running a preflight.</p></div><span id="postcheck-status" class="feature-tag">CHECKING AVAILABILITY</span></div>
+        <div class="review-layout">
+          <form id="postcheck-form" class="upload-panel" novalidate>
+            <label for="clip-file">Your existing AI clip</label>
+            <div id="upload-zone" class="upload-zone"><input id="clip-file" name="video" type="file" accept="video/mp4,.mp4" aria-describedby="clip-limits postcheck-error"><label for="clip-file" class="upload-prompt"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="20" rx="3"/><path d="m13 13 8 4-8 4v-8ZM16 2v7M12 6l4-4 4 4"/></svg><strong>Choose a clip <span>or drop it here</span></strong><span id="clip-limits">MP4 · up to 30 MiB · 30 seconds</span></label></div>
+            <div id="clip-selected" class="clip-selected" hidden><div><strong id="clip-filename"></strong><span id="clip-filemeta"></span></div><button id="remove-clip" type="button" aria-label="Remove selected clip">×</button></div>
+            <video id="clip-preview" controls playsinline preload="metadata" hidden aria-label="Preview of your uploaded clip"></video>
+            <div class="clip-prompt-label"><label for="clip-prompt">What should happen in the clip?</label><button id="reuse-prompt" type="button">Use prompt above <span aria-hidden="true">↙</span></button></div>
+            <textarea id="clip-prompt" name="prompt" rows="3" maxlength="4000" placeholder="Describe the scene the clip was meant to show…" aria-describedby="postcheck-error" required></textarea>
+            <label class="model-label" for="clip-model">Model label <span>optional · owner supplied</span></label><input id="clip-model" name="model" class="text-input" type="text" maxlength="120" placeholder="owner-upload" autocomplete="off">
+            <p id="postcheck-error" class="form-error" role="alert" hidden></p>
+            <button id="review-button" class="primary-button" type="submit" disabled><span id="review-button-label">Review this clip</span><span class="button-arrow" aria-hidden="true">→</span><span class="button-spinner" aria-hidden="true"></span></button>
+            <p id="postcheck-availability" class="field-hint">Checking whether upload review is connected.</p>
+            <p class="upload-note">Owner-provided AI clip only. Preflight does not generate or request a video.</p>
+          </form>
+          <div id="postcheck-results" class="review-results" aria-busy="false">
+            <div id="review-announcement" class="sr-only" role="status" aria-live="polite"></div>
+            <article id="verdict-card" class="result-card verdict-card"><div class="card-topline"><h3>Machine verdict</h3><span id="verdict-state" class="card-index">NO CLIP REVIEWED</span></div><div id="verdict-value" class="verdict-value">A closer look.</div><p id="verdict-description" class="card-caption">Review sampled frames for visible defects in your existing clip.</p><p id="reviewed-clip" class="reviewed-clip" hidden></p><div id="defects" class="defects" hidden></div><p class="evidence-boundary">A machine assessment of sampled frames is separate from a human pairwise vote.</p></article>
+            <article class="result-card feedback-card"><div class="card-topline"><h3>Feedback-adjusted risk</h3><span class="card-index">SEPARATE FROM HUMAN VOTES</span></div><div class="feedback-comparison"><div><span>Before review</span><strong id="feedback-before">—</strong></div><span class="feedback-arrow" aria-hidden="true">→</span><div><span>After review</span><strong id="feedback-after">—</strong></div></div><p id="feedback-history" class="card-caption">The original historical human-vote estimate will be shown separately.</p><p id="feedback-receipt" class="feedback-receipt" hidden></p><p id="feedback-description" class="subtle-copy">This proxy can incorporate machine feedback. It is not a change to the public historical both-bad vote rate.</p></article>
+            <p id="sampling-note" class="sampling-note">Review targets 2 fps; the default video sampling rate is 1 fps. Sampling may miss flicker shorter than 0.5 seconds.</p>
+          </div>
+        </div>
+      </section>
 
       <footer class="site-footer"><p><span class="footer-mark" aria-hidden="true">↗</span> A small check. A more informed next step.</p><div><span id="service-status">CHECKING SERVICE STATUS</span><span class="footer-divider" aria-hidden="true">/</span><a href="/architecture">View architecture <span aria-hidden="true">↗</span></a></div></footer>
     </main>

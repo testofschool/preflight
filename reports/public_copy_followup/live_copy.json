@@ -1,0 +1,48 @@
+{
+  "revision": "preflight-00009-n9b",
+  "observed_at_utc": "2026-10-16T00:13:59.678Z",
+  "method": "HTTP GET byte equality and Chrome rendered DOM; no application POST or inference call",
+  "pages": {
+    "/": {
+      "http_status": 200,
+      "bytes": 12834,
+      "sha256": "7d3057956b2b826b46dffb4ea13ab7875eed141757b54dbcc90a5843c741cdcf",
+      "score_explanation": "What this score is: An estimate from 1,911 human pairwise votes on 2024-era AI videos of how often prompts like yours received a vote rejecting both clips. Not a calibrated probability for today’s models (held-out AUC about 0.67). Machine feedback can make the displayed score a mixed heuristic proxy, while the original human votes remain separate.",
+      "clip_explanation": "What the clip review is: Gemini gives a visual opinion on the clip and sampled frames, with timecodes you can inspect. Accuracy on known-defect clips is unmeasured, and one camera-movement flag was disputed during independent frame inspection. Use it as a second pair of eyes, not a final verdict.",
+      "checks": {
+        "status_200": true,
+        "deployed_html_matches_source": true,
+        "score_explanation_matches": true,
+        "clip_explanation_matches": true,
+        "old_internal_labels_absent": true,
+        "no_horizontal_overflow": true,
+        "cloud_mode_rendered": true,
+        "session_active_rendered": true
+      }
+    },
+    "/architecture": {
+      "http_status": 200,
+      "bytes": 5926,
+      "sha256": "79bc8c3d95f4ecb59188539f779d8162be877b9ce586cf8b5bf5c75cc50b702c",
+      "score_explanation": "An estimate from 1,911 human pairwise votes on 2024-era AI videos of how often prompts like yours received a vote rejecting both clips. Not a calibrated probability for today’s models (held-out AUC about 0.67). Machine feedback can make the displayed score a mixed heuristic proxy, while the original human votes remain separate.",
+      "clip_explanation": "Gemini gives a visual opinion on the clip and sampled frames, with timecodes you can inspect. Accuracy on known-defect clips is unmeasured, and one camera-movement flag was disputed during independent frame inspection. Use it as a second pair of eyes, not a final verdict.",
+      "checks": {
+        "status_200": true,
+        "deployed_html_matches_source": true,
+        "score_explanation_matches": true,
+        "clip_explanation_matches": true,
+        "old_internal_labels_absent": true,
+        "no_horizontal_overflow": true,
+        "cloud_mode_rendered": true,
+        "session_active_rendered": true
+      }
+    }
+  },
+  "protected_document_sha256": {
+    "README.md": "ef825fa5a888b352069c8b559fe73ddb40152fe4bceb5af4dc41af4daad5e28b",
+    "COMPLETION_REPORT.md": "a75d3b29cf6f41eeee13b46dcf30dbfb78f7c6df3f065ed8df3b14051ac831ef"
+  },
+  "application_model_calls": 0,
+  "veo_calls": 0,
+  "pass": true
+}

@@ -262,6 +262,12 @@
       "included_in_git": true
     },
     {
+      "file": "logs/freshness-final.json",
+      "bytes": 1188,
+      "sha256": "bab837346ef70ea6b5112bf3c6e8a2b9a3c0051a178c1a6b64f8d8d6ac195fd4",
+      "included_in_git": true
+    },
+    {
       "file": "logs/freshness-final.txt",
       "bytes": 1103,
       "sha256": "4bcabb35627c77dbc5991f53015c7acd179023b3184a1f3ed81da2e54a0334b2",
@@ -298,6 +304,12 @@
       "included_in_git": true
     },
     {
+      "file": "logs/public_copy_deploy.txt",
+      "bytes": 904,
+      "sha256": "aab45a3a083f4e6c68e530d12b4b2cd01e8756851d8e459b4c369151d6ae4d41",
+      "included_in_git": true
+    },
+    {
       "file": "logs/readme_headers.txt",
       "bytes": 289,
       "sha256": "ab3a8ff02e842a15d2378f7693eabf7314dfd7653d5150947fdb63497fa7b530",
@@ -313,6 +325,12 @@
       "file": "logs/rewrites_postcheck_release.txt",
       "bytes": 68873,
       "sha256": "c31bf285a8886f1247d68676038b8a58ffbca40b4c4dde38dffd2650f639826a",
+      "included_in_git": true
+    },
+    {
+      "file": "logs/secrets-final.json",
+      "bytes": 475,
+      "sha256": "171523777590a8264d8a31947aef93736db8291e68e0f292eb66bd6477836364",
       "included_in_git": true
     },
     {
@@ -388,8 +406,14 @@
       "included_in_git": true
     },
     {
+      "file": "reports/.DS_Store",
+      "bytes": 6148,
+      "sha256": "593f9bf42382be5fb206fbe9e0444098828d378da6b9796a49bf158d0c4bbd6b",
+      "included_in_git": false
+    },
+    {
       "file": "reports/FILE_INVENTORY.json",
-      "bytes": 30589,
+      "bytes": 32598,
       "sha256": null,
       "included_in_git": true
     },
@@ -551,8 +575,8 @@
     },
     {
       "file": "reports/freshness-final.json",
-      "bytes": 1103,
-      "sha256": "4bcabb35627c77dbc5991f53015c7acd179023b3184a1f3ed81da2e54a0334b2",
+      "bytes": 1188,
+      "sha256": "bab837346ef70ea6b5112bf3c6e8a2b9a3c0051a178c1a6b64f8d8d6ac195fd4",
       "included_in_git": true
     },
     {
@@ -640,6 +664,42 @@
       "included_in_git": true
     },
     {
+      "file": "reports/public_copy_followup/REPORT.md",
+      "bytes": 3391,
+      "sha256": "e57297404548ea9c0f0e5d1b166f00c0edf43209854eb9bba2da578ecf524703",
+      "included_in_git": true
+    },
+    {
+      "file": "reports/public_copy_followup/cloud_build.json",
+      "bytes": 499,
+      "sha256": "319906251fbec6073c3930ecd4b44a190d46a99575f528049e61dc18a7253398",
+      "included_in_git": true
+    },
+    {
+      "file": "reports/public_copy_followup/cloud_run.json",
+      "bytes": 904,
+      "sha256": "aab45a3a083f4e6c68e530d12b4b2cd01e8756851d8e459b4c369151d6ae4d41",
+      "included_in_git": true
+    },
+    {
+      "file": "reports/public_copy_followup/copy_source.json",
+      "bytes": 2616,
+      "sha256": "407c97837f28b01feb463a3396d1aecfb6ccb622b96d09f25fb44a35a3183c93",
+      "included_in_git": true
+    },
+    {
+      "file": "reports/public_copy_followup/freeze_check.json",
+      "bytes": 4415,
+      "sha256": "fa2e408f48c5aca39d2be4e02ef3c2551af398c1e39cec1ee6fd136b65f95224",
+      "included_in_git": true
+    },
+    {
+      "file": "reports/public_copy_followup/live_copy.json",
+      "bytes": 2867,
+      "sha256": "25195b10d19be614188281e390d50ef07725d88c7629f87fbfd04aa5b9a43dc6",
+      "included_in_git": true
+    },
+    {
       "file": "reports/rewrites_live.json",
       "bytes": 88283,
       "sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
@@ -654,7 +714,7 @@
     {
       "file": "reports/secrets-final.json",
       "bytes": 475,
-      "sha256": "3fe1aedd7bf250805d9ec993bb17ab7befafe05100c868d02ee24f6a8bc84ee8",
+      "sha256": "171523777590a8264d8a31947aef93736db8291e68e0f292eb66bd6477836364",
       "included_in_git": true
     },
     {
@@ -845,8 +905,8 @@
     },
     {
       "file": "static/architecture.html",
-      "bytes": 5285,
-      "sha256": "cc17f34a8b0e7a48b9e86e885bbdb73fb897174efe9d083d8b816f3d1a6fdb22",
+      "bytes": 5926,
+      "sha256": "79bc8c3d95f4ecb59188539f779d8162be877b9ce586cf8b5bf5c75cc50b702c",
       "included_in_git": true
     },
     {
@@ -857,8 +917,8 @@
     },
     {
       "file": "static/index.html",
-      "bytes": 12035,
-      "sha256": "7ef6875fab9aa2979419d53f12b06f7ef46c5f1168544ef854420cfb236317ab",
+      "bytes": 12834,
+      "sha256": "7d3057956b2b826b46dffb4ea13ab7875eed141757b54dbcc90a5843c741cdcf",
       "included_in_git": true
     },
     {

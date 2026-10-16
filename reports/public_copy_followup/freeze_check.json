@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "scope": "Independent copy-only check; no runtime/helper changes or cloud/model calls",
+  "base_commit": "c09bd7197fc037c5fe4d4c9a5b17cbb6a0ee096f",
+  "baseline_working_tree_was_clean": true,
+  "baseline_observed_at_utc": "2026-10-16T00:06:48.423966+00:00",
+  "html_paths": [
+    "static/index.html",
+    "static/architecture.html"
+  ],
+  "frozen_document_base_sha256": {
+    "README.md": "ef825fa5a888b352069c8b559fe73ddb40152fe4bceb5af4dc41af4daad5e28b",
+    "COMPLETION_REPORT.md": "a75d3b29cf6f41eeee13b46dcf30dbfb78f7c6df3f065ed8df3b14051ac831ef"
+  },
+  "cloud_calls": 0,
+  "model_calls": 0,
+  "protected_files": {
+    "count": 68,
+    "all_byte_identical": true,
+    "mismatches": [],
+    "path_and_sha_manifest_digest": "984b083f0710a16b6bda048e5e5d0f4013a14d7909c13ec730864e8fc64f2625",
+    "scope": "All base-tracked files outside reports/logs and the two HTML/copy documents, including all JS, Python, CSS, dependencies, cloud configuration, data and runtime artifacts"
+  },
+  "frozen_documents": {
+    "README.md": {
+      "base_sha256": "ef825fa5a888b352069c8b559fe73ddb40152fe4bceb5af4dc41af4daad5e28b",
+      "current_sha256": "ef825fa5a888b352069c8b559fe73ddb40152fe4bceb5af4dc41af4daad5e28b",
+      "byte_identical": true
+    },
+    "COMPLETION_REPORT.md": {
+      "base_sha256": "a75d3b29cf6f41eeee13b46dcf30dbfb78f7c6df3f065ed8df3b14051ac831ef",
+      "current_sha256": "a75d3b29cf6f41eeee13b46dcf30dbfb78f7c6df3f065ed8df3b14051ac831ef",
+      "byte_identical": true
+    }
+  },
+  "partial_checks_recorded_at_utc": "2026-10-16T00:08:25.426938+00:00",
+  "recorded_at_utc": "2026-10-16T00:09:32.483945+00:00",
+  "html_checks": {
+    "static/index.html": {
+      "base_sha256": "7ef6875fab9aa2979419d53f12b06f7ef46c5f1168544ef854420cfb236317ab",
+      "current_sha256": "7d3057956b2b826b46dffb4ea13ab7875eed141757b54dbcc90a5843c741cdcf",
+      "original_dom_backbone_unchanged": true,
+      "all_original_ids_and_attributes_retained": true,
+      "missing_original_ids": [],
+      "changed_original_id_attributes": [],
+      "added_explanation_ids": [
+        "clip-review-explanation",
+        "score-explanation"
+      ],
+      "form_textarea_input_button_attributes_unchanged": true,
+      "control_element_count": 15,
+      "script_refs_and_inline_code_unchanged": true,
+      "style_blocks_unchanged": true,
+      "prior_visible_numeric_values_and_counts_retained_except_requested_codes": true,
+      "removed_visible_code_labels": {},
+      "removed_numeric_values": {},
+      "added_numeric_values": {
+        "1,911": 1,
+        "2024": 1,
+        "0.67": 1
+      },
+      "only_approved_explanation_ids_added": true,
+      "pass": true,
+      "duplicate_ids": {},
+      "no_duplicate_ids": true
+    },
+    "static/architecture.html": {
+      "base_sha256": "cc17f34a8b0e7a48b9e86e885bbdb73fb897174efe9d083d8b816f3d1a6fdb22",
+      "current_sha256": "79bc8c3d95f4ecb59188539f779d8162be877b9ce586cf8b5bf5c75cc50b702c",
+      "original_dom_backbone_unchanged": true,
+      "all_original_ids_and_attributes_retained": true,
+      "missing_original_ids": [],
+      "changed_original_id_attributes": [],
+      "added_explanation_ids": [
+        "clip-review-explanation",
+        "score-explanation"
+      ],
+      "form_textarea_input_button_attributes_unchanged": true,
+      "control_element_count": 0,
+      "script_refs_and_inline_code_unchanged": true,
+      "style_blocks_unchanged": true,
+      "prior_visible_numeric_values_and_counts_retained_except_requested_codes": true,
+      "removed_visible_code_labels": {
+        "V4": 1,
+        "V8": 2
+      },
+      "removed_numeric_values": {},
+      "added_numeric_values": {
+        "1,911": 1,
+        "2024": 1,
+        "0.67": 1
+      },
+      "only_approved_explanation_ids_added": true,
+      "pass": true,
+      "duplicate_ids": {},
+      "no_duplicate_ids": true
+    }
+  },
+  "changed_base_tracked_files": [
+    "static/architecture.html",
+    "static/index.html"
+  ],
+  "html_scope_is_exactly_two_files": true,
+  "manual_diff_review": "Only static public copy, four added explanatory paragraphs across the two pages, and main-page bold explanation prefixes. Existing markup/controls, runtime scripts, dependencies, cloud configuration, README and COMPLETION_REPORT remain unchanged. Previously visible numeric values remain; visible V4/V8 code labels are removed as requested.",
+  "git_diff_check": "PASS"
+}

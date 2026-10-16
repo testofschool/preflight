@@ -15,7 +15,7 @@
   ],
   "files_scanned": {
     "python-lexical": 36,
-    "text-whitespace": 116
+    "text-whitespace": 123
   },
   "limitation": "zero overlap does not establish code creation date or independent authorship",
   "matches": [],
@@ -39,6 +39,10 @@
     },
     {
       "file": "data/genai_video_test.parquet",
+      "reason": "binary-or-non-utf8"
+    },
+    {
+      "file": "reports/.DS_Store",
       "reason": "binary-or-non-utf8"
     }
   ],

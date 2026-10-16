@@ -1,0 +1,29 @@
+{
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "default_cloud_run_url": true,
+  "revision": "preflight-00009-n9b",
+  "previous_revision": "preflight-00008-g92",
+  "region": "asia-southeast1",
+  "min_instances": 0,
+  "timeout_seconds": 40,
+  "concurrency": 80,
+  "runtime_settings_unchanged_except_image": true,
+  "autoscaling_unchanged": true,
+  "input_sha256": "21ff25ba57dea21c1cfb5a7854c668c2a218dd8adbc4f8ef28dc9e19250c63d7",
+  "build_id": "d2369b1e-395a-46b4-982e-70c9721ddfcf",
+  "scope": "Public copy only in two HTML pages; README and COMPLETION_REPORT byte-identical; no feature/runtime configuration changes",
+  "traffic": [
+    {
+      "revision": "preflight-00005-tuc",
+      "percent": 0,
+      "tag": "postcheck-candidate"
+    },
+    {
+      "revision": "preflight-00009-n9b",
+      "percent": 100,
+      "tag": null
+    }
+  ],
+  "application_model_calls": 0,
+  "veo_calls": 0
+}

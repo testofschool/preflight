@@ -43,16 +43,18 @@ The still preview is built but disabled after 9/10 original/rewrite fixtures suc
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    Browser --> API[Cloud Run / FastAPI]
-    API --> Store[Firestore: history, item parameters, feedback]
-    API --> Agent[Google ADK rewrite agent]
-    Agent --> Vertex[Vertex AI: Gemini 3.5 Flash]
-    Agent --> Sessions[Agent Platform Sessions]
-    Agent --> Guard[Keep only a lower estimated-risk rewrite]
-    API --> Review[Gemini video understanding: uploaded clip]
-    API -. disabled .-> Preview[Gemini image model: still preview]
+```text
+Browser
+  |
+  v
+Cloud Run / FastAPI
+  |-- Firestore: history, item parameters, feedback
+  |-- Google ADK rewrite agent
+  |     |-- Vertex AI: Gemini 3.5 Flash
+  |     |-- Agent Platform Sessions
+  |     `-- Keep only a lower estimated-risk rewrite
+  |-- Gemini video understanding: uploaded clip
+  `-- Gemini image model: still preview (disabled)
 ```
 
 The [live architecture page](https://preflight-jcgro45veq-as.a.run.app/architecture) reads current service flags from `/api/status`.
@@ -152,22 +154,23 @@ The numerical limits below preserve the detailed evaluation record. Internal acc
 
 The deployed cloud path is verified by actual requests:
 
-```mermaid
-flowchart LR
-    Browser --> Run[Cloud Run primary service]
-    Run --> Agent[Google ADK agent]
-    Agent --> Gemini[Gemini 3.5 Flash via Vertex ADC]
-    Agent --> Store[Firestore historical evidence and separate feedback]
-    Agent --> Sessions[Managed Agent Platform Sessions]
-    Agent --> Guard[Strict estimated-risk reduction guard]
-    Guard --> Result[Risk and approved rewrite or safe abstention]
-    Browser --> Upload[Existing owner MP4 and its prompt]
-    Upload --> Run
-    Run --> Decode[Bounded one-decode video and 2-fps frame preparation]
-    Decode --> Review[Gemini visual review]
-    Review --> Verdict[Machine verdict and timecoded defects]
-    Verdict --> Store
-    Store --> Feedback[Mixed heuristic risk with human history separate]
+```text
+Browser prompt
+  -> Cloud Run primary service
+     -> Google ADK agent
+        |-- Gemini 3.5 Flash via Vertex ADC
+        |-- Firestore: historical evidence and separate feedback
+        |-- Managed Agent Platform Sessions
+        `-- Strict estimated-risk reduction guard
+            -> Risk and approved rewrite, or safe abstention
+
+Browser: existing owner MP4 and its prompt
+  -> Cloud Run primary service
+     -> Bounded one-decode video and 2-fps frame preparation
+        -> Gemini visual review
+           -> Machine verdict and timecoded defects
+              -> Firestore
+                 -> Mixed heuristic risk; human history stays separate
 ```
 
 The backend uses bundled lexical retrieval and reads the corresponding historical rates and item parameters from Firestore in cloud mode. The local fallback uses the bundled aggregates directly. The [architecture screen](static/architecture.html) reads `/api/status` and labels each connection from the actual runtime flags. It shows an active session badge only when managed-session readiness is confirmed.

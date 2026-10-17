@@ -1,0 +1,28 @@
+{
+  "observed_at_kst": "2026-10-17T22:13:37.745784+09:00",
+  "source": "Authenticated Cloud Billing console: Live costs, grouping SKU",
+  "console_selected_from": "2026-10-17",
+  "console_selected_to": "2026-10-17",
+  "displayed_currency": "KRW",
+  "displayed_actual_total_krw": 0,
+  "displayed_live_total_krw_approx": 1.9,
+  "visible_sku_rows": 3,
+  "visible_sku_services": [
+    "Cloud Run"
+  ],
+  "image_output_sku_visible": false,
+  "image_output_posted_observed_krw": 0,
+  "interpretation": "No image SKU row is shown in this console-selected date window. This is not zero incurred image cost: delayed billing and the reporting date boundary limit the observation.",
+  "wider_window_observation": {
+    "console_from": "2026-10-03",
+    "console_to": "2026-10-17",
+    "image_sku": "Gemini 3.1 Flash Lite Image Global Image Output - Predictions",
+    "image_sku_actual_krw": 457,
+    "image_sku_live_krw_approx": 0,
+    "allocation_to_kst_today": "UNVERIFIABLE from this wider window"
+  },
+  "prior_observed_image_outputs": 10,
+  "prior_output_only_list_price_usd": 0.336,
+  "new_image_generation_calls_this_closeout": 0,
+  "no_billing_identifiers_saved": true
+}

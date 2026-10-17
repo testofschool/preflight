@@ -1,0 +1,12 @@
+{
+  "head_status": "HTTP/2 200 ",
+  "head_exit": 0,
+  "clone_exit": 0,
+  "credential_helper": "empty",
+  "global_config": "disabled",
+  "terminal_prompt": "disabled",
+  "destination": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/pf-public-check-a6at75ei/preflight",
+  "clone_stdout": "",
+  "clone_stderr": "Cloning into '/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/pf-public-check-a6at75ei/preflight'...\n",
+  "cloned_head": "dd12f279e364cbd217a4178b51c1d270cacebbdd"
+}

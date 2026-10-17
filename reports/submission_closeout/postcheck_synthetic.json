@@ -1,0 +1,94 @@
+{
+  "label": "operational smoke, synthetic clip, not the frozen reference",
+  "frozen_smoke": "NOT RUN \u2014 reference clip not on this machine",
+  "http_status": 200,
+  "latency_seconds": 0.617,
+  "error_class": null,
+  "upstream_status": null,
+  "source_bytes": 119721,
+  "source_sha256": "dde94d6bb3f8bba7192ff880e462a20d69aa331f89fb8432c86f47754dec3267",
+  "expected_duration_seconds": 5,
+  "inspection_api_schema_valid": true,
+  "response": {
+    "reviewed_duration_seconds": 5.0,
+    "defects": [],
+    "source_sha256": "dde94d6bb3f8bba7192ff880e462a20d69aa331f89fb8432c86f47754dec3267",
+    "analysis": {
+      "frame_batch_maximum": 16,
+      "max_parallel_model_calls": 3,
+      "backend": "vertex",
+      "model": "gemini-3.5-flash",
+      "framework": "Google Gen AI SDK",
+      "frame_batch_count": 1,
+      "limitations": [
+        "Gemini's default video sampling is 1 fps and may miss fast changes; explicit 2-fps image batches supplement that route.",
+        "Events shorter than 0.5 seconds can still occur between sampled frames; downscaling can hide small text or details.",
+        "The automated visual verdict is not human ground truth, and no audio defects are assessed."
+      ],
+      "elapsed_seconds": 2.215,
+      "actual_model_calls": 2,
+      "frame_count": 10,
+      "source_bytes": 119721,
+      "model_video_transcode_fps": 15,
+      "default_video_sampling_fps": 1,
+      "source_resolution": {
+        "width": 1376,
+        "height": 768
+      },
+      "default_sampling_source": "https://ai.google.dev/gemini-api/docs/generate-content/video-understanding",
+      "frame_batch_overlap": 1,
+      "call_receipts": [
+        {
+          "interval_start_seconds": 0.0,
+          "elapsed_seconds": 1.242,
+          "summary": "The video is a static image loop with no visible defects or motion.",
+          "defect_count": 0,
+          "stage": "video",
+          "token_usage": {
+            "candidates_token_count": 30,
+            "prompt_token_count": 778,
+            "total_token_count": 808
+          },
+          "interval_end_seconds": 5.0
+        },
+        {
+          "interval_start_seconds": 0.0,
+          "elapsed_seconds": 1.376,
+          "summary": "The video is a static loop of a still image showing a spoon resting on a laptop keyboard next to a coffee cup, with no visible defects or changes over time.",
+          "defect_count": 0,
+          "stage": "frames-1",
+          "token_usage": {
+            "candidates_token_count": 57,
+            "prompt_token_count": 11607,
+            "total_token_count": 11664
+          },
+          "interval_end_seconds": 5.0
+        }
+      ],
+      "model_video_max_side_pixels": 512,
+      "sampling_fps": 2,
+      "model_video_bytes": 18184,
+      "audio_reviewed": false
+    },
+    "pass_bool": true,
+    "verdict_id": "2495cb2f8236c2c664869b7100412284fd95d6611fd7a95afbe98efffecc20f7",
+    "mode": "cloud",
+    "risk_before": 0.4678787878787878,
+    "risk_after": 0.4678787878787878,
+    "historical_p_fail": 0.5345454545454545,
+    "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+    "feedback": {
+      "count": 1,
+      "failures": 0,
+      "failure_rate": 0.0,
+      "exact_unseen_prompt": null
+    },
+    "feedback_recorded": true,
+    "feedback_created": false,
+    "reused_stored_review": true,
+    "model_calls_this_request": 0,
+    "concurrent_review_discarded": false
+  },
+  "passed": true,
+  "V8_accuracy_established": false
+}

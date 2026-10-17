@@ -1,0 +1,12 @@
+[
+  {
+    "marker": "provider-prefix",
+    "exit_code": 0,
+    "output_bytes": 0
+  },
+  {
+    "marker": "private-field",
+    "exit_code": 0,
+    "output_bytes": 0
+  }
+]

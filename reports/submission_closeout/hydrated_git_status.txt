@@ -1,0 +1,127 @@
+ M COMPLETION_REPORT.md
+ M Dockerfile
+ M app.py
+ M cloud/store.py
+ M reports/cloud_build.json
+ M reports/cloud_run.json
+ M reports/cloud_run_candidate.json
+ M requirements-cloud.lock
+ M requirements-cloud.txt
+ M scripts/measure_cloud.py
+ M scripts/release_cloud.py
+ M static/app.js
+ M static/architecture.html
+ M static/architecture.js
+ M static/index.html
+ M static/styles.css
+?? cloud/preview.py
+?? logs/cloud_latency_cd.txt
+?? logs/cloud_latency_d_candidate.txt
+?? logs/cloud_latency_d_candidate_isolated.txt
+?? logs/cloud_latency_d_primary.txt
+?? logs/firestore_integrity_cd.txt
+?? logs/firestore_integrity_cd_after_smoke.txt
+?? logs/firestore_integrity_cd_primary.txt
+?? reports/cloud_build_cd_permissions_failure.json
+?? reports/cloud_build_cd_superseded.json
+?? reports/cloud_build_d_first_promotion.json
+?? reports/cloud_latency_cd.json
+?? reports/cloud_latency_cd_cd_failed_permissions.json
+?? reports/cloud_latency_d_candidate.json
+?? reports/cloud_latency_d_candidate_before_status_restore.json
+?? reports/cloud_latency_d_candidate_isolated.json
+?? reports/cloud_latency_d_primary.json
+?? reports/cloud_latency_d_primary_before_status_restore.json
+?? reports/cloud_run_before_cd.json
+?? reports/cloud_run_candidate_cd_failed_permissions.json
+?? reports/cloud_run_candidate_cd_preview_enabled.json
+?? reports/cloud_run_d_first_promotion.json
+?? reports/d_candidate_ui.json
+?? reports/d_candidate_ui_before_status_restore.json
+?? reports/d_primary_ui.json
+?? reports/d_primary_ui_before_status_restore.json
+?? reports/d_status_preservation_local_ui.json
+?? reports/firestore_integrity_cd.json
+?? reports/firestore_integrity_cd_after_smoke.json
+?? reports/firestore_integrity_cd_primary.json
+?? reports/first_viewport_after.json
+?? reports/first_viewport_cd_candidate/first_viewport.png
+?? reports/first_viewport_cd_candidate/summary.json
+?? reports/first_viewport_cd_failed_permissions/first_viewport.png
+?? reports/first_viewport_cd_failed_permissions/summary.json
+?? reports/first_viewport_cd_local/first_viewport.png
+?? reports/first_viewport_cd_local/summary.json
+?? reports/first_viewport_d_candidate/first_viewport.png
+?? reports/first_viewport_d_candidate/summary.json
+?? reports/first_viewport_d_primary/first_viewport.png
+?? reports/first_viewport_d_primary/summary.json
+?? reports/postcheck_cd_synthetic_attempt_1.json
+?? reports/postcheck_cd_synthetic_attempt_2.json
+?? reports/postcheck_cd_synthetic_candidate.json
+?? reports/postcheck_cd_tests.txt
+?? reports/postcheck_d_candidate.json
+?? reports/postcheck_d_candidate_before_status_restore.json
+?? reports/postcheck_d_primary.json
+?? reports/postcheck_d_primary_before_status_restore.json
+?? reports/preview_diagnostic.json
+?? reports/preview_diagnostic_candidate.json
+?? reports/preview_live.json
+?? reports/preview_live_attempt_1.json
+?? reports/preview_probe.json
+?? reports/preview_spaced_samples.json
+?? reports/spend_after_preview.json
+?? reports/spend_after_preview_context.json
+?? reports/track_cd_baseline_service.json
+?? reports/track_cd_build_input_changes.json
+?? reports/track_cd_build_inputs_before.json
+?? reports/track_cd_candidate_config.json
+?? reports/track_cd_environment.json
+?? reports/track_cd_identifier_scan.json
+?? reports/track_cd_primary_status.json
+?? reports/track_cd_promotion.json
+?? reports/track_cd_reference_checks.json
+?? reports/track_cd_screens/after_check_1440x900.png
+?? reports/track_cd_screens/after_check_390x844.png
+?? reports/track_cd_screens/architecture_top_1440x900.png
+?? reports/track_cd_screens/architecture_top_390x844.png
+?? reports/track_cd_screens/d_candidate_after_check_1440x900.png
+?? reports/track_cd_screens/d_candidate_after_check_390x844.png
+?? reports/track_cd_screens/d_candidate_architecture_top_1440x900.png
+?? reports/track_cd_screens/d_candidate_architecture_top_390x844.png
+?? reports/track_cd_screens/d_candidate_first_screen_1440x900.png
+?? reports/track_cd_screens/d_candidate_first_screen_390x844.png
+?? reports/track_cd_screens/d_primary_after_check_1440x900.png
+?? reports/track_cd_screens/d_primary_after_check_390x844.png
+?? reports/track_cd_screens/d_primary_architecture_top_1440x900.png
+?? reports/track_cd_screens/d_primary_architecture_top_390x844.png
+?? reports/track_cd_screens/d_primary_first_screen_1440x900.png
+?? reports/track_cd_screens/d_primary_first_screen_390x844.png
+?? reports/track_cd_screens/d_status_preservation_local_after_check_1440x900.png
+?? reports/track_cd_screens/d_status_preservation_local_after_check_390x844.png
+?? reports/track_cd_screens/d_status_preservation_local_architecture_top_1440x900.png
+?? reports/track_cd_screens/d_status_preservation_local_architecture_top_390x844.png
+?? reports/track_cd_screens/d_status_preservation_local_first_screen_1440x900.png
+?? reports/track_cd_screens/d_status_preservation_local_first_screen_390x844.png
+?? reports/track_cd_screens/first_screen_1440x900.png
+?? reports/track_cd_screens/first_screen_390x844.png
+?? reports/track_cd_screens/preview_cached_1440x900.png
+?? reports/track_cd_screens/preview_cached_390x844.png
+?? reports/track_cd_screens/preview_done_1440x900.png
+?? reports/track_cd_screens/preview_done_390x844.png
+?? reports/track_cd_screens/rate_limited_1440x900.png
+?? reports/track_cd_screens/rate_limited_390x844.png
+?? reports/track_cd_screenshot_manifest.json
+?? reports/track_cd_secrets.json
+?? reports/track_cd_session_block.txt
+?? reports/track_cd_startup_failure.json
+?? reports/track_cd_store_counts.json
+?? reports/track_cd_synthetic_smoke.mp4
+?? reports/track_cd_tests.txt
+?? reports/track_cd_tests_primary.txt
+?? reports/track_d_promotion_gate.json
+?? reports/track_d_status_preservation.json
+?? scripts/probe_preview.py
+?? scripts/verify_preview_cd.py
+?? scripts/verify_synthetic_smoke_cd.py
+?? scripts/verify_ui_d.py
+?? tests/test_preview.py

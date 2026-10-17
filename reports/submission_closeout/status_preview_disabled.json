@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-10-17T13:11:55.684831+00:00",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "status_http": 200,
+  "status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": false,
+    "pricing_image": {
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "usd_per_image": 0.0336,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-17"
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "preview_http": 503,
+  "preview_response": {
+    "detail": "Preview is unavailable right now. The risk check still works."
+  },
+  "code_proof": {
+    "disabled_guard_before_quota": true,
+    "disabled_guard_before_provider": true,
+    "app_sha256": "418ebc1873e32b17536c517d33af127c5800e8ce7edb320378734f655f95826c",
+    "image_generation_calls_for_disabled_request": 0,
+    "zero_calls_basis": "503 returns at disabled provider guard before quota admission, cache reads and provider.generate; no generation branch reached"
+  },
+  "checks": {
+    "status_200": true,
+    "preview_false": true,
+    "required_connected_fields": true,
+    "zero_veo_generations": true,
+    "preview_503": true,
+    "shared_20_per_min": true
+  },
+  "passed": true
+}

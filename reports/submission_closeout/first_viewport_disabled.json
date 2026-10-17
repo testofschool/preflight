@@ -1,0 +1,128 @@
+{
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "checked_at_utc": "2026-10-17T13:12:13.795702+00:00",
+  "method": "resting home page GET only; no prompt submitted",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "no_horizontal_overflow": true,
+      "preview_feature_flag": false,
+      "visible_preview_controls": [],
+      "first_viewport_interactive_count": 11,
+      "first_viewport_interactables": [
+        {
+          "tag": "A",
+          "text": "preflight\n."
+        },
+        {
+          "tag": "A",
+          "text": "How it works \u2197"
+        },
+        {
+          "tag": "A",
+          "text": "Have a clip already? Review it\n\u2193"
+        },
+        {
+          "tag": "TEXTAREA",
+          "text": "prompt"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A cat and a dog \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A spoon and a laptop \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A bicycle and a car \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Indoor gymnasium \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A purple clock \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Check this prompt\n\u2192"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What this score is"
+        }
+      ],
+      "preview_dom_count": 0,
+      "prompt_blank": true,
+      "risk_blank": true,
+      "check_button_bottom": 837.4375,
+      "http_status": 200,
+      "screenshot": "reports/submission_closeout/first_viewport_1440x900.png",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "no_horizontal_overflow": true,
+      "preview_feature_flag": false,
+      "visible_preview_controls": [],
+      "first_viewport_interactive_count": 10,
+      "first_viewport_interactables": [
+        {
+          "tag": "A",
+          "text": "preflight\n."
+        },
+        {
+          "tag": "A",
+          "text": "How it works \u2197"
+        },
+        {
+          "tag": "A",
+          "text": "Have a clip already? Review it\n\u2193"
+        },
+        {
+          "tag": "TEXTAREA",
+          "text": "prompt"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A cat and a dog \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A spoon and a laptop \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A bicycle and a car \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Indoor gymnasium \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "A purple clock \u2197"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Check this prompt\n\u2192"
+        }
+      ],
+      "preview_dom_count": 0,
+      "prompt_blank": true,
+      "risk_blank": true,
+      "check_button_bottom": 881.96875,
+      "http_status": 200,
+      "screenshot": "reports/submission_closeout/first_viewport_390x844.png",
+      "passed": true
+    }
+  ],
+  "console_errors": [],
+  "post_requests": [],
+  "passed": true
+}

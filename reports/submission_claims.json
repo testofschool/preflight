@@ -1,0 +1,65 @@
+{
+  "checked_date": "2026-10-17",
+  "scope": "Public README and submission fields; factual sources only; no provider calls made for this drafting step",
+  "preview_decision": "disabled",
+  "runtime": {
+    "revision": "preflight-00016-tuk",
+    "runtime_input_sha256": "f080be0c815cbe460b0036b0a6a597201d6460dece9c73c8049af66f54a05d7c",
+    "verification": "native audit by runtime agent; recovered source at /private/tmp/preflight-runtime-audit/source",
+    "verification_receipt": "/private/tmp/preflight-runtime-audit/runtime_source_provenance.json"
+  },
+  "quotes": [
+    {
+      "quote": "you still burn credits on the failed attempt",
+      "author": "Ed McDowell",
+      "published_date": "2026-09-08",
+      "experience_date": "2026-08-29",
+      "title": "Save Your Money — HeyGen Has Been a Far Better Experience",
+      "url": "https://www.trustpilot.com/reviews/6a9f952dc2a80e997c67354a",
+      "verification_url": "https://www.trustpilot.com/review/runwayml.com?page=2",
+      "verification": "Exact text read in page-2 primary review, line459; title link yields this permalink; direct permalink fetch restricted. Search snippets conflated adjacent Shawn Tearle review; that attribution was rejected."
+    },
+    {
+      "quote": "I recommend a lo-res preview render before having to spend actual credits",
+      "author": "David306816550282",
+      "published_date": "2025-06-25",
+      "url": "https://community.adobe.com/questions-404/wasted-generative-credits-on-bad-results-1479378",
+      "verification": "Exact text read on Adobe Community; feature-requests URL redirects to questions-404 URL."
+    },
+    {
+      "quote": "Credits are only automatically returned when a generation ends in a generation error.",
+      "author": "Runway Help",
+      "url": "https://help.runwayml.com/hc/en-us/articles/34266159290003-Can-I-have-credits-refunded",
+      "verification": "Exact sentence read in primary help article."
+    }
+  ],
+  "receipts": {
+    "1911_votes": "artifacts/source_manifest.json: rows 1911; 508 prompts; 10 models; 2080 cells; 407 both-bad votes",
+    "risk_auc": "artifacts/evaluation.json: mean_vote_auc 0.6683289428340439; threshold 0.68 not met",
+    "preview_9_of_10": "COMPLETION_REPORT.md Track C/D; reports/preview_live.json; reports/preview_spaced_samples.json",
+    "preview_disabled": "reports/track_cd_primary_status.json: preview false; postcheck true; disabled_preview_http 503; generations 0",
+    "preview_price": "cloud/preview.py + reports/track_cd_primary_status.json: 1120 output tokens * $30/1M = $0.0336; 1K output only, text input excluded",
+    "preview_price_primary_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing (redirects to https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing); 1K image listed about $0.034",
+    "adk_version": "requirements-cloud.txt: google-adk[gcp]==2.12.0",
+    "secret_manager": "COMPLETION_REPORT.md line13: API key stored historically; not injected into production Vertex container; production ADC",
+    "sample_values": "reports/local_latency.json: historical-only 0.30666666666666664 / 0.5345454545454545 / 0.4333333333333333 / 0.065 / 0.05714285714285714",
+    "shared_check_cap": "app.py /api/status; cloud/store.py admission transaction; 20 per rolling minute, cumulative max1000",
+    "clip_accuracy": "COMPLETION_REPORT.md and frozen references: no confirmed-defect set; remains unmeasured"
+  },
+  "submission_description": {
+    "characters": 1010,
+    "original_characters": 1013,
+    "disabled_substitution_characters": 1039,
+    "shortening": "Removed only `All code is hackathon-fresh. ` (29 chars) to satisfy limit without making unverified authorship assertion."
+  },
+  "placeholders": [
+    "<VIDEO_URL>",
+    "docs/Preflight_pitch_deck.pdf"
+  ],
+  "notes": [
+    "No claim of measured savings, calibrated probability, validated rewrite video quality or clip-review accuracy.",
+    "Old technical sections and numerical limits retained with historical labels; internal acceptance codes replaced by descriptive labels.",
+    "Expected sample ranges describe frozen historical-only predictor; separate machine feedback may shift displayed mixed proxy.",
+    "Secret Manager not used by live requests; managed Agent Platform Sessions is used, Agent Engine runtime hosting is not."
+  ]
+}

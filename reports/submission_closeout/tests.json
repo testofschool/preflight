@@ -1,0 +1,10 @@
+{
+  "command": "../.preflight-cloud-venv/bin/python -m pytest -q tests",
+  "python": "3.12.14",
+  "passed": 99,
+  "failed": 0,
+  "warnings": 2,
+  "subtests_passed": 11,
+  "pytest_reported_seconds": 13.29,
+  "notes": "Observed this session. Pinned Pillow 13.0.0 installed into the existing sibling cloud venv before running; source and pins unchanged."
+}

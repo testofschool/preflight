@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "selected_take": 2,
+  "takes": [
+    {
+      "take": 1,
+      "duration_seconds": 114.4,
+      "clean": true,
+      "full_decode_pass": true
+    },
+    {
+      "take": 2,
+      "duration_seconds": 114.366667,
+      "clean": true,
+      "full_decode_pass": true
+    }
+  ],
+  "frame_count": 8,
+  "video": {
+    "path": "demo/preflight_demo_raw.mp4",
+    "bytes": 10008012,
+    "sha256": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "114.366667",
+        "size": "10008012"
+      }
+    }
+  },
+  "mocked_responses": false,
+  "clipboard_read": false,
+  "preview_requests_in_recordings": 0,
+  "clip_review": "Real cached responses; stored-review reuse visible, unchanged feedback risk. No accuracy claim.",
+  "initial_diagnostic_capture": "Preserved locally under ignored demo_diagnostics/csp_probe; recorder CSP wait error, 1 preflight call, no clip/preview calls."
+}

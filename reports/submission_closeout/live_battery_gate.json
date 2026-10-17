@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-17T13:12:16.785518+00:00",
+  "request_policy": "six scheduled preflight requests once, no retry; one cached synthetic postcheck; one disabled preview POST",
+  "served_traffic": [
+    {
+      "revision": "preflight-00016-tuk",
+      "percent": 100,
+      "tag": "postcheck-candidate"
+    }
+  ],
+  "first_request_seconds": 7.782791,
+  "warm_seconds": [
+    9.715764,
+    5.52113,
+    5.219659,
+    5.514284,
+    5.227676
+  ],
+  "warm_max_seconds": 9.715764,
+  "preflight_6_of_6_http200": true,
+  "warm_le_6_seconds": false,
+  "tool_workflow_verified_6_of_6": true,
+  "script_legacy_lt10_v3_pass": true,
+  "postcheck_http_status": 200,
+  "postcheck_model_calls_this_request": 0,
+  "postcheck_feedback_created": false,
+  "postcheck_reused_stored_review": true,
+  "V8_accuracy_established": false,
+  "live_battery_pass": false
+}

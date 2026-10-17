@@ -7,3 +7,8 @@ __pycache__/
 .env.*
 !.env.example
 logs/server.log
+
+# Locally recorded clips stay outside Git.
+/demo/*.mp4
+/demo/takes/
+/demo_diagnostics/

@@ -196,3 +196,14 @@ Build-input changes: Dockerfile +23 B; requirements-cloud.txt +15 B; requirement
 Spend observed today: $0 posted (billing delayed; 10 observed image outputs have $0.336 output-only list price) · Daily cap: 60 UTC; 16 admissions observed
 Not done / deferred: Track C activation; frozen smoke NOT RUN — required frozen reference path not on this machine (authorized B substitute passed). Original 510 total prompts became 511 through synthetic feedback. Earlier 6.81 s warm outlier retained.
 ```
+
+
+## Submission closeout — Tracks E/F/G/H (2026-10-17)
+
+**PARTIAL battery: source/publication/docs/demo complete; requested warm latency condition failed.** C/D source was pushed as `dd12f27` and tagged `aibc-2026-submission`; its 23 runtime build inputs exactly match live `preflight-00016-tuk` (source SHA256 `f080be0c815cbe460b0036b0a6a597201d6460dece9c73c8049af66f54a05d7c`). The repository is public and an anonymous clone succeeded. README gate 0; submission brief 1,010 characters. The later materials commit changes no runtime input.
+
+Felix chose preview decision 1. Live preview remains false, `/preview` returns 503 before model access, and desktop/mobile resting first screens expose no preview controls. No runtime deployment/settings change was required. The live battery returned 6/6 HTTP 200, but warm max **9.715764 s >6.0 s**; no retry or promotion followed. Synthetic `/postcheck` returned 200 using its stored review with zero model calls and no new feedback. Local regression: 99 passed, 2 warnings, 11 subtests passed.
+
+Two complete silent real-response demo takes are 114.400 s and 114.366667 s; the shorter take 2 is the local ignored `demo/preflight_demo_raw.mp4`, with eight PNG frames. A stopped initial recorder-side CSP diagnostic is preserved separately. No responses were mocked, clipboard contents were never read, and cached clip-review reuse is visible. Narration/public upload, organizer-template deck PDF and dashboard submission remain outside this handoff. No license was selected or added.
+
+[Full closeout report and remaining work](reports/submission_closeout/REPORT.md).

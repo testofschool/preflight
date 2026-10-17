@@ -1,0 +1,11 @@
+{
+  "provider_prefix": {
+    "exit": 0,
+    "output_bytes": 0
+  },
+  "private_field": {
+    "exit": 0,
+    "output_bytes": 0
+  },
+  "all_empty": true
+}

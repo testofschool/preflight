@@ -1,0 +1,9 @@
+{
+  "head": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+  "origin_main": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+  "head_runtime_source_sha256": "f080be0c815cbe460b0036b0a6a597201d6460dece9c73c8049af66f54a05d7c",
+  "cloud_build_runtime_source_sha256": "f080be0c815cbe460b0036b0a6a597201d6460dece9c73c8049af66f54a05d7c",
+  "runtime_matches_head": true,
+  "files": 23,
+  "native_provenance": "runtime_source_provenance.json"
+}

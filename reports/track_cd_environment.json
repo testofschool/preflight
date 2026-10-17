@@ -1,0 +1,8 @@
+{
+  "sdk_installed": true,
+  "cli_authenticated": true,
+  "adc_authenticated": true,
+  "quota_project_configured": true,
+  "baseline_revision_verified": true,
+  "g3_image_bytes_returned": true
+}

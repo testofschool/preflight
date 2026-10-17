@@ -9,6 +9,7 @@ COPY preflight_core /app/preflight_core
 COPY cloud /app/cloud
 COPY static /app/static
 COPY artifacts/engine.json artifacts/vectorizer.joblib artifacts/prompt_vectors.npz /app/artifacts/
+RUN chmod -R a+rX /app
 RUN useradd --create-home --uid 10001 appuser
 USER appuser
 CMD ["sh", "-c", "exec uvicorn app:app --host 0.0.0.0 --port ${PORT} --no-access-log"]

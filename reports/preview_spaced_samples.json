@@ -1,0 +1,80 @@
+{
+  "spacing_seconds": 35,
+  "calls": [
+    {
+      "prompt": "A cat sits beside a dog in a garden, steady camera.",
+      "variant": "rewrite",
+      "http_status": 200,
+      "seconds": 29.74,
+      "error_class": null,
+      "cache": "miss",
+      "image_bytes": 292939,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 3992,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "A bicycle stands beside a parked car, steady camera.",
+      "variant": "rewrite",
+      "http_status": 200,
+      "seconds": 3.387,
+      "error_class": null,
+      "cache": "miss",
+      "image_bytes": 253625,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 2929,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "A wide shot of an indoor gymnasium, steady camera.",
+      "variant": "rewrite",
+      "http_status": 200,
+      "seconds": 4.138,
+      "error_class": null,
+      "cache": "miss",
+      "image_bytes": 241539,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 3740,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "A purple clock hangs on a wall, steady camera.",
+      "variant": "rewrite",
+      "http_status": 503,
+      "seconds": 0.443,
+      "error_class": "ClientError",
+      "cache": null,
+      "image_bytes": 0,
+      "response": {
+        "detail": "Preview is unavailable right now. The risk check still works."
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "runtime_digest_matches_build": true,
+  "protected_score_copy_unchanged": true,
+  "protected_clip_copy_unchanged": true,
+  "prohibited_copy_hits": 0,
+  "protected_code_unchanged": true,
+  "warm_max_seconds": 5.323689,
+  "ui_passed": true,
+  "postcheck_passed": true
+}

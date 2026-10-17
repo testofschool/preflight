@@ -1,0 +1,80 @@
+{
+  "page": "https://preflight-jcgro45veq-as.a.run.app",
+  "when": "2026-10-17T13:36:31",
+  "viewport": [
+    1440,
+    900
+  ],
+  "budgets": {
+    "elements": 18,
+    "colors": 12,
+    "families": null
+  },
+  "budgets_declared": [
+    "elements",
+    "colors"
+  ],
+  "words": {
+    "what": null,
+    "who": null,
+    "next": null
+  },
+  "measured": {
+    "elements": [
+      "a.brand",
+      "nav.header-nav",
+      "div.eyebrow",
+      "h1#page-title",
+      "p.intro-copy",
+      "a.clip-review-link",
+      "h2#prompt-heading",
+      "form#prompt-form",
+      "p",
+      "h2#results-heading",
+      "h3#risk-heading",
+      "p#risk-detail",
+      "h3#why-heading",
+      "h3#better-heading",
+      "p.rewrite-description",
+      "span",
+      "span#cost-value",
+      "p#cost-note"
+    ],
+    "colors": [
+      "20,43,49",
+      "239,127,96",
+      "101,114,118",
+      "255,254,250",
+      "220,240,232",
+      "80,100,90",
+      "67,90,76"
+    ],
+    "families": [
+      "Inter",
+      "ui-monospace"
+    ],
+    "text": "preflight . How it works ↗ AN EARLY CHECK FOR YOUR VIDEO PROMPT Before the first frame. Look for signs of a difficult prompt before spending on a generation. Have a clip already? Review it ↓ Start with your idea Your video prompt 0 / 4,000 A short scene description is enough to start. TRY A SAMPLE ↙ A cat and a dog ↗ A spoon and a laptop ↗ A bicycle and a car ↗ Indoor gymnasium ↗ A purple clock ↗ Check this prompt → This check runs on Cloud Run.No video is generated. Your preflight Risk Check a prompt to inspect the available evidence. What this score is Why Better prompt A rewrite appears only when it passes the risk check. Illustrative generation budget — A generation budget appears after the check. No video is generated."
+  },
+  "results": [
+    [
+      "V1",
+      "PASS",
+      "18 visible object(s) above the fold (budget 18): a.brand, nav.header-nav, div.eyebrow, h1#page-title, p.intro-copy, a.clip-review-link, h2#prompt-heading, form#prompt-form, p, h2#results-heading, h3#risk-heading, p#risk-detail"
+    ],
+    [
+      "V2",
+      "PASS",
+      "7 distinct UI colour(s) rgb-merged (budget 12): rgb(20,43,49); rgb(239,127,96); rgb(101,114,118); rgb(255,254,250); rgb(220,240,232); rgb(80,100,90)"
+    ],
+    [
+      "V3",
+      "UNMEASURED",
+      "2 font famil(ies) in view (no budget declared — count only): Inter, ui-monospace"
+    ],
+    [
+      "V4",
+      "UNMEASURED",
+      "no --what/--who/--next given — the comprehension line was not checked"
+    ]
+  ]
+}

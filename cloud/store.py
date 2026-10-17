@@ -120,6 +120,47 @@ class FirestoreDifficultyStore:
 
         return admit(self.client.transaction())
 
+    def admit_preview(self, minute_limit=5, daily_limit=None):
+        """One transaction shares both image budgets across all instances."""
+        limit = min(500, int(daily_limit if daily_limit is not None else
+                             os.environ.get("PREFLIGHT_PREVIEW_DAILY_LIMIT", "60")))
+        if not 1 <= limit or not 1 <= minute_limit <= 5:
+            raise ValueError("Invalid preview budget")
+        reference = self.client.collection("service_v1").document("preview-budget")
+        decorator = self.transaction_decorator
+        if decorator is None:
+            from google.cloud import firestore
+            decorator = firestore.transactional
+
+        @decorator
+        def admit(transaction):
+            now = time()
+            day = datetime.fromtimestamp(now, timezone.utc).date().isoformat()
+            snapshot = reference.get(transaction=transaction)
+            doc = snapshot.to_dict() if snapshot.exists else {}
+            count = doc.get("day_count", 0) if doc.get("day") == day else 0
+            if isinstance(count, bool) or not isinstance(count, int) or count < 0:
+                raise StoreDataUnavailable("Invalid preview day counter")
+            if count >= limit:
+                raise StoreBudgetExhausted()
+            stamps = sorted(float(t) for t in doc.get("request_timestamps", []) if float(t) > now - 60)
+            if not all(math.isfinite(t) and t <= now for t in stamps):
+                raise StoreDataUnavailable("Invalid preview timestamps")
+            if len(stamps) >= minute_limit:
+                raise StoreRateLimited(math.ceil(stamps[0] + 60 - now))
+            transaction.set(reference, {"request_timestamps": stamps + [now], "day": day,
+                                       "day_count": count + 1}, merge=True)
+            return {"day_count": count + 1}
+
+        return admit(self.client.transaction())
+
+    def get_preview(self, key):
+        snapshot = self.client.collection("previews_v1").document(key).get(timeout=10)
+        return snapshot.to_dict() if snapshot.exists else None
+
+    def save_preview(self, key, data):
+        self.client.collection("previews_v1").document(key).set(data, timeout=10)
+
     def live_risk(self, engine_result: dict, prompt: str | None = None) -> dict:
         """Read all five neighbour rates and item parameters on every supported query."""
         result = copy.deepcopy(engine_result)

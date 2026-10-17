@@ -1,0 +1,6 @@
+validation_cold | a cat and a dog | HTTP 200 | 27.924216s
+validation_warm | a cat and a dog | HTTP 200 | 5.929270s
+validation_warm | a spoon and a laptop | HTTP 200 | 5.344041s
+validation_warm | a bicycle and a car | HTTP 200 | 5.791506s
+validation_warm | indoor gymnasium | HTTP 200 | 5.314055s
+validation_warm | a purple clock | HTTP 200 | 4.958011s

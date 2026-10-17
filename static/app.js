@@ -192,7 +192,99 @@
     costNote.textContent = `Illustration using ${attemptCost} and ${hasMixedFeedback(data) ? "the mixed risk estimate" : "historical votes"}, capped at 5 attempts. This is not a Veo cost forecast. No generation has been requested.`;
   }
 
+  function renderPreview(original, rewrite) {
+    const container = document.createElement("div");
+    container.className = "preview-controls";
+    const action = document.createElement("button");
+    action.type = "button";
+    action.className = "primary-button preview-button";
+    const price = serviceStatus?.pricing_image?.usd_per_image;
+    const label = `Preview a still · $${Number(price || 0).toFixed(2)}`;
+    const text = document.createElement("span");
+    text.textContent = label;
+    const spinner = document.createElement("span");
+    spinner.className = "button-spinner";
+    spinner.setAttribute("aria-hidden", "true");
+    action.append(text, spinner);
+    action.disabled = serviceStatus?.preview !== true;
+    if (action.disabled) action.title = "Preview unavailable in this region";
+    const output = document.createElement("div");
+    output.setAttribute("aria-live", "polite");
+    let busy = false;
+    let retryAt = 0;
+    let originalLink = null;
+    async function run(useOriginal) {
+      if (busy || Date.now() < retryAt || serviceStatus?.preview !== true) return;
+      busy = true;
+      action.disabled = true;
+      if (originalLink) originalLink.disabled = true;
+      action.classList.add("loading");
+      text.textContent = "Preparing still…";
+      output.replaceChildren();
+      try {
+        const response = await fetch("/preview", {method: "POST", headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({prompt: useOriginal || !rewrite ? original : rewrite,
+            variant: useOriginal || !rewrite ? "original" : "rewrite", session_id: sessionId})});
+        const data = await response.json();
+        if (!response.ok) {
+          const retry = Number(response.headers.get("Retry-After"));
+          if (response.status === 429 && retry > 0) retryAt = Date.now() + retry * 1000;
+          throw new Error(response.status === 429 && retry > 0 ? `Try again in ${retry} s` :
+            typeof data.detail === "string" ? data.detail : "Preview is unavailable right now. The risk check still works.");
+        }
+        if (typeof data.image_data_url !== "string" || !data.image_data_url.startsWith("data:image/jpeg;base64,"))
+          throw new Error("Preview is unavailable right now. The risk check still works.");
+        const image = document.createElement("img");
+        image.src = data.image_data_url;
+        image.alt = "Image model still for the selected prompt";
+        image.className = "preview-image";
+        const caption = document.createElement("p");
+        caption.className = "subtle-copy";
+        caption.textContent = data.caption;
+        const metadata = document.createElement("p");
+        metadata.className = "preview-metadata";
+        metadata.textContent = `Model ${data.model} · ${data.size} · $${Number(data.cost_usd).toFixed(2)} · ${(data.latency_ms / 1000).toFixed(1)} s`;
+        const link = document.createElement("a");
+        link.href = "https://ai.google.dev/gemini-api/docs/veo";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "Use as a Veo first frame ↗";
+        output.dataset.state = response.headers.get("X-Preview-Cache") === "hit" ? "cached" : "done";
+        output.append(image, caption, metadata, link);
+      } catch (error) {
+        const message = document.createElement("p");
+        message.className = "form-error";
+        message.textContent = error.message;
+        output.dataset.state = retryAt > Date.now() ? "rate-limited" : "error";
+        output.append(message);
+      } finally {
+        busy = false;
+        action.disabled = false;
+        if (originalLink) originalLink.disabled = false;
+        action.classList.remove("loading");
+        text.textContent = label;
+      }
+    }
+    action.addEventListener("click", () => run(false));
+    container.append(action);
+    if (rewrite) {
+      originalLink = document.createElement("button");
+      originalLink.type = "button";
+      originalLink.className = "preview-original";
+      originalLink.textContent = "Preview the original instead";
+      originalLink.disabled = action.disabled;
+      originalLink.addEventListener("click", () => run(true));
+      container.append(originalLink);
+    }
+    container.append(output);
+    document.getElementById("better-content").append(container);
+  }
+
   function renderResult(data, prompt) {
+    riskCard.classList.add("has-result");
+    document.querySelector(".better-card").classList.add("has-result");
+    state.hidden = false;
+    document.querySelector(".risk-card .evidence-boundary").hidden = false;
     const mixed = hasMixedFeedback(data);
     const supported = data.supported !== false && data.coverage_supported !== false && data.coverage?.status !== "unsupported" && rate(data.p_fail);
     const value = document.getElementById("risk-value");
@@ -204,7 +296,7 @@
       value.textContent = "—";
       unit.hidden = true;
       label.textContent = "Outside the available evidence.";
-      detail.textContent = "There is not enough relevant historical evidence to estimate this prompt. No risk value is assigned.";
+      detail.textContent = "This prompt doesn't match the historical vocabulary. Try describing a scene with a subject and an action.";
       document.getElementById("risk-fill").style.width = "0%";
       riskCard.classList.add("unsupported");
       state.textContent = "LIMITED COVERAGE";
@@ -224,6 +316,16 @@
     renderNeighbors(data.nearest_prompts, supported);
     renderBudget(data, supported);
     renderRewrite(data, prompt);
+    const accepted = data.rewrite_status === "improved" && data.rewritten_prompt &&
+      data.rewritten_prompt !== prompt && rate(data.p_fail_before) && rate(data.p_fail_after) &&
+      data.p_fail_after < data.p_fail_before;
+    if (accepted) {
+      const note = document.createElement("p");
+      note.className = "subtle-copy";
+      note.textContent = "The rewrite is in English; non-English words were not scored.";
+      document.getElementById("better-content").append(note);
+    }
+    renderPreview(prompt, accepted ? data.rewritten_prompt : null);
     document.querySelector(".risk-card .evidence-boundary").textContent = mixed ? "This mixes historical human pairwise votes with separate machine clip verdicts. It is not a validated Veo failure probability." : "Historical evidence is a signal, not a validated probability of a Veo generation failing.";
     const historical = document.getElementById("risk-history");
     historical.hidden = !supported || !rate(data.historical_p_fail);

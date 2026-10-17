@@ -1,0 +1,15 @@
+{
+  "revision": "preflight-00009-n9b",
+  "traffic": [
+    {
+      "revision": "preflight-00005-tuc",
+      "percent": 0
+    },
+    {
+      "revision": "preflight-00009-n9b",
+      "percent": 100
+    }
+  ],
+  "min_instances": "0",
+  "timeout_seconds": 40
+}

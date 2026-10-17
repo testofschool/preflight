@@ -1,0 +1,106 @@
+{
+  "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "calls": [
+    {
+      "prompt": "a spoon and a laptop",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 116955,
+      "cache": "miss",
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 3747,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "a cat and a dog",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 150514,
+      "cache": "miss",
+      "retry_after": null,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 4922,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "a bicycle and a car",
+      "variant": "original",
+      "http_status": 503,
+      "image_bytes": 0,
+      "cache": null,
+      "retry_after": null,
+      "response": {
+        "detail": "Preview is unavailable right now. The risk check still works."
+      }
+    }
+  ],
+  "screenshots": [
+    "first_screen_1440x900.png",
+    "first_screen_390x844.png",
+    "after_check_1440x900.png",
+    "after_check_390x844.png",
+    "preview_done_1440x900.png",
+    "preview_done_390x844.png"
+  ],
+  "rewrite_fixtures": "Explicit scene-description fixtures; not claims of guarded risk reduction",
+  "status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "pricing_image": {
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "usd_per_image": 0.0336,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-17"
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "cta_bottom": 837.4375,
+  "ui_preflight_status": 200
+}

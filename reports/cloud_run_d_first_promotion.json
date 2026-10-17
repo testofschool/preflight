@@ -1,0 +1,21 @@
+{
+  "revision": "preflight-00013-kil",
+  "primary_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "traffic": [
+    {
+      "revision": "preflight-00013-kil",
+      "percent": 100,
+      "tag": "postcheck-candidate"
+    }
+  ],
+  "preview": false,
+  "daily_cap": 60,
+  "required_settings_present": {
+    "PREFLIGHT_IMAGE_MODEL": true,
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": true
+  },
+  "min_instances": 0,
+  "timeout_seconds": 40,
+  "track_c": "BLOCKED(ClientError)",
+  "track_d": "candidate passed; primary verification pending"
+}

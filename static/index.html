@@ -15,7 +15,7 @@
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="/" aria-label="Preflight home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M5 19.5 13.8 5 23 19.5H5Z"/><path d="M9 19.5 14 11l5 8.5M14 19.5v4"/></svg></span>preflight<span class="brand-period">.</span></a>
-      <nav class="header-nav" aria-label="Main navigation"><a href="/architecture">How it works <span aria-hidden="true">↗</span></a><span class="mode-pill pending"><span class="status-dot" aria-hidden="true"></span><span id="mode-label">CONNECTING</span></span></nav>
+      <nav class="header-nav" aria-label="Main navigation"><a href="/architecture">How it works <span aria-hidden="true">↗</span></a></nav>
     </header>
 
     <main>
@@ -24,7 +24,7 @@
         <h1 id="page-title">Before the first frame.</h1>
         <p class="intro-copy">Look for signs of a difficult prompt before spending on a generation.</p>
         <a class="clip-review-link" href="#clip-review">Have a clip already? Review it <span aria-hidden="true">↓</span></a>
-        <div class="connection-row" id="session-row" hidden><span class="session-badge"><span class="status-dot" aria-hidden="true"></span>SESSION ACTIVE</span><span class="session-caption">Agent Platform</span></div>
+
       </section>
 
       <div class="workspace">
@@ -49,7 +49,7 @@
         </section>
 
         <section class="results-panel" aria-labelledby="results-heading" aria-busy="false">
-          <div class="results-heading-row"><div class="panel-label"><span class="step-number">02</span><h2 id="results-heading">Your preflight</h2></div><span id="result-state" class="result-state">READY WHEN YOU ARE</span></div>
+          <div class="results-heading-row"><div class="panel-label"><span class="step-number">02</span><h2 id="results-heading">Your preflight</h2></div><span id="result-state" class="result-state" hidden>READY WHEN YOU ARE</span></div>
           <p id="checked-prompt" class="checked-prompt" hidden></p>
           <div id="results-announcement" class="sr-only" role="status" aria-live="polite"></div>
           <article class="result-card risk-card" aria-labelledby="risk-heading">
@@ -58,12 +58,12 @@
             <div class="risk-track" aria-hidden="true"><span id="risk-fill"></span></div>
             <p id="risk-detail" class="card-caption">Check a prompt to inspect the available evidence.</p>
             <p id="risk-history" class="historical-detail" hidden></p>
-            <p class="evidence-boundary">Historical evidence is a signal, not a validated probability of a Veo generation failing.</p>
-            <p id="score-explanation" class="card-caption"><strong>What this score is:</strong> An estimate from 1,911 human pairwise votes on 2024-era AI videos of how often prompts like yours received a vote rejecting both clips. Not a calibrated probability for today’s models (held-out AUC about 0.67). Machine feedback can make the displayed score a mixed heuristic proxy, while the original human votes remain separate.</p>
+            <p class="evidence-boundary" hidden>Historical evidence is a signal, not a validated probability of a Veo generation failing.</p>
+            <details><summary>What this score is</summary><p id="score-explanation" class="card-caption"><strong>What this score is:</strong> An estimate from 1,911 human pairwise votes on 2024-era AI videos of how often prompts like yours received a vote rejecting both clips. Not a calibrated probability for today’s models (held-out AUC about 0.67). Machine feedback can make the displayed score a mixed heuristic proxy, while the original human votes remain separate.</p></details>
           </article>
           <div class="secondary-cards">
             <article class="result-card why-card" aria-labelledby="why-heading"><div class="card-topline"><h3 id="why-heading">Why</h3><span class="card-index">02 / 03</span></div><div id="why-content" class="card-body empty-body"><span class="empty-mark" aria-hidden="true">↗</span><p>See the evidence<br>behind the estimate.</p></div><div id="neighbors" class="neighbors" hidden></div></article>
-            <article class="result-card better-card" aria-labelledby="better-heading"><div class="card-topline"><h3 id="better-heading">Better prompt</h3><span class="card-index">03 / 03</span></div><div id="better-content" class="card-body"><span class="feature-tag">CHECKING REWRITE STATUS</span><p class="rewrite-description">A rewrite appears only when it passes the risk check.</p><p class="subtle-copy">A lower estimate does not guarantee a better video.</p></div></article>
+            <article class="result-card better-card" aria-labelledby="better-heading"><div class="card-topline"><h3 id="better-heading">Better prompt</h3><span class="card-index">03 / 03</span></div><div id="better-content" class="card-body"><span class="feature-tag" hidden>CHECKING REWRITE STATUS</span><p class="rewrite-description">A rewrite appears only when it passes the risk check.</p><p class="subtle-copy">A lower estimate does not guarantee a better video.</p></div></article>
           </div>
           <div class="cost-line"><span>Illustrative generation budget</span><span id="cost-value">—</span></div>
           <p id="cost-note" class="cost-note">A generation budget appears after the check. No video is generated.</p>
@@ -88,14 +88,14 @@
           </form>
           <div id="postcheck-results" class="review-results" aria-busy="false">
             <div id="review-announcement" class="sr-only" role="status" aria-live="polite"></div>
-            <article id="verdict-card" class="result-card verdict-card"><div class="card-topline"><h3>Clip review</h3><span id="verdict-state" class="card-index">NO CLIP REVIEWED</span></div><div id="verdict-value" class="verdict-value">A closer look.</div><p id="verdict-description" class="card-caption">Review sampled frames for visible defects in your existing clip.</p><p id="reviewed-clip" class="reviewed-clip" hidden></p><div id="defects" class="defects" hidden></div><p class="evidence-boundary">A machine assessment of sampled frames is separate from a human pairwise vote.</p><p id="clip-review-explanation" class="card-caption"><strong>What the clip review is:</strong> Gemini gives a visual opinion on the clip and sampled frames, with timecodes you can inspect. Accuracy on known-defect clips is unmeasured, and one camera-movement flag was disputed during independent frame inspection. Use it as a second pair of eyes, not a final verdict.</p></article>
+            <article id="verdict-card" class="result-card verdict-card"><div class="card-topline"><h3>Clip review</h3><span id="verdict-state" class="card-index">NO CLIP REVIEWED</span></div><div id="verdict-value" class="verdict-value">A closer look.</div><p id="verdict-description" class="card-caption">Review sampled frames for visible defects in your existing clip.</p><p id="reviewed-clip" class="reviewed-clip" hidden></p><div id="defects" class="defects" hidden></div><p class="evidence-boundary">A machine assessment of sampled frames is separate from a human pairwise vote.</p><details><summary>What the clip review is</summary><p id="clip-review-explanation" class="card-caption"><strong>What the clip review is:</strong> Gemini gives a visual opinion on the clip and sampled frames, with timecodes you can inspect. Accuracy on known-defect clips is unmeasured, and one camera-movement flag was disputed during independent frame inspection. Use it as a second pair of eyes, not a final verdict.</p></details></article>
             <article class="result-card feedback-card"><div class="card-topline"><h3>Feedback-adjusted risk</h3><span class="card-index">SEPARATE FROM HUMAN VOTES</span></div><div class="feedback-comparison"><div><span>Before review</span><strong id="feedback-before">—</strong></div><span class="feedback-arrow" aria-hidden="true">→</span><div><span>After review</span><strong id="feedback-after">—</strong></div></div><p id="feedback-history" class="card-caption">The original historical human-vote estimate will be shown separately.</p><p id="feedback-receipt" class="feedback-receipt" hidden></p><p id="feedback-description" class="subtle-copy">This proxy can incorporate machine feedback. It is not a change to the public historical both-bad vote rate.</p></article>
             <p id="sampling-note" class="sampling-note">Review targets 2 fps; the default video sampling rate is 1 fps. Sampling may miss flicker shorter than 0.5 seconds.</p>
           </div>
         </div>
       </section>
 
-      <footer class="site-footer"><p><span class="footer-mark" aria-hidden="true">↗</span> A small check. A more informed next step.</p><div><span id="service-status">CHECKING SERVICE STATUS</span><span class="footer-divider" aria-hidden="true">/</span><a href="/architecture">View architecture <span aria-hidden="true">↗</span></a></div></footer>
+      <footer class="site-footer"><p><span class="footer-mark" aria-hidden="true">↗</span> A small check. A more informed next step.</p><div><span class="mode-pill pending"><span class="status-dot" aria-hidden="true"></span><span id="mode-label">CONNECTING</span></span><span id="service-status">CHECKING SERVICE STATUS</span><span class="footer-divider" aria-hidden="true">/</span><a href="/architecture">View architecture <span aria-hidden="true">↗</span></a></div><div class="connection-row" id="session-row" hidden><span class="session-badge"><span class="status-dot" aria-hidden="true"></span>SESSION ACTIVE</span><span class="session-caption">Agent Platform</span></div></footer>
     </main>
   </div>
 </body>

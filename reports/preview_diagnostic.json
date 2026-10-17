@@ -1,0 +1,18 @@
+{
+  "http_status": 200,
+  "seconds": 4.771,
+  "error_class": null,
+  "response": {
+    "model": "gemini-3.1-flash-lite-image",
+    "size": "1K",
+    "aspect_ratio": "16:9",
+    "cost_usd": 0.0336,
+    "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+    "pricing_checked_date": "2026-10-17",
+    "latency_ms": 4329,
+    "model_calls": 1,
+    "synthid": true,
+    "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+  },
+  "image_bytes": 280560
+}

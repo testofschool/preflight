@@ -1,0 +1,12 @@
+Revision live: preflight-00016-tuk · Candidate URL: https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app · Track C: BLOCKED(ClientError) · Track D: PASS
+G3 probe: gemini-3.1-flash-lite-image@global 200 4430 ms (regional 404 / 1429 ms; alternate model not called)
+V11: PARTIAL — 9/10 unique cases succeeded; final rewrite still 503 ClientError after 35 s spacing · reports/preview_live.json + reports/preview_spaced_samples.json
+V12: PASS — sixth call 429, Retry-After 48 s; daily cap and ceiling covered by unit tests · reports/preview_live.json + tests/test_preview.py
+V13: PASS — $0.0336 / 1K; Vertex $30/M output tokens × 1120; checked 2026-10-17 · reports/track_cd_primary_status.json
+V14: PASS — cache hit / model_calls 0; 9 cached documents for 9 successful distinct previews · reports/preview_live.json + reports/track_cd_store_counts.json
+V15: PASS — 18 objects / 7 colours / CTA bottom 837.44px · reports/first_viewport_after.json
+V16: PARTIAL — 12 enabled-C candidate states + 6 final-D candidate + 6 primary + 6 local PNGs; production preview states NOT RUN because C is disabled · reports/track_cd_screenshot_manifest.json
+Baselines re-checked: tests 99 · secrets 0 · /preflight warm 4.65–5.13 s · Firestore 511/508/4 (all 1,016 historical documents unchanged)
+Build-input changes: Dockerfile +23 B; requirements-cloud.txt +15 B; requirements-cloud.lock +15 B; scripts/release_cloud.py +623 B; scripts/measure_cloud.py +513 B
+Spend observed today: $0 posted (billing delayed; 10 observed image outputs have $0.336 output-only list price) · Daily cap: 60 UTC; 16 admissions observed
+Not done / deferred: Track C activation; frozen smoke NOT RUN — required frozen reference path not on this machine (authorized B substitute passed). Original 510 total prompts became 511 through synthetic feedback. Earlier 6.81 s warm outlier retained.

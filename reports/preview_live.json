@@ -1,0 +1,261 @@
+{
+  "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "calls": [
+    {
+      "prompt": "a spoon and a laptop",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 116955,
+      "cache": "hit",
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 72,
+        "model_calls": 0,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "a cat and a dog",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 150514,
+      "cache": "hit",
+      "retry_after": null,
+      "error_class": null,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 49,
+        "model_calls": 0,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "a bicycle and a car",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 280560,
+      "cache": "hit",
+      "retry_after": null,
+      "error_class": null,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 70,
+        "model_calls": 0,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "indoor gymnasium",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 211549,
+      "cache": "miss",
+      "retry_after": null,
+      "error_class": null,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 4027,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "a purple clock",
+      "variant": "original",
+      "http_status": 200,
+      "image_bytes": 139285,
+      "cache": "miss",
+      "retry_after": null,
+      "error_class": null,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 6615,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "A spoon rests beside a laptop on a desk, steady camera.",
+      "variant": "rewrite",
+      "http_status": 200,
+      "image_bytes": 117995,
+      "cache": "miss",
+      "retry_after": null,
+      "error_class": null,
+      "response": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "aspect_ratio": "16:9",
+        "cost_usd": 0.0336,
+        "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "pricing_checked_date": "2026-10-17",
+        "latency_ms": 3519,
+        "model_calls": 1,
+        "synthid": true,
+        "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+      }
+    },
+    {
+      "prompt": "A cat sits beside a dog in a garden, steady camera.",
+      "variant": "rewrite",
+      "http_status": 503,
+      "image_bytes": 0,
+      "cache": null,
+      "retry_after": null,
+      "error_class": "ClientError",
+      "response": {
+        "detail": "Preview is unavailable right now. The risk check still works."
+      }
+    }
+  ],
+  "screenshots": [
+    "first_screen_1440x900.png",
+    "first_screen_390x844.png",
+    "after_check_1440x900.png",
+    "after_check_390x844.png",
+    "preview_done_1440x900.png",
+    "preview_done_390x844.png",
+    "rate_limited_1440x900.png",
+    "rate_limited_390x844.png",
+    "preview_cached_1440x900.png",
+    "preview_cached_390x844.png",
+    "architecture_top_1440x900.png",
+    "architecture_top_390x844.png"
+  ],
+  "rewrite_fixtures": "Explicit scene-description fixtures; not claims of guarded risk reduction",
+  "status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "pricing_image": {
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "usd_per_image": 0.0336,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-17"
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "cta_bottom": 837.4375,
+  "ui_preflight_status": 200,
+  "cap": {
+    "http_status": 429,
+    "retry_after": "48"
+  },
+  "cache": {
+    "http_status": 200,
+    "header": "hit",
+    "model_calls": 0
+  },
+  "passed": false,
+  "track_c_verdict": "BLOCKED(ClientError): repeated 503 during V11; production preview will be disabled",
+  "revision": "preflight-00012-rag",
+  "successful_unique_cases": 9,
+  "target_cases": 10,
+  "spaced_validation_receipt": "reports/preview_spaced_samples.json",
+  "final_track_c": "BLOCKED(ClientError)",
+  "successful_cases": [
+    {
+      "prompt": "a spoon and a laptop",
+      "variant": "original",
+      "image_bytes": 116955
+    },
+    {
+      "prompt": "a cat and a dog",
+      "variant": "original",
+      "image_bytes": 150514
+    },
+    {
+      "prompt": "a bicycle and a car",
+      "variant": "original",
+      "image_bytes": 280560
+    },
+    {
+      "prompt": "indoor gymnasium",
+      "variant": "original",
+      "image_bytes": 211549
+    },
+    {
+      "prompt": "a purple clock",
+      "variant": "original",
+      "image_bytes": 139285
+    },
+    {
+      "prompt": "A spoon rests beside a laptop on a desk, steady camera.",
+      "variant": "rewrite",
+      "image_bytes": 117995
+    },
+    {
+      "prompt": "A cat sits beside a dog in a garden, steady camera.",
+      "variant": "rewrite",
+      "image_bytes": 292939
+    },
+    {
+      "prompt": "A bicycle stands beside a parked car, steady camera.",
+      "variant": "rewrite",
+      "image_bytes": 253625
+    },
+    {
+      "prompt": "A wide shot of an indoor gymnasium, steady camera.",
+      "variant": "rewrite",
+      "image_bytes": 241539
+    }
+  ]
+}

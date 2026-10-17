@@ -1,0 +1,8 @@
+{
+  "references_unchanged": {
+    "postcheck_smoke_reference.json": true,
+    "postcheck_canary_reference.json": true
+  },
+  "required_frozen_path_present": false,
+  "synthetic_clip_sha256_matches_receipt": true
+}

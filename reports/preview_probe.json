@@ -1,0 +1,20 @@
+[
+  {
+    "model": "gemini-3.1-flash-lite-image",
+    "location": "asia-southeast1",
+    "size": "1K",
+    "http_status": 404,
+    "latency_ms": 1429,
+    "error_class": "ClientError",
+    "image_bytes_returned": false
+  },
+  {
+    "model": "gemini-3.1-flash-lite-image",
+    "location": "global",
+    "size": "1K",
+    "http_status": 200,
+    "latency_ms": 4430,
+    "error_class": null,
+    "image_bytes_returned": true
+  }
+]

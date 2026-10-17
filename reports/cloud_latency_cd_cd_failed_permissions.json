@@ -1,0 +1,27 @@
+{
+  "created_kst": "2026-10-17T12:52:58.816894+09:00",
+  "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "method": "Read-only validation of the supplied URL; first request is not a certified cold start",
+  "timeout_seconds": 40,
+  "calibration_note": "Retains the timeout derived from recorded sample requests; see postcheck_timeout_calibration.json",
+  "validation_revision": "preflight-00011-jey",
+  "validation": [
+    {
+      "phase": "validation_cold",
+      "prompt": "a cat and a dog",
+      "http_status": 0,
+      "seconds": 60.005028,
+      "curl_exit_code": 28,
+      "response": {},
+      "valid_connected_response": false
+    }
+  ],
+  "V3_pass": false,
+  "V10_config": {
+    "region": "asia-southeast1",
+    "min_instances": 0,
+    "timeout_seconds": 40,
+    "concurrency": 80,
+    "revision": "preflight-00011-jey"
+  }
+}

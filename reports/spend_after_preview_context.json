@@ -1,0 +1,14 @@
+{
+  "observed_at_kst": "2026-10-17T13:36:13.961500+09:00",
+  "source": "Authenticated Cloud Billing console, actual cost report, SKU grouping",
+  "period": "2026-10-17",
+  "displayed_currency": "KRW",
+  "displayed_posted_total": 0,
+  "posted_sku_rows": 0,
+  "image_sku_posted_observed_usd": 0,
+  "configured_billing_account_link_verified": true,
+  "interpretation": "No posted SKU costs are visible for today. This does not mean the successful image requests incurred no cost; billing publication is delayed.",
+  "successful_image_outputs_observed": 10,
+  "image_output_list_price_estimate_usd": 0.336,
+  "estimate_scope": "Ten successful image outputs including G3; excludes text input. This is a list-price calculation, not posted billing spend."
+}

@@ -94,7 +94,15 @@ def main() -> None:
             if len(report["calibration"]) != 6 or not all(row["valid_connected_response"] for row in report["calibration"]):
                 raise RuntimeError("Calibration did not return six connected responses")
             report["timeout_seconds"] = math.ceil(2 * max(row["seconds"] for row in report["calibration"]))
-        report["validation_revision"] = cold_revision(operations, timeout=report["timeout_seconds"])
+        if arguments.validation_only:
+            # Candidate verification must never create a revision or move traffic.
+            report["validation_revision"] = next(
+                (row["revisionName"] for row in current["status"]["traffic"]
+                 if row.get("url") == arguments.url.rstrip("/")),
+                current["status"]["latestReadyRevisionName"])
+            report["method"] = "Read-only validation of the supplied URL; first request is not a certified cold start"
+        else:
+            report["validation_revision"] = cold_revision(operations, timeout=report["timeout_seconds"])
         report["validation"] = batch(arguments.url, "validation")
         rows = report["validation"]
         report["V3_pass"] = bool(len(rows) == 6 and all(row["valid_connected_response"] for row in rows)

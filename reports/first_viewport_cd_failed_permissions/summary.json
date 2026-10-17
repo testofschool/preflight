@@ -1,0 +1,54 @@
+{
+  "page": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "when": "2026-10-17T12:53:05",
+  "viewport": [
+    1440,
+    900
+  ],
+  "budgets": {
+    "elements": 18,
+    "colors": 12,
+    "families": null
+  },
+  "budgets_declared": [
+    "elements",
+    "colors"
+  ],
+  "words": {
+    "what": null,
+    "who": null,
+    "next": null
+  },
+  "measured": {
+    "elements": [],
+    "colors": [],
+    "families": [
+      "Times"
+    ],
+    "text": "Service Unavailable"
+  },
+  "results": [
+    [
+      "V1",
+      "PASS",
+      "0 visible object(s) above the fold (budget 18): "
+    ],
+    [
+      "V2",
+      "PASS",
+      "0 distinct UI colour(s) rgb-merged (budget 12): "
+    ],
+    [
+      "V3",
+      "UNMEASURED",
+      "1 font famil(ies) in view (no budget declared \u2014 count only): Times"
+    ],
+    [
+      "V4",
+      "UNMEASURED",
+      "no --what/--who/--next given \u2014 the comprehension line was not checked"
+    ]
+  ],
+  "invalid_measurement": "Candidate returned no application DOM because runtime source was unreadable; zero objects is NOT PASS.",
+  "passed": false
+}

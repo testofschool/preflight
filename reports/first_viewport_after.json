@@ -1,0 +1,13 @@
+{
+  "revision": "preflight-00016-tuk",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "viewport": [
+    1440,
+    900
+  ],
+  "objects": 18,
+  "colors": 7,
+  "cta_bottom_px": 837.4375,
+  "session_row_preserved_hidden_in_footer": true,
+  "passed": true
+}

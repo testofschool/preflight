@@ -1,0 +1,7 @@
+{
+  "revision": "preflight-00011-jey",
+  "error_class": "PermissionError",
+  "path": "/app/app.py",
+  "cause": "Copied source files had mode 0600; nonroot container could not read them",
+  "promoted": false
+}

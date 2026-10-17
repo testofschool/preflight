@@ -15,3 +15,25 @@
 @media(max-width:720px){.postcheck-section{margin-top:34px;padding-top:31px}.postcheck-intro{display:block;margin-bottom:25px}.postcheck-intro h2{font-size:32px;margin-top:16px}.postcheck-intro p{font-size:12px}.postcheck-intro>.feature-tag{margin-top:17px}.review-layout{grid-template-columns:1fr;gap:25px}.upload-panel{padding:0}.clip-prompt-label{display:flex}.clip-prompt-label button{margin-bottom:0;font-size:8px}.clip-prompt-label label{font-size:11px}.upload-panel video{max-height:260px}.verdict-card{padding:20px}.verdict-value{font-size:37px}.feedback-card{padding:20px}.feedback-comparison{gap:22px}.feedback-comparison strong{font-size:29px}.feedback-card .card-topline{align-items:flex-start}.feedback-card .card-index{max-width:96px}.defect-row{gap:8px}.defect-row p{font-size:11px}.sampling-note{font-size:9px}}
 .flow-branch{width:100%;border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.flow-branch>.neighbors-title{line-height:1.7;margin-bottom:14px}
 .clip-review-link{display:inline-flex;align-items:center;gap:8px;margin-top:15px;color:#52714f;font-size:11px;text-decoration:none}.clip-review-link:hover{text-decoration:underline}.clip-review-link span{font-size:15px}.postcheck-section{scroll-margin-top:24px}
+/* Track C/D: retain the existing tokens and motion, reveal detail on demand. */
+.intro{padding-top:38px;padding-bottom:28px}
+.risk-card:not(.has-result) .risk-content,.risk-card:not(.has-result) .risk-track{display:none}
+details{margin-top:12px;color:var(--muted);font-size:10px;line-height:1.7}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:8px;color:var(--ink)}
+summary::before{content:'+';font-family:var(--mono)}
+details[open]>summary::before{content:'−'}
+summary:focus-visible,.preview-original:focus-visible,.preview-controls a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.preview-controls{margin-top:16px}.preview-button{font-size:11px;margin-top:0;min-height:44px;white-space:normal;padding:12px}
+.preview-original{display:block;border:0;background:transparent;color:var(--muted);text-decoration:underline;min-height:44px;padding:8px 0;font-size:11px;text-align:left}
+.preview-image{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;margin-top:16px;border-radius:6px}
+.preview-metadata{font:9px var(--mono);color:var(--muted);overflow-wrap:anywhere;line-height:1.7}
+.preview-controls a{display:inline-flex;align-items:center;min-height:44px;font-size:11px;color:var(--ink)}
+.preview-controls [data-state]{overflow-wrap:anywhere}
+@media(min-width:1250px){.intro{padding-top:38px;padding-bottom:28px}}
+details:not([open])>:not(summary){display:none}
+.workspace .step-number,.workspace .card-index,.empty-mark,.local-note>svg{display:none}
+.better-card:not(.has-result) .feature-tag,.better-card:not(.has-result) .subtle-copy,.why-card .empty-body{display:none}
+.character-count,.field-hint,.sample-header,.sample,.sample span,.local-note #runtime-note,.local-note p,.card-caption,.risk-label,.rewrite-description,.card-body .subtle-copy,.cost-line,.cost-note,.clip-review-link,.results-heading-row .result-state{color:var(--muted)}
+
+/* Preserve the home status node; the visible session status lives on architecture. */
+.site-footer #session-row{display:none}

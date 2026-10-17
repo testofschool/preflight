@@ -1,0 +1,21 @@
+{
+  "revision": "preflight-00012-rag",
+  "min_instances": 0,
+  "timeout_seconds": 40,
+  "required_settings_present": {
+    "PREFLIGHT_IMAGE_MODEL": true,
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": true
+  },
+  "preview_enabled": true,
+  "daily_cap": 60,
+  "traffic": [
+    {
+      "revision": "preflight-00009-n9b",
+      "percent": 100
+    },
+    {
+      "revision": "preflight-00012-rag",
+      "percent": 0
+    }
+  ]
+}

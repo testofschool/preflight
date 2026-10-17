@@ -71,6 +71,12 @@ def deploy(operations: CloudOperations, image: str, timeout: int, *, candidate: 
         "PREFLIGHT_GEMINI_LOCATION": REGION,
         "PREFLIGHT_GEMINI_MODEL": os.environ.get("PREFLIGHT_GEMINI_MODEL", "gemini-3.5-flash"),
         "PREFLIGHT_TOTAL_REQUEST_LIMIT": "1000",
+        "PREFLIGHT_IMAGE_MODEL": os.environ.get("PREFLIGHT_IMAGE_MODEL", "gemini-3.1-flash-lite-image"),
+        "PREFLIGHT_IMAGE_MODEL_FALLBACK": os.environ.get("PREFLIGHT_IMAGE_MODEL_FALLBACK", "gemini-3.1-flash-image"),
+        "PREFLIGHT_PREVIEW_DAILY_LIMIT": str(min(500, int(os.environ.get("PREFLIGHT_PREVIEW_DAILY_LIMIT", "60")))),
+        "PREFLIGHT_PREVIEW_ENABLED": os.environ.get("PREFLIGHT_PREVIEW_ENABLED", "false"),
+        "PREFLIGHT_IMAGE_PRIMARY_UNSERVED": os.environ.get("PREFLIGHT_IMAGE_PRIMARY_UNSERVED", "false"),
+        "PREFLIGHT_IMAGE_LOCATION": os.environ.get("PREFLIGHT_IMAGE_LOCATION", REGION),
     }
     arguments = [
         "gcloud", "run", "deploy", "preflight", "--image", image, "--region", REGION,
@@ -105,7 +111,7 @@ def deploy(operations: CloudOperations, image: str, timeout: int, *, candidate: 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--timeout", type=int, default=60)
+    parser.add_argument("--timeout", type=int, default=40)
     parser.add_argument("--candidate", action="store_true", help="deploy a tagged revision without moving primary traffic")
     arguments = parser.parse_args()
     try:

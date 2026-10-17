@@ -60,7 +60,7 @@
       description.textContent = "The browser sends your prompt to the local backend. Public historical prompt votes provide the risk estimate when coverage is sufficient. Each cloud connection is listed separately.";
       flow.append(box("Local backend", "POST /preflight"), arrow(), split(box("Historical votes", "Public data · local copy"), box("Statistical estimator", "Prompt coverage + vote signal")), arrow(), box("Risk · Why · Illustrative budget", "Or insufficient evidence when coverage is unsupported", true, true));
     }
-    const components = [["Cloud Run", "cloud_run"], ["Google ADK", "adk"], ["Gemini rewriting", "gemini"], ["Firestore", "firestore"], ["Agent Platform Sessions", "agent_platform_session"], ["Existing clip review", "postcheck"]];
+    const components = [["Cloud Run", "cloud_run"], ["Google ADK", "adk"], ["Gemini rewriting", "gemini"], ["Firestore", "firestore"], ["Agent Platform Sessions", "agent_platform_session"], ["Existing clip review", "postcheck"], ["Image preview (Gemini image model)", "preview"]];
     components.forEach(([name, key], index) => {
       const item = document.createElement("li");
       const count = document.createElement("span");

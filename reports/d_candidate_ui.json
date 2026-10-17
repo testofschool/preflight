@@ -1,0 +1,31 @@
+{
+  "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app",
+  "screenshots": [
+    "d_candidate_first_screen_1440x900.png",
+    "d_candidate_first_screen_390x844.png",
+    "d_candidate_after_check_1440x900.png",
+    "d_candidate_after_check_390x844.png",
+    "d_candidate_architecture_top_1440x900.png",
+    "d_candidate_architecture_top_390x844.png"
+  ],
+  "overflow_checks": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "console_errors": [],
+  "cta_bottom": 837.4375,
+  "textarea_rows": "6",
+  "mode_in_footer": true,
+  "session_row_hidden": true,
+  "session_row_in_footer": true,
+  "score_collapsed": true,
+  "preflight_status": 200,
+  "preview_disabled": true,
+  "preview_tooltip": "Preview unavailable in this region",
+  "architecture_image_row": true,
+  "passed": true
+}

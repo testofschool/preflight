@@ -1,0 +1,17 @@
+{
+  "label": "operational smoke, synthetic clip, not the frozen reference",
+  "frozen_smoke": "NOT RUN \u2014 reference clip not on this machine",
+  "http_status": 503,
+  "latency_seconds": 2.107,
+  "error_class": "PostcheckUnavailable",
+  "upstream_status": null,
+  "source_bytes": 64458,
+  "source_sha256": "7ac89c05b52fef183555eecd0bf6dd5021819bf42d24b6f78ec9e0e5a8d2c6ea",
+  "expected_duration_seconds": 5,
+  "inspection_api_schema_valid": false,
+  "response": {
+    "detail": "Connected video inspection or verdict storage is unavailable."
+  },
+  "passed": false,
+  "V8_accuracy_established": false
+}

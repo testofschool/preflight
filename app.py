@@ -3,6 +3,8 @@
 from collections import deque
 from contextlib import asynccontextmanager
 import asyncio
+import base64
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -13,6 +15,7 @@ import tempfile
 from threading import Lock
 from time import monotonic
 from uuid import uuid4
+from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse
@@ -23,6 +26,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.formparsers import MultiPartException
 
 from preflight_core import PreflightEngine
+from cloud.preview import CAPTION, image_pricing
 
 
 ROOT = Path(__file__).resolve().parent
@@ -42,6 +46,7 @@ SAMPLES = [
     "indoor gymnasium",
     "a purple clock",
 ]
+PRICING_IMAGE = image_pricing()
 
 
 class PromptInput(BaseModel):
@@ -56,6 +61,10 @@ class PromptInput(BaseModel):
         if not cleaned:
             raise ValueError("Enter a video prompt.")
         return cleaned
+
+
+class PreviewInput(PromptInput):
+    variant: Literal["original", "rewrite"]
 
 
 class RequestBudget:
@@ -81,7 +90,7 @@ class RequestBudget:
 
 
 def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
-               store_factory=None, rewrite_factory=None, postcheck_factory=None) -> FastAPI:
+               store_factory=None, rewrite_factory=None, postcheck_factory=None, preview_factory=None) -> FastAPI:
     selected_mode = mode or os.environ.get("PREFLIGHT_MODE", "local-g0")
     if selected_mode not in ("local-g0", "cloud"):
         raise ValueError("Unsupported runtime mode")
@@ -93,6 +102,7 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
         service.state.budget = RequestBudget()
         service.state.connected = connected
         service.state.postchecker = None
+        service.state.previewer = None
         service.state.postcheck_slot = asyncio.Semaphore(1)
         if connected:
             from cloud.store import FirestoreDifficultyStore
@@ -113,6 +123,12 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
                 service.state.postchecker = (postcheck_factory or PostcheckService.from_env)()
             except Exception:
                 service.state.postchecker = None
+            if preview_factory is not None or os.environ.get("PREFLIGHT_PREVIEW_ENABLED") == "true":
+                try:
+                    from cloud.preview import ImagePreviewService
+                    service.state.previewer = (preview_factory or ImagePreviewService)()
+                except Exception:
+                    service.state.previewer = None
         yield
 
     service = FastAPI(title="Preflight", lifespan=lifespan)
@@ -143,6 +159,8 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
             "agent_platform_session": connected and service.state.rewriter.session_active,
             "firestore": connected,
             "postcheck": connected and service.state.postchecker is not None,
+            "preview": connected and service.state.previewer is not None,
+            "pricing_image": image_pricing(),
             "generations": 0,
             "sample_prompts": SAMPLES,
             "pricing": PRICING,
@@ -195,6 +213,53 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
             prediction["rewrite_status"] = "unavailable-g0"
             prediction.pop("rewritten_prompt", None)
         return prediction
+
+    @service.post("/preview")
+    async def preview(body: PreviewInput, response: Response):
+        if not connected:
+            raise HTTPException(503, detail="Preview needs the connected service.")
+        if service.state.previewer is None:
+            raise HTTPException(503, detail="Preview is unavailable right now. The risk check still works.")
+        from cloud.store import StoreRateLimited, StoreBudgetExhausted, prompt_id
+        started = monotonic()
+        try:
+            await asyncio.to_thread(service.state.store.admit_preview)
+            provider = service.state.previewer
+            pricing = image_pricing()
+            key = hashlib.sha256(json.dumps(["preview-v1", body.prompt, provider.model, provider.size],
+                                           ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
+            cached = await asyncio.to_thread(service.state.store.get_preview, key)
+            if cached:
+                jpeg = cached["bytes"]
+                calls, cache = 0, "hit"
+            else:
+                async with asyncio.timeout(30):
+                    jpeg = await provider.generate(body.prompt)
+                calls, cache = 1, "miss"
+                if len(jpeg) <= 900 * 1024:
+                    await asyncio.to_thread(service.state.store.save_preview, key,
+                        {"bytes": jpeg, "model": provider.model, "size": provider.size,
+                         "created_at": datetime.now(timezone.utc), "prompt_id": prompt_id(body.prompt)})
+                else:
+                    cache = "skip-size"
+            response.headers["X-Preview-Cache"] = cache
+            return {"image_data_url": "data:image/jpeg;base64," + base64.b64encode(jpeg).decode(),
+                    "model": provider.model, "size": provider.size, "aspect_ratio": "16:9",
+                    "cost_usd": pricing["usd_per_image"], "pricing_source": pricing["source"],
+                    "pricing_checked_date": pricing["checked_date"],
+                    "latency_ms": round((monotonic() - started) * 1000), "model_calls": calls,
+                    "synthid": True, "caption": CAPTION}
+        except StoreRateLimited as error:
+            raise HTTPException(429, detail=f"Try again in {error.retry_after} s",
+                                headers={"Retry-After": str(error.retry_after)}) from None
+        except StoreBudgetExhausted:
+            now = datetime.now(timezone.utc)
+            retry = 86400 - (now.hour * 3600 + now.minute * 60 + now.second)
+            raise HTTPException(429, detail="The daily preview allowance has been reached.",
+                                headers={"Retry-After": str(retry)}) from None
+        except Exception as error:
+            raise HTTPException(503, detail="Preview is unavailable right now. The risk check still works.",
+                                headers={"X-Preflight-Error": type(error).__name__}) from None
 
     @service.post("/postcheck")
     async def postcheck(request: Request):

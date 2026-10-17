@@ -1,0 +1,15 @@
+{
+  "status_http": 200,
+  "preview": false,
+  "pricing_image": {
+    "model": "gemini-3.1-flash-lite-image",
+    "size": "1K",
+    "usd_per_image": 0.0336,
+    "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+    "checked_date": "2026-10-17"
+  },
+  "postcheck": true,
+  "disabled_preview_http": 503,
+  "disabled_preview_detail": "Preview is unavailable right now. The risk check still works.",
+  "generations": 0
+}

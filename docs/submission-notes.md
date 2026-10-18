@@ -4,7 +4,7 @@ Prototype link = https://preflight-jcgro45veq-as.a.run.app
 
 GitHub link = https://github.com/testofschool/preflight
 
-Demo video = https://youtu.be/1A8I-9NZ3Kc
+Demo video = https://youtu.be/-gRR1_N6g7U
 
 Brief description = Preflight checks an AI-video prompt before you pay to generate it. Paste a prompt for a failure-risk estimate from 1,911 human pairwise votes (GenAI-Bench), nearby evidence and a Gemini rewrite kept only when estimated risk drops. Five sample prompts have saved rewrite decisions and saved stills; when no lower-risk rewrite passes, the original stays. Stills show their generation date, zero model calls and $0.00. Live still generation is limited. Upload-based Gemini clip review provides a second pair of eyes. The FastAPI app runs on Cloud Run (asia-southeast1, min-instances 0). Historical votes, IRT parameters, separate machine feedback and saved stills live in Cloud Firestore. Gemini 3.5 Flash on Vertex AI powers the Google ADK rewrite agent, with Agent Platform Sessions. The risk score is a historical signal (held-out AUC 0.67), not a calibrated current-model probability; clip-review accuracy is unmeasured. No video generation is called. Firebase: we use Cloud Firestore; Hosting and Auth are not used.
 

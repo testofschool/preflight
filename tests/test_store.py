@@ -239,13 +239,19 @@ class StoreTests(unittest.TestCase):
             self.assertFalse(hasattr(caught.exception, "retry_after"))
             self.assertEqual(self.client.documents["service_v1/global-budget"], before)
 
-    def test_invalid_total_request_limit_fails_before_writing(self):
-        for setting in ("0", "-1", "1.5", "invalid", "1001"):
+    def test_total_request_limit_accepts_3000_and_rejects_invalid_settings(self):
+        with patch.dict("os.environ", {"PREFLIGHT_TOTAL_REQUEST_LIMIT": "3000"}):
+            admitted = self.store.admit_request()
+        self.assertEqual(admitted["total_count"], 1)
+        self.assertEqual(admitted["total_remaining"], 2999)
+        self.assertEqual(self.client.documents["service_v1/global-budget"]["total_request_limit"], 3000)
+        before = copy.deepcopy(self.client.documents["service_v1/global-budget"])
+        for setting in ("0", "-1", "1.5", "invalid", "3001"):
             with self.subTest(setting=setting):
                 with patch.dict("os.environ", {"PREFLIGHT_TOTAL_REQUEST_LIMIT": setting}):
                     with self.assertRaises(ValueError):
                         self.store.admit_request()
-        self.assertNotIn("service_v1/global-budget", self.client.documents)
+                self.assertEqual(self.client.documents["service_v1/global-budget"], before)
 
 
 if __name__ == "__main__":

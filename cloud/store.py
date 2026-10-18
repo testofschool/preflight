@@ -89,7 +89,7 @@ class FirestoreDifficultyStore:
             total_limit = int(os.environ.get("PREFLIGHT_TOTAL_REQUEST_LIMIT", "1000"))
         except (TypeError, ValueError):
             raise ValueError("The total request limit must be a positive integer") from None
-        if not 1 <= total_limit <= 1000:
+        if not 1 <= total_limit <= 3000:
             raise ValueError("The total request limit must be between one and 1000")
         reference = self.client.collection("service_v1").document("global-budget")
         decorator = self.transaction_decorator

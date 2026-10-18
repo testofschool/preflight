@@ -21,7 +21,7 @@
     <main>
       <section class="intro" aria-labelledby="page-title">
         <div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> AN EARLY CHECK FOR YOUR VIDEO PROMPT</div>
-        <h1 id="page-title">Before the first frame.</h1>
+        <h1 id="page-title">Preflight — check an AI-video prompt before you pay.</h1>
         <p class="intro-copy">Look for signs of a difficult prompt before spending on a generation.</p>
         <a class="clip-review-link" href="#clip-review">Have a clip already? Review it <span aria-hidden="true">↓</span></a>
 
@@ -71,7 +71,7 @@
       </div>
 
       <section id="clip-review" class="postcheck-section" aria-labelledby="postcheck-heading">
-        <div class="postcheck-intro"><div><div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> REVIEW A CLIP YOU ALREADY HAVE</div><h2 id="postcheck-heading">After the first frame.</h2><p>Upload an existing AI clip for a machine review. You can start here without running a preflight.</p></div><span id="postcheck-status" class="feature-tag">CHECKING AVAILABILITY</span></div>
+        <div class="postcheck-intro"><div><div class="eyebrow"><span class="small-rule" aria-hidden="true"></span> REVIEW A CLIP YOU ALREADY HAVE</div><h2 id="postcheck-heading">After the first frame.</h2><p>Upload an existing AI clip for a machine review. You can start here without running a preflight.</p></div><span id="postcheck-status" class="availability-note" role="status">Checking availability…</span></div>
         <div class="review-layout">
           <form id="postcheck-form" class="upload-panel" novalidate>
             <label for="clip-file">Your existing AI clip</label>
@@ -83,6 +83,7 @@
             <label class="model-label" for="clip-model">Model label <span>optional · owner supplied</span></label><input id="clip-model" name="model" class="text-input" type="text" maxlength="120" placeholder="owner-upload" autocomplete="off">
             <p id="postcheck-error" class="form-error" role="alert" hidden></p>
             <button id="review-button" class="primary-button" type="submit" disabled><span id="review-button-label">Review this clip</span><span class="button-arrow" aria-hidden="true">→</span><span class="button-spinner" aria-hidden="true"></span></button>
+            <div id="review-progress" class="review-progress" role="status" hidden><progress aria-label="Uploading and reviewing your clip"></progress><p>Uploading and reviewing your clip… This may take up to two minutes.</p></div>
             <p id="postcheck-availability" class="field-hint">Checking whether upload review is connected.</p>
             <p class="upload-note">Owner-provided AI clip only. Preflight does not generate or request a video.</p>
           </form>

@@ -131,12 +131,12 @@
     comparison.className = "rewrite-comparison";
     comparison.setAttribute("aria-label", `${mixed ? "Estimated" : "Historical"} risk: original ${percent(before)}, rewrite ${percent(after)}`);
     const from = document.createElement("span");
-    from.textContent = `${percent(before)} original`;
+    from.textContent = percent(before);
     const arrow = document.createElement("span");
     arrow.textContent = "→";
     arrow.setAttribute("aria-hidden", "true");
     const to = document.createElement("strong");
-    to.textContent = `${percent(after)} rewrite`;
+    to.textContent = percent(after);
     comparison.append(from, arrow, to);
     const copy = document.createElement("button");
     copy.type = "button";
@@ -160,7 +160,10 @@
     const caption = document.createElement("p");
     caption.className = "subtle-copy";
     caption.textContent = mixed ? "This estimate mixes human votes and separate machine clip reviews. A lower score does not guarantee a better video." : "A lower historical estimate is not a guarantee of a better video.";
-    content.append(tag, quote, comparison, copy, caption);
+    const comparisonLabel = document.createElement("p");
+    comparisonLabel.className = "subtle-copy rewrite-comparison-label";
+    comparisonLabel.textContent = mixed ? "Original → rewrite · estimated risk" : "Original → rewrite · historical risk";
+    content.append(tag, comparison, comparisonLabel, quote, copy, caption);
   }
 
   function renderNeighbors(items, supported) {

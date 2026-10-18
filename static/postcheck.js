@@ -203,6 +203,7 @@
     document.getElementById("verdict-state").textContent = "REVIEWING SAMPLED FRAMES";
     document.getElementById("verdict-value").textContent = "Reading the clip.";
     busy = true;
+    document.getElementById("review-progress").hidden = false;
     updateButton();
     button.classList.add("loading");
     document.getElementById("review-button-label").textContent = "Reviewing sampled frames…";
@@ -227,6 +228,7 @@
     } finally {
       clearTimeout(timeout);
       busy = false;
+      document.getElementById("review-progress").hidden = true;
       form.querySelectorAll("input,textarea,button").forEach(element => { element.disabled = false; });
       button.classList.remove("loading");
       document.getElementById("review-button-label").textContent = "Review this clip";
@@ -237,8 +239,7 @@
 
   window.preflightStatusReady.then(status => {
     available = status?.postcheck === true;
-    document.getElementById("postcheck-status").textContent = available ? "UPLOAD REVIEW · CONNECTED" : "UPLOAD REVIEW · NOT CONNECTED";
-    document.getElementById("postcheck-status").classList.toggle("improved-tag", available);
+    document.getElementById("postcheck-status").textContent = available ? "Clip review available" : "Clip review unavailable";
     document.getElementById("postcheck-availability").textContent = available ? "Upload-only review is connected. Your clip is sent only when you press Review." : "Upload review is unavailable in the current service mode. You can prepare a clip and prompt here.";
     updateButton();
   });

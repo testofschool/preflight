@@ -16,7 +16,7 @@
   "sha256_read_chunk_bytes": 1048576,
   "files": [
     {
-      "path": "/Users/felix/Desktop/SK하이닉스 AI 해커톤 2026/preflight_demo_final.mp4",
+      "path": "<other local folder, not part of this project>",
       "discovered_by_demo_glob": true,
       "bytes": 8109690,
       "ffprobe_exit_code": 0,
@@ -140,7 +140,7 @@
       "unchanged_from_initial_inventory": true
     },
     {
-      "path": "/Users/felix/Desktop/E/MAWD Challenge program overview/mawd-contract-total-cost/build/demo.mp4",
+      "path": "<other local folder, not part of this project>",
       "discovered_by_demo_glob": true,
       "bytes": 176209,
       "ffprobe_exit_code": 0,

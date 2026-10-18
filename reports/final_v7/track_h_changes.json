@@ -1,0 +1,51 @@
+{
+  "checked_at_kst": "2026-10-18T18:15:18.649666+09:00",
+  "baseline": "2a631fec9fda2dd7d0d107c270a9034f53193fd4",
+  "changed_files": [
+    {
+      "path": "reports/final_v6/REPORT.md",
+      "replacements": 2,
+      "before_sha256": "451ce961426e9833d9a5428c47cb9cb608cee08470c921ea40c49da49884fda3",
+      "after_sha256": "d60f06099c4163d202d70bbdb8240612a7c70b05050adbd818480c42c803af5e"
+    },
+    {
+      "path": "reports/final_v6/track_e_inventory.json",
+      "replacements": 2,
+      "before_sha256": "16006176e0d2fb3d56dc5e47a59952a158fce2dc8c8a6af60a54d8c5bcba0c59",
+      "after_sha256": "c6fac409d379585c6e1e813be9c342c92bf6958d26b7d2644528ad5ff3786a73"
+    },
+    {
+      "path": "reports/final_v6/track_e_inventory.md",
+      "replacements": 4,
+      "before_sha256": "3138035f90a61682a4c7c9bc8267b7ca6ddeb9f5653fa25f572e67831e11e9b8",
+      "after_sha256": "78a994d33791e82c0efdaec16d137d2937702d7ba136fa3284807fc3f711374c"
+    },
+    {
+      "path": "reports/final_v6/track_e_inventory_before_submission.json",
+      "replacements": 2,
+      "before_sha256": "16006176e0d2fb3d56dc5e47a59952a158fce2dc8c8a6af60a54d8c5bcba0c59",
+      "after_sha256": "c6fac409d379585c6e1e813be9c342c92bf6958d26b7d2644528ad5ff3786a73"
+    },
+    {
+      "path": "reports/final_v6/track_e_inventory_before_submission.md",
+      "replacements": 4,
+      "before_sha256": "3138035f90a61682a4c7c9bc8267b7ca6ddeb9f5653fa25f572e67831e11e9b8",
+      "after_sha256": "78a994d33791e82c0efdaec16d137d2937702d7ba136fa3284807fc3f711374c"
+    },
+    {
+      "path": "reports/final_v6/track_e_submission_inventory.json",
+      "replacements": 2,
+      "before_sha256": "90919cd63a87c841ea2bc509a35763b383bff39a2b00f8b309a8016e3cc4a002",
+      "after_sha256": "280ca2730515fc5d6a3c999e363d081d6cae9dff44a657b11997c994ed709781"
+    },
+    {
+      "path": "reports/final_v6/track_e_submission_inventory.md",
+      "replacements": 4,
+      "before_sha256": "ae42b595f5d934b65cc091cfd37087139440d86e69a596e005240c2b7328d49a",
+      "after_sha256": "14ad76e6a8c21e5d01db119f49c946a3a789a7294fedf7c63025d7d36ec75fb8"
+    }
+  ],
+  "removed_from_index_kept_locally": "reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md",
+  "local_copy_exists": true,
+  "history_rewrite": false
+}

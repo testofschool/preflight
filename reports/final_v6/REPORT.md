@@ -1,6 +1,6 @@
 # Preflight final package v6
 
-Report date: 2026-10-18, Asia/Seoul. **Tracks E, B authoring and C extension are complete. Track D awaits a human URL; final Track F remains scheduled. Repository publication receipts follow below after the content commit.** Track D waits for Felix's public YouTube URL and does not block other tracks. No submission form has been submitted.
+Report date: 2026-10-18, Asia/Seoul. **Tracks E, B authoring and C extension are complete. Track D awaits a human URL; final Track F remains scheduled. Content commit and public verification receipts are recorded below.** Track D waits for Felix's public YouTube URL and does not block other tracks. No submission form has been submitted.
 
 | Track | State | Result |
 | --- | --- | --- |
@@ -146,7 +146,7 @@ No runtime, production documents, cloud settings, tags or history were changed b
 ## Scope, prior completed tracks and anything not done
 
 - Prior Track A evidence remains in `reports/final_v5/REPORT.md`: revision `preflight-00027-pit`, 100% traffic, 500/day, 5/min, 94 offline tests, unchanged image; no fresh runtime test or deployment is implied by this docs/media package.
-- Runtime source, image, Cloud Run settings, all three Git tags and existing history are frozen. New recording may call the explicitly authorized Gemini text rewrite, but image generation and Veo are prohibited. The captured response reports 3 planner + 1 text rewrite calls, with 0 image and 0 Veo calls; no billed-spend estimate is invented.
+- Runtime source, image, Cloud Run settings, all three Git tags and existing history are frozen. The new recording used the explicitly authorized Gemini text rewrite; image generation and Veo stayed prohibited. The captured response reports 3 planner + 1 text rewrite calls, with 0 image and 0 Veo calls; no billed-spend estimate is invented.
 - Submission-video export, independent QA, parent selected-frame review and refreshed 12-file inventory complete. Full-video acceptance by Felix is pending.
 - Public YouTube upload, URL replacement, public visibility/duration validation: NOT DONE, human URL pending.
 - Final Track F: NOT DONE yet; scheduled 21:30 or after B+D.
@@ -155,8 +155,23 @@ No runtime, production documents, cloud settings, tags or history were changed b
 
 ## Commits and public verification
 
-Baseline public main: `a993aa5c4986b564cb9d379d657112d5ad7494a0`. V6 content/receipt commits and exact-head secret/history/anonymous-clone checks will be appended after the content commit. No future commit is claimed as already scanned.
+Baseline public main: `a993aa5c4986b564cb9d379d657112d5ad7494a0`. V6 content commit **`a273bbfb4128000095fd60cde4a1db2c3c0dd64f`** is pushed to public `main`. This section records exact coverage; a later receipt-only commit is not covered by the content-commit checks below.
 
 Prepublication scope check: **25/25 runtime files unchanged**, record_demo script unchanged, **3/3 fixed tags unchanged**, original raw and 2:52 backup hashes unchanged, new submission/copy identity matches, **0 dataless files** (`runtime_scope_final.json`). Native read-only production receipt at 17:51 KST confirms revision `preflight-00027-pit` 100%, same image, daily 500, live=false, warm=false (`production_read_only.json`). No runtime tests were rerun for this docs/media-only change.
 
 Prepublication worktree/index guard: **0 marker hits, 0 errors**, complete (1,020 working-tree files;840 then-indexed files). The first attempt flagged one public Git commit verification signature in ignored font-download metadata. It was classified without printing the signature and preserved outside the repository; original guard rules and all font/deck/runtime inputs were unchanged. Both the initial result and successful recheck are recorded in `secrets_prepublication_initial.json`, `secrets_public_metadata_classification.json` and `secrets_prepublication.json`. This was not a discovered private credential. The commit hook will inspect the final staged set again.
+
+| Published check | Result / exact coverage |
+| --- | --- |
+| Content commit | `a273bbfb4128000095fd60cde4a1db2c3c0dd64f`; pushed public main ; 151 scoped paths; no video binary in Git |
+| Standard commit hook | Commit succeeded using executable `.githooks/pre-commit`; no bypass; original guard rules intact. Exact hook counts were not retained by the output parser; direct prepublication counts above are separate. |
+| All-reachable history marker scan | **PASS; 0 hits; 17 commits; 871 blobs; complete; 0 errors**, head `a273bbfb4128000095fd60cde4a1db2c3c0dd64f` |
+| Anonymous clone | PASS;public main exactly `a273bbfb4128000095fd60cde4a1db2c3c0dd64f`; credentials/helpers disabled |
+| Public repo / raw README | **HTTP 200 / 200**; README matches anonymous clone |
+| Public PDF at content commit | **HTTP 200**, 660,305 B, SHA-256 `7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0` |
+| Clone runtime / source tags | **25 files** match frozen digest `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`; all 3 fixed tag targets match |
+| Submission Brief description | **952/1,024 characters**, baseline hash unchanged |
+| YouTube publication / visibility | **NOT RUN**; human public URL pending |
+| Final Track F | **NOT DONE YET**; one-time 21:30 KST follow-up, or earlier after B+D |
+
+Receipts: `history_scan_content_commit.json`, `public_access_content_commit.json`, `public_pdf_content_commit.json`. The marker scan is a fixed-pattern check, not a claim of exhaustive credential discovery. This report and these publication receipts are added after the content commit. The subsequent receipt commit will be pushed and independently checked at its own exact head; those final receipts live outside the checkout under `/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_v6/` so the repository can remain clean without claiming a scan of its own future receipt. The final chat names that pushed receipt SHA. No tag was created, moved or deleted.

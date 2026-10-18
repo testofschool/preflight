@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-10-18T02:23:59.636095+00:00",
+  "anonymous_clone": true,
+  "credentials_provided": false,
+  "credential_helper": "empty",
+  "global_config": "/dev/null",
+  "system_config_disabled": true,
+  "clone_exit_code": 0,
+  "expected_main_commit": "df49eec947029137477f294f0e5a8a61e189dd05",
+  "cloned_main_commit": "df49eec947029137477f294f0e5a8a61e189dd05",
+  "main_matches": true,
+  "tags": {
+    "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+    "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+    "aibc-2026-submission-v3": "d638c0690cb17d60316922eb30a14f150fe7c23c"
+  },
+  "expected_tags": {
+    "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+    "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+    "aibc-2026-submission-v3": "d638c0690cb17d60316922eb30a14f150fe7c23c"
+  },
+  "all_tags_match": true,
+  "runtime_file_count": 25,
+  "cloned_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "production_tag_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "native_archive_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "runtime_matches_native": true,
+  "repo_http_status": 200,
+  "raw_readme_http_status": 200,
+  "readme_matches_clone": true,
+  "canonical_clause_in_readme": true,
+  "canonical_clause_in_submission_notes": true,
+  "description_characters": 952,
+  "description_within1024": true,
+  "TLS_verification": true,
+  "pass": true
+}

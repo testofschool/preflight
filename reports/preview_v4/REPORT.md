@@ -1,25 +1,25 @@
-# Preflight preview v4 — evidence report (release work pending)
+# Preflight preview v4 — final evidence report
 
-Snapshot: **2026-10-18T11:22:23+09:00**. This document records completed measurements and leaves unfinished release work as **PENDING**. Native promotion, production self-QA and the v4 demo are complete. Final evidence publication, history scanning and anonymous-access checks remain PENDING.
+Verified snapshot: **2026-10-18T11:25:37+09:00**. Production serves **preflight-00025-lij at 100%** in **samples-only** mode. V-A/V-B/V-D/V-E/V-F pass; V-C is not applicable. All three live-image probes fail the 19/20 rule: **P1 8/20, P2 6/20, P3 6/20**. Production self-QA passed **28/28 steps**, and the clean one-take demo passed **11/11 steps**. Final accounting is **69 measured image attempts / 71 conservative reservations**, **$1.172306350 image-request list price**, and **50/60 app admissions** with 10 remaining.
 
-Production serves **preflight-00025-lij at 100%** in **samples-only** mode. All 60 preregistered probe calls are complete: P1 returned 8/20 successful images, P2 6/20 and P3 6/20. No arm reaches 19/20, so no live arm is selected. All applicable candidate gates are PASS; V-C is not applicable because no arm qualifies. The bound gate decision and native promotion are recorded. Source commit `d638c0690cb17d60316922eb30a14f150fe7c23c` and the new lightweight `aibc-2026-submission-v3` tag have been pushed. Production self-QA passed 28/28 recorded steps. The one-take demo is complete; final evidence publication, history scanning and anonymous-publication verification remain PENDING.
+The production source tag **`aibc-2026-submission-v3` pins `d638c0690cb17d60316922eb30a14f150fe7c23c`**. Anonymous clone, public prose, history and 25-file runtime checks passed at later evidence commit **`df49eec947029137477f294f0e5a8a61e189dd05`**. Its runtime hash matches the source tag and native deployment. Receipt coverage is bounded to those named commits; this report/public-receipt append has no commit ID in this snapshot. Actual billing and clip-review accuracy remain **UNMEASURED**.
 
 The required message is: **Image preview — Active for sample prompts (saved stills); live generation limited**. Five sample decisions are saved: four lower-risk rewrites and one honest unchanged result for “indoor gymnasium”. Saved images are labeled with their generation date, 0 model calls and $0.00. Typed prompts retain the live Gemini rewrite. An uncached still in samples-only mode says: “Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.”
 
 ## V-A through V-F
 
-| Gate | Status at this snapshot | Measured evidence | Remaining work |
+| Gate | Final status | Measured evidence | Scope / limits |
 | --- | --- | --- | --- |
-| V-A | PASS — final full suite | 144 tests and 11 subtests passed; 0 failures/errors/skips, 3 warnings, 46.72 s. Python 3.12.14 in an isolated task environment outside iCloud; 113/113 exact pins matched, 0 version mismatches. Includes 12 promotion guards, 12 offline probe tests and 5 offline warm tests. Separate mocked browser contracts: 28/28. | No remaining test gate; production self-QA also passed 28/28. |
-| V-B | PASS — candidate and production | Final candidate: 10/10 visible saved stills, cache hits, model_calls=0 and exact saved labels; 0 page errors, 22 screenshots. Fresh production self-QA: 28/28 steps/screenshots, including 10/10 visible saved stills with hits, 0 model calls and exact labels; 0 page errors. | None; the demo also records two HTTP 200 cache hits with 0 model calls. |
-| V-C | N/A — samples-only | All 60 probe calls are complete; every arm fails 19/20. No live UI calls are required for the samples-only release. | No live path will be promoted. |
-| V-D | PASS — candidate and production previews | Candidate: 10/10 HTTP 200, 0.3464–0.7948 s. Production: 10/10 saved previews HTTP 200, 0.3708–0.5743 s; two expected typed HTTP 503 responses, 0.1838–0.1866 s. 0 HTTP 504. All 10 warm responses also <45 s; warm maximum 13.662 s. | None; demo preview response-header times are 0.404 s and 0.245 s, both HTTP 200 hits. |
-| V-E | PASS — final candidate | Typed prompts: 6/6 HTTP 200, 6/6 live rewrites, 6/6 verified workflows, 6/6 <45 s and two different rewrites for the repeated prompt. Postcheck smoke: HTTP 200, 17.896 s. Final candidate viewport: 18 objects, 7 colors, CTA bottom 837.4375 px. Native source/image provenance: PASS, 25/25 files. | Production self-QA passed: two further typed HTTP 200 live rewrites, 5.4072/6.3758 s; canonical architecture and public README match. Retain postcheck smoke-test limitations. |
-| V-F | PASS — final caps/spend | 69 image-model attempts and 71 conservative reservations are below the amended v4 cap of 85; 0 unknown dispatches, 0 unpriced rows; image-model request list price $1.172306350. Native final app counter is 50/60, leaving 10 admissions; 0 new model calls after probe completion, including the two demo cache hits. | None; actual billed spend remains UNMEASURED. |
+| V-A | PASS — final full suite | 144 tests and 11 subtests passed; 0 failures/errors/skips, 3 warnings, 46.72 s. Python 3.12.14 in an isolated task environment outside iCloud; 113/113 exact pins matched, 0 version mismatches. Includes 12 promotion guards, 12 offline probe tests and 5 offline warm tests. Separate mocked browser contracts: 28/28. | Original external environment remains partly offloaded; passing tests used the isolated exact-pin environment. |
+| V-B | PASS — candidate and production | Final candidate: 10/10 visible saved stills, cache hits, model_calls=0 and exact saved labels; 0 page errors, 22 screenshots. Fresh production self-QA: 28/28 steps/screenshots, including 10/10 visible saved stills with hits, 0 model calls and exact labels; 0 page errors. | Demo adds two HTTP 200 cache hits with 0 model calls; eight exported frames visually inspected. |
+| V-C | N/A — samples-only | All 60 probe calls are complete; every arm fails 19/20. No live UI calls are required for the samples-only release. | Live image generation remains disabled; typed risk checks retain live rewrites. |
+| V-D | PASS — all app preview actions | All 34 `/preview` HTTP actions completed below 45 s; maximum 13.662 s; 0 HTTP 504. They comprise 32 admitted HTTP 200 actions and two expected typed HTTP 503 limited-mode responses. Candidate cache-hit latencies: 0.3464–0.7948 s; production self-QA: 0.3708–0.5743 s. | Demo response-header times: 0.404/0.245 s, both HTTP 200 hits. Provider probes are separately reported below. |
+| V-E | PASS — scope and regressions | Typed prompts: 6/6 HTTP 200, 6/6 live rewrites, 6/6 verified workflows, 6/6 <45 s and two different rewrites for the repeated prompt. Postcheck smoke: HTTP 200, 17.896 s. Final candidate viewport: 18 objects, 7 colors, CTA bottom 837.4375 px. Native source/image provenance: PASS, 25/25 files. | Production adds two HTTP 200 live rewrites, 5.4072/6.3758 s. Anonymous main/source-tag/native runtime hashes match across 25 files; protected inputs remain exact. Frozen-reference postcheck smoke is NOT RUN. |
+| V-F | PASS — final caps/spend | 69 image-model attempts and 71 conservative reservations are below the amended v4 cap of 85; 0 unknown dispatches, 0 unpriced rows; image-model request list price $1.172306350. Native final app counter is 50/60, leaving 10 admissions; 0 new model calls after probe completion, including the two demo cache hits. | 5/min, 60/day, 500 code ceiling and 1,000 check allowance unchanged; actual billing UNMEASURED. |
 
-Test receipts: [final isolated full suite](tests_final_isolated.txt), [JUnit](tests_final_isolated.junit.xml), [verified test scope](tests_final_scope.json), [113 exact pins and isolated environment](test_environment_fallback.json), [retained earlier runtime tests](tests_runtime_frozen.txt), [retained earlier full output](tests_final.txt), [mocked UI contracts](ui_contract.json), [offline probe tests](offline_probe_tests.log), [offline warm tests](offline_warm_tests.log), [scope and promotion-guard audit](release_scope_audit.json). Mocked tests do not establish provider reliability.
+Test receipts: [final isolated full suite](tests_final_isolated.txt), [JUnit](tests_final_isolated.junit.xml), [verified test scope](tests_final_scope.json), [113 exact pins and isolated environment](test_environment_fallback.json), [retained earlier runtime tests](tests_runtime_frozen.txt), [retained earlier full output](tests_final.txt), [mocked UI contracts](ui_contract.json), [final offline probe tests, 12/12](offline_probe_tests_final.log), [final offline warm tests, 5/5](offline_warm_tests_final.log), [scope and promotion-guard audit](release_scope_audit.json). Mocked tests do not establish provider reliability.
 
-The [bound gate decision](gate_decision.json) records V-A/V-B/V-D/V-E/V-F as true and V-C as not applicable. It names source commit `d638c0690cb17d60316922eb30a14f150fe7c23c`, candidate `preflight-00025-lij`, build `095a35c2-74ad-49cb-8ae8-507a6216ee74` and runtime SHA-256 `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. The matching revision has been promoted, and production self-QA passed 28/28 steps. [Native 100% traffic receipt](promotion.json).
+The [bound gate decision](gate_decision.json) records V-A/V-B/V-D/V-E/V-F as true and V-C as not applicable. It names source commit `d638c0690cb17d60316922eb30a14f150fe7c23c`, candidate `preflight-00025-lij`, build `095a35c2-74ad-49cb-8ae8-507a6216ee74` and runtime SHA-256 `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. The matching revision has been promoted, and production self-QA passed 28/28 steps. [Promotion receipt](promotion.json), [final native configuration](production_final.json), [closeout accounting](closeout_accounting.json).
 
 ## Probe registration and selection
 
@@ -126,7 +126,7 @@ The committed fixture was captured from the real production rewrite agent on 202
 | indoor gymnasium | no_safe_rewrite | 0.065 | 0.065 | 6.5% → 6.5% |
 | a purple clock | improved | 0.05714285714285714 | 0.025 | 5.7% → 2.5% |
 
-The values above are pinned fixture values, not a claim that the pending demo has already shown them. A lower historical/mixed estimate does not establish better video quality. Original human evidence remains separate from machine feedback.
+The table records all five pinned fixture values. The completed demo uses the spoon/laptop pair, **46.8% → 15.8%**, as verified in the selected record log below. A lower historical/mixed estimate does not establish better video quality. Original human evidence remains separate from machine feedback.
 
 | Warm action | Variant | HTTP | Cache | Model calls | Image bytes | HTTP latency (s) | Generation date |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -169,13 +169,13 @@ Scope audit: **13/13 frozen inputs match original Git blobs**. All five risk-cor
 | preflight-00024-poq | 0% | Bounded app warming and viewport checks | Sample warming enabled; typed live disabled |
 | preflight-00025-lij | 0% candidate → 100% production | All applicable gates passed; promoted | Preview enabled; warming false; typed live false |
 
-Final candidate build: `095a35c2-74ad-49cb-8ae8-507a6216ee74`. Release source: `d638c0690cb17d60316922eb30a14f150fe7c23c`, committed locally and pushed to main. Native provenance passed **25/25 Git/archive runtime files**, verified the exact candidate revision and matched the build/revision image digest. Git runtime SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Cloud Build archive runtime SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Candidate image digest: `sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932`. The `preview-v4-candidate` service tag remains attached to the accepted revision. Native post-promotion traffic confirms **100% on `preflight-00025-lij`**, with warming and typed live generation both disabled. [Build](build.json), [candidate](candidate.json), [native provenance](source_match.json), [100% production traffic](promotion.json), [superseded revision](candidate_superseded.json).
+Accepted production build: `095a35c2-74ad-49cb-8ae8-507a6216ee74`. Release source: `d638c0690cb17d60316922eb30a14f150fe7c23c`, committed locally and pushed to main. Native provenance passed **25/25 Git/archive runtime files**, verified the exact candidate revision and matched the build/revision image digest. Git runtime SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Cloud Build archive runtime SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Candidate image digest: `sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932`. The `preview-v4-candidate` service tag remains attached to the accepted revision. Native post-promotion traffic confirms **100% on `preflight-00025-lij`**, with warming and typed live generation both disabled. [Build](build.json), [candidate](candidate.json), [native provenance](source_match.json), [100% production traffic](promotion.json), [fresh production settings](production_final.json), [superseded revision](candidate_superseded.json).
 
-| Setting | Baseline | Final candidate / invariant |
+| Setting | Baseline | Final production / invariant |
 | --- | --- | --- |
 | PREFLIGHT_PREVIEW_ENABLED | false | true |
 | PREFLIGHT_PREVIEW_LIVE_ENABLED | not set | false |
-| PREFLIGHT_PREVIEW_WARM_ENABLED | not set | true only for warm revision; false on final candidate |
+| PREFLIGHT_PREVIEW_WARM_ENABLED | not set | true only for warm revision; false on final production revision |
 | PREFLIGHT_IMAGE_LIVE_ARM | not set | P2 configured for the image service; no live arm selected |
 | PREFLIGHT_IMAGE_LOCATION | global | global |
 | Cloud Run timeout | 40 s | 40 s; app preview deadline 38 s |
@@ -185,9 +185,10 @@ Final candidate build: `095a35c2-74ad-49cb-8ae8-507a6216ee74`. Release source: `
 | Cumulative check allowance | 1,000 | 1,000 |
 | Cloud Run concurrency / CPU / memory | 80 / 1 CPU / 1 GiB | unchanged |
 | Veo calls | 0 | 0 |
+
 ## File-by-file byte deltas
 
-Measured against source baseline `9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af`. This table covers changed source, scripts, tests and submitted prose at this snapshot. Generated report/image/demo artifacts are accounted for in their dedicated receipts; the final demo is verified below. A zero baseline size identifies a new file.
+Measured against source baseline `9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af`. This table covers changed source, scripts, tests and submitted prose in production source commit `d638c0690cb17d60316922eb30a14f150fe7c23c`. Generated report/image/demo artifacts are accounted for in their dedicated receipts; the final demo is verified below. A zero baseline size identifies a new file.
 
 | File | Baseline bytes | Current bytes | Delta bytes |
 | --- | --- | --- | --- |
@@ -226,7 +227,7 @@ The human amendment sets the v4 model-attempt budget to 85; the previous 44 v3 a
 | P2 | 20 | 20 | $0.2322747 | 0 |
 | P3 | 20 | 20 | $0.2690385 | 0 |
 
-Snapshot ledger: **71 reservations**, **71 results**, **69 known model attempts**, **2 known zero-call responses**, and **0 reservation(s) awaiting a result**. The known result-based list-price subtotal is **$1.17230635**. The completed warm/probe phase has **0 unknown dispatches and 0 unpriced result rows**, and the pre-promotion V-F cap/spend gate is **PASS**. Final post-demo native verification confirms **50/60 app admissions**, **10 remaining** and **0 new model calls after probe completion**; the measured attempts and list-price subtotal are unchanged. [Final native budget receipt](firestore_daily_budget_final.json).
+Completed ledger: **71 reservations**, **71 results**, **69 known model attempts**, **2 known zero-call responses**, and **0 reservation(s) awaiting a result**. The known result-based list-price subtotal is **$1.17230635**. The completed warm/probe phase has **0 unknown dispatches and 0 unpriced result rows**, and final V-F cap/spend verification is **PASS**. Final post-demo native verification confirms **50/60 app admissions**, **10 remaining** and **0 new model calls after probe completion**; the measured attempts and list-price subtotal are unchanged. [Final native budget receipt](firestore_daily_budget_final.json).
 
 Completed model totals, including warm calls:
 
@@ -243,6 +244,8 @@ Forty provider HTTP-429 calls have zero list-price token cost under the retained
 
 HTTP-200 costs use recorded token usage and the returned traffic class. P1 Priority rates are 1.8× standard rates; observed `ON_DEMAND` downgrades use standard prices. Official pricing states that non-200 provider requests are not charged; known non-200 rows use zero list-price token cost. Unknown transport outcomes remain unpriced. Actual billed spend is **UNMEASURED**. [Pricing evidence](official_sources.json), [non-200 pricing amendment](pricing_amendment_003.json), [derived annotations](derived_probe_annotations.json), [Google pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing).
 
+Closeout reconciles **34 app `/preview` HTTP actions**: 10 warm, 10 candidate, 12 production self-QA and 2 demo. **32 were admitted**, advancing the native counter **18 → 50**; two typed limited-mode requests returned HTTP 503 before admission. All 34 completed below 45 s; the maximum measured latency was **13.662 s**, with **0 HTTP 504**. QA and demo added **0 image-model calls**. [Closeout accounting](closeout_accounting.json).
+
 The independent app admission cap remains **60/day and 5/min**, including cache hits. Native counters were **28/60 after warming**, **28/60 after all P2 probes**, **38/60 after the 10 candidate sample previews**, **48/60 after the 10 production self-QA sample previews**, and **50/60 after the two demo sample previews**, leaving **10 admissions**. The direct probe arm did not consume app preview admissions. The two typed samples-only misses returned before preview admission. V-C was not run because no arm qualified. The final native snapshot at **2026-10-18T11:21:39.080629+09:00** confirms **0 new model calls after probe completion** and the unchanged 69 measured attempts / 71 conservative reservations. The counter resets at **2026-10-19 00:00 UTC / 09:00 KST**. [Native post-warm counter](firestore_daily_budget_after_warm.json), [after-P2 counter](firestore_daily_budget_after_P2.json), [after-V-B counter](firestore_daily_budget_after_VB.json), [post-self-QA / before-demo counter](firestore_daily_budget_before_demo.json), [final post-demo counter](firestore_daily_budget_final.json), [pre-warm cap check](firestore_daily_budget_before_warm.json).
 
 ## Preserved incidents and corrections
@@ -252,7 +255,7 @@ The independent app admission cap remains **60/day and 5/min**, including cache 
 - **iCloud offloaded 48 files during the run.** Reads of a frozen model artifact, Git objects and the sealed official-source receipt blocked. P2 held until original bytes were readable. Native `brctl` plus Foundation coordinated reads restored originals; final dataless count was **0**. The official receipt remained **3,001 bytes** with SHA-256 `44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0`, matching the seal. **0 files were reconstructed** and flags were not cleared artificially. Earlier HOLD and fresh PASS_SCOPE audits are both retained. [Offload incident](icloud_regression.json), [source-receipt incident](icloud_offload_regression.json), [revalidation](revalidated_after_hydration.json), [prior scope HOLD](release_scope_audit_before_hydration.json).
 - **The initial read-only browser auditor used a CSP-incompatible predicate.** The failure happened before any preview/check call. The corrected arrow predicate passed the viewport audit; the initial failure remains saved. The real UI runner was corrected before V-B execution. [Initial audit failure](viewport_warm_candidate/attempt_01_csp_wait_failure.json), [passing viewport receipt](viewport_warm_candidate/summary.json).
 - **An initial real-UI process stopped before browser execution because its interpreter lacked Playwright.** It made **0 preview HTTP requests and 0 provider calls**. The runner then used the existing `python3` Playwright installation and passed the 10/10 candidate gate. No package installation, provider retry or application change was used for this correction. [Initial import failure](ui_candidate_stdout.txt), [passing rerun](ui_candidate_stdout_retry_environment.txt), [execution notes](execution_notes.json).
-- **The original external test environment remained partly offloaded.** Native hydration reduced its dataless count from **1,944 to 1,931** after about **3 minutes**; test collection still blocked on installed package bytes. The partial and interrupted attempts are preserved and are not presented as passed validation. Final validation used an isolated **Python 3.12.14** environment outside iCloud, with **113/113 existing exact package pins matched and 0 version mismatches**. The complete suite passed **144 tests plus 11 subtests, with 3 warnings in 46.72 s**, and JUnit records **144 testcase entries, 0 failures, 0 errors and 0 skips**. Original package bytes and repository runtime/lock files were not replaced or changed. [Original test incident](test_environment_incident.json), [native hydration counts](test_environment_hydration.json), [isolated exact-pin setup](test_environment_fallback.json), [final test output](tests_final_isolated.txt), [JUnit](tests_final_isolated.junit.xml), [test scope](tests_final_scope.json).
+- **The original external test environment remained partly offloaded.** Native hydration reduced its dataless count from **1,944 to 1,931** after about **3 minutes**; test collection still blocked on installed package bytes. The partial and interrupted attempts are preserved and are not presented as passed validation. Final validation used an isolated **Python 3.12.14** environment outside iCloud, with **113/113 existing exact package pins matched and 0 version mismatches**. The complete suite passed **144 tests plus 11 subtests, with 3 warnings in 46.72 s**, and JUnit records **144 testcase entries, 0 failures, 0 errors and 0 skips**. The latest closeout still finds **1,920 dataless files in that original external environment**, so its full hydration remains **UNCONFIRMED**; it is retained unchanged. The repository itself has **0 dataless files**. Original package bytes and repository runtime/lock files were not replaced or changed. [Closeout counts](closeout_accounting.json), [Original test incident](test_environment_incident.json), [native hydration counts](test_environment_hydration.json), [isolated exact-pin setup](test_environment_fallback.json), [final test output](tests_final_isolated.txt), [JUnit](tests_final_isolated.junit.xml), [test scope](tests_final_scope.json).
 - **Pre-deployment integration review found harness and promotion defects.** The demo architecture selector was updated to the canonical message; V-C counts fresh one-call misses; the 38-second app deadline fits beneath the unchanged 40-second Cloud Run timeout. Promotion now requires warm=false in saved and native revision flags and binds gate revision/build/commit/runtime hashes and native image digest. The independent promotion battery passed **12/12**. **0 failed candidate revisions were promoted.** [Execution notes](execution_notes.json), [promotion audit](release_scope_audit.json).
 
 ## Production self-QA — PASS 28/28
@@ -299,6 +302,8 @@ The gym’s two saved preview actions intentionally use the same original prompt
 ## Demo re-record — PASS
 
 The published demo is **one clean, continuous take**, selected from **one requested take**. All **11 recorded steps passed**, with **0 page errors, 0 unexpected request failures and the expected request sequence**. Its **108.366667-second** H.264 video is **1920×1080 at 30 fps**, has **no audio stream**, and passed full decode. The two sample stills remained visible for **3.318 s** and **3.251 s**, each exceeding the 3-second requirement. Both `/preview` requests returned HTTP 200 cache hits with **0 image-model calls** and the exact saved metadata label. [Artifact and frame hashes](demo_artifact.json), [selected one-take log](../../demo/record_log.json), [published video](../../demo/preflight_demo_raw.mp4).
+
+Root visually inspected **8/8 unedited exported frames**: **0 broken images, 0 risk mismatches and 0 preview-mode mismatches**. The saved label, 46.8% → 15.8% comparison and canonical architecture clause were visible. [Visual inspection](demo_visual_inspection.json).
 
 | Demo fact | Recorded value |
 | --- | --- |
@@ -347,31 +352,34 @@ The sample actually recorded is **“a spoon and a laptop”**, using the saved 
 
 The clip-review beat uses the labeled **“synthetic FFmpeg loop of a Gemini still”**. It reuses a stored review (`feedback_created=false`, `reused_stored_review=true`), retains the existing machine-feedback record and shows **46.8% → 46.8%**. It does not demonstrate a newly created review, a further risk reduction, or motion-review accuracy. The copy step reports “Copied ✓”; the recorder performs **0 clipboard reads**. The exact canonical samples-only message is visible in the architecture beat. Original new-take files and the prior movie/frame backup are retained at the paths above.
 
-## Repository, tags and provenance — PENDING final release
+## Repository, tags and provenance — PASS at verified commits
 
-| Item | Snapshot / completion status |
+| Item | Verified result / receipt scope |
 | --- | --- |
 | Source baseline | `9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af` |
-| Final production source commit | `d638c0690cb17d60316922eb30a14f150fe7c23c`; pushed to main; native provenance PASS |
+| Production source commit | `d638c0690cb17d60316922eb30a14f150fe7c23c`; native provenance PASS; pinned by the new v3 tag |
+| Public evidence main | `df49eec947029137477f294f0e5a8a61e189dd05`; expected and anonymously cloned main match |
 | Native build | `095a35c2-74ad-49cb-8ae8-507a6216ee74` |
-| Current local/build-input runtime hash | `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7` |
-| Native archive runtime hash and both-hash comparison | PASS: 25/25 files; Git and native archive both `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7` |
+| 25-file runtime agreement | PASS — cloned main, production source tag and native archive all `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7` |
 | Production image digest | `sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932`; accepted revision serves 100% traffic |
-| Push to main | Source commit `d638c0690cb17d60316922eb30a14f150fe7c23c` pushed; later receipt publication PENDING |
-| New aibc-2026-submission-v3 tag | Lightweight tag created and pushed at `d638c0690cb17d60316922eb30a14f150fe7c23c`; final anonymous verification PENDING |
-| Older aibc-2026-submission tag | `dd12f279e364cbd217a4178b51c1d270cacebbdd`; local and anonymous remote match |
-| Older aibc-2026-submission-v2 tag | `bdcdecdf6db6b0c2bebea8a35ed350de5f005940`; local and anonymous remote match |
-| Worktree secret scan | 522 files, 96 binary files, 0 hits, 0 errors; retained snapshot |
-| Final indexed/history secret scan | Source history PASS: 12 commits, 597 blobs, 74 binary payloads, 0 hits, 0 errors. Final receipt/tag history repeat remains PENDING. |
-| Anonymous final clone / source tag / runtime agreement | PENDING; production source tag and later evidence-only main commits have separate roles |
-| README + submission preview clause | PASS — pushed final samples-only wording; production architecture and public README top/preview clause exactly match in self-QA steps 26–28 |
-| Brief description | 952 characters, unchanged in the source commit |
-| Demo link / pitch deck export | Existing placeholders remain pending user publication/export |
+| Push to main | Source and post-promotion QA/demo evidence published through `df49eec947029137477f294f0e5a8a61e189dd05` |
+| New aibc-2026-submission-v3 tag | Lightweight source tag `d638c0690cb17d60316922eb30a14f150fe7c23c`; anonymous remote matches; unchanged after source publication |
+| Older aibc-2026-submission tag | `dd12f279e364cbd217a4178b51c1d270cacebbdd`; anonymous remote matches; untouched |
+| Older aibc-2026-submission-v2 tag | `bdcdecdf6db6b0c2bebea8a35ed350de5f005940`; anonymous remote matches; untouched |
+| Latest worktree/index secret-marker scan | PASS — 661 files, 162 binary files, 603 indexed files; 0 hits, 0 errors |
+| Reachable history secret-marker scan at df49eec | PASS — 13 commits, 648 blobs, 96 binary payloads; 0 hits, 0 errors; all refs scanned |
+| Anonymous fresh clone | PASS — exit 0; no credentials; empty credential helper; global config `/dev/null`; system config disabled |
+| Public repository and raw README | Both HTTP 200 with TLS verification; raw README matches clone |
+| README + submission preview clause | Exact canonical clause in both public-clone documents; production architecture also matches |
+| Brief description | 952 characters, within 1,024; unchanged |
+| Demo URL / pitch deck export | User publication/export TODO: replace `<VIDEO_URL>` and export Felix's deck PDF |
 
-The lightweight **`aibc-2026-submission-v3` tag pins production SOURCE commit `d638c0690cb17d60316922eb30a14f150fe7c23c`**. Later `main` commits publish post-promotion QA, demo and evidence; they retain the same 25-file runtime hash `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Final public verification must confirm the source tag and runtime agreement without requiring the later evidence-commit HEAD to equal the production source tag. Evidence publication and that final anonymous check remain PENDING.
+The **v3 tag pins production source `d638c0690cb17d60316922eb30a14f150fe7c23c`**. The verified later main commit **`df49eec947029137477f294f0e5a8a61e189dd05`** adds post-promotion QA/demo/evidence while retaining exactly the same 25 runtime files/hash. Anonymous clone verification was captured at **2026-10-18T02:23:59.636095+00:00**; the history scan at **2026-10-18T02:23:55.304383+00:00** covers all refs then reachable, ending at that evidence main. A subsequent append of this report/public-check receipts has no commit ID in this snapshot and lies outside those receipts' coverage. The production source tag remains fixed.
 
-[Scope/tag checks](release_scope_audit.json), [worktree secret scan](secrets_worktree.json), [source history scan](history_scan_source_release.json), [native 25-file/source/image provenance](source_match.json). Native provenance is complete for the pushed source and exact promoted revision; final anonymous publication checks remain PENDING.
+[Anonymous clone/public access](public_access.json), [latest secret-marker scan](secrets_evidence_index.json), [evidence history scan](history_scan_evidence_release.json), [retained source history scan](history_scan_source_release.json), [native 25-file/source/image provenance](source_match.json), [final production configuration](production_final.json), [scope/tag audit](release_scope_audit.json).
 
-## Not done at this snapshot
+## Evidence limits and submission TODOs
 
-PENDING: final report/demo receipt commits and publication; final receipt/tag history scan and anonymous clone verification. All applicable candidate gates, native 25-file provenance, 100% production promotion, 28/28 production self-QA steps/screenshots, one clean demo take with eight replacement frames, final native budget confirmation, source push and the new v3 source tag are complete. No live generation is selected. No Veo calls were made. Clip-review accuracy and actual billed spend remain unmeasured.
+All applicable release gates, native promotion, 28/28 production self-QA steps, 11/11 demo steps, eight frame replacements/visual checks, final budget accounting and the named public clone/history checks are complete. **Live image generation remains disabled** because every probe arm failed 19/20; typed prompt rewriting remains live. **0 Veo calls** were made.
+
+Actual billed spend and clip-review accuracy are **UNMEASURED**. The frozen reference-clip smoke is **NOT RUN** because that input was unavailable; the synthetic clip reused stored analysis and does not establish accuracy. The original external test environment remains partly offloaded (**1,920 dataless; full hydration UNCONFIRMED**); isolated exact-pin validation passed and the repository has **0 dataless files**. Felix's external video URL and deck PDF export remain user publication TODOs. Clone/history evidence is bounded to `df49eec947029137477f294f0e5a8a61e189dd05` and the listed source tags.

@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-10-18T02:26:38.261901+00:00",
+  "owned_read_handle_process_pid": 84319,
+  "exec_session": 53684,
+  "stop_marker": "/tmp/preflight-v4-release-read-handles.stop",
+  "exit_code": 0,
+  "native_output": "read_handles_closed",
+  "previous_read_handles": 262,
+  "repository_dataless_after_closure": 0,
+  "system_processes_touched": false
+}

@@ -39,7 +39,7 @@ def test_connected_cookie_and_session_continuity(monkeypatch):
     monkeypatch.setenv("K_SERVICE", "preflight")
     service = create_app(mode="cloud", store_factory=ConnectedStore, rewrite_factory=ConnectedRewrite)
     with TestClient(service, base_url="https://preview.test") as client:
-        first = client.post("/preflight", json={"prompt": "a cat and a dog"})
+        first = client.post("/preflight", json={"prompt": "a cat and a dog outside"})
         assert first.status_code == 200
         assert first.json()["mode"] == "cloud"
         assert first.json()["evidence_store"] == "firestore"

@@ -1,0 +1,87 @@
+{
+  "checked_at_kst": "2026-10-18T10:35:12.815435+09:00",
+  "provider_calls": 0,
+  "priority": {
+    "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/priority-paygo",
+    "resolved_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/priority-paygo",
+    "quote": "X-Vertex-AI-LLM-Shared-Request-Type: priority",
+    "supported_model": "gemini-3.1-flash-lite-image",
+    "response_field": "usageMetadata.trafficType",
+    "priority_value": "ON_DEMAND_PRIORITY",
+    "standard_downgrade_value": "ON_DEMAND",
+    "downgrade_billing": "Standard rates apply when the returned traffic type is ON_DEMAND."
+  },
+  "P2_locations": {
+    "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash-image",
+    "resolved_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-image",
+    "quote": "Global: global",
+    "selected_location": "global",
+    "locations": [
+      "global",
+      "us-central1",
+      "us-east1",
+      "us-east4",
+      "us-east5",
+      "us-south1",
+      "us-west1",
+      "us-west4",
+      "europe-central2",
+      "europe-north1",
+      "europe-southwest1",
+      "europe-west1",
+      "europe-west4",
+      "europe-west8"
+    ],
+    "retirement_date_vertex": "2027-03-15",
+    "note": "Vertex retirement differs from Developer API; Vertex source governs these probes."
+  },
+  "P3_size": {
+    "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-1-flash-image",
+    "resolved_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-image",
+    "quote": "Supported resolutions: 512, 1K, 2K, 4K",
+    "wire_value": "512",
+    "image_output_tokens": 747
+  },
+  "pricing": {
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+    "resolved_url": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+    "P1_priority_quote": "Image Output | Global | $54.00",
+    "P2_quote": "Image output*** | $30.00",
+    "unit": "USD per million tokens; global; standard unless Priority specified",
+    "rates": {
+      "P1_standard": {
+        "input": 0.25,
+        "text_output": 1.5,
+        "image_output": 30
+      },
+      "P1_priority": {
+        "input": 0.45,
+        "text_output": 2.7,
+        "image_output": 54
+      },
+      "P2_standard": {
+        "input": 0.3,
+        "text_output": 2.5,
+        "image_output": 30
+      },
+      "P3_standard": {
+        "input": 0.5,
+        "text_output": 3,
+        "image_output": 60
+      }
+    },
+    "P1_priority_multiplier": 1.8,
+    "image_output_tokens": {
+      "P1": 1120,
+      "P2": 1290,
+      "P3": 747
+    },
+    "image_only_components_usd": {
+      "P1_standard": 0.0336,
+      "P1_priority": 0.06048,
+      "P2_standard": 0.0387,
+      "P3_standard": 0.04482
+    },
+    "billing_note": "List-price token calculation; input and text output add cost. This is not an actual billing receipt."
+  }
+}

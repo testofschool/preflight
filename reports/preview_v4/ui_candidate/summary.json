@@ -1,0 +1,841 @@
+{
+  "phase": "candidate",
+  "url": "https://preview-v4-candidate---preflight-jcgro45veq-as.a.run.app",
+  "started_at_utc": "2026-10-18T02:06:01.410553+00:00",
+  "fresh_browser": true,
+  "http_cache_disabled": true,
+  "service_workers": "blocked",
+  "steps": [
+    {
+      "step": "first_viewport",
+      "action": "Open fresh browser",
+      "observed": {
+        "objects": 18,
+        "colors": 7,
+        "cta_bottom_px": 837.4375,
+        "elements": [
+          "a.brand",
+          "nav.header-nav",
+          "div.eyebrow",
+          "h1#page-title",
+          "p.intro-copy",
+          "a.clip-review-link",
+          "h2#prompt-heading",
+          "form#prompt-form",
+          "p",
+          "h2#results-heading",
+          "h3#risk-heading",
+          "p#risk-detail",
+          "h3#why-heading",
+          "h3#better-heading",
+          "p.rewrite-description",
+          "span",
+          "span#cost-value",
+          "p#cost-note"
+        ]
+      },
+      "expected": "objects <=18; colors <=12; CTA <=900px",
+      "passed": true,
+      "screenshot": "01_first_viewport.png"
+    },
+    {
+      "step": "sample_1_sample",
+      "action": "Click sample a cat and a dog",
+      "observed": "a cat and a dog",
+      "expected": "a cat and a dog",
+      "passed": true,
+      "screenshot": "02_sample_1_sample.png"
+    },
+    {
+      "step": "sample_1_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.30666666666666664,
+        "p_fail_after": 0.05714285714285714,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.3184
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "03_sample_1_check.png"
+    },
+    {
+      "step": "sample_1_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_1_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.5212,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 170352,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "04_sample_1_original.png"
+    },
+    {
+      "step": "sample_1_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_1_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.4707,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 144167,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "05_sample_1_rewrite.png"
+    },
+    {
+      "step": "sample_2_sample",
+      "action": "Click sample a spoon and a laptop",
+      "observed": "a spoon and a laptop",
+      "expected": "a spoon and a laptop",
+      "passed": true,
+      "screenshot": "06_sample_2_sample.png"
+    },
+    {
+      "step": "sample_2_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.4678787878787878,
+        "p_fail_after": 0.15833333333333333,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.271
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "07_sample_2_check.png"
+    },
+    {
+      "step": "sample_2_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_2_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4028,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 76625,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "08_sample_2_original.png"
+    },
+    {
+      "step": "sample_2_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_2_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.3607,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 65720,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "09_sample_2_rewrite.png"
+    },
+    {
+      "step": "sample_3_sample",
+      "action": "Click sample a bicycle and a car",
+      "observed": "a bicycle and a car",
+      "expected": "a bicycle and a car",
+      "passed": true,
+      "screenshot": "10_sample_3_sample.png"
+    },
+    {
+      "step": "sample_3_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.4333333333333333,
+        "p_fail_after": 0.2,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.2385
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "11_sample_3_check.png"
+    },
+    {
+      "step": "sample_3_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_3_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.434,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 139700,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "12_sample_3_original.png"
+    },
+    {
+      "step": "sample_3_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_3_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.5686,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 335231,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "13_sample_3_rewrite.png"
+    },
+    {
+      "step": "sample_4_sample",
+      "action": "Click sample indoor gymnasium",
+      "observed": "indoor gymnasium",
+      "expected": "indoor gymnasium",
+      "passed": true,
+      "screenshot": "14_sample_4_sample.png"
+    },
+    {
+      "step": "sample_4_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.065,
+        "p_fail_after": 0.065,
+        "rewrite_status": "no_safe_rewrite",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.2637
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "15_sample_4_check.png"
+    },
+    {
+      "step": "sample_4_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_4_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4934,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 199569,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "16_sample_4_original.png"
+    },
+    {
+      "step": "sample_4_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_4_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.7948,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 199569,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "17_sample_4_rewrite.png"
+    },
+    {
+      "step": "sample_5_sample",
+      "action": "Click sample a purple clock",
+      "observed": "a purple clock",
+      "expected": "a purple clock",
+      "passed": true,
+      "screenshot": "18_sample_5_sample.png"
+    },
+    {
+      "step": "sample_5_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.05714285714285714,
+        "p_fail_after": 0.025,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.2447
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "19_sample_5_check.png"
+    },
+    {
+      "step": "sample_5_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_5_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4135,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 118892,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "20_sample_5_original.png"
+    },
+    {
+      "step": "sample_5_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_5_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.3464,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 54464,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "21_sample_5_rewrite.png"
+    },
+    {
+      "step": "architecture",
+      "action": "Open architecture page",
+      "observed": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview — Active for sample prompts (saved stills); live generation limited",
+      "expected": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "passed": true,
+      "screenshot": "22_architecture.png"
+    }
+  ],
+  "preview_rows": [
+    {
+      "step": "sample_1_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a cat and a dog",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.5212,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 170352,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_1_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A playful puppy and a calm kitten interacting gently on a green grassy lawn under bright daylight, captured in a stable wide shot.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4707,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 144167,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_2_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a spoon and a laptop",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4028,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 76625,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_2_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.3607,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 65720,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_3_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a bicycle and a car",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.434,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 139700,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_3_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A close-up shot of a shiny yellow bicycle parked in a driveway, with a white SUV parked in the background under the shade of a tree.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.5686,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 335231,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_4_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "indoor gymnasium",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4934,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 199569,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_4_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "indoor gymnasium",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.7948,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 199569,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_5_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a purple clock",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4135,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 118892,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_5_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A modern purple digital clock resting on a desk, its bright LED numbers glowing softly in a dimly lit room.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.3464,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 54464,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    }
+  ],
+  "page_errors": [],
+  "network": [
+    {
+      "path": "/",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/postcheck.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/app.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/architecture",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/architecture.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "http_status": 200
+    }
+  ],
+  "passed": true,
+  "status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+    "pricing_image": {
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "usd_per_image": 0.0387,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-18",
+      "cost_basis": "image-output-list-price",
+      "billing_verified": false,
+      "priority_requested": false
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "viewport": {
+    "objects": 18,
+    "colors": 7,
+    "cta_bottom_px": 837.4375,
+    "elements": [
+      "a.brand",
+      "nav.header-nav",
+      "div.eyebrow",
+      "h1#page-title",
+      "p.intro-copy",
+      "a.clip-review-link",
+      "h2#prompt-heading",
+      "form#prompt-form",
+      "p",
+      "h2#results-heading",
+      "h3#risk-heading",
+      "p#risk-detail",
+      "h3#why-heading",
+      "h3#better-heading",
+      "p.rewrite-description",
+      "span",
+      "span#cost-value",
+      "p#cost-note"
+    ]
+  },
+  "expected_surface_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+  "V_B": true,
+  "V_C": null,
+  "V_D": true,
+  "ended_at_utc": "2026-10-18T02:08:09.346792+00:00"
+}

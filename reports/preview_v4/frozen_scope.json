@@ -1,0 +1,114 @@
+{
+  "base": "9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af",
+  "frozen_input_count": 13,
+  "all_match": true,
+  "files": [
+    {
+      "path": "cloud/rewrite_agent.py",
+      "before_bytes": 20199,
+      "after_bytes": 20199,
+      "before_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "after_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "matches": true
+    },
+    {
+      "path": "cloud/store.py",
+      "before_bytes": 18244,
+      "after_bytes": 18244,
+      "before_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "after_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "matches": true
+    },
+    {
+      "path": "cloud/postcheck.py",
+      "before_bytes": 18142,
+      "after_bytes": 18142,
+      "before_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "after_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/__init__.py",
+      "before_bytes": 203,
+      "after_bytes": 203,
+      "before_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "after_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/engine.py",
+      "before_bytes": 6726,
+      "after_bytes": 6726,
+      "before_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "after_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "matches": true
+    },
+    {
+      "path": "static/index.html",
+      "before_bytes": 12964,
+      "after_bytes": 12964,
+      "before_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "after_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "matches": true
+    },
+    {
+      "path": "static/styles.css",
+      "before_bytes": 25464,
+      "after_bytes": 25464,
+      "before_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "after_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "matches": true
+    },
+    {
+      "path": "artifacts/engine.json",
+      "before_bytes": 60477,
+      "after_bytes": 60477,
+      "before_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "after_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "matches": true
+    },
+    {
+      "path": "artifacts/vectorizer.joblib",
+      "before_bytes": 60877,
+      "after_bytes": 60877,
+      "before_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "after_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "matches": true
+    },
+    {
+      "path": "artifacts/prompt_vectors.npz",
+      "before_bytes": 30974,
+      "after_bytes": 30974,
+      "before_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "after_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "matches": true
+    },
+    {
+      "path": "Dockerfile",
+      "before_bytes": 787,
+      "after_bytes": 787,
+      "before_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "after_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "matches": true
+    },
+    {
+      "path": "requirements-cloud.lock",
+      "before_bytes": 2553,
+      "after_bytes": 2553,
+      "before_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "after_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "matches": true
+    },
+    {
+      "path": "cloudbuild.yaml",
+      "before_bytes": 145,
+      "after_bytes": 145,
+      "before_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+      "after_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+      "matches": true
+    }
+  ],
+  "current_build_digest": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "submitted_build_digest": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "build_input_digest_matches": true
+}

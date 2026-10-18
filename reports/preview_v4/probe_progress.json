@@ -1,0 +1,66 @@
+{
+  "arms": [
+    {
+      "actual_billing_verified": false,
+      "arm": "P1",
+      "completed": 18,
+      "known_list_price_total_usd": 0.28904605,
+      "mean_successful_list_price_usd": 0.04129229285714286,
+      "non200_no_charge_rows": 11,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "incomplete",
+      "successful_http200_images_gt10KiB": 7,
+      "unpriced_rows": 0
+    },
+    {
+      "actual_billing_verified": false,
+      "arm": "P2",
+      "completed": 0,
+      "known_list_price_total_usd": 0,
+      "mean_successful_list_price_usd": null,
+      "non200_no_charge_rows": 0,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": false,
+      "reliability_passes": false,
+      "status": "UNRUN",
+      "successful_http200_images_gt10KiB": 0,
+      "unpriced_rows": 0
+    },
+    {
+      "actual_billing_verified": false,
+      "arm": "P3",
+      "completed": 18,
+      "known_list_price_total_usd": 0.2690385,
+      "mean_successful_list_price_usd": 0.04483974999999999,
+      "non200_no_charge_rows": 12,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "incomplete",
+      "successful_http200_images_gt10KiB": 6,
+      "unpriced_rows": 0
+    }
+  ],
+  "budget": {
+    "all_runs_today_conservative_attempts": 83,
+    "budget_date_kst": "2026-10-18",
+    "daily_cap": 85,
+    "historical_v3_attempts_excluded": 44,
+    "initial_image_calls": 0,
+    "remaining": 46,
+    "scope": "preview_v4_only",
+    "today_conservative_attempts": 39,
+    "v4_effective_attempts": 39,
+    "v4_reserved_attempts": 39,
+    "verified_zero_call_qa_hits": 0
+  },
+  "live_generation_allowed": false,
+  "reason": "No completed arm meets preregistered19/20 image and verified-price rule",
+  "selected_arm": null,
+  "updated_at_kst": "2026-10-18T10:46:34.430345+09:00"
+}

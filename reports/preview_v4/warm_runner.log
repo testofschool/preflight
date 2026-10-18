@@ -1,0 +1,30 @@
+I1018 10:39:29.383630 66819935 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(11, generation: 1)
+{"action_id": "WARM-01", "variant": "original", "http_status": 200, "image_bytes": 170352, "model_calls": 1, "cache_saved": true, "error_class": null}
+Traceback (most recent call last):
+  File "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/felix/Desktop/AI Builder Cup 2026/preflight/scripts/warm_preview_v4.py", line 225, in warm
+    await asyncio.sleep(delay)
+  File "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/felix/Desktop/AI Builder Cup 2026/preflight/scripts/warm_preview_v4.py", line 271, in <module>
+    main()
+  File "/Users/felix/Desktop/AI Builder Cup 2026/preflight/scripts/warm_preview_v4.py", line 262, in main
+    result = asyncio.run(warm(args))
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

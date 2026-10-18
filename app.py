@@ -2,6 +2,7 @@
 
 from collections import deque
 from contextlib import asynccontextmanager
+from copy import deepcopy
 import asyncio
 import base64
 from datetime import datetime, timezone
@@ -20,13 +21,15 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, PrivateAttr, field_validator, model_validator
 from starlette.datastructures import UploadFile
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.formparsers import MultiPartException
 
 from preflight_core import PreflightEngine
-from cloud.preview import CAPTION, image_pricing
+from cloud.preview import (CAPTION, LIVE_LIMITED_MESSAGE, PreviewResult, image_pricing,
+                           preview_cache_key, sample_preview_cache_key)
+from cloud.sample_rewrites import load_sample_rewrites
 
 
 ROOT = Path(__file__).resolve().parent
@@ -47,12 +50,22 @@ SAMPLES = [
     "a purple clock",
 ]
 PRICING_IMAGE = image_pricing()
+PREVIEW_HTTP_TIMEOUT_SECONDS = 38
 
 
 class PromptInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
     prompt: str = Field(min_length=1, max_length=4000)
     session_id: str | None = Field(default=None, max_length=128, pattern=r"^[A-Za-z0-9_-]+$")
+    _submitted_prompt: str | None = PrivateAttr(default=None)
+
+    @model_validator(mode="wrap")
+    @classmethod
+    def retain_exact_prompt(cls, value, handler):
+        body = handler(value)
+        if isinstance(value, dict):
+            body._submitted_prompt = value.get("prompt")
+        return body
 
     @field_validator("prompt")
     @classmethod
@@ -90,7 +103,8 @@ class RequestBudget:
 
 
 def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
-               store_factory=None, rewrite_factory=None, postcheck_factory=None, preview_factory=None) -> FastAPI:
+               store_factory=None, rewrite_factory=None, postcheck_factory=None, preview_factory=None,
+               sample_rewrites_path=None) -> FastAPI:
     selected_mode = mode or os.environ.get("PREFLIGHT_MODE", "local-g0")
     if selected_mode not in ("local-g0", "cloud"):
         raise ValueError("Unsupported runtime mode")
@@ -103,6 +117,13 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
         service.state.connected = connected
         service.state.postchecker = None
         service.state.previewer = None
+        service.state.preview_live_enabled = False
+        service.state.preview_warm_enabled = False
+        service.state.sample_rewrites = load_sample_rewrites(SAMPLES, sample_rewrites_path)
+        service.state.sample_preview_prompts = set(SAMPLES) | {
+            row["rewritten_prompt"] for row in service.state.sample_rewrites.values()}
+        service.state.preview_enabled = connected and (
+            preview_factory is not None or os.environ.get("PREFLIGHT_PREVIEW_ENABLED") == "true")
         service.state.postcheck_slot = asyncio.Semaphore(1)
         if connected:
             from cloud.store import FirestoreDifficultyStore
@@ -123,10 +144,15 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
                 service.state.postchecker = (postcheck_factory or PostcheckService.from_env)()
             except Exception:
                 service.state.postchecker = None
-            if preview_factory is not None or os.environ.get("PREFLIGHT_PREVIEW_ENABLED") == "true":
+            live_requested = os.environ.get("PREFLIGHT_PREVIEW_LIVE_ENABLED") == "true" or (
+                preview_factory is not None and os.environ.get("PREFLIGHT_PREVIEW_LIVE_ENABLED") != "false")
+            warm_requested = os.environ.get("PREFLIGHT_PREVIEW_WARM_ENABLED") == "true"
+            if service.state.preview_enabled and (live_requested or warm_requested):
                 try:
                     from cloud.preview import ImagePreviewService
                     service.state.previewer = (preview_factory or ImagePreviewService)()
+                    service.state.preview_live_enabled = live_requested
+                    service.state.preview_warm_enabled = warm_requested
                 except Exception:
                     service.state.previewer = None
         yield
@@ -159,7 +185,11 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
             "agent_platform_session": connected and service.state.rewriter.session_active,
             "firestore": connected,
             "postcheck": connected and service.state.postchecker is not None,
-            "preview": connected and service.state.previewer is not None,
+            "preview": service.state.preview_enabled,
+            "preview_mode": "samples+live" if service.state.preview_live_enabled else "samples",
+            "preview_mode_message": ("Image preview — Active for sample prompts (saved stills); live generation " + (
+                "on" if service.state.preview_live_enabled else "limited"))
+                if service.state.preview_enabled else "Image preview — Not active; live generation limited",
             "pricing_image": image_pricing(),
             "generations": 0,
             "sample_prompts": SAMPLES,
@@ -176,16 +206,22 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
                 await asyncio.to_thread(service.state.store.admit_request)
                 prediction = await asyncio.to_thread(service.state.store.difficulty, body.prompt)
                 if prediction.get("supported"):
-                    user_id = request.cookies.get("pf_user", "")
-                    if not re.fullmatch(r"anon-[0-9a-f]{32}", user_id):
-                        user_id = "anon-" + uuid4().hex
-                    rewrite = await service.state.rewriter.preflight(body.prompt, user_id=user_id,
-                                                                      session_id=body.session_id)
+                    pinned = service.state.sample_rewrites.get(body._submitted_prompt)
+                    if pinned is not None:
+                        rewrite = deepcopy(pinned)
+                    else:
+                        user_id = request.cookies.get("pf_user", "")
+                        if not re.fullmatch(r"anon-[0-9a-f]{32}", user_id):
+                            user_id = "anon-" + uuid4().hex
+                        rewrite = await service.state.rewriter.preflight(body.prompt, user_id=user_id,
+                                                                          session_id=body.session_id)
+                        rewrite["rewrite_source"] = "live"
+                        response.set_cookie("pf_user", user_id, httponly=True,
+                                            secure=bool(os.environ.get("K_SERVICE")),
+                                            samesite="lax", max_age=86400)
                     prediction.update(rewrite)
                     # Use the agent's original score snapshot consistently with its rewrite guard.
                     prediction["p_fail"] = rewrite["p_fail_before"]
-                    response.set_cookie("pf_user", user_id, httponly=True, secure=bool(os.environ.get("K_SERVICE")),
-                                        samesite="lax", max_age=86400)
                 else:
                     prediction["rewrite_status"] = "unavailable"
             except StoreRateLimited as error:
@@ -216,38 +252,68 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
 
     @service.post("/preview")
     async def preview(body: PreviewInput, response: Response):
-        if not connected:
-            raise HTTPException(503, detail="Preview is busy right now — try again in a minute. The risk check still works.")
-        if service.state.previewer is None:
-            raise HTTPException(503, detail="Preview is busy right now — try again in a minute. The risk check still works.")
+        if not service.state.preview_enabled:
+            raise HTTPException(503, detail=LIVE_LIMITED_MESSAGE)
+        provider = service.state.previewer
+        sample = body.prompt in service.state.sample_preview_prompts
+        if not sample and not service.state.preview_live_enabled:
+            raise HTTPException(503, detail=LIVE_LIMITED_MESSAGE)
         from cloud.store import StoreRateLimited, StoreBudgetExhausted, prompt_id
         started = monotonic()
         try:
-            await asyncio.to_thread(service.state.store.admit_preview)
-            provider = service.state.previewer
-            pricing = image_pricing()
-            key = hashlib.sha256(json.dumps(["preview-v1", body.prompt, provider.model, provider.size],
-                                           ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
-            cached = await asyncio.to_thread(service.state.store.get_preview, key)
-            if cached:
-                jpeg = cached["bytes"]
-                calls, cache = 0, "hit"
-            else:
-                async with asyncio.timeout(30):
-                    jpeg = await provider.generate(body.prompt)
-                calls, cache = 1, "miss"
-                if len(jpeg) <= 900 * 1024:
-                    await asyncio.to_thread(service.state.store.save_preview, key,
-                        {"bytes": jpeg, "model": provider.model, "size": provider.size,
-                         "created_at": datetime.now(timezone.utc), "prompt_id": prompt_id(body.prompt)})
+            # Include admission, cache reads, generation, and persistence in the HTTP deadline.
+            async with asyncio.timeout(PREVIEW_HTTP_TIMEOUT_SECONDS):
+                await asyncio.to_thread(service.state.store.admit_preview)
+                key = sample_preview_cache_key(body.prompt) if sample else preview_cache_key(
+                    body.prompt, provider.model, provider.size)
+                cached = await asyncio.to_thread(service.state.store.get_preview, key)
+                details = {}
+                if cached:
+                    jpeg = cached["bytes"]
+                    model, size = cached["model"], cached["size"]
+                    generated_at = cached["created_at"]
+                    if isinstance(generated_at, str):
+                        generated_at = datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
+                    if not isinstance(generated_at, datetime) or generated_at.tzinfo is None:
+                        raise ValueError("Saved still generation date is unavailable")
+                    calls, cache, cost = 0, "hit", 0.0
                 else:
-                    cache = "skip-size"
+                    may_generate = (service.state.preview_warm_enabled if sample
+                                    else service.state.preview_live_enabled)
+                    if provider is None or not may_generate:
+                        raise HTTPException(503, detail=LIVE_LIMITED_MESSAGE)
+                    generated = await provider.generate(body.prompt)
+                    if isinstance(generated, PreviewResult):
+                        jpeg, model, size, cost = (generated.jpeg, generated.model,
+                                                  generated.size, generated.cost_usd)
+                        details = {name: getattr(generated, name) for name in (
+                            "traffic_type", "cost_basis", "billing_verified", "priority_traffic_verified",
+                            "image_output_tokens", "text_output_tokens", "text_input_tokens")}
+                    else:
+                        jpeg, model, size = generated, provider.model, provider.size
+                        cost = image_pricing(model, size)["usd_per_image"]
+                    generated_at = datetime.now(timezone.utc)
+                    calls, cache = 1, "miss"
+                    if len(jpeg) <= 900 * 1024:
+                        await asyncio.to_thread(service.state.store.save_preview, key,
+                            {"bytes": jpeg, "model": model, "size": size,
+                             "created_at": generated_at, "prompt_id": prompt_id(body.prompt),
+                             "generation_cost_usd": cost, **details})
+                    else:
+                        cache = "skip-size"
+            pricing = image_pricing(model, size, priority=False)
+            latency = round((monotonic() - started) * 1000)
+            generated_date = generated_at.astimezone(timezone.utc).date().isoformat()
             response.headers["X-Preview-Cache"] = cache
             return {"image_data_url": "data:image/jpeg;base64," + base64.b64encode(jpeg).decode(),
-                    "model": provider.model, "size": provider.size, "aspect_ratio": "16:9",
-                    "cost_usd": pricing["usd_per_image"], "pricing_source": pricing["source"],
+                    "model": model, "size": size, "aspect_ratio": "16:9", "cache": cache,
+                    "generated_at": generated_at.isoformat(), "generated_date": generated_date,
+                    "cost_usd": cost, "pricing_source": pricing["source"],
                     "pricing_checked_date": pricing["checked_date"],
-                    "latency_ms": round((monotonic() - started) * 1000), "model_calls": calls,
+                    "latency_ms": latency, "model_calls": calls,
+                    "metadata_label": f"Saved still · generated {generated_date} · 0 model calls · $0.00"
+                    if cache == "hit" else f"Model {model} · {size} · ${cost:g} · {latency / 1000:g} s",
+                    **details,
                     "synthid": True, "caption": CAPTION}
         except StoreRateLimited as error:
             raise HTTPException(429, detail=f"Try again in {error.retry_after} s",
@@ -257,8 +323,10 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
             retry = 86400 - (now.hour * 3600 + now.minute * 60 + now.second)
             raise HTTPException(429, detail="The daily preview allowance has been reached.",
                                 headers={"Retry-After": str(retry)}) from None
+        except HTTPException:
+            raise
         except Exception as error:
-            raise HTTPException(503, detail="Preview is busy right now — try again in a minute. The risk check still works.",
+            raise HTTPException(503, detail=LIVE_LIMITED_MESSAGE,
                                 headers={"X-Preflight-Error": type(error).__name__}) from None
 
     @service.post("/postcheck")

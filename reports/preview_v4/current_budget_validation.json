@@ -1,0 +1,27 @@
+{
+  "budget": {
+    "all_runs_today_conservative_attempts": 95,
+    "budget_date_kst": "2026-10-18",
+    "daily_cap": 85,
+    "historical_v3_attempts_excluded": 44,
+    "initial_image_calls": 0,
+    "known_measured_attempts_by_model": {
+      "gemini-2.5-flash-image": 9,
+      "gemini-3.1-flash-image": 20,
+      "gemini-3.1-flash-lite-image": 20
+    },
+    "known_measured_model_attempts": 49,
+    "known_zero_model_call_responses": 2,
+    "remaining": 34,
+    "scope": "preview_v4_only",
+    "today_conservative_attempts": 51,
+    "unknown_dispatch_reservations": 0,
+    "v4_effective_attempts": 51,
+    "v4_reserved_attempts": 51,
+    "verified_zero_call_qa_hits": 0
+  },
+  "preregistration_sha256": "69e33200413f9d42f7b96e4340da19bad1370b1f35fd684e9662dd74a6d28331",
+  "prompt_count": 60,
+  "provider_calls_made_by_validation": 0,
+  "valid": true
+}

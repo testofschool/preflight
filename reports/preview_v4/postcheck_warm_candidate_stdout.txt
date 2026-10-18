@@ -1,0 +1,1 @@
+{"label": "operational smoke, synthetic clip, not the frozen reference", "http_status": 200, "latency_seconds": 17.381, "passed": true}

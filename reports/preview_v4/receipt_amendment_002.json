@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "recorded_at_kst": "2026-10-18T10:43:06.598931+09:00",
+  "type": "local_receipt_serialization_fix",
+  "provider_outcomes_unchanged": true,
+  "additional_image_calls": 0,
+  "cause": "Concurrent P1/P3 launcher passed reports path relative to repository. Provider bytes were decoded, validated, hashed and saved; relative_to(absolute ROOT) then raised local ValueError before cost/path fields were appended.",
+  "affected_process": "Current P1/P3 process uses its originally loaded module for20calls perarm; no reload and no provider retry.",
+  "fix_for_future_processes": "Resolve image path absolute before serialization. P2 runner will use corrected function and absolute reportspath.",
+  "derived_annotations": "summarize verifiesexistingimageSHAagainstrecordedproviderSHA, then derivesmissinglistpricefromrecordedusage+traffic+preregisteredofficialrates. Writesderived_probe_annotations.json; originalledger/P1.jsonl/P3.jsonlpreserved.",
+  "first_attempts": {
+    "P1-01": {
+      "provider_http_status": 200,
+      "image_bytes": 224371,
+      "traffic_type": "ON_DEMAND_PRIORITY"
+    },
+    "P3-01": {
+      "provider_http_status": 200,
+      "image_bytes": 483483,
+      "traffic_type": "ON_DEMAND"
+    }
+  },
+  "note": "Local ValueError is not a provider failure. Reliability rule still uses HTTP200 valid decoded image>10240bytes. All original local-error fields remain in raw receipts."
+}

@@ -1,0 +1,12 @@
+{
+  "daily_limit": 60,
+  "day_count": 18,
+  "fits": true,
+  "recorded_at_kst": "2026-10-18T10:47:56.857631+09:00",
+  "remaining_admissions": 42,
+  "remaining_qa_admissions": 22,
+  "remaining_warm_http_requests": 10,
+  "reset_at_kst": "2026-10-19T09:00:00+09:00",
+  "reset_at_utc": "2026-10-19T00:00:00+00:00",
+  "total_admissions_required": 32
+}

@@ -1,0 +1,686 @@
+{
+  "scope": "Read-only release-scope audit; zero provider or /preflight or /preview calls; no Git mutations/deployments",
+  "base": "9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af",
+  "checked_at_utc": "2026-10-18T01:56:35.108030+00:00",
+  "status": "HOLD",
+  "baseline_verification": "Direct git show timed out at first baseline blob after5seconds during iCloud hydration regression. Frozen manifest/environment_before baseline hashes used only as retained snapshots; fresh Git-blob verification UNVERIFIABLE.",
+  "material_defects": [
+    {
+      "priority": "HOLD",
+      "issue": "Fresh current-source bytes cannot all be verified during iCloud offload regression.",
+      "paths": [
+        "artifacts/vectorizer.joblib",
+        "preflight_core/dataset.py"
+      ]
+    },
+    {
+      "priority": "P1",
+      "lines": [
+        88,
+        100
+      ],
+      "issue": "Promotion does not reject warm=true in saved candidate and fresh native candidate configuration.",
+      "status": "Root accepted; repair pending at review snapshot"
+    },
+    {
+      "priority": "P1",
+      "lines": [
+        89,
+        98
+      ],
+      "issue": "Gate booleans are not bound to current candidate revision/build/runtime digest/source commit; stale gate can authorize later candidate.",
+      "status": "Root accepted; repair pending at review snapshot"
+    }
+  ],
+  "unverified_current_paths": [
+    "artifacts/vectorizer.joblib",
+    "preflight_core/dataset.py"
+  ],
+  "frozen": {
+    "manifest_path": "reports/preview_v4/frozen_scope.json",
+    "manifest_sha256": "4059f4e12dba41e7e2e6de9260a8c587065c968e2bbd5bfbaab69a07c7e342b5",
+    "declared_count": 13,
+    "current_match_count": 12,
+    "current_mismatch_count": 0,
+    "current_unverifiable_count": 1,
+    "files": [
+      {
+        "path": "cloud/rewrite_agent.py",
+        "retained_baseline_bytes": 20199,
+        "retained_baseline_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+        "current": {
+          "status": "READ",
+          "bytes": 20199,
+          "sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "cloud/store.py",
+        "retained_baseline_bytes": 18244,
+        "retained_baseline_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+        "current": {
+          "status": "READ",
+          "bytes": 18244,
+          "sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "cloud/postcheck.py",
+        "retained_baseline_bytes": 18142,
+        "retained_baseline_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+        "current": {
+          "status": "READ",
+          "bytes": 18142,
+          "sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "preflight_core/__init__.py",
+        "retained_baseline_bytes": 203,
+        "retained_baseline_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+        "current": {
+          "status": "READ",
+          "bytes": 203,
+          "sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "preflight_core/engine.py",
+        "retained_baseline_bytes": 6726,
+        "retained_baseline_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+        "current": {
+          "status": "READ",
+          "bytes": 6726,
+          "sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "static/index.html",
+        "retained_baseline_bytes": 12964,
+        "retained_baseline_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+        "current": {
+          "status": "READ",
+          "bytes": 12964,
+          "sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "static/styles.css",
+        "retained_baseline_bytes": 25464,
+        "retained_baseline_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+        "current": {
+          "status": "READ",
+          "bytes": 25464,
+          "sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "artifacts/engine.json",
+        "retained_baseline_bytes": 60477,
+        "retained_baseline_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+        "current": {
+          "status": "READ",
+          "bytes": 60477,
+          "sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "artifacts/vectorizer.joblib",
+        "retained_baseline_bytes": 60877,
+        "retained_baseline_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+        "current": {
+          "status": "UNVERIFIABLE",
+          "reason": "iCloud dataless; current bytes not read",
+          "bytes_metadata": 60877,
+          "flags": 1073741920
+        },
+        "matches_retained_baseline": null
+      },
+      {
+        "path": "artifacts/prompt_vectors.npz",
+        "retained_baseline_bytes": 30974,
+        "retained_baseline_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+        "current": {
+          "status": "READ",
+          "bytes": 30974,
+          "sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "Dockerfile",
+        "retained_baseline_bytes": 787,
+        "retained_baseline_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+        "current": {
+          "status": "READ",
+          "bytes": 787,
+          "sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "requirements-cloud.lock",
+        "retained_baseline_bytes": 2553,
+        "retained_baseline_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+        "current": {
+          "status": "READ",
+          "bytes": 2553,
+          "sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      },
+      {
+        "path": "cloudbuild.yaml",
+        "retained_baseline_bytes": 145,
+        "retained_baseline_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+        "current": {
+          "status": "READ",
+          "bytes": 145,
+          "sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+          "flags": 64
+        },
+        "matches_retained_baseline": true
+      }
+    ]
+  },
+  "runtime": {
+    "expected_count": 25,
+    "enumerated_count": 25,
+    "readable_count": 23,
+    "unverifiable_count": 2,
+    "known_changed_paths": [
+      "app.py",
+      "cloud/preview.py",
+      "cloud/sample_rewrites.json",
+      "cloud/sample_rewrites.py",
+      "static/app.js",
+      "static/architecture.js"
+    ],
+    "full_current_digest_status": "UNVERIFIABLE",
+    "files": [
+      {
+        "path": "Dockerfile",
+        "retained_baseline": {
+          "bytes": 787,
+          "sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 787,
+          "sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "app.py",
+        "retained_baseline": {
+          "bytes": 21744,
+          "sha256": "44063aa3094407449ed70400fecc71bfc1c05c83421e17131711405fc7d2baf6"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 26134,
+          "sha256": "6a4049031c7d4d5e98ccb0428a76235acd9e97275b73ff1431a8ec3adda87612",
+          "flags": 64
+        },
+        "matches_retained_baseline": false,
+        "new_file": false
+      },
+      {
+        "path": "artifacts/engine.json",
+        "retained_baseline": {
+          "bytes": 60477,
+          "sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 60477,
+          "sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "artifacts/prompt_vectors.npz",
+        "retained_baseline": {
+          "bytes": 30974,
+          "sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 30974,
+          "sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "artifacts/vectorizer.joblib",
+        "retained_baseline": {
+          "bytes": 60877,
+          "sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e"
+        },
+        "current": {
+          "status": "UNVERIFIABLE",
+          "reason": "iCloud dataless; current bytes not read",
+          "bytes_metadata": 60877,
+          "flags": 1073741920
+        },
+        "matches_retained_baseline": null,
+        "new_file": false
+      },
+      {
+        "path": "cloud/__init__.py",
+        "retained_baseline": {
+          "bytes": 66,
+          "sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 66,
+          "sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "cloud/postcheck.py",
+        "retained_baseline": {
+          "bytes": 18142,
+          "sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 18142,
+          "sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "cloud/preview.py",
+        "retained_baseline": {
+          "bytes": 3022,
+          "sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 8119,
+          "sha256": "148db9a788a20574a03d2cd8bdda9fa648062f53fb58d0a8c063a7bc5f27aeb4",
+          "flags": 64
+        },
+        "matches_retained_baseline": false,
+        "new_file": false
+      },
+      {
+        "path": "cloud/rewrite_agent.py",
+        "retained_baseline": {
+          "bytes": 20199,
+          "sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 20199,
+          "sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "cloud/sample_rewrites.json",
+        "retained_baseline": null,
+        "current": {
+          "status": "READ",
+          "bytes": 34494,
+          "sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+          "flags": 64
+        },
+        "matches_retained_baseline": false,
+        "new_file": true
+      },
+      {
+        "path": "cloud/sample_rewrites.py",
+        "retained_baseline": null,
+        "current": {
+          "status": "READ",
+          "bytes": 2628,
+          "sha256": "3a963aa6a10cd841397b3c6b2fe6a8231f4db54522106e1195e90c93f530be80",
+          "flags": 64
+        },
+        "matches_retained_baseline": false,
+        "new_file": true
+      },
+      {
+        "path": "cloud/store.py",
+        "retained_baseline": {
+          "bytes": 18244,
+          "sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 18244,
+          "sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "preflight_core/__init__.py",
+        "retained_baseline": {
+          "bytes": 203,
+          "sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 203,
+          "sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "preflight_core/dataset.py",
+        "retained_baseline": {
+          "bytes": 2814,
+          "sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c"
+        },
+        "current": {
+          "status": "UNVERIFIABLE",
+          "reason": "iCloud dataless; current bytes not read",
+          "bytes_metadata": 2814,
+          "flags": 1073741920
+        },
+        "matches_retained_baseline": null,
+        "new_file": false
+      },
+      {
+        "path": "preflight_core/engine.py",
+        "retained_baseline": {
+          "bytes": 6726,
+          "sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 6726,
+          "sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "preflight_core/irt.py",
+        "retained_baseline": {
+          "bytes": 5027,
+          "sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 5027,
+          "sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "preflight_core/provenance.py",
+        "retained_baseline": {
+          "bytes": 721,
+          "sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 721,
+          "sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "requirements-cloud.lock",
+        "retained_baseline": {
+          "bytes": 2553,
+          "sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 2553,
+          "sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "static/app.js",
+        "retained_baseline": {
+          "bytes": 21553,
+          "sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 23382,
+          "sha256": "398424c91ceaf32f4144a96c1a93877d759ffaba9d72adaeb167715136721496",
+          "flags": 64
+        },
+        "matches_retained_baseline": false,
+        "new_file": false
+      },
+      {
+        "path": "static/architecture.html",
+        "retained_baseline": {
+          "bytes": 5828,
+          "sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 5828,
+          "sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "static/architecture.js",
+        "retained_baseline": {
+          "bytes": 5079,
+          "sha256": "5c506b618242be4dadb5603149ee1bcfee54e7bd8ae3b7795dcefb6cb272fbfe"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 5586,
+          "sha256": "b5e9bfbc02ccaa70ba30d2622b935ad79bd08815b952f5c5d711cd15356efb2d",
+          "flags": 64
+        },
+        "matches_retained_baseline": false,
+        "new_file": false
+      },
+      {
+        "path": "static/index.html",
+        "retained_baseline": {
+          "bytes": 12964,
+          "sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 12964,
+          "sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "static/postcheck.js",
+        "retained_baseline": {
+          "bytes": 15896,
+          "sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 15896,
+          "sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "static/status.js",
+        "retained_baseline": {
+          "bytes": 1843,
+          "sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 1843,
+          "sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      },
+      {
+        "path": "static/styles.css",
+        "retained_baseline": {
+          "bytes": 25464,
+          "sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58"
+        },
+        "current": {
+          "status": "READ",
+          "bytes": 25464,
+          "sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+          "flags": 64
+        },
+        "matches_retained_baseline": true,
+        "new_file": false
+      }
+    ]
+  },
+  "fixture": {
+    "fixture_sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+    "source_report": "reports/preview_v4/sample_rewrites_acquisition.json",
+    "expected_source_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+    "actual_source_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+    "source_hash_exact": true,
+    "sample_count": 5,
+    "source_http200_count": 5,
+    "sanitized_exact_count": 5,
+    "improved_count": 4,
+    "unchanged_no_safe_count": 1,
+    "samples": [
+      {
+        "prompt": "a cat and a dog",
+        "source_http_status": 200,
+        "sanitized_payload_exact": true
+      },
+      {
+        "prompt": "a spoon and a laptop",
+        "source_http_status": 200,
+        "sanitized_payload_exact": true
+      },
+      {
+        "prompt": "a bicycle and a car",
+        "source_http_status": 200,
+        "sanitized_payload_exact": true
+      },
+      {
+        "prompt": "indoor gymnasium",
+        "source_http_status": 200,
+        "sanitized_payload_exact": true
+      },
+      {
+        "prompt": "a purple clock",
+        "source_http_status": 200,
+        "sanitized_payload_exact": true
+      }
+    ]
+  },
+  "older_tags": {
+    "expected_from": "reports/preview_v3/REPORT.md:96",
+    "expected": {
+      "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+      "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940"
+    },
+    "local": {
+      "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+      "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940"
+    },
+    "local_exact_count": 2,
+    "remote_status": "UNRUN; root asked to avoid further hanging reads during native hydration"
+  },
+  "description": {
+    "characters": 952,
+    "expected": 952,
+    "within_1024": true,
+    "count_exact": true
+  },
+  "promotion_review": {
+    "path": "scripts/release_preview_v4.py",
+    "reviewed_sha256": "cccf7d638acf6decd398d39c915c3165689b16d8458f4629f469743c139a795e",
+    "findings": [
+      {
+        "priority": "P1",
+        "lines": [
+          88,
+          100
+        ],
+        "issue": "Promotion does not reject warm=true in saved candidate and fresh native candidate configuration.",
+        "status": "Root accepted; repair pending at review snapshot"
+      },
+      {
+        "priority": "P1",
+        "lines": [
+          89,
+          98
+        ],
+        "issue": "Gate booleans are not bound to current candidate revision/build/runtime digest/source commit; stale gate can authorize later candidate.",
+        "status": "Root accepted; repair pending at review snapshot"
+      }
+    ]
+  },
+  "source_provenance_coverage": {
+    "path": "scripts/verify_preview_source_v4.py",
+    "sha256": "5f381919cd2b718cf8d3da1bc6371a3ce19a727fd1edcd636e63f104a56abc9e",
+    "expected25_count_enumerated": true,
+    "new_sample_module_and_json_explicitly_required": true,
+    "includes_cloud_core_static": true,
+    "compares_git_archive_hashes": true,
+    "compares_native_image_digest": true,
+    "native_current25_file_provenance": "UNRUN in this audit; fresh full-byte source verification awaits hydration"
+  },
+  "provider_calls": 0,
+  "preflight_requests": 0,
+  "preview_requests": 0
+}

@@ -1,0 +1,28 @@
+{
+  "written_at_kst": "2026-10-18T11:07:29+09:00",
+  "report_status": "scaffold; pending release work explicit",
+  "raw_rows": {
+    "P1": 20,
+    "P2": 20,
+    "P3": 20
+  },
+  "raw_sha256": {
+    "P1": "bc9850777a31e8a095e5cc3fde1237919d09becea61daa60c3b49493c52448a2",
+    "P2": "ed430e8f7f162ffe0f111417d4bfe400843e47b37b30d828db78e23c50f60ee7",
+    "P3": "515ec99e98913dfe079cadc9507ef5ad33eb36a8ed3aa5921d0914e156fef819"
+  },
+  "candidate_revision": "preflight-00025-lij",
+  "runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "reservations": 71,
+  "results": 71,
+  "known_model_attempts": 69,
+  "known_zero_call_responses": 2,
+  "pending_reservations": 0,
+  "known_list_price_subtotal_usd": "1.17230635",
+  "source_delta_rows": 21,
+  "report_bytes": 33352,
+  "all60_probe_rows_complete": true,
+  "final_probe_decision": "samples-only; no arm passes19/20",
+  "native_preview_day_count_after_P2": 28,
+  "final_probe_spend_summary": "reports/preview_v4/final_probe_spend_summary.json"
+}

@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 from PIL import Image
 
 from app import create_app
-from cloud.preview import CAPTION, PRIMARY
+from cloud.preview import CAPTION, LIVE_LIMITED_MESSAGE, PRIMARY
 from cloud.store import FirestoreDifficultyStore
 from test_cloud_api import ConnectedRewrite
 from test_store import MemoryClient
@@ -41,11 +41,14 @@ class Provider:
 
 
 @pytest.fixture
-def connected(monkeypatch):
+def connected(monkeypatch, tmp_path):
     monkeypatch.setenv("PREFLIGHT_PREVIEW_DAILY_LIMIT", "60")
+    monkeypatch.setenv("PREFLIGHT_PREVIEW_LIVE_ENABLED", "true")
+    monkeypatch.setenv("PREFLIGHT_PREVIEW_WARM_ENABLED", "true")
     store, provider = PreviewStore(), Provider()
     service = create_app(mode="cloud", store_factory=lambda: store,
-                         rewrite_factory=ConnectedRewrite, preview_factory=lambda: provider)
+                         rewrite_factory=ConnectedRewrite, preview_factory=lambda: provider,
+                         sample_rewrites_path=tmp_path / "absent.json")
     with TestClient(service) as client:
         yield client, store, provider
 
@@ -100,7 +103,7 @@ def test_provider_exception_is_redacted(connected):
     assert result.status_code == 503
     assert result.headers["x-preflight-error"] == "RuntimeError"
     assert "private provider message" not in result.text
-    assert result.json()["detail"] == "Preview is busy right now — try again in a minute. The risk check still works."
+    assert result.json()["detail"] == LIVE_LIMITED_MESSAGE
 
 
 def test_unknown_field_forbidden(connected):
@@ -114,8 +117,10 @@ def test_caption_exact(connected):
 
 def test_local_preview_unavailable():
     with TestClient(create_app(mode="local-g0")) as client:
-        assert client.get("/api/status").json()["preview"] is False
-        assert call(client).json()["detail"] == "Preview is busy right now — try again in a minute. The risk check still works."
+        status = client.get("/api/status").json()
+        assert status["preview"] is False
+        assert status["preview_mode_message"] == "Image preview — Not active; live generation limited"
+        assert call(client).json()["detail"] == LIVE_LIMITED_MESSAGE
 
 
 def test_ceiling_and_utc_reset(connected, monkeypatch):

@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import base64
 import hashlib
 import json
 import shutil
@@ -29,6 +30,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from playwright.async_api import async_playwright
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
 WIDTH, HEIGHT = 1920, 1080
@@ -110,6 +113,7 @@ def beat_table(take: dict) -> list[dict]:
         (3, "Better prompt → risk drops → copy", ("better_prompt_and_copy",)),
         (4, "Cached sample still + caption", ("cached_sample_preview",)),
         (5, "Cached better-prompt still or skip", ("cached_rewrite_preview_or_skip",)),
+        ("live", "Typed prompt live still", ("typed_live_preview",)),
         (6, "Clip upload → review → feedback-adjusted risk", ("clip_upload_and_review", "verdict_and_feedback")),
         (7, "Architecture image preview connection", ("architecture_service_connections",)),
     ]
@@ -188,6 +192,7 @@ class Take:
                 "supported", "coverage_supported", "pass_bool", "risk_before", "risk_after",
                 "feedback_recorded", "feedback_created", "reused_stored_review", "detail",
                 "model", "size", "cost_usd", "attempts", "fallback_used", "model_calls", "caption",
+                "metadata_label", "generated_date", "rewrite_source", "preview_mode",
             )
             row["observed_response"] = {key: data[key] for key in keys if key in data}
         except Exception as error:
@@ -324,17 +329,23 @@ class Take:
         text = (await caption.inner_text()).strip()
         if not text or text != data.get("caption"):
             raise RuntimeError("Preview caption is missing or does not match the real response")
+        metadata = self.page.locator(".preview-metadata")
+        metadata_text = (await metadata.inner_text()).strip()
+        expected_metadata = f"Saved still · generated {data.get('generated_date')} · 0 model calls · $0.00"
+        if metadata_text != expected_metadata:
+            raise RuntimeError("Saved-still label differs from the exact required metadata")
         await self.scroll_to(".preview-image", 160)
         visibility = await image.evaluate("image => { const r=image.getBoundingClientRect(); return {top:r.top,bottom:r.bottom,width:image.naturalWidth,height:image.naturalHeight}; }")
         caption_box = await caption.bounding_box()
-        if not caption_box or caption_box["y"] < 0 or caption_box["y"] + caption_box["height"] > HEIGHT or visibility["top"] < 0 or visibility["bottom"] > HEIGHT or not visibility["width"]:
-            raise RuntimeError("Real preview image and caption do not fit in the recording viewport")
+        metadata_box = await metadata.bounding_box()
+        if not caption_box or not metadata_box or caption_box["y"] < 0 or metadata_box["y"] + metadata_box["height"] > HEIGHT or visibility["top"] < 0 or visibility["bottom"] > HEIGHT or not visibility["width"]:
+            raise RuntimeError("Real preview image, caption and saved-still label do not fit in the recording viewport")
         visible_start = self.offset()
         await self.pause(3.25)
         if export_frame:
             await self.frame("cached_original_preview")
         return {"prompt": prompt, "variant": variant, "cache": cache, "model_calls": 0,
-                "caption": text, "model": data.get("model"), "size": data.get("size"),
+                "caption": text, "metadata_label": metadata_text, "model": data.get("model"), "size": data.get("size"),
                 "image_visible_start_seconds": visible_start,
                 "image_visible_end_seconds": self.offset(), "visible_hold_seconds": round(self.offset() - visible_start, 3)}
 
@@ -344,7 +355,7 @@ class Take:
             if response is None or response.status != 200:
                 raise RuntimeError("Home page did not return HTTP 200")
             await self.page.locator('.mode-pill.cloud').wait_for(state="visible", timeout=25000)
-            status = await self.page.evaluate("window.preflightStatus")
+            status = await self.page.evaluate("() => window.preflightStatus")
             if status.get("preview") is not (self.args.preview_mode == "on"):
                 raise RuntimeError(f"Live status did not confirm preview mode {self.args.preview_mode}")
             if await self.page.locator(".preview-button:visible, .preview-original:visible").count():
@@ -430,6 +441,35 @@ class Take:
         else:
             await self.step("preview_disabled_busy_copy", preview_disabled, 3)
 
+        if self.args.live_prompt:
+            async def typed_live():
+                self.expected_requests.append("/preflight")
+                await self.preflight(self.args.live_prompt)
+                # Allow the existing per-minute preview request window to advance.
+                previous = [r["offset_seconds"] for r in self.log["network"] if r.get("path") == "/preview"]
+                if previous:
+                    await self.at(previous[-1] + 13.1)
+                from scripts.probe_preview_v4 import reserve_attempt, append_result
+                status = await self.page.evaluate("() => window.preflightStatus")
+                prompt = self.preflight_result.get("rewritten_prompt") if self.preflight_result.get("rewrite_status") == "improved" else self.args.live_prompt
+                attempt_id = "demo-typed-live-preview"
+                reserve_attempt(attempt_id, status["pricing_image"]["model"], "qa",
+                                hashlib.sha256(prompt.encode()).hexdigest())
+                self.expected_requests.append("/preview")
+                async with self.page.expect_response(lambda r: urlsplit(r.url).path == "/preview" and r.request.method == "POST", timeout=45000) as pending:
+                    await self.click(".preview-button")
+                response = await pending.value
+                data = await response.json()
+                append_result({"attempt_id": attempt_id, "http_status": response.status,
+                               "model_calls": data.get("model_calls"), "image_bytes": len(base64.b64decode(data.get("image_data_url", ",").split(",",1)[1]))})
+                if response.status != 200 or response.headers.get("x-preview-cache") == "hit" or data.get("model_calls") != 1:
+                    raise RuntimeError("Typed demo prompt did not produce a fresh live still")
+                await self.page.locator(".preview-image").evaluate("i => i.decode()")
+                await self.scroll_to(".preview-image", 160)
+                await self.pause(3.25)
+                return {"prompt": prompt, "model": data.get("model"), "metadata_label": data.get("metadata_label"), "model_calls": 1}
+            await self.step("typed_live_preview", typed_live)
+
         async def review():
             await self.scroll_to("#clip-review", 60)
             await self.page.locator("#clip-file").set_input_files(str(clip))
@@ -480,9 +520,9 @@ class Take:
             connections = await self.page.locator("#component-list").inner_text()
             if "Checking connections" in connections:
                 raise RuntimeError("Architecture connections did not resolve")
-            preview = self.page.locator("#component-list li").filter(has_text="Image preview (Gemini image model)")
-            badge = (await preview.locator(".connection-status").inner_text()).strip()
-            expected = "Active" if self.args.preview_mode == "on" else "Not active"
+            preview = self.page.locator("#component-list li").filter(has_text="Image preview")
+            badge = (await preview.locator(".preview-mode-message").inner_text()).strip() if self.args.preview_mode == "on" else (await preview.locator(".connection-status").inner_text()).strip()
+            expected = "Image preview — Active for sample prompts (saved stills); live generation " + ("on" if self.args.live_prompt else "limited") if self.args.preview_mode == "on" else "Not active"
             if badge != expected:
                 raise RuntimeError(f"Architecture image preview state {badge!r} differs from {expected!r}")
             await self.frame("architecture_connections")
@@ -558,7 +598,7 @@ async def record_take(browser, args, number: int) -> dict:
             if row not in take.log["benign_local_preview_cancellations"]]
         take.log["clean"] = all([
             not take.log.get("fatal_error"), not take.log.get("duration_guard"),
-            not take.log.get("video_error"), len(take.log["steps"]) == (11 if args.preview_mode == "on" else 10),
+            not take.log.get("video_error"), len(take.log["steps"]) == ((12 if args.live_prompt else 11) if args.preview_mode == "on" else 10),
             all(row["status"] == "pass" for row in take.log["steps"]),
             take.log["expected_request_sequence_pass"], all(row["status"] == 200 for row in api),
             all(row["status"] < 400 for row in take.log["network"]),
@@ -625,7 +665,9 @@ async def main(args) -> int:
             run(["ffmpeg", "-v", "error", "-y", "-ss", str(offset), "-i", str(output),
                  "-frames:v", "1", str(path)])
             exported.append({"path": str(path), "offset_seconds": offset, "name": frame["name"]})
-        document.update(selected_take=chosen["take"], output=str(output), frames=exported,
+        sample_response = next((r.get("observed_response", {}) for r in chosen["network"] if r.get("path") == "/preflight"), {})
+        document.update(sample_risk_numbers={key:sample_response.get(key) for key in ("p_fail", "p_fail_before", "p_fail_after", "historical_p_fail", "rewrite_source")},
+                        selected_take=chosen["take"], output=str(output), frames=exported,
                         status="complete", output_ffprobe=probe(output), beats=chosen["beats"],
                         output_bytes=output.stat().st_size, output_sha256=hashlib.sha256(output.read_bytes()).hexdigest())
     else:
@@ -648,6 +690,7 @@ if __name__ == "__main__":
     parser.add_argument("--preview-mode", required=True, choices=("on", "off"), help="The accepted promoted revision's preview state")
     parser.add_argument("--warm-receipt", type=Path, help="V11 warm.json containing successful rows; required for preview-on")
     parser.add_argument("--sample-prompt", default=SPOON, help="Exact visible sample chip text")
+    parser.add_argument("--live-prompt", help="One fresh typed prompt, only after the live arm and V-C pass")
     parser.add_argument("--model-label", default="synthetic FFmpeg loop of a Gemini still", help="Source label matching the existing synthetic review")
     parser.add_argument("--headed", action="store_true", help="Show Chromium while recording")
     parser.add_argument("--allow-http", action="store_true", help="Permit an explicitly supplied local development URL")

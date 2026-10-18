@@ -1,0 +1,536 @@
+{
+  "scope": "Fresh original-file and Git-blob release-scope audit; zero provider/check/preview calls; no source/Git/deployment mutations",
+  "base": "9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af",
+  "head": "9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af",
+  "checked_at_utc": "2026-10-18T02:01:07.604014+00:00",
+  "checked_at_kst": "2026-10-18T11:01:07.604584+09:00",
+  "prior_hold_receipt": {
+    "path": "reports/preview_v4/release_scope_audit_before_hydration.json",
+    "sha256": "38a00277f7cd51d01b8542d2830bd98ab623d25ee94307951e65c55cdff9235c"
+  },
+  "status": "PASS_SCOPE",
+  "material_defects": [],
+  "frozen": {
+    "count": 13,
+    "declared_count": 13,
+    "exact_count": 13,
+    "manifest_baseline_match_count": 13,
+    "manifest_current_match_count": 13,
+    "files": [
+      {
+        "path": "cloud/rewrite_agent.py",
+        "baseline_bytes": 20199,
+        "current_bytes": 20199,
+        "baseline_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+        "current_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "cloud/store.py",
+        "baseline_bytes": 18244,
+        "current_bytes": 18244,
+        "baseline_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+        "current_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "cloud/postcheck.py",
+        "baseline_bytes": 18142,
+        "current_bytes": 18142,
+        "baseline_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+        "current_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "preflight_core/__init__.py",
+        "baseline_bytes": 203,
+        "current_bytes": 203,
+        "baseline_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+        "current_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "preflight_core/engine.py",
+        "baseline_bytes": 6726,
+        "current_bytes": 6726,
+        "baseline_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+        "current_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "static/index.html",
+        "baseline_bytes": 12964,
+        "current_bytes": 12964,
+        "baseline_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+        "current_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "static/styles.css",
+        "baseline_bytes": 25464,
+        "current_bytes": 25464,
+        "baseline_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+        "current_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "artifacts/engine.json",
+        "baseline_bytes": 60477,
+        "current_bytes": 60477,
+        "baseline_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+        "current_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "artifacts/vectorizer.joblib",
+        "baseline_bytes": 60877,
+        "current_bytes": 60877,
+        "baseline_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+        "current_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "artifacts/prompt_vectors.npz",
+        "baseline_bytes": 30974,
+        "current_bytes": 30974,
+        "baseline_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+        "current_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "Dockerfile",
+        "baseline_bytes": 787,
+        "current_bytes": 787,
+        "baseline_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+        "current_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "requirements-cloud.lock",
+        "baseline_bytes": 2553,
+        "current_bytes": 2553,
+        "baseline_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+        "current_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      },
+      {
+        "path": "cloudbuild.yaml",
+        "baseline_bytes": 145,
+        "current_bytes": 145,
+        "baseline_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+        "current_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+        "manifest_baseline_matches": true,
+        "manifest_current_matches": true,
+        "exact": true
+      }
+    ]
+  },
+  "runtime": {
+    "baseline_file_count": 23,
+    "current_file_count": 25,
+    "expected_count": 25,
+    "unchanged_count": 19,
+    "new_count": 2,
+    "changed_count": 6,
+    "changed_paths": [
+      "app.py",
+      "cloud/preview.py",
+      "cloud/sample_rewrites.json",
+      "cloud/sample_rewrites.py",
+      "static/app.js",
+      "static/architecture.js"
+    ],
+    "expected_changed_paths": [
+      "app.py",
+      "cloud/preview.py",
+      "cloud/sample_rewrites.json",
+      "cloud/sample_rewrites.py",
+      "static/app.js",
+      "static/architecture.js"
+    ],
+    "exact_authorized_change_set": true,
+    "baseline_runtime_sha256": "ecb14dc207c9ba78d360f6b72f77dfa41c08011387c40180327d8a795743c793",
+    "current_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+    "submitted_build_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+    "submitted_build_hash_matches": true,
+    "files": [
+      {
+        "path": "Dockerfile",
+        "baseline_bytes": 787,
+        "current_bytes": 787,
+        "baseline_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+        "current_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "app.py",
+        "baseline_bytes": 21744,
+        "current_bytes": 26134,
+        "baseline_sha256": "44063aa3094407449ed70400fecc71bfc1c05c83421e17131711405fc7d2baf6",
+        "current_sha256": "6a4049031c7d4d5e98ccb0428a76235acd9e97275b73ff1431a8ec3adda87612",
+        "exact": false,
+        "new": false
+      },
+      {
+        "path": "artifacts/engine.json",
+        "baseline_bytes": 60477,
+        "current_bytes": 60477,
+        "baseline_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+        "current_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "artifacts/prompt_vectors.npz",
+        "baseline_bytes": 30974,
+        "current_bytes": 30974,
+        "baseline_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+        "current_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "artifacts/vectorizer.joblib",
+        "baseline_bytes": 60877,
+        "current_bytes": 60877,
+        "baseline_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+        "current_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "cloud/__init__.py",
+        "baseline_bytes": 66,
+        "current_bytes": 66,
+        "baseline_sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+        "current_sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "cloud/postcheck.py",
+        "baseline_bytes": 18142,
+        "current_bytes": 18142,
+        "baseline_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+        "current_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "cloud/preview.py",
+        "baseline_bytes": 3022,
+        "current_bytes": 8119,
+        "baseline_sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea",
+        "current_sha256": "148db9a788a20574a03d2cd8bdda9fa648062f53fb58d0a8c063a7bc5f27aeb4",
+        "exact": false,
+        "new": false
+      },
+      {
+        "path": "cloud/rewrite_agent.py",
+        "baseline_bytes": 20199,
+        "current_bytes": 20199,
+        "baseline_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+        "current_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "cloud/sample_rewrites.json",
+        "baseline_bytes": null,
+        "current_bytes": 34494,
+        "baseline_sha256": null,
+        "current_sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+        "exact": false,
+        "new": true
+      },
+      {
+        "path": "cloud/sample_rewrites.py",
+        "baseline_bytes": null,
+        "current_bytes": 2628,
+        "baseline_sha256": null,
+        "current_sha256": "3a963aa6a10cd841397b3c6b2fe6a8231f4db54522106e1195e90c93f530be80",
+        "exact": false,
+        "new": true
+      },
+      {
+        "path": "cloud/store.py",
+        "baseline_bytes": 18244,
+        "current_bytes": 18244,
+        "baseline_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+        "current_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "preflight_core/__init__.py",
+        "baseline_bytes": 203,
+        "current_bytes": 203,
+        "baseline_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+        "current_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "preflight_core/dataset.py",
+        "baseline_bytes": 2814,
+        "current_bytes": 2814,
+        "baseline_sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+        "current_sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "preflight_core/engine.py",
+        "baseline_bytes": 6726,
+        "current_bytes": 6726,
+        "baseline_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+        "current_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "preflight_core/irt.py",
+        "baseline_bytes": 5027,
+        "current_bytes": 5027,
+        "baseline_sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+        "current_sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "preflight_core/provenance.py",
+        "baseline_bytes": 721,
+        "current_bytes": 721,
+        "baseline_sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+        "current_sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "requirements-cloud.lock",
+        "baseline_bytes": 2553,
+        "current_bytes": 2553,
+        "baseline_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+        "current_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "static/app.js",
+        "baseline_bytes": 21553,
+        "current_bytes": 23382,
+        "baseline_sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+        "current_sha256": "398424c91ceaf32f4144a96c1a93877d759ffaba9d72adaeb167715136721496",
+        "exact": false,
+        "new": false
+      },
+      {
+        "path": "static/architecture.html",
+        "baseline_bytes": 5828,
+        "current_bytes": 5828,
+        "baseline_sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+        "current_sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "static/architecture.js",
+        "baseline_bytes": 5079,
+        "current_bytes": 5586,
+        "baseline_sha256": "5c506b618242be4dadb5603149ee1bcfee54e7bd8ae3b7795dcefb6cb272fbfe",
+        "current_sha256": "b5e9bfbc02ccaa70ba30d2622b935ad79bd08815b952f5c5d711cd15356efb2d",
+        "exact": false,
+        "new": false
+      },
+      {
+        "path": "static/index.html",
+        "baseline_bytes": 12964,
+        "current_bytes": 12964,
+        "baseline_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+        "current_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "static/postcheck.js",
+        "baseline_bytes": 15896,
+        "current_bytes": 15896,
+        "baseline_sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+        "current_sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "static/status.js",
+        "baseline_bytes": 1843,
+        "current_bytes": 1843,
+        "baseline_sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+        "current_sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+        "exact": true,
+        "new": false
+      },
+      {
+        "path": "static/styles.css",
+        "baseline_bytes": 25464,
+        "current_bytes": 25464,
+        "baseline_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+        "current_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+        "exact": true,
+        "new": false
+      }
+    ]
+  },
+  "protected_behavior": {
+    "risk_core_files": 5,
+    "risk_core_exact_count": 5,
+    "rewrite_agent_exact": true,
+    "postcheck_service_exact": true,
+    "postcheck_ui_exact": true,
+    "store_exact": true,
+    "postcheck_route_ast_exact": true,
+    "sample_strings_ast_exact": true,
+    "video_pricing_ast_exact": true,
+    "first_screen_index_exact": true,
+    "first_screen_styles_exact": true,
+    "status_js_exact": true
+  },
+  "fixture": {
+    "fixture_sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+    "source_report": "reports/preview_v4/sample_rewrites_acquisition.json",
+    "expected_source_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+    "actual_source_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+    "source_hash_exact": true,
+    "sample_count": 5,
+    "source_http200_count": 5,
+    "sanitized_exact_count": 5,
+    "improved_count": 4,
+    "unchanged_no_safe_count": 1,
+    "samples": [
+      {
+        "prompt": "a cat and a dog",
+        "http_status": 200,
+        "sanitized_exact": true
+      },
+      {
+        "prompt": "a spoon and a laptop",
+        "http_status": 200,
+        "sanitized_exact": true
+      },
+      {
+        "prompt": "a bicycle and a car",
+        "http_status": 200,
+        "sanitized_exact": true
+      },
+      {
+        "prompt": "indoor gymnasium",
+        "http_status": 200,
+        "sanitized_exact": true
+      },
+      {
+        "prompt": "a purple clock",
+        "http_status": 200,
+        "sanitized_exact": true
+      }
+    ]
+  },
+  "older_tags": {
+    "expected_from": "reports/preview_v3/REPORT.md:96",
+    "expected": {
+      "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+      "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940"
+    },
+    "local": {
+      "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+      "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940"
+    },
+    "remote": {
+      "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+      "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940"
+    },
+    "local_exact_count": 2,
+    "remote_exact_count": 2,
+    "remote_status": "READ"
+  },
+  "description": {
+    "characters": 952,
+    "expected": 952,
+    "within1024": true,
+    "count_exact": true
+  },
+  "official_source_integrity": {
+    "bytes": 3001,
+    "sha256": "44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0",
+    "sealed_sha256": "44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0",
+    "sealed_hash_exact": true
+  },
+  "promotion_guard_review": {
+    "helper_sha256": "b1e7ca193294887b83a78dda132b186460b22dde6295b96dcada3dcc32b4f80f",
+    "tests_sha256": "0104e631c5c106b1249a64df0fcdf780dca6b6731ae0a9d9eec21ddb3a49d8a2",
+    "previous_findings_resolved": 2,
+    "saved_and_native_warm_false_required": true,
+    "gate_native_revision_build_commit_runtime_hash_bound": true,
+    "fresh_native_image_digest_bound": true,
+    "current_tag_revision_bound": true,
+    "production_baseline_rechecked": true,
+    "live_ui_gate_required": true,
+    "focused_tests": {
+      "command": "../.preflight-cloud-venv/bin/python -m pytest -q tests/test_preview_release_v4.py",
+      "passed": 12,
+      "failed": 0,
+      "exit_code": 0,
+      "elapsed_seconds_reported": 0.02
+    },
+    "material_findings": []
+  },
+  "source_provenance_coverage": {
+    "expected25_paths_covered": true,
+    "explicit_required_paths": [
+      "Dockerfile",
+      "app.py",
+      "artifacts/engine.json",
+      "artifacts/prompt_vectors.npz",
+      "artifacts/vectorizer.joblib",
+      "cloud/sample_rewrites.json",
+      "cloud/sample_rewrites.py",
+      "requirements-cloud.lock"
+    ],
+    "build_digest_function_matches_source_verifier": true,
+    "native_git_archive_and_image_checks_present": true,
+    "final_commit_native_provenance_status": "PENDING final candidate/source commit; not executed by this offline scope audit"
+  },
+  "hydration": {
+    "scanned_regular_files": 841,
+    "dataless_count": 0,
+    "dataless_paths": [],
+    "fallback_reconstructed_files": 0,
+    "original_files_only": true
+  },
+  "provider_calls": 0,
+  "preview_requests": 0,
+  "preflight_requests": 0
+}

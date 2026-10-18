@@ -1,0 +1,10 @@
+{
+  "recorded_at_kst": "2026-10-18T10:46:34.365211+09:00",
+  "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+  "resolved_url": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+  "quote": "You're charged only for requests that return a 200 response code.",
+  "rule": "Known non200 provider statuses have zero list-price token charges. HTTP200 charges use recorded token usage and actual returned traffic rates. Unknown transport outcomes remain unpriced, not zero.",
+  "original_preregistration_and_receipts_modified": false,
+  "additional_provider_calls": 0,
+  "actual_billing": "UNMEASURED; list-price calculation is not an invoice."
+}

@@ -1,0 +1,207 @@
+{
+  "observed_at_utc": "2026-10-18T01:55:37.586776+00:00",
+  "dataless_files": 48,
+  "native_download_requests": [
+    {
+      "path": "preflight_core/__pycache__/provenance.cpython-312.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "preflight_core/__pycache__/irt.cpython-312.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "preflight_core/__pycache__/__init__.cpython-311.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "preflight_core/dataset.py",
+      "exit_code": 0
+    },
+    {
+      "path": "artifacts/vectorizer.joblib",
+      "exit_code": 0
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "exit_code": 0
+    },
+    {
+      "path": "tests/__pycache__/test_guards.cpython-311-pytest-9.0.3.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "tests/__pycache__/test_guards.cpython-312-pytest-9.0.3.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "tests/__pycache__/test_preview_runtime.cpython-310-pytest-9.0.3.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "logs/tests_postcheck.txt",
+      "exit_code": 0
+    },
+    {
+      "path": "requirements-dev.txt",
+      "exit_code": 0
+    },
+    {
+      "path": ".gitignore",
+      "exit_code": 0
+    },
+    {
+      "path": "cloud/__pycache__/store.cpython-310.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "scripts/release_cloud.py",
+      "exit_code": 0
+    },
+    {
+      "path": "scripts/__pycache__/verify_store_live.cpython-312.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "scripts/__pycache__/verify_rewrites.cpython-312.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "scripts/__pycache__/import_firestore.cpython-312.pyc",
+      "exit_code": 0
+    },
+    {
+      "path": "scripts/verify_rewrites.py",
+      "exit_code": 0
+    },
+    {
+      "path": "scripts/verify_ui_d.py",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/68/9d5bc6091aa078a9dd7004d4e2fb0334a280b1",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/69/e06554bbdb60fa1792449396ef7bbd322094d6",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/58/8b0b793a071484574bd98f67b384b5e98c16d2",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/cf/fc4bc8d92797374533f4b67d4cc947e0607928",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/cf/bf8fb13204252dc71ae6dec5753f7a621323e9",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/20/e946f7652bf1d608b4610c7878eda212918dd8",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/75/3103cac03f2c5194c6aae0b0ba3828adcd28b6",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/9f/77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/ef/22b838c2f7928c361279137f8648bcd895cd5d",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/objects/8b/d2ede868b2863f48f557194a24824665f8de0f",
+      "exit_code": 0
+    },
+    {
+      "path": ".git/hooks/fsmonitor-watchman.sample",
+      "exit_code": 0
+    },
+    {
+      "path": "demo_diagnostics/csp_probe/takes/take_1/screens/02_historical_neighbours.png",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/track_cd_screens/preview_done_1440x900.png",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v4/official_sources.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v4/prompts/P1/10.txt",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v4/prompts/P1/11.txt",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v4/ui_contract.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v3/build_copy_only.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v3/preflight_candidate.txt",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/preview_v3/ui_candidate/architecture_390x844.png",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/firestore_integrity_postcheck.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/postcheck_local_decode.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/d_candidate_ui_before_status_restore.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/browser_qa.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/postcheck_d_primary.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/first_viewport_cd_local/summary.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/spend_after_preview.json",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/g0_completion_report.md",
+      "exit_code": 0
+    },
+    {
+      "path": "reports/public_copy_followup/live_copy.json",
+      "exit_code": 0
+    }
+  ],
+  "files_reconstructed": 0,
+  "recovered_at_utc": "2026-10-18T02:00:21.995611+00:00",
+  "final_dataless_count": 0,
+  "official_source_sha256": "44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0",
+  "official_source_hash_matches_sealed": true,
+  "recovery_methods": [
+    "native brctl download original paths",
+    "Foundation startDownloadingUbiquitousItem + NSFileCoordinator original read"
+  ]
+}

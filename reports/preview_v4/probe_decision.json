@@ -1,0 +1,74 @@
+{
+  "arms": [
+    {
+      "actual_billing_verified": false,
+      "arm": "P1",
+      "completed": 20,
+      "known_list_price_total_usd": 0.32265655,
+      "mean_successful_list_price_usd": 0.04033206875,
+      "non200_no_charge_rows": 12,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "complete",
+      "successful_http200_images_gt10KiB": 8,
+      "unpriced_rows": 0
+    },
+    {
+      "actual_billing_verified": false,
+      "arm": "P2",
+      "completed": 20,
+      "known_list_price_total_usd": 0.2322747,
+      "mean_successful_list_price_usd": 0.03871245,
+      "non200_no_charge_rows": 14,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "complete",
+      "successful_http200_images_gt10KiB": 6,
+      "unpriced_rows": 0
+    },
+    {
+      "actual_billing_verified": false,
+      "arm": "P3",
+      "completed": 20,
+      "known_list_price_total_usd": 0.2690385,
+      "mean_successful_list_price_usd": 0.04483974999999999,
+      "non200_no_charge_rows": 14,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "complete",
+      "successful_http200_images_gt10KiB": 6,
+      "unpriced_rows": 0
+    }
+  ],
+  "budget": {
+    "all_runs_today_conservative_attempts": 115,
+    "budget_date_kst": "2026-10-18",
+    "daily_cap": 85,
+    "historical_v3_attempts_excluded": 44,
+    "initial_image_calls": 0,
+    "known_measured_attempts_by_model": {
+      "gemini-2.5-flash-image": 29,
+      "gemini-3.1-flash-image": 20,
+      "gemini-3.1-flash-lite-image": 20
+    },
+    "known_measured_model_attempts": 69,
+    "known_zero_model_call_responses": 2,
+    "remaining": 14,
+    "scope": "preview_v4_only",
+    "today_conservative_attempts": 71,
+    "unknown_dispatch_reservations": 0,
+    "v4_effective_attempts": 71,
+    "v4_reserved_attempts": 71,
+    "verified_zero_call_qa_hits": 0
+  },
+  "live_generation_allowed": false,
+  "reason": "No completed arm meets preregistered19/20 image and verified-price rule",
+  "selected_arm": null,
+  "updated_at_kst": "2026-10-18T11:06:28.350128+09:00"
+}

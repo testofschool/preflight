@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/felix/Desktop/AI Builder Cup 2026/preflight/scripts/verify_preview_ui_v4.py", line 15, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'

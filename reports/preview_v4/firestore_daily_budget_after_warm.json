@@ -1,0 +1,14 @@
+{
+  "daily_limit": 60,
+  "day_count": 28,
+  "effective_day_utc": "2026-10-18",
+  "preview_requests_made_by_snapshot": 0,
+  "provider_calls_made_by_snapshot": 0,
+  "recorded_at_kst": "2026-10-18T11:00:37.614059+09:00",
+  "remaining_admissions": 32,
+  "reset_at_kst": "2026-10-19T09:00:00+09:00",
+  "reset_at_utc": "2026-10-19T00:00:00+00:00",
+  "snapshot_exists": true,
+  "source": "Firestore service_v1/preview-budget direct read",
+  "stored_day_utc": "2026-10-18"
+}

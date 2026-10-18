@@ -1,0 +1,44 @@
+{
+  "observed_at_utc": "2026-10-18T01:40:38.896038+00:00",
+  "observed_at_kst": "2026-10-18T10:40:38.896038+09:00",
+  "counter": {
+    "day": "2026-10-18",
+    "request_timestamps": [
+      1792284194.7315552,
+      1792284207.7370746,
+      1792284220.7578146,
+      1792284233.7367785,
+      1792284246.7415476
+    ],
+    "day_count": 18
+  },
+  "limit": 60,
+  "used_today_utc": 18,
+  "remaining": 42,
+  "reset_at_utc": "2026-10-19T00:00:00+00:00",
+  "reset_at_kst": "2026-10-19T09:00:00+09:00",
+  "reset_rule": "cloud/store.py admit_preview uses UTC date; 00:00 UTC daily",
+  "requested_step_check": {
+    "warm": 10,
+    "V_C_if_enabled": 10,
+    "self_qa": 12,
+    "total": 32,
+    "fits": true
+  },
+  "all_steps_without_overlap": {
+    "warm": 10,
+    "V_B": 10,
+    "V_C_if_enabled": 10,
+    "self_qa": 12,
+    "demo_samples": 2,
+    "demo_live_if_enabled": 1,
+    "total": 45,
+    "fits": false
+  },
+  "direct_warm_before_new_instruction": {
+    "attempt_id": "WARM-01",
+    "in_app_admissions": 0,
+    "v4_image_calls": 1
+  },
+  "caps_changed": false
+}

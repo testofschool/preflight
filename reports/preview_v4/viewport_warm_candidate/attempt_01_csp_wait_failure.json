@@ -1,0 +1,79 @@
+{
+  "scope": "Read-only home, status and architecture; no /preflight or /preview requests",
+  "url": "https://preview-v4-candidate---preflight-jcgro45veq-as.a.run.app",
+  "revision_reported_by_root": "preflight-00024-poq",
+  "started_at_utc": "2026-10-18T01:49:33.350118+00:00",
+  "fresh_browser": true,
+  "http_cache_disabled": true,
+  "service_workers": "blocked",
+  "measurement_js_sha256": "f16c6279542b50d3f79c9174996391a77f13a4c4993aad4e5cd68ba3169afc1f",
+  "browser_args": [
+    "--use-gl=angle",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/static/styles.css"
+    },
+    {
+      "method": "GET",
+      "path": "/static/status.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/static/postcheck.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api/status"
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/static/styles.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/static/status.js",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/static/postcheck.js",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/static/app.js",
+      "status": 200
+    }
+  ],
+  "page_errors": [
+    "Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'self'\".\n"
+  ],
+  "views": [],
+  "passed": false,
+  "browser_version": "145.0.7632.6",
+  "error": {
+    "type": "Error",
+    "message": "Page.wait_for_function: EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'self'\".\n\n    at eval (<anonymous>)\n    at predicate (eval at evaluate (:290:30), <anonymous>:4:56)\n    at next (eval at evaluate (:290:30), <anonymous>:29:29)"
+  },
+  "ended_at_utc": "2026-10-18T01:49:35.386279+00:00"
+}

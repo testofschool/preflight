@@ -12,3 +12,7 @@ logs/server.log
 /demo/*.mp4
 /demo/takes/
 /demo_diagnostics/
+
+# Raw image probes and advisory locks remain local; numerical receipts are committed.
+/reports/preview_v4/probe_images/
+/reports/preview_v4/*.lock

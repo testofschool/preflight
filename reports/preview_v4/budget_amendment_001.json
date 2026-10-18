@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "amendment_id": "budget_amendment_001",
+  "recorded_at_kst": "2026-10-18T10:40:29.706396+09:00",
+  "authority": "Current human steering conveyed by root agent: v4cap85excludesv3.",
+  "scope": "preview_v4_only",
+  "daily_cap": 85,
+  "initial_image_calls": 0,
+  "historical_v3_attempts_excluded": 44,
+  "existing_v4_attempts_preserved": [
+    "WARM-01"
+  ],
+  "sealed_original_preregistration_sha256": "69e33200413f9d42f7b96e4340da19bad1370b1f35fd684e9662dd74a6d28331",
+  "original_preregistration_modified": false,
+  "new_allocation": {
+    "warm_image_attempts_max": 10,
+    "probe_attempts_max": 60,
+    "qa_image_attempts_max": 15,
+    "all_v4_image_attempts_max": 85
+  },
+  "dispatch_constraints": {
+    "remaining_warm": "Throughcandidateapp /preview; nofurtherdirectwarmcalls.",
+    "qa": "Throughapp /preview.",
+    "probes": "DirectVertexscriptsP1/P2/P3,20freshpromptsperarm. Differentmodelsconcurrent;P1modelusedbynothingelse.",
+    "runtime_caps": "Do notraiseFirestore60/day,5/min,500ceiling,service1000. Beforeappwarmingreadfreshday_countandUTCreset, ensurewarm+V-C+self-QAadmissionsfit; STOPifinsufficient.",
+    "spacing": "Warm>=60s;eachprobearm>=15s;noautomaticretry."
+  },
+  "supersedes": "Onlythe44inclusivecapinterpretationandstrictbudgetallocation. Originalsealedplanandexistingcallreceiptremainunchanged."
+}

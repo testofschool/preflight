@@ -1,0 +1,470 @@
+{
+  "schema_version": 1,
+  "registered_at_kst": "2026-10-18T10:35:12.815435+09:00",
+  "provider_calls_before_registration_v4": 0,
+  "budget_date_kst": "2026-10-18",
+  "official_sources_sha256": "44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0",
+  "policy": {
+    "minimum_start_spacing_seconds": 15,
+    "timeout_seconds": 30,
+    "attempts_per_call": 1,
+    "max_probe_calls": 60,
+    "same_model_concurrency": 1,
+    "P1_exclusive_from_other_model_matching_calls": true,
+    "freshness": "All60 prompt strings are distinct, generated in this registration and absent from prior local reports/scripts/tests/cloud text. No v4 provider calls have occurred. Global external history is not accessible.",
+    "pass_rule": "Complete20 attempts; >=19 HTTP200 responses containing a valid image >10240 bytes. P1 cannot ship without verified Priority pricing.",
+    "selection_rule": "Highest image success count among passing arms; tie lowest mean actual-response list-price token cost; no passing arm => samples-only.",
+    "no_retry": "A dispatched/reserved prompt is never retried, including timeouts, interruptions and transport errors.",
+    "daily_cap": 85,
+    "baseline_attempts_today": 44,
+    "remaining_calls_under_cap": 41,
+    "minimum_new_calls_requested_warm_plus_probe": 70,
+    "budget_conflict": "70 requested new calls exceed41 remaining slots. Calls remain blocked pending root execution instruction; do not raise85 cap.",
+    "execution_authorized": true,
+    "budget_available_to_probes_after_warm": 31,
+    "execution_authorization_basis": "Userattachmentauthorizesimagework; rootinstructedexecuteon2026-10-18withstrict85totaldailycap. Optionalbudgetclarificationunanswered;85wasnotraised.",
+    "qa_zero_call_settlement": "Onlypurposeqa +explicitHTTP200cachehitmodel_calls0settlesapotentialreservationtozero. Unknown, failed, andprobodispatchesremaincharged1. AttemptIDsimmutable."
+  },
+  "arms": [
+    {
+      "id": "P1",
+      "model": "gemini-3.1-flash-lite-image",
+      "location": "global",
+      "size_wire": "1K",
+      "headers": {
+        "X-Vertex-AI-LLM-Shared-Request-Type": "priority"
+      },
+      "planned_calls": 20,
+      "prompts": [
+        {
+          "id": "P1-01",
+          "file": "reports/preview_v4/prompts/P1/01.txt",
+          "sha256": "ea1ccbd6494a0221f8b0801e71da2f686d2641c1f1f94f3182f982907f709cf0"
+        },
+        {
+          "id": "P1-02",
+          "file": "reports/preview_v4/prompts/P1/02.txt",
+          "sha256": "9a974878d26059cba562a26e3a9f03f5d7b33d8e572b33cbf8cfb4642be047c4"
+        },
+        {
+          "id": "P1-03",
+          "file": "reports/preview_v4/prompts/P1/03.txt",
+          "sha256": "d181dff7b355bfeb55c86f3d2fd16e168fdcdb22872ef16542ef5f456d143049"
+        },
+        {
+          "id": "P1-04",
+          "file": "reports/preview_v4/prompts/P1/04.txt",
+          "sha256": "64c3c4a46274e2d5b823136e031d338f71942c9de34a2e7814a20b70751c356d"
+        },
+        {
+          "id": "P1-05",
+          "file": "reports/preview_v4/prompts/P1/05.txt",
+          "sha256": "c8e2d71e8bf45329e5fd11396fd915b0c99e542acb4493b5bb266a486e0b4421"
+        },
+        {
+          "id": "P1-06",
+          "file": "reports/preview_v4/prompts/P1/06.txt",
+          "sha256": "ccdd8a1b9e210d100f48bbd07b24c2697ee98c13d4b1566b9d016b41b60ba359"
+        },
+        {
+          "id": "P1-07",
+          "file": "reports/preview_v4/prompts/P1/07.txt",
+          "sha256": "dd8d6b6401437f84982808f130873b15e5e19d0efba0f4a3595768b485a8e6d8"
+        },
+        {
+          "id": "P1-08",
+          "file": "reports/preview_v4/prompts/P1/08.txt",
+          "sha256": "97bc4759e8b433b1196eef8638d5bc2c1294047194bfa3a0bdee48b1f443470f"
+        },
+        {
+          "id": "P1-09",
+          "file": "reports/preview_v4/prompts/P1/09.txt",
+          "sha256": "d9a92d59d19358cf58bb90c88ce0f2435fd1b9721779dba4de7cee023a630e4e"
+        },
+        {
+          "id": "P1-10",
+          "file": "reports/preview_v4/prompts/P1/10.txt",
+          "sha256": "6760c044b16eda82ae719ce6c21fc656f3a548362b433e279ce06861d90a1762"
+        },
+        {
+          "id": "P1-11",
+          "file": "reports/preview_v4/prompts/P1/11.txt",
+          "sha256": "a563d9b53e1e790979c1edf4501e557694e9a357972254d54dab5f8680a0dc76"
+        },
+        {
+          "id": "P1-12",
+          "file": "reports/preview_v4/prompts/P1/12.txt",
+          "sha256": "77acb8ae93d61c76d2aaead1d3b176706afb06bbd45c3d08122ddaef6bac297b"
+        },
+        {
+          "id": "P1-13",
+          "file": "reports/preview_v4/prompts/P1/13.txt",
+          "sha256": "fd5f538246a607f2ba72dd088f0b68856e4ab6528ef3f444fe8795009e08187c"
+        },
+        {
+          "id": "P1-14",
+          "file": "reports/preview_v4/prompts/P1/14.txt",
+          "sha256": "efe2d9a5f0c75d7b7613ef4c2a97b5d88746e2007434a0f5b6f82276ae996e29"
+        },
+        {
+          "id": "P1-15",
+          "file": "reports/preview_v4/prompts/P1/15.txt",
+          "sha256": "8f04496ca232dd0ed3f084b0efd7f2c3c0b562f9736d06c8979bea3a6d2b2aca"
+        },
+        {
+          "id": "P1-16",
+          "file": "reports/preview_v4/prompts/P1/16.txt",
+          "sha256": "0068843110bfdc8c840411515fa47c7edd14cd5822aeb90c78377ac1f6103ea0"
+        },
+        {
+          "id": "P1-17",
+          "file": "reports/preview_v4/prompts/P1/17.txt",
+          "sha256": "65d5073158b8eb0fd776d56cc9e0cc9c80ce3199ab25bce4f1bd12e6f5e00fb3"
+        },
+        {
+          "id": "P1-18",
+          "file": "reports/preview_v4/prompts/P1/18.txt",
+          "sha256": "644df73c9d8edc089716a92bc14ff5147ca06ef18d05aa64e5ba3471ebbfcb01"
+        },
+        {
+          "id": "P1-19",
+          "file": "reports/preview_v4/prompts/P1/19.txt",
+          "sha256": "35bedd41188565716739f344239c263cdd41b24949070f07cc684e32972e2fec"
+        },
+        {
+          "id": "P1-20",
+          "file": "reports/preview_v4/prompts/P1/20.txt",
+          "sha256": "5a67e7d4163a5fc8a44ca863b89c7b3351cda110c307c0875ffc68c92db7c3f8"
+        }
+      ],
+      "price_verified": true,
+      "official_sources_file": "reports/preview_v4/official_sources.json",
+      "standard_usd_per_million_tokens": {
+        "input": 0.25,
+        "text_output": 1.5,
+        "image_output": 30
+      },
+      "image_output_tokens": 1120,
+      "priority_usd_per_million_tokens": {
+        "input": 0.45,
+        "text_output": 2.7,
+        "image_output": 54
+      }
+    },
+    {
+      "id": "P2",
+      "model": "gemini-2.5-flash-image",
+      "location": "global",
+      "size_wire": null,
+      "headers": {},
+      "planned_calls": 20,
+      "prompts": [
+        {
+          "id": "P2-01",
+          "file": "reports/preview_v4/prompts/P2/01.txt",
+          "sha256": "a57d58ff27105d173d499dafeaef3efe9769e658330f0e468e65cac6c3a6ba42"
+        },
+        {
+          "id": "P2-02",
+          "file": "reports/preview_v4/prompts/P2/02.txt",
+          "sha256": "401b62c36b9fd120ca853573c5086a583f57cd49ef660504f34d6c5faf72cce6"
+        },
+        {
+          "id": "P2-03",
+          "file": "reports/preview_v4/prompts/P2/03.txt",
+          "sha256": "842bb6932e6873d1019034aa6e6dd08d05744948a5b17c5d6cef3fdb05ec8a27"
+        },
+        {
+          "id": "P2-04",
+          "file": "reports/preview_v4/prompts/P2/04.txt",
+          "sha256": "3a8531391e13111e41e6a12a8c8f2aeacb1e0209a7ef1736c84dd6cbe0d290d6"
+        },
+        {
+          "id": "P2-05",
+          "file": "reports/preview_v4/prompts/P2/05.txt",
+          "sha256": "b5f6d707f76984164780e069b4800db3fba9f2278308c3393f588a81e5ba67fa"
+        },
+        {
+          "id": "P2-06",
+          "file": "reports/preview_v4/prompts/P2/06.txt",
+          "sha256": "170b04baeb3801071ce158599cd7b2c512f3f6002eb3b6a474fda30b04818995"
+        },
+        {
+          "id": "P2-07",
+          "file": "reports/preview_v4/prompts/P2/07.txt",
+          "sha256": "70eff39648d1f45c27f6c7858556107f3bd74bd74358db98049816c82dd3acc7"
+        },
+        {
+          "id": "P2-08",
+          "file": "reports/preview_v4/prompts/P2/08.txt",
+          "sha256": "39b03453201a07d666680ecaf5d56d2b0f0ae99cab2f26a01991010e2f243855"
+        },
+        {
+          "id": "P2-09",
+          "file": "reports/preview_v4/prompts/P2/09.txt",
+          "sha256": "58c42e43bf97902efef870bbee7a70f9983558d845e7184e09c9ef0e21b0785c"
+        },
+        {
+          "id": "P2-10",
+          "file": "reports/preview_v4/prompts/P2/10.txt",
+          "sha256": "3b21852fe71d81a7725abe994b614e14da196afc9af7fed84a76f1b25b9b6917"
+        },
+        {
+          "id": "P2-11",
+          "file": "reports/preview_v4/prompts/P2/11.txt",
+          "sha256": "1f1acb27e11338228084b4b559bc18cd5981c60d415987f861966eb086d24523"
+        },
+        {
+          "id": "P2-12",
+          "file": "reports/preview_v4/prompts/P2/12.txt",
+          "sha256": "07ee15b867940845abbdf89f04c8d50c3c2e502b8626f06f81c006eda5284347"
+        },
+        {
+          "id": "P2-13",
+          "file": "reports/preview_v4/prompts/P2/13.txt",
+          "sha256": "36a20675c34283cfb578f860617bb20e31e6da1972b9943a4fcbb73daa2d5d13"
+        },
+        {
+          "id": "P2-14",
+          "file": "reports/preview_v4/prompts/P2/14.txt",
+          "sha256": "86005fbfe48683df21ee470e4025a102d871c68fb889f0d6f633a4a8405fdf1d"
+        },
+        {
+          "id": "P2-15",
+          "file": "reports/preview_v4/prompts/P2/15.txt",
+          "sha256": "2a0cb3b106d738ff789f0198a80b5a2b3e930c7e542d38b6d0db0ab0b5e40a4c"
+        },
+        {
+          "id": "P2-16",
+          "file": "reports/preview_v4/prompts/P2/16.txt",
+          "sha256": "a70d2a6e2a5574ca0ad91b58d48a10a7c8a6c5da173859862788a950bbe38b39"
+        },
+        {
+          "id": "P2-17",
+          "file": "reports/preview_v4/prompts/P2/17.txt",
+          "sha256": "a98a2be4db3b974b799774c2e079e2fb2488b714d9c94d77c47bd53e1ed0c205"
+        },
+        {
+          "id": "P2-18",
+          "file": "reports/preview_v4/prompts/P2/18.txt",
+          "sha256": "60dad8047c922f41e3d95ae65d18296512cae99eb3e27958ab8b529e2e280de9"
+        },
+        {
+          "id": "P2-19",
+          "file": "reports/preview_v4/prompts/P2/19.txt",
+          "sha256": "cad445bea64157fe395489df564c6b0679a353c7efaa475525c9403cfa816506"
+        },
+        {
+          "id": "P2-20",
+          "file": "reports/preview_v4/prompts/P2/20.txt",
+          "sha256": "e96328d6b0471e2c2972f9ff0aec1438e038dcd6ac47b21e966f312b623951a1"
+        }
+      ],
+      "price_verified": true,
+      "official_sources_file": "reports/preview_v4/official_sources.json",
+      "standard_usd_per_million_tokens": {
+        "input": 0.3,
+        "text_output": 2.5,
+        "image_output": 30
+      },
+      "image_output_tokens": 1290
+    },
+    {
+      "id": "P3",
+      "model": "gemini-3.1-flash-image",
+      "location": "global",
+      "size_wire": "512",
+      "headers": {},
+      "planned_calls": 20,
+      "prompts": [
+        {
+          "id": "P3-01",
+          "file": "reports/preview_v4/prompts/P3/01.txt",
+          "sha256": "f16a49aec4f5a36bb23e9abaa6f54b9a036c555d4b9156058a32da45dd8b307f"
+        },
+        {
+          "id": "P3-02",
+          "file": "reports/preview_v4/prompts/P3/02.txt",
+          "sha256": "91aee900e312784900cbbdf6a13fa686387aed6172ac58f71cfcb38883026090"
+        },
+        {
+          "id": "P3-03",
+          "file": "reports/preview_v4/prompts/P3/03.txt",
+          "sha256": "b56d1a3af2099dedd799037eff21ec9beb029c94218692775671a13f1498a829"
+        },
+        {
+          "id": "P3-04",
+          "file": "reports/preview_v4/prompts/P3/04.txt",
+          "sha256": "b24f2a317bc689750706c04d18c5b8ca3e412d0a2c1ec46fcf61a08742d95620"
+        },
+        {
+          "id": "P3-05",
+          "file": "reports/preview_v4/prompts/P3/05.txt",
+          "sha256": "7f89e04bd9c5e9e15b9372c4ccaf4a345e8e8f8f84ed0ce300803d8b9fdb41f3"
+        },
+        {
+          "id": "P3-06",
+          "file": "reports/preview_v4/prompts/P3/06.txt",
+          "sha256": "5b172319bda07ee760ff08fed30d3e1dc2216b52a6a99ca958b08ffbed38b011"
+        },
+        {
+          "id": "P3-07",
+          "file": "reports/preview_v4/prompts/P3/07.txt",
+          "sha256": "ba287ce26f700993a9c418a111adeae43eef60c2f9d22a25ae6eeb86939df079"
+        },
+        {
+          "id": "P3-08",
+          "file": "reports/preview_v4/prompts/P3/08.txt",
+          "sha256": "3f8674d1b2f12b5e6ab85078e35611db78cb355734c72b6aa32feaccd96a612a"
+        },
+        {
+          "id": "P3-09",
+          "file": "reports/preview_v4/prompts/P3/09.txt",
+          "sha256": "aaac4c29d7eaf1a3bd2076bde5ecf9baf9e51e1fa2083fa59cd7e89b05bae0bf"
+        },
+        {
+          "id": "P3-10",
+          "file": "reports/preview_v4/prompts/P3/10.txt",
+          "sha256": "aeaf7565e08890a41fb83d1c85bd58544026a48fb8c285a17348693b671f5f7f"
+        },
+        {
+          "id": "P3-11",
+          "file": "reports/preview_v4/prompts/P3/11.txt",
+          "sha256": "6c2887e8e8972f817c2c1cfb4ca78d5d54dc109f792e4815cc579efe3dc42c56"
+        },
+        {
+          "id": "P3-12",
+          "file": "reports/preview_v4/prompts/P3/12.txt",
+          "sha256": "69d73277123c4199e064486198ee211797a5d7589caef3ac792c95506d22be54"
+        },
+        {
+          "id": "P3-13",
+          "file": "reports/preview_v4/prompts/P3/13.txt",
+          "sha256": "6a16114cb0821fc15272477e105ce8486d2ec79012c095b6f3ce8befd64922e6"
+        },
+        {
+          "id": "P3-14",
+          "file": "reports/preview_v4/prompts/P3/14.txt",
+          "sha256": "c81d92b7e5cca93109e1d06988c95ebf255c091287bf40b4e033a0978c187391"
+        },
+        {
+          "id": "P3-15",
+          "file": "reports/preview_v4/prompts/P3/15.txt",
+          "sha256": "c4a8b0ef6052a7d86a5be1e4ac15b58a6239a9badfed39c9cc9cc2a4d8389a81"
+        },
+        {
+          "id": "P3-16",
+          "file": "reports/preview_v4/prompts/P3/16.txt",
+          "sha256": "e0190a51ce217464f093292984c25dde04389b63714989e51f70bc47cd2316cb"
+        },
+        {
+          "id": "P3-17",
+          "file": "reports/preview_v4/prompts/P3/17.txt",
+          "sha256": "2ff8e0a6998f6b4b222d964272b35bc40a68c346045540d66b010c3b83ccfbf2"
+        },
+        {
+          "id": "P3-18",
+          "file": "reports/preview_v4/prompts/P3/18.txt",
+          "sha256": "13d8b29f6346b05e23321b852ed272102c22ceea50765e4acdb5892e872211a4"
+        },
+        {
+          "id": "P3-19",
+          "file": "reports/preview_v4/prompts/P3/19.txt",
+          "sha256": "0b0f9a6dd4f4c05929da525fe07b0961be49e5779cf769ac389144d36f778445"
+        },
+        {
+          "id": "P3-20",
+          "file": "reports/preview_v4/prompts/P3/20.txt",
+          "sha256": "278951ea7462536d0049398183485d610e00b575724eda24af9e704d98144035"
+        }
+      ],
+      "price_verified": true,
+      "official_sources_file": "reports/preview_v4/official_sources.json",
+      "standard_usd_per_million_tokens": {
+        "input": 0.5,
+        "text_output": 3,
+        "image_output": 60
+      },
+      "image_output_tokens": 747
+    }
+  ],
+  "warm_plan": {
+    "calls": 10,
+    "minimum_start_spacing_seconds": 60,
+    "precedence": "Reserve10 daily slots for warm before any probe allocation.",
+    "first_model": "gemini-2.5-flash-image",
+    "location": "global",
+    "reason": "Official Vertex global support and separate model from P1. Warm and P1 may overlap; warm must finish before a P2 arm starts. No warm same-model calls overlap any probe arm.",
+    "retry_policy": "No automatic retry; any alternate consumes an additional shared-cap reservation and must be separately recorded.",
+    "storage": "existing save_preview with real pinned original/rewrite texts; no fabricated image/cache receipts.",
+    "fixture_sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+    "fixture": "cloud/sample_rewrites.json",
+    "registered_exact_texts": [
+      {
+        "sample_prompt": "a cat and a dog",
+        "original_sha256": "1f956e7ad7f19a8b0e54e19ab329f65be1ed699c8c555f263163fb3cdbf6dcb7",
+        "rewrite_sha256": "10cd6883b85c830249f7da88d265465eb26da5fc43e96b7d40095862dea25948"
+      },
+      {
+        "sample_prompt": "a spoon and a laptop",
+        "original_sha256": "f651d762cb8f5093ff0f5af6b3cc2a95bc71b9c6c9386ef025ab27b8b3e60a34",
+        "rewrite_sha256": "e0b40006430cd8f362242e150e7d217c6f5f193972f54360fb39067527ad87db"
+      },
+      {
+        "sample_prompt": "a bicycle and a car",
+        "original_sha256": "3f1f11ff19e6f59cd21380e13c4d584b183993b8a26f45c16e2514e38124bc4d",
+        "rewrite_sha256": "abdb888b7f0588b619ff35e57fa3ddd47b58b2301fa967276d19bca916b6dd60"
+      },
+      {
+        "sample_prompt": "indoor gymnasium",
+        "original_sha256": "c6ba353bd309bfd2b0a47574912d50593341e8db6fddba3fdf3419cc21547a93",
+        "rewrite_sha256": "c6ba353bd309bfd2b0a47574912d50593341e8db6fddba3fdf3419cc21547a93"
+      },
+      {
+        "sample_prompt": "a purple clock",
+        "original_sha256": "89517d10a611443bc9aa0b2738804d8a582648184b67752eb90cb4a75bb1b721",
+        "rewrite_sha256": "26f9174182acdc7821b8096ae0c335e3d6195c3c8c249ac9974cc55ad048670c"
+      }
+    ]
+  },
+  "allocation_amendment_before_first_v4_attempt": {
+    "registered_at_kst": "2026-10-18T10:37:23.268257+09:00",
+    "experiment_outcomes_seen": false,
+    "basis": "Original dailycap85 includes44previousattempts; strictcapunchanged. Userclarificationpending.",
+    "warm": {
+      "priority": 1,
+      "planned_actions": 10,
+      "unique_texts": 9,
+      "maximum_new_image_calls": 10,
+      "primary": "P2",
+      "model": "gemini-2.5-flash-image",
+      "location": "global",
+      "same_text_original_rewrite": "indoor gymnasium is identical; secondactioncachehit0calls.",
+      "minimum_new_call_start_spacing_seconds": 60
+    },
+    "probe": {
+      "priority": 2,
+      "fully_allocated_arm": "P2",
+      "allocated_calls": 20,
+      "P1": "UNRUN under current strict85cap",
+      "P3": "UNRUN under current strict85cap",
+      "P2_starts": "After allP2warmdispatchesfinish and exclusiveP2modellock releases."
+    },
+    "live_qa_reserve": {
+      "reserved_slots": 11,
+      "V-C_new_typed_prompts": 10,
+      "demo_new_live_prompt": 1,
+      "self_qa": "Reuse2successfulV-Ctypedprompts withsavedcache;0newcalls."
+    },
+    "if_P2_fails": {
+      "live_generation": "off",
+      "V-C": "not applicable",
+      "demo_live": "not applicable",
+      "partial_additional_probe_allocation": "Useuncommittedremaining slotsalternating P1firstthenP3, eachpreregisteredpromptorder, afterwarm. Anyincompletearmcannotpass.",
+      "no_automatic_dispatch": true
+    },
+    "maximum_new_calls_full_P2_live_path": 41,
+    "maximum_today": 85,
+    "note": "This allocationamendmentdoesnotchangethe19/20reliabilityrule; unrunarmsstayUNRUNanddonotcountasfailedexperiments."
+  }
+}

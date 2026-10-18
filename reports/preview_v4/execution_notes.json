@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-10-18T01:52:31.605957+00:00",
+  "runtime_build_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "changes_before_image_ui_gates": [
+    {
+      "file": "scripts/verify_preview_ui_v4.py",
+      "change": "Use arrow predicates under CSP; require exact original/rewrite submitted text and variant; exact metadata and three-surface copy checks. V-C counts only fresh cache-miss images with model_calls=1."
+    },
+    {
+      "file": "scripts/record_demo.py",
+      "change": "Use current architecture canonical-message selector, require saved metadata visible during3.25s hold, record exact pinned sample risks; optional live beat reserves its one attempt."
+    },
+    {
+      "file": "cloud/preview.py",
+      "change": "P3 display0.5K maps to wire512; P1 unknown traffic fails closed after one attempt; no runtime retry."
+    },
+    {
+      "file": "app.py",
+      "change": "38s overall preview deadline below unchanged Cloud Run40s. Warm-only sample misses are separate from typed live enablement."
+    }
+  ],
+  "V_B_preview_calls_before_harness_corrections": 0,
+  "V_C_preview_calls_before_harness_corrections": 0,
+  "demo_preview_calls_before_harness_corrections": 0,
+  "superseded_candidate": {
+    "revision": "preflight-00023-wad",
+    "primary_percent": 0,
+    "preview_calls": 0,
+    "reason": "Runtime guard and sample-only warming added before final rebuild."
+  },
+  "direct_warm_before_user_route_clarification": {
+    "attempt_id": "WARM-01",
+    "image_model_calls": 1,
+    "app_preview_admissions": 0,
+    "follow_up": "Preserved; all10 subsequent warm actions use /preview, including this saved cache hit."
+  },
+  "ui_environment_attempt": {
+    "python": "../.preflight-cloud-venv/bin/python",
+    "error": "ModuleNotFoundError: playwright",
+    "preview_http_requests": 0,
+    "provider_calls": 0,
+    "corrected_interpreter": "python3 (3.10; existing Playwright installed)",
+    "receipt": "ui_candidate_stdout.txt"
+  }
+}

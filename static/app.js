@@ -19,6 +19,14 @@
   let hasResult = false;
   let serviceStatus = null;
   let sessionId = null;
+  const previewLimited = "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.";
+
+  function previewModeMessage() {
+    if (typeof serviceStatus?.preview_mode_message === "string") return serviceStatus.preview_mode_message;
+    return serviceStatus?.preview === true
+      ? `Image preview — Active for sample prompts (saved stills); live generation ${serviceStatus.preview_mode === "samples+live" ? "on" : "limited"}`
+      : "Image preview — Not active; live generation limited";
+  }
 
   function clearError() {
     error.hidden = true;
@@ -192,14 +200,16 @@
     costNote.textContent = `Illustration using ${attemptCost} and ${hasMixedFeedback(data) ? "the mixed risk estimate" : "historical votes"}, capped at 5 attempts. This is not a Veo cost forecast. No generation has been requested.`;
   }
 
-  function renderPreview(original, rewrite) {
+  function renderPreview(original, rewrite, savedSample = false) {
     const container = document.createElement("div");
     container.className = "preview-controls";
+    const status = document.createElement("p");
+    status.className = "subtle-copy preview-mode-message";
+    status.textContent = previewModeMessage();
     const action = document.createElement("button");
     action.type = "button";
     action.className = "primary-button preview-button";
-    const price = serviceStatus?.pricing_image?.usd_per_image;
-    const label = `Preview a still · $${Number(price || 0).toFixed(2)}`;
+    const label = savedSample && !rewrite ? "Preview saved sample (unchanged)" : "Preview a still";
     const text = document.createElement("span");
     text.textContent = label;
     const spinner = document.createElement("span");
@@ -207,7 +217,7 @@
     spinner.setAttribute("aria-hidden", "true");
     action.append(text, spinner);
     action.disabled = serviceStatus?.preview !== true;
-    if (action.disabled) action.title = "Preview is busy right now — try again in a minute. The risk check still works.";
+    if (action.disabled) action.title = previewLimited;
     const output = document.createElement("div");
     output.setAttribute("aria-live", "polite");
     if (action.disabled) {
@@ -230,16 +240,15 @@
       try {
         const response = await fetch("/preview", {method: "POST", headers: {"Content-Type": "application/json"},
           body: JSON.stringify({prompt: useOriginal || !rewrite ? original : rewrite,
-            variant: useOriginal || !rewrite ? "original" : "rewrite", session_id: sessionId})});
+            variant: useOriginal || (!rewrite && !savedSample) ? "original" : "rewrite", session_id: sessionId})});
         const data = await response.json();
         if (!response.ok) {
           const retry = Number(response.headers.get("Retry-After"));
           if (response.status === 429 && retry > 0) retryAt = Date.now() + retry * 1000;
-          throw new Error(response.status === 429 && retry > 0 ? `Try again in ${retry} s` :
-            typeof data.detail === "string" ? data.detail : "Preview is busy right now — try again in a minute. The risk check still works.");
+          throw new Error(previewLimited);
         }
         if (typeof data.image_data_url !== "string" || !data.image_data_url.startsWith("data:image/jpeg;base64,"))
-          throw new Error("Preview is busy right now — try again in a minute. The risk check still works.");
+          throw new Error(previewLimited);
         const image = document.createElement("img");
         image.src = data.image_data_url;
         image.alt = "Image model still for the selected prompt";
@@ -249,31 +258,35 @@
         caption.textContent = data.caption;
         const metadata = document.createElement("p");
         metadata.className = "preview-metadata";
-        metadata.textContent = `Model ${data.model} · ${data.size} · $${Number(data.cost_usd).toFixed(2)} · ${(data.latency_ms / 1000).toFixed(1)} s`;
+        const cached = response.headers.get("X-Preview-Cache") === "hit" || data.cache === "hit";
+        const generatedDate = data.generated_date || data.generated_at?.slice(0, 10) || "date unavailable";
+        metadata.textContent = typeof data.metadata_label === "string" ? data.metadata_label : cached
+          ? `Saved still · generated ${generatedDate} · 0 model calls · $0.00`
+          : `Model ${data.model} · ${data.size} · $${Number(data.cost_usd).toFixed(6).replace(/0+$/, "").replace(/\.$/, ".00")} · ${(data.latency_ms / 1000).toFixed(1)} s`;
         const link = document.createElement("a");
         link.href = "https://ai.google.dev/gemini-api/docs/veo";
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.textContent = "Use as a Veo first frame ↗";
-        output.dataset.state = response.headers.get("X-Preview-Cache") === "hit" ? "cached" : "done";
+        output.dataset.state = cached ? "cached" : "done";
         output.append(image, caption, metadata, link);
       } catch (error) {
         const message = document.createElement("p");
         message.className = "form-error";
-        message.textContent = error.message;
+        message.textContent = previewLimited;
         output.dataset.state = retryAt > Date.now() ? "rate-limited" : "error";
         output.append(message);
       } finally {
         busy = false;
-        action.disabled = false;
-        if (originalLink) originalLink.disabled = false;
+        action.disabled = serviceStatus?.preview !== true;
+        if (originalLink) originalLink.disabled = action.disabled;
         action.classList.remove("loading");
         text.textContent = label;
       }
     }
     action.addEventListener("click", () => run(false));
-    container.append(action);
-    if (rewrite) {
+    container.append(status, action);
+    if (rewrite || savedSample) {
       originalLink = document.createElement("button");
       originalLink.type = "button";
       originalLink.className = "preview-original";
@@ -325,13 +338,27 @@
     const accepted = data.rewrite_status === "improved" && data.rewritten_prompt &&
       data.rewritten_prompt !== prompt && rate(data.p_fail_before) && rate(data.p_fail_after) &&
       data.p_fail_after < data.p_fail_before;
+    const savedSample = data.rewrite_source === "pinned-sample";
+    if (savedSample) {
+      const saved = document.createElement("p");
+      saved.className = "subtle-copy sample-rewrite-label saved-rewrite-label";
+      saved.textContent = "Sample rewrite (saved)";
+      const content = document.getElementById("better-content");
+      content.insertBefore(saved, content.querySelector(".rewritten-prompt"));
+      if (!accepted) {
+        const unchanged = document.createElement("p");
+        unchanged.className = "subtle-copy saved-sample-unchanged";
+        unchanged.textContent = "No lower-risk rewrite was accepted; the saved sample uses the original prompt.";
+        content.append(unchanged);
+      }
+    }
     if (accepted) {
       const note = document.createElement("p");
       note.className = "subtle-copy";
       note.textContent = "The rewrite is in English; non-English words were not scored.";
       document.getElementById("better-content").append(note);
     }
-    renderPreview(prompt, accepted ? data.rewritten_prompt : null);
+    renderPreview(prompt, accepted ? data.rewritten_prompt : null, savedSample);
     document.querySelector(".risk-card .evidence-boundary").textContent = mixed ? "This mixes historical human pairwise votes with separate machine clip verdicts. It is not a validated Veo failure probability." : "Historical evidence is a signal, not a validated probability of a Veo generation failing.";
     const historical = document.getElementById("risk-history");
     historical.hidden = !supported || !rate(data.historical_p_fail);
@@ -391,7 +418,11 @@
 
   window.preflightStatusReady.then(status => {
     serviceStatus = status;
-    if (hasResult) return;
+    if (hasResult) {
+      document.querySelectorAll(".preview-mode-message").forEach(message => { message.textContent = previewModeMessage(); });
+      document.querySelectorAll(".preview-button, .preview-original").forEach(control => { control.disabled = status?.preview !== true; });
+      return;
+    }
     if (status?.gemini === true) rewriteMessage("GEMINI REWRITE · CONNECTED", "A rewrite appears only when it passes the risk check.", "A lower estimate does not guarantee a better video.");
     else rewriteMessage("GEMINI REWRITE · UNAVAILABLE", "A rewrite is unavailable in the current mode.", status?.mode === "local-g0" ? "This local build checks historical evidence only." : "The service has not confirmed an active rewrite connection.");
   });

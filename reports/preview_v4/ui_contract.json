@@ -1,0 +1,158 @@
+{
+  "scope": "Mocked browser UI contracts only; 0 provider calls; real-candidate gates remain separate",
+  "checks": [
+    {
+      "name": "first viewport objects <=18",
+      "passed": true
+    },
+    {
+      "name": "first viewport colors <=12",
+      "passed": true
+    },
+    {
+      "name": "CTA inside 900px",
+      "passed": true
+    },
+    {
+      "name": "saved rewrite label exact and visible",
+      "passed": true
+    },
+    {
+      "name": "samples-only message exact",
+      "passed": true
+    },
+    {
+      "name": "samples-only preview enabled",
+      "passed": true
+    },
+    {
+      "name": "cache metadata exact",
+      "passed": true
+    },
+    {
+      "name": "cache still visible",
+      "passed": true
+    },
+    {
+      "name": "main preview uses rewrite variant",
+      "passed": true
+    },
+    {
+      "name": "original variant keeps sample text",
+      "passed": true
+    },
+    {
+      "name": "no-safe sample decision label exact",
+      "passed": true
+    },
+    {
+      "name": "no-safe unchanged explanation visible",
+      "passed": true
+    },
+    {
+      "name": "no-safe has no accepted rewrite/copy",
+      "passed": true
+    },
+    {
+      "name": "no-safe main button discloses unchanged",
+      "passed": true
+    },
+    {
+      "name": "no-safe saved variant uses original honestly",
+      "passed": true
+    },
+    {
+      "name": "no-safe original action remains separate",
+      "passed": true
+    },
+    {
+      "name": "typed rewrite has no saved label",
+      "passed": true
+    },
+    {
+      "name": "typed miss exact limited copy",
+      "passed": true
+    },
+    {
+      "name": "no busy retry copy",
+      "passed": true
+    },
+    {
+      "name": "architecture message samples",
+      "passed": true
+    },
+    {
+      "name": "live-on message exact",
+      "passed": true
+    },
+    {
+      "name": "live metadata preserves selected actual price",
+      "passed": true
+    },
+    {
+      "name": "live error exact limited copy",
+      "passed": true
+    },
+    {
+      "name": "provider details redacted",
+      "passed": true
+    },
+    {
+      "name": "architecture message samples+live",
+      "passed": true
+    },
+    {
+      "name": "mobile architecture no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile cache metadata exact",
+      "passed": true
+    },
+    {
+      "name": "mobile result no horizontal overflow",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "first_viewport": {
+    "elements": [
+      "a.brand",
+      "nav.header-nav",
+      "div.eyebrow",
+      "h1#page-title",
+      "p.intro-copy",
+      "a.clip-review-link",
+      "h2#prompt-heading",
+      "form#prompt-form",
+      "p",
+      "h2#results-heading",
+      "h3#risk-heading",
+      "p#risk-detail",
+      "h3#why-heading",
+      "h3#better-heading",
+      "p.rewrite-description",
+      "span",
+      "span#cost-value",
+      "p#cost-note"
+    ],
+    "colors": [
+      "20,43,49",
+      "239,127,96",
+      "101,114,118",
+      "255,254,250",
+      "220,240,232",
+      "80,100,90",
+      "67,90,76"
+    ],
+    "families": [
+      "Inter",
+      "ui-monospace"
+    ],
+    "text": "preflight . How it works \u2197 AN EARLY CHECK FOR YOUR VIDEO PROMPT Before the first frame. Look for signs of a difficult prompt before spending on a generation. Have a clip already? Review it \u2193 Start with your idea Your video prompt 0 / 4,000 A short scene description is enough to start. TRY A SAMPLE \u2199 A cat and a dog \u2197 A spoon and a laptop \u2197 A bicycle and a car \u2197 Indoor gymnasium \u2197 A purple clock \u2197 Check this prompt \u2192 This check runs on Cloud Run.No video is generated. Your preflight Risk Check a prompt to inspect the available evidence. What this score is Why Better prompt A rewrite appears only when it passes the risk check. Illustrative generation budget \u2014 A generation budget appears after the check. No video is generated."
+  },
+  "objects": 18,
+  "colors": 7,
+  "cta_bottom_px": 837.4375,
+  "check_count": 28
+}

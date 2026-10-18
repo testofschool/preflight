@@ -1,0 +1,63 @@
+{
+  "budget": {
+    "budget_date_kst": "2026-10-18",
+    "daily_cap": 85,
+    "initial_image_calls": 44,
+    "remaining": 40,
+    "today_conservative_attempts": 45,
+    "v4_effective_attempts": 1,
+    "v4_reserved_attempts": 1,
+    "verified_zero_call_qa_hits": 0
+  },
+  "complete": false,
+  "fixture_sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+  "location": "global",
+  "minimum_new_call_start_spacing_seconds": 60,
+  "model": "gemini-2.5-flash-image",
+  "phase": "warm",
+  "rows": [
+    {
+      "action_id": "WARM-01",
+      "cache": "saved",
+      "cache_key": "68dcd23340267f4fdd9c52a9a60f4e338d9fcd4470b7e2d052f604f9f9a13fe7",
+      "cache_saved": true,
+      "cost_usd": 0.0387015,
+      "dimensions": [
+        1344,
+        768
+      ],
+      "generated_at": "2026-10-18T01:39:36.274385+00:00",
+      "generated_date": "2026-10-18",
+      "http_status": 200,
+      "image_bytes": 170352,
+      "image_sha256": "d2f54d46a2e7dd2e6e8b59bb76dcb0da7330618fb0bca69dcbafce155d0aa3ec",
+      "jpeg_quality": 90,
+      "latency_seconds": 6.277,
+      "metadata_label": "Saved still \u00b7 generated 2026-10-18 \u00b7 0 model calls \u00b7 $0.00",
+      "model": "gemini-2.5-flash-image",
+      "model_calls": 1,
+      "prompt": "a cat and a dog",
+      "prompt_sha256": "1f956e7ad7f19a8b0e54e19ab329f65be1ed699c8c555f263163fb3cdbf6dcb7",
+      "provider_attempt_id": "WARM-01",
+      "provider_http_status": 200,
+      "provider_image_bytes": 1355172,
+      "provider_image_sha256": "ea812b6329ea1c585d7c57feeebf57a8bae5de34223b6259169310c98978a87b",
+      "rewrite_status": "improved",
+      "risk_after": 0.05714285714285714,
+      "risk_before": 0.30666666666666664,
+      "sample_prompt": "a cat and a dog",
+      "size": "1K",
+      "variant": "original"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "all_ten_actions_ready": false,
+    "completed_actions": 1,
+    "new_image_attempts": 1,
+    "planned_ui_actions": 10,
+    "unique_texts": 9,
+    "usable_saved_stills": 1
+  },
+  "updated_at_kst": "2026-10-18T10:39:37.713241+09:00"
+}

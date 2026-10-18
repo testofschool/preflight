@@ -1,0 +1,123 @@
+{
+  "Veo_calls": 0,
+  "actual_billing": "UNMEASURED",
+  "arms": [
+    {
+      "actual_billing_verified": false,
+      "arm": "P1",
+      "completed": 20,
+      "known_list_price_total_usd": 0.32265655,
+      "mean_successful_list_price_usd": 0.04033206875,
+      "non200_no_charge_rows": 12,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "complete",
+      "successful_http200_images_gt10KiB": 8,
+      "unpriced_rows": 0
+    },
+    {
+      "actual_billing_verified": false,
+      "arm": "P2",
+      "completed": 20,
+      "known_list_price_total_usd": 0.2322747,
+      "mean_successful_list_price_usd": 0.03871245,
+      "non200_no_charge_rows": 14,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "complete",
+      "successful_http200_images_gt10KiB": 6,
+      "unpriced_rows": 0
+    },
+    {
+      "actual_billing_verified": false,
+      "arm": "P3",
+      "completed": 20,
+      "known_list_price_total_usd": 0.2690385,
+      "mean_successful_list_price_usd": 0.04483974999999999,
+      "non200_no_charge_rows": 14,
+      "passes": false,
+      "planned": 20,
+      "price_verifiable_from_responses": true,
+      "reliability_passes": false,
+      "status": "complete",
+      "successful_http200_images_gt10KiB": 6,
+      "unpriced_rows": 0
+    }
+  ],
+  "by_model": {
+    "gemini-2.5-flash-image": {
+      "generated_images": 15,
+      "known_list_price_usd": 0.5806113,
+      "measured_attempts": 29,
+      "observed_non200_provider_calls": 14,
+      "unpriced_rows": 0
+    },
+    "gemini-3.1-flash-image": {
+      "generated_images": 6,
+      "known_list_price_usd": 0.2690385,
+      "measured_attempts": 20,
+      "observed_non200_provider_calls": 14,
+      "unpriced_rows": 0
+    },
+    "gemini-3.1-flash-lite-image": {
+      "generated_images": 8,
+      "known_list_price_usd": 0.32265655,
+      "measured_attempts": 20,
+      "observed_non200_provider_calls": 12,
+      "unpriced_rows": 0
+    }
+  },
+  "conservative_reservation_count": 71,
+  "historical_v3_attempts_excluded": 44,
+  "known_list_price_total_usd": 1.17230635,
+  "known_zero_model_call_warm_hits": 2,
+  "live_selected_arm": null,
+  "measured_image_model_attempts": 69,
+  "preview_mode": "samples",
+  "pricing_policy": "Only provider HTTP200 is charged at list-price token usage; observed4xx/5xx input/output is zero per official page. Actual billed currency/credits/invoice remain unmeasured.",
+  "provider_probe_calls": 60,
+  "provider_warm_calls": 9,
+  "raw_probe_rows": {
+    "P1": {
+      "file": "reports/preview_v4/P1.jsonl",
+      "image_successes": 8,
+      "max_latency_seconds": 4.198,
+      "min_start_gap_seconds": 15.100971,
+      "rows": 20,
+      "status_counts": {
+        "200": 8,
+        "429": 12
+      }
+    },
+    "P2": {
+      "file": "reports/preview_v4/P2.jsonl",
+      "image_successes": 6,
+      "max_latency_seconds": 15.329,
+      "min_start_gap_seconds": 15.100519,
+      "rows": 20,
+      "status_counts": {
+        "200": 6,
+        "429": 14
+      }
+    },
+    "P3": {
+      "file": "reports/preview_v4/P3.jsonl",
+      "image_successes": 6,
+      "max_latency_seconds": 7.359,
+      "min_start_gap_seconds": 15.100098,
+      "rows": 20,
+      "status_counts": {
+        "200": 6,
+        "429": 14
+      }
+    }
+  },
+  "recorded_at_kst": "2026-10-18T11:06:28.352032+09:00",
+  "source": "call_ledger.jsonl + derived_probe_annotations.json; raw original results unchanged",
+  "unknown_dispatch_reservations": 0,
+  "v4_cap": 85
+}

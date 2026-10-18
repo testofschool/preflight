@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-10-18T01:42:23.584701+00:00",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "revision": "preflight-00023-wad",
+  "traffic": [
+    {
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "percent": 100,
+      "revisionName": "preflight-00021-sus",
+      "tag": "preview-v3-copy",
+      "url": "https://preview-v3-copy---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "revisionName": "preflight-00023-wad",
+      "tag": "preview-v4-candidate",
+      "url": "https://preview-v4-candidate---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "timeout_seconds": 40,
+  "concurrency": 80,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "1Gi"
+    }
+  },
+  "allowed_env": {
+    "PREFLIGHT_MODE": "cloud",
+    "PREFLIGHT_FIRESTORE_DATABASE": "preflight-aibc",
+    "PREFLIGHT_GEMINI_BACKEND": "vertex",
+    "PREFLIGHT_GEMINI_LOCATION": "asia-southeast1",
+    "PREFLIGHT_GEMINI_MODEL": "gemini-3.5-flash",
+    "PREFLIGHT_TOTAL_REQUEST_LIMIT": "1000",
+    "PREFLIGHT_IMAGE_MODEL": "gemini-3.1-flash-lite-image",
+    "PREFLIGHT_IMAGE_MODEL_FALLBACK": "gemini-3.1-flash-image",
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": "60",
+    "PREFLIGHT_PREVIEW_ENABLED": "true",
+    "PREFLIGHT_IMAGE_PRIMARY_UNSERVED": "false",
+    "PREFLIGHT_IMAGE_LOCATION": "global",
+    "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+    "PREFLIGHT_IMAGE_LIVE_ARM": "P2"
+  },
+  "candidate_url": "https://preview-v4-candidate---preflight-jcgro45veq-as.a.run.app",
+  "build_id": "660c36c4-58b0-4bac-b714-9c0c8aceb01e",
+  "live_arm": null,
+  "no_primary_traffic_moved": true
+}

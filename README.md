@@ -20,11 +20,13 @@ These are individual user reports and a provider policy, not measured savings fr
 
 ## What Preflight does
 
-Historical risk (free to try) → reason → rewrite kept only if estimated risk drops → still preview (temporarily disabled) → clip review as a second pair of eyes.
+Historical risk (free to try) → reason → rewrite kept only if estimated risk drops → saved sample still → clip review as a second pair of eyes.
 
 Paste a prompt to see a historical risk signal and five nearby prompts from 1,911 human pairwise votes in GenAI-Bench. Gemini proposes a rewrite; Preflight presents it only when its estimated risk is strictly lower. Upload a clip you already have for a separate Gemini review with inspectable timecodes. Original human votes stay separate from machine feedback.
 
-The still preview is temporarily disabled after the 2026-10-18 reliability gate failed. Its control explains: “Preview is busy right now — try again in a minute. The risk check still works.” Prompt checks and upload-based clip review remain available. A still comes from an image model and cannot judge motion, flicker or timing. [Current release and gate results](reports/preview_v3/REPORT.md). The earlier 2026-10-17 measurements and image-price evidence remain in the [dated test receipts](reports/preview_live.json), [spaced follow-up](reports/preview_spaced_samples.json) and [pricing/status receipt](reports/track_cd_primary_status.json).
+Image preview — Active for sample prompts (saved stills); live generation limited
+
+The five sample prompts use saved rewrite decisions, visibly labeled “Sample rewrite (saved)”, so their stills can be reused without model calls. Four saved decisions contain lower-risk rewrites. “Indoor gymnasium” keeps the original because no lower-risk rewrite passed; its saved-sample preview explicitly says “unchanged”. A saved still displays its generation date and “0 model calls · $0.00”. Typed prompts retain the live Gemini rewrite. On an uncached still, the samples-only mode explains: “Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.” A still comes from an image model and cannot judge motion, flicker or timing. All three preregistered live-image probes fell below the 19/20 reliability gate: P1 returned 8/20 valid images, P2 6/20 and P3 6/20. Live generation remains limited. [v4 results](reports/preview_v4/REPORT.md). The [v3 report](reports/preview_v3/REPORT.md) retains the previous reliability failure; earlier dated measurements remain separate.
 
 ## Google Cloud services
 
@@ -36,7 +38,7 @@ The still preview is temporarily disabled after the 2026-10-18 reliability gate 
 | Google ADK 2.12 | Runs the tool workflow and checks rewrite candidates against the risk estimate | live |
 | Agent Platform Sessions | Persists anonymous rewrite-session history | live |
 | Gemini video understanding | Reviews uploaded clips and sampled frames with timecodes | live |
-| Gemini 3.1 Flash Lite Image | Still-image preview using `gemini-3.1-flash-lite-image` | temporarily disabled; reliability gate failed |
+| Gemini image models + Firestore cache | Saved original/rewrite stills for the five sample prompts | active for sample prompts; live generation limited |
 | Secret Manager | Holds a key from an earlier API-key setup; production requests use Vertex ADC instead | not used by live requests |
 
 **Not used:** Veo (0 calls), Agent Engine runtime hosting, BigQuery. Managed Agent Platform Sessions is used for sessions; the agent itself runs in the Cloud Run application. [Runtime status receipt](reports/track_cd_primary_status.json), [implementation and deployment receipts](COMPLETION_REPORT.md).
@@ -54,7 +56,7 @@ Cloud Run / FastAPI
   |     |-- Agent Platform Sessions
   |     `-- Keep only a lower estimated-risk rewrite
   |-- Gemini video understanding: uploaded clip
-  `-- Gemini image model: still preview (temporarily disabled)
+  `-- Firestore: saved sample stills (live generation limited)
 ```
 
 The [live architecture page](https://preflight-jcgro45veq-as.a.run.app/architecture) reads current service flags from `/api/status`.
@@ -64,7 +66,7 @@ The [live architecture page](https://preflight-jcgro45veq-as.a.run.app/architect
 - The held-out risk AUC is **0.67** (five-seed mean 0.668329, below the 0.68 target). This is a historical signal, not a calibrated probability for today's video models. [Evaluation](artifacts/evaluation.json).
 - Clip-review accuracy is **unmeasured**. No confirmed-defect reference set was established; a working review endpoint and a machine verdict do not establish accuracy. [Reference limits](COMPLETION_REPORT.md).
 - Retrieval covers the dataset's **English vocabulary only**. No vocabulary overlap produces unavailable risk rather than an invented score. [Predictor](preflight_core/engine.py).
-- The still preview is **temporarily disabled** after the 2026-10-18 reliability gate failed. [Current gate results](reports/preview_v3/REPORT.md). The earlier 9/10-fixture result is retained in the [2026-10-17 receipts](reports/preview_live.json) and [follow-up](reports/preview_spaced_samples.json).
+- The preview uses **saved sample stills**. All three live-image probes failed the 19/20 reliability gate (8/20, 6/20 and 6/20), so live generation remains limited. A still cannot establish video quality. [Current gates](reports/preview_v4/REPORT.md). Earlier provider measurements describe their dated runs: [2026-10-17 receipts](reports/preview_live.json), [v3 gate failure](reports/preview_v3/REPORT.md).
 - A lower rewrite estimate does not establish better generated-video quality, money saved, or current-model routing performance. Machine feedback can make the displayed risk a mixed, unvalidated heuristic proxy.
 
 ## Try it in 30 seconds
@@ -106,7 +108,7 @@ python scripts/check_secrets.py --include-index
 python scripts/release_cloud.py --candidate
 ```
 
-The candidate is created without primary traffic. Validate its real `/preflight` and upload-review responses before promotion; a failed risk-check battery must not be promoted. The build script records the runtime input digest in `reports/cloud_build.json`. The preview defaults to disabled. [Release script](scripts/release_cloud.py), [release evidence](COMPLETION_REPORT.md).
+The candidate is created without primary traffic. Validate its real `/preflight`, cached sample stills and upload-review responses before promotion; a failed risk-check battery or saved-sample UI gate must not be promoted. The build script records the runtime input digest in `reports/cloud_build.json`. Live preview generation defaults to limited; enabling it requires the recorded probe and UI gates. [Release script](scripts/release_cloud.py), [release evidence](COMPLETION_REPORT.md).
 
 ## Tests
 

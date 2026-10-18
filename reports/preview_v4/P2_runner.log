@@ -1,0 +1,21 @@
+{"attempt_id": "P2-01", "http_status": 200, "latency_seconds": 15.329, "image_bytes": 1172955, "traffic_type": "ON_DEMAND", "error_class": null}
+{"attempt_id": "P2-02", "http_status": 200, "latency_seconds": 6.598, "image_bytes": 947000, "traffic_type": "ON_DEMAND", "error_class": null}
+{"attempt_id": "P2-03", "http_status": 429, "latency_seconds": 4.597, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-04", "http_status": 429, "latency_seconds": 4.741, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-05", "http_status": 200, "latency_seconds": 11.867, "image_bytes": 1191444, "traffic_type": "ON_DEMAND", "error_class": null}
+{"attempt_id": "P2-06", "http_status": 429, "latency_seconds": 5.217, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-07", "http_status": 429, "latency_seconds": 5.564, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-08", "http_status": 429, "latency_seconds": 5.044, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-09", "http_status": 200, "latency_seconds": 8.626, "image_bytes": 1223785, "traffic_type": "ON_DEMAND", "error_class": null}
+{"attempt_id": "P2-10", "http_status": 429, "latency_seconds": 5.536, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-11", "http_status": 429, "latency_seconds": 5.059, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-12", "http_status": 429, "latency_seconds": 4.72, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-13", "http_status": 200, "latency_seconds": 8.756, "image_bytes": 1049747, "traffic_type": "ON_DEMAND", "error_class": null}
+{"attempt_id": "P2-14", "http_status": 429, "latency_seconds": 5.234, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-15", "http_status": 429, "latency_seconds": 5.201, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-16", "http_status": 429, "latency_seconds": 4.676, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-17", "http_status": 200, "latency_seconds": 9.016, "image_bytes": 1068512, "traffic_type": "ON_DEMAND", "error_class": null}
+{"attempt_id": "P2-18", "http_status": 429, "latency_seconds": 4.904, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-19", "http_status": 429, "latency_seconds": 5.339, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"attempt_id": "P2-20", "http_status": 429, "latency_seconds": 4.886, "image_bytes": 0, "traffic_type": null, "error_class": "ProviderHTTPError"}
+{"recorded_at_kst": "2026-10-18T11:05:39.625794+09:00", "source": "Firestore service_v1/preview-budget direct read", "snapshot_exists": true, "stored_day_utc": "2026-10-18", "effective_day_utc": "2026-10-18", "day_count": 28, "daily_limit": 60, "remaining_admissions": 32, "reset_at_utc": "2026-10-19T00:00:00+00:00", "reset_at_kst": "2026-10-19T09:00:00+09:00", "preview_requests_made_by_snapshot": 0, "provider_calls_made_by_snapshot": 0}

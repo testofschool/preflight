@@ -1,0 +1,19 @@
+{
+  "recorded_at_kst": "2026-10-18T10:55:34.639036+09:00",
+  "file": "reports/preview_v4/official_sources.json",
+  "size_bytes": 3001,
+  "st_flags": 1073741920,
+  "sealed_expected_sha256": "44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0",
+  "initial_state": "Readable and hash-verified at preregistration and before both probe arms and app warm.",
+  "regression": "New compressed,dataless offload during active run; validator/test blocked in file read.",
+  "native_hydration_requested": true,
+  "brctl_download_exit_code": 0,
+  "content_reconstructed_or_modified": false,
+  "flags_cleared_artificially": false,
+  "P2_policy": "HOLD until original bytes are fully readable and sealed SHA matches.",
+  "in_memory_app_warm": "Continues; already read and validated evidence before offload.",
+  "resolved_at_kst": "2026-10-18T11:00:55.382697+09:00",
+  "original_sha256_readback": "44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0",
+  "sealed_sha256_matches": true,
+  "resolution": "Native Foundation coordinated hydration by root; exact original bytes recovered, no reconstruction."
+}

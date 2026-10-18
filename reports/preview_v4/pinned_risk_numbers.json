@@ -1,0 +1,51 @@
+{
+  "fixture_sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+  "generated_by": "real production rewrite agent; preserved guard result",
+  "rows": [
+    {
+      "prompt": "a cat and a dog",
+      "rewrite_status": "improved",
+      "rewritten_prompt": "A playful puppy and a calm kitten interacting gently on a green grassy lawn under bright daylight, captured in a stable wide shot.",
+      "p_fail_before": 0.30666666666666664,
+      "p_fail_after": 0.05714285714285714,
+      "ui_before": "30.7%",
+      "ui_after": "5.7%"
+    },
+    {
+      "prompt": "a spoon and a laptop",
+      "rewrite_status": "improved",
+      "rewritten_prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
+      "p_fail_before": 0.4678787878787878,
+      "p_fail_after": 0.15833333333333333,
+      "ui_before": "46.8%",
+      "ui_after": "15.8%"
+    },
+    {
+      "prompt": "a bicycle and a car",
+      "rewrite_status": "improved",
+      "rewritten_prompt": "A close-up shot of a shiny yellow bicycle parked in a driveway, with a white SUV parked in the background under the shade of a tree.",
+      "p_fail_before": 0.4333333333333333,
+      "p_fail_after": 0.2,
+      "ui_before": "43.3%",
+      "ui_after": "20.0%"
+    },
+    {
+      "prompt": "indoor gymnasium",
+      "rewrite_status": "no_safe_rewrite",
+      "rewritten_prompt": "indoor gymnasium",
+      "p_fail_before": 0.065,
+      "p_fail_after": 0.065,
+      "ui_before": "6.5%",
+      "ui_after": "6.5%"
+    },
+    {
+      "prompt": "a purple clock",
+      "rewrite_status": "improved",
+      "rewritten_prompt": "A modern purple digital clock resting on a desk, its bright LED numbers glowing softly in a dimly lit room.",
+      "p_fail_before": 0.05714285714285714,
+      "p_fail_after": 0.025,
+      "ui_before": "5.7%",
+      "ui_after": "2.5%"
+    }
+  ]
+}

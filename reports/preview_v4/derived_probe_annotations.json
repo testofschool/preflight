@@ -1,0 +1,615 @@
+{
+  "additional_provider_calls": 0,
+  "original_receipts_modified": false,
+  "rows": [
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-01",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 39,
+        "list_price_usd": 0.06049755,
+        "rates_usd_per_million_tokens": {
+          "image_output": 54,
+          "input": 0.45,
+          "text_output": 2.7
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-01.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-01",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 747,
+        "input_tokens": 38,
+        "list_price_usd": 0.044839,
+        "rates_usd_per_million_tokens": {
+          "image_output": 60,
+          "input": 0.5,
+          "text_output": 3
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P3-01.png",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-02",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 40,
+        "list_price_usd": 0.060498,
+        "rates_usd_per_million_tokens": {
+          "image_output": 54,
+          "input": 0.45,
+          "text_output": 2.7
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-02.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-02",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 747,
+        "input_tokens": 39,
+        "list_price_usd": 0.0448395,
+        "rates_usd_per_million_tokens": {
+          "image_output": 60,
+          "input": 0.5,
+          "text_output": 3
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P3-02.png",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-03",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-03",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 41,
+        "list_price_usd": 0.03361025,
+        "rates_usd_per_million_tokens": {
+          "image_output": 30,
+          "input": 0.25,
+          "text_output": 1.5
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-03.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-04",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-04",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 41,
+        "list_price_usd": 0.03361025,
+        "rates_usd_per_million_tokens": {
+          "image_output": 30,
+          "input": 0.25,
+          "text_output": 1.5
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-04.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-05",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-05",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 747,
+        "input_tokens": 38,
+        "list_price_usd": 0.044839,
+        "rates_usd_per_million_tokens": {
+          "image_output": 60,
+          "input": 0.5,
+          "text_output": 3
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P3-05.png",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-06",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-06",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-07",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-07",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 40,
+        "list_price_usd": 0.03361,
+        "rates_usd_per_million_tokens": {
+          "image_output": 30,
+          "input": 0.25,
+          "text_output": 1.5
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-07.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-08",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-08",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-09",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-09",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 747,
+        "input_tokens": 40,
+        "list_price_usd": 0.04484,
+        "rates_usd_per_million_tokens": {
+          "image_output": 60,
+          "input": 0.5,
+          "text_output": 3
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P3-09.png",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-10",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-10",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-11",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-11",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 40,
+        "list_price_usd": 0.03361,
+        "rates_usd_per_million_tokens": {
+          "image_output": 30,
+          "input": 0.25,
+          "text_output": 1.5
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-11.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-12",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-12",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-13",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-13",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 747,
+        "input_tokens": 41,
+        "list_price_usd": 0.0448405,
+        "rates_usd_per_million_tokens": {
+          "image_output": 60,
+          "input": 0.5,
+          "text_output": 3
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P3-13.png",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-14",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-14",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-15",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-15",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 40,
+        "list_price_usd": 0.03361,
+        "rates_usd_per_million_tokens": {
+          "image_output": 30,
+          "input": 0.25,
+          "text_output": 1.5
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-15.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-16",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-16",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-17",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-17",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 747,
+        "input_tokens": 41,
+        "list_price_usd": 0.0448405,
+        "rates_usd_per_million_tokens": {
+          "image_output": 60,
+          "input": 0.5,
+          "text_output": 3
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P3-17.png",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-18",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-18",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-19",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-19",
+      "basis": "Existing image file SHA matches recorded provider bytes; token usage and traffic type already recorded before local relative-path serialization failed.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "usage_modality_tokens",
+        "image_output_tokens": 1120,
+        "input_tokens": 42,
+        "list_price_usd": 0.0336105,
+        "rates_usd_per_million_tokens": {
+          "image_output": 30,
+          "input": 0.25,
+          "text_output": 1.5
+        },
+        "text_output_tokens": 0,
+        "thought_tokens": 0
+      },
+      "image_file": "reports/preview_v4/probe_images/P1-19.jpg",
+      "image_sha256_verified": true,
+      "local_receipt_error_class": "ValueError",
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P1-20",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    },
+    {
+      "additional_provider_calls": 0,
+      "attempt_id": "P3-20",
+      "basis": "Official pricing charges only HTTP200; observed4xx/5xx are zero list-price input/output.",
+      "cost": {
+        "billing_verified": false,
+        "cost_basis": "official_non_200_no_charge",
+        "list_price_usd": 0.0
+      },
+      "original_receipt_preserved": true
+    }
+  ],
+  "updated_at_kst": "2026-10-18T11:06:28.348730+09:00"
+}

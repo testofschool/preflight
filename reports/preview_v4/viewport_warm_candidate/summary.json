@@ -1,0 +1,360 @@
+{
+  "scope": "Read-only home/status/architecture; zero preflight or preview requests",
+  "url": "https://preview-v4-candidate---preflight-jcgro45veq-as.a.run.app",
+  "revision_reported_by_root": "preflight-00024-poq",
+  "started_at_utc": "2026-10-18T01:49:58.895328+00:00",
+  "fresh_browser": true,
+  "http_cache_disabled": true,
+  "service_workers": "blocked",
+  "browser_args": [
+    "--use-gl=angle",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "measurement_js_sha256": "f16c6279542b50d3f79c9174996391a77f13a4c4993aad4e5cd68ba3169afc1f",
+  "requests": [
+    {
+      "path": "/",
+      "method": "GET"
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET"
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET"
+    },
+    {
+      "path": "/static/app.js",
+      "method": "GET"
+    },
+    {
+      "path": "/static/postcheck.js",
+      "method": "GET"
+    },
+    {
+      "path": "/api/status",
+      "method": "GET"
+    },
+    {
+      "path": "/architecture",
+      "method": "GET"
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET"
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET"
+    },
+    {
+      "path": "/static/architecture.js",
+      "method": "GET"
+    },
+    {
+      "path": "/api/status",
+      "method": "GET"
+    },
+    {
+      "path": "/",
+      "method": "GET"
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET"
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET"
+    },
+    {
+      "path": "/static/app.js",
+      "method": "GET"
+    },
+    {
+      "path": "/static/postcheck.js",
+      "method": "GET"
+    },
+    {
+      "path": "/api/status",
+      "method": "GET"
+    },
+    {
+      "path": "/architecture",
+      "method": "GET"
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET"
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET"
+    },
+    {
+      "path": "/static/architecture.js",
+      "method": "GET"
+    },
+    {
+      "path": "/api/status",
+      "method": "GET"
+    }
+  ],
+  "network": [
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/postcheck.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/app.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/architecture",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/architecture.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/app.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/postcheck.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/architecture",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/static/architecture.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "status": 200
+    }
+  ],
+  "page_errors": [],
+  "views": [
+    {
+      "page": "home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "http_status": 200,
+      "overflow": {
+        "inner_width": 1440,
+        "document_scroll_width": 1440,
+        "body_scroll_width": 1440,
+        "passed": true
+      },
+      "measurement": {
+        "elements": [
+          "a.brand",
+          "nav.header-nav",
+          "div.eyebrow",
+          "h1#page-title",
+          "p.intro-copy",
+          "a.clip-review-link",
+          "h2#prompt-heading",
+          "form#prompt-form",
+          "p",
+          "h2#results-heading",
+          "h3#risk-heading",
+          "p#risk-detail",
+          "h3#why-heading",
+          "h3#better-heading",
+          "p.rewrite-description",
+          "span",
+          "span#cost-value",
+          "p#cost-note"
+        ],
+        "colors": [
+          "20,43,49",
+          "239,127,96",
+          "101,114,118",
+          "255,254,250",
+          "220,240,232",
+          "80,100,90",
+          "67,90,76"
+        ],
+        "families": [
+          "Inter",
+          "ui-monospace"
+        ],
+        "text": "preflight . How it works ↗ AN EARLY CHECK FOR YOUR VIDEO PROMPT Before the first frame. Look for signs of a difficult prompt before spending on a generation. Have a clip already? Review it ↓ Start with your idea Your video prompt 0 / 4,000 A short scene description is enough to start. TRY A SAMPLE ↙ A cat and a dog ↗ A spoon and a laptop ↗ A bicycle and a car ↗ Indoor gymnasium ↗ A purple clock ↗ Check this prompt → This check runs on Cloud Run.No video is generated. Your preflight Risk Check a prompt to inspect the available evidence. What this score is Why Better prompt A rewrite appears only when it passes the risk check. Illustrative generation budget — A generation budget appears after the check. No video is generated."
+      },
+      "objects": 18,
+      "colors": 7,
+      "cta_rect": {
+        "x": 80,
+        "y": 789.4375,
+        "width": 503.515625,
+        "height": 48
+      },
+      "cta_bottom_px": 837.4375,
+      "budget_pass": true,
+      "screenshot": {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/preview_v4/viewport_warm_candidate/home_1440x900.png",
+        "bytes": 79150,
+        "sha256": "98f5051bc7ead4c7d9fdabbb287ab9c977f94f57e98dca9e22e494f44747ebb1"
+      }
+    },
+    {
+      "page": "architecture",
+      "viewport": [
+        1440,
+        900
+      ],
+      "http_status": 200,
+      "canonical_expected": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "canonical_actual": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "canonical_visible": true,
+      "overflow": {
+        "inner_width": 1440,
+        "document_scroll_width": 1440,
+        "body_scroll_width": 1440,
+        "passed": true
+      },
+      "screenshot": {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/preview_v4/viewport_warm_candidate/architecture_1440x900.png",
+        "bytes": 71421,
+        "sha256": "3683640bcd9ae5084ac4d7c64e046c900f3d43d6a301081e3f92ce2c5b4069b6"
+      }
+    },
+    {
+      "page": "home",
+      "viewport": [
+        390,
+        844
+      ],
+      "http_status": 200,
+      "overflow": {
+        "inner_width": 390,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "passed": true
+      },
+      "screenshot": {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/preview_v4/viewport_warm_candidate/home_390x844.png",
+        "bytes": 42887,
+        "sha256": "aa782e8efc56cfb58957f1430f1a1c5cbcdc2fb41c1b38d9e8af80c1e9fcbfff"
+      }
+    },
+    {
+      "page": "architecture",
+      "viewport": [
+        390,
+        844
+      ],
+      "http_status": 200,
+      "canonical_expected": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "canonical_actual": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "canonical_visible": true,
+      "overflow": {
+        "inner_width": 390,
+        "document_scroll_width": 390,
+        "body_scroll_width": 390,
+        "passed": true
+      },
+      "screenshot": {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/preview_v4/viewport_warm_candidate/architecture_390x844.png",
+        "bytes": 57470,
+        "sha256": "7c36355337a38a4b7bc727079bedd9080ef6e597477a23cdebc04dd117d9b922"
+      }
+    }
+  ],
+  "passed": true,
+  "browser_version": "145.0.7632.6",
+  "status": {
+    "mode": "cloud",
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+    "postcheck": true,
+    "cloud_run": true
+  },
+  "forbidden_requests": [],
+  "ended_at_utc": "2026-10-18T01:50:11.721951+00:00"
+}

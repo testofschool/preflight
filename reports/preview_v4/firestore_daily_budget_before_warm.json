@@ -1,0 +1,29 @@
+{
+  "daily_limit": 60,
+  "day_count": 18,
+  "effective_day_utc": "2026-10-18",
+  "full_run_check_including_independent_V-B_and_demo": {
+    "V-B_actions": 10,
+    "V-C_actions": 10,
+    "demo_preview_actions": 3,
+    "fits": false,
+    "needed": 45,
+    "self_QA_actions": 12,
+    "warming_actions": 10
+  },
+  "minimum_requested_check": {
+    "V-C_actions": 10,
+    "fits": true,
+    "needed": 32,
+    "self_QA_actions": 12,
+    "warming_actions": 10
+  },
+  "provider_image_calls_made_by_read": 0,
+  "recorded_at_kst": "2026-10-18T10:40:51.038588+09:00",
+  "remaining_admissions": 42,
+  "reset_at_kst": "2026-10-19T09:00:00+09:00",
+  "reset_at_utc": "2026-10-19T00:00:00+00:00",
+  "snapshot_exists": true,
+  "source": "Firestore service_v1/preview-budget direct read",
+  "stored_day_utc": "2026-10-18"
+}

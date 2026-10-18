@@ -1,0 +1,41 @@
+{
+  "detected_at_utc": "2026-10-18T02:06:11.438414+00:00",
+  "scope": "External test virtualenv; outside committed runtime repository",
+  "pytest_pid": 85274,
+  "parent_pid": 85268,
+  "blocked_file": "../.preflight-cloud-venv/lib/python3.12/site-packages/fastapi/__pycache__/applications.cpython-312.pyc",
+  "observed_bytes": 87446,
+  "observed_flags": [
+    "hidden",
+    "compressed",
+    "dataless"
+  ],
+  "evidence": "lsof FD11 plus native sample: Python FileIO_readall -> kernel read; no network connections",
+  "recovery": "Native brctl download returned0; existing NSFileCoordinator helper accepted native download request and is waiting for original bytes",
+  "packages_reinstalled": false,
+  "package_bytes_reconstructed": false,
+  "runtime_or_docs_mutated": false,
+  "current_test_run_complete": false,
+  "existing_receipt_preserved": "reports/preview_v4/tests_final.txt (123 tests; predates current run)",
+  "expanded_command": [
+    "../.preflight-cloud-venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/",
+    "reports/preview_v4/test_probe_runner.py",
+    "reports/preview_v4/test_warm_runner.py"
+  ],
+  "expanded_receipt_planned": "reports/preview_v4/tests_final_expanded.txt",
+  "recovery_status": "Original pyc native read remained blocked; user-authorized temporary bytecode cache used for expanded rerun",
+  "stopped_only_owned_pids": [
+    85274,
+    85934
+  ],
+  "initial_test_process_settled": true,
+  "matching_installed_source_resident": true,
+  "matching_source_bytes": 181192,
+  "matching_source_sha256": "77a6608b43d45dd0a10505425cc84623d7318e94ca5886d63b2b02a3862c7f78",
+  "original_pyc_deleted": false,
+  "temporary_bytecode_cache": "/tmp/preflight-v4-pytest-cache"
+}

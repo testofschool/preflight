@@ -1,0 +1,6 @@
+Command: PYTHONPYCACHEPREFIX=/tmp/preflight-v4-pytest-cache ../.preflight-cloud-venv/bin/python -m pytest -q tests/ reports/preview_v4/test_probe_runner.py reports/preview_v4/test_warm_runner.py
+Started_at_utc: 2026-10-18T02:08:08.821872+00:00
+Scope: tests/ plus explicit offline probe and warm runners; includes promotion guard tests
+Environment: installed package sources unchanged; temporary bytecode cache outside iCloud
+Pytest_pid: 86216
+

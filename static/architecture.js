@@ -71,6 +71,14 @@
       const badge = document.createElement("span");
       badge.className = `connection-status${status[key] === true ? " active" : ""}`;
       badge.textContent = status[key] === true ? "Active" : "Not active";
+      if (key === "preview") {
+        const message = typeof status.preview_mode_message === "string" ? status.preview_mode_message : status.preview === true
+          ? `Image preview — Active for sample prompts (saved stills); live generation ${status.preview_mode === "samples+live" ? "on" : "limited"}`
+          : "Image preview — Not active; live generation limited";
+        heading.textContent = message;
+        heading.className = "preview-mode-message";
+        badge.hidden = true;
+      }
       text.append(heading, badge);
       item.append(count, text);
       list.append(item);

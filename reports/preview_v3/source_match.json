@@ -1,0 +1,223 @@
+{
+  "source": "native Cloud Build resolvedStorageSource archive",
+  "verified_at_kst": "2026-10-18T09:54:29.759629+09:00",
+  "build_id": "11f07900-29a9-4f6e-b819-da857f0144ee",
+  "build_status": "SUCCESS",
+  "revision": "preflight-00021-sus",
+  "commit": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+  "digest_method": "SHA256 of sorted relative path UTF-8 + NUL + file bytes concatenated for runtime Docker COPY inputs",
+  "git_runtime_source_sha256": "ecb14dc207c9ba78d360f6b72f77dfa41c08011387c40180327d8a795743c793",
+  "cloud_build_runtime_source_sha256": "ecb14dc207c9ba78d360f6b72f77dfa41c08011387c40180327d8a795743c793",
+  "runtime_matches_commit": true,
+  "expected_runtime_file_count": 23,
+  "git_runtime_file_count": 23,
+  "archive_runtime_file_count": 23,
+  "runtime_file_count_matches": true,
+  "native_provenance_archive_sha256": "d2ad041fca55a1d323a1496593e28f92cbe4e77693f4695f5f1a6c2723b2bf7e",
+  "build_image_digests": [
+    "sha256:1df156c771fff10e1a73f8f1b69194a16293985dcf2e2f1ec896a23dd5868444"
+  ],
+  "revision_image_digest": "sha256:1df156c771fff10e1a73f8f1b69194a16293985dcf2e2f1ec896a23dd5868444",
+  "image_digest_matches": true,
+  "files": [
+    {
+      "path": "Dockerfile",
+      "git_size_bytes": 787,
+      "archive_size_bytes": 787,
+      "git_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "archive_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "matches": true
+    },
+    {
+      "path": "app.py",
+      "git_size_bytes": 21744,
+      "archive_size_bytes": 21744,
+      "git_sha256": "44063aa3094407449ed70400fecc71bfc1c05c83421e17131711405fc7d2baf6",
+      "archive_sha256": "44063aa3094407449ed70400fecc71bfc1c05c83421e17131711405fc7d2baf6",
+      "matches": true
+    },
+    {
+      "path": "artifacts/engine.json",
+      "git_size_bytes": 60477,
+      "archive_size_bytes": 60477,
+      "git_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "archive_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "matches": true
+    },
+    {
+      "path": "artifacts/prompt_vectors.npz",
+      "git_size_bytes": 30974,
+      "archive_size_bytes": 30974,
+      "git_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "archive_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "matches": true
+    },
+    {
+      "path": "artifacts/vectorizer.joblib",
+      "git_size_bytes": 60877,
+      "archive_size_bytes": 60877,
+      "git_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "archive_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "matches": true
+    },
+    {
+      "path": "cloud/__init__.py",
+      "git_size_bytes": 66,
+      "archive_size_bytes": 66,
+      "git_sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+      "archive_sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+      "matches": true
+    },
+    {
+      "path": "cloud/postcheck.py",
+      "git_size_bytes": 18142,
+      "archive_size_bytes": 18142,
+      "git_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "archive_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "matches": true
+    },
+    {
+      "path": "cloud/preview.py",
+      "git_size_bytes": 3022,
+      "archive_size_bytes": 3022,
+      "git_sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea",
+      "archive_sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea",
+      "matches": true
+    },
+    {
+      "path": "cloud/rewrite_agent.py",
+      "git_size_bytes": 20199,
+      "archive_size_bytes": 20199,
+      "git_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "archive_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "matches": true
+    },
+    {
+      "path": "cloud/store.py",
+      "git_size_bytes": 18244,
+      "archive_size_bytes": 18244,
+      "git_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "archive_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/__init__.py",
+      "git_size_bytes": 203,
+      "archive_size_bytes": 203,
+      "git_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "archive_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/dataset.py",
+      "git_size_bytes": 2814,
+      "archive_size_bytes": 2814,
+      "git_sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+      "archive_sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/engine.py",
+      "git_size_bytes": 6726,
+      "archive_size_bytes": 6726,
+      "git_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "archive_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/irt.py",
+      "git_size_bytes": 5027,
+      "archive_size_bytes": 5027,
+      "git_sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+      "archive_sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+      "matches": true
+    },
+    {
+      "path": "preflight_core/provenance.py",
+      "git_size_bytes": 721,
+      "archive_size_bytes": 721,
+      "git_sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+      "archive_sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+      "matches": true
+    },
+    {
+      "path": "requirements-cloud.lock",
+      "git_size_bytes": 2553,
+      "archive_size_bytes": 2553,
+      "git_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "archive_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "matches": true
+    },
+    {
+      "path": "static/app.js",
+      "git_size_bytes": 21553,
+      "archive_size_bytes": 21553,
+      "git_sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+      "archive_sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+      "matches": true
+    },
+    {
+      "path": "static/architecture.html",
+      "git_size_bytes": 5828,
+      "archive_size_bytes": 5828,
+      "git_sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+      "archive_sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+      "matches": true
+    },
+    {
+      "path": "static/architecture.js",
+      "git_size_bytes": 5079,
+      "archive_size_bytes": 5079,
+      "git_sha256": "5c506b618242be4dadb5603149ee1bcfee54e7bd8ae3b7795dcefb6cb272fbfe",
+      "archive_sha256": "5c506b618242be4dadb5603149ee1bcfee54e7bd8ae3b7795dcefb6cb272fbfe",
+      "matches": true
+    },
+    {
+      "path": "static/index.html",
+      "git_size_bytes": 12964,
+      "archive_size_bytes": 12964,
+      "git_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "archive_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "matches": true
+    },
+    {
+      "path": "static/postcheck.js",
+      "git_size_bytes": 15896,
+      "archive_size_bytes": 15896,
+      "git_sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+      "archive_sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+      "matches": true
+    },
+    {
+      "path": "static/status.js",
+      "git_size_bytes": 1843,
+      "archive_size_bytes": 1843,
+      "git_sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+      "archive_sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+      "matches": true
+    },
+    {
+      "path": "static/styles.css",
+      "git_size_bytes": 25464,
+      "archive_size_bytes": 25464,
+      "git_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "archive_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "matches": true
+    }
+  ],
+  "pass": true,
+  "primary_serving_percent": 100,
+  "confirmed_at_kst": "2026-10-18T09:54:23.019646+09:00",
+  "native_traffic": [
+    {
+      "revision": "preflight-00016-tuk",
+      "percent": 0,
+      "tag": "postcheck-candidate"
+    },
+    {
+      "revision": "preflight-00021-sus",
+      "percent": 100,
+      "tag": "preview-v3-copy"
+    }
+  ]
+}

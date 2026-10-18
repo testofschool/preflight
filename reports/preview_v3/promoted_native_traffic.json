@@ -1,0 +1,17 @@
+{
+  "revision": "preflight-00021-sus",
+  "primary_serving_percent": 100,
+  "confirmed_at_kst": "2026-10-18T09:54:23.019646+09:00",
+  "native_traffic": [
+    {
+      "revision": "preflight-00016-tuk",
+      "percent": 0,
+      "tag": "postcheck-candidate"
+    },
+    {
+      "revision": "preflight-00021-sus",
+      "percent": 100,
+      "tag": "preview-v3-copy"
+    }
+  ]
+}

@@ -1,16 +1,199 @@
 {
+  "checked_at_kst": "2026-10-18T09:59:46.254721+09:00",
   "description_chars": 915,
   "description_max_chars": 1024,
   "description_within_limit": true,
   "video_placeholder_remaining": true,
+  "readme_video_placeholder_count": 1,
+  "submission_notes_video_placeholder_count": 1,
   "preview_current_status": "temporarily disabled after2026-10-18 reliability gate failed",
   "current_preview_evidence": "reports/preview_v3/REPORT.md",
-  "pending_report_link_targets": [
-    "reports/preview_v3/REPORT.md"
-  ],
+  "pending_report_link_targets": [],
   "missing_other_relative_links": [],
+  "readme_relative_link_count": 42,
   "readme_sha256": "d187e589fb88ebcb34b94cbc96f3fc48a75478ce9039a51d615846510e575a36",
   "submission_notes_sha256": "04377c443fde88e71489fe2d7badcb72bcac8ac89b91facfe699d8b8b27912fb",
   "live_preview_retry_fallback_claimed": false,
-  "historical_dated_receipts_retained": true
+  "current_preview_disabled_clause_verified": true,
+  "historical_dated_receipts_retained": true,
+  "report_sha256": "488d84302e800d47eb11c34d8543589eced65bd18c96894a5b483b019c383143",
+  "report_line_count": 112,
+  "report_required_sections": {
+    "V11a\u2013f gate table": true,
+    "fresh20rowlog": true,
+    "revisionandtrafficsplit": true,
+    "filebyfilebytedeltas": true,
+    "demomp4factsandbeats": true,
+    "commitandtagshas": true,
+    "bothprovenancehashes": true,
+    "descriptioncount": true,
+    "notcompletedlimitations": true
+  },
+  "report_receipt_checks": [
+    {
+      "claim": "Fresh18of20;5HTTP200images;13HTTP503;19and20UNRUN",
+      "passed": true,
+      "evidence": "fresh.json;candidate_results.json"
+    },
+    {
+      "claim": "Image44calls;31primary13fallback;unknown0",
+      "passed": true,
+      "evidence": "image_budget.json"
+    },
+    {
+      "claim": "NofalseV11bpass;0checksrun,10notestablished",
+      "passed": true,
+      "evidence": "REPORT.md;warm.json;candidate_results.json"
+    },
+    {
+      "claim": "Observedp953.733115andmax;no504;full20notestablished",
+      "passed": true,
+      "evidence": "candidate_results.json;REPORT.md"
+    },
+    {
+      "claim": "Registeredfreshcache40keysabsentbeforeexecution",
+      "passed": true,
+      "evidence": "preregistration.json"
+    },
+    {
+      "claim": "Outputlistprice0.168;attemptequivalent1.6266bound1.98notbilling",
+      "passed": true,
+      "evidence": "image_budget.json;REPORT.md"
+    },
+    {
+      "claim": "CopyV11e6of6valid;postcheck200;0calls0newfeedback;18objects7colorsCTA837.4375;overflow6of6",
+      "passed": true,
+      "evidence": "preflight_copy_candidate.json;postcheck_copy_candidate.json;ui_copy_candidate/summary.json"
+    },
+    {
+      "claim": "Production21sus100percentpreviewfalse40s",
+      "passed": true,
+      "evidence": "promotion.json;promoted_native_traffic.json"
+    },
+    {
+      "claim": "Bytedeltatable:app.py",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:static/app.js",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:cloud/preview.py",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:Dockerfile",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:cloudbuild.yaml",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:scripts/release_cloud.py",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:requirements-cloud.lock",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:requirements-cloud.txt",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:requirements-dev.txt",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:requirements.lock",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "Bytedeltatable:requirements.txt",
+      "passed": true,
+      "evidence": "file_changes.json"
+    },
+    {
+      "claim": "23runtimeinputs;only2changed;21identical",
+      "passed": true,
+      "evidence": "source_match.json;file_changes.json"
+    },
+    {
+      "claim": "Bothruntimehashesandimagebuilddigestmatchreport",
+      "passed": true,
+      "evidence": "source_match.json;REPORT.md"
+    },
+    {
+      "claim": "Sourcecommitandnewtagbdcdec;oldtagdd12funchanged",
+      "passed": true,
+      "evidence": "source_match.json;localtagrefs;REPORT.md"
+    },
+    {
+      "claim": "Historyscan9commits383blobs0hits0errors",
+      "passed": true,
+      "evidence": "history_scan_source_release.json"
+    },
+    {
+      "claim": "AnonymousHEAD200cloneandtagsmatchsource",
+      "passed": true,
+      "evidence": "public_access.json"
+    },
+    {
+      "claim": "MP4bytes8772303SHA075c5duration108.5333331920x108030fps0audio",
+      "passed": true,
+      "evidence": "demo.json;localMP4sha256/stat/ffprobe"
+    },
+    {
+      "claim": "Exactly8frames;6beattimestampintervalsmatch",
+      "passed": true,
+      "evidence": "demo.json;demo/frames;REPORT.md"
+    },
+    {
+      "claim": "Demorisk46.8to23.3;feedback46.8unchanged;0previewrequests0feedbackcreated",
+      "passed": true,
+      "evidence": "demo.json"
+    },
+    {
+      "claim": "Correctionisolated29pass3failoriginal0provider",
+      "passed": true,
+      "evidence": "candidate_corrected/report.json"
+    },
+    {
+      "claim": "Candidate129final99tests2warning11subtests",
+      "passed": true,
+      "evidence": "tests.txt;tests_copy_only.txt"
+    }
+  ],
+  "report_failed_checks": [],
+  "report_findings": [
+    {
+      "severity": "precision",
+      "report_text": "Hydration read 428 files; 0 dataless placeholders remained before candidate building.",
+      "receipt": {
+        "initial_readable_files": 428,
+        "files_checked": 441,
+        "dataless_count": 0
+      },
+      "requested_fix": "Initial hydration found 428 readable files; the final scan checked 441 files and found 0 dataless placeholders.",
+      "status": "resolved",
+      "resolution_text": "Before candidate building, hydration recorded 428 original files read and a final scan of 441 files with 0 dataless placeholders."
+    }
+  ],
+  "report_numerical_checks_pass": true,
+  "documents_pass": true,
+  "live_model_calls_this_check": 0,
+  "report_open_findings": [],
+  "report_findings_resolved_count": 1
 }

@@ -1,6 +1,6 @@
 {
   "base_commit": "be67f075d75abdb76c3305404e6076d0949594d7",
-  "measured_at_kst": "2026-10-18T09:45:18.390259+09:00",
+  "measured_at_kst": "2026-10-18T09:56:42.743332+09:00",
   "scope": "Final active source, root documentation, docs, tests, scripts, Docker/dependency/release/build configuration and exact runtime COPY inputs. reports/ and demo output artifacts are excluded.",
   "files": [
     {
@@ -895,5 +895,10 @@
     "exists_in_final_active_tree": false,
     "note": "Candidate-only retry/fallback runtime tests are absent from the final active baseline; candidate patch is retained separately as evidence."
   },
-  "all_checks_pass": true
+  "all_checks_pass": true,
+  "refreshed_after_source_push": {
+    "source_main_commit": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+    "updated_file_measurements": [],
+    "runtime_digest_unchanged": true
+  }
 }

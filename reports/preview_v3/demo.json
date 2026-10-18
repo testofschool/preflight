@@ -1,0 +1,168 @@
+{
+  "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
+  "bytes": 8772303,
+  "sha256": "075c5e0b94cea3aedf5f9e4b1021b389344354bfa045e45c368be0826c2f08f3",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      }
+    ],
+    "format": {
+      "duration": "108.533333",
+      "size": "8772303"
+    }
+  },
+  "duration_seconds": 108.533333,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "audio_stream_count": 0,
+  "full_decode_pass": true,
+  "clean": true,
+  "frame_count": 8,
+  "beats": [
+    {
+      "beat": 1,
+      "label": "Home",
+      "start_seconds": 0.045,
+      "end_seconds": 5.106,
+      "steps": [
+        "home_at_rest"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 2,
+      "label": "Sample prompt → risk + why",
+      "start_seconds": 5.107,
+      "end_seconds": 28.029,
+      "steps": [
+        "sample_prompt_check",
+        "risk_and_explanation",
+        "why_and_neighbours"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 3,
+      "label": "Better prompt → risk drops → copy",
+      "start_seconds": 29.002,
+      "end_seconds": 34.482,
+      "steps": [
+        "better_prompt_and_copy"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": "preview_off_copy",
+      "label": "Preview busy copy; no image requests",
+      "start_seconds": 36.002,
+      "end_seconds": 42.423,
+      "status": "pass"
+    },
+    {
+      "beat": 6,
+      "label": "Clip upload → review → feedback-adjusted risk",
+      "start_seconds": 56.001,
+      "end_seconds": 85.148,
+      "steps": [
+        "clip_upload_and_review",
+        "verdict_and_feedback"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 7,
+      "label": "Architecture image preview connection",
+      "start_seconds": 90.001,
+      "end_seconds": 98.403,
+      "steps": [
+        "architecture_service_connections"
+      ],
+      "status": "pass"
+    }
+  ],
+  "risk_before": 0.4678787878787878,
+  "risk_after": 0.2333333333333333,
+  "feedback_reused": true,
+  "retained_take_directory": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o",
+  "preview_mode": "off",
+  "takes_recorded": 1,
+  "preview_http_requests": 0,
+  "post_requests": [
+    {
+      "path": "/preflight",
+      "http_status": 200
+    },
+    {
+      "path": "/postcheck",
+      "http_status": 200
+    }
+  ],
+  "clipboard_read": false,
+  "feedback_created": false,
+  "feedback_recorded": true,
+  "feedback_risk_before": 0.4678787878787878,
+  "feedback_risk_after": 0.4678787878787878,
+  "feedback_replay_note": "Stored synthetic review reused, existing machine feedback retained; no new feedback record. Feedback-adjusted risk remains 46.8% before and after this replay.",
+  "silent": true,
+  "mp4_ignored": true,
+  "prior_mp4_backup": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw_before_v3_20261018_095707.mp4",
+  "record_log": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/record_log.json",
+  "frames": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/01_home.png",
+      "offset_seconds": 1.027,
+      "name": "home"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/02_risk_and_score_details.png",
+      "offset_seconds": 19.517,
+      "name": "risk_and_score_details"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/03_historical_neighbours.png",
+      "offset_seconds": 24.954,
+      "name": "historical_neighbours"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/04_better_prompt_copied.png",
+      "offset_seconds": 30.393,
+      "name": "better_prompt_copied"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/05_preview_busy_copy.png",
+      "offset_seconds": 39.351,
+      "name": "preview_busy_copy"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/06_clip_uploaded.png",
+      "offset_seconds": 58.206,
+      "name": "clip_uploaded"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/07_clip_verdict_and_feedback.png",
+      "offset_seconds": 79.059,
+      "name": "clip_verdict_and_feedback"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/08_architecture_connections.png",
+      "offset_seconds": 91.359,
+      "name": "architecture_connections"
+    }
+  ],
+  "visual_qa": {
+    "method": "Inspected all eight exported PNGs extracted from the encoded MP4.",
+    "frames_inspected": 8,
+    "pass": true,
+    "findings": [],
+    "observed": "Home, historical risk details, why, 46.8%→23.3% copied rewrite, exact visible busy copy, uploaded synthetic clip, stored Pass review with unchanged 46.8% feedback, and architecture image preview Not active are visible."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "url": "https://preview-v3-copy---preflight-jcgro45veq-as.a.run.app",
+  "preview_status": false,
+  "http_status": 503,
+  "response": {
+    "detail": "Preview is busy right now \u2014 try again in a minute. The risk check still works."
+  },
+  "preview_budget_day_before": "2026-10-18",
+  "preview_day_count_before": 18,
+  "preview_day_count_after": 18,
+  "preview_admissions_unchanged": true,
+  "image_model_calls_this_disabled_request": 0,
+  "zero_calls_basis": "preview flag false; app returns before admission/cache/provider; budget unchanged",
+  "preview_daily_limit": 60,
+  "preview_minute_limit": 5,
+  "code_daily_ceiling": 500,
+  "cumulative_request_limit": 1000,
+  "cumulative_request_count_observed": 152,
+  "veo_generations_reported": 0
+}

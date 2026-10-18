@@ -1,0 +1,23 @@
+{
+  "revision": "preflight-00021-sus",
+  "url": "https://preview-v3-copy---preflight-jcgro45veq-as.a.run.app",
+  "primary_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "revisionName": "preflight-00021-sus",
+      "tag": "preview-v3-copy",
+      "url": "https://preview-v3-copy---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "timeout_seconds": 40,
+  "preview_enabled": false,
+  "all_service_spec_fields_except_image_identical_to_baseline": true,
+  "runtime_source_sha256": "ecb14dc207c9ba78d360f6b72f77dfa41c08011387c40180327d8a795743c793",
+  "source_commit": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940"
+}

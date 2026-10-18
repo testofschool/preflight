@@ -1,7 +1,7 @@
 {
-  "started_at_utc": "2026-10-17T13:13:20.677093+00:00",
+  "started_at_utc": "2026-10-18T00:54:20.969169+00:00",
   "url": "https://preflight-jcgro45veq-as.a.run.app",
-  "takes_requested": 2,
+  "takes_requested": 1,
   "clip": {
     "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/track_cd_synthetic_smoke.mp4",
     "bytes": 119721,
@@ -32,17 +32,19 @@
     "fps": 30,
     "typing_delay_ms": 40,
     "max_duration_seconds": 150.0,
-    "preview": "disabled; absent from resting first screen"
+    "preview": "off",
+    "sample_prompt": "a spoon and a laptop",
+    "warm_receipt": null
   },
   "takes": [
     {
       "take": 1,
-      "started_at_utc": "2026-10-17T13:13:21.271317+00:00",
+      "started_at_utc": "2026-10-18T00:54:21.497441+00:00",
       "steps": [
         {
           "name": "home_at_rest",
-          "started_at_utc": "2026-10-17T13:13:21.272430+00:00",
-          "start_offset_seconds": 0.059,
+          "started_at_utc": "2026-10-18T00:54:21.498796+00:00",
+          "start_offset_seconds": 0.045,
           "status": "pass",
           "observed": {
             "mode": "cloud",
@@ -50,466 +52,34 @@
             "postcheck": true,
             "gemini": true
           },
-          "end_offset_seconds": 4.982,
-          "wall_seconds": 4.923
+          "end_offset_seconds": 5.106,
+          "wall_seconds": 5.061
         },
         {
-          "name": "first_prompt_check",
-          "started_at_utc": "2026-10-17T13:13:26.196420+00:00",
-          "start_offset_seconds": 4.983,
+          "name": "sample_prompt_check",
+          "started_at_utc": "2026-10-18T00:54:26.560598+00:00",
+          "start_offset_seconds": 5.107,
           "status": "pass",
           "observed": {
             "prompt": "a spoon and a laptop",
             "risk_percent": "46.8",
             "band": "lower"
           },
-          "end_offset_seconds": 12.845,
-          "wall_seconds": 7.862
+          "end_offset_seconds": 11.475,
+          "wall_seconds": 6.368
         },
         {
           "name": "risk_and_explanation",
-          "started_at_utc": "2026-10-17T13:13:36.214088+00:00",
-          "start_offset_seconds": 15.001,
-          "status": "pass",
-          "end_offset_seconds": 22.892,
-          "wall_seconds": 7.891
-        },
-        {
-          "name": "why_and_neighbours",
-          "started_at_utc": "2026-10-17T13:13:46.214302+00:00",
-          "start_offset_seconds": 25.001,
-          "status": "pass",
-          "observed": {
-            "neighbours": [
-              "a spoon and a laptop100.0%",
-              "a tv and a laptop100.0%",
-              "a laptop and a remote40.0%"
-            ]
-          },
-          "end_offset_seconds": 31.012,
-          "wall_seconds": 6.011
-        },
-        {
-          "name": "better_prompt_and_copy",
-          "started_at_utc": "2026-10-17T13:13:53.214377+00:00",
-          "start_offset_seconds": 32.001,
-          "status": "pass",
-          "observed": {
-            "rewritten_prompt": "A silver metal spoon resting on a wooden desk right next to an open, glowing laptop, static shot.",
-            "comparison": "46.8% original\n→\n31.3% rewrite",
-            "copy_status": "Copied ✓",
-            "clipboard_read": false
-          },
-          "end_offset_seconds": 39.462,
-          "wall_seconds": 7.461
-        },
-        {
-          "name": "preview_hidden_per_owner",
-          "started_at_utc": "2026-10-17T13:14:01.214910+00:00",
-          "start_offset_seconds": 40.001,
-          "status": "pass",
-          "observed": {
-            "status": "disabled",
-            "resting_first_screen_controls": 0,
-            "result_controls": 2,
-            "tooltips": [
-              "Preview unavailable in this region",
-              null
-            ],
-            "preview_requests": 0
-          },
-          "end_offset_seconds": 43.274,
-          "wall_seconds": 3.273
-        },
-        {
-          "name": "second_prompt_check",
-          "started_at_utc": "2026-10-17T13:14:11.215611+00:00",
-          "start_offset_seconds": 50.002,
-          "status": "pass",
-          "observed": {
-            "prompt": "A person is wrestling",
-            "risk_percent": "50.0",
-            "band": "high",
-            "different_risk_band": true
-          },
-          "end_offset_seconds": 68.684,
-          "wall_seconds": 18.682
-        },
-        {
-          "name": "clip_upload_and_review",
-          "started_at_utc": "2026-10-17T13:14:29.900662+00:00",
-          "start_offset_seconds": 68.687,
-          "status": "pass",
-          "observed": {
-            "verdict": "Pass",
-            "model_label": "synthetic FFmpeg loop of a Gemini still",
-            "prompt": "a spoon and a laptop"
-          },
-          "end_offset_seconds": 72.811,
-          "wall_seconds": 4.124
-        },
-        {
-          "name": "verdict_and_feedback",
-          "started_at_utc": "2026-10-17T13:14:46.215159+00:00",
-          "start_offset_seconds": 85.001,
-          "status": "pass",
-          "observed": {
-            "verdict": "Pass",
-            "feedback_before": "46.8%",
-            "feedback_after": "46.8%",
-            "receipt": "Stored review reused; existing machine feedback retained · 1 machine feedback record."
-          },
-          "end_offset_seconds": 92.165,
-          "wall_seconds": 7.164
-        },
-        {
-          "name": "architecture_service_connections",
-          "started_at_utc": "2026-10-17T13:14:56.216045+00:00",
-          "start_offset_seconds": 95.002,
-          "status": "pass",
-          "observed": {
-            "service_connections": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview (Gemini image model)\nNot active"
-          },
-          "end_offset_seconds": 106.476,
-          "wall_seconds": 11.474
-        },
-        {
-          "name": "home_final_rest",
-          "started_at_utc": "2026-10-17T13:15:11.215047+00:00",
-          "start_offset_seconds": 110.001,
-          "status": "pass",
-          "observed": {
-            "url_path": "/"
-          },
-          "end_offset_seconds": 114.524,
-          "wall_seconds": 4.523
-        }
-      ],
-      "network": [
-        {
-          "offset_seconds": 0.355,
-          "method": "GET",
-          "path": "/",
-          "status": 200,
-          "response_headers_after_seconds": 0.291
-        },
-        {
-          "offset_seconds": 0.504,
-          "method": "GET",
-          "path": "/static/styles.css",
-          "status": 200,
-          "response_headers_after_seconds": 0.146
-        },
-        {
-          "offset_seconds": 0.57,
-          "method": "GET",
-          "path": "/static/status.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.213
-        },
-        {
-          "offset_seconds": 0.612,
-          "method": "GET",
-          "path": "/static/postcheck.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.254
-        },
-        {
-          "offset_seconds": 0.617,
-          "method": "GET",
-          "path": "/static/app.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.26
-        },
-        {
-          "offset_seconds": 0.708,
-          "method": "GET",
-          "path": "/api/status",
-          "status": 200,
-          "response_headers_after_seconds": 0.138,
-          "observed_response": {
-            "mode": "cloud",
-            "cloud_run": true,
-            "firestore": true,
-            "gemini": true,
-            "adk": true,
-            "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
-          }
-        },
-        {
-          "offset_seconds": 12.834,
-          "method": "POST",
-          "path": "/preflight",
-          "status": 200,
-          "response_headers_after_seconds": 5.44,
-          "observed_response": {
-            "mode": "cloud",
-            "p_fail": 0.4678787878787878,
-            "historical_p_fail": 0.5345454545454545,
-            "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
-            "rewrite_status": "improved",
-            "rewritten_prompt": "A silver metal spoon resting on a wooden desk right next to an open, glowing laptop, static shot.",
-            "p_fail_before": 0.4678787878787878,
-            "p_fail_after": 0.3133333333333333,
-            "supported": true
-          }
-        },
-        {
-          "offset_seconds": 59.491,
-          "method": "POST",
-          "path": "/preflight",
-          "status": 200,
-          "response_headers_after_seconds": 7.032,
-          "observed_response": {
-            "mode": "cloud",
-            "p_fail": 0.5,
-            "historical_p_fail": 0.5,
-            "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
-            "rewrite_status": "improved",
-            "rewritten_prompt": "A professional wrestler practicing a solo stance, crouching low in a defensive position on a blue training mat, medium shot.",
-            "p_fail_before": 0.5,
-            "p_fail_after": 0.06666666666666667,
-            "supported": true
-          }
-        },
-        {
-          "offset_seconds": 72.806,
-          "method": "POST",
-          "path": "/postcheck",
-          "status": 200,
-          "response_headers_after_seconds": 0.427,
-          "observed_response": {
-            "mode": "cloud",
-            "historical_p_fail": 0.5345454545454545,
-            "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
-            "pass_bool": true,
-            "risk_before": 0.4678787878787878,
-            "risk_after": 0.4678787878787878,
-            "feedback_recorded": true,
-            "feedback_created": false,
-            "reused_stored_review": true
-          }
-        },
-        {
-          "offset_seconds": 95.162,
-          "method": "GET",
-          "path": "/architecture",
-          "status": 200,
-          "response_headers_after_seconds": 0.154
-        },
-        {
-          "offset_seconds": 95.165,
-          "method": "GET",
-          "path": "/static/styles.css",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 95.166,
-          "method": "GET",
-          "path": "/static/status.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 95.32,
-          "method": "GET",
-          "path": "/static/architecture.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.154
-        },
-        {
-          "offset_seconds": 95.388,
-          "method": "GET",
-          "path": "/api/status",
-          "status": 200,
-          "response_headers_after_seconds": 0.222,
-          "observed_response": {
-            "mode": "cloud",
-            "cloud_run": true,
-            "firestore": true,
-            "gemini": true,
-            "adk": true,
-            "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
-          }
-        },
-        {
-          "offset_seconds": 110.297,
-          "method": "GET",
-          "path": "/",
-          "status": 200,
-          "response_headers_after_seconds": 0.002
-        },
-        {
-          "offset_seconds": 110.299,
-          "method": "GET",
-          "path": "/static/styles.css",
-          "status": 200,
-          "response_headers_after_seconds": 0.001
-        },
-        {
-          "offset_seconds": 110.303,
-          "method": "GET",
-          "path": "/static/status.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.004
-        },
-        {
-          "offset_seconds": 110.308,
-          "method": "GET",
-          "path": "/static/app.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.001
-        },
-        {
-          "offset_seconds": 110.308,
-          "method": "GET",
-          "path": "/static/postcheck.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 110.448,
-          "method": "GET",
-          "path": "/api/status",
-          "status": 200,
-          "response_headers_after_seconds": 0.139,
-          "observed_response": {
-            "mode": "cloud",
-            "cloud_run": true,
-            "firestore": true,
-            "gemini": true,
-            "adk": true,
-            "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
-          }
-        }
-      ],
-      "request_failures": [],
-      "page_errors": [],
-      "frames": [
-        {
-          "name": "home",
-          "offset_seconds": 0.905,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/01_home.png"
-        },
-        {
-          "name": "risk_and_score_details",
-          "offset_seconds": 19.511,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/02_risk_and_score_details.png"
-        },
-        {
-          "name": "historical_neighbours",
-          "offset_seconds": 25.952,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/03_historical_neighbours.png"
-        },
-        {
-          "name": "better_prompt_copied",
-          "offset_seconds": 33.374,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/04_better_prompt_copied.png"
-        },
-        {
-          "name": "second_prompt_risk",
-          "offset_seconds": 60.617,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/05_second_prompt_risk.png"
-        },
-        {
-          "name": "clip_uploaded",
-          "offset_seconds": 70.913,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/06_clip_uploaded.png"
-        },
-        {
-          "name": "clip_verdict_and_feedback",
-          "offset_seconds": 86.062,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/07_clip_verdict_and_feedback.png"
-        },
-        {
-          "name": "architecture_connections",
-          "offset_seconds": 96.36,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/screens/08_architecture_connections.png"
-        }
-      ],
-      "preview_decision": "disabled; no preview actions on the resting first screen",
-      "response_policy": "real UI requests only; no mocks, retries or clipboard reads",
-      "wall_seconds": 114.526,
-      "video": {
-        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_take_1.mp4",
-        "source": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/browser/a246f21e26763a28e9165a25402eea25.webm",
-        "ffprobe": {
-          "programs": [],
-          "stream_groups": [],
-          "streams": [
-            {
-              "codec_name": "h264",
-              "codec_type": "video",
-              "width": 1920,
-              "height": 1080,
-              "r_frame_rate": "30/1"
-            }
-          ],
-          "format": {
-            "duration": "114.400000",
-            "size": "10085001"
-          }
-        },
-        "duration_seconds": 114.4,
-        "format_and_duration_pass": true,
-        "full_decode_pass": true
-      },
-      "expected_request_sequence_pass": true,
-      "benign_local_preview_cancellations": [],
-      "unexpected_request_failures": [],
-      "clean": true,
-      "ended_at_utc": "2026-10-17T13:15:28.142976+00:00"
-    },
-    {
-      "take": 2,
-      "started_at_utc": "2026-10-17T13:15:28.203210+00:00",
-      "steps": [
-        {
-          "name": "home_at_rest",
-          "started_at_utc": "2026-10-17T13:15:28.204916+00:00",
-          "start_offset_seconds": 0.055,
-          "status": "pass",
-          "observed": {
-            "mode": "cloud",
-            "preview": false,
-            "postcheck": true,
-            "gemini": true
-          },
-          "end_offset_seconds": 5.161,
-          "wall_seconds": 5.106
-        },
-        {
-          "name": "first_prompt_check",
-          "started_at_utc": "2026-10-17T13:15:33.312382+00:00",
-          "start_offset_seconds": 5.162,
-          "status": "pass",
-          "observed": {
-            "prompt": "a spoon and a laptop",
-            "risk_percent": "46.8",
-            "band": "lower"
-          },
-          "end_offset_seconds": 12.763,
-          "wall_seconds": 7.601
-        },
-        {
-          "name": "risk_and_explanation",
-          "started_at_utc": "2026-10-17T13:15:43.151855+00:00",
+          "started_at_utc": "2026-10-18T00:54:36.455176+00:00",
           "start_offset_seconds": 15.002,
           "status": "pass",
-          "end_offset_seconds": 22.908,
-          "wall_seconds": 7.906
+          "end_offset_seconds": 22.896,
+          "wall_seconds": 7.894
         },
         {
           "name": "why_and_neighbours",
-          "started_at_utc": "2026-10-17T13:15:53.152552+00:00",
-          "start_offset_seconds": 25.002,
+          "started_at_utc": "2026-10-18T00:54:45.454544+00:00",
+          "start_offset_seconds": 24.001,
           "status": "pass",
           "observed": {
             "neighbours": [
@@ -518,72 +88,61 @@
               "a laptop and a remote40.0%"
             ]
           },
-          "end_offset_seconds": 31.021,
-          "wall_seconds": 6.019
+          "end_offset_seconds": 28.029,
+          "wall_seconds": 4.028
         },
         {
           "name": "better_prompt_and_copy",
-          "started_at_utc": "2026-10-17T13:16:00.151075+00:00",
-          "start_offset_seconds": 32.001,
+          "started_at_utc": "2026-10-18T00:54:50.455402+00:00",
+          "start_offset_seconds": 29.002,
           "status": "pass",
           "observed": {
-            "rewritten_prompt": "A clean kitchen table where a ceramic spoon lies beside a closed laptop, soft natural light, steady camera.",
-            "comparison": "46.8% original\n→\n41.3% rewrite",
+            "rewritten_prompt": "A person stirs a mug of coffee with a metal spoon, with a sleek laptop open in the background showing a blurred document.",
+            "risk_before": 0.4678787878787878,
+            "risk_after": 0.2333333333333333,
+            "comparison": "46.8% original\n→\n23.3% rewrite",
             "copy_status": "Copied ✓",
             "clipboard_read": false
           },
-          "end_offset_seconds": 39.44,
-          "wall_seconds": 7.439
+          "end_offset_seconds": 34.482,
+          "wall_seconds": 5.48
         },
         {
-          "name": "preview_hidden_per_owner",
-          "started_at_utc": "2026-10-17T13:16:08.151892+00:00",
-          "start_offset_seconds": 40.001,
+          "name": "preview_disabled_busy_copy",
+          "started_at_utc": "2026-10-18T00:54:57.454844+00:00",
+          "start_offset_seconds": 36.002,
           "status": "pass",
           "observed": {
             "status": "disabled",
             "resting_first_screen_controls": 0,
             "result_controls": 2,
             "tooltips": [
-              "Preview unavailable in this region",
+              "Preview is busy right now — try again in a minute. The risk check still works.",
               null
             ],
+            "visible_busy_copy": "Preview is busy right now — try again in a minute. The risk check still works.",
             "preview_requests": 0
           },
-          "end_offset_seconds": 43.272,
-          "wall_seconds": 3.271
-        },
-        {
-          "name": "second_prompt_check",
-          "started_at_utc": "2026-10-17T13:16:18.151773+00:00",
-          "start_offset_seconds": 50.001,
-          "status": "pass",
-          "observed": {
-            "prompt": "A person is wrestling",
-            "risk_percent": "50.0",
-            "band": "high",
-            "different_risk_band": true
-          },
-          "end_offset_seconds": 67.286,
-          "wall_seconds": 17.285
+          "end_offset_seconds": 42.423,
+          "wall_seconds": 6.421
         },
         {
           "name": "clip_upload_and_review",
-          "started_at_utc": "2026-10-17T13:16:35.437807+00:00",
-          "start_offset_seconds": 67.287,
+          "started_at_utc": "2026-10-18T00:55:17.453705+00:00",
+          "start_offset_seconds": 56.001,
           "status": "pass",
           "observed": {
             "verdict": "Pass",
             "model_label": "synthetic FFmpeg loop of a Gemini still",
             "prompt": "a spoon and a laptop"
           },
-          "end_offset_seconds": 71.663,
-          "wall_seconds": 4.376
+          "end_offset_seconds": 60.216,
+          "wall_seconds": 4.215
         },
         {
           "name": "verdict_and_feedback",
-          "started_at_utc": "2026-10-17T13:16:53.153232+00:00",
-          "start_offset_seconds": 85.002,
+          "started_at_utc": "2026-10-18T00:55:39.453949+00:00",
+          "start_offset_seconds": 78.001,
           "status": "pass",
           "observed": {
             "verdict": "Pass",
@@ -591,224 +150,80 @@
             "feedback_after": "46.8%",
             "receipt": "Stored review reused; existing machine feedback retained · 1 machine feedback record."
           },
-          "end_offset_seconds": 92.143,
-          "wall_seconds": 7.141
+          "end_offset_seconds": 85.148,
+          "wall_seconds": 7.147
         },
         {
           "name": "architecture_service_connections",
-          "started_at_utc": "2026-10-17T13:17:03.152911+00:00",
-          "start_offset_seconds": 95.002,
+          "started_at_utc": "2026-10-18T00:55:51.453955+00:00",
+          "start_offset_seconds": 90.001,
           "status": "pass",
           "observed": {
-            "service_connections": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview (Gemini image model)\nNot active"
+            "service_connections": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview (Gemini image model)\nNot active",
+            "image_preview": "Not active"
           },
-          "end_offset_seconds": 106.507,
-          "wall_seconds": 11.505
+          "end_offset_seconds": 98.403,
+          "wall_seconds": 8.402
         },
         {
           "name": "home_final_rest",
-          "started_at_utc": "2026-10-17T13:17:18.153235+00:00",
-          "start_offset_seconds": 110.002,
+          "started_at_utc": "2026-10-18T00:56:05.454371+00:00",
+          "start_offset_seconds": 104.002,
           "status": "pass",
           "observed": {
             "url_path": "/"
           },
-          "end_offset_seconds": 114.508,
-          "wall_seconds": 4.506
+          "end_offset_seconds": 108.645,
+          "wall_seconds": 4.643
         }
       ],
       "network": [
         {
-          "offset_seconds": 0.423,
+          "offset_seconds": 0.347,
           "method": "GET",
           "path": "/",
           "status": 200,
-          "response_headers_after_seconds": 0.366
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.298
         },
         {
-          "offset_seconds": 0.573,
+          "offset_seconds": 0.499,
           "method": "GET",
           "path": "/static/styles.css",
           "status": 200,
-          "response_headers_after_seconds": 0.147
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.151
         },
         {
-          "offset_seconds": 0.656,
+          "offset_seconds": 0.586,
           "method": "GET",
           "path": "/static/status.js",
           "status": 200,
-          "response_headers_after_seconds": 0.231
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.237
         },
         {
-          "offset_seconds": 0.691,
+          "offset_seconds": 0.622,
           "method": "GET",
           "path": "/static/postcheck.js",
           "status": 200,
-          "response_headers_after_seconds": 0.265
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.273
         },
         {
-          "offset_seconds": 0.694,
+          "offset_seconds": 0.628,
           "method": "GET",
           "path": "/static/app.js",
           "status": 200,
-          "response_headers_after_seconds": 0.268
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.279
         },
         {
-          "offset_seconds": 0.803,
+          "offset_seconds": 0.734,
           "method": "GET",
           "path": "/api/status",
           "status": 200,
-          "response_headers_after_seconds": 0.146,
-          "observed_response": {
-            "mode": "cloud",
-            "cloud_run": true,
-            "firestore": true,
-            "gemini": true,
-            "adk": true,
-            "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
-          }
-        },
-        {
-          "offset_seconds": 12.751,
-          "method": "POST",
-          "path": "/preflight",
-          "status": 200,
-          "response_headers_after_seconds": 5.209,
-          "observed_response": {
-            "mode": "cloud",
-            "p_fail": 0.4678787878787878,
-            "historical_p_fail": 0.5345454545454545,
-            "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
-            "rewrite_status": "improved",
-            "rewritten_prompt": "A clean kitchen table where a ceramic spoon lies beside a closed laptop, soft natural light, steady camera.",
-            "p_fail_before": 0.4678787878787878,
-            "p_fail_after": 0.4133333333333333,
-            "supported": true
-          }
-        },
-        {
-          "offset_seconds": 58.096,
-          "method": "POST",
-          "path": "/preflight",
-          "status": 200,
-          "response_headers_after_seconds": 5.586,
-          "observed_response": {
-            "mode": "cloud",
-            "p_fail": 0.5,
-            "historical_p_fail": 0.5,
-            "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
-            "rewrite_status": "improved",
-            "rewritten_prompt": "A single wrestler in a red singlet practicing a takedown move on a training dummy in a brightly lit gym, medium shot, static camera.",
-            "p_fail_before": 0.5,
-            "p_fail_after": 0.2909090909090909,
-            "supported": true
-          }
-        },
-        {
-          "offset_seconds": 71.656,
-          "method": "POST",
-          "path": "/postcheck",
-          "status": 200,
-          "response_headers_after_seconds": 0.68,
-          "observed_response": {
-            "mode": "cloud",
-            "historical_p_fail": 0.5345454545454545,
-            "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
-            "pass_bool": true,
-            "risk_before": 0.4678787878787878,
-            "risk_after": 0.4678787878787878,
-            "feedback_recorded": true,
-            "feedback_created": false,
-            "reused_stored_review": true
-          }
-        },
-        {
-          "offset_seconds": 95.159,
-          "method": "GET",
-          "path": "/architecture",
-          "status": 200,
-          "response_headers_after_seconds": 0.155
-        },
-        {
-          "offset_seconds": 95.163,
-          "method": "GET",
-          "path": "/static/styles.css",
-          "status": 200,
-          "response_headers_after_seconds": 0.001
-        },
-        {
-          "offset_seconds": 95.163,
-          "method": "GET",
-          "path": "/static/status.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 95.308,
-          "method": "GET",
-          "path": "/static/architecture.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.145
-        },
-        {
-          "offset_seconds": 95.38,
-          "method": "GET",
-          "path": "/api/status",
-          "status": 200,
-          "response_headers_after_seconds": 0.216,
-          "observed_response": {
-            "mode": "cloud",
-            "cloud_run": true,
-            "firestore": true,
-            "gemini": true,
-            "adk": true,
-            "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
-          }
-        },
-        {
-          "offset_seconds": 110.293,
-          "method": "GET",
-          "path": "/",
-          "status": 200,
-          "response_headers_after_seconds": 0.001
-        },
-        {
-          "offset_seconds": 110.296,
-          "method": "GET",
-          "path": "/static/styles.css",
-          "status": 200,
-          "response_headers_after_seconds": 0.001
-        },
-        {
-          "offset_seconds": 110.297,
-          "method": "GET",
-          "path": "/static/status.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 110.298,
-          "method": "GET",
-          "path": "/static/app.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 110.298,
-          "method": "GET",
-          "path": "/static/postcheck.js",
-          "status": 200,
-          "response_headers_after_seconds": 0.0
-        },
-        {
-          "offset_seconds": 110.445,
-          "method": "GET",
-          "path": "/api/status",
-          "status": 200,
+          "preview_cache": null,
           "response_headers_after_seconds": 0.147,
           "observed_response": {
             "mode": "cloud",
@@ -820,6 +235,152 @@
             "preview": false,
             "agent_platform_session": true
           }
+        },
+        {
+          "offset_seconds": 11.464,
+          "method": "POST",
+          "path": "/preflight",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 4.7,
+          "observed_response": {
+            "mode": "cloud",
+            "p_fail": 0.4678787878787878,
+            "historical_p_fail": 0.5345454545454545,
+            "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+            "rewrite_status": "improved",
+            "rewritten_prompt": "A person stirs a mug of coffee with a metal spoon, with a sleek laptop open in the background showing a blurred document.",
+            "p_fail_before": 0.4678787878787878,
+            "p_fail_after": 0.2333333333333333,
+            "supported": true
+          }
+        },
+        {
+          "offset_seconds": 60.21,
+          "method": "POST",
+          "path": "/postcheck",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.561,
+          "observed_response": {
+            "mode": "cloud",
+            "historical_p_fail": 0.5345454545454545,
+            "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
+            "pass_bool": true,
+            "risk_before": 0.4678787878787878,
+            "risk_after": 0.4678787878787878,
+            "feedback_recorded": true,
+            "feedback_created": false,
+            "reused_stored_review": true
+          }
+        },
+        {
+          "offset_seconds": 90.171,
+          "method": "GET",
+          "path": "/architecture",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.163
+        },
+        {
+          "offset_seconds": 90.173,
+          "method": "GET",
+          "path": "/static/styles.css",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.001
+        },
+        {
+          "offset_seconds": 90.173,
+          "method": "GET",
+          "path": "/static/status.js",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.0
+        },
+        {
+          "offset_seconds": 90.318,
+          "method": "GET",
+          "path": "/static/architecture.js",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.145
+        },
+        {
+          "offset_seconds": 90.398,
+          "method": "GET",
+          "path": "/api/status",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.225,
+          "observed_response": {
+            "mode": "cloud",
+            "cloud_run": true,
+            "firestore": true,
+            "gemini": true,
+            "adk": true,
+            "postcheck": true,
+            "preview": false,
+            "agent_platform_session": true
+          }
+        },
+        {
+          "offset_seconds": 104.298,
+          "method": "GET",
+          "path": "/",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.001
+        },
+        {
+          "offset_seconds": 104.302,
+          "method": "GET",
+          "path": "/static/styles.css",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.001
+        },
+        {
+          "offset_seconds": 104.303,
+          "method": "GET",
+          "path": "/static/status.js",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.0
+        },
+        {
+          "offset_seconds": 104.303,
+          "method": "GET",
+          "path": "/static/postcheck.js",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.0
+        },
+        {
+          "offset_seconds": 104.445,
+          "method": "GET",
+          "path": "/static/app.js",
+          "status": 304,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.142
+        },
+        {
+          "offset_seconds": 104.523,
+          "method": "GET",
+          "path": "/api/status",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.219,
+          "observed_response": {
+            "mode": "cloud",
+            "cloud_run": true,
+            "firestore": true,
+            "gemini": true,
+            "adk": true,
+            "postcheck": true,
+            "preview": false,
+            "agent_platform_session": true
+          }
         }
       ],
       "request_failures": [],
@@ -827,51 +388,52 @@
       "frames": [
         {
           "name": "home",
-          "offset_seconds": 1.088,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/01_home.png"
+          "offset_seconds": 1.027,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/01_home.png"
         },
         {
           "name": "risk_and_score_details",
-          "offset_seconds": 19.543,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/02_risk_and_score_details.png"
+          "offset_seconds": 19.517,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/02_risk_and_score_details.png"
         },
         {
           "name": "historical_neighbours",
-          "offset_seconds": 25.955,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/03_historical_neighbours.png"
+          "offset_seconds": 24.954,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/03_historical_neighbours.png"
         },
         {
           "name": "better_prompt_copied",
-          "offset_seconds": 33.367,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/04_better_prompt_copied.png"
+          "offset_seconds": 30.393,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/04_better_prompt_copied.png"
         },
         {
-          "name": "second_prompt_risk",
-          "offset_seconds": 59.221,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/05_second_prompt_risk.png"
+          "name": "preview_busy_copy",
+          "offset_seconds": 39.351,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/05_preview_busy_copy.png"
         },
         {
           "name": "clip_uploaded",
-          "offset_seconds": 69.539,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/06_clip_uploaded.png"
+          "offset_seconds": 58.206,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/06_clip_uploaded.png"
         },
         {
           "name": "clip_verdict_and_feedback",
-          "offset_seconds": 86.051,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/07_clip_verdict_and_feedback.png"
+          "offset_seconds": 79.059,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/07_clip_verdict_and_feedback.png"
         },
         {
           "name": "architecture_connections",
-          "offset_seconds": 96.353,
-          "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/screens/08_architecture_connections.png"
+          "offset_seconds": 91.359,
+          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/08_architecture_connections.png"
         }
       ],
-      "preview_decision": "disabled; no preview actions on the resting first screen",
-      "response_policy": "real UI requests only; no mocks, retries or clipboard reads",
-      "wall_seconds": 114.51,
+      "preview_decision": "off",
+      "warm_receipt": null,
+      "response_policy": "real UI requests only; no mocks, client retries or clipboard reads",
+      "wall_seconds": 108.647,
       "video": {
-        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_take_2.mp4",
-        "source": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/browser/c5f80d67e9fa702605b05eb6e3360a52.webm",
+        "path": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/preflight_demo_take_1.mp4",
+        "source": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/browser/049c3c5c6670f1928e67fc581282f031.webm",
         "ffprobe": {
           "programs": [],
           "stream_groups": [],
@@ -885,62 +447,130 @@
             }
           ],
           "format": {
-            "duration": "114.366667",
-            "size": "10008012"
+            "duration": "108.533333",
+            "size": "8772303"
           }
         },
-        "duration_seconds": 114.366667,
+        "duration_seconds": 108.533333,
+        "bytes": 8772303,
+        "sha256": "075c5e0b94cea3aedf5f9e4b1021b389344354bfa045e45c368be0826c2f08f3",
         "format_and_duration_pass": true,
         "full_decode_pass": true
       },
+      "expected_request_sequence": [
+        "/preflight",
+        "/postcheck"
+      ],
       "expected_request_sequence_pass": true,
       "benign_local_preview_cancellations": [],
       "unexpected_request_failures": [],
       "clean": true,
-      "ended_at_utc": "2026-10-17T13:17:35.099393+00:00"
+      "beats": [
+        {
+          "beat": 1,
+          "label": "Home",
+          "start_seconds": 0.045,
+          "end_seconds": 5.106,
+          "steps": [
+            "home_at_rest"
+          ],
+          "status": "pass"
+        },
+        {
+          "beat": 2,
+          "label": "Sample prompt → risk + why",
+          "start_seconds": 5.107,
+          "end_seconds": 28.029,
+          "steps": [
+            "sample_prompt_check",
+            "risk_and_explanation",
+            "why_and_neighbours"
+          ],
+          "status": "pass"
+        },
+        {
+          "beat": 3,
+          "label": "Better prompt → risk drops → copy",
+          "start_seconds": 29.002,
+          "end_seconds": 34.482,
+          "steps": [
+            "better_prompt_and_copy"
+          ],
+          "status": "pass"
+        },
+        {
+          "beat": "preview_off_copy",
+          "label": "Preview busy copy; no image requests",
+          "start_seconds": 36.002,
+          "end_seconds": 42.423,
+          "status": "pass"
+        },
+        {
+          "beat": 6,
+          "label": "Clip upload → review → feedback-adjusted risk",
+          "start_seconds": 56.001,
+          "end_seconds": 85.148,
+          "steps": [
+            "clip_upload_and_review",
+            "verdict_and_feedback"
+          ],
+          "status": "pass"
+        },
+        {
+          "beat": 7,
+          "label": "Architecture image preview connection",
+          "start_seconds": 90.001,
+          "end_seconds": 98.403,
+          "steps": [
+            "architecture_service_connections"
+          ],
+          "status": "pass"
+        }
+      ],
+      "ended_at_utc": "2026-10-18T00:56:22.866268+00:00"
     }
   ],
-  "selected_take": 2,
+  "selected_take": 1,
   "output": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
   "frames": [
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/01_home.png",
-      "offset_seconds": 1.088,
+      "offset_seconds": 1.027,
       "name": "home"
     },
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/02_risk_and_score_details.png",
-      "offset_seconds": 19.543,
+      "offset_seconds": 19.517,
       "name": "risk_and_score_details"
     },
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/03_historical_neighbours.png",
-      "offset_seconds": 25.955,
+      "offset_seconds": 24.954,
       "name": "historical_neighbours"
     },
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/04_better_prompt_copied.png",
-      "offset_seconds": 33.367,
+      "offset_seconds": 30.393,
       "name": "better_prompt_copied"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/05_second_prompt_risk.png",
-      "offset_seconds": 59.221,
-      "name": "second_prompt_risk"
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/05_preview_busy_copy.png",
+      "offset_seconds": 39.351,
+      "name": "preview_busy_copy"
     },
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/06_clip_uploaded.png",
-      "offset_seconds": 69.539,
+      "offset_seconds": 58.206,
       "name": "clip_uploaded"
     },
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/07_clip_verdict_and_feedback.png",
-      "offset_seconds": 86.051,
+      "offset_seconds": 79.059,
       "name": "clip_verdict_and_feedback"
     },
     {
       "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/08_architecture_connections.png",
-      "offset_seconds": 96.353,
+      "offset_seconds": 91.359,
       "name": "architecture_connections"
     }
   ],
@@ -958,9 +588,75 @@
       }
     ],
     "format": {
-      "duration": "114.366667",
-      "size": "10008012"
+      "duration": "108.533333",
+      "size": "8772303"
     }
   },
-  "ended_at_utc": "2026-10-17T13:17:36.182334+00:00"
+  "beats": [
+    {
+      "beat": 1,
+      "label": "Home",
+      "start_seconds": 0.045,
+      "end_seconds": 5.106,
+      "steps": [
+        "home_at_rest"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 2,
+      "label": "Sample prompt → risk + why",
+      "start_seconds": 5.107,
+      "end_seconds": 28.029,
+      "steps": [
+        "sample_prompt_check",
+        "risk_and_explanation",
+        "why_and_neighbours"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 3,
+      "label": "Better prompt → risk drops → copy",
+      "start_seconds": 29.002,
+      "end_seconds": 34.482,
+      "steps": [
+        "better_prompt_and_copy"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": "preview_off_copy",
+      "label": "Preview busy copy; no image requests",
+      "start_seconds": 36.002,
+      "end_seconds": 42.423,
+      "status": "pass"
+    },
+    {
+      "beat": 6,
+      "label": "Clip upload → review → feedback-adjusted risk",
+      "start_seconds": 56.001,
+      "end_seconds": 85.148,
+      "steps": [
+        "clip_upload_and_review",
+        "verdict_and_feedback"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 7,
+      "label": "Architecture image preview connection",
+      "start_seconds": 90.001,
+      "end_seconds": 98.403,
+      "steps": [
+        "architecture_service_connections"
+      ],
+      "status": "pass"
+    }
+  ],
+  "output_bytes": 8772303,
+  "output_sha256": "075c5e0b94cea3aedf5f9e4b1021b389344354bfa045e45c368be0826c2f08f3",
+  "ended_at_utc": "2026-10-18T00:56:24.071793+00:00",
+  "retained_recording_directory": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o",
+  "retained_recording_log": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/record_log.json"
 }

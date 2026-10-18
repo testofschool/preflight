@@ -1,0 +1,40 @@
+{
+  "verified_at_kst": "2026-10-18T09:54:07.764195+09:00",
+  "revision": "preflight-00021-sus",
+  "source_commit": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+  "traffic": [
+    {
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "percent": 100,
+      "revisionName": "preflight-00021-sus",
+      "tag": "preview-v3-copy",
+      "url": "https://preview-v3-copy---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "primary_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "preview_enabled": false,
+  "timeout_seconds": 40,
+  "all_service_spec_fields_except_image_identical_to_baseline": true,
+  "preflight_http_200": 6,
+  "preflight_scheduled": 6,
+  "postcheck_http_status": 200,
+  "objects": 18,
+  "colors": 7,
+  "cta_bottom_px": 837.4375,
+  "status_http": 200,
+  "live_static_app_sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+  "local_static_app_sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+  "runtime_source_sha256": "ecb14dc207c9ba78d360f6b72f77dfa41c08011387c40180327d8a795743c793",
+  "extra_unregistered_healthz_probe": {
+    "primary": 404,
+    "old_revision_tag": 404,
+    "new_revision_tag": 404,
+    "not_a_V11e_criterion": true,
+    "no_healthz_change_made": true
+  },
+  "veo_calls_this_run": 0
+}

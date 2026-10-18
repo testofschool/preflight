@@ -1,0 +1,56 @@
+{
+  "/api/status": {
+    "http_status": 200,
+    "sha256": "0dcb31d51871f68282256320881bebfa66191b839db006135a9b2273027b3913",
+    "response": {
+      "mode": "cloud",
+      "label": "Connected research preview",
+      "cloud_run": true,
+      "gemini": true,
+      "adk": true,
+      "agent_platform_session": true,
+      "firestore": true,
+      "postcheck": true,
+      "preview": false,
+      "pricing_image": {
+        "model": "gemini-3.1-flash-lite-image",
+        "size": "1K",
+        "usd_per_image": 0.0336,
+        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "checked_date": "2026-10-17"
+      },
+      "generations": 0,
+      "sample_prompts": [
+        "a cat and a dog",
+        "a spoon and a laptop",
+        "a bicycle and a car",
+        "indoor gymnasium",
+        "a purple clock"
+      ],
+      "pricing": {
+        "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "rate_limit": {
+        "checks": 20,
+        "seconds": 60,
+        "scope": "shared Firestore transaction"
+      }
+    }
+  },
+  "/healthz": {
+    "http_status": 404,
+    "sha256": "c2076d92bf1fa30a8ac80cd72fea16056c06f545fd856660c8c34556d10478b0",
+    "json": false
+  },
+  "/static/app.js": {
+    "http_status": 200,
+    "sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+    "matches_local": true
+  }
+}

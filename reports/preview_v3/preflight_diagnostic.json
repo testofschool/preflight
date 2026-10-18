@@ -1,0 +1,44 @@
+{
+  "purpose": "Exactly one diagnostic preflight per revision; not a gate rerun",
+  "model": "unchanged risk/rewrite path",
+  "requests": [
+    {
+      "label": "old_primary",
+      "url": "https://preflight-jcgro45veq-as.a.run.app",
+      "prompt": "a bicycle and a car",
+      "requested_at_kst": "2026-10-18T09:40:17.583333+09:00",
+      "http_status": 200,
+      "elapsed_seconds": 9.277,
+      "x_preflight_error": null,
+      "response": {
+        "mode": "cloud",
+        "rewrite_status": "improved",
+        "p_fail": 0.4333333333333333,
+        "p_fail_before": 0.4333333333333333,
+        "p_fail_after": 0.2733333333333333,
+        "supported": true,
+        "tool_call_count": 6,
+        "session_verified": true
+      }
+    },
+    {
+      "label": "candidate",
+      "url": "https://preview-v3---preflight-jcgro45veq-as.a.run.app",
+      "prompt": "a bicycle and a car",
+      "requested_at_kst": "2026-10-18T09:40:17.625754+09:00",
+      "http_status": 200,
+      "elapsed_seconds": 10.377,
+      "x_preflight_error": null,
+      "response": {
+        "mode": "cloud",
+        "rewrite_status": "improved",
+        "p_fail": 0.4333333333333333,
+        "p_fail_before": 0.4333333333333333,
+        "p_fail_after": 0.26666666666666666,
+        "supported": true,
+        "tool_call_count": 6,
+        "session_verified": true
+      }
+    }
+  ]
+}

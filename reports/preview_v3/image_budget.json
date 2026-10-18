@@ -1,0 +1,715 @@
+{
+  "schema_version": 1,
+  "budget_date_kst": "2026-10-18",
+  "initial_image_calls": 0,
+  "initial_calls_source": "environment_before.json: two KST-today requests were validation422 and disabled503 before provider admission; prior stored preview day2026-10-17",
+  "limit": 45,
+  "worst_case_calls_reserved_before_every_preview": 3,
+  "request_spacing_seconds": 13.0,
+  "entries": [
+    {
+      "id": 1,
+      "phase": "fresh",
+      "selection_index": 1,
+      "prompt_sha256": "7acbf91b3a76d014af9c6ef2938280d081c6d6f768e46eaa24291e8ef62a69b1",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284025.4132092,
+      "dispatched_at_kst": "2026-10-18T09:40:25.413209+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 1,
+      "state": "measured",
+      "model": "gemini-3.1-flash-lite-image",
+      "attempts": 1,
+      "fallback_used": false,
+      "http_status": 200,
+      "successful_generated_image_list_price_usd": 0.0336,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "phase": "fresh",
+      "selection_index": 2,
+      "prompt_sha256": "7fdcd1f3e1e3207753b5e04747dff7d2bf850052581ad963e292891674774f45",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284038.415495,
+      "dispatched_at_kst": "2026-10-18T09:40:38.415523+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 1,
+      "state": "measured",
+      "model": "gemini-3.1-flash-lite-image",
+      "attempts": 1,
+      "fallback_used": false,
+      "http_status": 200,
+      "successful_generated_image_list_price_usd": 0.0336,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "phase": "fresh",
+      "selection_index": 3,
+      "prompt_sha256": "76f8aa91d1154320043f26a6807af0b8d9d324a2ee02655d8d0578293109d6e2",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284051.415862,
+      "dispatched_at_kst": "2026-10-18T09:40:51.415867+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "phase": "fresh",
+      "selection_index": 4,
+      "prompt_sha256": "d82a6dfc9eeb429202055bce5d986f856a8e3bf3c9792a9eb71458fa8404af66",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284064.42085,
+      "dispatched_at_kst": "2026-10-18T09:41:04.420855+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "phase": "fresh",
+      "selection_index": 5,
+      "prompt_sha256": "2796da46416a7b369d627d94806fd451d4c433fbaae6f1bcae132634478e9614",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284077.425706,
+      "dispatched_at_kst": "2026-10-18T09:41:17.425711+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "phase": "fresh",
+      "selection_index": 6,
+      "prompt_sha256": "a07a79251152b8e16af5be01250cce227074aafd42386688b118e8e9c6e1b651",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284090.429309,
+      "dispatched_at_kst": "2026-10-18T09:41:30.429314+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 1,
+      "state": "measured",
+      "model": "gemini-3.1-flash-lite-image",
+      "attempts": 1,
+      "fallback_used": false,
+      "http_status": 200,
+      "successful_generated_image_list_price_usd": 0.0336,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "phase": "fresh",
+      "selection_index": 7,
+      "prompt_sha256": "6c91447b859d8d750de3b100d0c8895454eb811a594c8056e8cf74bbe1e7002f",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284103.433503,
+      "dispatched_at_kst": "2026-10-18T09:41:43.433507+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "phase": "fresh",
+      "selection_index": 8,
+      "prompt_sha256": "e3c85c53cf956799c929a0cc7c9a34e181a3cdb290ddb77f0e5445c2b8dcdd0c",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284116.438553,
+      "dispatched_at_kst": "2026-10-18T09:41:56.438556+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "phase": "fresh",
+      "selection_index": 9,
+      "prompt_sha256": "0efc20edd2c7298f34c2d535b6b9ff973c50d2b68651d7756ec390a735ea29d7",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284129.443594,
+      "dispatched_at_kst": "2026-10-18T09:42:09.443598+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "phase": "fresh",
+      "selection_index": 10,
+      "prompt_sha256": "c59f0ef7336c0a38adfe0a3415291fd4ff774046e473666e2fbfa7d471a172f8",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284142.448027,
+      "dispatched_at_kst": "2026-10-18T09:42:22.448033+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "phase": "fresh",
+      "selection_index": 11,
+      "prompt_sha256": "eb14a9b0de4d3b47db64079676afb66d84add2a24d1965e1308f85e36acaed04",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284155.4525938,
+      "dispatched_at_kst": "2026-10-18T09:42:35.452600+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 1,
+      "state": "measured",
+      "model": "gemini-3.1-flash-lite-image",
+      "attempts": 1,
+      "fallback_used": false,
+      "http_status": 200,
+      "successful_generated_image_list_price_usd": 0.0336,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "phase": "fresh",
+      "selection_index": 12,
+      "prompt_sha256": "87f9990e885a2e8a98ef26f40786f295fc72ead7f15bdce840979ef82f945d53",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284168.454195,
+      "dispatched_at_kst": "2026-10-18T09:42:48.454200+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "phase": "fresh",
+      "selection_index": 13,
+      "prompt_sha256": "a5b140b7cdae64de5e2e49f2c91585eb9c3bebd5e7503a6f7d207701e07bd1e4",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284181.460288,
+      "dispatched_at_kst": "2026-10-18T09:43:01.460293+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "phase": "fresh",
+      "selection_index": 14,
+      "prompt_sha256": "b917ca3736cc4b4f19f72dc9036243c9346a5495f4008d110e6f410d373399e4",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284194.465322,
+      "dispatched_at_kst": "2026-10-18T09:43:14.465324+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "phase": "fresh",
+      "selection_index": 15,
+      "prompt_sha256": "7597d0a97ac099ac3f7c497fa67809057a55bebcf14c3dc884bb29caaf06823a",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284207.467998,
+      "dispatched_at_kst": "2026-10-18T09:43:27.468001+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 1,
+      "state": "measured",
+      "model": "gemini-3.1-flash-lite-image",
+      "attempts": 1,
+      "fallback_used": false,
+      "http_status": 200,
+      "successful_generated_image_list_price_usd": 0.0336,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "phase": "fresh",
+      "selection_index": 16,
+      "prompt_sha256": "61f8ce62330a08b38c9332a3b443b35d931539f29538815ce09bec89acaa9cde",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284220.473025,
+      "dispatched_at_kst": "2026-10-18T09:43:40.473028+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "phase": "fresh",
+      "selection_index": 17,
+      "prompt_sha256": "b012eecff5b1347f81873f47d3d4f8e068ffa729358904ebde2ed1d1b80264ba",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284233.4779909,
+      "dispatched_at_kst": "2026-10-18T09:43:53.477996+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "phase": "fresh",
+      "selection_index": 18,
+      "prompt_sha256": "e55aff2ace31d1a2ff1f77d4f2b115cdf04b6540fb29df6db79e49329fa07741",
+      "variant": "original",
+      "endpoint": "https://preview-v3---preflight-jcgro45veq-as.a.run.app/preview",
+      "dispatch_epoch": 1792284246.480397,
+      "dispatched_at_kst": "2026-10-18T09:44:06.480402+09:00",
+      "reserved_model_calls": 3,
+      "model_calls": 3,
+      "state": "measured",
+      "model": "gemini-3.1-flash-image",
+      "attempts": 3,
+      "fallback_used": true,
+      "http_status": 503,
+      "model_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    }
+  ],
+  "created_at_kst": "2026-10-18T09:39:00.298756+09:00",
+  "known_new_model_calls": 44,
+  "unmeasured_reserved_model_calls": 0,
+  "total_image_calls_conservative": 44,
+  "new_model_calls_by_model": {
+    "gemini-3.1-flash-lite-image": 31,
+    "gemini-3.1-flash-image": 13
+  },
+  "known_calls_without_model_allocation": 0,
+  "new_attempts_at_actual_model_list_prices_usd": 1.6266,
+  "successful_generated_image_list_price_usd": 0.168,
+  "initial_attempts_list_price_bound_usd": 0.0,
+  "all_attempts_list_price_bound_usd": 1.98,
+  "price_note": "Successful cache misses use the returned actual-model price. The attempt bound charges every failed or unknown attempt at the largest listed per-image price; this is not observed billing.",
+  "updated_at_kst": "2026-10-18T09:44:09.619853+09:00"
+}

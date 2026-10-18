@@ -1,0 +1,860 @@
+{
+  "candidate_revision": "preflight-00019-kow",
+  "candidate_url": "https://preview-v3---preflight-jcgro45veq-as.a.run.app",
+  "summarized_at_kst": "2026-10-18T09:47:05.480058+09:00",
+  "method": "Independent arithmetic from preserved fresh/warm/image budget receipts and preregistered prompt file; no HTTP requests or edits to source receipts.",
+  "input_sha256": {
+    "fresh.json": "5c0aef9c8a595c8f9c5b45e86b071b2010ac10b9e643e810597109a488980912",
+    "warm.json": "6a6b70b0ae7665f70368f879c3f7ab1c76b40345ba1dfebbe616cde0889871d1",
+    "image_budget.json": "fe04148cba0d5b9ee91d22c546016e630ef5fe1af321ca260eefb4b0c1716428",
+    "fresh_prompts.txt": "703c365b0e87f69d912e234f5e1fe1789f06607aba7a45b17217599c17d909a5",
+    "candidate.json": "296f171d5fd52fd33ebcfb0a516e54c6acf46e6fdbf5d1cfa6367f9da4600d17",
+    "gate_decision.json": "26e1a116bac6dc3c58344be73e44f4b92f75d32901e33bc76375dc62c511e193"
+  },
+  "V11b": {
+    "status": "NOT_ESTABLISHED",
+    "required_cached_sample_keys": 10,
+    "cached_path_verification_requests": 0,
+    "verified_http200_hit_model_calls0": 0,
+    "verified_fraction": "0/10 measured",
+    "cached_path_success_rate": null,
+    "warm_image_requests": 0,
+    "warm_image_provider_calls": 0,
+    "warm_keys_verified": null,
+    "existing_cached_key_count": null,
+    "live_rewrite_lookups_dispatched": 3,
+    "live_rewrite_http200_count": 2,
+    "live_rewrite_http503_count": 1,
+    "unrun_rewrite_lookups": 2,
+    "reason": "Warm phase stopped at the third live /preflight lookup (HTTP503), before image generation. Cache-hit verification was not run. Zero verified keys does not establish an empty cache."
+  },
+  "V11c": {
+    "status": "FAIL",
+    "scheduled_prompts": 20,
+    "dispatched_prompts": 18,
+    "unrun_prompts": [
+      19,
+      20
+    ],
+    "http_status_counts": {
+      "200": 5,
+      "503": 13
+    },
+    "http200_image_gt10KiB": 5,
+    "required_successes": 19,
+    "success_fraction_of_scheduled": "5/20;18 dispatched,2 UNRUN",
+    "success_fraction_of_dispatched": "5/18",
+    "best_possible_successes_if_unrun_two_had_succeeded": 7,
+    "gate_cannot_pass": true,
+    "fresh_prompt_manifest_sha256": "703c365b0e87f69d912e234f5e1fe1789f06607aba7a45b17217599c17d909a5",
+    "fresh_prompt_distinct_count": 20,
+    "unexpected_cache_hits": 0,
+    "client_retries": 0
+  },
+  "V11d": {
+    "full20_gate_status": "NOT_ESTABLISHED",
+    "observed_requests": 18,
+    "unrun_latencies": 2,
+    "full20_p95_seconds": null,
+    "observed_p95_method": "nearest-rank p95 over18 dispatched calls:ceil(0.95*18)=18th sorted latency",
+    "observed_p95_seconds": 3.733115,
+    "observed_min_latency_seconds": 1.416774,
+    "observed_max_latency_seconds": 3.733115,
+    "http504_count": 0,
+    "cloud_timeout_seconds": 60.0,
+    "all18_observed_calls_returned_before_cloud_timeout": true,
+    "full20_latency_gate_pass": false,
+    "minimum_start_spacing_seconds": "13.000367",
+    "maximum_start_spacing_seconds": "13.006093",
+    "required_minimum_start_spacing_seconds": 13,
+    "all17_start_intervals_ge13_seconds": true,
+    "start_intervals_seconds": [
+      "13.0022858",
+      "13.000367",
+      "13.004988",
+      "13.004856",
+      "13.003603",
+      "13.004194",
+      "13.005050",
+      "13.005041",
+      "13.004433",
+      "13.0045668",
+      "13.0016012",
+      "13.006093",
+      "13.005034",
+      "13.002676",
+      "13.005027",
+      "13.0049659",
+      "13.0024061"
+    ]
+  },
+  "image_sizes": {
+    "successful_image_count": 5,
+    "successful_min_bytes": 139028,
+    "successful_max_bytes": 199528,
+    "required_minimum_exclusive_bytes": 10240,
+    "failed_calls_observed_image_bytes": [
+      0
+    ],
+    "unrun_image_bytes": null
+  },
+  "provider_attempts": {
+    "total_actual_model_calls": 44,
+    "model_calls_by_model": {
+      "gemini-3.1-flash-lite-image": 31,
+      "gemini-3.1-flash-image": 13
+    },
+    "provider_code_counts_by_model": {
+      "gemini-3.1-flash-lite-image": {
+        "SUCCESS_NO_ERROR_CODE": 5,
+        "429": 26
+      },
+      "gemini-3.1-flash-image": {
+        "400": 5,
+        "429": 8
+      }
+    },
+    "outcome_counts_by_model": {
+      "gemini-3.1-flash-lite-image": {
+        "success": 5,
+        "retryable_error": 26
+      },
+      "gemini-3.1-flash-image": {
+        "terminal_error": 5,
+        "retryable_error": 8
+      }
+    },
+    "failed_http_request_model_calls": 39,
+    "successful_http_request_model_calls": 5,
+    "unknown_model_call_rows": 0,
+    "inference_limit": "Provider codes are copied from returned per-attempt metadata. The HTTP400INVALID_ARGUMENT cause is not diagnosed by these receipts."
+  },
+  "V11f": {
+    "status": "PASS_CALL_CAP",
+    "budget_date_kst": "2026-10-18",
+    "prior_today_image_calls": 0,
+    "actual_image_calls_today": 44,
+    "cap": 45,
+    "remaining_unspent_call_capacity": 1,
+    "next_miss_required_reservation": 3,
+    "next_miss_would_reach": 47,
+    "successful_generated_image_output_list_price_usd": 0.168,
+    "all_actual_attempts_at_each_models_image_list_price_equivalent_usd": 1.6266,
+    "all_actual_attempts_at_maximum_image_list_price_bound_usd": 1.98,
+    "price_basis_usd_per_image": {
+      "gemini-3.1-flash-lite-image": 0.0336,
+      "gemini-3.1-flash-image": 0.045
+    },
+    "price_scope": "Successful-output list price is0.168USD, excluding text input. Attempt equivalents apply image list prices to every success/error attempt and are accounting bounds, not observed billing. Failed attempts do not establish billable image outputs. No billing-console spend is inferred.",
+    "actual_billed_spend_usd": null
+  },
+  "promotion": {
+    "preview_on_promoted": false,
+    "required_action": "Fail rule:ship only busy-copy change with preview false; retain candidate evidence.",
+    "candidate_failure_status": "V11cFAIL;V11b and full20V11d not established"
+  },
+  "fresh_log": [
+    {
+      "index": 1,
+      "prompt": "a cat and a dog sitting beside a cobalt watering can on a marigold rug, in an October eighteenth morning still-life study.",
+      "execution_status": "RUN",
+      "http_status": 200,
+      "attempts": 1,
+      "model_calls": 1,
+      "fallback_used": false,
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "latency_seconds": 3.733115,
+      "image_bytes": 191413,
+      "image_gt10KiB": true,
+      "cache": "miss",
+      "dispatched_at_kst": "2026-10-18T09:40:25.413209+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "prompt": "a spoon and a laptop on a pale oak table beside a coral linen napkin, in an October eighteenth morning still-life study.",
+      "execution_status": "RUN",
+      "http_status": 200,
+      "attempts": 1,
+      "model_calls": 1,
+      "fallback_used": false,
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "latency_seconds": 3.161213,
+      "image_bytes": 156123,
+      "image_gt10KiB": true,
+      "cache": "miss",
+      "dispatched_at_kst": "2026-10-18T09:40:38.415523+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "prompt": "a bicycle and a car parked by a sage garden gate with three terracotta pots, in an October eighteenth morning still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 3.314822,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:40:51.415867+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "prompt": "indoor gymnasium with folded teal mats beneath a sunlit east window, in an October eighteenth morning still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 2.537088,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:41:04.420855+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "prompt": "a purple clock on a cream wall above a narrow walnut shelf and an empty vase, in an October eighteenth morning still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 3.023913,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:41:17.425711+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "prompt": "a cat and a dog resting near a mustard armchair and a round woven basket, in an October eighteenth noon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 200,
+      "attempts": 1,
+      "model_calls": 1,
+      "fallback_used": false,
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "latency_seconds": 3.364628,
+      "image_bytes": 198695,
+      "image_gt10KiB": true,
+      "cache": "miss",
+      "dispatched_at_kst": "2026-10-18T09:41:30.429314+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "prompt": "a spoon and a laptop on a granite counter beside a folded plum kitchen towel, in an October eighteenth noon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 2.67861,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:41:43.433507+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "prompt": "a bicycle and a car beside a white brick courtyard wall with a blue wooden bench, in an October eighteenth noon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 1.416774,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:41:56.438556+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "prompt": "indoor gymnasium with a red basketball on the polished floor beside stacked wooden benches, in an October eighteenth noon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 2.057424,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:42:09.443598+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "prompt": "a purple clock above a mint cabinet beside a framed drawing of a single leaf, in an October eighteenth noon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 2.893309,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:42:22.448033+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "prompt": "a cat and a dog beside a low cedar table beneath a softly shaded balcony window, in an October eighteenth afternoon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 200,
+      "attempts": 1,
+      "model_calls": 1,
+      "fallback_used": false,
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "latency_seconds": 3.465277,
+      "image_bytes": 199528,
+      "image_gt10KiB": true,
+      "cache": "miss",
+      "dispatched_at_kst": "2026-10-18T09:42:35.452600+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "prompt": "a spoon and a laptop beside an amber glass cup on a charcoal felt desk mat, in an October eighteenth afternoon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 2.156369,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:42:48.454200+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "prompt": "a bicycle and a car on a quiet gravel drive beside a tall copper planter, in an October eighteenth afternoon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 3.079768,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:43:01.460293+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "prompt": "indoor gymnasium with yellow floor markings and an empty blue equipment trolley, in an October eighteenth afternoon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 2.117242,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:43:14.465324+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "prompt": "a purple clock beside a small paper calendar on a dusty rose studio wall, in an October eighteenth afternoon still-life study.",
+      "execution_status": "RUN",
+      "http_status": 200,
+      "attempts": 1,
+      "model_calls": 1,
+      "fallback_used": false,
+      "model": "gemini-3.1-flash-lite-image",
+      "size": "1K",
+      "latency_seconds": 3.350497,
+      "image_bytes": 139028,
+      "image_gt10KiB": true,
+      "cache": "miss",
+      "dispatched_at_kst": "2026-10-18T09:43:27.468001+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "success"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "prompt": "a cat and a dog on an olive blanket beside a closed wicker picnic hamper, in an October eighteenth evening still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 1.874506,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:43:40.473028+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "prompt": "a spoon and a laptop beside a neatly rolled indigo scarf on a birch workbench, in an October eighteenth evening still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 3.603483,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:43:53.477996+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "terminal_error",
+          "code": 400,
+          "status": "INVALID_ARGUMENT"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "prompt": "a bicycle and a car beneath a simple wooden shelter beside a silver rain barrel, in an October eighteenth evening still-life study.",
+      "execution_status": "RUN",
+      "http_status": 503,
+      "attempts": 3,
+      "model_calls": 3,
+      "fallback_used": true,
+      "model": "gemini-3.1-flash-image",
+      "size": "0.5K",
+      "latency_seconds": 3.133909,
+      "image_bytes": 0,
+      "image_gt10KiB": false,
+      "cache": null,
+      "dispatched_at_kst": "2026-10-18T09:44:06.480402+09:00",
+      "provider_attempts": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 1,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "attempt": 2,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "attempt": 3,
+          "outcome": "retryable_error",
+          "code": 429,
+          "status": "RESOURCE_EXHAUSTED"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "prompt": "indoor gymnasium with a folded green divider curtain beside a row of empty grey chairs, in an October eighteenth evening still-life study.",
+      "execution_status": "UNRUN",
+      "http_status": null,
+      "attempts": null,
+      "model_calls": null,
+      "fallback_used": null,
+      "model": null,
+      "size": null,
+      "latency_seconds": null,
+      "image_bytes": null,
+      "image_gt10KiB": null,
+      "cache": null,
+      "dispatched_at_kst": null,
+      "provider_attempts": null,
+      "unrun_reason": "44 actual image attempts left one call under the45-call cap; the required worst-case three-call reservation would reach47, so the request was not dispatched. No retry or replacement prompt."
+    },
+    {
+      "index": 20,
+      "prompt": "a purple clock above a lavender sideboard with one small ceramic pear, in an October eighteenth evening still-life study.",
+      "execution_status": "UNRUN",
+      "http_status": null,
+      "attempts": null,
+      "model_calls": null,
+      "fallback_used": null,
+      "model": null,
+      "size": null,
+      "latency_seconds": null,
+      "image_bytes": null,
+      "image_gt10KiB": null,
+      "cache": null,
+      "dispatched_at_kst": null,
+      "provider_attempts": null,
+      "unrun_reason": "44 actual image attempts left one call under the45-call cap; the required worst-case three-call reservation would reach47, so the request was not dispatched. No retry or replacement prompt."
+    }
+  ]
+}

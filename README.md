@@ -20,11 +20,11 @@ These are individual user reports and a provider policy, not measured savings fr
 
 ## What Preflight does
 
-Historical risk (free to try) → reason → rewrite kept only if estimated risk drops → still preview (built, disabled in this build) → clip review as a second pair of eyes.
+Historical risk (free to try) → reason → rewrite kept only if estimated risk drops → still preview (temporarily disabled) → clip review as a second pair of eyes.
 
 Paste a prompt to see a historical risk signal and five nearby prompts from 1,911 human pairwise votes in GenAI-Bench. Gemini proposes a rewrite; Preflight presents it only when its estimated risk is strictly lower. Upload a clip you already have for a separate Gemini review with inspectable timecodes. Original human votes stay separate from machine feedback.
 
-The still preview is built but disabled after 9/10 original/rewrite fixtures succeeded. It would use an image model, not a Veo frame: it cannot judge motion, flicker or timing. The output-only list price is $0.0336 per 1K image (about $0.03, excluding text input), checked on 2026-10-17. [Test receipts](reports/preview_live.json), [spaced follow-up](reports/preview_spaced_samples.json), [pricing/status receipt](reports/track_cd_primary_status.json), [Google pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing).
+The still preview is temporarily disabled after the 2026-10-18 reliability gate failed. Its control explains: “Preview is busy right now — try again in a minute. The risk check still works.” Prompt checks and upload-based clip review remain available. A still comes from an image model and cannot judge motion, flicker or timing. [Current release and gate results](reports/preview_v3/REPORT.md). The earlier 2026-10-17 measurements and image-price evidence remain in the [dated test receipts](reports/preview_live.json), [spaced follow-up](reports/preview_spaced_samples.json) and [pricing/status receipt](reports/track_cd_primary_status.json).
 
 ## Google Cloud services
 
@@ -36,7 +36,7 @@ The still preview is built but disabled after 9/10 original/rewrite fixtures suc
 | Google ADK 2.12 | Runs the tool workflow and checks rewrite candidates against the risk estimate | live |
 | Agent Platform Sessions | Persists anonymous rewrite-session history | live |
 | Gemini video understanding | Reviews uploaded clips and sampled frames with timecodes | live |
-| Gemini 3.1 Flash Lite Image | Generates a still preview using `gemini-3.1-flash-lite-image` | built-disabled |
+| Gemini 3.1 Flash Lite Image | Still-image preview using `gemini-3.1-flash-lite-image` | temporarily disabled; reliability gate failed |
 | Secret Manager | Holds a key from an earlier API-key setup; production requests use Vertex ADC instead | not used by live requests |
 
 **Not used:** Veo (0 calls), Agent Engine runtime hosting, BigQuery. Managed Agent Platform Sessions is used for sessions; the agent itself runs in the Cloud Run application. [Runtime status receipt](reports/track_cd_primary_status.json), [implementation and deployment receipts](COMPLETION_REPORT.md).
@@ -54,7 +54,7 @@ Cloud Run / FastAPI
   |     |-- Agent Platform Sessions
   |     `-- Keep only a lower estimated-risk rewrite
   |-- Gemini video understanding: uploaded clip
-  `-- Gemini image model: still preview (disabled)
+  `-- Gemini image model: still preview (temporarily disabled)
 ```
 
 The [live architecture page](https://preflight-jcgro45veq-as.a.run.app/architecture) reads current service flags from `/api/status`.
@@ -64,7 +64,7 @@ The [live architecture page](https://preflight-jcgro45veq-as.a.run.app/architect
 - The held-out risk AUC is **0.67** (five-seed mean 0.668329, below the 0.68 target). This is a historical signal, not a calibrated probability for today's video models. [Evaluation](artifacts/evaluation.json).
 - Clip-review accuracy is **unmeasured**. No confirmed-defect reference set was established; a working review endpoint and a machine verdict do not establish accuracy. [Reference limits](COMPLETION_REPORT.md).
 - Retrieval covers the dataset's **English vocabulary only**. No vocabulary overlap produces unavailable risk rather than an invented score. [Predictor](preflight_core/engine.py).
-- The still preview succeeded on **9/10** distinct test fixtures and is **disabled for that reason**. [Receipts](reports/preview_live.json), [follow-up](reports/preview_spaced_samples.json).
+- The still preview is **temporarily disabled** after the 2026-10-18 reliability gate failed. [Current gate results](reports/preview_v3/REPORT.md). The earlier 9/10-fixture result is retained in the [2026-10-17 receipts](reports/preview_live.json) and [follow-up](reports/preview_spaced_samples.json).
 - A lower rewrite estimate does not establish better generated-video quality, money saved, or current-model routing performance. Machine feedback can make the displayed risk a mixed, unvalidated heuristic proxy.
 
 ## Try it in 30 seconds

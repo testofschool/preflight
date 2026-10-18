@@ -1,0 +1,226 @@
+"""Bounded still-image generation with explicit retry and runtime fallback."""
+
+import asyncio
+from dataclasses import dataclass, field
+import io
+import os
+import random
+from time import monotonic
+
+CAPTION = "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still."
+PRICING_SOURCE = "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+CHECKED_DATE = "2026-10-17"
+PRIMARY = "gemini-3.1-flash-lite-image"
+FALLBACK = "gemini-3.1-flash-image"
+PRICES = {(PRIMARY, "1K"): 0.0336, (FALLBACK, "0.5K"): 0.045}
+# Public size/cache/pricing labels differ from the provider's resolution enum.
+WIRE_IMAGE_SIZES = {"1K": "1K", "0.5K": "512"}
+BLOCKED_REASONS = {"SAFETY", "BLOCKLIST", "PROHIBITED_CONTENT", "SPII", "RECITATION",
+                   "IMAGE_SAFETY", "IMAGE_PROHIBITED_CONTENT"}
+
+
+def image_settings():
+    primary = os.environ.get("PREFLIGHT_IMAGE_MODEL", PRIMARY)
+    # Retain the existing static selection for deployments with an unserved primary.
+    fallback = os.environ.get("PREFLIGHT_IMAGE_PRIMARY_UNSERVED") == "true"
+    model = os.environ.get("PREFLIGHT_IMAGE_MODEL_FALLBACK", FALLBACK) if fallback else primary
+    size = "0.5K" if model == FALLBACK else "1K"
+    if (model, size) not in PRICES:
+        raise ValueError("Image model has no verified pricing")
+    return model, size
+
+
+def image_pricing():
+    model, size = image_settings()
+    # Vertex lists $30/M image tokens x 1120 = $0.0336 (rounded $0.034).
+    # The fallback's 747 tokens x $60/M = $0.04482 (listed $0.045).
+    return {"model": model, "size": size, "usd_per_image": PRICES[model, size],
+            "source": PRICING_SOURCE, "checked_date": CHECKED_DATE}
+
+
+@dataclass(frozen=True)
+class PreviewResult:
+    jpeg: bytes
+    model: str
+    size: str
+    cost_usd: float
+    attempts: int
+    fallback_used: bool
+    model_attempts: list = field(default_factory=list)
+
+    @property
+    def model_calls(self):
+        return self.attempts
+
+
+class PreviewGenerationError(Exception):
+    """Only bounded, non-sensitive generation metadata may reach the route."""
+
+    def __init__(self, *, attempts, model, fallback_used, reason="provider", model_attempts=None):
+        super().__init__("Image preview generation failed")
+        self.attempts = attempts
+        self.model = model
+        self.fallback_used = fallback_used
+        self.reason = reason
+        self.model_attempts = model_attempts or []
+
+    @property
+    def model_calls(self):
+        return self.attempts
+
+
+@dataclass
+class _Progress:
+    attempts: int
+    model: str
+    fallback_used: bool
+    model_attempts: list = field(default_factory=list)
+
+
+def _enum_name(value):
+    return str(getattr(value, "name", value) or "").rsplit(".", 1)[-1].upper()
+
+
+def _retryable(error):
+    # Match structured provider status fields only, never its message text.
+    from httpx import TimeoutException
+    if isinstance(error, (asyncio.TimeoutError, TimeoutException)):
+        return True
+    status = _enum_name(getattr(error, "status", None))
+    if status in BLOCKED_REASONS:
+        return False
+    code = getattr(error, "code", None)
+    if callable(code):
+        code = code()
+    if isinstance(code, int) and 400 <= code < 500 and code != 429:
+        return False
+    return code in (429, 503) or status in ("UNAVAILABLE", "RESOURCE_EXHAUSTED") or (
+        _enum_name(code) in ("UNAVAILABLE", "RESOURCE_EXHAUSTED"))
+
+
+def _error_metadata(error):
+    code = getattr(error, "code", None)
+    status = _enum_name(getattr(error, "status", None))
+    # Do not copy provider detail/message text or arbitrary status strings.
+    result = {"code": code} if isinstance(code, int) and 100 <= code <= 599 else {}
+    if status in BLOCKED_REASONS | {"UNAVAILABLE", "RESOURCE_EXHAUSTED", "INVALID_ARGUMENT",
+                                   "PERMISSION_DENIED", "UNAUTHENTICATED", "INTERNAL",
+                                   "FAILED_PRECONDITION", "NOT_FOUND"}:
+        result["status"] = status
+    return result
+
+
+def _jpeg(response):
+    from PIL import Image
+    feedback = getattr(response, "prompt_feedback", None)
+    block_reason = _enum_name(getattr(feedback, "block_reason", None))
+    if block_reason not in ("", "0", "BLOCKED_REASON_UNSPECIFIED", "BLOCK_REASON_UNSPECIFIED"):
+        raise ValueError("blocked")
+    candidates = getattr(response, "candidates", None) or []
+    for candidate in candidates:
+        finish = _enum_name(getattr(candidate, "finish_reason", None))
+        if finish in BLOCKED_REASONS:
+            raise ValueError("blocked")
+    for candidate in candidates:
+        content = getattr(candidate, "content", None)
+        for part in getattr(content, "parts", None) or []:
+            data = getattr(part, "inline_data", None)
+            if data and data.mime_type and data.mime_type.startswith("image/") and data.data:
+                with Image.open(io.BytesIO(data.data)) as source:
+                    output = io.BytesIO()
+                    source.convert("RGB").save(output, format="JPEG", quality=82)
+                    return output.getvalue()
+    raise ValueError("no_image")
+
+
+class ImagePreviewService:
+    def __init__(self, *, client=None, attempt_timeout=13.0, fallback_timeout=16.0,
+                 overall_timeout=42.0, sleep=asyncio.sleep, uniform=random.uniform,
+                 clock=monotonic):
+        from google.genai import types
+        self.model, self.size = image_settings()
+        self.cache_models = [(self.model, self.size)]
+        if self.model != FALLBACK:
+            self.cache_models.append((FALLBACK, "0.5K"))
+        if min(attempt_timeout, fallback_timeout, overall_timeout) <= 0:
+            raise ValueError("Image timeouts must be positive")
+        self.attempt_timeout = attempt_timeout
+        self.fallback_timeout = fallback_timeout
+        self.overall_timeout = overall_timeout
+        self.sleep, self.uniform, self.clock = sleep, uniform, clock
+        if client is None:
+            from google import genai
+            project = os.environ.get("GOOGLE_CLOUD_PROJECT")
+            location = (os.environ.get("PREFLIGHT_IMAGE_LOCATION") or
+                        os.environ.get("PREFLIGHT_GEMINI_LOCATION") or os.environ.get("GOOGLE_CLOUD_LOCATION"))
+            if not project or not location:
+                raise ValueError("Vertex image location is unavailable")
+            client = genai.Client(vertexai=True, project=project, location=location,
+                http_options=types.HttpOptions(timeout=round(max(attempt_timeout, fallback_timeout) * 1000),
+                    retry_options=types.HttpRetryOptions(attempts=1)))
+        self.client = client
+
+    def _failure(self, progress, reason="provider"):
+        return PreviewGenerationError(attempts=progress.attempts, model=progress.model,
+            fallback_used=progress.fallback_used, reason=reason,
+            model_attempts=progress.model_attempts)
+
+    async def generate(self, prompt, *, deadline=None):
+        progress = _Progress(0, self.model, self.model == FALLBACK)
+        started = self.clock()
+        deadline = min(started + self.overall_timeout,
+                       deadline if deadline is not None else started + self.overall_timeout)
+        if deadline <= started:
+            raise self._failure(progress, "timeout")
+        try:
+            return await asyncio.wait_for(self._generate(prompt, progress, deadline), deadline - started)
+        except asyncio.TimeoutError:
+            raise self._failure(progress, "timeout") from None
+
+    async def _generate(self, prompt, progress, deadline):
+        from google.genai import types
+        plan = [(self.model, self.size, self.attempt_timeout)] * 2
+        if self.model != FALLBACK:
+            plan.append((FALLBACK, "0.5K", self.fallback_timeout))
+        for index, (model, size, limit) in enumerate(plan):
+            remaining = deadline - self.clock()
+            if remaining <= 0:
+                raise self._failure(progress, "timeout")
+            timeout = min(limit, remaining)
+            progress.attempts += 1
+            progress.model, progress.fallback_used = model, model == FALLBACK
+            attempt = {"model": model, "size": size, "attempt": progress.attempts, "outcome": "timeout"}
+            progress.model_attempts.append(attempt)
+            try:
+                response = await asyncio.wait_for(self.client.aio.models.generate_content(
+                    model=model, contents=prompt,
+                    config=types.GenerateContentConfig(response_modalities=["IMAGE"], candidate_count=1,
+                        http_options=types.HttpOptions(timeout=max(1, round(timeout * 1000)),
+                            retry_options=types.HttpRetryOptions(attempts=1)),
+                        image_config=types.ImageConfig(aspect_ratio="16:9", image_size=WIRE_IMAGE_SIZES[size]))), timeout)
+            except Exception as error:
+                retryable = _retryable(error)
+                attempt.update(_error_metadata(error))
+                attempt["outcome"] = ("timeout" if isinstance(error, asyncio.TimeoutError)
+                                      else "retryable_error" if retryable else "terminal_error")
+                if not retryable or index == len(plan) - 1:
+                    raise self._failure(progress, "timeout" if isinstance(error, asyncio.TimeoutError)
+                                        else "provider") from None
+                remaining = deadline - self.clock()
+                delay = self.uniform(0, 2 ** index)
+                if remaining <= delay:
+                    raise self._failure(progress, "timeout") from None
+                await self.sleep(delay)
+                continue
+            try:
+                jpeg = await asyncio.to_thread(_jpeg, response)
+            except Exception as error:
+                reason = str(error) if str(error) in ("blocked", "no_image") else "invalid_image"
+                attempt["outcome"] = "terminal_error"
+                raise self._failure(progress, reason) from None
+            if self.clock() >= deadline:
+                raise self._failure(progress, "timeout")
+            attempt["outcome"] = "success"
+            return PreviewResult(jpeg=jpeg, model=model, size=size, cost_usd=PRICES[model, size],
+                                 attempts=progress.attempts, fallback_used=progress.fallback_used,
+                                 model_attempts=progress.model_attempts)

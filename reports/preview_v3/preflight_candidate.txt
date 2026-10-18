@@ -1,0 +1,3 @@
+validation_cold | a cat and a dog | HTTP 200 | 22.437944s
+validation_warm | a cat and a dog | HTTP 200 | 4.482678s
+validation_warm | a spoon and a laptop | HTTP 503 | 0.861365s

@@ -1,0 +1,39 @@
+original_unit_baseline
+...........................                                              [100%]
+=============================== warnings summary ===============================
+../../../../../../../Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /dev/.pytest_cache/v/cache/nodeids: [Errno 1] Operation not permitted: '/dev/pytest-cache-files-8ssri70e'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+27 passed, 1 warning in 3.15s
+
+
+corrected_isolated_unit_suite
+.............................                                            [100%]
+=============================== warnings summary ===============================
+../../../../../../../Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /dev/.pytest_cache/v/cache/nodeids: [Errno 1] Operation not permitted: '/dev/pytest-cache-files-xuvoke9s'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+29 passed, 1 warning in 1.96s
+
+
+regression_probe_original_source_with_corrected_tests
+..........F................FF                                            [100%]
+=============================== warnings summary ===============================
+../../../../../../../Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /dev/.pytest_cache/v/cache/nodeids: [Errno 1] Operation not permitted: '/dev/pytest-cache-files-29tcu784'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../../../../../../Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /dev/.pytest_cache/v/cache/lastfailed: [Errno 1] Operation not permitted: '/dev/pytest-cache-files-phro0bla'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../../dev::test_fallback_after_two_retryable_primary_failures_reports_actual_model
+FAILED ../../../../../../../dev::test_fallback_wire_resolution_512_keeps_public_size_cache_and_price
+FAILED ../../../../../../../dev::test_static_fallback_wire_resolution_512_on_its_first_call
+3 failed, 26 passed, 2 warnings in 2.14s

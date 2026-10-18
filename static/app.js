@@ -210,6 +210,12 @@
     if (action.disabled) action.title = "Preview is busy right now — try again in a minute. The risk check still works.";
     const output = document.createElement("div");
     output.setAttribute("aria-live", "polite");
+    if (action.disabled) {
+      const message = document.createElement("p");
+      message.className = "subtle-copy";
+      message.textContent = action.title;
+      output.append(message);
+    }
     let busy = false;
     let retryAt = 0;
     let originalLink = null;

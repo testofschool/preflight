@@ -1,0 +1,8 @@
+{
+  "build_id": "8cd5331f-e85a-4202-9372-605d566d5abd",
+  "input_sha256": "1b99c7434a7a6a8f6c2bdf7c05fdcc49fc114e5b84c38dea9f48364fbe8226a5",
+  "region": "asia-southeast1",
+  "status": "SUCCESS",
+  "image_tag": "asia-southeast1-docker.pkg.dev/[PROJECT]/preflight/app:1b99c7434a7a6a8f6c2b",
+  "superseded_reason": "Added the requested disabled preview busy copy as visible result text, beyond its tooltip; this image was not deployed."
+}

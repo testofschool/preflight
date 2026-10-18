@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "phase": "warm",
+  "url": "https://preview-v3---preflight-jcgro45veq-as.a.run.app",
+  "created_at_kst": "2026-10-18T09:39:00.299281+09:00",
+  "fresh_prompts_sha256": "703c365b0e87f69d912e234f5e1fe1789f06607aba7a45b17217599c17d909a5",
+  "fresh_prompts_preregistered_mtime_ns": 1792283599225054736,
+  "request_policy": "one dispatch per row; no HTTP retries; starts spaced at least13s; unknown outcomes consume three calls",
+  "cloud_timeout_seconds": 60.0,
+  "rows": [],
+  "complete": false,
+  "selection_rewrites": [
+    {
+      "sample_prompt": "a cat and a dog",
+      "http_status": 200,
+      "latency_seconds": 26.967215,
+      "supported": true,
+      "rewritten_prompt": "A playful puppy and a calm kitten interacting gently on a wooden floor, captured in a clear, brightly lit close-up shot.",
+      "rewrite_status": "improved",
+      "p_fail_before": 0.30666666666666664,
+      "p_fail_after": 0.2635294117647059
+    },
+    {
+      "sample_prompt": "a spoon and a laptop",
+      "http_status": 200,
+      "latency_seconds": 4.7406,
+      "supported": true,
+      "rewritten_prompt": "A silver metal spoon resting on a wooden desk right next to an open, glowing laptop, static shot.",
+      "rewrite_status": "improved",
+      "p_fail_before": 0.4678787878787878,
+      "p_fail_after": 0.3133333333333333
+    },
+    {
+      "sample_prompt": "a bicycle and a car",
+      "http_status": 503,
+      "latency_seconds": 0.741948,
+      "supported": null,
+      "rewritten_prompt": null,
+      "rewrite_status": null,
+      "p_fail_before": null,
+      "p_fail_after": null
+    }
+  ]
+}

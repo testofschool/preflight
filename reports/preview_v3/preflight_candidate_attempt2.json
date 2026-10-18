@@ -1,0 +1,131 @@
+{
+  "url": "https://preview-v3---preflight-jcgro45veq-as.a.run.app",
+  "created_at_kst": "2026-10-18T09:41:08.480880+09:00",
+  "method": "One bounded repeat, six scheduled serial requests, starts spaced >=13s, no retries; cookies/session used internally only",
+  "initial_attempt_preserved": "reports/preview_v3/preflight_candidate.json",
+  "prompts": [
+    "a cat and a dog",
+    "a cat and a dog",
+    "a spoon and a laptop",
+    "a bicycle and a car",
+    "indoor gymnasium",
+    "a purple clock"
+  ],
+  "minimum_start_spacing_seconds": 13,
+  "requests": [
+    {
+      "call": 1,
+      "phase": "cold",
+      "prompt": "a cat and a dog",
+      "started_at_kst": "2026-10-18T09:41:08.500526+09:00",
+      "start_offset_seconds": 0.02,
+      "start_spacing_seconds": null,
+      "json_response": true,
+      "http_status": 200,
+      "latency_seconds": 4.843,
+      "x_preflight_error": null,
+      "workflow": {
+        "mode": "cloud",
+        "tool_call_count": 6,
+        "session_verified": true
+      },
+      "valid_connected_response": true
+    },
+    {
+      "call": 2,
+      "phase": "warm",
+      "prompt": "a cat and a dog",
+      "started_at_kst": "2026-10-18T09:41:21.502133+09:00",
+      "start_offset_seconds": 13.02,
+      "start_spacing_seconds": 13.001,
+      "json_response": true,
+      "http_status": 200,
+      "latency_seconds": 4.558,
+      "x_preflight_error": null,
+      "workflow": {
+        "mode": "cloud",
+        "tool_call_count": 6,
+        "session_verified": true
+      },
+      "valid_connected_response": true
+    },
+    {
+      "call": 3,
+      "phase": "warm",
+      "prompt": "a spoon and a laptop",
+      "started_at_kst": "2026-10-18T09:41:34.506306+09:00",
+      "start_offset_seconds": 26.024,
+      "start_spacing_seconds": 13.004,
+      "json_response": true,
+      "http_status": 200,
+      "latency_seconds": 16.031,
+      "x_preflight_error": null,
+      "workflow": {
+        "mode": "cloud",
+        "tool_call_count": 6,
+        "session_verified": true
+      },
+      "valid_connected_response": true
+    },
+    {
+      "call": 4,
+      "phase": "warm",
+      "prompt": "a bicycle and a car",
+      "started_at_kst": "2026-10-18T09:41:50.538920+09:00",
+      "start_offset_seconds": 42.057,
+      "start_spacing_seconds": 16.033,
+      "json_response": true,
+      "http_status": 200,
+      "latency_seconds": 5.56,
+      "x_preflight_error": null,
+      "workflow": {
+        "mode": "cloud",
+        "tool_call_count": 6,
+        "session_verified": true
+      },
+      "valid_connected_response": true
+    },
+    {
+      "call": 5,
+      "phase": "warm",
+      "prompt": "indoor gymnasium",
+      "started_at_kst": "2026-10-18T09:42:03.539607+09:00",
+      "start_offset_seconds": 55.057,
+      "start_spacing_seconds": 13.001,
+      "json_response": true,
+      "http_status": 200,
+      "latency_seconds": 4.556,
+      "x_preflight_error": null,
+      "workflow": {
+        "mode": "cloud",
+        "tool_call_count": 6,
+        "session_verified": true
+      },
+      "valid_connected_response": true
+    },
+    {
+      "call": 6,
+      "phase": "warm",
+      "prompt": "a purple clock",
+      "started_at_kst": "2026-10-18T09:42:16.544620+09:00",
+      "start_offset_seconds": 68.063,
+      "start_spacing_seconds": 13.005,
+      "json_response": true,
+      "http_status": 200,
+      "latency_seconds": 4.636,
+      "x_preflight_error": null,
+      "workflow": {
+        "mode": "cloud",
+        "tool_call_count": 6,
+        "session_verified": true
+      },
+      "valid_connected_response": true
+    }
+  ],
+  "complete": true,
+  "pass": true,
+  "http_200_count": 6,
+  "valid_workflow_count": 6,
+  "start_spacing_pass": true,
+  "ended_at_kst": "2026-10-18T09:42:21.182660+09:00"
+}

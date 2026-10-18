@@ -1,0 +1,16 @@
+{
+  "description_chars": 915,
+  "description_max_chars": 1024,
+  "description_within_limit": true,
+  "video_placeholder_remaining": true,
+  "preview_current_status": "temporarily disabled after2026-10-18 reliability gate failed",
+  "current_preview_evidence": "reports/preview_v3/REPORT.md",
+  "pending_report_link_targets": [
+    "reports/preview_v3/REPORT.md"
+  ],
+  "missing_other_relative_links": [],
+  "readme_sha256": "d187e589fb88ebcb34b94cbc96f3fc48a75478ce9039a51d615846510e575a36",
+  "submission_notes_sha256": "04377c443fde88e71489fe2d7badcb72bcac8ac89b91facfe699d8b8b27912fb",
+  "live_preview_retry_fallback_claimed": false,
+  "historical_dated_receipts_retained": true
+}

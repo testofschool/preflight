@@ -130,7 +130,7 @@ def test_fallback_after_two_retryable_primary_failures_reports_actual_model():
     provider, models = service([unavailable(), unavailable(), image_response()], timing=timing)
     result = run(provider)
     assert [call["model"] for call in models.calls] == [PRIMARY, PRIMARY, FALLBACK]
-    assert [call["config"].image_config.image_size for call in models.calls] == ["1K", "1K", "0.5K"]
+    assert [call["config"].image_config.image_size for call in models.calls] == ["1K", "1K", "512"]
     assert (result.model, result.size, result.cost_usd) == (FALLBACK, "0.5K", 0.045)
     assert result.attempts == result.model_calls == 3
     assert result.fallback_used is True
@@ -288,3 +288,40 @@ def test_external_cancellation_propagates_without_retry():
             await task
         assert len(models.calls) == 1
     asyncio.run(scenario())
+
+
+class WireCheckingModels(FakeModels):
+    """A local provider-contract fake rejects conceptual labels on the wire."""
+
+    async def generate_content(self, **kwargs):
+        actual = kwargs["config"].image_config.image_size
+        expected = "512" if kwargs["model"] == FALLBACK else "1K"
+        if actual != expected:
+            self.calls.append(kwargs)
+            raise errors.ClientError(400, {"error": {"status": "INVALID_ARGUMENT",
+                "message": "The local provider contract rejects this image_size"}})
+        return await super().generate_content(**kwargs)
+
+
+def test_fallback_wire_resolution_512_keeps_public_size_cache_and_price():
+    provider, original_models = service([unavailable(), unavailable(), image_response()])
+    models = WireCheckingModels(original_models.outcomes)
+    provider.client.aio.models = models
+    result = run(provider)
+    assert [call["config"].image_config.image_size for call in models.calls] == ["1K", "1K", "512"]
+    assert (result.model, result.size, result.cost_usd) == (FALLBACK, "0.5K", 0.045)
+    assert result.model_attempts[-1]["size"] == "0.5K"
+    assert provider.cache_models == [(PRIMARY, "1K"), (FALLBACK, "0.5K")]
+    assert result.attempts == 3 and result.fallback_used is True
+
+
+def test_static_fallback_wire_resolution_512_on_its_first_call(monkeypatch):
+    monkeypatch.setenv("PREFLIGHT_IMAGE_PRIMARY_UNSERVED", "true")
+    provider, original_models = service([image_response()])
+    models = WireCheckingModels(original_models.outcomes)
+    provider.client.aio.models = models
+    result = run(provider)
+    assert len(models.calls) == 1
+    assert models.calls[0]["config"].image_config.image_size == "512"
+    assert (result.size, result.cost_usd, result.attempts) == ("0.5K", 0.045, 1)
+    assert provider.cache_models == [(FALLBACK, "0.5K")]

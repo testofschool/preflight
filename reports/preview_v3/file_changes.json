@@ -1,0 +1,899 @@
+{
+  "base_commit": "be67f075d75abdb76c3305404e6076d0949594d7",
+  "measured_at_kst": "2026-10-18T09:45:18.390259+09:00",
+  "scope": "Final active source, root documentation, docs, tests, scripts, Docker/dependency/release/build configuration and exact runtime COPY inputs. reports/ and demo output artifacts are excluded.",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 116,
+      "after_bytes": 116,
+      "byte_delta": 0,
+      "before_sha256": "220bd4be453f679bfa94794c38980077cedf26905cf94cbc3ec4b68abc1c9560",
+      "after_sha256": "220bd4be453f679bfa94794c38980077cedf26905cf94cbc3ec4b68abc1c9560",
+      "changed": false
+    },
+    {
+      "path": ".gcloudignore",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 280,
+      "after_bytes": 280,
+      "byte_delta": 0,
+      "before_sha256": "08e8e5ce69a393ec9dc6771b5176a6f8292c995b07b844043ffed5f63767b2df",
+      "after_sha256": "08e8e5ce69a393ec9dc6771b5176a6f8292c995b07b844043ffed5f63767b2df",
+      "changed": false
+    },
+    {
+      "path": ".gitignore",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 181,
+      "after_bytes": 181,
+      "byte_delta": 0,
+      "before_sha256": "b7c74a79a118232cdac0277038133bf409f40f507a376773dcd9d0a7d12dbea7",
+      "after_sha256": "b7c74a79a118232cdac0277038133bf409f40f507a376773dcd9d0a7d12dbea7",
+      "changed": false
+    },
+    {
+      "path": "COMPLETION_REPORT.md",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 39728,
+      "after_bytes": 39728,
+      "byte_delta": 0,
+      "before_sha256": "075d197a24932c12794ef5aee7279c93b9c46cd0120dcf3fceaaf46b4261e94d",
+      "after_sha256": "075d197a24932c12794ef5aee7279c93b9c46cd0120dcf3fceaaf46b4261e94d",
+      "changed": false
+    },
+    {
+      "path": "Dockerfile",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 787,
+      "after_bytes": 787,
+      "byte_delta": 0,
+      "before_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "after_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "changed": false
+    },
+    {
+      "path": "NOTICE.md",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 1128,
+      "after_bytes": 1128,
+      "byte_delta": 0,
+      "before_sha256": "3184e343972f3087ed25c2128a1d8f2e06d74c5240b18135691e0b40d9a4186e",
+      "after_sha256": "3184e343972f3087ed25c2128a1d8f2e06d74c5240b18135691e0b40d9a4186e",
+      "changed": false
+    },
+    {
+      "path": "README.md",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 29927,
+      "after_bytes": 30188,
+      "byte_delta": 261,
+      "before_sha256": "7f5667145df31186ae0ef9b29ec0a0cc6bdfe4fc4dab041accdaa027dfc1db29",
+      "after_sha256": "d187e589fb88ebcb34b94cbc96f3fc48a75478ce9039a51d615846510e575a36",
+      "changed": true
+    },
+    {
+      "path": "app.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 21662,
+      "after_bytes": 21744,
+      "byte_delta": 82,
+      "before_sha256": "418ebc1873e32b17536c517d33af127c5800e8ce7edb320378734f655f95826c",
+      "after_sha256": "44063aa3094407449ed70400fecc71bfc1c05c83421e17131711405fc7d2baf6",
+      "changed": true
+    },
+    {
+      "path": "artifacts/engine.json",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 60477,
+      "after_bytes": 60477,
+      "byte_delta": 0,
+      "before_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "after_sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "changed": false
+    },
+    {
+      "path": "artifacts/prompt_vectors.npz",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 30974,
+      "after_bytes": 30974,
+      "byte_delta": 0,
+      "before_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "after_sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "changed": false
+    },
+    {
+      "path": "artifacts/vectorizer.joblib",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 60877,
+      "after_bytes": 60877,
+      "byte_delta": 0,
+      "before_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "after_sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "changed": false
+    },
+    {
+      "path": "cloud/__init__.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 66,
+      "after_bytes": 66,
+      "byte_delta": 0,
+      "before_sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+      "after_sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+      "changed": false
+    },
+    {
+      "path": "cloud/postcheck.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 18142,
+      "after_bytes": 18142,
+      "byte_delta": 0,
+      "before_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "after_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "changed": false
+    },
+    {
+      "path": "cloud/preview.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 3022,
+      "after_bytes": 3022,
+      "byte_delta": 0,
+      "before_sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea",
+      "after_sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea",
+      "changed": false
+    },
+    {
+      "path": "cloud/rewrite_agent.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 20199,
+      "after_bytes": 20199,
+      "byte_delta": 0,
+      "before_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "after_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "changed": false
+    },
+    {
+      "path": "cloud/store.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 18244,
+      "after_bytes": 18244,
+      "byte_delta": 0,
+      "before_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "after_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "changed": false
+    },
+    {
+      "path": "cloudbuild.yaml",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 145,
+      "after_bytes": 145,
+      "byte_delta": 0,
+      "before_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+      "after_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+      "changed": false
+    },
+    {
+      "path": "docs/submission-notes.md",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 1224,
+      "after_bytes": 1365,
+      "byte_delta": 141,
+      "before_sha256": "045935641f50449e3cf67e56c0afe6191646b73e301bf7fea8e8a6fc0b8288d1",
+      "after_sha256": "04377c443fde88e71489fe2d7badcb72bcac8ac89b91facfe699d8b8b27912fb",
+      "changed": true
+    },
+    {
+      "path": "preflight_core/__init__.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 203,
+      "after_bytes": 203,
+      "byte_delta": 0,
+      "before_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "after_sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "changed": false
+    },
+    {
+      "path": "preflight_core/dataset.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 2814,
+      "after_bytes": 2814,
+      "byte_delta": 0,
+      "before_sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+      "after_sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+      "changed": false
+    },
+    {
+      "path": "preflight_core/engine.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 6726,
+      "after_bytes": 6726,
+      "byte_delta": 0,
+      "before_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "after_sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "changed": false
+    },
+    {
+      "path": "preflight_core/irt.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 5027,
+      "after_bytes": 5027,
+      "byte_delta": 0,
+      "before_sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+      "after_sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+      "changed": false
+    },
+    {
+      "path": "preflight_core/provenance.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 721,
+      "after_bytes": 721,
+      "byte_delta": 0,
+      "before_sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+      "after_sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+      "changed": false
+    },
+    {
+      "path": "requirements-cloud.lock",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 2553,
+      "after_bytes": 2553,
+      "byte_delta": 0,
+      "before_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "after_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "changed": false
+    },
+    {
+      "path": "requirements-cloud.txt",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 136,
+      "after_bytes": 136,
+      "byte_delta": 0,
+      "before_sha256": "255c6ca0e2b42e841aabef498310cadc82078a8b560ba4b8beb585226ea8dcf6",
+      "after_sha256": "255c6ca0e2b42e841aabef498310cadc82078a8b560ba4b8beb585226ea8dcf6",
+      "changed": false
+    },
+    {
+      "path": "requirements-dev.txt",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 48,
+      "after_bytes": 48,
+      "byte_delta": 0,
+      "before_sha256": "5aa3c210f980c38b62b3344833b66db55d3ffd4119df1700d04bea298b65d9c2",
+      "after_sha256": "5aa3c210f980c38b62b3344833b66db55d3ffd4119df1700d04bea298b65d9c2",
+      "changed": false
+    },
+    {
+      "path": "requirements.lock",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 557,
+      "after_bytes": 557,
+      "byte_delta": 0,
+      "before_sha256": "fd0d204bd658866e0c4ea5739164346318fa456a6089e6fc4cd6ce959c2c7b09",
+      "after_sha256": "fd0d204bd658866e0c4ea5739164346318fa456a6089e6fc4cd6ce959c2c7b09",
+      "changed": false
+    },
+    {
+      "path": "requirements.txt",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 141,
+      "after_bytes": 141,
+      "byte_delta": 0,
+      "before_sha256": "947ba93af6167710740a7ec3c3af354abcfa5c0d050b042cdb6ad4ef0f2d899d",
+      "after_sha256": "947ba93af6167710740a7ec3c3af354abcfa5c0d050b042cdb6ad4ef0f2d899d",
+      "changed": false
+    },
+    {
+      "path": "scripts/build_data.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 3696,
+      "after_bytes": 3696,
+      "byte_delta": 0,
+      "before_sha256": "a7136cabf948a89ff94a2fa9215316ec7e798d354337d6ba4daf518dfc1e7ca3",
+      "after_sha256": "a7136cabf948a89ff94a2fa9215316ec7e798d354337d6ba4daf518dfc1e7ca3",
+      "changed": false
+    },
+    {
+      "path": "scripts/check_freshness.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 5280,
+      "after_bytes": 5280,
+      "byte_delta": 0,
+      "before_sha256": "336187c1810d2d55507ab1978d13db5c95527ab35a88f0fdcb2160084c8a40c2",
+      "after_sha256": "336187c1810d2d55507ab1978d13db5c95527ab35a88f0fdcb2160084c8a40c2",
+      "changed": false
+    },
+    {
+      "path": "scripts/check_secrets.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 5996,
+      "after_bytes": 5996,
+      "byte_delta": 0,
+      "before_sha256": "06cca63dbc85cf44c82bc770b41a7381bb0eacb003306cc6f93151b9da371d2c",
+      "after_sha256": "06cca63dbc85cf44c82bc770b41a7381bb0eacb003306cc6f93151b9da371d2c",
+      "changed": false
+    },
+    {
+      "path": "scripts/cloud_ops.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 8151,
+      "after_bytes": 8151,
+      "byte_delta": 0,
+      "before_sha256": "42d4ed5d86aecf53388460c7933b559c093161df7d394e8690f5ba18d9bc0a27",
+      "after_sha256": "42d4ed5d86aecf53388460c7933b559c093161df7d394e8690f5ba18d9bc0a27",
+      "changed": false
+    },
+    {
+      "path": "scripts/evaluate.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 16570,
+      "after_bytes": 16570,
+      "byte_delta": 0,
+      "before_sha256": "09bb9474c2d0fa1fa89869b1a2107bab8ee3ae849a262aa85d339609216d1ebb",
+      "after_sha256": "09bb9474c2d0fa1fa89869b1a2107bab8ee3ae849a262aa85d339609216d1ebb",
+      "changed": false
+    },
+    {
+      "path": "scripts/import_firestore.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 4419,
+      "after_bytes": 4419,
+      "byte_delta": 0,
+      "before_sha256": "965511ebb09adbe48fb08a51198a064bcd50462ff27e9f8a98f21dc317a5b58c",
+      "after_sha256": "965511ebb09adbe48fb08a51198a064bcd50462ff27e9f8a98f21dc317a5b58c",
+      "changed": false
+    },
+    {
+      "path": "scripts/measure_cloud.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 7687,
+      "after_bytes": 7687,
+      "byte_delta": 0,
+      "before_sha256": "80ed4dfa3cbb3a3ba6f053b943c91a536f83b6e7ada2ac816c2bc1419ea4dd43",
+      "after_sha256": "80ed4dfa3cbb3a3ba6f053b943c91a536f83b6e7ada2ac816c2bc1419ea4dd43",
+      "changed": false
+    },
+    {
+      "path": "scripts/preview_local.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 4443,
+      "after_bytes": 4443,
+      "byte_delta": 0,
+      "before_sha256": "f77d8821832fa8f2c3daae244dd52cc474b98ba00214ddfff208c0a96bf85a62",
+      "after_sha256": "f77d8821832fa8f2c3daae244dd52cc474b98ba00214ddfff208c0a96bf85a62",
+      "changed": false
+    },
+    {
+      "path": "scripts/probe_preview.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 3156,
+      "after_bytes": 3156,
+      "byte_delta": 0,
+      "before_sha256": "d8d7c6ee42068a36bc851135a01d5f419f687eba55210b64f4a0347c322704a1",
+      "after_sha256": "d8d7c6ee42068a36bc851135a01d5f419f687eba55210b64f4a0347c322704a1",
+      "changed": false
+    },
+    {
+      "path": "scripts/record_demo.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 28069,
+      "after_bytes": 37496,
+      "byte_delta": 9427,
+      "before_sha256": "2cf9cc25ae1ad78cf65d57cdc6a837c7696e4694ab9bdf99f5b4336e49ec7192",
+      "after_sha256": "7cbd144296037532042b6b720c8c6ca1ceb4d9c21068d8beeebaccf5642b851a",
+      "changed": true
+    },
+    {
+      "path": "scripts/release_cloud.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 6645,
+      "after_bytes": 6645,
+      "byte_delta": 0,
+      "before_sha256": "bd731c420fa32d53ab0ce8ce09d738d129db800f1905e7a2efa39faaf5dec1f0",
+      "after_sha256": "bd731c420fa32d53ab0ce8ce09d738d129db800f1905e7a2efa39faaf5dec1f0",
+      "changed": false
+    },
+    {
+      "path": "scripts/scan_history_v3.py",
+      "before_exists": false,
+      "after_exists": true,
+      "before_bytes": 0,
+      "after_bytes": 5385,
+      "byte_delta": 5385,
+      "before_sha256": null,
+      "after_sha256": "9d04caa51469da6d1e38601af7decae6b34a425cd6397cdf524fe09d778fb9ce",
+      "changed": true
+    },
+    {
+      "path": "scripts/verify_decode_local.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 6854,
+      "after_bytes": 6854,
+      "byte_delta": 0,
+      "before_sha256": "e208b3188e9d568ab3fb622ed487171cd86c42f62eacbd7cf52f61e85482542d",
+      "after_sha256": "e208b3188e9d568ab3fb622ed487171cd86c42f62eacbd7cf52f61e85482542d",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_local.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 1749,
+      "after_bytes": 1749,
+      "byte_delta": 0,
+      "before_sha256": "d38d97e476803ee52b5706290317bc0eb5624a78ca286ddd4161e381b2c2b7ae",
+      "after_sha256": "d38d97e476803ee52b5706290317bc0eb5624a78ca286ddd4161e381b2c2b7ae",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_postcheck.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 25147,
+      "after_bytes": 25147,
+      "byte_delta": 0,
+      "before_sha256": "cd537dd7938b0552d62bfff7a07a67639275ee615dc7acfe1508e3d7a31dcc62",
+      "after_sha256": "cd537dd7938b0552d62bfff7a07a67639275ee615dc7acfe1508e3d7a31dcc62",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_postcheck_canary.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 14536,
+      "after_bytes": 14536,
+      "byte_delta": 0,
+      "before_sha256": "8d963d4f76b51d38ec33af58fadf62cffc0dde136c12da6648c9f1a7c6857ef6",
+      "after_sha256": "8d963d4f76b51d38ec33af58fadf62cffc0dde136c12da6648c9f1a7c6857ef6",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_postcheck_smoke.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 2727,
+      "after_bytes": 2727,
+      "byte_delta": 0,
+      "before_sha256": "b4670f6ba269dd6920e3b724ff189f596f5507eaf47cb76bd305db5ddb7fe35c",
+      "after_sha256": "b4670f6ba269dd6920e3b724ff189f596f5507eaf47cb76bd305db5ddb7fe35c",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_preview_cd.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 6820,
+      "after_bytes": 6820,
+      "byte_delta": 0,
+      "before_sha256": "e0e954f45ddb75a83405d516c365514860ecf8029bc50fb70cf1b32aa7b0e6eb",
+      "after_sha256": "e0e954f45ddb75a83405d516c365514860ecf8029bc50fb70cf1b32aa7b0e6eb",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_preview_source_v3.py",
+      "before_exists": false,
+      "after_exists": true,
+      "before_bytes": 0,
+      "after_bytes": 10184,
+      "byte_delta": 10184,
+      "before_sha256": null,
+      "after_sha256": "d218011736447d59696ba39b5bb114dbbdbbb2c9eba8e880c99d9c42f9e461e8",
+      "changed": true
+    },
+    {
+      "path": "scripts/verify_preview_ui_v3.py",
+      "before_exists": false,
+      "after_exists": true,
+      "before_bytes": 0,
+      "after_bytes": 17616,
+      "byte_delta": 17616,
+      "before_sha256": null,
+      "after_sha256": "40950da486e25d8bd4ecf7b127a94cc5e980688906b45d8bb023aa7389139cad",
+      "changed": true
+    },
+    {
+      "path": "scripts/verify_preview_v3.py",
+      "before_exists": false,
+      "after_exists": true,
+      "before_bytes": 0,
+      "after_bytes": 22497,
+      "byte_delta": 22497,
+      "before_sha256": null,
+      "after_sha256": "74c98ea27e61394b1a62a7cfa2f8351d733464a527b5d0932527c05e98ee312c",
+      "changed": true
+    },
+    {
+      "path": "scripts/verify_rewrites.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 12942,
+      "after_bytes": 12942,
+      "byte_delta": 0,
+      "before_sha256": "26d2895e87e707b632190c0d524c737f451a18786a81d2f5343d8cac169bd590",
+      "after_sha256": "26d2895e87e707b632190c0d524c737f451a18786a81d2f5343d8cac169bd590",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_store_live.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 6689,
+      "after_bytes": 6689,
+      "byte_delta": 0,
+      "before_sha256": "2b397ebfabdabc3e084f463c9fe16762245c641b880d0f835b0364757164e602",
+      "after_sha256": "2b397ebfabdabc3e084f463c9fe16762245c641b880d0f835b0364757164e602",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_synthetic_smoke_cd.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 2748,
+      "after_bytes": 2748,
+      "byte_delta": 0,
+      "before_sha256": "2fb505902746d958a13de6583cd97767041cfb0a4ca0392bea40bd16f3f1b260",
+      "after_sha256": "2fb505902746d958a13de6583cd97767041cfb0a4ca0392bea40bd16f3f1b260",
+      "changed": false
+    },
+    {
+      "path": "scripts/verify_ui_d.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 3815,
+      "after_bytes": 3861,
+      "byte_delta": 46,
+      "before_sha256": "926ed8e41a139e3e13c55d60413155c1c9aff36a7f2e5f39a7fc8a95254d516d",
+      "after_sha256": "1ff89f551a6fa8ae63381db7c19a3951eba052e7aacf2c7e00920f5ce505dffe",
+      "changed": true
+    },
+    {
+      "path": "static/app.js",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 21272,
+      "after_bytes": 21553,
+      "byte_delta": 281,
+      "before_sha256": "8c81a962601c8b95ff20bc45505e9ee28e430df4ce3e0c15272ce4dae8522a7d",
+      "after_sha256": "74464589a2d66a132ce9abe4a7a800a84b23288dcbc25cab7c957c13273ad3ca",
+      "changed": true
+    },
+    {
+      "path": "static/architecture.html",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 5828,
+      "after_bytes": 5828,
+      "byte_delta": 0,
+      "before_sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+      "after_sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+      "changed": false
+    },
+    {
+      "path": "static/architecture.js",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 5079,
+      "after_bytes": 5079,
+      "byte_delta": 0,
+      "before_sha256": "5c506b618242be4dadb5603149ee1bcfee54e7bd8ae3b7795dcefb6cb272fbfe",
+      "after_sha256": "5c506b618242be4dadb5603149ee1bcfee54e7bd8ae3b7795dcefb6cb272fbfe",
+      "changed": false
+    },
+    {
+      "path": "static/index.html",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 12964,
+      "after_bytes": 12964,
+      "byte_delta": 0,
+      "before_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "after_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "changed": false
+    },
+    {
+      "path": "static/postcheck.js",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 15896,
+      "after_bytes": 15896,
+      "byte_delta": 0,
+      "before_sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+      "after_sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+      "changed": false
+    },
+    {
+      "path": "static/status.js",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 1843,
+      "after_bytes": 1843,
+      "byte_delta": 0,
+      "before_sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+      "after_sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+      "changed": false
+    },
+    {
+      "path": "static/styles.css",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 25464,
+      "after_bytes": 25464,
+      "byte_delta": 0,
+      "before_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "after_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "changed": false
+    },
+    {
+      "path": "tests/test_api.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 1981,
+      "after_bytes": 1981,
+      "byte_delta": 0,
+      "before_sha256": "91faee99996593ff7eef67be7f5da51fcaf86886d4ee3cff7b3be3702c298859",
+      "after_sha256": "91faee99996593ff7eef67be7f5da51fcaf86886d4ee3cff7b3be3702c298859",
+      "changed": false
+    },
+    {
+      "path": "tests/test_cloud_api.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 4141,
+      "after_bytes": 4141,
+      "byte_delta": 0,
+      "before_sha256": "6a446aeb12e6f10808aef8ae0504b37632d57cc33645ef7bb0b4ac6d63e00ae2",
+      "after_sha256": "6a446aeb12e6f10808aef8ae0504b37632d57cc33645ef7bb0b4ac6d63e00ae2",
+      "changed": false
+    },
+    {
+      "path": "tests/test_engine.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 3681,
+      "after_bytes": 3681,
+      "byte_delta": 0,
+      "before_sha256": "1b2ef0f2e96db6b15c950fda0083b4a4067f7b9d60d87b58290ea398ffdc96ed",
+      "after_sha256": "1b2ef0f2e96db6b15c950fda0083b4a4067f7b9d60d87b58290ea398ffdc96ed",
+      "changed": false
+    },
+    {
+      "path": "tests/test_guards.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 7092,
+      "after_bytes": 7092,
+      "byte_delta": 0,
+      "before_sha256": "de518034f756437487c874b76e1a5188f3a99571fd4bf8026f9356be1dc3be74",
+      "after_sha256": "de518034f756437487c874b76e1a5188f3a99571fd4bf8026f9356be1dc3be74",
+      "changed": false
+    },
+    {
+      "path": "tests/test_postcheck.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 10580,
+      "after_bytes": 10580,
+      "byte_delta": 0,
+      "before_sha256": "cbfa500e955e3ae39e93105f02b080b55b9c0de35188afd2a0d986ef93dc5e52",
+      "after_sha256": "cbfa500e955e3ae39e93105f02b080b55b9c0de35188afd2a0d986ef93dc5e52",
+      "changed": false
+    },
+    {
+      "path": "tests/test_postcheck_api.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 7794,
+      "after_bytes": 7794,
+      "byte_delta": 0,
+      "before_sha256": "1484889e41ef15f91cb7f912fef639a7484fb47e786d9f01f83d8a35fb842d31",
+      "after_sha256": "1484889e41ef15f91cb7f912fef639a7484fb47e786d9f01f83d8a35fb842d31",
+      "changed": false
+    },
+    {
+      "path": "tests/test_preview.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 4510,
+      "after_bytes": 4573,
+      "byte_delta": 63,
+      "before_sha256": "4e19e8d99fe1c042186d1689977900d91868f5b1e38e79549485ed82b7e407fd",
+      "after_sha256": "c6ce31b9eb19bda16559ec60f7d0faadf21746577798acfca3500d054602fca3",
+      "changed": true
+    },
+    {
+      "path": "tests/test_provenance.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 1284,
+      "after_bytes": 1284,
+      "byte_delta": 0,
+      "before_sha256": "4c26ead196fce9add537198d902a64a43482d09e035857cd128571f36dc74406",
+      "after_sha256": "4c26ead196fce9add537198d902a64a43482d09e035857cd128571f36dc74406",
+      "changed": false
+    },
+    {
+      "path": "tests/test_rewrite.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 8403,
+      "after_bytes": 8403,
+      "byte_delta": 0,
+      "before_sha256": "e8cb45c6ca02a4ad8a3ce347e2986d7c74761f8b5c03f4f3edd37cdf645f2e6f",
+      "after_sha256": "e8cb45c6ca02a4ad8a3ce347e2986d7c74761f8b5c03f4f3edd37cdf645f2e6f",
+      "changed": false
+    },
+    {
+      "path": "tests/test_store.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 13142,
+      "after_bytes": 13142,
+      "byte_delta": 0,
+      "before_sha256": "80dee481b4919cc773ca0e515c77239059061500156fe00e2b684e0ae7a8b4e2",
+      "after_sha256": "80dee481b4919cc773ca0e515c77239059061500156fe00e2b684e0ae7a8b4e2",
+      "changed": false
+    },
+    {
+      "path": "tests/test_verify_postcheck.py",
+      "before_exists": true,
+      "after_exists": true,
+      "before_bytes": 13208,
+      "after_bytes": 13208,
+      "byte_delta": 0,
+      "before_sha256": "0ce9cb2edc7495ade1c1f6336886561aee1661c1540ba48126f6ec36fddb17a2",
+      "after_sha256": "0ce9cb2edc7495ade1c1f6336886561aee1661c1540ba48126f6ec36fddb17a2",
+      "changed": false
+    }
+  ],
+  "summary": {
+    "enumerated_files": 71,
+    "changed_files": 11,
+    "changed_paths": [
+      "README.md",
+      "app.py",
+      "docs/submission-notes.md",
+      "scripts/record_demo.py",
+      "scripts/scan_history_v3.py",
+      "scripts/verify_preview_source_v3.py",
+      "scripts/verify_preview_ui_v3.py",
+      "scripts/verify_preview_v3.py",
+      "scripts/verify_ui_d.py",
+      "static/app.js",
+      "tests/test_preview.py"
+    ],
+    "net_byte_delta": 65983
+  },
+  "runtime_scope": {
+    "runtime_input_count_before": 23,
+    "runtime_input_count_after": 23,
+    "base_runtime_sha256": "f080be0c815cbe460b0036b0a6a597201d6460dece9c73c8049af66f54a05d7c",
+    "final_working_tree_runtime_sha256": "ecb14dc207c9ba78d360f6b72f77dfa41c08011387c40180327d8a795743c793",
+    "strict_changed_path_allowlist": [
+      "app.py",
+      "static/app.js"
+    ],
+    "actual_changed_paths": [
+      "app.py",
+      "static/app.js"
+    ],
+    "allowlist_pass": true,
+    "app_exact_copy_replacements_only": true,
+    "javascript_exact_copy_replacements_plus_disabled_result_explanation_only": true,
+    "javascript_explanation_placement": "Appended to the existing preview output after a prompt result; no resting first-screen DOM, CSS or layout edit.",
+    "no_style_or_index_changes": true
+  },
+  "explicit_zero_delta_packaging_dependency_release_files": [
+    "Dockerfile",
+    "cloudbuild.yaml",
+    "scripts/release_cloud.py",
+    "requirements-cloud.lock",
+    "requirements-cloud.txt",
+    "requirements-dev.txt",
+    "requirements.lock",
+    "requirements.txt"
+  ],
+  "frozen_identity_checks": [
+    {
+      "path": "cloud/postcheck.py",
+      "sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "cloud/preview.py",
+      "sha256": "63b469ab8c27aabfa911a50ec79f0061cedbf930384670a04f1d716b0196f5ea",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "cloud/rewrite_agent.py",
+      "sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "cloud/store.py",
+      "sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "preflight_core/__init__.py",
+      "sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "preflight_core/dataset.py",
+      "sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "preflight_core/engine.py",
+      "sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "preflight_core/irt.py",
+      "sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "preflight_core/provenance.py",
+      "sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "static/index.html",
+      "sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "byte_identical_to_base": true
+    },
+    {
+      "path": "static/styles.css",
+      "sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "byte_identical_to_base": true
+    }
+  ],
+  "discarded_candidate_runtime_test": {
+    "path": "tests/test_preview_runtime.py",
+    "exists_in_original_base": false,
+    "exists_in_final_active_tree": false,
+    "note": "Candidate-only retry/fallback runtime tests are absent from the final active baseline; candidate patch is retained separately as evidence."
+  },
+  "all_checks_pass": true
+}

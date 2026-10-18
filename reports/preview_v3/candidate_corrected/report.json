@@ -1,0 +1,86 @@
+{
+  "recorded_at_kst": "2026-10-18T09:43:17.151608+09:00",
+  "status": "LOCAL_CORRECTION_ONLY_NOT_DEPLOYED_NOT_PROVIDER_VALIDATED",
+  "base_commit": "110d608f1671834c39895c96b6aa4a477e1528b2",
+  "failed_candidate_revision": "preflight-00019-kow",
+  "original_bug": {
+    "implementation_error": "The preview retry candidate sent the public/pricing size label 0.5K directly as provider image_size. The provider API requires the string 512 for that resolution.",
+    "original_wire_value": "0.5K",
+    "corrected_wire_value": "512",
+    "public_size_label_and_cache_identity": "0.5K",
+    "test_gap": "The original fake-client test asserted the same incorrect 0.5K wire value, so 27 passing runtime tests did not verify the provider contract.",
+    "live_receipt": "reports/preview_v3/image_budget.json",
+    "causality_limit": "The invalid wire value is confirmed by source inspection and official API documentation. The safe live error receipt reports INVALID_ARGUMENT without a parameter-specific provider message. No corrected provider call was made; quota failures are separately observed.",
+    "observed_fresh_selection_indices_with_terminal_fallback_400_INVALID_ARGUMENT": [
+      3,
+      4,
+      8,
+      13
+    ],
+    "observed_fresh_selection_indices_with_fallback_429_RESOURCE_EXHAUSTED": [
+      5,
+      7,
+      9,
+      10,
+      12,
+      14
+    ],
+    "observation_limit": "These row indices were observed while the independent live ledger was still being written. They are a timestamped subset, not the final gate outcome."
+  },
+  "official_documentation": {
+    "url": "https://ai.google.dev/gemini-api/docs/generate-content/image-generation?hl=en#generate_images_up_to_4k_resolution",
+    "verified_date_kst": "2026-10-18",
+    "page_updated_date_utc": "2026-10-09",
+    "short_quote": "The `512` value does not use a 'K' suffix.",
+    "relevant_section": "Generate images up to 4K resolution"
+  },
+  "correction_scope": {
+    "provider_mapping": {
+      "1K": "1K",
+      "0.5K": "512"
+    },
+    "public_size_label": "0.5K",
+    "fallback_cost_usd": 0.045,
+    "runtime_retry_deadlines_limits": "preserved from base candidate",
+    "active_app_cloud_tests_edited": false,
+    "live_gates_rerun": false,
+    "promotions": 0,
+    "provider_calls": 0
+  },
+  "artifacts": [
+    {
+      "path": "reports/preview_v3/candidate_corrected/cloud_preview.py.txt",
+      "sha256": "1d7699c044701ba07beecdd3c1b2faaf0eea953d20a0a84fe5b597fa2483fa84",
+      "size_bytes": 10448
+    },
+    {
+      "path": "reports/preview_v3/candidate_corrected/test_preview_runtime.py.txt",
+      "sha256": "1e07804e3e466abc4ea6f216686ad83bfc9b2d1a9145d7e2be523c9fd7cda037",
+      "size_bytes": 13561
+    }
+  ],
+  "validation": [
+    {
+      "check": "original_unit_baseline",
+      "exit_code": 0,
+      "passed": 27,
+      "failed": 0,
+      "provider_calls": 0
+    },
+    {
+      "check": "corrected_isolated_unit_suite",
+      "exit_code": 0,
+      "passed": 29,
+      "failed": 0,
+      "provider_calls": 0
+    },
+    {
+      "check": "regression_probe_original_source_with_corrected_tests",
+      "exit_code": 1,
+      "passed": 26,
+      "failed": 3,
+      "provider_calls": 0
+    }
+  ],
+  "release_decision": "The preregistered preview acceptance failed. Production follows the copy-only, preview-disabled fail rule. These files are archived correction artifacts and do not qualify preview-on for promotion."
+}

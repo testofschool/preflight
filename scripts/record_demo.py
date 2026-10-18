@@ -397,6 +397,7 @@ class Take:
         await self.step("better_prompt_and_copy", rewrite, 4)
 
         async def preview_disabled():
+            await self.scroll_to(".preview-controls", 200)
             controls = self.page.locator(".preview-button:visible, .preview-original:visible")
             count = await controls.count()
             tooltips = []
@@ -406,12 +407,15 @@ class Take:
                 tooltips.append(await control.get_attribute("title"))
             if count:
                 await self.move(".preview-button:visible, .preview-original:visible")
-            if BUSY_COPY not in tooltips and BUSY_COPY not in await self.page.locator(".preview-controls").inner_text():
-                raise RuntimeError("The required preview busy copy is unavailable")
+            message = self.page.locator(".preview-controls p.subtle-copy").filter(has_text=BUSY_COPY)
+            if (BUSY_COPY not in tooltips or await message.count() != 1 or not await message.is_visible()
+                    or (await message.inner_text()).strip() != BUSY_COPY):
+                raise RuntimeError("The required visible preview busy paragraph and tooltip are unavailable")
             await self.pause(2)
             await self.frame("preview_busy_copy")
             return {"status": "disabled", "resting_first_screen_controls": 0,
-                    "result_controls": count, "tooltips": tooltips, "preview_requests": 0}
+                    "result_controls": count, "tooltips": tooltips, "visible_busy_copy": await message.inner_text(),
+                    "preview_requests": 0}
         await self.at(36)
         if self.args.preview_mode == "on":
             await self.step("cached_sample_preview", lambda: self.cached_preview(self.args.sample_prompt, "original", True))

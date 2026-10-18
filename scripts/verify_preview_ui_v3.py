@@ -144,7 +144,7 @@ def verify(args) -> dict:
             'objects': 'Visible content objects intersecting the viewport at rest. Count descendants once per containing object; nav/form each count once. Exclude opacity <0.01, hidden, and zero-size elements.',
             'colors': 'Distinct computed text/background RGB in the viewport; merge alpha variants of the same RGB; omit transparent and canvas pixels.',
             'cta': '#check-button getBoundingClientRect().bottom at scrollY=0, budget <=900 px',
-            'overflow': 'document.documentElement.scrollWidth <= innerWidth at scrollY=0',
+            'overflow': 'document.documentElement.scrollWidth <= innerWidth at each recorded scroll position; first viewport at scrollY=0',
             'readiness': 'Original 2500 ms post-commit wait plus confirmed status and document.fonts.ready before measurement',
             'browser_args': ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
             'preview_policy': 'No preview action; fail if any POST /preview is observed. Off mode submits one real POST /preflight.',
@@ -182,10 +182,12 @@ def verify(args) -> dict:
             return {key: status.get(key) for key in (
                 'mode', 'cloud_run', 'firestore', 'gemini', 'adk', 'postcheck', 'preview', 'agent_platform_session')}
 
-        def screenshot_and_overflow(state):
+        def screenshot_and_overflow(state, target=None):
             for width, height in ((1440, 900), (390, 844)):
                 page.set_viewport_size({'width': width, 'height': height})
                 page.evaluate('scrollTo(0,0)')
+                if target:
+                    page.locator(target).scroll_into_view_if_needed()
                 page.wait_for_timeout(150)
                 geometry = page.evaluate('''() => ({inner_width:innerWidth, scroll_width:document.documentElement.scrollWidth,
                     scroll_height:document.documentElement.scrollHeight, scroll_y:scrollY,
@@ -218,13 +220,21 @@ def verify(args) -> dict:
                 page.locator('.results-panel[aria-busy="false"]').wait_for(state='visible')
                 page.locator('.preview-button').wait_for(state='visible')
                 preview = page.locator('.preview-button')
+                busy_copy = page.locator('.preview-controls p.subtle-copy').filter(has_text=BUSY_COPY)
+                busy_count = busy_copy.count()
+                busy_visible = busy_count == 1 and busy_copy.is_visible()
+                busy_text = busy_copy.inner_text().strip() if busy_count == 1 else None
                 receipt['off_mode_check'].update({
                     'preview_disabled': preview.is_disabled(), 'preview_title': preview.get_attribute('title'),
                     'required_copy': BUSY_COPY,
                     'copy_matches': preview.get_attribute('title') == BUSY_COPY,
+                    'busy_copy_paragraph_count': busy_count,
+                    'busy_copy_paragraph_visible': busy_visible,
+                    'busy_copy_paragraph_text': busy_text,
+                    'visible_copy_matches': busy_visible and busy_text == BUSY_COPY,
                     'obsolete_region_copy_present': 'Preview unavailable in this region' in page.locator('body').inner_html(),
                 })
-                screenshot_and_overflow('after_check')
+                screenshot_and_overflow('after_check_busy_copy', '.preview-controls')
             receipt['architecture_status'] = load('/architecture')
             component = page.locator('#component-list li').filter(has_text='Image preview (Gemini image model)')
             receipt['architecture_image_preview'] = component.locator('.connection-status').inner_text().strip()
@@ -239,7 +249,8 @@ def verify(args) -> dict:
                 all(row['no_horizontal_overflow'] for row in receipt['overflow_checks']),
                 receipt['architecture_image_preview'] == expected_badge,
                 expected or (off.get('preflight_http_status') == 200 and off.get('preview_disabled')
-                             and off.get('copy_matches') and not off.get('obsolete_region_copy_present')),
+                             and off.get('copy_matches') and off.get('visible_copy_matches')
+                             and not off.get('obsolete_region_copy_present')),
                 receipt['preview_http_requests'] == 0, receipt['preflight_http_requests'] == (0 if expected else 1),
                 not receipt['request_failures'], not receipt['page_errors'],
                 all(row['http_status'] < 400 for row in receipt['network']),

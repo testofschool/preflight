@@ -1,0 +1,12 @@
+{
+  "action": "remove failed preview-v3 tag after image budget stop",
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "failed_candidate_public_tag_present": false
+}

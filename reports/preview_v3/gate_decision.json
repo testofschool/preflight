@@ -1,0 +1,18 @@
+{
+  "candidate_revision": "preflight-00019-kow",
+  "promote_preview_on": false,
+  "reason": "V11c failed; 45-call cap leaves insufficient room for the reserved next three-attempt request",
+  "scheduled_fresh": 20,
+  "dispatched_fresh": 18,
+  "fresh_successes": 5,
+  "unrun_fresh_indices": [
+    19,
+    20
+  ],
+  "model_calls": 44,
+  "unknown_model_calls": 0,
+  "preview_cache_validation_requests": 0,
+  "warm_image_requests": 0,
+  "production_action": "copy-only, preview false, no risk/rewrite/postcheck/schema/layout change",
+  "failed_receipts_preserved": true
+}

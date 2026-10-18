@@ -195,3 +195,14 @@ The selected-fallback preparation at18:59:22KST checked all fifteen rows, freshl
 Content publication and exact-HEAD proofs are recorded in the later publication receipt section. Final exact-HEAD secret/history/privacy and anonymous-clone receipts are kept outside the checkout under `../evidence/final_v7/` to avoid a self-referential receipt-commit loop. No pending track is rounded up to complete.
 
 Not done: v7 visual promotion (failed, v6 selected); public YouTube URL/upload/visibility/duration/link equality; final timed fifteen-row F pass; submission form submission. No video was deleted.
+
+
+## Publication receipt
+
+Content commit **`e1e6ad4c1ae08c2ac8c59687e0cdf256215a25d3`** was pushed to public main. The pre-commit guard completed over1,262 worktree files/1,033 indexed files, including458 binary files: zero hits, zero errors, no skipped files. Reachable-history scan: **23 commits,1,048 blobs, zero hits, complete, zero errors**. All four final-HEAD privacy queries remain zero; the removed handoff is still locally present and untracked.
+
+Credential-free public clone returned exactly that full SHA; repository/raw README HTTP200; public README bytes matched clone; frozen25-file post-J runtime hash and all four tag objects matched; v4 peeled source matched59fb23b; Brief952/1,024. The verifier explicitly did not check Track D and did not promote placeholder equality.
+
+Receipts: `publication.json`, `g_content_history_e1e6ad4.json`, `g_content_head_grep_e1e6ad4.json`, `g_content_anonymous_e1e6ad4.json`. This later evidence-only commit adds these receipts and this paragraph. Its own exact-HEAD history/privacy/clone proofs are saved outside the checkout as `../evidence/final_v7/g_final_*`, and its final full SHA is included in the user handoff. No final F pass, URL verification, or v7 visual pass is implied.
+
+Whitespace check passes for code/prose. The raw unified text-diff audit intentionally retains the required blank context-line prefixes and is excluded from the trailing-whitespace style check; the evidence itself is not normalized.

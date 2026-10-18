@@ -1,0 +1,48 @@
+{
+  "content_commit": "e1e6ad4c1ae08c2ac8c59687e0cdf256215a25d3",
+  "pushed_branch": "main",
+  "history_scan": {
+    "commits": 23,
+    "blobs": 1048,
+    "hits": 0,
+    "errors": 0,
+    "complete": true
+  },
+  "HEAD_privacy_queries": [
+    {
+      "target": 1,
+      "normalization": "NFC",
+      "grep_exit": 1,
+      "matching_lines": 0
+    },
+    {
+      "target": 1,
+      "normalization": "NFD",
+      "grep_exit": 1,
+      "matching_lines": 0
+    },
+    {
+      "target": 2,
+      "normalization": "NFC",
+      "grep_exit": 1,
+      "matching_lines": 0
+    },
+    {
+      "target": 2,
+      "normalization": "NFD",
+      "grep_exit": 1,
+      "matching_lines": 0
+    }
+  ],
+  "anonymous_clone_pass": true,
+  "anonymous_cloned_commit": "e1e6ad4c1ae08c2ac8c59687e0cdf256215a25d3",
+  "repo_http": 200,
+  "readme_http": 200,
+  "runtime_sha256": "5ecfefe996dd08ef9dc9fe4bdc38e7dc735e28c487018a426fb6521918e88a21",
+  "all_four_tag_objects_match": true,
+  "brief_characters": 952,
+  "G": "FAIL; v6 fallback selected",
+  "D": "WAITING: no user URL",
+  "F": "PREPARATION ONLY; final after D or21:30KST",
+  "final_exact_HEAD_receipts": "../evidence/final_v7/g_final_* (outside checkout to avoid receipt-commit loop)"
+}

@@ -1,0 +1,34 @@
+{
+  "checked_at_kst": "2026-10-18T19:02:03.654966+09:00",
+  "head": "e1e6ad4c1ae08c2ac8c59687e0cdf256215a25d3",
+  "method": "git grep -a -n -F -f stdin HEAD --; full tracked blobs, binary included",
+  "queries": [
+    {
+      "target": 1,
+      "normalization": "NFC",
+      "grep_exit": 1,
+      "matching_lines": 0
+    },
+    {
+      "target": 1,
+      "normalization": "NFD",
+      "grep_exit": 1,
+      "matching_lines": 0
+    },
+    {
+      "target": 2,
+      "normalization": "NFC",
+      "grep_exit": 1,
+      "matching_lines": 0
+    },
+    {
+      "target": 2,
+      "normalization": "NFD",
+      "grep_exit": 1,
+      "matching_lines": 0
+    }
+  ],
+  "local_handoff_kept": true,
+  "local_handoff_not_tracked": true,
+  "passed": true
+}

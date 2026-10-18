@@ -1,6 +1,6 @@
 # Preflight — check an AI-video prompt before you pay to generate it.
 
-[Live prototype](https://preflight-jcgro45veq-as.a.run.app) · Demo video: `https://youtu.be/nO-J4-5G-Gs` · [Pitch deck PDF](docs/Preflight_pitch_deck.pdf).
+[Live prototype](https://preflight-jcgro45veq-as.a.run.app) · Demo video: `https://youtu.be/1A8I-9NZ3Kc` · [Pitch deck PDF](docs/Preflight_pitch_deck.pdf).
 
 Public source: https://github.com/testofschool/preflight. Demo duration: 3:28. The demonstrated spoon/laptop risk estimate changes from 46.8% → 15.8%; this is not measured video-quality improvement.
 

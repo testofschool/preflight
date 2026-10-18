@@ -1,0 +1,734 @@
+{
+  "scope": "FINAL TRACK F: 21:30 KST current-worktree snapshot; exact fifteen-row consistency schema",
+  "final_pass_performed": true,
+  "started_at_kst": "2026-10-18T21:30:57.976854+09:00",
+  "finished_at_kst": "2026-10-18T21:33:38.827820+09:00",
+  "head": "d6c3a8ccded28e425c5b726c87699ab9fb75d9c4",
+  "result": {
+    "canonical_rows_checked": 15,
+    "canonical_conflicts_found": 0,
+    "required_missing_canonical_rows": 0,
+    "video_URL_equality": "PASS",
+    "F_consistency_result": "PASS for the fifteen canonical rows and exact video URL equality in current working documents and later approved selected narratedv7 evidence",
+    "D_public_visibility": "NOT VERIFIED BY THIS AUDIT",
+    "D_uploaded_duration": "NOT VERIFIED BY THIS AUDIT",
+    "publication_state": "Audited documents differ from HEAD; this audit does not attest that these working files are committed, pushed, anonymously cloned, or publicly released."
+  },
+  "artifacts": {
+    "README.md": {
+      "sha256": "e28cd1ce7f586e2e18457e423276eebaa6db72e96cea03fd2df95f84c2489bf7",
+      "bytes": 31153
+    },
+    "docs/submission-notes.md": {
+      "sha256": "95a50e0ad317ad92b5889701a496f3f92bd06b643b985487c6f03f73b2a50b34",
+      "bytes": 1826
+    },
+    "docs/Preflight_pitch_deck.pdf": {
+      "sha256": "15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a",
+      "bytes": 585134
+    },
+    "docs/Preflight_pitch_deck.pptx": {
+      "sha256": "6e322734aafafd873cff29bba04b0b3c1e61d983aa5268ebd17c9d724aa03313",
+      "bytes": 1981973
+    },
+    "demo/preflight_demo_submission_3m.mp4": {
+      "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+      "bytes": 11708270
+    },
+    "reports/final_v7/track_i_submission_caption_script.txt": {
+      "sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08",
+      "bytes": 1833
+    },
+    "reports/final_v7/track_i_submission_captions.json": {
+      "sha256": "8b6ac612d21ab3bf1eccef76a16589f8ec2c84f82499775ed076faac9b1c3c4c",
+      "bytes": 15225
+    },
+    "evidence/final_run_v8_20261018/v/preflight_v7_candidate.mp4": {
+      "sha256": "b5ede0341395b1a5f17616ff718454926e7fc3936273761bd93ad158ba6057ad",
+      "bytes": 26823790
+    },
+    "evidence/final_run_v8_20261018/v/captions_v7.json": {
+      "sha256": "9ae38c1871ea19208f1e44ff55f3cfa7ff973b8654d78d973e5954e00274c17b",
+      "bytes": 15249
+    },
+    "evidence/final_run_v8_20261018/v/caption_script_verbatim.txt": {
+      "sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08",
+      "bytes": 1833
+    }
+  },
+  "deck_page_count": 11,
+  "selected_deck_identity_note": "Current selected PDF15ecda06 differs from earlier v6 fallback. Parent verified later direct human approval for the updated deck,3:28 URL label,YouTube target and1017-character Firebase brief. This F pass directly read current PDF text; no restoration to the obsolete fallback is requested.",
+  "brief_description": {
+    "characters": 1017,
+    "limit": 1024,
+    "pass": true,
+    "sha256": "72262dff73a915154bbb9741a7d06eea5badf4075869928924ddffa0ff32911a"
+  },
+  "status_GET": {
+    "method": "GET",
+    "url": "https://preflight-jcgro45veq-as.a.run.app/api/status",
+    "observed_at_kst": "2026-10-18T21:30:58.433354+09:00",
+    "http_status": 200,
+    "body": {
+      "mode": "cloud",
+      "label": "Connected research preview",
+      "cloud_run": true,
+      "gemini": true,
+      "adk": true,
+      "agent_platform_session": true,
+      "firestore": true,
+      "postcheck": true,
+      "preview": true,
+      "preview_mode": "samples",
+      "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "pricing_image": {
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "usd_per_image": 0.0387,
+        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "checked_date": "2026-10-18",
+        "cost_basis": "image-output-list-price",
+        "billing_verified": false,
+        "priority_requested": false
+      },
+      "generations": 0,
+      "sample_prompts": [
+        "a cat and a dog",
+        "a spoon and a laptop",
+        "a bicycle and a car",
+        "indoor gymnasium",
+        "a purple clock"
+      ],
+      "pricing": {
+        "model": "Veo 3.1 Standard · 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "rate_limit": {
+        "checks": 20,
+        "seconds": 60,
+        "scope": "shared Firestore transaction"
+      }
+    },
+    "body_sha256": "e657ef5cdb8b1519e17c6961db9ad63ad278bd391ad93e5a4fa255d1a0a181d7",
+    "date_header": "Sun, 18 Oct 2026 12:30:58 GMT"
+  },
+  "rows": [
+    {
+      "row": 1,
+      "value": "Live URL: https://preflight-jcgro45veq-as.a.run.app",
+      "not_applicable_or_expected_absence": [
+        "Caption text has no URL; closing visual supplies it.",
+        "Status endpoint does not echo its own origin."
+      ],
+      "caveat": "",
+      "conflicts": [],
+      "present": [
+        "README lines 3,64,76",
+        "notes lines 3",
+        "current selected PDF pages 11",
+        "actual selected narratedv7 MP4 3:20 closing card: preflight-jcgro45veq-as.a.run.app; same destination"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 2,
+      "value": "Repo URL: https://github.com/testofschool/preflight",
+      "not_applicable_or_expected_absence": [
+        "Caption text has no URL; closing visual supplies it.",
+        "Status has no repository metadata field."
+      ],
+      "caveat": "",
+      "conflicts": [],
+      "present": [
+        "README lines 5",
+        "notes lines 5",
+        "current selected PDF pages 11",
+        "actual selected narratedv7 MP4 3:20 closing card: github.com/testofschool/preflight; same destination"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 3,
+      "value": "Video URL: https://youtu.be/1A8I-9NZ3Kc",
+      "not_applicable_or_expected_absence": [
+        "Self-referential video link is not required in the captions, video, or status."
+      ],
+      "caveat": "Exact current-worktree URL equality verified in README, notes and PDF. This F audit does not establish YouTube public-versus-unlisted visibility or the displayed uploaded duration.",
+      "conflicts": [],
+      "present": [
+        "README lines 3",
+        "notes lines 7",
+        "current selected PDF pages 11",
+        "Exact URL equality: README line3 = notes line7 = current selected PDF page11"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 4,
+      "value": "1,911",
+      "not_applicable_or_expected_absence": [
+        "Status has no dataset-count field."
+      ],
+      "caveat": "Human pairwise votes are historical GenAI-Bench evidence, not current-model success probability.",
+      "conflicts": [],
+      "present": [
+        "README lines 27,209",
+        "notes lines 9,15",
+        "captions lines 7",
+        "current selected PDF pages 2,4,6,7",
+        "actual selected narratedv7 MP4 0:29 caption; 2:50 architecture card"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 5,
+      "value": "0.67",
+      "not_applicable_or_expected_absence": [
+        "Status has no AUC field."
+      ],
+      "caveat": "README precise mean 0.668329 and target0.68 have distinct roles; 0.67 is the displayed rounded historical AUC.",
+      "conflicts": [],
+      "present": [
+        "README lines 68",
+        "notes lines 9,15",
+        "captions lines 31",
+        "current selected PDF pages 9",
+        "actual selected narratedv7 MP4 3:04 limits card/caption"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 6,
+      "value": "46.8%",
+      "not_applicable_or_expected_absence": [
+        "README/notes are not required to repeat this demo-specific risk pair.",
+        "Status has no demo-risk field."
+      ],
+      "caveat": "Canonical spoon/laptop mixed-proxy example. Historical-only53.5% and the separate dog/frisbee13.3% are different definitions or contexts.",
+      "conflicts": [],
+      "present": [
+        "README lines 5",
+        "notes lines 15",
+        "captions lines 9",
+        "current selected PDF pages 8",
+        "actual selected narratedv7 MP4 0:45 UI/caption; 0:58 spoon/laptop rewrite card"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 7,
+      "value": "15.8%",
+      "not_applicable_or_expected_absence": [
+        "README/notes are not required to repeat this demo-specific risk pair.",
+        "Status has no demo-risk field."
+      ],
+      "caveat": "Canonical spoon/laptop saved rewrite. Selected I own-prompt dog/frisbee13.3%→6.7% is a separately recorded live text rewrite.",
+      "conflicts": [],
+      "present": [
+        "README lines 5",
+        "notes lines 15",
+        "captions lines 12",
+        "current selected PDF pages 8",
+        "actual selected narratedv7 MP4 0:58 spoon/laptop UI/caption"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 8,
+      "value": "$3.20 / about three dollars",
+      "not_applicable_or_expected_absence": [
+        "Notes are not required to repeat the per-attempt illustration."
+      ],
+      "caveat": "USD3.20 for8s at USD0.40/s is illustrative, not executed Veo generation or measured savings. $6.01 and$3.69 shown in separate sample/own-prompt total-budget illustrations are not per-attempt prices.",
+      "conflicts": [],
+      "present": [
+        "README lines 229",
+        "captions lines 13",
+        "current selected PDF pages 4",
+        "actual selected narratedv7 MP4 1:02 approximate caption; 0:58 and1:45 UI price basis",
+        "fresh status pricing.single_attempt_usd=3.2; duration_seconds=8; usd_per_second=0.4"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 9,
+      "value": "8/20",
+      "not_applicable_or_expected_absence": [
+        "Caption narration says live generation failed too often without the count.",
+        "Status has no probe-result field."
+      ],
+      "caveat": "Best of the60 live-image test calls; remains below the19/20 reliability gate.",
+      "conflicts": [],
+      "present": [
+        "README lines 31,71",
+        "notes lines 13,15",
+        "current selected PDF pages 9",
+        "actual selected narratedv7 MP4 3:04 limits card: Best8/20"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 10,
+      "value": "Gemini 3.5 Flash",
+      "not_applicable_or_expected_absence": [
+        "Caption narration says Gemini without model version.",
+        "Fresh status has gemini=true, not a rewrite model identifier."
+      ],
+      "caveat": "Fresh status does not identify the rewrite model version. Current README/notes/PDF and actual selected narratedv7 architecture card agree on Gemini3.5 Flash. Earlier J config is lineage, not a fresh final-runtime identity receipt; parent owns later authorized runtime reconciliation.",
+      "conflicts": [],
+      "present": [
+        "README lines 39,57,141,165",
+        "notes lines 9,15",
+        "current selected PDF pages 6,7",
+        "actual selected narratedv7 MP4 2:50 architecture card",
+        "reports/track_j/promotion.json allowed_env.PREFLIGHT_GEMINI_MODEL=gemini-3.5-flash (retained J receipt, not a new cloud read)"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 11,
+      "value": "Google ADK",
+      "not_applicable_or_expected_absence": [],
+      "caveat": "",
+      "conflicts": [],
+      "present": [
+        "README lines 40,56,102,164",
+        "notes lines 9",
+        "captions lines 10",
+        "current selected PDF pages 6,7",
+        "actual selected narratedv7 MP4 2:35 architecture/caption;2:50 card",
+        "fresh status adk=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 12,
+      "value": "Agent Platform Sessions",
+      "not_applicable_or_expected_absence": [],
+      "caveat": "Managed sessions do not imply Agent Engine runtime hosting.",
+      "conflicts": [],
+      "present": [
+        "README lines 41,46,58,140,167",
+        "notes lines 9",
+        "captions lines 27",
+        "current selected PDF pages 6,7",
+        "actual selected narratedv7 MP4 2:42 caption;2:50 card",
+        "fresh status agent_platform_session=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 13,
+      "value": "Cloud Run",
+      "not_applicable_or_expected_absence": [],
+      "caveat": "",
+      "conflicts": [],
+      "present": [
+        "README lines 37,46,54,143,163,172,265",
+        "notes lines 9",
+        "captions lines 26",
+        "current selected PDF pages 6,7",
+        "actual selected narratedv7 MP4 2:35 caption/live architecture;2:50 card",
+        "fresh status cloud_run=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 14,
+      "value": "Firestore",
+      "not_applicable_or_expected_absence": [],
+      "caveat": "",
+      "conflicts": [],
+      "present": [
+        "README lines 38,43,55,61,106,139,166,176,180,197,201,211,263,273",
+        "notes lines 9",
+        "captions lines 26,29",
+        "current selected PDF pages 6,7",
+        "actual selected narratedv7 MP4 2:35 caption/live architecture;2:50 card",
+        "fresh status firestore=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    },
+    {
+      "row": 15,
+      "value": "samples: Active for sample prompts (saved stills); live generation limited",
+      "not_applicable_or_expected_absence": [],
+      "caveat": "Zero model calls/$0.00 refer to serving saved stills; the own-prompt rewrite is live text work. Fresh status generations=0 is hard-coded, not cumulative usage accounting.",
+      "conflicts": [],
+      "present": [
+        "README lines 29,31,43",
+        "notes lines 9,11",
+        "captions lines 15,17,20",
+        "current selected PDF pages 6,7,9",
+        "actual selected narratedv7 MP4 1:10 saved-still caption;1:30 saved-still mode label;1:45 limited message;3:04 limits card",
+        "fresh status preview=true; preview_mode=samples; exact preview_mode_message=Image preview — Active for sample prompts (saved stills); live generation limited"
+      ],
+      "required_missing": [],
+      "state": "CONSISTENT"
+    }
+  ],
+  "video_URL_equality": {
+    "urls_by_surface": {
+      "README": [
+        "https://youtu.be/1A8I-9NZ3Kc"
+      ],
+      "notes": [
+        "https://youtu.be/1A8I-9NZ3Kc"
+      ],
+      "current_selected_PDF": [
+        "https://youtu.be/1A8I-9NZ3Kc"
+      ]
+    },
+    "pass": true,
+    "public_visibility": "NOT VERIFIED: text equality and an anonymous watch-page load would not by themselves distinguish public from unlisted",
+    "uploaded_duration": "NOT VERIFIED: local selected MP4 is208.233333s; no YouTube shown-duration observation was acquired",
+    "PDF_URI_targets": [
+      "https://github.com/testofschool/preflight",
+      "https://youtu.be/1A8I-9NZ3Kc",
+      "https://preflight-jcgro45veq-as.a.run.app/"
+    ],
+    "PDF_YouTube_URI_matches_text": true
+  },
+  "actual_selected_video": {
+    "path": "evidence/final_run_v8_20261018/v/preflight_v7_candidate.mp4",
+    "sha256": "b5ede0341395b1a5f17616ff718454926e7fc3936273761bd93ad158ba6057ad",
+    "bytes": 26823790,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "nb_frames": "6247",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "nb_frames": "9762"
+        }
+      ],
+      "format": {
+        "duration": "208.233333",
+        "size": "26823790"
+      }
+    },
+    "frame_checks": [
+      {
+        "seconds": 29,
+        "sha256": "827f6bc0d55c8870fc2583275da15a013c276213a7fb9c2c8ac47af9da701057",
+        "bytes": 355846
+      },
+      {
+        "seconds": 45,
+        "sha256": "55d93e36152d947f2f772f18e9b53eadb735aaa08adfbfdcd18fa64134e07787",
+        "bytes": 385289
+      },
+      {
+        "seconds": 58,
+        "sha256": "924d95c9f5422be2d4ce753dc93f7a620a5ae763bb2cb06110ad26f2971a63bc",
+        "bytes": 285617
+      },
+      {
+        "seconds": 62,
+        "sha256": "804bc6f613baef901bc1777a313a0e288dc6e6e9a1945a4499e9341077b2916c",
+        "bytes": 601959
+      },
+      {
+        "seconds": 70,
+        "sha256": "bc745881a737517f3cfe38a7208958bc0878f22ddbacd68b55104d583702b7f2",
+        "bytes": 440954
+      },
+      {
+        "seconds": 90,
+        "sha256": "7faffd2014b5be0eb0ed56846799c94343c29d760e100506ea0d2055dbcf65ec",
+        "bytes": 382318
+      },
+      {
+        "seconds": 105,
+        "sha256": "9d57545baf3eeb91debf70d486ba2da7ed780914a60acc111a40928df695204b",
+        "bytes": 391936
+      },
+      {
+        "seconds": 110,
+        "sha256": "1453be54a7978ceb9a211580eb639e31467770192b2b4bc6d93314a33610c078",
+        "bytes": 397346
+      },
+      {
+        "seconds": 155,
+        "sha256": "ce8a0f54693326a343d6213c2f148d7e50ab414566f83913fd0a85351513210f",
+        "bytes": 274259
+      },
+      {
+        "seconds": 162,
+        "sha256": "460b699107252085f472de4c06f377c5bb604d0548ccf166c6014ca5a8268997",
+        "bytes": 329103
+      },
+      {
+        "seconds": 170,
+        "sha256": "c19720332b67a521dcbce4946754bde01765ce55302533bd0fb0d76ef8118eab",
+        "bytes": 408455
+      },
+      {
+        "seconds": 184,
+        "sha256": "02bf55717e7f6b85e2d4404fac38e03583ff2a4532ec29f3decf2ceecfeaaf70",
+        "bytes": 504476
+      },
+      {
+        "seconds": 200,
+        "sha256": "f1cd69ab8f6ae24cfa77864d883dec2820294a56b223b21dc7d9aad30a35e86a",
+        "bytes": 286625
+      }
+    ],
+    "frame_validation": "13 fresh selected narrated-v7 extracts visually inspected as contact sheet; own-prompt90s,architecture170s andclosing200s additionally inspected at full resolution. Frames are from actual b5ede034 source, not silent I.",
+    "own_prompt_context": "Actual narratedv7 dog/frisbee13.3%→6.7%; canonical saved spoon/laptop46.8%→15.8% remains separately demonstrated.",
+    "selection_basis": "Parent verified later direct human approvals and supplied v11 retained selection; actual selected source identity independently hashed in this F pass.",
+    "caption_manifest_path": "evidence/final_run_v8_20261018/v/captions_v7.json",
+    "caption_manifest_sha256": "9ae38c1871ea19208f1e44ff55f3cfa7ff973b8654d78d973e5954e00274c17b",
+    "caption_script_path": "evidence/final_run_v8_20261018/v/caption_script_verbatim.txt",
+    "caption_script_sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08"
+  },
+  "caption_file_check": {
+    "selected_manifest": "evidence/final_run_v8_20261018/v/captions_v7.json",
+    "selected_manifest_sha256": "9ae38c1871ea19208f1e44ff55f3cfa7ff973b8654d78d973e5954e00274c17b",
+    "selected_script": "evidence/final_run_v8_20261018/v/caption_script_verbatim.txt",
+    "selected_script_sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08",
+    "manifest_entries": 36,
+    "nonempty_entries": 35,
+    "normalized_script_manifest_text_equal": true,
+    "lineage_text_same_as_Track_I": true,
+    "timing_note": "Selected narratedv7 manifest governs; ten cue timings differ from old silent I. Old I timing/all-cue proof is lineage only.",
+    "retained_ASR_support": "Sibling v11/v2 source_manifest binds b5ede034 source and selected captions9ae38c18; retained fresh_v7_asr.json has35 expected cues and reported35 normalized exact. This F audit read that receipt and checked expected strings against selected captions; it did not rerun transcription or all burned-caption OCR.",
+    "retained_ASR_expected_strings_match_selected_manifest": true,
+    "retained_ASR_cues": 35,
+    "retained_ASR_normalized_exact_flags": 35
+  },
+  "workspace_drift_separate_from_F_rows": {
+    "docs_HEAD_comparison": [
+      {
+        "path": "README.md",
+        "HEAD_sha256": "2668126039bc7807b7614d591bfa118b0c06b3be396572f9bedaa1d1f3a8d177",
+        "current_worktree_sha256": "e28cd1ce7f586e2e18457e423276eebaa6db72e96cea03fd2df95f84c2489bf7",
+        "matches_HEAD": false
+      },
+      {
+        "path": "docs/submission-notes.md",
+        "HEAD_sha256": "6f6f50c3c0158be358e50fae8353b1aa282dfbf83139ef7c2966e8a9cbdb9ed3",
+        "current_worktree_sha256": "95a50e0ad317ad92b5889701a496f3f92bd06b643b985487c6f03f73b2a50b34",
+        "matches_HEAD": false
+      },
+      {
+        "path": "docs/Preflight_pitch_deck.pdf",
+        "HEAD_sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+        "current_worktree_sha256": "15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a",
+        "matches_HEAD": false
+      },
+      {
+        "path": "docs/Preflight_pitch_deck.pptx",
+        "HEAD_sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a",
+        "current_worktree_sha256": "6e322734aafafd873cff29bba04b0b3c1e61d983aa5268ebd17c9d724aa03313",
+        "matches_HEAD": false
+      }
+    ],
+    "staged_paths": [
+      "M\tstatic/app.js",
+      "M\tstatic/index.html",
+      "M\tstatic/postcheck.js",
+      "M\tstatic/styles.css"
+    ],
+    "note": "Four current docs differ from local HEAD and four staged static files exist. Parent verified later approved public/source/runtime work in other chats. This F audit does not judge that work as unauthorized, mutate it, or infer source/deployment identity from readiness flags; root owns reconciliation.",
+    "template_label_observation": "Current PDF page11 uses3:28. Parent verified later explicit human approval for that selected label and deck, superseding the earlier template-label boundary. No F defect is asserted from the approved change.",
+    "J_error_wording_scope": "J intentionally retained cloud/store.py invalid-config error wording. This is outside the15 canonical rows; no F conflict is invented from it."
+  },
+  "known_context_distinctions": [
+    "0.67 is the rounded historical AUC; precise0.668329 and target0.68 have separate roles.",
+    "Historical-only spoon/laptop53.5% differs from the displayed mixed-proxy46.8%.",
+    "Selected I own-prompt13.3%→6.7% differs from earlier live invocations for that own prompt; stochastic rewrites need not match.",
+    "USD3.20 is the illustrative per-attempt price; $6.01/$3.69 are separately labeled total-budget examples.",
+    "Zero model calls/$0.00 refer to serving saved stills; live text rewrites are separate.",
+    "Status generations=0 is hard-coded and is not cumulative usage accounting.",
+    "Service booleans are readiness flags, not model-quality or accuracy measurements."
+  ],
+  "snapshot_stability_check": [
+    {
+      "path": "README.md",
+      "same_as_start_snapshot": true
+    },
+    {
+      "path": "docs/submission-notes.md",
+      "same_as_start_snapshot": true
+    },
+    {
+      "path": "docs/Preflight_pitch_deck.pdf",
+      "same_as_start_snapshot": true
+    },
+    {
+      "path": "docs/Preflight_pitch_deck.pptx",
+      "same_as_start_snapshot": true
+    },
+    {
+      "path": "demo/preflight_demo_submission_3m.mp4",
+      "same_as_start_snapshot": true
+    },
+    {
+      "path": "reports/final_v7/track_i_submission_caption_script.txt",
+      "same_as_start_snapshot": true
+    },
+    {
+      "path": "reports/final_v7/track_i_submission_captions.json",
+      "same_as_start_snapshot": true
+    }
+  ],
+  "mutations_by_this_audit": {
+    "new_files_only": [
+      "reports/final_v7/track_f_final_2130.md",
+      "reports/final_v7/track_f_final_2130.json"
+    ],
+    "product_POSTs": 0,
+    "model_calls": 0,
+    "cloud_mutations": 0,
+    "docs_runtime_edits": 0,
+    "staging": 0,
+    "commits": 0,
+    "pushes": 0,
+    "prior_preparations": "retained unchanged"
+  },
+  "original_Track_I_lineage": {
+    "path": "demo/preflight_demo_submission_3m.mp4",
+    "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+    "frame_checks": [
+      {
+        "seconds": 29,
+        "sha256": "ba64f1cb3e34bba8df30cc764535b01d9c6d638b8b868e6a49529d1f7c1ed247",
+        "bytes": 351441,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 45,
+        "sha256": "369cec01ce3eaf3c1442eae3ef92d97836d009a270073427c17ee6a491993f42",
+        "bytes": 443303,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 58,
+        "sha256": "e79b724952086b242d83e687c6bc43e085f38ef7b97f8ec9a0d237e7b26933ea",
+        "bytes": 380511,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 62,
+        "sha256": "a595bac03cc80b79387c8c04fcdc638a1106f62e862b534302a8300d3db4d8fc",
+        "bytes": 426471,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 70,
+        "sha256": "c8669cc0aad39016e0e5f22e2bcf47e01b35f4970f37362f516dbd7b3d004abc",
+        "bytes": 419143,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 90,
+        "sha256": "929402b9ac8f48d56547b004a5bf98a70816b750b6721ab97b5e2d083fb97222",
+        "bytes": 387351,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 105,
+        "sha256": "a2d00c2ad7558909230ed8a9afb0b2c24b9aa8a1cea838888a78b4d03016539f",
+        "bytes": 414796,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 110,
+        "sha256": "914825971bb88318e5681d2daafcf210eb1108c04e7dd1f0786f0fc1b24da550",
+        "bytes": 439369,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 155,
+        "sha256": "c3c8abf7f92740cc3680544cebf72faedc26cbcf215b30af977dfb7678015448",
+        "bytes": 407341,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 162,
+        "sha256": "a2d7f28c1f2f3faacb4dde317b3b100cd4cc0d1c03eef6fbd953f0313fbb73d6",
+        "bytes": 351032,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 170,
+        "sha256": "143b46ed97b0d301fb070a2b169c7831dbcfdef0bcd1c6f0b7294a7dc4ba57e7",
+        "bytes": 279564,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 184,
+        "sha256": "2fcee747444dd1fb828acbec063e92487c394518a8512f21919a07897eeae1aa",
+        "bytes": 365135,
+        "same_as_previously_visually_inspected_frame": true
+      },
+      {
+        "seconds": 200,
+        "sha256": "bdd6eebbfc41470d22b46e018993e5ca581ba2b7da9ef595f6366ed95d1d69e4",
+        "bytes": 190775,
+        "same_as_previously_visually_inspected_frame": true
+      }
+    ],
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "nb_frames": "6247"
+        }
+      ],
+      "format": {
+        "duration": "208.233333",
+        "size": "11708270"
+      }
+    },
+    "frame_validation": "All13 freshly extracted selected-MP4 frame hashes exactly match the frame artifacts visually inspected in the earlier preparation. Byte-identical source video and frame identity bind those visual observations to this final audit.",
+    "own_prompt_context": "Actual selected I dog/frisbee13.3%→6.7%, separate from canonical saved spoon/laptop46.8%→15.8%.",
+    "selection_state": "SUPERSEDED for later approved narratedv7 selection; preserved unchanged"
+  },
+  "later_selection_context": {
+    "parent_verified_human_approval": "Apply AIBC2026v10 pre-click fixes and Proceed with active goal chats; later approved selection supersedes the earlier v7/fallback assumptions.",
+    "reported_current_public_main": "02c97929d104f1fbabb0f4b0b27b83273d60829f",
+    "local_HEAD": "d6c3a8ccded28e425c5b726c87699ab9fb75d9c4",
+    "public_release_scope": "F independently checks current local docs and selected media; root owns current public-commit/clone/history/visibility receipts."
+  }
+}

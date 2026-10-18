@@ -1,0 +1,21 @@
+{
+  "checked_at_kst": "2026-10-18T21:33:05.835659+09:00",
+  "url": "https://www.youtube.com/watch?v=1A8I-9NZ3Kc",
+  "anonymous": true,
+  "cookies_provided": false,
+  "auth_headers_provided": false,
+  "curlrc_disabled": true,
+  "curl_exit": 0,
+  "http_status": "200",
+  "html_bytes": 1262672,
+  "player_response_found": true,
+  "public_visibility": "PUBLIC",
+  "shown_duration_seconds": 208,
+  "video_id": "1A8I-9NZ3Kc",
+  "title": "Preflight \u2014 AIBC 2026 demo v7 (testofschool)",
+  "is_private": false,
+  "is_unlisted": false,
+  "length_seconds": "208",
+  "playability_status": "OK",
+  "pass": true
+}

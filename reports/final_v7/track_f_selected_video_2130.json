@@ -1,0 +1,730 @@
+{
+  "reviewer": "/root/video_i_review",
+  "checked_at_kst": "2026-10-18T21:35:24.056865+09:00",
+  "scope": "Read-only final F support. Only the two requested reports were written. No video, source, UI, network/model, Git or publication mutation.",
+  "verdict": "SELECTED_LOCAL_IDENTITY_DECODE_AND_SAMPLED_CONTENT_VERIFIED",
+  "selected_url": "https://youtu.be/1A8I-9NZ3Kc",
+  "url_binding_basis": "Direct parent instruction plus the local v11 final report and READY.json retaining this target; no new public network playback was performed by this reviewer.",
+  "selected_movie": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/evidence/final_run_v8_20261018/v/preflight_v7_candidate.mp4",
+    "bytes": 26823790,
+    "sha256": "b5ede0341395b1a5f17616ff718454926e7fc3936273761bd93ad158ba6057ad"
+  },
+  "verified_download_copies": [
+    {
+      "path": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "bytes": 26823790,
+      "sha256": "b5ede0341395b1a5f17616ff718454926e7fc3936273761bd93ad158ba6057ad"
+    },
+    {
+      "path": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s (1).mp4",
+      "bytes": 26823790,
+      "sha256": "b5ede0341395b1a5f17616ff718454926e7fc3936273761bd93ad158ba6057ad"
+    }
+  ],
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuvj420p",
+        "level": 40,
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/90000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 18741000,
+        "duration": "208.233333",
+        "bit_rate": "823177",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "6247",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc61.19.100 libx264"
+        },
+        "side_data_list": [
+          {
+            "side_data_type": "ICC Profile"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 9995200,
+        "duration": "208.233333",
+        "bit_rate": "198521",
+        "nb_frames": "9762",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "208.233333",
+      "size": "26823790",
+      "bit_rate": "1030528",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.1.102",
+        "comment": "Made with Remotion 4.0.506"
+      }
+    }
+  },
+  "fresh_decode": {
+    "command": "ffmpeg -v error -xerror -err_detect explode -i <selected Downloads movie> -map 0:v:0 -map 0:a:0 -f null -",
+    "exit_code": 0,
+    "stderr": "",
+    "scope": "Full selected video and AAC streams; no full manual playback or new ASR performed."
+  },
+  "caption_sources": {
+    "manifest": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/evidence/final_run_v8_20261018/v/captions_v7.json",
+      "bytes": 15249,
+      "sha256": "9ae38c1871ea19208f1e44ff55f3cfa7ff973b8654d78d973e5954e00274c17b"
+    },
+    "actual_remotion_imported_copy": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/evidence/final_run_v8_20261018/v/remotion/public/captions.json",
+      "bytes": 15249,
+      "sha256": "9ae38c1871ea19208f1e44ff55f3cfa7ff973b8654d78d973e5954e00274c17b"
+    },
+    "render_source": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/evidence/final_run_v8_20261018/v/remotion/src/index.tsx",
+      "bytes": 4942,
+      "sha256": "474a0764fb2b3f26df321f03d5093c97e42e33824d270d49f8202abba3499223"
+    },
+    "script": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/evidence/final_run_v8_20261018/v/caption_script_verbatim.txt",
+      "bytes": 1833,
+      "sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08"
+    },
+    "v11_script_copy": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v11_20261018/v2/frozen_script_35_cues.txt",
+      "bytes": 1833,
+      "sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08"
+    },
+    "script_copies_byte_identical": true,
+    "active_cues": 35,
+    "empty_json_entry_count": 1,
+    "same_35_strings_as_silent_I": true,
+    "timing_manifest_byte_identical_to_silent_I": false,
+    "timing_changes_from_silent_I": [
+      {
+        "cue_index": 4,
+        "text": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+        "silent_I_frames": [
+          390,
+          480
+        ],
+        "selected_v7_frames": [
+          300,
+          480
+        ]
+      },
+      {
+        "cue_index": 10,
+        "text": "Then a Google ADK agent on Gemini rewrites the prompt",
+        "silent_I_frames": [
+          1500,
+          1600
+        ],
+        "selected_v7_frames": [
+          1500,
+          1594
+        ]
+      },
+      {
+        "cue_index": 11,
+        "text": "and keeps the rewrite only if the estimated risk drops.",
+        "silent_I_frames": [
+          1600,
+          1700
+        ],
+        "selected_v7_frames": [
+          1594,
+          1709
+        ]
+      },
+      {
+        "cue_index": 12,
+        "text": "Here it drops to 15.8 percent. Copy it and go.",
+        "silent_I_frames": [
+          1700,
+          1800
+        ],
+        "selected_v7_frames": [
+          1709,
+          1800
+        ]
+      },
+      {
+        "cue_index": 13,
+        "text": "Before paying about three dollars for an eight-second video,",
+        "silent_I_frames": [
+          1800,
+          1892
+        ],
+        "selected_v7_frames": [
+          1800,
+          1898
+        ]
+      },
+      {
+        "cue_index": 14,
+        "text": "you can look at a still of the scene.",
+        "silent_I_frames": [
+          1892,
+          1983
+        ],
+        "selected_v7_frames": [
+          1898,
+          1974
+        ]
+      },
+      {
+        "cue_index": 15,
+        "text": "For judging, the five sample prompts use saved stills:",
+        "silent_I_frames": [
+          1983,
+          2075
+        ],
+        "selected_v7_frames": [
+          1974,
+          2074
+        ]
+      },
+      {
+        "cue_index": 16,
+        "text": "zero model calls, zero cost, and the label says so.",
+        "silent_I_frames": [
+          2075,
+          2176
+        ],
+        "selected_v7_frames": [
+          2074,
+          2201
+        ]
+      },
+      {
+        "cue_index": 17,
+        "text": "In our tests, live image generation failed too often under shared capacity,",
+        "silent_I_frames": [
+          2176,
+          2298
+        ],
+        "selected_v7_frames": [
+          2201,
+          2324
+        ]
+      },
+      {
+        "cue_index": 18,
+        "text": "so we did not put it in front of you.",
+        "silent_I_frames": [
+          2298,
+          2400
+        ],
+        "selected_v7_frames": [
+          2324,
+          2400
+        ]
+      }
+    ],
+    "render_behavior": "Remotion selects the first nonempty cue covering each frame. The empty entry at frames 300–389 does not produce a blank interval because active cue 4 now starts at frame 300."
+  },
+  "fresh_caption_midpoint_OCR": {
+    "method": "35 fresh caption-band frame extractions from selected MP4, in-memory local Tesseract, no files or network calls.",
+    "raw_exact": 31,
+    "total": 35,
+    "raw_ambiguities": [
+      {
+        "cue": 0,
+        "expected": "AI",
+        "raw": "Al"
+      },
+      {
+        "cue": 4,
+        "expected": "I",
+        "raw": "|"
+      },
+      {
+        "cue": 7,
+        "expected": "AI",
+        "raw": "Al"
+      },
+      {
+        "cue": 27,
+        "expected": "AI",
+        "raw": "Al"
+      }
+    ],
+    "manual_resolution": "All four fresh caption crops were separately viewed and matched the frozen uppercase I wording. Numerical captions were exact raw matches.",
+    "resolved_count": 35,
+    "limitation": "Cue midpoint content check, not every-frame caption or acoustic-onset measurement.",
+    "raw_rows": [
+      {
+        "cue": 0,
+        "frame": 59,
+        "seconds": 1.9666666666666666,
+        "expected": "People who generate AI video pay per attempt. Here is what they say.",
+        "actual": "People who generate Al video pay per attempt. Here is what they say.",
+        "exact": false
+      },
+      {
+        "cue": 1,
+        "frame": 164,
+        "seconds": 5.466666666666667,
+        "expected": "\"You still burn credits on the failed attempt.\"",
+        "actual": "\"You still burn credits on the failed attempt.\"",
+        "exact": true
+      },
+      {
+        "cue": 2,
+        "frame": 254,
+        "seconds": 8.466666666666667,
+        "expected": "\"Only one of the generations was usable.\"",
+        "actual": "\"Only one of the generations was usable.\"",
+        "exact": true
+      },
+      {
+        "cue": 4,
+        "frame": 389,
+        "seconds": 12.966666666666667,
+        "expected": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+        "actual": "\"| recommend a lo-res preview before having to spend actual credits.\"",
+        "exact": false
+      },
+      {
+        "cue": 5,
+        "frame": 569,
+        "seconds": 18.966666666666665,
+        "expected": "Preflight is that step before you pay.",
+        "actual": "Preflight is that step before you pay.",
+        "exact": true
+      },
+      {
+        "cue": 6,
+        "frame": 693,
+        "seconds": 23.1,
+        "expected": "Paste a prompt.",
+        "actual": "Paste a prompt.",
+        "exact": true
+      },
+      {
+        "cue": 7,
+        "frame": 852,
+        "seconds": 28.4,
+        "expected": "Preflight compares it with 1,911 human votes on earlier AI videos",
+        "actual": "Preflight compares it with 1,911 human votes on earlier Al videos",
+        "exact": false
+      },
+      {
+        "cue": 8,
+        "frame": 1113,
+        "seconds": 37.1,
+        "expected": "and returns a risk estimate, with the closest past prompts as evidence.",
+        "actual": "and returns a risk estimate, with the closest past prompts as evidence.",
+        "exact": true
+      },
+      {
+        "cue": 9,
+        "frame": 1374,
+        "seconds": 45.8,
+        "expected": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+        "actual": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+        "exact": true
+      },
+      {
+        "cue": 10,
+        "frame": 1546,
+        "seconds": 51.53333333333333,
+        "expected": "Then a Google ADK agent on Gemini rewrites the prompt",
+        "actual": "Then a Google ADK agent on Gemini rewrites the prompt",
+        "exact": true
+      },
+      {
+        "cue": 11,
+        "frame": 1651,
+        "seconds": 55.03333333333333,
+        "expected": "and keeps the rewrite only if the estimated risk drops.",
+        "actual": "and keeps the rewrite only if the estimated risk drops.",
+        "exact": true
+      },
+      {
+        "cue": 12,
+        "frame": 1754,
+        "seconds": 58.46666666666667,
+        "expected": "Here it drops to 15.8 percent. Copy it and go.",
+        "actual": "Here it drops to 15.8 percent. Copy it and go.",
+        "exact": true
+      },
+      {
+        "cue": 13,
+        "frame": 1848,
+        "seconds": 61.6,
+        "expected": "Before paying about three dollars for an eight-second video,",
+        "actual": "Before paying about three dollars for an eight-second video,",
+        "exact": true
+      },
+      {
+        "cue": 14,
+        "frame": 1935,
+        "seconds": 64.5,
+        "expected": "you can look at a still of the scene.",
+        "actual": "you can look at a still of the scene.",
+        "exact": true
+      },
+      {
+        "cue": 15,
+        "frame": 2023,
+        "seconds": 67.43333333333334,
+        "expected": "For judging, the five sample prompts use saved stills:",
+        "actual": "For judging, the five sample prompts use saved stills:",
+        "exact": true
+      },
+      {
+        "cue": 16,
+        "frame": 2137,
+        "seconds": 71.23333333333333,
+        "expected": "zero model calls, zero cost, and the label says so.",
+        "actual": "zero model calls, zero cost, and the label says so.",
+        "exact": true
+      },
+      {
+        "cue": 17,
+        "frame": 2262,
+        "seconds": 75.4,
+        "expected": "In our tests, live image generation failed too often under shared capacity,",
+        "actual": "In our tests, live image generation failed too often under shared capacity,",
+        "exact": true
+      },
+      {
+        "cue": 18,
+        "frame": 2361,
+        "seconds": 78.7,
+        "expected": "so we did not put it in front of you.",
+        "actual": "so we did not put it in front of you.",
+        "exact": true
+      },
+      {
+        "cue": 19,
+        "frame": 2720,
+        "seconds": 90.66666666666667,
+        "expected": "Your own prompt gets a live Gemini rewrite too.",
+        "actual": "Your own prompt gets a live Gemini rewrite too.",
+        "exact": true
+      },
+      {
+        "cue": 20,
+        "frame": 3152,
+        "seconds": 105.06666666666666,
+        "expected": "Live stills are limited to the samples during judging, and the page says so.",
+        "actual": "Live stills are limited to the samples during judging, and the page says so.",
+        "exact": true
+      },
+      {
+        "cue": 21,
+        "frame": 3375,
+        "seconds": 112.5,
+        "expected": "Every number comes with what it is and what it is not.",
+        "actual": "Every number comes with what it is and what it is not.",
+        "exact": true
+      },
+      {
+        "cue": 22,
+        "frame": 3571,
+        "seconds": 119.03333333333333,
+        "expected": "After you generate, upload the clip.",
+        "actual": "After you generate, upload the clip.",
+        "exact": true
+      },
+      {
+        "cue": 23,
+        "frame": 3770,
+        "seconds": 125.66666666666667,
+        "expected": "Gemini takes a second look at sampled frames,",
+        "actual": "Gemini takes a second look at sampled frames,",
+        "exact": true
+      },
+      {
+        "cue": 24,
+        "frame": 4068,
+        "seconds": 135.6,
+        "expected": "and its verdict is stored as separate feedback next to the human votes.",
+        "actual": "and its verdict is stored as separate feedback next to the human votes.",
+        "exact": true
+      },
+      {
+        "cue": 25,
+        "frame": 4394,
+        "seconds": 146.46666666666667,
+        "expected": "It is a second pair of eyes, not a verdict.",
+        "actual": "It is a second pair of eyes, not a verdict.",
+        "exact": true
+      },
+      {
+        "cue": 26,
+        "frame": 4631,
+        "seconds": 154.36666666666667,
+        "expected": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+        "actual": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+        "exact": true
+      },
+      {
+        "cue": 27,
+        "frame": 4856,
+        "seconds": 161.86666666666667,
+        "expected": "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.",
+        "actual": "Gemini on Vertex Al, an ADK agent with Agent Platform Sessions.",
+        "exact": false
+      },
+      {
+        "cue": 28,
+        "frame": 5070,
+        "seconds": 169,
+        "expected": "The architecture: one prompt, a traceable check,",
+        "actual": "The architecture: one prompt, a traceable check,",
+        "exact": true
+      },
+      {
+        "cue": 29,
+        "frame": 5250,
+        "seconds": 175,
+        "expected": "tools for evidence and difficulty, Firestore as memory.",
+        "actual": "tools for evidence and difficulty, Firestore as memory.",
+        "exact": true
+      },
+      {
+        "cue": 30,
+        "frame": 5391,
+        "seconds": 179.7,
+        "expected": "The limits are on the page.",
+        "actual": "The limits are on the page.",
+        "exact": true
+      },
+      {
+        "cue": 31,
+        "frame": 5511,
+        "seconds": 183.7,
+        "expected": "The risk score is a historical signal, held-out AUC 0.67,",
+        "actual": "The risk score is a historical signal, held-out AUC 0.67,",
+        "exact": true
+      },
+      {
+        "cue": 32,
+        "frame": 5631,
+        "seconds": 187.7,
+        "expected": "not a promise about today's models.",
+        "actual": "not a promise about today's models.",
+        "exact": true
+      },
+      {
+        "cue": 33,
+        "frame": 5721,
+        "seconds": 190.7,
+        "expected": "Clip-review accuracy is not measured yet.",
+        "actual": "Clip-review accuracy is not measured yet.",
+        "exact": true
+      },
+      {
+        "cue": 34,
+        "frame": 5905,
+        "seconds": 196.83333333333334,
+        "expected": "Built in Seoul by a producer who paid for these failures,",
+        "actual": "Built in Seoul by a producer who paid for these failures,",
+        "exact": true
+      },
+      {
+        "cue": 35,
+        "frame": 6145,
+        "seconds": 204.83333333333334,
+        "expected": "tested from India. Preflight: know before you pay.",
+        "actual": "tested from India. Preflight: know before you pay.",
+        "exact": true
+      }
+    ]
+  },
+  "fresh_sampled_frames": [
+    {
+      "seconds": 45,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "55d93e36152d947f2f772f18e9b53eadb735aaa08adfbfdcd18fa64134e07787",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "UI risk is 46.8%, labeled Mixed heuristic risk estimate; historical vote estimate is separately 53.5%. Burned caption says the spoon/laptop estimate is 46.8 percent."
+    },
+    {
+      "seconds": 56,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "45f67abdc1cd9a2f08681820b1e269adf3693f3db833331213203efc7836beba",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Saved sample rewrite card: static high-angle desk/spoon/closed laptop rewrite. Full line reads 46.8% original → 15.8% rewrite; label says Sample rewrite (saved). Caption says the rewrite is kept only if estimated risk drops."
+    },
+    {
+      "seconds": 58,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "924d95c9f5422be2d4ce753dc93f7a620a5ae763bb2cb06110ad26f2971a63bc",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Burned caption says Here it drops to 15.8 percent. Copy it and go. At this exact frame the risk line is at the top edge and partially clipped; the full line was read at 56s."
+    },
+    {
+      "seconds": 77,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "beaaac8aed185df717ca34f44b362899e0359e4c223663b6454a2455f7210b26",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Saved still label says generated 2026-10-18, 0 model calls, $0.00. It also says this is an image-model still, not a Veo frame, and motion/flicker/timing cannot be judged from it."
+    },
+    {
+      "seconds": 90,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "7faffd2014b5be0eb0ed56846799c94343c29d760e100506ea0d2055dbcf65ec",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Entire own-prompt rewrite is visible: golden retriever/red plastic disc/sandy beach/sunset/wide shot/slow motion. Risk line reads 13.3% original → 6.7% rewrite. Burned caption says the own prompt gets a live Gemini rewrite."
+    },
+    {
+      "seconds": 105,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "9d57545baf3eeb91debf70d486ba2da7ed780914a60acc111a40928df695204b",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Actual red limited-message text is fully legible: Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works. Burned caption agrees with that limitation."
+    },
+    {
+      "seconds": 170,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "c19720332b67a521dcbce4946754bde01765ce55302533bd0fb0d76ef8118eab",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Architecture: Browser → Cloud Run (FastAPI, asia-southeast1) → Google ADK rewrite agent (Gemini 3.5 Flash, Vertex AI, Agent Platform Sessions); tools nearest prompts + IRT difficulty; still preview / clip review; Cloud Firestore for 1,911 votes, IRT parameters, feedback and saved stills."
+    },
+    {
+      "seconds": 184,
+      "source": "/Users/felix/Downloads/UPLOAD_CANDIDATE_Preflight_AIBC2026_v7_narrated_3m28s.mp4",
+      "decoded_png_sha256": "02bf55717e7f6b85e2d4404fac38e03583ff2a4532ec29f3decf2ceecfeaaf70",
+      "inspection": "Freshly extracted directly from selected bytes; PNG in memory, with 56s viewed as a native-resolution JPEG due display transport limitation.",
+      "observation": "Limits card: held-out AUC 0.67; Live image generation Best 8/20, 60 test calls across three Gemini image models under shared capacity; judging uses saved stills for five samples, 0 model calls and $0.00; clip-review accuracy not measured."
+    }
+  ],
+  "lineage": {
+    "earlier_silent_I_canonical": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m.mp4",
+      "bytes": 11708270,
+      "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565"
+    },
+    "earlier_silent_I_candidate": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/submission_candidate_v4.mp4",
+      "bytes": 11708270,
+      "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565"
+    },
+    "earlier_I_review": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/final_v7/track_i_independent_review.json",
+    "status": "Original silent I bytes remain unchanged at SHA71014624…e42565. Later human-selected narrated v7 SHA b5ede034…6057ad is the current review target and supersedes silent I as the selected artifact.",
+    "proof_boundary": "The old I silence, exact-outside-frame and caption-timing passes do not apply to the selected Remotion/narrated render. Source strings are shared; 10 cue timing entries changed."
+  },
+  "numerical_and_scope_notes": [
+    "Spoon/laptop 46.8% → 15.8% is the saved sample rewrite. Its 46.8% UI value is explicitly a mixed heuristic, with separate historical vote estimate 53.5%.",
+    "Own-prompt 13.3% → 6.7% is the live text rewrite captured in the product footage, separate from the canonical saved sample.",
+    "Best 8/20 is shown with the 60-call / three-model historical shared-capacity experiment context. This report does not reinterpret it as the later v11 P primary/fallback result.",
+    "0 model calls / $0.00 is scoped to saved sample still retrieval during judging. It is not a claim of zero project/day/provider calls or zero cost for generating the saved images.",
+    "The video itself continues to say clip-review accuracy is not measured."
+  ],
+  "external_documents_read": [
+    "/Users/felix/Downloads/Preflight_v11_final_report.md",
+    "/Users/felix/Downloads/Preflight_v11_READY.json",
+    "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v11_20261018/v2/source_manifest.json",
+    "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v11_20261018/v2/PRODUCTION_CONTRACT.md",
+    "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v11_20261018/v2/fresh_v7_asr_summary.json"
+  ],
+  "prior_v11_findings_not_rerun": "The v11 report retains v7 after V2 pacing FAIL and reports prior fresh ASR 35/35. This reviewer did not rerun ASR, pacing, loudness, source-rule verification, provider logs or public YouTube playback."
+}

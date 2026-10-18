@@ -1,0 +1,302 @@
+{
+  "observed_at_kst": "2026-10-18T21:33:34.115933+09:00",
+  "scope": "Read-only selected-deck identity, authorized v10 delta, fonts and native link targets for 21:30 Track F support; no old G redesign/rejudging.",
+  "selection_authority": "Root forwarded explicit later user approval of v10: preserved v8 baseline; remove only the risk-drop future-work paragraph on displayed page10; replace displayed page11 video URL/target with1A8I-9NZ3Kc, retain3:28. Primary PREBUILD/REPORT/READY independently pin that selection.",
+  "artifacts": {
+    "current_pdf": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/docs/Preflight_pitch_deck.pdf",
+      "bytes": 585134,
+      "sha256": "15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a"
+    },
+    "current_pptx": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/docs/Preflight_pitch_deck.pptx",
+      "bytes": 1981973,
+      "sha256": "6e322734aafafd873cff29bba04b0b3c1e61d983aa5268ebd17c9d724aa03313"
+    },
+    "primary_v10_pdf": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/output/Preflight_pitch_deck.pdf",
+      "bytes": 585134,
+      "sha256": "15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a"
+    },
+    "primary_v10_pptx": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/output/Preflight_pitch_deck.pptx",
+      "bytes": 1981973,
+      "sha256": "6e322734aafafd873cff29bba04b0b3c1e61d983aa5268ebd17c9d724aa03313"
+    },
+    "authorized_baseline_pdf": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v9_20261018/d/baseline/Preflight_Gprime_final_v8.pdf",
+      "bytes": 585259,
+      "sha256": "24053fc97a89b1e5f559658665790eac41e2037fe767ebaadab8ad2bc627fe09"
+    },
+    "authorized_baseline_pptx": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v9_20261018/d/baseline/Preflight_Gprime_final_v8.pptx",
+      "bytes": 1981995,
+      "sha256": "d71d9470044e6e640f31f490711a6539b5b4d574b31c7b672aeca7e5e5f95ac3"
+    },
+    "retained_native_download_pdf": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/s1/uploaded_pdf_download.pdf",
+      "bytes": 585134,
+      "sha256": "15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a"
+    },
+    "retained_anonymous_pdf": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/a/anonymous_final/docs/Preflight_pitch_deck.pdf",
+      "bytes": 585134,
+      "sha256": "15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a"
+    },
+    "retained_anonymous_pptx": {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/a/anonymous_final/docs/Preflight_pitch_deck.pptx",
+      "bytes": 1981973,
+      "sha256": "6e322734aafafd873cff29bba04b0b3c1e61d983aa5268ebd17c9d724aa03313"
+    }
+  },
+  "current_exactly_matches_primary_v10": true,
+  "current_matches_retained_native_download": true,
+  "current_matches_retained_anonymous_copy": true,
+  "package_changed_parts_vs_authorized_baseline": [
+    "ppt/slides/slide13.xml",
+    "ppt/slides/slide14.xml",
+    "ppt/slides/_rels/slide14.xml.rels"
+  ],
+  "package_entry_order_names_identical": true,
+  "only_three_authorized_parts_changed": true,
+  "page11_url_reverse_recovers_baseline_xml": true,
+  "page11_url_reverse_recovers_baseline_relationships": true,
+  "exactly_one_removed_paragraph_found": true,
+  "page10_only_exact_paragraph_removed": true,
+  "cover_identical_to_authorized_baseline": true,
+  "official_resources": {
+    "ppt/slideMasters/": {
+      "count": 2,
+      "byte_identical": 2
+    },
+    "ppt/slideLayouts/": {
+      "count": 22,
+      "byte_identical": 22
+    },
+    "ppt/theme/": {
+      "count": 2,
+      "byte_identical": 2
+    },
+    "ppt/fonts/": {
+      "count": 6,
+      "byte_identical": 6
+    },
+    "ppt/media/": {
+      "count": 5,
+      "byte_identical": 5
+    }
+  },
+  "slide_dimensions": {
+    "cy": "5143500",
+    "cx": "9144000"
+  },
+  "pdf_pages": 11,
+  "only_pdf_text_pages10_11_changed": true,
+  "page10_exact_text_delta": true,
+  "page11_exact_text_delta": true,
+  "tabs_future_line_preserved": true,
+  "old_future_riskdrop_line_removed": true,
+  "duration_3_28_preserved": true,
+  "pdfinfo": "Creator:         Impress\nProducer:        LibreOffice 26.2.4.2 (AARCH64)\nCreationDate:    Sun Oct 18 20:27:24 2026 KST\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       720 x 405.014 pts\nPage rot:        0\nFile size:       585134 bytes\nOptimized:       no\nPDF version:     1.7\n",
+  "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBAAAAA+GoogleSansFlexSemiBold        TrueType          WinAnsi          yes yes yes    263  0\nCAAAAA+GoogleSansFlex                TrueType          WinAnsi          yes yes yes    268  0\nDAAAAA+GoogleSansFlexMedium          TrueType          WinAnsi          yes yes yes    278  0\nEAAAAA+LucidaGrande                  TrueType          WinAnsi          yes yes yes    273  0\n",
+  "four_pdf_fonts_all_embedded": true,
+  "font_rows": [
+    "BAAAAA+GoogleSansFlexSemiBold        TrueType          WinAnsi          yes yes yes    263  0",
+    "CAAAAA+GoogleSansFlex                TrueType          WinAnsi          yes yes yes    268  0",
+    "DAAAAA+GoogleSansFlexMedium          TrueType          WinAnsi          yes yes yes    278  0",
+    "EAAAAA+LucidaGrande                  TrueType          WinAnsi          yes yes yes    273  0"
+  ],
+  "font_family_names": [
+    "GoogleSansFlexSemiBold",
+    "GoogleSansFlex",
+    "GoogleSansFlexMedium",
+    "LucidaGrande"
+  ],
+  "pdf_under_5MB": true,
+  "PDF_Hangul_count": 0,
+  "native_pdf_uri_annotations": [
+    {
+      "page": 11,
+      "uri": "https://github.com/testofschool/preflight"
+    },
+    {
+      "page": 11,
+      "uri": "https://youtu.be/1A8I-9NZ3Kc"
+    },
+    {
+      "page": 11,
+      "uri": "https://preflight-jcgro45veq-as.a.run.app/"
+    }
+  ],
+  "exact_three_links": true,
+  "font_usage": {
+    "/BAAAAA+GoogleSansFlexSemiBold": {
+      "pages": [
+        1,
+        3
+      ],
+      "text_by_page": "body text"
+    },
+    "/CAAAAA+GoogleSansFlex": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "text_by_page": "body text"
+    },
+    "/DAAAAA+GoogleSansFlexMedium": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "text_by_page": "body text"
+    },
+    "/EAAAAA+LucidaGrande": {
+      "pages": [
+        8
+      ],
+      "text_by_page": {
+        "8": "\u2192"
+      }
+    }
+  },
+  "video_url_by_surface": {
+    "README.md": [
+      "https://youtu.be/1A8I-9NZ3Kc"
+    ],
+    "docs/submission-notes.md": [
+      "https://youtu.be/1A8I-9NZ3Kc"
+    ],
+    "PDF": [
+      "https://youtu.be/1A8I-9NZ3Kc"
+    ]
+  },
+  "video_url_equality": true,
+  "primary_receipts_read": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/PREBUILD.md",
+      "sha256": "c343afb19499e461cd11ddcea155f6ba525760f28cc060af82b4852961dbef70"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/REPORT.md",
+      "sha256": "b366f041ba77b3537af872dc8e6ea1ab02e942b5f8691a17a0e940388ad1c211"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/checks.json",
+      "sha256": "3924b7354f4e003810985e16a3dcfc9e46e03026167bee1cc24a24b24302b5fd"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/build_receipt.json",
+      "sha256": "3f2abd7a028f7f3f0f7dda6e9ceef66ae7fbe52998843937d440a63019d446c9"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/export_receipt.json",
+      "sha256": "fb3e487576b64d391386e448a5e1982905b62c5e7b95d93404e89c576b9e58a6"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/d/finalizer_receipt.json",
+      "sha256": "fe005c84f099cf2b243b8148b8a510f96b342e751e27eecc14e9527dde880c24"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/a/DECK_INDEPENDENT_AUDIT.json",
+      "sha256": "073f4364490f6ce174f0e9d2e14cbe5046f0994ef1da5a160f73d71174049c1b"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/a/NATIVE_PDF_INDEPENDENT_AUDIT.json",
+      "sha256": "de64c80dd12928219c82bf99e6cb65a2eba883bfd3e446e490f9dfad4389319e"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/a/AUDIT_V10_FINAL.md",
+      "sha256": "c51dac019ab6faada641b3e61533c533f00d95b08046d7cbb952e6855b63fb1e"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/consistency_v10.json",
+      "sha256": "0fbe69840ee62497475aef5f797bc0a0aa30ca40170bd0d6c5e246434ff0eef9"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/READY.json",
+      "sha256": "4ac221c3a6f3bca7ed520241b60308ca1184f91c318e4c806e80e3c763c9563c"
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/final_run_v10_20261018/s1/uploaded_pdf_hash.json",
+      "sha256": "26ec796cb97e9018ca53efa486122db52705e5e5541b5eb5ad9643be54f43d4b"
+    }
+  ],
+  "retained_primary_receipt_claim_boundary": "Primary v10 READY/audit/consistency receipts report native upload/public copy equality and public HEAD02c97929 at20:30. This audit independently matched their retained file bytes and inspected native links/fonts; no fresh form operation, URL playback/public-vs-unlisted check, remote fetch, deployment or Submit occurred.",
+  "visual_check": "Existing primary v10 full-size page10/page11 renders inspected: risk-drop future line absent, tabs line retained; new visible URL and3:28 legible, no new clipping/tofu observed. No rerender/export/font registration performed.",
+  "prior_G_selection_boundary": "Historical v7 image-led candidate failed its isolated visual gate and was not promoted. Later explicit v10 selection uses the user-named preserved v8 baseline; old v7/fallback hashes do not govern the current selected deck.",
+  "checks": {
+    "current_exactly_matches_primary_v10": true,
+    "current_matches_retained_native_download": true,
+    "current_matches_retained_anonymous_copy": true,
+    "package_entry_order_names_identical": true,
+    "only_three_authorized_parts_changed": true,
+    "page11_url_reverse_recovers_baseline_xml": true,
+    "page11_url_reverse_recovers_baseline_relationships": true,
+    "exactly_one_removed_paragraph_found": true,
+    "page10_only_exact_paragraph_removed": true,
+    "cover_identical_to_authorized_baseline": true,
+    "only_pdf_text_pages10_11_changed": true,
+    "page10_exact_text_delta": true,
+    "page11_exact_text_delta": true,
+    "tabs_future_line_preserved": true,
+    "old_future_riskdrop_line_removed": true,
+    "duration_3_28_preserved": true,
+    "four_pdf_fonts_all_embedded": true,
+    "pdf_under_5MB": true,
+    "exact_three_links": true,
+    "video_url_equality": true,
+    "11pages": true,
+    "official_resources_preserved": true,
+    "Hangul0": true
+  },
+  "failed_checks": [],
+  "result": "PASS",
+  "mutations": {
+    "owned_report_files_only": [
+      "reports/final_v7/track_f_selected_deck_2130.json",
+      "reports/final_v7/track_f_selected_deck_2130.md"
+    ],
+    "deck_edits": 0,
+    "font_operations": 0,
+    "exports": 0,
+    "git_mutations": 0,
+    "model_calls": 0,
+    "cloud_mutations": 0
+  },
+  "end_identity_stable": true,
+  "PPTX_raw_XML_Hangul_count": 16,
+  "PPTX_visible_text_Hangul_count": 0,
+  "inherited_theme_font_identifier_Hangul": [
+    {
+      "part": "ppt/theme/theme1.xml",
+      "raw_Hangul_characters": 8,
+      "visible_text_Hangul": 0,
+      "classification": "Unchanged official-theme East-Asian font-family identifiers; not slide copy."
+    },
+    {
+      "part": "ppt/theme/theme2.xml",
+      "raw_Hangul_characters": 8,
+      "visible_text_Hangul": 0,
+      "classification": "Unchanged official-theme East-Asian font-family identifiers; not slide copy."
+    }
+  ],
+  "checker_scope_correction": "Initial broad raw-XML Hangul scan counted16 inherited theme font-name characters. Corrected visible-copy criterion to a:t text and separately inventoried unchanged font identifiers; no artifact edit."
+}

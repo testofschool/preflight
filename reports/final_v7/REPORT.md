@@ -1,3 +1,33 @@
+# Preflight final —21:30 KST closeout (later approved v10/v11 state)
+
+Updated 2026-10-18T21:38:12.985662+09:00. **Final Track F:15 rows,0 conflicts,0 required-missing canonical values.** The exact YouTube URL matches README, notes, PDF text and its native link annotation. Fresh anonymous YouTube metadata confirms **PUBLIC, playable,208seconds (3:28)**: `isPrivate=false`, `isUnlisted=false`, `playabilityStatus=OK`. Track D's earlier missing-input state is resolved.
+
+| Current selected item | Identity / result |
+|---|---|
+| Public video | https://youtu.be/1A8I-9NZ3Kc; fresh anonymous check21:33:05KST; PUBLIC3:28 |
+| Selected narratedv7 MP4 |208.233333s,26,823,790B; SHA-256 `b5ede0341395b1a5f17616ff718454926e7fc3936273761bd93ad158ba6057ad` |
+| Selected v10 PDF |11pages,585,134B; SHA-256 `15ecda0625f41e3a846e03da4685270e3cc4f276c4582808bad11fe2913f514a` |
+| Selected v10 PPTX |1,981,973B; SHA-256 `6e322734aafafd873cff29bba04b0b3c1e61d983aa5268ebd17c9d724aa03313` |
+| Brief description |1,017/1,024 characters; later approved exact Firebase wording retained |
+| Fresh status |GET200 at21:30:58KST; samples mode/live generation limited; expected readiness flags true |
+| Source/runtime scope |Existing public25-file runtime SHA `a13b334ba0d2eabdc7773b4babb86ebd7c4bc48fe0019bd2e31adff84cc0131b` preserved by F; native `preflight-00031-caw`100%,live stills false,allowance3,000 |
+
+Later direct human v9/v10/v11 instructions and their primary receipts supersede the19:04 checkpoint's selected-file and frozen-J assumptions. The failed image-led G candidate remains failed; it was not promoted or redesigned by F. The selected v10 deck is the separately approved later derivative. The original silent Track I file remains unchanged as lineage; the later selected narratedv7 has AAC audio and ten changed cue timings. Its35 cue strings are unchanged. Current selected deck/README/notes bytes exactly match the already-public main02c97929 before this closeout.
+
+**Evidence:** `track_f_final_2130.md/.json` contains the complete fifteen-row final table. `track_d_final_2130.json` records the fresh anonymous public/duration observation. `track_f_selected_deck_2130.md/.json` verifies current deck identity, permitted later deltas, embedded fonts and links. `track_f_selected_video_2130.md/.json` freshly verifies source/Downloads copies, full video+audio decode, all35 caption midpoints and eight key frames. This is not a fresh ASR/pacing or measured-impact claim.
+
+The earlier J digest differs because later approved UI work was already released. Freshly recomputed public runtime equals the committed, retained U source; fresh native revision/image equals the retained U serving receipt. F made no runtime, cloud, model, image, tag, video or shared-index mutation. Four already-staged static files belong to other work and remain untouched. Publication uses an isolated anonymous checkout of current public main to avoid including them. `track_f_native_scope_2130.json` records this reconciliation; old frozen-J verifier expectations are not silently reused.
+
+No canonical copy fix was needed. Final documentation/evidence publication is the only change. Secret/history/privacy and anonymous-clone checks run against the exact resulting public HEAD; the final receipt is saved outside the checkout under `../evidence/final_f_2130_20261018/` to avoid a receipt-commit loop. The inherited four tag objects and existing selected inputs are pinned independently by `verify_final_f2130_public.py`.
+
+**Not claimed:** whole-submission/rubric approval, measured savings/impact/clip accuracy, or a Submit click. Later instructions reserve Submit for Felix; this closeout does not interact with the form or send messages externally.
+
+---
+
+## Historical19:04 checkpoint — retained verbatim below
+
+The following historical WAITING/PREPARATION and selected-fallback entries describe the earlier checkpoint. Current D/F and selection state is the21:30 closeout above.
+
 # Preflight final v7 — H / I / J receipts and G fallback decision
 
 Updated 2026-10-18T18:58:35.086521+09:00. User order: **H → I → approved J → G**. J approval and cross-chat coordination were verified from Felix's actual user messages in “Check preflight allowance”. No submission has been made.

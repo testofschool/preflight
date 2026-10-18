@@ -124,3 +124,23 @@ No runtime code or image was changed. No live/warm image generation or Veo call 
 - **Track C:** narration/audio is not produced because no recording was supplied; the requested silent fallback is complete. Felix's full-video acceptance is pending.
 - **Track D:** no YouTube upload, URL replacement, or public/private/unlisted visibility check has been performed. This does not block A or C.
 - Clip-review accuracy and actual billed spend are not newly measured by this package.
+
+## Commits and repository checks
+
+Package content commit: **`a951e8711a0ef829f55722fb5317f0087ed226cc`**, pushed to public `main`. It contains the new tests, final check frames, renderer, report and sanitized receipts. The final MP4 is intentionally local, as are the earlier raw MP4s. No tag was created, moved or deleted.
+
+| Check | Result / exact coverage |
+| --- | --- |
+| Runtime / raw / tag integrity | PASS; 25 runtime files unchanged, raw hash unchanged, 3 fixed Git tags unchanged, 0 dataless files |
+| Worktree/index prepublication guard | PASS; 0 hits, 0 errors; 807 worktree files and 611 then-indexed files |
+| Content-commit pre-commit guard | PASS; 0 hits, 0 errors; 808 worktree files and all 690 staged files |
+| All-reachable-history marker scan | PASS; **0 hits**, **15 commits**, **731 blobs**, complete; head `a951e8711a0ef829f55722fb5317f0087ed226cc` |
+| Anonymous clone | PASS; cloned public main exactly `a951e8711a0ef829f55722fb5317f0087ed226cc`, no credentials or helper |
+| Public repository / raw README | **HTTP 200 / 200**; public README matches anonymous clone |
+| Anonymous-clone frozen runtime / tags | PASS; 25 runtime files match frozen digest; all 3 tag targets match |
+| Submission Brief description | **952 / 1,024 characters** |
+| YouTube publication / visibility | NOT RUN; public URL not supplied |
+
+These are fixed-pattern secret-marker scans, with no matched values emitted. See [history scan](history_scan_content_commit.json), [anonymous public access](public_access_content_commit.json), [prepublication guard](secrets_prepublication.json), and [final source integrity](runtime_scope_final.json).
+
+This report and publication receipts are appended after the package content commit. Their own subsequent receipt commit is not covered by the preceding content-commit receipts; any later check must name its actual `head` or `expected_main_commit`. The final chat reports the pushed receipt commit and its separate final verification. This avoids claiming that a scan verified its own future receipt commit.

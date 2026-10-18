@@ -1,0 +1,104 @@
+[
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/debug36.mp4",
+    "sha256": "76ce00b92dbb534775ddcc77b933f87168120015c9cf4455130cdf5bec7c450a",
+    "bytes": 3759284,
+    "duration_seconds": 36.0
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/debug36_no_reinit.mp4",
+    "sha256": "f25a52bd55d9fa553730432412a4c31adc219af7a44f2bfa93758e88842dd44e",
+    "bytes": 3736647,
+    "duration_seconds": 36.0
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/intro.mp4",
+    "sha256": "da15fd31c084a4fc30773227536ae69fd4427eaeda1516a8ba5b8e8f26b63cc3",
+    "bytes": 258342,
+    "duration_seconds": 22.0
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/outro.mp4",
+    "sha256": "f1b61ad35a32eb8e729be45b78a2b933b6674fa0f98095b60fbeca86cf3c01c2",
+    "bytes": 472307,
+    "duration_seconds": 42.0
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/raw_108s.mp4",
+    "sha256": "cc36efd5406bb5c996986095dcc3eb5c6de9be6b91c85f1dd12b9581508c980d",
+    "bytes": 6992530,
+    "duration_seconds": 108.0
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_final.mp4",
+    "sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+    "bytes": 8109690,
+    "duration_seconds": 172.0
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
+    "sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+    "bytes": 9300697,
+    "duration_seconds": 108.366667
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw_before_v3_20261018_095707.mp4",
+    "sha256": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+    "bytes": 10008012,
+    "duration_seconds": 114.366667
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m.mp4",
+    "sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+    "bytes": 11869949,
+    "duration_seconds": 208.233333
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_take_1.mp4",
+    "sha256": "a5afe4ef56cfaa9c452628c057bd625a00d8b3a87efc597151553e19e647b9fb",
+    "bytes": 10085001,
+    "duration_seconds": 114.4
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_take_2.mp4",
+    "sha256": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+    "bytes": 10008012,
+    "duration_seconds": 114.366667
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/browser/39482f8709c55460d4ea834462e88df7.webm",
+    "sha256": "1808d1ba98b26278dc12ab126248881284e17a2dc90773b56acb72691f6af15c",
+    "bytes": 3779366,
+    "duration_seconds": 36.24
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/preflight_demo_own_prompt_raw.mp4",
+    "sha256": "f58ce7ac037560c183bb42dc95abe5ba775cafd3b8e06ee13160af4d6a538148",
+    "bytes": 4579484,
+    "duration_seconds": 36.233333
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/browser/a246f21e26763a28e9165a25402eea25.webm",
+    "sha256": "95506a87419bae979452b3220326f07c53b217d7809e72452fcb40634e40ddc5",
+    "bytes": 11441984,
+    "duration_seconds": 114.4
+  },
+  {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/browser/c5f80d67e9fa702605b05eb6e3360a52.webm",
+    "sha256": "bcf6c3d4a66a663dc94d808f80f7bbe4e60472b9e1f700a1f0b6d266972432b9",
+    "bytes": 11267032,
+    "duration_seconds": 114.36
+  },
+  {
+    "path": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_2m52s.mp4",
+    "sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+    "bytes": 8109690,
+    "duration_seconds": 172.0
+  },
+  {
+    "path": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_3m28s.mp4",
+    "sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+    "bytes": 11869949,
+    "duration_seconds": 208.233333
+  }
+]

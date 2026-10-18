@@ -1,0 +1,110 @@
+{
+  "checked_at_kst": "2026-10-18T18:16:24.847182+09:00",
+  "head": "8301158450c262848d9e575dd670a1203d229e78",
+  "runtime_files": [
+    {
+      "path": "Dockerfile",
+      "matches_v6": true
+    },
+    {
+      "path": "app.py",
+      "matches_v6": true
+    },
+    {
+      "path": "artifacts/engine.json",
+      "matches_v6": true
+    },
+    {
+      "path": "artifacts/prompt_vectors.npz",
+      "matches_v6": true
+    },
+    {
+      "path": "artifacts/vectorizer.joblib",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/__init__.py",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/postcheck.py",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/preview.py",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/rewrite_agent.py",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/sample_rewrites.json",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/sample_rewrites.py",
+      "matches_v6": true
+    },
+    {
+      "path": "cloud/store.py",
+      "matches_v6": true
+    },
+    {
+      "path": "preflight_core/__init__.py",
+      "matches_v6": true
+    },
+    {
+      "path": "preflight_core/dataset.py",
+      "matches_v6": true
+    },
+    {
+      "path": "preflight_core/engine.py",
+      "matches_v6": true
+    },
+    {
+      "path": "preflight_core/irt.py",
+      "matches_v6": true
+    },
+    {
+      "path": "preflight_core/provenance.py",
+      "matches_v6": true
+    },
+    {
+      "path": "requirements-cloud.lock",
+      "matches_v6": true
+    },
+    {
+      "path": "static/app.js",
+      "matches_v6": true
+    },
+    {
+      "path": "static/architecture.html",
+      "matches_v6": true
+    },
+    {
+      "path": "static/architecture.js",
+      "matches_v6": true
+    },
+    {
+      "path": "static/index.html",
+      "matches_v6": true
+    },
+    {
+      "path": "static/postcheck.js",
+      "matches_v6": true
+    },
+    {
+      "path": "static/status.js",
+      "matches_v6": true
+    },
+    {
+      "path": "static/styles.css",
+      "matches_v6": true
+    }
+  ],
+  "runtime_unchanged": true,
+  "tags_unchanged": true,
+  "baseline_deck_pdf_sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+  "baseline_deck_pptx_sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a"
+}

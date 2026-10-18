@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-18T09:16:06.912919+00:00",
+  "head": "8301158450c262848d9e575dd670a1203d229e78",
+  "method": "all refs: git rev-list --all and every reachable blob/commit/tag object, deduplicated by object ID; binary payloads included; only marker names, object IDs, paths and line numbers retained",
+  "commits_scanned": 19,
+  "reachable_objects": 1033,
+  "payload_objects_scanned": 900,
+  "blob_objects_scanned": 881,
+  "commit_tag_objects_scanned": 19,
+  "binary_payloads_scanned": 171,
+  "marker_names": [
+    "gemini-key-assignment",
+    "literal-secret-field",
+    "private-key-json-field",
+    "private-key-marker",
+    "provider-key-prefix",
+    "service-token-prefix"
+  ],
+  "hits": [],
+  "errors": [],
+  "hit_count": 0,
+  "complete": true,
+  "passed": true
+}

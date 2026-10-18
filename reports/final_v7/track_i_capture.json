@@ -1,0 +1,594 @@
+{
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "prompt": "a dog catching a frisbee on a beach at sunset",
+  "started_at_utc": "2026-10-18T09:16:32.576180+00:00",
+  "capture_base_script": "scripts/record_demo.py",
+  "capture_base_script_sha256": "77d33e48d8763c3d5199f5545d4716b36b5b75e6b853d3fc8cc55b708ce772a8",
+  "policy": "one own-prompt check; one preview click; no retries; no generated image; no UI or response replacement",
+  "generations_counter_limitation": "/api/status.generations is hard-coded 0 in current source; no visible UI usage counter exists. It is not cumulative image accounting.",
+  "status_before": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+    "pricing_image": {
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "usd_per_image": 0.0387,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-18",
+      "cost_basis": "image-output-list-price",
+      "billing_verified": false,
+      "priority_requested": false
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "preflight_response": {
+    "p_fail": 0.13333333333333333,
+    "p_success_by_model": {
+      "AnimateDiff": 0.7285534232712872,
+      "AnimateDiffTurbo": 0.20127405482573954,
+      "CogVideoX": 0.6250274243744314,
+      "LaVie": 0.5629647972641978,
+      "ModelScope": 0.17427557697158072,
+      "OpenSora": 0.29602029493380283,
+      "OpenSora12": 0.2587399650527267,
+      "StableVideoDiffusion": 0.8581369320501474,
+      "T2VTurbo": 0.7394880768174857,
+      "VideoCrafter2": 0.724065383028904
+    },
+    "nearest_prompts": [
+      {
+        "prompt": "a frisbee",
+        "rate": 0.6666666666666666,
+        "both_bad_rate": 0.6666666666666666,
+        "similarity": 0.44806524910154527,
+        "vote_count": 3,
+        "risk_rate": 0.6666666666666666,
+        "postcheck_count": 0,
+        "postcheck_failures": 0,
+        "postcheck_failure_rate": null,
+        "evidence_store": "firestore"
+      },
+      {
+        "prompt": "beach",
+        "rate": 0.0,
+        "both_bad_rate": 0.0,
+        "similarity": 0.35315505264952757,
+        "vote_count": 1,
+        "risk_rate": 0.0,
+        "postcheck_count": 0,
+        "postcheck_failures": 0,
+        "postcheck_failure_rate": null,
+        "evidence_store": "firestore"
+      },
+      {
+        "prompt": "a dog",
+        "rate": 0.0,
+        "both_bad_rate": 0.0,
+        "similarity": 0.3409520636262345,
+        "vote_count": 3,
+        "risk_rate": 0.0,
+        "postcheck_count": 0,
+        "postcheck_failures": 0,
+        "postcheck_failure_rate": null,
+        "evidence_store": "firestore"
+      },
+      {
+        "prompt": "A tropical beach at sunrise, with palm trees and crystal-clear water in the foreground",
+        "rate": 0.0,
+        "both_bad_rate": 0.0,
+        "similarity": 0.22707819877326524,
+        "vote_count": 2,
+        "risk_rate": 0.0,
+        "postcheck_count": 0,
+        "postcheck_failures": 0,
+        "postcheck_failure_rate": null,
+        "evidence_store": "firestore"
+      },
+      {
+        "prompt": "Sunset time lapse at the beach with moving clouds and colors in the sky.",
+        "rate": 0.0,
+        "both_bad_rate": 0.0,
+        "similarity": 0.18963590755218473,
+        "vote_count": 4,
+        "risk_rate": 0.0,
+        "postcheck_count": 0,
+        "postcheck_failures": 0,
+        "postcheck_failure_rate": null,
+        "evidence_store": "firestore"
+      }
+    ],
+    "difficulty": -0.5853453947752139,
+    "discrimination": 1.0209853798002677,
+    "reasons": [
+      "Text neighbours “a frisbee” and “beach” support an estimated risk score of 13.3%. The score uses nearby evidence and any separately stored clip feedback; it is not a calibrated probability that a current video model fails."
+    ],
+    "est_cost_usd": 3.69,
+    "supported": true,
+    "coverage": {
+      "matched_features": 7,
+      "positive_similarity_neighbours": 5,
+      "max_similarity": 0.44806524910154527,
+      "mean_similarity": 0.31177729434055146,
+      "neighbour_vote_count": 13,
+      "zero_similarity_ties_included": false,
+      "firestore_prompt_documents": 5,
+      "firestore_item_documents": 5
+    },
+    "historical_p_fail": 0.13333333333333333,
+    "feedback_adjusted_risk": 0.13333333333333333,
+    "evidence_store": "firestore",
+    "postcheck_feedback": {
+      "count": 0,
+      "failures": 0,
+      "failure_rate": null,
+      "exact_unseen_prompt": null
+    },
+    "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+    "rewritten_prompt": "A golden retriever jumps to catch a red plastic disc on a sandy beach during a vibrant sunset, wide shot, slow motion.",
+    "rewrite_status": "improved",
+    "rewrite_message": "Lower estimated risk; video quality has not been validated.",
+    "p_fail_before": 0.13333333333333333,
+    "p_fail_after": 0.06666666666666667,
+    "candidate_p_fail": 0.06666666666666667,
+    "session_service": "Agent Platform Sessions",
+    "session_verified": true,
+    "session_event_count": 8,
+    "tool_trace": [
+      {
+        "tool": "nearest_prompts",
+        "completed": true
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.13333333333333333
+      },
+      {
+        "tool": "rewrite",
+        "completed": true
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.06666666666666667
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.075
+      },
+      {
+        "tool": "difficulty",
+        "completed": true,
+        "p_fail": 0.21428571428571427
+      }
+    ],
+    "tool_call_count": 6,
+    "agent_trace": {
+      "framework": "google-adk",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "token_usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 236,
+          "candidates_token_count": 51,
+          "total_token_count": 287
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 689,
+          "candidates_token_count": 94,
+          "total_token_count": 783
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 884,
+          "candidates_token_count": 98,
+          "total_token_count": 982
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 852,
+          "candidates_token_count": 116,
+          "total_token_count": 968
+        }
+      ],
+      "planner_model_calls": 3,
+      "rewrite_model_calls": 1,
+      "tool_phase_scheduler": "ADK restricts phases; Gemini emits every function call with its real signature",
+      "original_prompt_digest": "074ea303857ba0f7",
+      "candidate_count": 3,
+      "strict_improvement_guard": true,
+      "elapsed_seconds": 5.307
+    },
+    "rewrite_source": "live",
+    "mode": "cloud",
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "expected_attempts_capped": 1.1538461538461537
+  },
+  "rewrite_framing": {
+    "rect": {
+      "x": 1247.765625,
+      "y": 119.390625,
+      "width": 352.21875,
+      "height": 458.5625,
+      "top": 119.390625,
+      "right": 1599.984375,
+      "bottom": 577.953125,
+      "left": 1247.765625
+    },
+    "visual": {
+      "width": 960,
+      "height": 540,
+      "scale": 2,
+      "left": 944,
+      "top": 38
+    },
+    "font": "16px"
+  },
+  "rewrite_ready_offset": 12.592,
+  "selected_window_start_offset": 5.5920000000000005,
+  "message_framing": {
+    "rect": {
+      "x": 1267.765625,
+      "y": 299.953125,
+      "width": 312.21875,
+      "height": 54,
+      "top": 299.953125,
+      "right": 1579.984375,
+      "bottom": 353.953125,
+      "left": 1267.765625
+    },
+    "visual": {
+      "width": 960,
+      "height": 540,
+      "scale": 2,
+      "left": 944,
+      "top": 0
+    },
+    "font": "12px"
+  },
+  "explanation_framing": {
+    "rect": {
+      "x": 910.546875,
+      "y": 224.390625,
+      "width": 661.4375,
+      "height": 53.78125,
+      "top": 224.390625,
+      "right": 1571.984375,
+      "bottom": 278.171875,
+      "left": 910.546875
+    },
+    "visual": {
+      "width": 960,
+      "height": 540,
+      "scale": 2,
+      "left": 612,
+      "top": 0
+    },
+    "font": "11px"
+  },
+  "status_after": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+    "pricing_image": {
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "usd_per_image": 0.0387,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-18",
+      "cost_basis": "image-output-list-price",
+      "billing_verified": false,
+      "priority_requested": false
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "counter_before": 0,
+  "counter_after": 0,
+  "sequence_pass": true,
+  "take": {
+    "take": 1,
+    "started_at_utc": "2026-10-18T09:16:33.017418+00:00",
+    "steps": [
+      {
+        "name": "production_home_before",
+        "started_at_utc": "2026-10-18T09:16:33.019606+00:00",
+        "start_offset_seconds": 0.002,
+        "status": "pass",
+        "end_offset_seconds": 1.908,
+        "wall_seconds": 1.906
+      },
+      {
+        "name": "typed_own_prompt_and_check",
+        "started_at_utc": "2026-10-18T09:16:34.925907+00:00",
+        "start_offset_seconds": 1.908,
+        "status": "pass",
+        "observed": {
+          "prompt": "a dog catching a frisbee on a beach at sunset",
+          "risk_percent": "13.3",
+          "band": "lower"
+        },
+        "end_offset_seconds": 11.102,
+        "wall_seconds": 9.194
+      },
+      {
+        "name": "show_live_rewrite_and_risk_line",
+        "started_at_utc": "2026-10-18T09:16:44.120704+00:00",
+        "start_offset_seconds": 11.103,
+        "status": "pass",
+        "observed": {
+          "rewritten_prompt": "A golden retriever jumps to catch a red plastic disc on a sandy beach during a vibrant sunset, wide shot, slow motion.",
+          "risk_line": "13.3% original\n→\n6.7% rewrite",
+          "rewrite_source": "live"
+        },
+        "end_offset_seconds": 12.591,
+        "wall_seconds": 1.488
+      },
+      {
+        "name": "click_preview_and_show_real_limited_message",
+        "started_at_utc": "2026-10-18T09:16:59.313277+00:00",
+        "start_offset_seconds": 26.296,
+        "status": "pass",
+        "observed": {
+          "http_status": 503,
+          "detail": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.",
+          "request_prompt_is_sample": false,
+          "image_model_calls": 0,
+          "zero_image_basis": "samples mode + non-sample request rejected at app.py pre-provider guard"
+        },
+        "end_offset_seconds": 28.157,
+        "wall_seconds": 1.861
+      },
+      {
+        "name": "open_what_this_score_is",
+        "started_at_utc": "2026-10-18T09:17:07.411174+00:00",
+        "start_offset_seconds": 34.394,
+        "status": "pass",
+        "observed": {
+          "visible_explanation": "What this score is: An estimate from 1,911 human pairwise votes on 2024-era AI videos of how often prompts like yours received a vote rejecting both clips. Not a calibrated probability for today’s models (held-out AUC about 0.67). Machine feedback can make the displayed score a mixed heuristic proxy, while the original human votes remain separate."
+        },
+        "end_offset_seconds": 37.033,
+        "wall_seconds": 2.639
+      }
+    ],
+    "network": [
+      {
+        "offset_seconds": 0.376,
+        "method": "GET",
+        "path": "/",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.371
+      },
+      {
+        "offset_seconds": 0.53,
+        "method": "GET",
+        "path": "/static/styles.css",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.154
+      },
+      {
+        "offset_seconds": 0.611,
+        "method": "GET",
+        "path": "/static/status.js",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.234
+      },
+      {
+        "offset_seconds": 0.64,
+        "method": "GET",
+        "path": "/static/postcheck.js",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.264
+      },
+      {
+        "offset_seconds": 0.646,
+        "method": "GET",
+        "path": "/static/app.js",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.269
+      },
+      {
+        "offset_seconds": 0.752,
+        "method": "GET",
+        "path": "/api/status",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.14,
+        "observed_response": {
+          "mode": "cloud",
+          "cloud_run": true,
+          "firestore": true,
+          "gemini": true,
+          "adk": true,
+          "postcheck": true,
+          "preview": true,
+          "agent_platform_session": true,
+          "preview_mode": "samples"
+        }
+      },
+      {
+        "offset_seconds": 11.09,
+        "method": "POST",
+        "path": "/preflight",
+        "status": 200,
+        "preview_cache": null,
+        "response_headers_after_seconds": 5.699,
+        "observed_response": {
+          "mode": "cloud",
+          "p_fail": 0.13333333333333333,
+          "historical_p_fail": 0.13333333333333333,
+          "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+          "rewrite_status": "improved",
+          "rewritten_prompt": "A golden retriever jumps to catch a red plastic disc on a sandy beach during a vibrant sunset, wide shot, slow motion.",
+          "p_fail_before": 0.13333333333333333,
+          "p_fail_after": 0.06666666666666667,
+          "supported": true,
+          "rewrite_source": "live"
+        }
+      },
+      {
+        "offset_seconds": 27.677,
+        "method": "POST",
+        "path": "/preview",
+        "status": 503,
+        "preview_cache": null,
+        "response_headers_after_seconds": 0.14,
+        "observed_response": {
+          "detail": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works."
+        }
+      }
+    ],
+    "request_failures": [],
+    "page_errors": [],
+    "frames": [
+      {
+        "name": "production_home_before",
+        "offset_seconds": 0.852,
+        "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/screens/01_production_home_before.png"
+      },
+      {
+        "name": "own_prompt_live_rewrite",
+        "offset_seconds": 12.531,
+        "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/screens/02_own_prompt_live_rewrite.png"
+      },
+      {
+        "name": "own_prompt_preview_limited",
+        "offset_seconds": 28.079,
+        "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/screens/03_own_prompt_preview_limited.png"
+      },
+      {
+        "name": "own_prompt_score_explanation",
+        "offset_seconds": 36.975,
+        "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/screens/04_own_prompt_score_explanation.png"
+      },
+      {
+        "name": "production_score_explanation_final",
+        "offset_seconds": 42.898,
+        "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/screens/05_production_score_explanation_final.png"
+      }
+    ],
+    "preview_decision": "on",
+    "warm_receipt": null,
+    "response_policy": "real UI requests only; no mocks, client retries or clipboard reads"
+  },
+  "sequence_wall_seconds": 42.965,
+  "video": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/preflight_demo_own_prompt_raw.mp4",
+    "source": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/browser/f7648035d68afed83dfd4fb649d10307.webm",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "43.800000",
+        "size": "5337853"
+      }
+    },
+    "duration_seconds": 43.8,
+    "bytes": 5337853,
+    "sha256": "41a3634dba5c11b8dfb535301f606d58965613bddf5e2125100a143d5a2f35f8",
+    "full_decode_pass": true,
+    "format_pass": true
+  },
+  "capture_base_script_sha256_after": "77d33e48d8763c3d5199f5545d4716b36b5b75e6b853d3fc8cc55b708ce772a8",
+  "image_model_calls": 0,
+  "framing": "Native1920x1080 production capture with actual Chromium page scale factor2 and scroll_into_view_if_needed centering the Better prompt card, actual limited message, then score explanation. No post-capture crop or upscale; no UI text or responses replaced.",
+  "zero_image_model_calls_basis": [
+    "Production preview_mode=samples before and after.",
+    "One non-sample /preview UI click returns actual HTTP503 before provider.generate in app.py.",
+    "No other preview, image, postcheck or Veo request."
+  ],
+  "immutable_source_evidence": {
+    "app.py": {
+      "sha256": "6a4049031c7d4d5e98ccb0428a76235acd9e97275b73ff1431a8ec3adda87612"
+    },
+    "static/app.js": {
+      "sha256": "398424c91ceaf32f4144a96c1a93877d759ffaba9d72adaeb167715136721496"
+    },
+    "scripts/record_demo.py": {
+      "sha256": "77d33e48d8763c3d5199f5545d4716b36b5b75e6b853d3fc8cc55b708ce772a8"
+    }
+  }
+}

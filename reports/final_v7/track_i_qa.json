@@ -1,0 +1,326 @@
+{
+  "checked_at_utc": "2026-10-18T09:24:51.258640+00:00",
+  "video_sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+  "caption_cues_exactly_equal_v6": true,
+  "timeline_contiguous": true,
+  "caption_active_cues_checked": 35,
+  "all_caption_midpoints_PASS": true,
+  "rows": [
+    {
+      "cue_index": 0,
+      "seconds": 2.0,
+      "text": "People who generate AI video pay per attempt. Here is what they say.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 1,
+      "seconds": 5.5,
+      "text": "\"You still burn credits on the failed attempt.\"",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 2,
+      "seconds": 8.5,
+      "text": "\"Only one of the generations was usable.\"",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 4,
+      "seconds": 14.5,
+      "text": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 5,
+      "seconds": 19.0,
+      "text": "Preflight is that step before you pay.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 6,
+      "seconds": 23.133333333333333,
+      "text": "Paste a prompt.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 7,
+      "seconds": 28.433333333333334,
+      "text": "Preflight compares it with 1,911 human votes on earlier AI videos",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 8,
+      "seconds": 37.13333333333333,
+      "text": "and returns a risk estimate, with the closest past prompts as evidence.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 9,
+      "seconds": 45.833333333333336,
+      "text": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 10,
+      "seconds": 51.666666666666664,
+      "text": "Then a Google ADK agent on Gemini rewrites the prompt",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 11,
+      "seconds": 55.0,
+      "text": "and keeps the rewrite only if the estimated risk drops.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 12,
+      "seconds": 58.333333333333336,
+      "text": "Here it drops to 15.8 percent. Copy it and go.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 13,
+      "seconds": 61.53333333333333,
+      "text": "Before paying about three dollars for an eight-second video,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 14,
+      "seconds": 64.56666666666666,
+      "text": "you can look at a still of the scene.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 15,
+      "seconds": 67.63333333333334,
+      "text": "For judging, the five sample prompts use saved stills:",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 16,
+      "seconds": 70.83333333333333,
+      "text": "zero model calls, zero cost, and the label says so.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 17,
+      "seconds": 74.56666666666666,
+      "text": "In our tests, live image generation failed too often under shared capacity,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 18,
+      "seconds": 78.3,
+      "text": "so we did not put it in front of you.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 19,
+      "seconds": 90.7,
+      "text": "Your own prompt gets a live Gemini rewrite too.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 20,
+      "seconds": 105.1,
+      "text": "Live stills are limited to the samples during judging, and the page says so.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 21,
+      "seconds": 112.5,
+      "text": "Every number comes with what it is and what it is not.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 22,
+      "seconds": 119.06666666666666,
+      "text": "After you generate, upload the clip.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 23,
+      "seconds": 125.66666666666667,
+      "text": "Gemini takes a second look at sampled frames,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 24,
+      "seconds": 135.6,
+      "text": "and its verdict is stored as separate feedback next to the human votes.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 25,
+      "seconds": 146.5,
+      "text": "It is a second pair of eyes, not a verdict.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 26,
+      "seconds": 154.36666666666667,
+      "text": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 27,
+      "seconds": 161.86666666666667,
+      "text": "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 32.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 28,
+      "seconds": 169.03333333333333,
+      "text": "The architecture: one prompt, a traceable check,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 29,
+      "seconds": 175.03333333333333,
+      "text": "tools for evidence and difficulty, Firestore as memory.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 30,
+      "seconds": 179.73333333333332,
+      "text": "The limits are on the page.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 31,
+      "seconds": 183.73333333333332,
+      "text": "The risk score is a historical signal, held-out AUC 0.67,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 32,
+      "seconds": 187.73333333333332,
+      "text": "not a promise about today's models.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 33,
+      "seconds": 190.73333333333332,
+      "text": "Clip-review accuracy is not measured yet.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 34,
+      "seconds": 196.86666666666667,
+      "text": "Built in Seoul by a producer who paid for these failures,",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    },
+    {
+      "cue_index": 35,
+      "seconds": 204.86666666666667,
+      "text": "tested from India. Preflight: know before you pay.",
+      "bright_glyph_fraction": 1.0,
+      "background_median_red": 31.0,
+      "PASS": true
+    }
+  ],
+  "production_network": {
+    "POSTs": [
+      {
+        "path": "/preflight",
+        "status": 200,
+        "response": {
+          "mode": "cloud",
+          "p_fail": 0.13333333333333333,
+          "historical_p_fail": 0.13333333333333333,
+          "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+          "rewrite_status": "improved",
+          "rewritten_prompt": "A golden retriever jumps to catch a red plastic disc on a sandy beach during a vibrant sunset, wide shot, slow motion.",
+          "p_fail_before": 0.13333333333333333,
+          "p_fail_after": 0.06666666666666667,
+          "supported": true,
+          "rewrite_source": "live"
+        }
+      },
+      {
+        "path": "/preview",
+        "status": 503,
+        "response": {
+          "detail": "Live stills are limited to the sample prompts during judging \u2014 shared Gemini image capacity. The risk check still works."
+        }
+      }
+    ],
+    "network_PASS": true,
+    "preview_mode_before_after_samples": true,
+    "pre_provider_reject_guard_PASS": true,
+    "image_model_calls": 0,
+    "Veo_calls": 0,
+    "counter_caveat": "status.generations is hard-coded0; zero image calls is request-path evidence, not a cumulative usage meter."
+  },
+  "runtime_source_hashes_unchanged": true,
+  "outside_every_frame_exact": true,
+  "automated_PASS": true
+}

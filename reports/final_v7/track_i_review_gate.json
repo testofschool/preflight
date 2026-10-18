@@ -1,0 +1,9 @@
+{
+  "candidate_sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+  "independent_review_PASS": true,
+  "parent_target_frame_visual_PASS": true,
+  "independent_review": "reports/final_v7/track_i_independent_review.json",
+  "parent_review": "reports/final_v7/track_i_parent_visual_review.json",
+  "basis": "Parent inspected finalv4targetframes and explicitly ordered promotion after independent fresh finalPASS. User already authorized overwrite in TrackI.",
+  "recorded_at_utc": "2026-10-18T09:26:20.367507+00:00"
+}

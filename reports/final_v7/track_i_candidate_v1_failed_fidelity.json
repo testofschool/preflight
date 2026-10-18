@@ -1,0 +1,23 @@
+{
+  "status": "FAIL - RETAINED, NEVER PROMOTED",
+  "candidate": "demo/submission_supplement_v7/submission_candidate.mp4",
+  "sha256": "d75431b6c5a49abbe2a0d086471a779ba0b2bc6dde0043b7eb715b0217c24c63",
+  "bytes": 45315486,
+  "duration_seconds": 208.233333,
+  "outside_frames_compared": 5160,
+  "outside_changed_frames": 2749,
+  "first_changed_frames": [
+    2398,
+    2399,
+    3488,
+    3489,
+    3490,
+    3491,
+    3492,
+    3493,
+    3494,
+    3495
+  ],
+  "diagnosis": "SparseYUV rounding,maxabsolute1; sampleframe3500meanabsolute0.0001983667695. No shiftedoldhashmatches. Candidatev2 disablesweightedprediction/Bframes and makesPTS/timebaseframecountdeterministic.",
+  "final_and_desktop_overwritten": false
+}

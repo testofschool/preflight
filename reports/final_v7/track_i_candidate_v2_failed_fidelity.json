@@ -1,0 +1,24 @@
+{
+  "status": "FAIL - RETAINED, NEVER PROMOTED",
+  "candidate": "demo/submission_supplement_v7/submission_candidate_v2.mp4",
+  "sha256": "d9f54b098665ac6b8bcc2c7d42894cf4673045eac6a0469946f64ead94d17f83",
+  "bytes": 45305584,
+  "duration_seconds": 208.233333,
+  "outside_frames_compared": 5160,
+  "outside_changed_frames": 2749,
+  "first_changed_frames": [
+    2398,
+    2399,
+    3488,
+    3489,
+    3490,
+    3491,
+    3492,
+    3493,
+    3494,
+    3495
+  ],
+  "changes_from_v1": "Frame-countdeterministictimebase/PTS,passthroughfps,noBframesorweightedprediction",
+  "diagnosis": "Sparse\u00b11differencespersist;all-intrav3andpre-encodergraphisolationrunning.",
+  "final_and_desktop_overwritten": false
+}

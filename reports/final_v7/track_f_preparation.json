@@ -1,0 +1,75 @@
+{
+  "scope": "PREPARATION ONLY; final Track F pending trigger at 21:30 KST or after D",
+  "observed_at_kst": "2026-10-18T18:14:48.861671+09:00",
+  "git_head": "2a631fec9fda2dd7d0d107c270a9034f53193fd4",
+  "request_method": "GET",
+  "request_url": "https://preflight-jcgro45veq-as.a.run.app/api/status",
+  "http_status": 200,
+  "brief_description": {
+    "characters": 952,
+    "limit": 1024,
+    "pass": true,
+    "sha256": "3bac4ff63ca67bf51c54d329abad0c3cb16da13f697bd35e3041e40959f6ef23"
+  },
+  "readme_video_placeholder": true,
+  "notes_video_placeholder": true,
+  "api_status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+    "pricing_image": {
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "usd_per_image": 0.0387,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-18",
+      "cost_basis": "image-output-list-price",
+      "billing_verified": false,
+      "priority_requested": false
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "response_body_sha256": "e657ef5cdb8b1519e17c6961db9ad63ad278bd391ad93e5a4fa255d1a0a181d7",
+  "response_headers": {
+    "content-type": "application/json",
+    "date": "Sun, 18 Oct 2026 09:14:48 GMT",
+    "server": "Google Frontend",
+    "Content-Length": "1107"
+  },
+  "tls": "verified with certifi CA bundle after default host trust failed",
+  "caveats": [
+    "No runtime POST, image-model call, Veo call, or cloud mutation was made.",
+    "Status service booleans establish advertised readiness flags, not measured quality or rewrite model version.",
+    "Status generations=0 is not a cumulative meter.",
+    "Public YouTube URL is missing; D and URL-equality gate remain WAITING."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS - PROMOTED TO FINAL AND DESKTOP UPLOAD COPY",
+  "selected_video": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m.mp4",
+    "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+    "bytes": 11708270,
+    "duration_seconds": 208.233333
+  },
+  "desktop_upload_copy": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_3m28s.mp4",
+  "desktop_upload_copy_sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+  "desktop_upload_copy_bytes": 11708270,
+  "duration_seconds": 208.233333
+}

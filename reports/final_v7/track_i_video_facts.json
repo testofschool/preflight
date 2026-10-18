@@ -1,0 +1,344 @@
+{
+  "status": "PASS - PROMOTED TO FINAL AND DESKTOP UPLOAD COPY",
+  "candidate": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/submission_candidate_v4.mp4",
+    "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+    "bytes": 11708270,
+    "duration_seconds": 208.233333
+  },
+  "intended_final_path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m.mp4",
+  "desktop_upload_copy": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_3m28s.mp4",
+  "duration_seconds": 208.233333,
+  "duration_display": "3:28.233",
+  "frame_count": 6247,
+  "resolution": "1920x1080",
+  "fps": "30/1",
+  "codec": "h264",
+  "profile": "High",
+  "pixel_format": "yuv420p",
+  "assembly": "Original compressed pre/post copied at exact IDRs; only1087newmiddleframes encodedordinaryHighCRF18; native1/15360timebase retained",
+  "audio_stream": false,
+  "full_decode_pass": true,
+  "replaced_interval": {
+    "start_frame": 2400,
+    "end_frame_exclusive": 3487,
+    "start_seconds": 80.0,
+    "end_seconds": 116.23333333333333,
+    "length_frames": 1087,
+    "length_seconds": 36.233333333333334
+  },
+  "raw_capture": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/preflight_demo_own_prompt_raw.mp4",
+    "sha256": "41a3634dba5c11b8dfb535301f606d58965613bddf5e2125100a143d5a2f35f8",
+    "bytes": 5337853,
+    "duration_seconds": 43.8
+  },
+  "selected_raw_interval": {
+    "start_frame": 168,
+    "end_frame_exclusive": 1255,
+    "start_seconds": 5.6,
+    "end_seconds": 41.833333333333336
+  },
+  "framing": "Native1920x1080 production capture with actual Chromium page scale factor2 and scroll_into_view_if_needed centering the Better prompt card, actual limited message, then score explanation. No post-capture crop or upscale; no UI text or responses replaced.",
+  "native_browser_page_scale": 2,
+  "image_model_calls": 0,
+  "Veo_calls": 0,
+  "zero_image_model_calls_basis": [
+    "Production preview_mode=samples before and after.",
+    "One non-sample /preview UI click returns actual HTTP503 before provider.generate in app.py.",
+    "No other preview, image, postcheck or Veo request."
+  ],
+  "old_submission": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m_before_v7_20261018.mp4",
+    "sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+    "bytes": 11869949,
+    "duration_seconds": 208.233333
+  },
+  "old_desktop_copy": {
+    "path": "/Users/felix/Desktop/Preflight_AIBC2026_3m28s_backup_before_v7_20261018.mp4",
+    "sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+    "bytes": 11869949,
+    "duration_seconds": 208.233333
+  },
+  "outside_inserted_segment": {
+    "method": "Every decoded YUV420 frame MD5, v6 selected video vs v7 candidate",
+    "compared_frames": 5160,
+    "changed_frames": 0,
+    "PASS": true,
+    "first_frame_range": [
+      0,
+      2400
+    ],
+    "last_frame_range": [
+      3487,
+      6247
+    ]
+  },
+  "captions": {
+    "cue_count": 36,
+    "active_cue_count": 35,
+    "content_and_timing_identical_v6": true,
+    "caption_script_identical_v6": true,
+    "new_content_added": false
+  },
+  "frames": [
+    {
+      "seconds": 5,
+      "path": "demo/submission_check_v7/00m05s.png",
+      "sha256": "549f27c70b3787142dd3602026a5ed13970e108284a39a6581433ed7cae66950",
+      "bytes": 156353
+    },
+    {
+      "seconds": 70,
+      "path": "demo/submission_check_v7/01m10s.png",
+      "sha256": "c8669cc0aad39016e0e5f22e2bcf47e01b35f4970f37362f516dbd7b3d004abc",
+      "bytes": 419143
+    },
+    {
+      "seconds": 90,
+      "path": "demo/submission_check_v7/01m30s.png",
+      "sha256": "929402b9ac8f48d56547b004a5bf98a70816b750b6721ab97b5e2d083fb97222",
+      "bytes": 387351
+    },
+    {
+      "seconds": 95,
+      "path": "demo/submission_check_v7/01m35s.png",
+      "sha256": "fc747123a4d0f965f298e55667a2c7ccef7cab3508a8d24357c4d73d9d4c9cc4",
+      "bytes": 373007
+    },
+    {
+      "seconds": 100,
+      "path": "demo/submission_check_v7/01m40s.png",
+      "sha256": "06685a9ddc5ffbe825f9483fd27b80b0d344625e957009369263fea78c1ea974",
+      "bytes": 406974
+    },
+    {
+      "seconds": 105,
+      "path": "demo/submission_check_v7/01m45s.png",
+      "sha256": "a2d00c2ad7558909230ed8a9afb0b2c24b9aa8a1cea838888a78b4d03016539f",
+      "bytes": 414796
+    },
+    {
+      "seconds": 110,
+      "path": "demo/submission_check_v7/01m50s.png",
+      "sha256": "914825971bb88318e5681d2daafcf210eb1108c04e7dd1f0786f0fc1b24da550",
+      "bytes": 439369
+    },
+    {
+      "seconds": 140,
+      "path": "demo/submission_check_v7/02m20s.png",
+      "sha256": "6390eaaf6f32dcbd086476c0330560d3f2b3a2c5bfd92727f38c392af8f5efa5",
+      "bytes": 593480
+    },
+    {
+      "seconds": 180,
+      "path": "demo/submission_check_v7/03m00s.png",
+      "sha256": "6ab1256efc7a61e9b330cee5740d640486c44b91da10e41d46ff3acfea1a773e",
+      "bytes": 339829
+    }
+  ],
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1920,
+        "height": 1080,
+        "coded_width": 1920,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 3198464,
+        "duration": "208.233333",
+        "bit_rate": "446927",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "6247",
+        "extradata_size": 47,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.1.102 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/submission_candidate_v4.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "208.233333",
+      "size": "11708270",
+      "bit_rate": "449813",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.1.102"
+      }
+    }
+  },
+  "measured_at_utc": "2026-10-18T09:24:24.697332+00:00",
+  "selected_video": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m.mp4",
+    "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+    "bytes": 11708270,
+    "duration_seconds": 208.233333
+  },
+  "desktop_upload_copy_sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+  "desktop_upload_copy_bytes": 11708270,
+  "promoted_at_utc": "2026-10-18T09:26:20.572588+00:00",
+  "old_video_preservation": {
+    "old_video_count_including_replaced_targets": 17,
+    "unreplaced_originals_verified_unchanged": 15,
+    "replaced_targets_backed_up": true,
+    "backups": [
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m_before_v7_20261018.mp4",
+        "sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+        "bytes": 11869949,
+        "duration_seconds": 208.233333
+      },
+      {
+        "path": "/Users/felix/Desktop/Preflight_AIBC2026_3m28s_backup_before_v7_20261018.mp4",
+        "sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+        "bytes": 11869949,
+        "duration_seconds": 208.233333
+      }
+    ],
+    "rows": [
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/debug36.mp4",
+        "sha256_before": "76ce00b92dbb534775ddcc77b933f87168120015c9cf4455130cdf5bec7c450a",
+        "sha256_after": "76ce00b92dbb534775ddcc77b933f87168120015c9cf4455130cdf5bec7c450a",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/debug36_no_reinit.mp4",
+        "sha256_before": "f25a52bd55d9fa553730432412a4c31adc219af7a44f2bfa93758e88842dd44e",
+        "sha256_after": "f25a52bd55d9fa553730432412a4c31adc219af7a44f2bfa93758e88842dd44e",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/intro.mp4",
+        "sha256_before": "da15fd31c084a4fc30773227536ae69fd4427eaeda1516a8ba5b8e8f26b63cc3",
+        "sha256_after": "da15fd31c084a4fc30773227536ae69fd4427eaeda1516a8ba5b8e8f26b63cc3",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/outro.mp4",
+        "sha256_before": "f1b61ad35a32eb8e729be45b78a2b933b6674fa0f98095b60fbeca86cf3c01c2",
+        "sha256_after": "f1b61ad35a32eb8e729be45b78a2b933b6674fa0f98095b60fbeca86cf3c01c2",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/raw_108s.mp4",
+        "sha256_before": "cc36efd5406bb5c996986095dcc3eb5c6de9be6b91c85f1dd12b9581508c980d",
+        "sha256_after": "cc36efd5406bb5c996986095dcc3eb5c6de9be6b91c85f1dd12b9581508c980d",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_final.mp4",
+        "sha256_before": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+        "sha256_after": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
+        "sha256_before": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+        "sha256_after": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw_before_v3_20261018_095707.mp4",
+        "sha256_before": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+        "sha256_after": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_take_1.mp4",
+        "sha256_before": "a5afe4ef56cfaa9c452628c057bd625a00d8b3a87efc597151553e19e647b9fb",
+        "sha256_after": "a5afe4ef56cfaa9c452628c057bd625a00d8b3a87efc597151553e19e647b9fb",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_take_2.mp4",
+        "sha256_before": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+        "sha256_after": "a771a469035960304dd30e8f9ad2dff40f3a5d430c7ac6aec6f116524a3334da",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/browser/39482f8709c55460d4ea834462e88df7.webm",
+        "sha256_before": "1808d1ba98b26278dc12ab126248881284e17a2dc90773b56acb72691f6af15c",
+        "sha256_after": "1808d1ba98b26278dc12ab126248881284e17a2dc90773b56acb72691f6af15c",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/preflight_demo_own_prompt_raw.mp4",
+        "sha256_before": "f58ce7ac037560c183bb42dc95abe5ba775cafd3b8e06ee13160af4d6a538148",
+        "sha256_after": "f58ce7ac037560c183bb42dc95abe5ba775cafd3b8e06ee13160af4d6a538148",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_1/browser/a246f21e26763a28e9165a25402eea25.webm",
+        "sha256_before": "95506a87419bae979452b3220326f07c53b217d7809e72452fcb40634e40ddc5",
+        "sha256_after": "95506a87419bae979452b3220326f07c53b217d7809e72452fcb40634e40ddc5",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/takes/take_2/browser/c5f80d67e9fa702605b05eb6e3360a52.webm",
+        "sha256_before": "bcf6c3d4a66a663dc94d808f80f7bbe4e60472b9e1f700a1f0b6d266972432b9",
+        "sha256_after": "bcf6c3d4a66a663dc94d808f80f7bbe4e60472b9e1f700a1f0b6d266972432b9",
+        "unchanged": true
+      },
+      {
+        "path": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_2m52s.mp4",
+        "sha256_before": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+        "sha256_after": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+        "unchanged": true
+      }
+    ]
+  },
+  "human_full_video_acceptance": "PENDING Felix; technical and selected-frame reviews passed"
+}

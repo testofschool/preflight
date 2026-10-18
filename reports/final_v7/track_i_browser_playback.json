@@ -1,0 +1,42 @@
+{
+  "candidate": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v7/submission_candidate_v4.mp4",
+  "duration": 208.233333,
+  "seek_checks": [
+    {
+      "time": 5.009765,
+      "width": 1920,
+      "height": 1080,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "time": 90.018321,
+      "width": 1920,
+      "height": 1080,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "time": 105.011321,
+      "width": 1920,
+      "height": 1080,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "time": 140.017993,
+      "width": 1920,
+      "height": 1080,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "time": 200.019943,
+      "width": 1920,
+      "height": 1080,
+      "readyState": 4,
+      "error": null
+    }
+  ],
+  "PASS": true
+}

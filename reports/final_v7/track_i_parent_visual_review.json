@@ -1,0 +1,22 @@
+{
+  "checked_at_kst": "2026-10-18T18:25:12.408934+09:00",
+  "video_sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+  "reviewer": "parent visual inspection using view_image",
+  "rows": [
+    {
+      "seconds": 90,
+      "frame": "demo/submission_check_v7/01m30s.png",
+      "sha256": "929402b9ac8f48d56547b004a5bf98a70816b750b6721ab97b5e2d083fb97222",
+      "PASS": true,
+      "observed": "Full Better prompt card rewrite and 13.3% original to 6.7% rewrite line centered/readable; frozen caption readable"
+    },
+    {
+      "seconds": 105,
+      "frame": "demo/submission_check_v7/01m45s.png",
+      "sha256": "a2d00c2ad7558909230ed8a9afb0b2c24b9aa8a1cea838888a78b4d03016539f",
+      "PASS": true,
+      "observed": "Actual Live stills are limited message centered/readable; frozen caption readable"
+    }
+  ],
+  "PASS": true
+}

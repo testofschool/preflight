@@ -1,0 +1,179 @@
+{
+  "checked_at_kst": "2026-10-18T17:24:50.837012+09:00",
+  "auditor": "Independent release audit subagent",
+  "scope": "Offline caption/source inspection, native media metadata and full decode, fixed raw hash, required frame artifacts and exact tail/gap frame extraction. No runtime code, source video, captions, or production video edited.",
+  "video_path": "demo/preflight_demo_final.mp4",
+  "video_sha256": "d04d214c3b6b515ec262b25501c39dd43732d6fc568d983de17c186bff8d2566",
+  "video_bytes": 8086096,
+  "native_video": {
+    "duration_seconds": 172.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "codec": "h264",
+    "frame_count": 5160,
+    "audio_stream": false,
+    "loudness_lufs": null
+  },
+  "captions": {
+    "source_sections": 10,
+    "source_words": 290,
+    "cue_count": 33,
+    "nonempty_cue_count": 32,
+    "max_lines": 1,
+    "min_font_px": 43,
+    "first_frame": 0,
+    "last_frame_exclusive": 5160,
+    "intentional_blank_seconds": [
+      10,
+      13
+    ],
+    "blank_alpha_max": 0,
+    "exact_caption_reconstruction": true
+  },
+  "raw_retention": {
+    "raw_sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+    "source_duration_seconds": 108.366667,
+    "intermediate_duration_seconds": 108.0,
+    "final_raw_interval_seconds": [
+      22,
+      130
+    ],
+    "inspected_transform": "Entire raw input -> setpts=(PTS-STARTPTS)*108/source_duration,fps=30 -> 108-second intermediate; intro + raw + outro concatenation; no source seek, trim or cut in inspected render command.",
+    "verification_limit": "Raw interval retention verified from fixed input hash, executed assembly structure and native timeline; no independent per-frame pixel equivalence claim after time resampling and re-encoding."
+  },
+  "full_decode": {
+    "exit_code": 0,
+    "blackdetect_pixel_threshold": 0.1,
+    "blackdetect_picture_fraction": 0.98,
+    "blackdetect_min_duration_seconds": 0.1,
+    "detected_black_intervals": [],
+    "raw_diagnostics_saved": false
+  },
+  "six_frame_artifact_checks": [
+    {
+      "time_seconds": 5,
+      "path": "demo/final_check/00m05s.png",
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 30,
+      "path": "demo/final_check/00m30s.png",
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 70,
+      "path": "demo/final_check/01m10s.png",
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 100,
+      "path": "demo/final_check/01m40s.png",
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 135,
+      "path": "demo/final_check/02m15s.png",
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 165,
+      "path": "demo/final_check/02m45s.png",
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "independent_frame_extractions": [
+    {
+      "path": "reports/final_v5/track_c_independent_lastframe.png",
+      "exit_code": 0,
+      "exists": true,
+      "diagnostic_bytes": 0
+    },
+    {
+      "path": "reports/final_v5/track_c_independent_intro_gap.png",
+      "exit_code": 0,
+      "exists": true,
+      "diagnostic_bytes": 0
+    }
+  ],
+  "checks": {
+    "exact_user_c2_caption_text": true,
+    "all_cue_intervals_contiguous": true,
+    "caption_timeline_exact": true,
+    "only_intentional_blank_10_to_13": true,
+    "intentional_blank_is_fully_transparent": true,
+    "all_nonempty_captions_at_most_two_lines": true,
+    "all_nonempty_caption_fonts_at_least36": true,
+    "native_duration_172_seconds": true,
+    "native_format_1920x1080_30fps_h264": true,
+    "native_no_audio_matches_authorized_fallback": true,
+    "native_metadata_matches_facts": true,
+    "raw_sha256_matches_fixed_input": true,
+    "six_requested_frame_times_exact": true,
+    "six_frame_files_match_facts": true,
+    "full_native_decode_exit0": true,
+    "no_detected_black_intervals": true,
+    "independent_tail_and_gap_extraction": true,
+    "actual_burned_captions_match_expected_at_sampled_times": false
+  },
+  "check_count": 18,
+  "passed_count": 17,
+  "pass": false,
+  "visual_tail_review": "Last frame still visibly contains closing card and caption; corrected render visual review found unexpected missing captions at23,25,30,35 seconds, despite correct caption input PNG/concat. Repair pending.",
+  "bounded_notes": [
+    "Silent H.264 export follows the explicit no-voiceover fallback; no AAC stream or LUFS measurement exists.",
+    "The supplied C.2 script contains 290 words despite the approximate 380-word label in the handoff. Exact supplied text is retained.",
+    "Outros use 12+16+14 seconds to fill the specified 42-second window; all three cards and limits are present.",
+    "Public YouTube upload/visibility and organizer-template deck remain separate blocked tracks."
+  ],
+  "unresolved_findings": [
+    {
+      "severity": "REQUIRED_FIX",
+      "finding": "Unexpected missing burned captions at23,25,30,35 seconds. Correct C.2 cues and opaque alpha PNGs exist at these times, but final overlay omits them.45-second final caption is present.",
+      "actual_frame_evidence": [
+        "reports/final_v5/track_c_independent_23s.png",
+        "reports/final_v5/track_c_independent_25s.png",
+        "reports/final_v5/track_c_independent_30s.png",
+        "reports/final_v5/track_c_independent_35s.png",
+        "reports/final_v5/track_c_independent_45s.png"
+      ],
+      "isolated_input_evidence": "reports/final_v5/track_c_caption_input_30s.png"
+    }
+  ]
+}

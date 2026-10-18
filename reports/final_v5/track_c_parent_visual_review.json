@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-10-18T08:26:35.860535+00:00",
+  "video_sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+  "video_hash_matches_facts": true,
+  "video_bytes": 8109690,
+  "six_required_frames": [
+    {
+      "path": "demo/final_check/00m05s.png",
+      "time_seconds": 5,
+      "hash_matches": true
+    },
+    {
+      "path": "demo/final_check/00m30s.png",
+      "time_seconds": 30,
+      "hash_matches": true
+    },
+    {
+      "path": "demo/final_check/01m10s.png",
+      "time_seconds": 70,
+      "hash_matches": true
+    },
+    {
+      "path": "demo/final_check/01m40s.png",
+      "time_seconds": 100,
+      "hash_matches": true
+    },
+    {
+      "path": "demo/final_check/02m15s.png",
+      "time_seconds": 135,
+      "hash_matches": true
+    },
+    {
+      "path": "demo/final_check/02m45s.png",
+      "time_seconds": 165,
+      "hash_matches": true
+    }
+  ],
+  "visual_review": "Parent inspected six requested frames, corrected30-second frame, architecture and limits cards, intentional11-second caption gap, and final six-frame contact sheet. Text readable; corrected30s caption visible; original UI and saved-still/reused-review labels retained.",
+  "performed_by": "Parent agent using actual view_image outputs",
+  "human_acceptance": "PENDING \u2014 Felix will review full MP4 before uploading."
+}

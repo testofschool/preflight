@@ -1,0 +1,10 @@
+People who generate AI video pay per attempt. Here is what they say. "You still burn credits on the failed attempt." "Only one of the generations was usable." "I recommend a lo-res preview before having to spend actual credits."
+Preflight is that step before you pay.
+Paste a prompt. Preflight compares it with 1,911 human votes on earlier AI videos and returns a risk estimate, with the closest past prompts as evidence. For "a spoon and a laptop", the estimate is 46.8 percent.
+Then a Google ADK agent on Gemini rewrites the prompt and keeps the rewrite only if the estimated risk drops. Here it drops to 15.8 percent. Copy it and go.
+Before paying about three dollars for an eight-second video, you can look at a still of the scene. For judging, the five sample prompts use saved stills: zero model calls, zero cost, and the label says so. In our tests, live image generation failed too often under shared capacity, so we did not put it in front of you.
+After you generate, upload the clip. Gemini takes a second look at sampled frames, and its verdict is stored as separate feedback next to the human votes. It is a second pair of eyes, not a verdict.
+Everything runs on Google Cloud: Cloud Run, Firestore, Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.
+The architecture: one prompt, a traceable check, tools for evidence and difficulty, Firestore as memory.
+The limits are on the page. The risk score is a historical signal, held-out AUC 0.67, not a promise about today's models. Clip-review accuracy is not measured yet.
+Built in Seoul by a producer who paid for these failures, tested from India. Preflight: know before you pay.

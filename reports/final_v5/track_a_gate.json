@@ -1,0 +1,81 @@
+{
+  "candidate_revision": "preflight-00027-pit",
+  "candidate_url": "https://admission-v5-candidate---preflight-jcgro45veq-as.a.run.app",
+  "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+  "unit_tests": 94,
+  "runtime_source_unchanged": true,
+  "preview_probes": [
+    {
+      "prompt": "a spoon and a laptop",
+      "variant": "original",
+      "http_status": 200,
+      "cache_header": "hit",
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "aspect_ratio": "16:9",
+      "cache": "hit",
+      "generated_at": "2026-10-18T01:50:23.555926+00:00",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "pricing_checked_date": "2026-10-18",
+      "latency_ms": 387,
+      "model_calls": 0,
+      "metadata_label": "Saved still \u00b7 generated 2026-10-18 \u00b7 0 model calls \u00b7 $0.00",
+      "synthid": true,
+      "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still.",
+      "image_byte_size": 76625,
+      "image_sha256": "ec93ee2616e1b65ac4cad0d2d82aabebe5f913900d9af9a3cde26c2915fa0121"
+    },
+    {
+      "prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
+      "variant": "rewrite",
+      "http_status": 200,
+      "cache_header": "hit",
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "aspect_ratio": "16:9",
+      "cache": "hit",
+      "generated_at": "2026-10-18T01:51:29.873295+00:00",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "pricing_source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "pricing_checked_date": "2026-10-18",
+      "latency_ms": 131,
+      "model_calls": 0,
+      "metadata_label": "Saved still \u00b7 generated 2026-10-18 \u00b7 0 model calls \u00b7 $0.00",
+      "synthid": true,
+      "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still.",
+      "image_byte_size": 65720,
+      "image_sha256": "8dac9ce3a56559eb67a707a322be16a59dc91e19557b77480ef1aec2f6738ea7"
+    }
+  ],
+  "preflight_probes": [
+    {
+      "rewrite_source": "pinned-sample",
+      "rewrite_model_calls_this_request": 0,
+      "p_fail": 0.4678787878787878,
+      "p_fail_after": 0.15833333333333333,
+      "http_status": 200,
+      "prompt": "a spoon and a laptop"
+    },
+    {
+      "rewrite_source": "pinned-sample",
+      "rewrite_model_calls_this_request": 0,
+      "p_fail": 0.30666666666666664,
+      "p_fail_after": 0.05714285714285714,
+      "http_status": 200,
+      "prompt": "a cat and a dog"
+    }
+  ],
+  "status": {
+    "http_status": 200,
+    "preview": true,
+    "preview_mode": "samples"
+  },
+  "typed_probe": {
+    "http_status": 503,
+    "detail": "Live stills are limited to the sample prompts during judging \u2014 shared Gemini image capacity. The risk check still works."
+  },
+  "pass": true
+}

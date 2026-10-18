@@ -11,6 +11,7 @@ logs/server.log
 # Locally recorded clips stay outside Git.
 /demo/*.mp4
 /demo/takes/
+/demo/final_assets/
 /demo_diagnostics/
 
 # Raw image probes and advisory locks remain local; numerical receipts are committed.

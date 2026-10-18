@@ -1,0 +1,59 @@
+[
+  {
+    "revision": "preflight-00027-pit",
+    "created_at": "2026-10-18T08:22:25.407034Z",
+    "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+    "preview_env": {
+      "PREFLIGHT_PREVIEW_DAILY_LIMIT": "500",
+      "PREFLIGHT_PREVIEW_ENABLED": "true",
+      "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+      "PREFLIGHT_PREVIEW_WARM_ENABLED": "false"
+    },
+    "ready": "True"
+  },
+  {
+    "revision": "preflight-00025-lij",
+    "created_at": "2026-10-18T02:00:27.365496Z",
+    "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+    "preview_env": {
+      "PREFLIGHT_PREVIEW_DAILY_LIMIT": "60",
+      "PREFLIGHT_PREVIEW_ENABLED": "true",
+      "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+      "PREFLIGHT_PREVIEW_WARM_ENABLED": "false"
+    },
+    "ready": "True"
+  },
+  {
+    "revision": "preflight-00024-poq",
+    "created_at": "2026-10-18T01:46:48.519427Z",
+    "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+    "preview_env": {
+      "PREFLIGHT_PREVIEW_DAILY_LIMIT": "60",
+      "PREFLIGHT_PREVIEW_ENABLED": "true",
+      "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+      "PREFLIGHT_PREVIEW_WARM_ENABLED": "true"
+    },
+    "ready": "True"
+  },
+  {
+    "revision": "preflight-00023-wad",
+    "created_at": "2026-10-18T01:41:46.882163Z",
+    "image_digest": "sha256:32ad3b7e5f77ec272eee78ead07403ba42e35a2d226721ab0f4b5f4c737b537f",
+    "preview_env": {
+      "PREFLIGHT_PREVIEW_DAILY_LIMIT": "60",
+      "PREFLIGHT_PREVIEW_ENABLED": "true",
+      "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false"
+    },
+    "ready": "True"
+  },
+  {
+    "revision": "preflight-00021-sus",
+    "created_at": "2026-10-18T00:49:47.857022Z",
+    "image_digest": "sha256:1df156c771fff10e1a73f8f1b69194a16293985dcf2e2f1ec896a23dd5868444",
+    "preview_env": {
+      "PREFLIGHT_PREVIEW_DAILY_LIMIT": "60",
+      "PREFLIGHT_PREVIEW_ENABLED": "false"
+    },
+    "ready": "True"
+  }
+]

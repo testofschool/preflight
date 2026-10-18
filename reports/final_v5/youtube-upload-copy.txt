@@ -1,0 +1,7 @@
+Title: Preflight — check an AI-video prompt before you pay | AI Builder Cup 2026 (team testofschool)
+
+Description:
+Preflight estimates the failure risk of a text-to-video prompt before you pay to generate it, shows the closest past prompts as evidence, and keeps a Gemini rewrite only when the estimated risk drops. Built on Google Cloud: Cloud Run, Firestore, Gemini on Vertex AI, Google ADK with Agent Platform Sessions.
+
+Live: https://preflight-jcgro45veq-as.a.run.app
+Code: https://github.com/testofschool/preflight

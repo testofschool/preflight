@@ -1,0 +1,8 @@
+{
+  "stage": "predeployment native representation assertion",
+  "cloud_mutations": 0,
+  "candidate_created": false,
+  "baseline_retained_at_100": true,
+  "cause": "Service template uses original image tag and omits container name; immutable revision resolves the same image digest and supplies default name app-1. All other spec fields were equal.",
+  "harness_correction": "Compare after resolving image to the independently verified native digest and filling the omitted default container name. No runtime or image changed."
+}

@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-18T08:20:20.005232+00:00",
+  "baseline_head": "de0d563530405adf3dae5a26f5ded3f7a009917d",
+  "baseline_remote_main": "de0d563530405adf3dae5a26f5ded3f7a009917d",
+  "baseline_clean": true,
+  "tags": {
+    "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+    "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+    "aibc-2026-submission-v3": "d638c0690cb17d60316922eb30a14f150fe7c23c"
+  },
+  "dataless_files": [],
+  "template_path": "docs/template/aibc_template.pptx",
+  "template_exists": false,
+  "voiceover_files": [],
+  "raw_video": {
+    "path": "demo/preflight_demo_raw.mp4",
+    "bytes": 9300697,
+    "sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78"
+  },
+  "source_request": "User pasted attachment 1cb015ce-8a1f-4578-bd09-431353af3d86 v5; directly authorized Tracks A-C and D conditional on URL",
+  "report_due_kst": "2026-10-18T21:00:00+09:00",
+  "hard_stop_kst": "2026-10-18T22:00:00+09:00"
+}

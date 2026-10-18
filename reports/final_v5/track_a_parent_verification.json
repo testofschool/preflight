@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-10-18T08:23:33.566521+00:00",
+  "revision": "preflight-00027-pit",
+  "traffic": [
+    {
+      "revision": "preflight-00016-tuk",
+      "percent": 0
+    },
+    {
+      "revision": "preflight-00021-sus",
+      "percent": 0
+    },
+    {
+      "revision": "preflight-00025-lij",
+      "percent": 0
+    },
+    {
+      "revision": "preflight-00027-pit",
+      "percent": 100
+    }
+  ],
+  "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+  "daily_limit": "500",
+  "live_enabled": "false",
+  "warm_enabled": "false",
+  "preview_mode": "samples",
+  "status_http": 200,
+  "passed": true
+}

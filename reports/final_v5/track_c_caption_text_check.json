@@ -1,0 +1,43 @@
+{
+  "source": "User supplied C.2",
+  "section_count": 10,
+  "word_count": 290,
+  "exact_section_text": true,
+  "caption_reconstruction": true,
+  "cue_count": 33,
+  "caption_gap": [
+    [
+      10,
+      13
+    ]
+  ],
+  "first_cues": [
+    {
+      "start": 0,
+      "end": 4,
+      "text": "People who generate AI video pay per attempt. Here is what they say."
+    },
+    {
+      "start": 4,
+      "end": 7,
+      "text": "\"You still burn credits on the failed attempt.\""
+    },
+    {
+      "start": 7,
+      "end": 10,
+      "text": "\"Only one of the generations was usable.\""
+    },
+    {
+      "start": 10,
+      "end": 13,
+      "text": ""
+    },
+    {
+      "start": 13,
+      "end": 16,
+      "text": "\"I recommend a lo-res preview before having to spend actual credits.\""
+    }
+  ],
+  "minimum_font_px": 43,
+  "maximum_lines": 1
+}

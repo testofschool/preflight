@@ -1,0 +1,134 @@
+{
+  "checked_at_kst": "2026-10-18T17:21:55.826922+09:00",
+  "scope": "Read-only initial readiness and offline source identity; final history scan and anonymous clone intentionally deferred until parent completes and pushes package.",
+  "starting_main_commit": "de0d563530405adf3dae5a26f5ded3f7a009917d",
+  "track_b": {
+    "status": "BLOCKED",
+    "reason": "Required organizer template missing; no substitute deck created.",
+    "required_template": "docs/template/aibc_template.pptx",
+    "template_exists": false,
+    "pptx_count": 0,
+    "pitch_pdf_exists": false,
+    "page_count": null,
+    "pdf_bytes": null,
+    "number_check": "NOT_RUN"
+  },
+  "track_d": {
+    "status": "BLOCKED",
+    "reason": "Felix has not supplied the final public YouTube URL.",
+    "readme_video_placeholder_count": 1,
+    "submission_notes_video_placeholder_count": 1,
+    "public_youtube_check": "NOT_RUN",
+    "brief_description_characters": 952,
+    "brief_description_limit": 1024,
+    "brief_description_within_limit": true,
+    "brief_description_sha256": "3bac4ff63ca67bf51c54d329abad0c3cb16da13f697bd35e3041e40959f6ef23",
+    "final_anonymous_clone": "DEFERRED",
+    "final_history_secret_scan": "DEFERRED"
+  },
+  "hydration_at_readiness": {
+    "regular_files_stat_checked": 734,
+    "dataless_count": 0,
+    "dataless_paths": [],
+    "stat_error_count": 0,
+    "content_hydration_not_attempted": true
+  },
+  "source_freeze": {
+    "production_source_tag": "aibc-2026-submission-v3",
+    "production_source_commit": "d638c0690cb17d60316922eb30a14f150fe7c23c",
+    "main_runtime_file_count": 25,
+    "source_tag_runtime_file_count": 25,
+    "main_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+    "source_tag_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+    "worktree_runtime_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+    "runtime_files_match_source_tag": true,
+    "worktree_runtime_matches_main": true,
+    "native_receipt": "reports/preview_v4/source_match.json",
+    "native_receipt_freshness": "Existing 2026-10-18 11:10 KST receipt only; no fresh cloud provenance call in this audit.",
+    "native_receipt_image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+    "frozen_scope_base": "9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af",
+    "frozen_files_checked": 13,
+    "frozen_files_matching": 13,
+    "frozen_file_checks": [
+      {
+        "path": "cloud/rewrite_agent.py",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "cloud/store.py",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "cloud/postcheck.py",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "preflight_core/__init__.py",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "preflight_core/engine.py",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "static/index.html",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "static/styles.css",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "artifacts/engine.json",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "artifacts/vectorizer.joblib",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "artifacts/prompt_vectors.npz",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "Dockerfile",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "requirements-cloud.lock",
+        "matches_recorded_frozen_hash": true
+      },
+      {
+        "path": "cloudbuild.yaml",
+        "matches_recorded_frozen_hash": true
+      }
+    ]
+  },
+  "local_tags": {
+    "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+    "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+    "aibc-2026-submission-v3": "d638c0690cb17d60316922eb30a14f150fe7c23c"
+  },
+  "verification_helpers": {
+    "public_verifier": "reports/final_v5/verify_public_package.py",
+    "public_verifier_ast_parse": "PASS",
+    "public_verifier_network_run": "NOT_RUN",
+    "secret_worktree_script": "scripts/check_secrets.py",
+    "history_script": "scripts/scan_history_v3.py",
+    "history_script_ref_scope": "all reachable refs; blobs including binary, commit and tag payloads; fixed marker regexes only, not an exhaustive secret guarantee",
+    "history_existing_report_overwrite": "REFUSED",
+    "raw_matches_emitted": false,
+    "scans_executed_in_this_audit": false,
+    "public_verifier_sha256": "2e5379a72218e67ed86cd9487af93c859e80c191e9d4a97de3626ef95473826b",
+    "public_verifier_help": "PASS"
+  },
+  "handoff_notes": [
+    "The prescribed deck template is an explicit per-track prerequisite; Track C architecture and limit cards do not substitute for Track B.",
+    "Track D remains blocked even if repository-publication checks pass.",
+    "Previous public_access.json verified df49eec947029137477f294f0e5a8a61e189dd05, not the starting main de0d563 or the forthcoming final commit.",
+    "Run final worktree/index scan before publishing, then history scan covering the final content commit and anonymous-clone check after push. Receipt append commits need a subsequent bounded scan/verification or an explicit coverage limit.",
+    "Do not move existing tags; v3 remains the runtime source tag and final media/report commits may follow it."
+  ],
+  "external_actions_in_this_audit": 0,
+  "model_calls_in_this_audit": 0
+}

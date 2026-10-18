@@ -1,0 +1,199 @@
+{
+  "state": "INVALIDATED_BEFORE_OVERLAY_FIX",
+  "invalidated_video_sha256": "d04d214c3b6b515ec262b25501c39dd43732d6fc568d983de17c186bff8d2566",
+  "cause": "Filter graph reinitialization at intro/raw boundary dropped buffered sparse caption frames. Fixed final disables base-input reinitialization and passes all actual cue checks.",
+  "cue_diagnosis": [
+    {
+      "time": 2.0,
+      "text": "People who generate AI video pay per attempt. Here is what they say.",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 5.5,
+      "text": "\"You still burn credits on the failed attempt.\"",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 8.5,
+      "text": "\"Only one of the generations was usable.\"",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 14.5,
+      "text": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 19.0,
+      "text": "Preflight is that step before you pay.",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 23.133333333333333,
+      "text": "Paste a prompt.",
+      "median_bg_red": 246.0,
+      "caption_visible": false
+    },
+    {
+      "time": 28.433333333333334,
+      "text": "Preflight compares it with 1,911 human votes on earlier AI videos",
+      "median_bg_red": 232,
+      "caption_visible": false
+    },
+    {
+      "time": 37.13333333333333,
+      "text": "and returns a risk estimate, with the closest past prompts as evidence.",
+      "median_bg_red": 246,
+      "caption_visible": false
+    },
+    {
+      "time": 45.83333333333333,
+      "text": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+      "median_bg_red": 32,
+      "caption_visible": true
+    },
+    {
+      "time": 51.66666666666667,
+      "text": "Then a Google ADK agent on Gemini rewrites the prompt",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 55.0,
+      "text": "and keeps the rewrite only if the estimated risk drops.",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 58.33333333333333,
+      "text": "Here it drops to 15.8 percent. Copy it and go.",
+      "median_bg_red": 32.0,
+      "caption_visible": true
+    },
+    {
+      "time": 61.53333333333333,
+      "text": "Before paying about three dollars for an eight-second video,",
+      "median_bg_red": 32,
+      "caption_visible": true
+    },
+    {
+      "time": 64.58333333333333,
+      "text": "you can look at a still of the scene.",
+      "median_bg_red": 32.0,
+      "caption_visible": true
+    },
+    {
+      "time": 67.63333333333333,
+      "text": "For judging, the five sample prompts use saved stills:",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 70.85,
+      "text": "zero model calls, zero cost, and the label says so.",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 74.56666666666666,
+      "text": "In our tests, live image generation failed too often under shared capacity,",
+      "median_bg_red": 32,
+      "caption_visible": true
+    },
+    {
+      "time": 78.3,
+      "text": "so we did not put it in front of you.",
+      "median_bg_red": 32.0,
+      "caption_visible": true
+    },
+    {
+      "time": 82.83333333333334,
+      "text": "After you generate, upload the clip.",
+      "median_bg_red": 32,
+      "caption_visible": true
+    },
+    {
+      "time": 89.45,
+      "text": "Gemini takes a second look at sampled frames,",
+      "median_bg_red": 32,
+      "caption_visible": true
+    },
+    {
+      "time": 99.38333333333333,
+      "text": "and its verdict is stored as separate feedback next to the human votes.",
+      "median_bg_red": 32.0,
+      "caption_visible": true
+    },
+    {
+      "time": 110.26666666666667,
+      "text": "It is a second pair of eyes, not a verdict.",
+      "median_bg_red": 32.0,
+      "caption_visible": true
+    },
+    {
+      "time": 118.15,
+      "text": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+      "median_bg_red": 32,
+      "caption_visible": true
+    },
+    {
+      "time": 125.65,
+      "text": "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.",
+      "median_bg_red": 32.0,
+      "caption_visible": true
+    },
+    {
+      "time": 132.8,
+      "text": "The architecture: one prompt, a traceable check,",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 138.8,
+      "text": "tools for evidence and difficulty, Firestore as memory.",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 143.5,
+      "text": "The limits are on the page.",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 147.5,
+      "text": "The risk score is a historical signal, held-out AUC 0.67,",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 151.5,
+      "text": "not a promise about today's models.",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 154.5,
+      "text": "Clip-review accuracy is not measured yet.",
+      "median_bg_red": 31,
+      "caption_visible": true
+    },
+    {
+      "time": 160.63333333333333,
+      "text": "Built in Seoul by a producer who paid for these failures,",
+      "median_bg_red": 31.0,
+      "caption_visible": true
+    },
+    {
+      "time": 168.63333333333333,
+      "text": "tested from India. Preflight: know before you pay.",
+      "median_bg_red": 31,
+      "caption_visible": true
+    }
+  ]
+}

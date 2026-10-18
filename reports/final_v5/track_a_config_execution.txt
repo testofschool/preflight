@@ -1,0 +1,1 @@
+{"pass": true, "revision": "preflight-00027-pit", "traffic_percent": 100, "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932", "daily_limit": 500, "minute_limit": 5, "unit_tests": 94, "sample_cache_hits": 2, "sample_model_calls": 0, "typed_http_status": 503, "preflight_http_200": 2}

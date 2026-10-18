@@ -1,0 +1,277 @@
+{
+  "final_sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+  "facts_hash_matches": true,
+  "raw_unchanged": true,
+  "native_specs_PASS": true,
+  "caption_check_method": "Actual final-frame decode at each cue midpoint; dark caption background and >95% expected bright glyph pixels. Blank gap must show plain light card.",
+  "caption_cues_checked": 33,
+  "caption_nonblank_checked": 32,
+  "caption_cues_PASS": true,
+  "caption_cues": [
+    {
+      "time_seconds": 2.0,
+      "text": "People who generate AI video pay per attempt. Here is what they say.",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 5.5,
+      "text": "\"You still burn credits on the failed attempt.\"",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 8.5,
+      "text": "\"Only one of the generations was usable.\"",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 11.5,
+      "text": "",
+      "expected": "Intentional transparent gap under unspoken third quote",
+      "median_red": 245.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 14.5,
+      "text": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 19.0,
+      "text": "Preflight is that step before you pay.",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 23.133333333333333,
+      "text": "Paste a prompt.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 28.433333333333334,
+      "text": "Preflight compares it with 1,911 human votes on earlier AI videos",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 37.13333333333333,
+      "text": "and returns a risk estimate, with the closest past prompts as evidence.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 45.83333333333333,
+      "text": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 51.66666666666667,
+      "text": "Then a Google ADK agent on Gemini rewrites the prompt",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 55.0,
+      "text": "and keeps the rewrite only if the estimated risk drops.",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 58.33333333333333,
+      "text": "Here it drops to 15.8 percent. Copy it and go.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 61.53333333333333,
+      "text": "Before paying about three dollars for an eight-second video,",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 64.58333333333333,
+      "text": "you can look at a still of the scene.",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 67.63333333333333,
+      "text": "For judging, the five sample prompts use saved stills:",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 70.85,
+      "text": "zero model calls, zero cost, and the label says so.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 74.56666666666666,
+      "text": "In our tests, live image generation failed too often under shared capacity,",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 78.3,
+      "text": "so we did not put it in front of you.",
+      "caption_background_median_red": 32.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 82.83333333333334,
+      "text": "After you generate, upload the clip.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 89.45,
+      "text": "Gemini takes a second look at sampled frames,",
+      "caption_background_median_red": 32.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 99.38333333333333,
+      "text": "and its verdict is stored as separate feedback next to the human votes.",
+      "caption_background_median_red": 32.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 110.26666666666667,
+      "text": "It is a second pair of eyes, not a verdict.",
+      "caption_background_median_red": 32.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 118.15,
+      "text": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 125.65,
+      "text": "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.",
+      "caption_background_median_red": 32,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 132.8,
+      "text": "The architecture: one prompt, a traceable check,",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 138.8,
+      "text": "tools for evidence and difficulty, Firestore as memory.",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 143.5,
+      "text": "The limits are on the page.",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 147.5,
+      "text": "The risk score is a historical signal, held-out AUC 0.67,",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 151.5,
+      "text": "not a promise about today's models.",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 154.5,
+      "text": "Clip-review accuracy is not measured yet.",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 160.63333333333333,
+      "text": "Built in Seoul by a producer who paid for these failures,",
+      "caption_background_median_red": 31.0,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    },
+    {
+      "time_seconds": 168.63333333333333,
+      "text": "tested from India. Preflight: know before you pay.",
+      "caption_background_median_red": 31,
+      "expected_glyph_bright_fraction": 1.0,
+      "PASS": true
+    }
+  ],
+  "requested_frames": [
+    {
+      "time_seconds": 5,
+      "path": "demo/final_check/00m05s.png",
+      "PASS": true
+    },
+    {
+      "time_seconds": 30,
+      "path": "demo/final_check/00m30s.png",
+      "PASS": true
+    },
+    {
+      "time_seconds": 70,
+      "path": "demo/final_check/01m10s.png",
+      "PASS": true
+    },
+    {
+      "time_seconds": 100,
+      "path": "demo/final_check/01m40s.png",
+      "PASS": true
+    },
+    {
+      "time_seconds": 135,
+      "path": "demo/final_check/02m15s.png",
+      "PASS": true
+    },
+    {
+      "time_seconds": 165,
+      "path": "demo/final_check/02m45s.png",
+      "PASS": true
+    }
+  ],
+  "full_decode_PASS": true,
+  "PASS": true
+}

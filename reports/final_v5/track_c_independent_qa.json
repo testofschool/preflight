@@ -1,0 +1,539 @@
+{
+  "checked_at_kst": "2026-10-18T17:27:05.026280+09:00",
+  "auditor": "Independent release audit subagent",
+  "scope": "Exact C.2 reconstruction; fixed raw hash and inspected assembly; native metadata and full decode; all32 active-cue midpoint burned-caption checks from independently decoded final pixels; intentional blank and exact tail extraction. No video assets edited.",
+  "video_path": "demo/preflight_demo_final.mp4",
+  "video_sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+  "video_bytes": 8109690,
+  "native_video": {
+    "duration_seconds": 172.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "codec": "h264",
+    "frame_count": 5160,
+    "audio_stream": false,
+    "loudness_lufs": null
+  },
+  "captions": {
+    "source_sections": 10,
+    "source_words": 290,
+    "cue_count": 33,
+    "nonempty_cue_count": 32,
+    "max_lines": 1,
+    "min_font_px": 43,
+    "first_frame": 0,
+    "last_frame_exclusive": 5160,
+    "intentional_blank_seconds": [
+      10,
+      13
+    ],
+    "blank_alpha_max": 0,
+    "actual_gap_bottom_region_mean_difference_from_quote_card": 0.6666666666666666,
+    "midpoint_checks": [
+      {
+        "cue_index": 0,
+        "start_seconds": 0,
+        "end_seconds": 4,
+        "sample_frame": 60,
+        "sample_seconds": 2.0,
+        "text": "People who generate AI video pay per attempt. Here is what they say.",
+        "expected_pill_pixels": 112758,
+        "fraction_within30_per_channel": 0.9998847088454921,
+        "mean_abs_channel_difference": 9.877347948704305,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 1,
+        "start_seconds": 4,
+        "end_seconds": 7,
+        "sample_frame": 165,
+        "sample_seconds": 5.5,
+        "text": "\"You still burn credits on the failed attempt.\"",
+        "expected_pill_pixels": 74068,
+        "fraction_within30_per_channel": 0.9999189933574553,
+        "mean_abs_channel_difference": 9.941526705189826,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 2,
+        "start_seconds": 7,
+        "end_seconds": 10,
+        "sample_frame": 255,
+        "sample_seconds": 8.5,
+        "text": "\"Only one of the generations was usable.\"",
+        "expected_pill_pixels": 70108,
+        "fraction_within30_per_channel": 0.999914417755463,
+        "mean_abs_channel_difference": 9.936574047659802,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 3,
+        "start_seconds": 13,
+        "end_seconds": 16,
+        "sample_frame": 435,
+        "sample_seconds": 14.5,
+        "text": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+        "expected_pill_pixels": 113555,
+        "fraction_within30_per_channel": 0.9999823873893708,
+        "mean_abs_channel_difference": 9.907119897846858,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 4,
+        "start_seconds": 16.0,
+        "end_seconds": 22.0,
+        "sample_frame": 570,
+        "sample_seconds": 19.0,
+        "text": "Preflight is that step before you pay.",
+        "expected_pill_pixels": 61037,
+        "fraction_within30_per_channel": 0.9999672329898258,
+        "mean_abs_channel_difference": 9.82631300140352,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 5,
+        "start_seconds": 22.0,
+        "end_seconds": 24.266666666666666,
+        "sample_frame": 694,
+        "sample_seconds": 23.133333333333333,
+        "text": "Paste a prompt.",
+        "expected_pill_pixels": 29911,
+        "fraction_within30_per_channel": 1.0,
+        "mean_abs_channel_difference": 10.933837049914747,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 6,
+        "start_seconds": 24.266666666666666,
+        "end_seconds": 32.6,
+        "sample_frame": 853,
+        "sample_seconds": 28.433333333333334,
+        "text": "Preflight compares it with 1,911 human votes on earlier AI videos",
+        "expected_pill_pixels": 105685,
+        "fraction_within30_per_channel": 0.9999526895964422,
+        "mean_abs_channel_difference": 9.612206084117897,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 7,
+        "start_seconds": 32.6,
+        "end_seconds": 41.666666666666664,
+        "sample_frame": 1114,
+        "sample_seconds": 37.13333333333333,
+        "text": "and returns a risk estimate, with the closest past prompts as evidence.",
+        "expected_pill_pixels": 114544,
+        "fraction_within30_per_channel": 0.9999301578432742,
+        "mean_abs_channel_difference": 10.39983470689575,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 8,
+        "start_seconds": 41.666666666666664,
+        "end_seconds": 50.0,
+        "sample_frame": 1375,
+        "sample_seconds": 45.833333333333336,
+        "text": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+        "expected_pill_pixels": 93135,
+        "fraction_within30_per_channel": 0.9999033660814947,
+        "mean_abs_channel_difference": 10.617207995561998,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 9,
+        "start_seconds": 50.0,
+        "end_seconds": 53.333333333333336,
+        "sample_frame": 1550,
+        "sample_seconds": 51.666666666666664,
+        "text": "Then a Google ADK agent on Gemini rewrites the prompt",
+        "expected_pill_pixels": 93219,
+        "fraction_within30_per_channel": 0.9999463628659393,
+        "mean_abs_channel_difference": 9.318575969848778,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 10,
+        "start_seconds": 53.333333333333336,
+        "end_seconds": 56.666666666666664,
+        "sample_frame": 1650,
+        "sample_seconds": 55.0,
+        "text": "and keeps the rewrite only if the estimated risk drops.",
+        "expected_pill_pixels": 87870,
+        "fraction_within30_per_channel": 0.9999772391032207,
+        "mean_abs_channel_difference": 9.305261560638822,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 11,
+        "start_seconds": 56.666666666666664,
+        "end_seconds": 60.0,
+        "sample_frame": 1750,
+        "sample_seconds": 58.333333333333336,
+        "text": "Here it drops to 15.8 percent. Copy it and go.",
+        "expected_pill_pixels": 75704,
+        "fraction_within30_per_channel": 0.9999075346084751,
+        "mean_abs_channel_difference": 10.360593011377647,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 12,
+        "start_seconds": 60.0,
+        "end_seconds": 63.06666666666667,
+        "sample_frame": 1846,
+        "sample_seconds": 61.53333333333333,
+        "text": "Before paying about three dollars for an eight-second video,",
+        "expected_pill_pixels": 97835,
+        "fraction_within30_per_channel": 0.9998875657995605,
+        "mean_abs_channel_difference": 10.068993713906066,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 13,
+        "start_seconds": 63.06666666666667,
+        "end_seconds": 66.1,
+        "sample_frame": 1937,
+        "sample_seconds": 64.56666666666666,
+        "text": "you can look at a still of the scene.",
+        "expected_pill_pixels": 59220,
+        "fraction_within30_per_channel": 0.9999155690645052,
+        "mean_abs_channel_difference": 10.083451536643025,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 14,
+        "start_seconds": 66.1,
+        "end_seconds": 69.16666666666667,
+        "sample_frame": 2029,
+        "sample_seconds": 67.63333333333334,
+        "text": "For judging, the five sample prompts use saved stills:",
+        "expected_pill_pixels": 87531,
+        "fraction_within30_per_channel": 0.9998857547611704,
+        "mean_abs_channel_difference": 9.687775378627762,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 15,
+        "start_seconds": 69.16666666666667,
+        "end_seconds": 72.53333333333333,
+        "sample_frame": 2125,
+        "sample_seconds": 70.83333333333333,
+        "text": "zero model calls, zero cost, and the label says so.",
+        "expected_pill_pixels": 82377,
+        "fraction_within30_per_channel": 0.9998786068927006,
+        "mean_abs_channel_difference": 10.10770401123291,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 16,
+        "start_seconds": 72.53333333333333,
+        "end_seconds": 76.6,
+        "sample_frame": 2237,
+        "sample_seconds": 74.56666666666666,
+        "text": "In our tests, live image generation failed too often under shared capacity,",
+        "expected_pill_pixels": 117664,
+        "fraction_within30_per_channel": 0.9998810171335327,
+        "mean_abs_channel_difference": 10.183412088659233,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 17,
+        "start_seconds": 76.6,
+        "end_seconds": 80.0,
+        "sample_frame": 2349,
+        "sample_seconds": 78.3,
+        "text": "so we did not put it in front of you.",
+        "expected_pill_pixels": 59151,
+        "fraction_within30_per_channel": 0.9998647529204916,
+        "mean_abs_channel_difference": 10.483914050480973,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 18,
+        "start_seconds": 80.0,
+        "end_seconds": 85.66666666666667,
+        "sample_frame": 2485,
+        "sample_seconds": 82.83333333333333,
+        "text": "After you generate, upload the clip.",
+        "expected_pill_pixels": 59352,
+        "fraction_within30_per_channel": 0.9999494541043267,
+        "mean_abs_channel_difference": 10.83715235656198,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 19,
+        "start_seconds": 85.66666666666667,
+        "end_seconds": 93.23333333333333,
+        "sample_frame": 2683,
+        "sample_seconds": 89.43333333333334,
+        "text": "Gemini takes a second look at sampled frames,",
+        "expected_pill_pixels": 78445,
+        "fraction_within30_per_channel": 0.9999362610746383,
+        "mean_abs_channel_difference": 10.81219113179085,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 20,
+        "start_seconds": 93.23333333333333,
+        "end_seconds": 105.53333333333333,
+        "sample_frame": 2981,
+        "sample_seconds": 99.36666666666666,
+        "text": "and its verdict is stored as separate feedback next to the human votes.",
+        "expected_pill_pixels": 115009,
+        "fraction_within30_per_channel": 0.9998782703962299,
+        "mean_abs_channel_difference": 10.80538624513444,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 21,
+        "start_seconds": 105.53333333333333,
+        "end_seconds": 115.0,
+        "sample_frame": 3308,
+        "sample_seconds": 110.26666666666667,
+        "text": "It is a second pair of eyes, not a verdict.",
+        "expected_pill_pixels": 67381,
+        "fraction_within30_per_channel": 0.9998515902108903,
+        "mean_abs_channel_difference": 10.823298358093034,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 22,
+        "start_seconds": 115.0,
+        "end_seconds": 121.3,
+        "sample_frame": 3544,
+        "sample_seconds": 118.13333333333334,
+        "text": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+        "expected_pill_pixels": 91064,
+        "fraction_within30_per_channel": 0.9998572432574893,
+        "mean_abs_channel_difference": 10.152742393627925,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 23,
+        "start_seconds": 121.3,
+        "end_seconds": 130.0,
+        "sample_frame": 3769,
+        "sample_seconds": 125.63333333333334,
+        "text": "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.",
+        "expected_pill_pixels": 106163,
+        "fraction_within30_per_channel": 0.9998869662688508,
+        "mean_abs_channel_difference": 10.251763797179809,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 24,
+        "start_seconds": 130.0,
+        "end_seconds": 135.6,
+        "sample_frame": 3984,
+        "sample_seconds": 132.8,
+        "text": "The architecture: one prompt, a traceable check,",
+        "expected_pill_pixels": 80215,
+        "fraction_within30_per_channel": 0.9999252010222527,
+        "mean_abs_channel_difference": 9.838172411643708,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 25,
+        "start_seconds": 135.6,
+        "end_seconds": 142.0,
+        "sample_frame": 4164,
+        "sample_seconds": 138.8,
+        "text": "tools for evidence and difficulty, Firestore as memory.",
+        "expected_pill_pixels": 88182,
+        "fraction_within30_per_channel": 0.9999659794515887,
+        "mean_abs_channel_difference": 9.923419745526298,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 26,
+        "start_seconds": 142.0,
+        "end_seconds": 145.0,
+        "sample_frame": 4305,
+        "sample_seconds": 143.5,
+        "text": "The limits are on the page.",
+        "expected_pill_pixels": 46307,
+        "fraction_within30_per_channel": 1.0,
+        "mean_abs_channel_difference": 9.87477775138388,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 27,
+        "start_seconds": 145.0,
+        "end_seconds": 150.0,
+        "sample_frame": 4425,
+        "sample_seconds": 147.5,
+        "text": "The risk score is a historical signal, held-out AUC 0.67,",
+        "expected_pill_pixels": 90040,
+        "fraction_within30_per_channel": 0.9999555752998667,
+        "mean_abs_channel_difference": 9.882852065748557,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 28,
+        "start_seconds": 150.0,
+        "end_seconds": 153.0,
+        "sample_frame": 4545,
+        "sample_seconds": 151.5,
+        "text": "not a promise about today's models.",
+        "expected_pill_pixels": 62240,
+        "fraction_within30_per_channel": 0.9999517994858612,
+        "mean_abs_channel_difference": 9.91390852613539,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 29,
+        "start_seconds": 153.0,
+        "end_seconds": 156.0,
+        "sample_frame": 4635,
+        "sample_seconds": 154.5,
+        "text": "Clip-review accuracy is not measured yet.",
+        "expected_pill_pixels": 70161,
+        "fraction_within30_per_channel": 0.9999002294722139,
+        "mean_abs_channel_difference": 9.902205878859576,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 30,
+        "start_seconds": 156.0,
+        "end_seconds": 165.26666666666668,
+        "sample_frame": 4819,
+        "sample_seconds": 160.63333333333333,
+        "text": "Built in Seoul by a producer who paid for these failures,",
+        "expected_pill_pixels": 90698,
+        "fraction_within30_per_channel": 0.9999669231956603,
+        "mean_abs_channel_difference": 9.925907958279124,
+        "burned_caption_present": true
+      },
+      {
+        "cue_index": 31,
+        "start_seconds": 165.26666666666668,
+        "end_seconds": 172.0,
+        "sample_frame": 5059,
+        "sample_seconds": 168.63333333333333,
+        "text": "tested from India. Preflight: know before you pay.",
+        "expected_pill_pixels": 81361,
+        "fraction_within30_per_channel": 0.9999139636926783,
+        "mean_abs_channel_difference": 9.962717600160602,
+        "burned_caption_present": true
+      }
+    ]
+  },
+  "raw_retention": {
+    "raw_sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+    "source_duration_seconds": 108.366667,
+    "final_raw_interval_seconds": [
+      22,
+      130
+    ],
+    "inspected_transform": "Entire fixed raw input -> setpts=(PTS-STARTPTS)*108/source_duration,fps=30 ->108-second intermediate; intro+raw+outro concat; no source seek/trim/cut.",
+    "verification_limit": "Retained interval verified at input hash, assembly and timeline level; no claim of per-frame pixel equivalence after time resampling and re-encoding."
+  },
+  "decode": {
+    "exit_code": 0,
+    "sampled_frames": 35,
+    "blackdetect_pixel_threshold": 0.1,
+    "blackdetect_picture_fraction": 0.98,
+    "blackdetect_min_duration_seconds": 0.1,
+    "black_intervals": [],
+    "raw_diagnostics_saved": false
+  },
+  "six_frame_artifact_checks": [
+    {
+      "time_seconds": 5,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 30,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 70,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 100,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 135,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "time_seconds": 165,
+      "exists": true,
+      "size_matches": true,
+      "sha256_matches": true,
+      "resolution": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "independent_visual_frames": [
+    "reports/final_v5/track_c_independent_intro_gap_fixed.png",
+    "reports/final_v5/track_c_independent_30s_fixed.png",
+    "reports/final_v5/track_c_independent_lastframe_fixed.png"
+  ],
+  "checks": {
+    "exact_user_c2_caption_text": true,
+    "all_cue_intervals_contiguous": true,
+    "caption_timeline_exact": true,
+    "only_intentional_blank_10_to_13": true,
+    "intentional_blank_png_fully_transparent": true,
+    "actual_gap_contains_card_and_no_stale_caption": true,
+    "all_nonempty_captions_at_most_two_lines": true,
+    "all_nonempty_caption_fonts_at_least36": true,
+    "actual_burned_captions_present_at_all32_active_cue_midpoints": true,
+    "native_duration_172_seconds": true,
+    "native_format_1920x1080_30fps_h264": true,
+    "native_no_audio_matches_authorized_fallback": true,
+    "native_metadata_matches_facts": true,
+    "raw_sha256_matches_fixed_input": true,
+    "six_requested_frame_times_exact": true,
+    "six_frame_files_match_facts": true,
+    "full_native_decode_exit0": true,
+    "no_detected_black_intervals": true,
+    "render_source_ast_parse": true,
+    "regenerated30s_gap_and_last_frame_visual_review": true
+  },
+  "check_count": 20,
+  "passed_count": 20,
+  "pass": true,
+  "visual_review": "PASS: inspected regenerated30s frame,11s intro quote frame and exact final frame171.967s.30s has the expected dataset caption;11s has the full third quote with no stale lower caption; final frame has complete live/code links and the last caption, with no black or missing tail.",
+  "resolved_finding": "The preceding render lost burned captions22\u201341.67s after filter reinitialization at the intro/raw concat boundary. Renderer disabled filter reinitialization for the base concat input; prior failed QA retained separately.",
+  "bounded_notes": [
+    "No voiceover was supplied, so the explicit silent-captioned fallback applies: no AAC stream and no LUFS value.",
+    "The supplied C.2 text is290 words; its approximate380-word header is not used to add text.",
+    "Outros hold12+16+14s to fill the specified42-second window.",
+    "YouTube publication and the prescribed-template deck remain separate blocked tracks."
+  ]
+}

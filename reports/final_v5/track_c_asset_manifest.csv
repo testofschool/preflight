@@ -1,0 +1,10 @@
+ID,Role,Source/path,Rights/consent basis,Exactness,Tool,Output/state,Blocker
+RAW,Full app workflow,demo/preflight_demo_raw.mp4,Explicit user-authorized reuse of existing source recording,LOCKED,source; ffmpeg,Observed; source SHA locked,None
+QUOTES,Four intro quotes,User request Track B slide2,User supplied short quotations and source attributions; original pages not re-fetched,LOCKED,Pillow,Rendered cards intro_quote_1…4.png,External source rights not independently audited by render track
+SCRIPT,Exact captions,User request C.2,User supplied script and explicit burn-in request,LOCKED,Pillow; ffmpeg overlay,captions.json +caption_script.txt,None
+ARCH,Architecture diagram,User request slide6,User supplied facts; original local diagram drawn for this export,LOCKED facts; ADAPTABLE composition,Pillow,outro_architecture.png,None
+LIMITS,Measured limits card,User request slide7,User supplied facts; original local diagram drawn for this export,LOCKED facts; ADAPTABLE composition,Pillow,outro_limits.png,None
+BRAND,Palette/type,static/styles.css,Existing user repository design; system font rasterization,REFERENCE_ONLY,Pillow,All cards,None
+FONT,Helvetica Neue/Menlo,macOS /System/Library/Fonts,Installed system fonts used for rasterization; font files not redistributed,REFERENCE_ONLY,Pillow,Raster text,None
+VOICE,Optional audio,demo/voiceover.*,No input supplied,MISSING,None,Silent fallback,None for silent export
+FINAL,Local final MP4,demo/preflight_demo_final.mp4,Authorized local reversible video assembly,LOCKED specs,ffmpeg,Final export; QA separate,Felix upload/public link not performed

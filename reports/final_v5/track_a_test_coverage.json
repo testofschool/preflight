@@ -1,0 +1,19 @@
+{
+  "total": 94,
+  "by_module": {
+    "tests.test_preview_admission_v5": 57,
+    "tests.test_preview": 9,
+    "tests.test_preview_v4": 16,
+    "tests.test_preview_release_v4": 12
+  },
+  "new_v5_cases": 57,
+  "coverage": [
+    "All five original sample entries and all five pinned rewrite entries, including the unchanged rewrite, across both original/rewrite variants and saved-hit/missing-document cases (40 cases).",
+    "Arbitrary and punctuated typed prompts reject before admission even when cached (4 cases).",
+    "Whitespace-wrapped sample normalizes and is admitted without generation on hit/miss across both variants (4 cases).",
+    "Saved date success/malformed/naive/missing cases (4 cases).",
+    "Rate/daily/admission/cache failures (4 cases).",
+    "Five per minute remains enforced; request 500 allowed and request 501 rejected (1 case)."
+  ],
+  "initial_test_harness_correction": "Initial run had 90 passes and two failures because the test classified whitespace-wrapped samples as typed. Input validation strips whitespace; corrected test explicitly proves this admitted path is free. Runtime unchanged."
+}

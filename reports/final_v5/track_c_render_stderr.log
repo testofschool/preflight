@@ -1,0 +1,2 @@
+[graph 0 input from stream 0:0 @ 0x8708489c0] Changing video frame properties on the fly is not supported by all filters.
+[graph 0 input from stream 0:0 @ 0x8708489c0] filter context - w: 1920 h: 1080 fmt: 0 csp: unknown range: unknown alpha: unspecified, incoming frame - w: 1920 h: 1080 fmt: 0 csp: bt470bg range: tv alpha: unspecified pts_time: 21.933333

@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-10-18T08:22:36.028492+00:00",
+  "revision": "preflight-00027-pit",
+  "traffic": [
+    {
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "revisionName": "preflight-00021-sus",
+      "tag": "preview-v3-copy",
+      "url": "https://preview-v3-copy---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "percent": 100,
+      "revisionName": "preflight-00025-lij",
+      "tag": "preview-v4-candidate",
+      "url": "https://preview-v4-candidate---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "revisionName": "preflight-00027-pit",
+      "tag": "admission-v5-candidate",
+      "url": "https://admission-v5-candidate---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+  "allowed_env": {
+    "PREFLIGHT_MODE": "cloud",
+    "PREFLIGHT_FIRESTORE_DATABASE": "preflight-aibc",
+    "PREFLIGHT_GEMINI_BACKEND": "vertex",
+    "PREFLIGHT_GEMINI_LOCATION": "asia-southeast1",
+    "PREFLIGHT_GEMINI_MODEL": "gemini-3.5-flash",
+    "PREFLIGHT_TOTAL_REQUEST_LIMIT": "1000",
+    "PREFLIGHT_IMAGE_MODEL": "gemini-3.1-flash-lite-image",
+    "PREFLIGHT_IMAGE_MODEL_FALLBACK": "gemini-3.1-flash-image",
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": "500",
+    "PREFLIGHT_PREVIEW_ENABLED": "true",
+    "PREFLIGHT_IMAGE_PRIMARY_UNSERVED": "false",
+    "PREFLIGHT_IMAGE_LOCATION": "global",
+    "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+    "PREFLIGHT_IMAGE_LIVE_ARM": "P2",
+    "PREFLIGHT_PREVIEW_WARM_ENABLED": "false"
+  },
+  "timeout_seconds": 40,
+  "concurrency": 80,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "1Gi"
+    }
+  },
+  "candidate_url": "https://admission-v5-candidate---preflight-jcgro45veq-as.a.run.app",
+  "only_daily_limit_changed": true,
+  "production_unchanged_before_gate": true,
+  "minute_limit": 5,
+  "minute_limit_evidence": "Unchanged cloud/store.py admit_preview default and 5/min unit test"
+}

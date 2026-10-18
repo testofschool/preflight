@@ -1,0 +1,7 @@
+{
+  "command": "ffmpeg -hide_banner -v error -i demo/preflight_demo_final.mp4 -f null -",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "PASS": true
+}

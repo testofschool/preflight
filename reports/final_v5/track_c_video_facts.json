@@ -1,0 +1,74 @@
+{
+  "duration_seconds": 172,
+  "resolution": "1920x1080",
+  "fps": "30/1",
+  "video_codec": "h264",
+  "audio_stream": false,
+  "loudness_lufs": null,
+  "loudness_note": "N/A: no audio stream; no voiceover input was supplied.",
+  "sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+  "byte_size": 8109690,
+  "raw_sha256_before": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+  "raw_sha256_after": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+  "source_duration_seconds": 108.366667,
+  "source_speed_multiplier": 1.0033950648148149,
+  "source_extent": "Entire source interval 0\u2013108.366667 mapped to final 22\u2013130 s; no cuts.",
+  "caption_cue_count": 33,
+  "caption_font_px": 43,
+  "caption_max_lines": 1,
+  "exact_caption_reconstruction": true,
+  "frames": [
+    {
+      "time_seconds": 5,
+      "path": "demo/final_check/00m05s.png",
+      "sha256": "7d83c597baecca53abc713df35bb92ae61c13731a6d02e4e67cb820c3965edea",
+      "byte_size": 145583
+    },
+    {
+      "time_seconds": 30,
+      "path": "demo/final_check/00m30s.png",
+      "sha256": "c0fb4c9f4f3f6c97068da4a7e22890584b939a782fbcea93e86f7fd3a5cd1cfe",
+      "byte_size": 353762
+    },
+    {
+      "time_seconds": 70,
+      "path": "demo/final_check/01m10s.png",
+      "sha256": "611718c6bde4695067f0340279f1c989d0fbe883824491439215d6f61f6a232c",
+      "byte_size": 420275
+    },
+    {
+      "time_seconds": 100,
+      "path": "demo/final_check/01m40s.png",
+      "sha256": "bb3b618a50dda7c678871f8d6d5401810348a8c00974505de0ba55abace34599",
+      "byte_size": 575216
+    },
+    {
+      "time_seconds": 135,
+      "path": "demo/final_check/02m15s.png",
+      "sha256": "b968587fe0e434834566ad967b19e5e6ed480e10ba180a8c5ee74297c9beab5d",
+      "byte_size": 279263
+    },
+    {
+      "time_seconds": 165,
+      "path": "demo/final_check/02m45s.png",
+      "sha256": "62f4871b69c0059159c25e006632cd95780f80c026bd129c558a0268bdeee5d5",
+      "byte_size": 190601
+    }
+  ],
+  "outro_holds_seconds": {
+    "architecture": 12,
+    "limits": 16,
+    "closing": 14
+  },
+  "intro_quote_holds_seconds": 3,
+  "intro_opening_hold_seconds": 4,
+  "intro_caption_gap_seconds": [
+    10,
+    13
+  ],
+  "deviations": [
+    "Brief lists 10+12+8 seconds of outro content in a 42-second window. Holds extended to 12+16+14 to preserve 2:10\u20132:52 boundaries.",
+    "A 4-second opening card uses the exact C.2 opening sentences; four quote cards then hold3 seconds each through0:16. The unspoken third quote has no overlapping caption at0:10\u20130:13, preserving attribution.",
+    "No voiceover supplied: silent captioned export, no AAC/audio stream, per the explicit fallback."
+  ]
+}

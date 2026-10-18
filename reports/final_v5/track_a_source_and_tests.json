@@ -1,0 +1,10 @@
+{
+  "unit_tests": 94,
+  "failures": 0,
+  "errors": 0,
+  "runtime_files_unchanged": 25,
+  "source_receipt": "reports/preview_v4/source_match.json",
+  "runtime_source_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+  "note": "No build and no runtime source edit; exact deployed image reused."
+}

@@ -1,0 +1,41 @@
+{
+  "actual_billing": "UNMEASURED",
+  "daily_limit": 60,
+  "day_count": 50,
+  "demo_model_calls": 0,
+  "demo_preview_calls": 2,
+  "effective_day_utc": "2026-10-18",
+  "image_model_budget": {
+    "all_runs_today_conservative_attempts": 115,
+    "budget_date_kst": "2026-10-18",
+    "daily_cap": 85,
+    "historical_v3_attempts_excluded": 44,
+    "initial_image_calls": 0,
+    "known_measured_attempts_by_model": {
+      "gemini-2.5-flash-image": 29,
+      "gemini-3.1-flash-image": 20,
+      "gemini-3.1-flash-lite-image": 20
+    },
+    "known_measured_model_attempts": 69,
+    "known_zero_model_call_responses": 2,
+    "remaining": 14,
+    "scope": "preview_v4_only",
+    "today_conservative_attempts": 71,
+    "unknown_dispatch_reservations": 0,
+    "v4_effective_attempts": 71,
+    "v4_reserved_attempts": 71,
+    "verified_zero_call_qa_hits": 0
+  },
+  "known_image_list_price_total_usd": 1.17230635,
+  "model_attempts_unchanged_since_probes": true,
+  "new_model_calls_after_probe_completion": 0,
+  "preview_requests_made_by_snapshot": 0,
+  "provider_calls_made_by_snapshot": 0,
+  "recorded_at_kst": "2026-10-18T11:21:39.080629+09:00",
+  "remaining_admissions": 10,
+  "reset_at_kst": "2026-10-19T09:00:00+09:00",
+  "reset_at_utc": "2026-10-19T00:00:00+00:00",
+  "snapshot_exists": true,
+  "source": "Firestore service_v1/preview-budget direct read",
+  "stored_day_utc": "2026-10-18"
+}

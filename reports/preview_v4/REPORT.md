@@ -1,8 +1,8 @@
 # Preflight preview v4 — evidence report (release work pending)
 
-Snapshot: **2026-10-18T11:07:29+09:00**. This document records completed measurements and leaves unfinished release work as **PENDING**. Production promotion, production self-QA, the v4 demo and final repository receipts are not claimed complete.
+Snapshot: **2026-10-18T11:22:23+09:00**. This document records completed measurements and leaves unfinished release work as **PENDING**. Native promotion, production self-QA and the v4 demo are complete. Final evidence publication, history scanning and anonymous-access checks remain PENDING.
 
-The selected release plan is **samples-only** on candidate `preflight-00025-lij`. All 60 preregistered probe calls are complete: P1 returned 8/20 successful images, P2 6/20 and P3 6/20. No arm reaches 19/20, so no live arm is selected. The final decision is recorded; candidate gates and promotion remain PENDING.
+Production serves **preflight-00025-lij at 100%** in **samples-only** mode. All 60 preregistered probe calls are complete: P1 returned 8/20 successful images, P2 6/20 and P3 6/20. No arm reaches 19/20, so no live arm is selected. All applicable candidate gates are PASS; V-C is not applicable because no arm qualifies. The bound gate decision and native promotion are recorded. Source commit `d638c0690cb17d60316922eb30a14f150fe7c23c` and the new lightweight `aibc-2026-submission-v3` tag have been pushed. Production self-QA passed 28/28 recorded steps. The one-take demo is complete; final evidence publication, history scanning and anonymous-publication verification remain PENDING.
 
 The required message is: **Image preview — Active for sample prompts (saved stills); live generation limited**. Five sample decisions are saved: four lower-risk rewrites and one honest unchanged result for “indoor gymnasium”. Saved images are labeled with their generation date, 0 model calls and $0.00. Typed prompts retain the live Gemini rewrite. An uncached still in samples-only mode says: “Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.”
 
@@ -10,14 +10,16 @@ The required message is: **Image preview — Active for sample prompts (saved st
 
 | Gate | Status at this snapshot | Measured evidence | Remaining work |
 | --- | --- | --- | --- |
-| V-A | PENDING final receipt | Frozen-runtime suite: 129 passed, 11 subtests, 2 warnings in 4.52 s. Separate promotion-guard battery: 12/12 passed. Mocked browser contracts: 28/28 passed. Offline probe runner: 12/12; warm runner: 5/5. | Record final complete test run and bind it to the final source. |
-| V-B | PENDING | Warm API preparation: 10/10 usable sample actions, 9 unique stored texts; this is not the real-browser gate. | Click all 5 samples × original/rewrite through a fresh real browser on the no-traffic candidate; require 10/10 hit, model_calls=0 and exact labels. |
+| V-A | PASS — final full suite | 144 tests and 11 subtests passed; 0 failures/errors/skips, 3 warnings, 46.72 s. Python 3.12.14 in an isolated task environment outside iCloud; 113/113 exact pins matched, 0 version mismatches. Includes 12 promotion guards, 12 offline probe tests and 5 offline warm tests. Separate mocked browser contracts: 28/28. | No remaining test gate; production self-QA also passed 28/28. |
+| V-B | PASS — candidate and production | Final candidate: 10/10 visible saved stills, cache hits, model_calls=0 and exact saved labels; 0 page errors, 22 screenshots. Fresh production self-QA: 28/28 steps/screenshots, including 10/10 visible saved stills with hits, 0 model calls and exact labels; 0 page errors. | None; the demo also records two HTTP 200 cache hits with 0 model calls. |
 | V-C | N/A — samples-only | All 60 probe calls are complete; every arm fails 19/20. No live UI calls are required for the samples-only release. | No live path will be promoted. |
-| V-D | PENDING final preview battery | All 10 warm API responses HTTP 200; maximum 13.662 s; 0 HTTP 504 in warm rows. | Verify every candidate and production preview response remains <45 s with no 504. |
-| V-E | PASS measured components; final gate binding PENDING | Final candidate typed prompts: 6/6 HTTP 200, 6/6 live rewrites, 6/6 verified workflows, 6/6 <45 s; repeated prompt produced two different rewrites. Postcheck smoke: HTTP 200, 17.896 s. First viewport: 18 objects, 7 colors, CTA bottom 837.4375 px. | Bind final candidate revision/image to these receipts; retain the smoke-test limitations. |
-| V-F | PENDING final accounting | 71 durable v4 reservations; 71 recorded results; 69 known model attempts; 2 known zero-call responses; 0 reserved outcome(s) pending at snapshot. V4 model budget 85. | Confirm the final unchanged model ledger/list-price total and read the daily admission counter after QA/demo. |
+| V-D | PASS — candidate and production previews | Candidate: 10/10 HTTP 200, 0.3464–0.7948 s. Production: 10/10 saved previews HTTP 200, 0.3708–0.5743 s; two expected typed HTTP 503 responses, 0.1838–0.1866 s. 0 HTTP 504. All 10 warm responses also <45 s; warm maximum 13.662 s. | None; demo preview response-header times are 0.404 s and 0.245 s, both HTTP 200 hits. |
+| V-E | PASS — final candidate | Typed prompts: 6/6 HTTP 200, 6/6 live rewrites, 6/6 verified workflows, 6/6 <45 s and two different rewrites for the repeated prompt. Postcheck smoke: HTTP 200, 17.896 s. Final candidate viewport: 18 objects, 7 colors, CTA bottom 837.4375 px. Native source/image provenance: PASS, 25/25 files. | Production self-QA passed: two further typed HTTP 200 live rewrites, 5.4072/6.3758 s; canonical architecture and public README match. Retain postcheck smoke-test limitations. |
+| V-F | PASS — final caps/spend | 69 image-model attempts and 71 conservative reservations are below the amended v4 cap of 85; 0 unknown dispatches, 0 unpriced rows; image-model request list price $1.172306350. Native final app counter is 50/60, leaving 10 admissions; 0 new model calls after probe completion, including the two demo cache hits. | None; actual billed spend remains UNMEASURED. |
 
-Test receipts: [runtime tests](tests_runtime_frozen.txt), [prior full test output](tests_final.txt), [mocked UI contracts](ui_contract.json), [offline probe tests](offline_probe_tests.log), [offline warm tests](offline_warm_tests.log), [scope and promotion-guard audit](release_scope_audit.json). Mocked tests do not establish provider reliability.
+Test receipts: [final isolated full suite](tests_final_isolated.txt), [JUnit](tests_final_isolated.junit.xml), [verified test scope](tests_final_scope.json), [113 exact pins and isolated environment](test_environment_fallback.json), [retained earlier runtime tests](tests_runtime_frozen.txt), [retained earlier full output](tests_final.txt), [mocked UI contracts](ui_contract.json), [offline probe tests](offline_probe_tests.log), [offline warm tests](offline_warm_tests.log), [scope and promotion-guard audit](release_scope_audit.json). Mocked tests do not establish provider reliability.
+
+The [bound gate decision](gate_decision.json) records V-A/V-B/V-D/V-E/V-F as true and V-C as not applicable. It names source commit `d638c0690cb17d60316922eb30a14f150fe7c23c`, candidate `preflight-00025-lij`, build `095a35c2-74ad-49cb-8ae8-507a6216ee74` and runtime SHA-256 `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. The matching revision has been promoted, and production self-QA passed 28/28 steps. [Native 100% traffic receipt](promotion.json).
 
 ## Probe registration and selection
 
@@ -143,6 +145,8 @@ Warm API result: **10/10 usable saved actions**, **9 unique texts**, **8 new mod
 
 ## No-regression evidence
 
+The final no-traffic candidate `preflight-00025-lij` passed the real Chromium sample gate in a fresh profile with HTTP cache disabled and service workers blocked. All **10/10 original/rewrite actions** displayed an image, returned **X-Preview-Cache: hit**, reported **model_calls=0** and displayed the exact saved-still metadata. Preview response times were **0.3464–0.7948 s**, with **0 HTTP 504**, **0 page errors** and **22 saved step screenshots**. The architecture displayed the exact limited-mode canonical message. The final candidate itself measured **18 objects**, **7 colors** and a CTA bottom of **837.4375 px**. [Real candidate gate and screenshots](ui_candidate/summary.json).
+
 The final candidate returned 6/6 HTTP 200 on typed prompts, with 6/6 live rewrite sources and verified tool workflows. The repeated prompt was “a spoon and a laptop on a quiet desk with an ivory notebook”. Its two real rewrites were:
 
 1. “A laptop sits open on a quiet wooden desk next to an ivory notebook, with a metal spoon resting nearby on a small ceramic coaster, static shot.”
@@ -160,12 +164,12 @@ Scope audit: **13/13 frozen inputs match original Git blobs**. All five risk-cor
 
 | Revision | Traffic in saved receipt | Purpose | Preview configuration |
 | --- | --- | --- | --- |
-| preflight-00021-sus | 100% production | Preserved fallback and current production before promotion | Preview disabled |
+| preflight-00021-sus | 100% baseline → 0% after promotion | Preserved fallback revision | Preview disabled |
 | preflight-00023-wad | 0% | Superseded no-traffic candidate; 0 preview calls | Preview enabled, typed live disabled; replaced before gates |
 | preflight-00024-poq | 0% | Bounded app warming and viewport checks | Sample warming enabled; typed live disabled |
-| preflight-00025-lij | 0% | Selected final candidate; promotion PENDING | Preview enabled; warming false; typed live false |
+| preflight-00025-lij | 0% candidate → 100% production | All applicable gates passed; promoted | Preview enabled; warming false; typed live false |
 
-Final candidate build: `095a35c2-74ad-49cb-8ae8-507a6216ee74`. Runtime input SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. The selected candidate remains tagged `preview-v4-candidate`; saved traffic still places **100% on `preflight-00021-sus`**. Final primary traffic confirmation after promotion is **PENDING**. [Build](build.json), [candidate](candidate.json), [superseded revision](candidate_superseded.json).
+Final candidate build: `095a35c2-74ad-49cb-8ae8-507a6216ee74`. Release source: `d638c0690cb17d60316922eb30a14f150fe7c23c`, committed locally and pushed to main. Native provenance passed **25/25 Git/archive runtime files**, verified the exact candidate revision and matched the build/revision image digest. Git runtime SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Cloud Build archive runtime SHA-256: `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Candidate image digest: `sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932`. The `preview-v4-candidate` service tag remains attached to the accepted revision. Native post-promotion traffic confirms **100% on `preflight-00025-lij`**, with warming and typed live generation both disabled. [Build](build.json), [candidate](candidate.json), [native provenance](source_match.json), [100% production traffic](promotion.json), [superseded revision](candidate_superseded.json).
 
 | Setting | Baseline | Final candidate / invariant |
 | --- | --- | --- |
@@ -183,7 +187,7 @@ Final candidate build: `095a35c2-74ad-49cb-8ae8-507a6216ee74`. Runtime input SHA
 | Veo calls | 0 | 0 |
 ## File-by-file byte deltas
 
-Measured against source baseline `9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af`. This table covers changed source, scripts, tests and submitted prose at this snapshot. Generated report/image/demo artifacts are accounted for in their dedicated receipts; the final demo is PENDING. A zero baseline size identifies a new file.
+Measured against source baseline `9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af`. This table covers changed source, scripts, tests and submitted prose at this snapshot. Generated report/image/demo artifacts are accounted for in their dedicated receipts; the final demo is verified below. A zero baseline size identifies a new file.
 
 | File | Baseline bytes | Current bytes | Delta bytes |
 | --- | --- | --- | --- |
@@ -222,7 +226,7 @@ The human amendment sets the v4 model-attempt budget to 85; the previous 44 v3 a
 | P2 | 20 | 20 | $0.2322747 | 0 |
 | P3 | 20 | 20 | $0.2690385 | 0 |
 
-Snapshot ledger: **71 reservations**, **71 results**, **69 known model attempts**, **2 known zero-call responses**, and **0 reservation(s) awaiting a result**. The known result-based list-price subtotal is **$1.17230635**. The completed warm/probe phase has **0 unknown dispatches and 0 unpriced result rows**. Final post-QA/demo ledger and admission-counter confirmation remain **PENDING**.
+Snapshot ledger: **71 reservations**, **71 results**, **69 known model attempts**, **2 known zero-call responses**, and **0 reservation(s) awaiting a result**. The known result-based list-price subtotal is **$1.17230635**. The completed warm/probe phase has **0 unknown dispatches and 0 unpriced result rows**, and the pre-promotion V-F cap/spend gate is **PASS**. Final post-demo native verification confirms **50/60 app admissions**, **10 remaining** and **0 new model calls after probe completion**; the measured attempts and list-price subtotal are unchanged. [Final native budget receipt](firestore_daily_budget_final.json).
 
 Completed model totals, including warm calls:
 
@@ -233,11 +237,13 @@ Completed model totals, including warm calls:
 | gemini-3.1-flash-image | 20 | 6 | $0.269038500 |
 | Total | 69 | 29 | $1.172306350 |
 
+The **$1.172306350 subtotal covers image-model requests only**, including text tokens billed within those image requests. It **excludes Gemini text-rewrite and clip-review model charges**, as well as infrastructure/storage charges. It is not an all-service billing total.
+
 Forty provider HTTP-429 calls have zero list-price token cost under the retained official policy. Actual billing remains UNMEASURED. [Final spend summary](final_probe_spend_summary.json).
 
 HTTP-200 costs use recorded token usage and the returned traffic class. P1 Priority rates are 1.8× standard rates; observed `ON_DEMAND` downgrades use standard prices. Official pricing states that non-200 provider requests are not charged; known non-200 rows use zero list-price token cost. Unknown transport outcomes remain unpriced. Actual billed spend is **UNMEASURED**. [Pricing evidence](official_sources.json), [non-200 pricing amendment](pricing_amendment_003.json), [derived annotations](derived_probe_annotations.json), [Google pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing).
 
-The independent app admission cap remains **60/day and 5/min**, including cache hits. The native counter was **28/60 after warming and 28/60 after all P2 probes**, leaving 32 admissions. The direct probe arm did not consume app preview admissions. Samples-only planning allocates 10 candidate sample previews, 10 production sample previews and 2 demo sample previews: **projected final counter 50/60**. The two typed samples-only misses return before preview admission. V-C is not run because no arm qualifies. The actual final counter is **PENDING**. [Native post-warm counter](firestore_daily_budget_after_warm.json), [after-P2 counter](firestore_daily_budget_after_P2.json), [pre-warm cap check](firestore_daily_budget_before_warm.json).
+The independent app admission cap remains **60/day and 5/min**, including cache hits. Native counters were **28/60 after warming**, **28/60 after all P2 probes**, **38/60 after the 10 candidate sample previews**, **48/60 after the 10 production self-QA sample previews**, and **50/60 after the two demo sample previews**, leaving **10 admissions**. The direct probe arm did not consume app preview admissions. The two typed samples-only misses returned before preview admission. V-C was not run because no arm qualified. The final native snapshot at **2026-10-18T11:21:39.080629+09:00** confirms **0 new model calls after probe completion** and the unchanged 69 measured attempts / 71 conservative reservations. The counter resets at **2026-10-19 00:00 UTC / 09:00 KST**. [Native post-warm counter](firestore_daily_budget_after_warm.json), [after-P2 counter](firestore_daily_budget_after_P2.json), [after-V-B counter](firestore_daily_budget_after_VB.json), [post-self-QA / before-demo counter](firestore_daily_budget_before_demo.json), [final post-demo counter](firestore_daily_budget_final.json), [pre-warm cap check](firestore_daily_budget_before_warm.json).
 
 ## Preserved incidents and corrections
 
@@ -245,83 +251,127 @@ The independent app admission cap remains **60/day and 5/min**, including cache 
 - **P1/P3 local receipt serialization errors followed successful provider responses.** The relative-path error occurred after decoding, validating, hashing and saving the real bytes. Original raw `ValueError` fields remain intact. Derived annotations verify existing image SHA-256 and calculate price from already recorded usage/traffic. They add **0 provider calls** and do not rewrite the raw rows. [Receipt amendment](receipt_amendment_002.json), [annotations](derived_probe_annotations.json).
 - **iCloud offloaded 48 files during the run.** Reads of a frozen model artifact, Git objects and the sealed official-source receipt blocked. P2 held until original bytes were readable. Native `brctl` plus Foundation coordinated reads restored originals; final dataless count was **0**. The official receipt remained **3,001 bytes** with SHA-256 `44f3d0c18d137862abea4d695aa3f04a4ea143401839023eb1ea12698be993a0`, matching the seal. **0 files were reconstructed** and flags were not cleared artificially. Earlier HOLD and fresh PASS_SCOPE audits are both retained. [Offload incident](icloud_regression.json), [source-receipt incident](icloud_offload_regression.json), [revalidation](revalidated_after_hydration.json), [prior scope HOLD](release_scope_audit_before_hydration.json).
 - **The initial read-only browser auditor used a CSP-incompatible predicate.** The failure happened before any preview/check call. The corrected arrow predicate passed the viewport audit; the initial failure remains saved. The real UI runner was corrected before V-B execution. [Initial audit failure](viewport_warm_candidate/attempt_01_csp_wait_failure.json), [passing viewport receipt](viewport_warm_candidate/summary.json).
+- **An initial real-UI process stopped before browser execution because its interpreter lacked Playwright.** It made **0 preview HTTP requests and 0 provider calls**. The runner then used the existing `python3` Playwright installation and passed the 10/10 candidate gate. No package installation, provider retry or application change was used for this correction. [Initial import failure](ui_candidate_stdout.txt), [passing rerun](ui_candidate_stdout_retry_environment.txt), [execution notes](execution_notes.json).
+- **The original external test environment remained partly offloaded.** Native hydration reduced its dataless count from **1,944 to 1,931** after about **3 minutes**; test collection still blocked on installed package bytes. The partial and interrupted attempts are preserved and are not presented as passed validation. Final validation used an isolated **Python 3.12.14** environment outside iCloud, with **113/113 existing exact package pins matched and 0 version mismatches**. The complete suite passed **144 tests plus 11 subtests, with 3 warnings in 46.72 s**, and JUnit records **144 testcase entries, 0 failures, 0 errors and 0 skips**. Original package bytes and repository runtime/lock files were not replaced or changed. [Original test incident](test_environment_incident.json), [native hydration counts](test_environment_hydration.json), [isolated exact-pin setup](test_environment_fallback.json), [final test output](tests_final_isolated.txt), [JUnit](tests_final_isolated.junit.xml), [test scope](tests_final_scope.json).
 - **Pre-deployment integration review found harness and promotion defects.** The demo architecture selector was updated to the canonical message; V-C counts fresh one-call misses; the 38-second app deadline fits beneath the unchanged 40-second Cloud Run timeout. Promotion now requires warm=false in saved and native revision flags and binds gate revision/build/commit/runtime hashes and native image digest. The independent promotion battery passed **12/12**. **0 failed candidate revisions were promoted.** [Execution notes](execution_notes.json), [promotion audit](release_scope_audit.json).
 
-## Production self-QA — PENDING
+## Production self-QA — PASS 28/28
 
-A fresh browser profile must open the promoted production URL with browser cache disabled. The table below is a checklist, not an execution receipt. Save every step screenshot and the actual action → observation → expectation to `self_qa/` after promotion.
+A fresh Chromium profile opened the promoted production URL, with HTTP cache disabled and service workers blocked, from **2026-10-18T02:15:14.559473+00:00** to **2026-10-18T02:17:51.264994+00:00**. All **28 recorded steps and screenshots passed**, with **0 page errors**. Production status reported `preview=true`, `preview_mode=samples` and `postcheck=true`. [Full action/observation/expectation receipt](self_qa/summary.json).
 
-| Subject | Action | Observed | Expected | Screenshot |
+The ten sample preview actions returned **10 HTTP 200 cache hits, 10 visible images and 0 model calls**, each with the exact label **“Saved still · generated 2026-10-18 · 0 model calls · $0.00”**. Their measured latency was **0.3708–0.5743 s**. Two typed checks returned live Gemini rewrites; their two preview attempts returned the expected HTTP 503 with **“Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.”** and no image. Those error payloads omit model-call metadata (`null` in the runner receipt); no zero value is inferred from the absent field. The unchanged native model-attempt ledger and samples-only configuration are recorded separately in the budget evidence above.
+
+“Canonical message” below means **“Image preview — Active for sample prompts (saved stills); live generation limited”**. “Saved label” means the exact generation-date/zero-call/$0.00 label quoted above. Each row records the actual action → observed result → expected behavior, with its screenshot.
+
+| # | Action | Observed | Expected | Screenshot |
 | --- | --- | --- | --- | --- |
-| a cat and a dog | Select sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a cat and a dog | Check | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a cat and a dog | Preview original | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a cat and a dog | Preview saved rewrite / unchanged sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a spoon and a laptop | Select sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a spoon and a laptop | Check | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a spoon and a laptop | Preview original | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a spoon and a laptop | Preview saved rewrite / unchanged sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a bicycle and a car | Select sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a bicycle and a car | Check | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a bicycle and a car | Preview original | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a bicycle and a car | Preview saved rewrite / unchanged sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| indoor gymnasium | Select sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| indoor gymnasium | Check | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| indoor gymnasium | Preview original | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| indoor gymnasium | Preview saved rewrite / unchanged sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a purple clock | Select sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a purple clock | Check | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a purple clock | Preview original | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| a purple clock | Preview saved rewrite / unchanged sample | PENDING | Saved sample decision / hit image and exact saved label, as applicable | PENDING |
-| Typed prompt 1 | Check and Preview | PENDING | Live rewrite; exact limited-stills message; 0 image-model calls | PENDING |
-| Typed prompt 2 | Check and Preview | PENDING | Live rewrite; exact limited-stills message; 0 image-model calls | PENDING |
-| Architecture | Open service connections | PENDING | Exact samples-only canonical message | PENDING |
-| README top | Read public top section | PENDING | Exact canonical message and no candidate/promotion-pending publication wording | PENDING |
+| 1 | Open fresh browser | 18 objects; 7 colors; CTA bottom 837.4375 px | objects <=18; colors <=12; CTA <=900px | [Step 01](self_qa/01_first_viewport.png) |
+| 2 | a cat and a dog: Click sample a cat and a dog | Input is “a cat and a dog” | a cat and a dog | [Step 02](self_qa/02_sample_1_sample.png) |
+| 3 | a cat and a dog: Click Check | HTTP 200; pinned-sample; improved; p_fail 0.30666666666666664 → 0.05714285714285714; 0.4363 s | 200; saved sample rewrite | [Step 03](self_qa/03_sample_1_check.png) |
+| 4 | a cat and a dog: Click Preview original | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.5743 s | Saved image, hit, 0 calls and exact label | [Step 04](self_qa/04_sample_1_original.png) |
+| 5 | a cat and a dog: Click Preview rewrite | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.5403 s | Saved image, hit, 0 calls and exact label | [Step 05](self_qa/05_sample_1_rewrite.png) |
+| 6 | a spoon and a laptop: Click sample a spoon and a laptop | Input is “a spoon and a laptop” | a spoon and a laptop | [Step 06](self_qa/06_sample_2_sample.png) |
+| 7 | a spoon and a laptop: Click Check | HTTP 200; pinned-sample; improved; p_fail 0.4678787878787878 → 0.15833333333333333; 0.2891 s | 200; saved sample rewrite | [Step 07](self_qa/07_sample_2_check.png) |
+| 8 | a spoon and a laptop: Click Preview original | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.4111 s | Saved image, hit, 0 calls and exact label | [Step 08](self_qa/08_sample_2_original.png) |
+| 9 | a spoon and a laptop: Click Preview rewrite | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.3708 s | Saved image, hit, 0 calls and exact label | [Step 09](self_qa/09_sample_2_rewrite.png) |
+| 10 | a bicycle and a car: Click sample a bicycle and a car | Input is “a bicycle and a car” | a bicycle and a car | [Step 10](self_qa/10_sample_3_sample.png) |
+| 11 | a bicycle and a car: Click Check | HTTP 200; pinned-sample; improved; p_fail 0.4333333333333333 → 0.2; 0.2505 s | 200; saved sample rewrite | [Step 11](self_qa/11_sample_3_check.png) |
+| 12 | a bicycle and a car: Click Preview original | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.4275 s | Saved image, hit, 0 calls and exact label | [Step 12](self_qa/12_sample_3_original.png) |
+| 13 | a bicycle and a car: Click Preview rewrite | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.5601 s | Saved image, hit, 0 calls and exact label | [Step 13](self_qa/13_sample_3_rewrite.png) |
+| 14 | indoor gymnasium: Click sample indoor gymnasium | Input is “indoor gymnasium” | indoor gymnasium | [Step 14](self_qa/14_sample_4_sample.png) |
+| 15 | indoor gymnasium: Click Check | HTTP 200; pinned-sample; no_safe_rewrite; p_fail 0.065 → 0.065; 0.2350 s | HTTP 200; saved no_safe_rewrite decision; original remains unchanged | [Step 15](self_qa/15_sample_4_check.png) |
+| 16 | indoor gymnasium: Click Preview original | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.4747 s | Saved image, hit, 0 calls and exact label | [Step 16](self_qa/16_sample_4_original.png) |
+| 17 | indoor gymnasium: Click Preview rewrite | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.5048 s; unchanged original, 199,569 bytes | Saved unchanged original, hit, 0 calls and exact label | [Step 17](self_qa/17_sample_4_rewrite.png) |
+| 18 | a purple clock: Click sample a purple clock | Input is “a purple clock” | a purple clock | [Step 18](self_qa/18_sample_5_sample.png) |
+| 19 | a purple clock: Click Check | HTTP 200; pinned-sample; improved; p_fail 0.05714285714285714 → 0.025; 0.2561 s | 200; saved sample rewrite | [Step 19](self_qa/19_sample_5_check.png) |
+| 20 | a purple clock: Click Preview original | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.4261 s | Saved image, hit, 0 calls and exact label | [Step 20](self_qa/20_sample_5_original.png) |
+| 21 | a purple clock: Click Preview rewrite | HTTP 200; hit; 0 model calls; visible image; exact saved label; 0.4939 s | Saved image, hit, 0 calls and exact label | [Step 21](self_qa/21_sample_5_rewrite.png) |
+| 22 | Typed prompt 1: Click Check | HTTP 200; live rewrite; improved; p_fail 0.4704761904761904 → 0.29047619047619044; 5.4072 s | 200; live rewrite | [Step 22](self_qa/22_typed_1_check.png) |
+| 23 | Typed prompt 1: Click Preview original | HTTP 503; exact limited message; no image; 0.1838 s | Exact limited message; no still in samples-only mode | [Step 23](self_qa/23_typed_1_preview.png) |
+| 24 | Typed prompt 2: Click Check | HTTP 200; live rewrite; improved; p_fail 0.64 → 0.47333333333333333; 6.3758 s | 200; live rewrite | [Step 24](self_qa/24_typed_2_check.png) |
+| 25 | Typed prompt 2: Click Preview original | HTTP 503; exact limited message; no image; 0.1866 s | Exact limited message; no still in samples-only mode | [Step 25](self_qa/25_typed_2_preview.png) |
+| 26 | Open architecture page | Canonical message visible in service connections | Exact canonical message | [Step 26](self_qa/26_architecture.png) |
+| 27 | Read public README top section | Public top section has canonical message, four improved/one unchanged decisions and probe counts 8/6/6 | Exact canonical message in public README | [Step 27](self_qa/27_readme_top.png) |
+| 28 | Read README preview clause | Public preview clause exactly matches the canonical message | Exact canonical message | [Step 28](self_qa/28_readme_preview_clause.png) |
 
-## Demo re-record — PENDING
+The gym’s two saved preview actions intentionally use the same original prompt after `no_safe_rewrite`; the unchanged result is not counted as a lower-risk rewrite. Architecture and public README checks confirm the same final samples-only message. This self-QA does not measure clip-review accuracy or actual billed spend.
 
-The v4 demo must be one continuous, silent take at **1920×1080, 30 fps, ≤150 seconds**, with a saved sample still and its metadata readable for at least **3 seconds**. The recorder enforces a 3.25-second still hold and exports eight frames. The samples-only plan has no typed live-image beat.
+## Demo re-record — PASS
 
-| Demo fact | Value |
+The published demo is **one clean, continuous take**, selected from **one requested take**. All **11 recorded steps passed**, with **0 page errors, 0 unexpected request failures and the expected request sequence**. Its **108.366667-second** H.264 video is **1920×1080 at 30 fps**, has **no audio stream**, and passed full decode. The two sample stills remained visible for **3.318 s** and **3.251 s**, each exceeding the 3-second requirement. Both `/preview` requests returned HTTP 200 cache hits with **0 image-model calls** and the exact saved metadata label. [Artifact and frame hashes](demo_artifact.json), [selected one-take log](../../demo/record_log.json), [published video](../../demo/preflight_demo_raw.mp4).
+
+| Demo fact | Recorded value |
 | --- | --- |
-| Final file path | PENDING |
-| File bytes | PENDING |
-| SHA-256 | PENDING |
-| Duration | PENDING |
-| Resolution verified | PENDING |
-| FPS verified | PENDING |
-| Silent audio-stream check | PENDING |
-| Full decode | PENDING |
-| Eight replacement frame paths | PENDING |
-| Beat timestamps | PENDING |
-| Exact sample risk numbers actually shown | PENDING |
-| Selected one-take record log | PENDING |
+| Final file | `demo/preflight_demo_raw.mp4` |
+| File bytes | 9,300,697 |
+| SHA-256 | `d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78` |
+| Duration | 108.366667 s; below 150 s |
+| Video stream | H.264; 1920×1080; 30/1 fps |
+| Audio streams | 0; silent |
+| Full decode | PASS |
+| Take / step counts | 1 requested; take 1 selected; 11/11 steps PASS |
+| Still holds | Original 3.318 s; rewrite 3.251 s |
+| Image previews | 2 HTTP 200 cache hits; 0 image-model calls; $0.00 response cost |
+| Eight frames | 8/8 replaced and local bytes/SHA-256 verified against the artifact receipt |
+| Original new take retained | `/private/tmp/preflight-v4-demo-20261018-1118` |
+| Previous movie and frames | Backed up outside Git at `/Users/felix/Desktop/AI Builder Cup 2026/evidence/preview_v3_demo_before_v4_20261018_1121` |
 
-The planned sample is “a spoon and a laptop”: fixture values `p_fail_before=0.4678787878787878`, `p_fail_after=0.15833333333333333`; UI comparison **46.8% → 15.8%**. These values must be read back from `demo/record_log.json` after recording before Felix uses them in the deck. The video facts above remain PENDING until that receipt exists.
+Recorded beats, using the recorder's monotonic offsets in seconds:
+
+| Beat | Start–end (s) | Observed sequence | Result |
+| --- | --- | --- | --- |
+| 1 | 0.045–5.158 | Home | PASS |
+| 2 | 5.159–28.036 | Sample prompt → risk + why | PASS |
+| 3 | 29.001–34.487 | Better prompt → risk drops → copy | PASS |
+| 4 | 36.002–42.248 | Cached sample still + caption | PASS |
+| 5 | 44.002–49.986 | Cached saved-rewrite still | PASS |
+| 6 | 56.001–85.154 | Clip upload → reused review → unchanged feedback risk | PASS |
+| 7 | 90.002–98.525 | Architecture image preview connection | PASS |
+
+The final home-rest step runs **104.002–108.519 s** in the UI log; its wall-clock offset extends beyond the encoded duration by recorder timing, while the media duration above comes from `ffprobe`. The seven beat rows group 10 UI steps; final home rest is the eleventh.
+
+Eight replacement frames, with exact artifact paths and offsets:
+
+| Frame | Offset (s) | Path |
+| --- | --- | --- |
+| 1 | 1.083 | [demo/frames/01_home.png](../../demo/frames/01_home.png) |
+| 2 | 19.522 | [demo/frames/02_risk_and_score_details.png](../../demo/frames/02_risk_and_score_details.png) |
+| 3 | 24.963 | [demo/frames/03_historical_neighbours.png](../../demo/frames/03_historical_neighbours.png) |
+| 4 | 30.399 | [demo/frames/04_better_prompt_copied.png](../../demo/frames/04_better_prompt_copied.png) |
+| 5 | 42.182 | [demo/frames/05_cached_original_preview.png](../../demo/frames/05_cached_original_preview.png) |
+| 6 | 58.172 | [demo/frames/06_clip_uploaded.png](../../demo/frames/06_clip_uploaded.png) |
+| 7 | 79.065 | [demo/frames/07_clip_verdict_and_feedback.png](../../demo/frames/07_clip_verdict_and_feedback.png) |
+| 8 | 91.479 | [demo/frames/08_architecture_connections.png](../../demo/frames/08_architecture_connections.png) |
+
+The sample actually recorded is **“a spoon and a laptop”**, using the saved `pinned-sample` decision. The selected log and published-copy receipt both record `p_fail_before=0.4678787878787878` and `p_fail_after=0.15833333333333333`, displayed as **46.8% original → 15.8% rewrite**. These are the fixed deck values for this demo. The separate historical-only value is `historical_p_fail=0.5345454545454545`; it is not substituted for the displayed mixed risk proxy.
+
+The clip-review beat uses the labeled **“synthetic FFmpeg loop of a Gemini still”**. It reuses a stored review (`feedback_created=false`, `reused_stored_review=true`), retains the existing machine-feedback record and shows **46.8% → 46.8%**. It does not demonstrate a newly created review, a further risk reduction, or motion-review accuracy. The copy step reports “Copied ✓”; the recorder performs **0 clipboard reads**. The exact canonical samples-only message is visible in the architecture beat. Original new-take files and the prior movie/frame backup are retained at the paths above.
 
 ## Repository, tags and provenance — PENDING final release
 
 | Item | Snapshot / completion status |
 | --- | --- |
 | Source baseline | `9f77cbeb9da1b89cc993cc5c70a1c7dd9a9cc1af` |
-| Final production source commit | PENDING |
+| Final production source commit | `d638c0690cb17d60316922eb30a14f150fe7c23c`; pushed to main; native provenance PASS |
 | Native build | `095a35c2-74ad-49cb-8ae8-507a6216ee74` |
 | Current local/build-input runtime hash | `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7` |
-| Native archive runtime hash and both-hash comparison | PENDING final source/commit provenance receipt; 25 expected runtime inputs |
-| Production image digest | PENDING native source/image provenance receipt |
-| Push to main | PENDING |
-| New aibc-2026-submission-v3 tag | PENDING; older tags must not move |
+| Native archive runtime hash and both-hash comparison | PASS: 25/25 files; Git and native archive both `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7` |
+| Production image digest | `sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932`; accepted revision serves 100% traffic |
+| Push to main | Source commit `d638c0690cb17d60316922eb30a14f150fe7c23c` pushed; later receipt publication PENDING |
+| New aibc-2026-submission-v3 tag | Lightweight tag created and pushed at `d638c0690cb17d60316922eb30a14f150fe7c23c`; final anonymous verification PENDING |
 | Older aibc-2026-submission tag | `dd12f279e364cbd217a4178b51c1d270cacebbdd`; local and anonymous remote match |
 | Older aibc-2026-submission-v2 tag | `bdcdecdf6db6b0c2bebea8a35ed350de5f005940`; local and anonymous remote match |
 | Worktree secret scan | 522 files, 96 binary files, 0 hits, 0 errors; retained snapshot |
-| Final indexed/history secret scan | PENDING final source and final receipt commits; require 0 hits |
-| Anonymous final clone / main / tag agreement | PENDING |
-| README + submission preview clause | Current candidate wording matches limited mode; remove pending qualifiers only after actual promotion |
-| Brief description | 952 characters now; final publication count PENDING if text changes |
+| Final indexed/history secret scan | Source history PASS: 12 commits, 597 blobs, 74 binary payloads, 0 hits, 0 errors. Final receipt/tag history repeat remains PENDING. |
+| Anonymous final clone / source tag / runtime agreement | PENDING; production source tag and later evidence-only main commits have separate roles |
+| README + submission preview clause | PASS — pushed final samples-only wording; production architecture and public README top/preview clause exactly match in self-QA steps 26–28 |
+| Brief description | 952 characters, unchanged in the source commit |
 | Demo link / pitch deck export | Existing placeholders remain pending user publication/export |
 
-[Scope/tag checks](release_scope_audit.json), [worktree secret scan](secrets_worktree.json). A matching local build input digest is separate from the final native archive/image and anonymous-publication checks.
+The lightweight **`aibc-2026-submission-v3` tag pins production SOURCE commit `d638c0690cb17d60316922eb30a14f150fe7c23c`**. Later `main` commits publish post-promotion QA, demo and evidence; they retain the same 25-file runtime hash `a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7`. Final public verification must confirm the source tag and runtime agreement without requiring the later evidence-commit HEAD to equal the production source tag. Evidence publication and that final anonymous check remain PENDING.
+
+[Scope/tag checks](release_scope_audit.json), [worktree secret scan](secrets_worktree.json), [source history scan](history_scan_source_release.json), [native 25-file/source/image provenance](source_match.json). Native provenance is complete for the pushed source and exact promoted revision; final anonymous publication checks remain PENDING.
 
 ## Not done at this snapshot
 
-PENDING: final post-QA/demo ledger and counter; final bound V-A/V-B/V-D/V-F gate decision; candidate promotion and native traffic verification; production self-QA with all screenshots; one-take demo and eight replacement frames; final README/submission release wording; source and receipt commits/push; v3 tag; final native 25-file provenance, all-history secret scans and anonymous clone verification. No live generation is selected. No Veo calls were made. Clip-review accuracy and actual billed spend remain unmeasured.
+PENDING: final report/demo receipt commits and publication; final receipt/tag history scan and anonymous clone verification. All applicable candidate gates, native 25-file provenance, 100% production promotion, 28/28 production self-QA steps/screenshots, one clean demo take with eight replacement frames, final native budget confirmation, source push and the new v3 source tag are complete. No live generation is selected. No Veo calls were made. Clip-review accuracy and actual billed spend remain unmeasured.

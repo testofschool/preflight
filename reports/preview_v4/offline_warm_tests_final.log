@@ -1,0 +1,42 @@
+test_app_mode_sends_all_ten_requests_and_preserves_prior_direct_receipt (__main__.WarmSafetyTests.test_app_mode_sends_all_ten_requests_and_preserves_prior_direct_receipt) ... /Users/felix/Desktop/AI Builder Cup 2026/.preflight-cloud-venv/lib/python3.12/site-packages/httpx/_config.py:51: DeprecationWarning: `verify=<str>` is deprecated. Use `verify=ssl.create_default_context(cafile=...)` or `verify=ssl.create_default_context(capath=...)` instead.
+  warnings.warn(message, DeprecationWarning)
+{"action_id": "WARM-01", "http_status": 200, "image_bytes": 33724, "model_calls": 0, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-02", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-03", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-04", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-05", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-06", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-07", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-08", "http_status": 200, "image_bytes": 33724, "model_calls": 0, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-09", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+{"action_id": "WARM-10", "http_status": 200, "image_bytes": 33724, "model_calls": 1, "http_requests": 1, "error_class": null}
+ok
+test_failed_duplicate_is_recorded_twice_without_a_second_attempt (__main__.WarmSafetyTests.test_failed_duplicate_is_recorded_twice_without_a_second_attempt) ... {"action_id": "WARM-01", "variant": "original", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-02", "variant": "rewrite", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-03", "variant": "original", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-04", "variant": "rewrite", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-05", "variant": "original", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-06", "variant": "rewrite", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-07", "variant": "original", "http_status": 429, "image_bytes": 0, "model_calls": 1, "cache_saved": false, "error_class": "ProviderHTTPError"}
+{"action_id": "WARM-08", "variant": "rewrite", "http_status": 429, "image_bytes": 0, "model_calls": 0, "cache_saved": false, "error_class": "PreviouslyDispatchedPromptNotRetried"}
+{"action_id": "WARM-09", "variant": "original", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-10", "variant": "rewrite", "http_status": 200, "image_bytes": 33582, "model_calls": 1, "cache_saved": true, "error_class": null}
+ok
+test_fixture_has_ten_actions_and_nine_exact_texts (__main__.WarmSafetyTests.test_fixture_has_ten_actions_and_nine_exact_texts) ... ok
+test_successful_duplicate_uses_cache_and_rerun_makes_zero_calls (__main__.WarmSafetyTests.test_successful_duplicate_uses_cache_and_rerun_makes_zero_calls) ... {"action_id": "WARM-01", "variant": "original", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-02", "variant": "rewrite", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-03", "variant": "original", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-04", "variant": "rewrite", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-05", "variant": "original", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-06", "variant": "rewrite", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-07", "variant": "original", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-08", "variant": "rewrite", "http_status": 200, "image_bytes": 33690, "model_calls": 0, "cache_saved": null, "error_class": null}
+{"action_id": "WARM-09", "variant": "original", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+{"action_id": "WARM-10", "variant": "rewrite", "http_status": 200, "image_bytes": 33690, "model_calls": 1, "cache_saved": true, "error_class": null}
+ok
+test_unknown_model_call_is_preserved_without_summary_error (__main__.WarmSafetyTests.test_unknown_model_call_is_preserved_without_summary_error) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.321s
+
+OK

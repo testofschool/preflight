@@ -1,0 +1,12 @@
+{"take": 1, "step": "home_at_rest", "offset": 0.045}
+{"take": 1, "step": "sample_prompt_check", "offset": 5.159}
+{"take": 1, "step": "risk_and_explanation", "offset": 15.002}
+{"take": 1, "step": "why_and_neighbours", "offset": 24.002}
+{"take": 1, "step": "better_prompt_and_copy", "offset": 29.001}
+{"take": 1, "step": "cached_sample_preview", "offset": 36.002}
+{"take": 1, "step": "cached_rewrite_preview_or_skip", "offset": 44.002}
+{"take": 1, "step": "clip_upload_and_review", "offset": 56.001}
+{"take": 1, "step": "verdict_and_feedback", "offset": 78.003}
+{"take": 1, "step": "architecture_service_connections", "offset": 90.002}
+{"take": 1, "step": "home_final_rest", "offset": 104.002}
+{"status": "complete", "selected_take": 1, "durations_seconds": [108.366667], "clean": [true], "log": "/private/tmp/preflight-v4-demo-20261018-1118/record_log.json"}

@@ -1,0 +1,1 @@
+{"head": "d638c0690cb17d60316922eb30a14f150fe7c23c", "commits_scanned": 12, "blob_objects_scanned": 597, "hit_count": 0, "complete": true, "passed": true, "errors": []}

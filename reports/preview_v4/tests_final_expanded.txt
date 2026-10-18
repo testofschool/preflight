@@ -4,3 +4,7 @@ Scope: tests/ plus explicit offline probe and warm runners; includes promotion g
 Environment: installed package sources unchanged; temporary bytecode cache outside iCloud
 Pytest_pid: 86216
 
+
+Exit_code: -15
+Counts: No pytest summary found
+Finished_at_utc: 2026-10-18T02:12:46.748119+00:00

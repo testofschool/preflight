@@ -1,5 +1,5 @@
 {
-  "started_at_utc": "2026-10-18T00:54:20.969169+00:00",
+  "started_at_utc": "2026-10-18T02:18:48.491178+00:00",
   "url": "https://preflight-jcgro45veq-as.a.run.app",
   "takes_requested": 1,
   "clip": {
@@ -32,54 +32,54 @@
     "fps": 30,
     "typing_delay_ms": 40,
     "max_duration_seconds": 150.0,
-    "preview": "off",
+    "preview": "on",
     "sample_prompt": "a spoon and a laptop",
-    "warm_receipt": null
+    "warm_receipt": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/preview_v4/warm.json"
   },
   "takes": [
     {
       "take": 1,
-      "started_at_utc": "2026-10-18T00:54:21.497441+00:00",
+      "started_at_utc": "2026-10-18T02:18:49.005274+00:00",
       "steps": [
         {
           "name": "home_at_rest",
-          "started_at_utc": "2026-10-18T00:54:21.498796+00:00",
+          "started_at_utc": "2026-10-18T02:18:49.006354+00:00",
           "start_offset_seconds": 0.045,
           "status": "pass",
           "observed": {
             "mode": "cloud",
-            "preview": false,
+            "preview": true,
             "postcheck": true,
             "gemini": true
           },
-          "end_offset_seconds": 5.106,
-          "wall_seconds": 5.061
+          "end_offset_seconds": 5.158,
+          "wall_seconds": 5.113
         },
         {
           "name": "sample_prompt_check",
-          "started_at_utc": "2026-10-18T00:54:26.560598+00:00",
-          "start_offset_seconds": 5.107,
+          "started_at_utc": "2026-10-18T02:18:54.120498+00:00",
+          "start_offset_seconds": 5.159,
           "status": "pass",
           "observed": {
             "prompt": "a spoon and a laptop",
             "risk_percent": "46.8",
             "band": "lower"
           },
-          "end_offset_seconds": 11.475,
-          "wall_seconds": 6.368
+          "end_offset_seconds": 7.064,
+          "wall_seconds": 1.905
         },
         {
           "name": "risk_and_explanation",
-          "started_at_utc": "2026-10-18T00:54:36.455176+00:00",
+          "started_at_utc": "2026-10-18T02:19:03.964196+00:00",
           "start_offset_seconds": 15.002,
           "status": "pass",
-          "end_offset_seconds": 22.896,
-          "wall_seconds": 7.894
+          "end_offset_seconds": 22.889,
+          "wall_seconds": 7.887
         },
         {
           "name": "why_and_neighbours",
-          "started_at_utc": "2026-10-18T00:54:45.454544+00:00",
-          "start_offset_seconds": 24.001,
+          "started_at_utc": "2026-10-18T02:19:12.964541+00:00",
+          "start_offset_seconds": 24.002,
           "status": "pass",
           "observed": {
             "neighbours": [
@@ -88,47 +88,70 @@
               "a laptop and a remote40.0%"
             ]
           },
-          "end_offset_seconds": 28.029,
-          "wall_seconds": 4.028
+          "end_offset_seconds": 28.036,
+          "wall_seconds": 4.034
         },
         {
           "name": "better_prompt_and_copy",
-          "started_at_utc": "2026-10-18T00:54:50.455402+00:00",
-          "start_offset_seconds": 29.002,
+          "started_at_utc": "2026-10-18T02:19:17.963192+00:00",
+          "start_offset_seconds": 29.001,
           "status": "pass",
           "observed": {
-            "rewritten_prompt": "A person stirs a mug of coffee with a metal spoon, with a sleek laptop open in the background showing a blurred document.",
+            "rewritten_prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
             "risk_before": 0.4678787878787878,
-            "risk_after": 0.2333333333333333,
-            "comparison": "46.8% original\n→\n23.3% rewrite",
+            "risk_after": 0.15833333333333333,
+            "comparison": "46.8% original\n→\n15.8% rewrite",
             "copy_status": "Copied ✓",
             "clipboard_read": false
           },
-          "end_offset_seconds": 34.482,
-          "wall_seconds": 5.48
+          "end_offset_seconds": 34.487,
+          "wall_seconds": 5.486
         },
         {
-          "name": "preview_disabled_busy_copy",
-          "started_at_utc": "2026-10-18T00:54:57.454844+00:00",
+          "name": "cached_sample_preview",
+          "started_at_utc": "2026-10-18T02:19:24.964322+00:00",
           "start_offset_seconds": 36.002,
           "status": "pass",
           "observed": {
-            "status": "disabled",
-            "resting_first_screen_controls": 0,
-            "result_controls": 2,
-            "tooltips": [
-              "Preview is busy right now — try again in a minute. The risk check still works.",
-              null
-            ],
-            "visible_busy_copy": "Preview is busy right now — try again in a minute. The risk check still works.",
-            "preview_requests": 0
+            "prompt": "a spoon and a laptop",
+            "variant": "original",
+            "cache": "hit",
+            "model_calls": 0,
+            "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still.",
+            "metadata_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+            "model": "gemini-2.5-flash-image",
+            "size": "1K",
+            "image_visible_start_seconds": 38.93,
+            "image_visible_end_seconds": 42.248,
+            "visible_hold_seconds": 3.318
           },
-          "end_offset_seconds": 42.423,
-          "wall_seconds": 6.421
+          "end_offset_seconds": 42.248,
+          "wall_seconds": 6.246
+        },
+        {
+          "name": "cached_rewrite_preview_or_skip",
+          "started_at_utc": "2026-10-18T02:19:32.964744+00:00",
+          "start_offset_seconds": 44.002,
+          "status": "pass",
+          "observed": {
+            "prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
+            "variant": "rewrite",
+            "cache": "hit",
+            "model_calls": 0,
+            "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still.",
+            "metadata_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+            "model": "gemini-2.5-flash-image",
+            "size": "1K",
+            "image_visible_start_seconds": 46.735,
+            "image_visible_end_seconds": 49.986,
+            "visible_hold_seconds": 3.251
+          },
+          "end_offset_seconds": 49.986,
+          "wall_seconds": 5.984
         },
         {
           "name": "clip_upload_and_review",
-          "started_at_utc": "2026-10-18T00:55:17.453705+00:00",
+          "started_at_utc": "2026-10-18T02:19:44.963635+00:00",
           "start_offset_seconds": 56.001,
           "status": "pass",
           "observed": {
@@ -136,13 +159,13 @@
             "model_label": "synthetic FFmpeg loop of a Gemini still",
             "prompt": "a spoon and a laptop"
           },
-          "end_offset_seconds": 60.216,
-          "wall_seconds": 4.215
+          "end_offset_seconds": 60.058,
+          "wall_seconds": 4.057
         },
         {
           "name": "verdict_and_feedback",
-          "started_at_utc": "2026-10-18T00:55:39.453949+00:00",
-          "start_offset_seconds": 78.001,
+          "started_at_utc": "2026-10-18T02:20:06.966434+00:00",
+          "start_offset_seconds": 78.003,
           "status": "pass",
           "observed": {
             "verdict": "Pass",
@@ -150,81 +173,81 @@
             "feedback_after": "46.8%",
             "receipt": "Stored review reused; existing machine feedback retained · 1 machine feedback record."
           },
-          "end_offset_seconds": 85.148,
-          "wall_seconds": 7.147
+          "end_offset_seconds": 85.154,
+          "wall_seconds": 7.151
         },
         {
           "name": "architecture_service_connections",
-          "started_at_utc": "2026-10-18T00:55:51.453955+00:00",
-          "start_offset_seconds": 90.001,
+          "started_at_utc": "2026-10-18T02:20:18.965920+00:00",
+          "start_offset_seconds": 90.002,
           "status": "pass",
           "observed": {
-            "service_connections": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview (Gemini image model)\nNot active",
-            "image_preview": "Not active"
+            "service_connections": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview — Active for sample prompts (saved stills); live generation limited",
+            "image_preview": "Image preview — Active for sample prompts (saved stills); live generation limited"
           },
-          "end_offset_seconds": 98.403,
-          "wall_seconds": 8.402
+          "end_offset_seconds": 98.525,
+          "wall_seconds": 8.523
         },
         {
           "name": "home_final_rest",
-          "started_at_utc": "2026-10-18T00:56:05.454371+00:00",
+          "started_at_utc": "2026-10-18T02:20:32.966192+00:00",
           "start_offset_seconds": 104.002,
           "status": "pass",
           "observed": {
             "url_path": "/"
           },
-          "end_offset_seconds": 108.645,
-          "wall_seconds": 4.643
+          "end_offset_seconds": 108.519,
+          "wall_seconds": 4.517
         }
       ],
       "network": [
         {
-          "offset_seconds": 0.347,
+          "offset_seconds": 0.421,
           "method": "GET",
           "path": "/",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.298
+          "response_headers_after_seconds": 0.37
         },
         {
-          "offset_seconds": 0.499,
+          "offset_seconds": 0.566,
           "method": "GET",
           "path": "/static/styles.css",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.151
+          "response_headers_after_seconds": 0.143
         },
         {
-          "offset_seconds": 0.586,
+          "offset_seconds": 0.649,
           "method": "GET",
           "path": "/static/status.js",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.237
+          "response_headers_after_seconds": 0.226
         },
         {
-          "offset_seconds": 0.622,
+          "offset_seconds": 0.683,
           "method": "GET",
           "path": "/static/postcheck.js",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.273
+          "response_headers_after_seconds": 0.26
         },
         {
-          "offset_seconds": 0.628,
+          "offset_seconds": 0.691,
           "method": "GET",
           "path": "/static/app.js",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.279
+          "response_headers_after_seconds": 0.268
         },
         {
-          "offset_seconds": 0.734,
+          "offset_seconds": 0.857,
           "method": "GET",
           "path": "/api/status",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.147,
+          "response_headers_after_seconds": 0.208,
           "observed_response": {
             "mode": "cloud",
             "cloud_run": true,
@@ -232,36 +255,72 @@
             "gemini": true,
             "adk": true,
             "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
+            "preview": true,
+            "agent_platform_session": true,
+            "preview_mode": "samples"
           }
         },
         {
-          "offset_seconds": 11.464,
+          "offset_seconds": 7.052,
           "method": "POST",
           "path": "/preflight",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 4.7,
+          "response_headers_after_seconds": 0.315,
           "observed_response": {
             "mode": "cloud",
             "p_fail": 0.4678787878787878,
             "historical_p_fail": 0.5345454545454545,
             "risk_semantics": "MIXED heuristic proxy: human pairwise both-bad evidence plus separately counted single-clip postcheck failures; not a calibrated failure probability.",
             "rewrite_status": "improved",
-            "rewritten_prompt": "A person stirs a mug of coffee with a metal spoon, with a sleek laptop open in the background showing a blurred document.",
+            "rewritten_prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
             "p_fail_before": 0.4678787878787878,
-            "p_fail_after": 0.2333333333333333,
-            "supported": true
+            "p_fail_after": 0.15833333333333333,
+            "supported": true,
+            "rewrite_source": "pinned-sample"
           }
         },
         {
-          "offset_seconds": 60.21,
+          "offset_seconds": 37.777,
+          "method": "POST",
+          "path": "/preview",
+          "status": 200,
+          "preview_cache": "hit",
+          "response_headers_after_seconds": 0.404,
+          "observed_response": {
+            "model": "gemini-2.5-flash-image",
+            "size": "1K",
+            "cost_usd": 0.0,
+            "model_calls": 0,
+            "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still.",
+            "metadata_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+            "generated_date": "2026-10-18"
+          }
+        },
+        {
+          "offset_seconds": 45.548,
+          "method": "POST",
+          "path": "/preview",
+          "status": 200,
+          "preview_cache": "hit",
+          "response_headers_after_seconds": 0.245,
+          "observed_response": {
+            "model": "gemini-2.5-flash-image",
+            "size": "1K",
+            "cost_usd": 0.0,
+            "model_calls": 0,
+            "caption": "A still from an image model, not a Veo frame. Motion, flicker and timing cannot be judged from a still.",
+            "metadata_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+            "generated_date": "2026-10-18"
+          }
+        },
+        {
+          "offset_seconds": 60.052,
           "method": "POST",
           "path": "/postcheck",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.561,
+          "response_headers_after_seconds": 0.414,
           "observed_response": {
             "mode": "cloud",
             "historical_p_fail": 0.5345454545454545,
@@ -275,23 +334,23 @@
           }
         },
         {
-          "offset_seconds": 90.171,
+          "offset_seconds": 90.248,
           "method": "GET",
           "path": "/architecture",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.163
+          "response_headers_after_seconds": 0.241
         },
         {
-          "offset_seconds": 90.173,
+          "offset_seconds": 90.252,
           "method": "GET",
           "path": "/static/styles.css",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.001
+          "response_headers_after_seconds": 0.0
         },
         {
-          "offset_seconds": 90.173,
+          "offset_seconds": 90.252,
           "method": "GET",
           "path": "/static/status.js",
           "status": 200,
@@ -299,20 +358,20 @@
           "response_headers_after_seconds": 0.0
         },
         {
-          "offset_seconds": 90.318,
+          "offset_seconds": 90.416,
           "method": "GET",
           "path": "/static/architecture.js",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.145
+          "response_headers_after_seconds": 0.164
         },
         {
-          "offset_seconds": 90.398,
+          "offset_seconds": 90.479,
           "method": "GET",
           "path": "/api/status",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.225,
+          "response_headers_after_seconds": 0.226,
           "observed_response": {
             "mode": "cloud",
             "cloud_run": true,
@@ -320,12 +379,13 @@
             "gemini": true,
             "adk": true,
             "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
+            "preview": true,
+            "agent_platform_session": true,
+            "preview_mode": "samples"
           }
         },
         {
-          "offset_seconds": 104.298,
+          "offset_seconds": 104.303,
           "method": "GET",
           "path": "/",
           "status": 200,
@@ -333,7 +393,7 @@
           "response_headers_after_seconds": 0.001
         },
         {
-          "offset_seconds": 104.302,
+          "offset_seconds": 104.307,
           "method": "GET",
           "path": "/static/styles.css",
           "status": 200,
@@ -341,7 +401,7 @@
           "response_headers_after_seconds": 0.001
         },
         {
-          "offset_seconds": 104.303,
+          "offset_seconds": 104.308,
           "method": "GET",
           "path": "/static/status.js",
           "status": 200,
@@ -349,7 +409,15 @@
           "response_headers_after_seconds": 0.0
         },
         {
-          "offset_seconds": 104.303,
+          "offset_seconds": 104.308,
+          "method": "GET",
+          "path": "/static/app.js",
+          "status": 200,
+          "preview_cache": null,
+          "response_headers_after_seconds": 0.0
+        },
+        {
+          "offset_seconds": 104.309,
           "method": "GET",
           "path": "/static/postcheck.js",
           "status": 200,
@@ -357,20 +425,12 @@
           "response_headers_after_seconds": 0.0
         },
         {
-          "offset_seconds": 104.445,
-          "method": "GET",
-          "path": "/static/app.js",
-          "status": 304,
-          "preview_cache": null,
-          "response_headers_after_seconds": 0.142
-        },
-        {
-          "offset_seconds": 104.523,
+          "offset_seconds": 104.469,
           "method": "GET",
           "path": "/api/status",
           "status": 200,
           "preview_cache": null,
-          "response_headers_after_seconds": 0.219,
+          "response_headers_after_seconds": 0.16,
           "observed_response": {
             "mode": "cloud",
             "cloud_run": true,
@@ -378,8 +438,9 @@
             "gemini": true,
             "adk": true,
             "postcheck": true,
-            "preview": false,
-            "agent_platform_session": true
+            "preview": true,
+            "agent_platform_session": true,
+            "preview_mode": "samples"
           }
         }
       ],
@@ -388,52 +449,52 @@
       "frames": [
         {
           "name": "home",
-          "offset_seconds": 1.027,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/01_home.png"
+          "offset_seconds": 1.083,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/01_home.png"
         },
         {
           "name": "risk_and_score_details",
-          "offset_seconds": 19.517,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/02_risk_and_score_details.png"
+          "offset_seconds": 19.522,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/02_risk_and_score_details.png"
         },
         {
           "name": "historical_neighbours",
-          "offset_seconds": 24.954,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/03_historical_neighbours.png"
+          "offset_seconds": 24.963,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/03_historical_neighbours.png"
         },
         {
           "name": "better_prompt_copied",
-          "offset_seconds": 30.393,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/04_better_prompt_copied.png"
+          "offset_seconds": 30.399,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/04_better_prompt_copied.png"
         },
         {
-          "name": "preview_busy_copy",
-          "offset_seconds": 39.351,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/05_preview_busy_copy.png"
+          "name": "cached_original_preview",
+          "offset_seconds": 42.182,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/05_cached_original_preview.png"
         },
         {
           "name": "clip_uploaded",
-          "offset_seconds": 58.206,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/06_clip_uploaded.png"
+          "offset_seconds": 58.172,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/06_clip_uploaded.png"
         },
         {
           "name": "clip_verdict_and_feedback",
-          "offset_seconds": 79.059,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/07_clip_verdict_and_feedback.png"
+          "offset_seconds": 79.065,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/07_clip_verdict_and_feedback.png"
         },
         {
           "name": "architecture_connections",
-          "offset_seconds": 91.359,
-          "screenshot": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/screens/08_architecture_connections.png"
+          "offset_seconds": 91.479,
+          "screenshot": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/screens/08_architecture_connections.png"
         }
       ],
-      "preview_decision": "off",
-      "warm_receipt": null,
+      "preview_decision": "on",
+      "warm_receipt": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/reports/preview_v4/warm.json",
       "response_policy": "real UI requests only; no mocks, client retries or clipboard reads",
-      "wall_seconds": 108.647,
+      "wall_seconds": 108.52,
       "video": {
-        "path": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/preflight_demo_take_1.mp4",
-        "source": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/takes/take_1/browser/049c3c5c6670f1928e67fc581282f031.webm",
+        "path": "/private/tmp/preflight-v4-demo-20261018-1118/preflight_demo_take_1.mp4",
+        "source": "/private/tmp/preflight-v4-demo-20261018-1118/takes/take_1/browser/1467a4983462cf7ea94a5abb81eeaf4e.webm",
         "ffprobe": {
           "programs": [],
           "stream_groups": [],
@@ -447,18 +508,20 @@
             }
           ],
           "format": {
-            "duration": "108.533333",
-            "size": "8772303"
+            "duration": "108.366667",
+            "size": "9300697"
           }
         },
-        "duration_seconds": 108.533333,
-        "bytes": 8772303,
-        "sha256": "075c5e0b94cea3aedf5f9e4b1021b389344354bfa045e45c368be0826c2f08f3",
+        "duration_seconds": 108.366667,
+        "bytes": 9300697,
+        "sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
         "format_and_duration_pass": true,
         "full_decode_pass": true
       },
       "expected_request_sequence": [
         "/preflight",
+        "/preview",
+        "/preview",
         "/postcheck"
       ],
       "expected_request_sequence_pass": true,
@@ -470,7 +533,7 @@
           "beat": 1,
           "label": "Home",
           "start_seconds": 0.045,
-          "end_seconds": 5.106,
+          "end_seconds": 5.158,
           "steps": [
             "home_at_rest"
           ],
@@ -479,8 +542,8 @@
         {
           "beat": 2,
           "label": "Sample prompt → risk + why",
-          "start_seconds": 5.107,
-          "end_seconds": 28.029,
+          "start_seconds": 5.159,
+          "end_seconds": 28.036,
           "steps": [
             "sample_prompt_check",
             "risk_and_explanation",
@@ -491,25 +554,38 @@
         {
           "beat": 3,
           "label": "Better prompt → risk drops → copy",
-          "start_seconds": 29.002,
-          "end_seconds": 34.482,
+          "start_seconds": 29.001,
+          "end_seconds": 34.487,
           "steps": [
             "better_prompt_and_copy"
           ],
           "status": "pass"
         },
         {
-          "beat": "preview_off_copy",
-          "label": "Preview busy copy; no image requests",
+          "beat": 4,
+          "label": "Cached sample still + caption",
           "start_seconds": 36.002,
-          "end_seconds": 42.423,
+          "end_seconds": 42.248,
+          "steps": [
+            "cached_sample_preview"
+          ],
+          "status": "pass"
+        },
+        {
+          "beat": 5,
+          "label": "Cached better-prompt still or skip",
+          "start_seconds": 44.002,
+          "end_seconds": 49.986,
+          "steps": [
+            "cached_rewrite_preview_or_skip"
+          ],
           "status": "pass"
         },
         {
           "beat": 6,
           "label": "Clip upload → review → feedback-adjusted risk",
           "start_seconds": 56.001,
-          "end_seconds": 85.148,
+          "end_seconds": 85.154,
           "steps": [
             "clip_upload_and_review",
             "verdict_and_feedback"
@@ -519,58 +595,65 @@
         {
           "beat": 7,
           "label": "Architecture image preview connection",
-          "start_seconds": 90.001,
-          "end_seconds": 98.403,
+          "start_seconds": 90.002,
+          "end_seconds": 98.525,
           "steps": [
             "architecture_service_connections"
           ],
           "status": "pass"
         }
       ],
-      "ended_at_utc": "2026-10-18T00:56:22.866268+00:00"
+      "ended_at_utc": "2026-10-18T02:20:50.829058+00:00"
     }
   ],
   "selected_take": 1,
-  "output": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
+  "sample_risk_numbers": {
+    "p_fail": 0.4678787878787878,
+    "p_fail_before": 0.4678787878787878,
+    "p_fail_after": 0.15833333333333333,
+    "historical_p_fail": 0.5345454545454545,
+    "rewrite_source": "pinned-sample"
+  },
+  "output": "/private/tmp/preflight-v4-demo-20261018-1118/preflight_demo_raw.mp4",
   "frames": [
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/01_home.png",
-      "offset_seconds": 1.027,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/01_home.png",
+      "offset_seconds": 1.083,
       "name": "home"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/02_risk_and_score_details.png",
-      "offset_seconds": 19.517,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/02_risk_and_score_details.png",
+      "offset_seconds": 19.522,
       "name": "risk_and_score_details"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/03_historical_neighbours.png",
-      "offset_seconds": 24.954,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/03_historical_neighbours.png",
+      "offset_seconds": 24.963,
       "name": "historical_neighbours"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/04_better_prompt_copied.png",
-      "offset_seconds": 30.393,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/04_better_prompt_copied.png",
+      "offset_seconds": 30.399,
       "name": "better_prompt_copied"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/05_preview_busy_copy.png",
-      "offset_seconds": 39.351,
-      "name": "preview_busy_copy"
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/05_cached_original_preview.png",
+      "offset_seconds": 42.182,
+      "name": "cached_original_preview"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/06_clip_uploaded.png",
-      "offset_seconds": 58.206,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/06_clip_uploaded.png",
+      "offset_seconds": 58.172,
       "name": "clip_uploaded"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/07_clip_verdict_and_feedback.png",
-      "offset_seconds": 79.059,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/07_clip_verdict_and_feedback.png",
+      "offset_seconds": 79.065,
       "name": "clip_verdict_and_feedback"
     },
     {
-      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/08_architecture_connections.png",
-      "offset_seconds": 91.359,
+      "path": "/private/tmp/preflight-v4-demo-20261018-1118/frames/08_architecture_connections.png",
+      "offset_seconds": 91.479,
       "name": "architecture_connections"
     }
   ],
@@ -588,8 +671,8 @@
       }
     ],
     "format": {
-      "duration": "108.533333",
-      "size": "8772303"
+      "duration": "108.366667",
+      "size": "9300697"
     }
   },
   "beats": [
@@ -597,7 +680,7 @@
       "beat": 1,
       "label": "Home",
       "start_seconds": 0.045,
-      "end_seconds": 5.106,
+      "end_seconds": 5.158,
       "steps": [
         "home_at_rest"
       ],
@@ -606,8 +689,8 @@
     {
       "beat": 2,
       "label": "Sample prompt → risk + why",
-      "start_seconds": 5.107,
-      "end_seconds": 28.029,
+      "start_seconds": 5.159,
+      "end_seconds": 28.036,
       "steps": [
         "sample_prompt_check",
         "risk_and_explanation",
@@ -618,25 +701,38 @@
     {
       "beat": 3,
       "label": "Better prompt → risk drops → copy",
-      "start_seconds": 29.002,
-      "end_seconds": 34.482,
+      "start_seconds": 29.001,
+      "end_seconds": 34.487,
       "steps": [
         "better_prompt_and_copy"
       ],
       "status": "pass"
     },
     {
-      "beat": "preview_off_copy",
-      "label": "Preview busy copy; no image requests",
+      "beat": 4,
+      "label": "Cached sample still + caption",
       "start_seconds": 36.002,
-      "end_seconds": 42.423,
+      "end_seconds": 42.248,
+      "steps": [
+        "cached_sample_preview"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 5,
+      "label": "Cached better-prompt still or skip",
+      "start_seconds": 44.002,
+      "end_seconds": 49.986,
+      "steps": [
+        "cached_rewrite_preview_or_skip"
+      ],
       "status": "pass"
     },
     {
       "beat": 6,
       "label": "Clip upload → review → feedback-adjusted risk",
       "start_seconds": 56.001,
-      "end_seconds": 85.148,
+      "end_seconds": 85.154,
       "steps": [
         "clip_upload_and_review",
         "verdict_and_feedback"
@@ -646,17 +742,183 @@
     {
       "beat": 7,
       "label": "Architecture image preview connection",
-      "start_seconds": 90.001,
-      "end_seconds": 98.403,
+      "start_seconds": 90.002,
+      "end_seconds": 98.525,
       "steps": [
         "architecture_service_connections"
       ],
       "status": "pass"
     }
   ],
-  "output_bytes": 8772303,
-  "output_sha256": "075c5e0b94cea3aedf5f9e4b1021b389344354bfa045e45c368be0826c2f08f3",
-  "ended_at_utc": "2026-10-18T00:56:24.071793+00:00",
-  "retained_recording_directory": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o",
-  "retained_recording_log": "/private/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/preflight_demo_v3_off_ltqkjy2o/record_log.json"
+  "output_bytes": 9300697,
+  "output_sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+  "ended_at_utc": "2026-10-18T02:20:52.036389+00:00",
+  "published_copy": {
+    "recorded_at_utc": "2026-10-18T02:21:12.987766+00:00",
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
+    "bytes": 9300697,
+    "sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+    "duration_seconds": 108.366667,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "108.366667",
+        "size": "9300697"
+      }
+    },
+    "clean": true,
+    "take_count": 1,
+    "selected_take": 1,
+    "original_take_retained_at": "/private/tmp/preflight-v4-demo-20261018-1118",
+    "prior_demo_backup": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preview_v3_demo_before_v4_20261018_1121",
+    "frames": [
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/01_home.png",
+        "bytes": 280502,
+        "sha256": "a5ce9cac18f8eb35bfda002cffd855fd58b8b68532e0f90b7553caa5505fa5ef",
+        "offset_seconds": 1.083
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/02_risk_and_score_details.png",
+        "bytes": 461759,
+        "sha256": "e84c424425688a0a0d1fff894cf86fc31ad78b83b671ca7621a9da2a0bee7cb4",
+        "offset_seconds": 19.522
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/03_historical_neighbours.png",
+        "bytes": 403690,
+        "sha256": "6ab65c27ed0968bbecb36085e9da54c6a03da4d832b12de7a8341bc1f3c7ee1b",
+        "offset_seconds": 24.963
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/04_better_prompt_copied.png",
+        "bytes": 427458,
+        "sha256": "bdb6ed36c5fd640a544de56baa7929615f191558d3b08645ab02433d56f95292",
+        "offset_seconds": 30.399
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/05_cached_original_preview.png",
+        "bytes": 378738,
+        "sha256": "7aa62d90ddca425cf7d6581b72fd5aa9fb03aca68faf885f0a9924457161011a",
+        "offset_seconds": 42.182
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/06_clip_uploaded.png",
+        "bytes": 431087,
+        "sha256": "455203ca398ad08db0d125447762c232733d0b68a9c0ea0323187acd5157d3fa",
+        "offset_seconds": 58.172
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/07_clip_verdict_and_feedback.png",
+        "bytes": 533630,
+        "sha256": "7d02f3d4be6983d8e0d688896a26f35a11678556acbb477a5f42d18f5d700383",
+        "offset_seconds": 79.065
+      },
+      {
+        "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/08_architecture_connections.png",
+        "bytes": 306794,
+        "sha256": "2c7437e3cecea2fd7c179d4c37902a20bd9ac0ce1f7bf6fe2b23fccbb1852695",
+        "offset_seconds": 91.479
+      }
+    ],
+    "beats": [
+      {
+        "beat": 1,
+        "label": "Home",
+        "start_seconds": 0.045,
+        "end_seconds": 5.158,
+        "steps": [
+          "home_at_rest"
+        ],
+        "status": "pass"
+      },
+      {
+        "beat": 2,
+        "label": "Sample prompt → risk + why",
+        "start_seconds": 5.159,
+        "end_seconds": 28.036,
+        "steps": [
+          "sample_prompt_check",
+          "risk_and_explanation",
+          "why_and_neighbours"
+        ],
+        "status": "pass"
+      },
+      {
+        "beat": 3,
+        "label": "Better prompt → risk drops → copy",
+        "start_seconds": 29.001,
+        "end_seconds": 34.487,
+        "steps": [
+          "better_prompt_and_copy"
+        ],
+        "status": "pass"
+      },
+      {
+        "beat": 4,
+        "label": "Cached sample still + caption",
+        "start_seconds": 36.002,
+        "end_seconds": 42.248,
+        "steps": [
+          "cached_sample_preview"
+        ],
+        "status": "pass"
+      },
+      {
+        "beat": 5,
+        "label": "Cached better-prompt still or skip",
+        "start_seconds": 44.002,
+        "end_seconds": 49.986,
+        "steps": [
+          "cached_rewrite_preview_or_skip"
+        ],
+        "status": "pass"
+      },
+      {
+        "beat": 6,
+        "label": "Clip upload → review → feedback-adjusted risk",
+        "start_seconds": 56.001,
+        "end_seconds": 85.154,
+        "steps": [
+          "clip_upload_and_review",
+          "verdict_and_feedback"
+        ],
+        "status": "pass"
+      },
+      {
+        "beat": 7,
+        "label": "Architecture image preview connection",
+        "start_seconds": 90.002,
+        "end_seconds": 98.525,
+        "steps": [
+          "architecture_service_connections"
+        ],
+        "status": "pass"
+      }
+    ],
+    "sample_risk_numbers": {
+      "p_fail": 0.4678787878787878,
+      "p_fail_before": 0.4678787878787878,
+      "p_fail_after": 0.15833333333333333,
+      "historical_p_fail": 0.5345454545454545,
+      "rewrite_source": "pinned-sample"
+    },
+    "image_model_calls": 0,
+    "preview_requests": 2,
+    "all11steps_pass": true,
+    "still_holds": [
+      3.318,
+      3.251
+    ]
+  }
 }

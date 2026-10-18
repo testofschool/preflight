@@ -1,0 +1,1921 @@
+{
+  "phase": "self-qa",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "started_at_utc": "2026-10-18T02:15:14.559473+00:00",
+  "fresh_browser": true,
+  "http_cache_disabled": true,
+  "service_workers": "blocked",
+  "steps": [
+    {
+      "step": "first_viewport",
+      "action": "Open fresh browser",
+      "observed": {
+        "objects": 18,
+        "colors": 7,
+        "cta_bottom_px": 837.4375,
+        "elements": [
+          "a.brand",
+          "nav.header-nav",
+          "div.eyebrow",
+          "h1#page-title",
+          "p.intro-copy",
+          "a.clip-review-link",
+          "h2#prompt-heading",
+          "form#prompt-form",
+          "p",
+          "h2#results-heading",
+          "h3#risk-heading",
+          "p#risk-detail",
+          "h3#why-heading",
+          "h3#better-heading",
+          "p.rewrite-description",
+          "span",
+          "span#cost-value",
+          "p#cost-note"
+        ]
+      },
+      "expected": "objects <=18; colors <=12; CTA <=900px",
+      "passed": true,
+      "screenshot": "01_first_viewport.png"
+    },
+    {
+      "step": "sample_1_sample",
+      "action": "Click sample a cat and a dog",
+      "observed": "a cat and a dog",
+      "expected": "a cat and a dog",
+      "passed": true,
+      "screenshot": "02_sample_1_sample.png"
+    },
+    {
+      "step": "sample_1_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.30666666666666664,
+        "p_fail_after": 0.05714285714285714,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.4363
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "03_sample_1_check.png"
+    },
+    {
+      "step": "sample_1_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_1_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.5743,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 170352,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "04_sample_1_original.png"
+    },
+    {
+      "step": "sample_1_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_1_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.5403,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 144167,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "05_sample_1_rewrite.png"
+    },
+    {
+      "step": "sample_2_sample",
+      "action": "Click sample a spoon and a laptop",
+      "observed": "a spoon and a laptop",
+      "expected": "a spoon and a laptop",
+      "passed": true,
+      "screenshot": "06_sample_2_sample.png"
+    },
+    {
+      "step": "sample_2_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.4678787878787878,
+        "p_fail_after": 0.15833333333333333,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.2891
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "07_sample_2_check.png"
+    },
+    {
+      "step": "sample_2_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_2_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4111,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 76625,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "08_sample_2_original.png"
+    },
+    {
+      "step": "sample_2_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_2_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.3708,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 65720,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "09_sample_2_rewrite.png"
+    },
+    {
+      "step": "sample_3_sample",
+      "action": "Click sample a bicycle and a car",
+      "observed": "a bicycle and a car",
+      "expected": "a bicycle and a car",
+      "passed": true,
+      "screenshot": "10_sample_3_sample.png"
+    },
+    {
+      "step": "sample_3_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.4333333333333333,
+        "p_fail_after": 0.2,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.2505
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "11_sample_3_check.png"
+    },
+    {
+      "step": "sample_3_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_3_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4275,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 139700,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "12_sample_3_original.png"
+    },
+    {
+      "step": "sample_3_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_3_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.5601,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 335231,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "13_sample_3_rewrite.png"
+    },
+    {
+      "step": "sample_4_sample",
+      "action": "Click sample indoor gymnasium",
+      "observed": "indoor gymnasium",
+      "expected": "indoor gymnasium",
+      "passed": true,
+      "screenshot": "14_sample_4_sample.png"
+    },
+    {
+      "step": "sample_4_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.065,
+        "p_fail_after": 0.065,
+        "rewrite_status": "no_safe_rewrite",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.235
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "15_sample_4_check.png"
+    },
+    {
+      "step": "sample_4_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_4_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4747,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 199569,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "16_sample_4_original.png"
+    },
+    {
+      "step": "sample_4_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_4_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.5048,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 199569,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "17_sample_4_rewrite.png"
+    },
+    {
+      "step": "sample_5_sample",
+      "action": "Click sample a purple clock",
+      "observed": "a purple clock",
+      "expected": "a purple clock",
+      "passed": true,
+      "screenshot": "18_sample_5_sample.png"
+    },
+    {
+      "step": "sample_5_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "pinned-sample",
+        "p_fail_before": 0.05714285714285714,
+        "p_fail_after": 0.025,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 0.2561
+      },
+      "expected": "200; saved sample rewrite",
+      "passed": true,
+      "screenshot": "19_sample_5_check.png"
+    },
+    {
+      "step": "sample_5_original",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "sample_5_original",
+        "variant": "original",
+        "http_status": 200,
+        "latency_seconds": 0.4261,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 118892,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "20_sample_5_original.png"
+    },
+    {
+      "step": "sample_5_rewrite",
+      "action": "Click Preview rewrite",
+      "observed": {
+        "step": "sample_5_rewrite",
+        "variant": "rewrite",
+        "http_status": 200,
+        "latency_seconds": 0.4939,
+        "cache": "hit",
+        "model_calls": 0,
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "generated_date": "2026-10-18",
+        "cost_usd": 0.0,
+        "image_bytes": 54464,
+        "image_visible": true,
+        "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+        "passed": true
+      },
+      "expected": "Saved image, hit, 0 calls and exact label",
+      "passed": true,
+      "screenshot": "21_sample_5_rewrite.png"
+    },
+    {
+      "step": "typed_1_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "live",
+        "p_fail_before": 0.4704761904761904,
+        "p_fail_after": 0.29047619047619044,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 5.4072
+      },
+      "expected": "200; live rewrite",
+      "passed": true,
+      "screenshot": "22_typed_1_check.png"
+    },
+    {
+      "step": "typed_1_preview",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "typed_1_preview",
+        "variant": "original",
+        "http_status": 503,
+        "latency_seconds": 0.1838,
+        "cache": null,
+        "model_calls": null,
+        "model": null,
+        "size": null,
+        "generated_date": null,
+        "cost_usd": null,
+        "image_bytes": 0,
+        "image_visible": false,
+        "label": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.",
+        "expected_label": null,
+        "passed": true
+      },
+      "expected": "Live image or exact limited message",
+      "passed": true,
+      "screenshot": "23_typed_1_preview.png"
+    },
+    {
+      "step": "typed_2_check",
+      "action": "Click Check",
+      "observed": {
+        "http_status": 200,
+        "rewrite_source": "live",
+        "p_fail_before": 0.64,
+        "p_fail_after": 0.47333333333333333,
+        "rewrite_status": "improved",
+        "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+        "latency_seconds": 6.3758
+      },
+      "expected": "200; live rewrite",
+      "passed": true,
+      "screenshot": "24_typed_2_check.png"
+    },
+    {
+      "step": "typed_2_preview",
+      "action": "Click Preview original",
+      "observed": {
+        "step": "typed_2_preview",
+        "variant": "original",
+        "http_status": 503,
+        "latency_seconds": 0.1866,
+        "cache": null,
+        "model_calls": null,
+        "model": null,
+        "size": null,
+        "generated_date": null,
+        "cost_usd": null,
+        "image_bytes": 0,
+        "image_visible": false,
+        "label": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.",
+        "expected_label": null,
+        "passed": true
+      },
+      "expected": "Live image or exact limited message",
+      "passed": true,
+      "screenshot": "25_typed_2_preview.png"
+    },
+    {
+      "step": "architecture",
+      "action": "Open architecture page",
+      "observed": "01\nCloud Run\nActive\n02\nGoogle ADK\nActive\n03\nGemini rewriting\nActive\n04\nFirestore\nActive\n05\nAgent Platform Sessions\nActive\n06\nExisting clip review\nActive\n07\nImage preview — Active for sample prompts (saved stills); live generation limited",
+      "expected": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "passed": true,
+      "screenshot": "26_architecture.png"
+    },
+    {
+      "step": "readme_top",
+      "action": "Read public README top section",
+      "observed": "Preflight — check an AI-video prompt before you pay to generate it.\n\nLive prototype · Demo video: <VIDEO_URL> · Pitch deck: docs/Preflight_pitch_deck.pdf (pending Felix's PDF export).\n\nThe problem, in users' words\n\n“you still burn credits on the failed attempt”\n\n— Ed McDowell, Runway review on Trustpilot, September 2026\n\n“I recommend a lo-res preview render before having to spend actual credits”\n\n— David306816550282, Adobe Community\n\n“Credits are only automatically returned when a generation ends in a generation error.”\n\n— Runway Help: Can I have credits refunded?\n\nThese are individual user reports and a provider policy, not measured savings from Preflight.\n\nWhat Preflight does\n\nHistorical risk (free to try) → reason → rewrite kept only if estimated risk drops → saved sample still → clip review as a second pair of eyes.\n\nPaste a prompt to see a historical risk signal and five nearby prompts from 1,911 human pairwise votes in GenAI-Bench. Gemini proposes a rewrite; Preflight presents it only when its estimated risk is strictly lower. Upload a clip you already have for a separate Gemini review with inspectable timecodes. Original human votes stay separate from machine feedback.\n\nImage preview — Active for sample prompts (saved stills); live generation limited\n\nThe five sample prompts use saved rewrite decisions, visibly labeled “Sample rewrite (saved)”, so their stills can be reused without model calls. Four saved decisions contain lower-risk rewrites. “Indoor gymnasium” keeps the original because no lower-risk rewrite passed; its saved-sample preview explicitly says “unchanged”. A saved still displays its generation date and “0 model calls · $0.00”. Typed prompts retain the live Gemini rewrite. On an uncached still, the samples-only mode explains: “Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.” A still comes from an image model and cannot judge motion, flicker or timing. All three preregistered live-image probes fell below the 19/20 reliability gate: P1 returned 8/20 valid images, P2 6/20 and P3 6/20. Live generation remains limited. v4 results. The v3 report retains the previous reliability failure; earlier dated measurements remain separate.\n\nGoogle Cloud services\nService\tRole\tStatus\nCloud Run\tHosts FastAPI and the English browser interface in asia-southeast1\tlive\nCloud Firestore\tStores historical vote aggregates, fitted item parameters, separate machine feedback and cached preview images\tlive\nVertex AI Gemini 3.5 Flash\tProposes prompt rewrites through Application Default Credentials\tlive\nGoogle ADK 2.12\tRuns the tool workflow and checks rewrite candidates against the risk estimate\tlive\nAgent Platform Sessions\tPersists anonymous rewrite-session history\tlive\nGemini video understanding\tReviews uploaded clips and sampled frames with timecodes\tlive\nGemini image models + Firestore cache\tSaved original/rewrite stills for the five sample prompts\tactive for sample prompts; live generation limited\nSecret Manager\tHolds a key from an earlier API-key setup; production requests use Vertex ADC instead\tnot used by live requests\n\nNot used: Veo (0 calls), Agent Engine runtime hosting, BigQuery. Managed Agent Platform Sessions is used for sessions; the agent itself runs in the Cloud Run application. Runtime status receipt, implementation and deployment receipts.\n\nArchitecture\nBrowser\n  |\n  v\nCloud Run / FastAPI\n  |-- Firestore: history, item parameters, feedback\n  |-- Google ADK ",
+      "expected": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "passed": true,
+      "screenshot": "27_readme_top.png"
+    },
+    {
+      "step": "readme_preview_clause",
+      "action": "Read README preview clause",
+      "observed": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "expected": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "passed": true,
+      "screenshot": "28_readme_preview_clause.png"
+    }
+  ],
+  "preview_rows": [
+    {
+      "step": "sample_1_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a cat and a dog",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.5743,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 170352,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_1_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A playful puppy and a calm kitten interacting gently on a green grassy lawn under bright daylight, captured in a stable wide shot.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.5403,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 144167,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_2_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a spoon and a laptop",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4111,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 76625,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_2_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A static, high-angle shot of a desk where a metallic spoon lies neatly beside a closed laptop under soft indoor lighting.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.3708,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 65720,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_3_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a bicycle and a car",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4275,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 139700,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_3_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A close-up shot of a shiny yellow bicycle parked in a driveway, with a white SUV parked in the background under the shade of a tree.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.5601,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 335231,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_4_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "indoor gymnasium",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4747,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 199569,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_4_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "indoor gymnasium",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.5048,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 199569,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_5_original",
+      "variant": "original",
+      "submitted": {
+        "prompt": "a purple clock",
+        "variant": "original",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4261,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 118892,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "sample_5_rewrite",
+      "variant": "rewrite",
+      "submitted": {
+        "prompt": "A modern purple digital clock resting on a desk, its bright LED numbers glowing softly in a dimly lit room.",
+        "variant": "rewrite",
+        "session_id": null
+      },
+      "http_status": 200,
+      "latency_seconds": 0.4939,
+      "cache": "hit",
+      "model_calls": 0,
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "generated_date": "2026-10-18",
+      "cost_usd": 0.0,
+      "image_bytes": 54464,
+      "image_visible": true,
+      "label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "expected_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+      "passed": true
+    },
+    {
+      "step": "typed_1_preview",
+      "variant": "original",
+      "submitted": {
+        "prompt": "A spoon and a laptop beside a green ceramic mug on an October judging desk.",
+        "variant": "original",
+        "session_id": "1621843697521917952"
+      },
+      "http_status": 503,
+      "latency_seconds": 0.1838,
+      "cache": null,
+      "model_calls": null,
+      "model": null,
+      "size": null,
+      "generated_date": null,
+      "cost_usd": null,
+      "image_bytes": 0,
+      "image_visible": false,
+      "label": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.",
+      "expected_label": null,
+      "passed": true
+    },
+    {
+      "step": "typed_2_preview",
+      "variant": "original",
+      "submitted": {
+        "prompt": "A bicycle and a car parked beside an orange garden bench on a quiet street.",
+        "variant": "original",
+        "session_id": "1621843697521917952"
+      },
+      "http_status": 503,
+      "latency_seconds": 0.1866,
+      "cache": null,
+      "model_calls": null,
+      "model": null,
+      "size": null,
+      "generated_date": null,
+      "cost_usd": null,
+      "image_bytes": 0,
+      "image_visible": false,
+      "label": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.",
+      "expected_label": null,
+      "passed": true
+    }
+  ],
+  "page_errors": [],
+  "network": [
+    {
+      "path": "/",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/app.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/postcheck.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 503
+    },
+    {
+      "path": "/preflight",
+      "method": "POST",
+      "http_status": 200
+    },
+    {
+      "path": "/preview",
+      "method": "POST",
+      "http_status": 503
+    },
+    {
+      "path": "/architecture",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/styles.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/status.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/static/architecture.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/testofschool/preflight",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/u/185124418",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/light_high_contrast-9c7b506bdc5ea73f.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/dark-c9dacb4ec19616db.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/light-3a3d2c708970e4e8.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/marketing-header.956bc1a3f4bd1807.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/global-nav-bar.d4ad7c69183642e7.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/k54.e9cc8c0ec9e8e133.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/0yx.87256cbd6216cf2c.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-core.5998bdabbe04833b.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/primer-react-css.fadc9d576c07df52.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/app-install-banner-partial.2483a2b2bfee3611.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/code-view.338104c1c976f5ed.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/keyboard-shortcuts-dialog.7440ab04ada55747.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/primer-react-brand-css.e7608bc4f3cf2ee4.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/global-58d1122073b19732.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/primer-38ae573fa780d76a.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/github-0b4a3ee3d18dc2f0.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/repository-542ca59b4b92999d.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/code-b25a4886e30e3e5f.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/app-runtime.eab2661114588366.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/dark_high_contrast-5ef38214a3eabc7d.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/primer-primitives-02e066689466a8cd.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/runtime-helpers-b7e0a61126a143c7.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/ja9-b94de714266ba389.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/aria-live-e0f60f15396869e3.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/by-473024a3f6cb3892.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/fetch-utilities-b6ff1e30dc731d8d.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/ser-1ce9ba53965ee000.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/catalyst-5bc36fa5a846f5a0.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/7v-393d4abf0fa68581.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/scheduler-58b860b049ca307c.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-jsx-runtime-4915cb0f5b3aff04.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/tp-e043b09789480cb5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/hotkey-a82e6cb07443fd1c.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/app-foundation-799625033ee8341e.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/wp-runtime-c6c61b476d830136.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/hj-ece3bec966e8a2b6.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/a96-f44dcca0945fa24d.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/z8-5c899bb34cf0fc51.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/app-runtime-71a2f665eeca033f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/relative-time-element-b2d8b7dede692c9f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/3h2-5f8899065b81d778.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-dom-client-1b4a3ee065998cea.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-reconciler-8e99e505c4429605.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/pb-d77644db2d006abd.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/zj-8d62ed720b193a80.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/4t-f1181f796eb9ea15.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/ur-b820e79826e6a550.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/od3-5d7c03317ee3745b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/code-menu-2c3120f1b625e648.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/eon-36af335a1906af16.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/yga-dd50cf95593467fe.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/nc-2485e88d8a01d9c2.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/op-76db8804e205b5d5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/0r-4c4af04176d5b5a2.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/ow-98d10140e8228c74.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/b3-8c6a9e264988c148.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/9k-707f3c96c4acaae5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-compiler-runtime-4610bd6d3de9c049.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/t2-19741658de225445.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-e27d1b3e03961e68.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/codespaces-9460dc4a2d240ac5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-core-0f56581e7b278cdc.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/li-902486fa635be114.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/behaviors-1eb73136a52ea7f9.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/selector-observer-7ae05416e4a383ae.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/repositories-cf56bedcaf5fa8a5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/6n-b72a71e2477d5d76.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/github-elements-bc9204a489a1d9fa.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/high-contrast-cookie-dac2ceb09ceb817d.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/n9c-3506ddcf805d5421.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-dom-e5fd46a22d5c4058.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/environment-d45d6d5788ab28ab.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/react-is-e0b593954b4706d8.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/element-registry-24a69f1abd4a38e2.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/y5u-57d5316925eaf726.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/s0-307dd28b274d0fad.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/t7l-699ca510ac327acf.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/j6-f38514fb943db6ec.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/zd-61606dd1c14634aa.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/qmp-308230626a2aedb0.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/rvs-9d3d17afd7d82ec5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/z-bbc4a61b6b21c2ce.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/tjn-c8192b2dabd1ae8c.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/wc-33edcf25ba11d33f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/la-27ea91f01fa7ffcf.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/5w-452c3a937483ff49.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/4u-bf6e08201764cb0a.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/jn-8d682b11fce7d25e.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/0-8bb1b20ebce778dd.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/fn-80ae055b0fa5b680.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/primer-react-aa472ad9b7027c95.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/qxm-8629d688b2483e64.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/u9-6c90f83135585e72.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/gj-a0e6872c9a40ac73.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/fx0-05f68952cd4c4b54.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/pl2-b48baf1611e1537f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/sm-3a63356df24f292f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/i2-5e26ac37ee961d06.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/dx-4c2b444c4f196d9b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/mlz-b5402a5997108f93.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/15-305ca2e1d8e728ca.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/a3-535693ca876f3978.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/su-c691a3f46a59715a.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/up-9ba623fe31b3ad8b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/ti-5a1f71482f5e6a07.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/0yx-6e44b5cba2d0d1f7.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/c28-ad9d5f54d5d8ad6b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/q6j-a0f5c18f21eed301.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/b2-35e229a50d0f3d05.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/gd-c0d7e6321e1379df.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/y2y-6da34dbffa637889.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/lrk-ea49e115e48ba34b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/jhd-90ed88235bcc3b9f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/k54-6cf64d936e253d31.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/5uy-4c58c70137676bbe.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/d0-13ea19d01ad0515f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/keyboard-shortcuts-dialog-ed08984a9d82ba8b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/43-efe637f521d688f0.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/w8-35e9fc633b0e512d.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/zxp-d1cadaa51c553f17.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/pgx-dd79b7c9d5ccc946.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/xpm-699cadc1a20b7325.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/9xk-3b00861cd990d525.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/6z-36b77bc0024616d6.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/9t-0bb494014425d632.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/1al-c297d69cf44625b7.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/li6-9946ed6b82f92046.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/global-nav-bar-079ff4387dc2261b.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/fz-cb55e83c29d0a351.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/jbz-52a745dad9e9a69a.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/wv-ab2333337e5e3480.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/5l-d6884103232d3642.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/t5-60a7d058a0d3af98.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/00-99e49821a15bb084.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/code-view-faa64367e6ec2b00.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/mhh-814955b6c192782f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/app-install-banner-partial-8333a3965a34c1b6.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/h4-a3869ba7839940d4.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/g6m-a05cbcd94ac196d8.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/0e-11aee8d44f3a34e3.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/8l5-61e0c5fc9e2c32c9.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/marketing-header-8b61575868210daa.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/zc-ed0a4d5a713e09b5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/97-834a64acacc06223.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/24-8bc4d151664bf03d.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/3j7-c180e82f469898c5.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/et9-6f05589c8621e03c.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/o1m-f3baf1a73c8a2256.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/aj-6d3aa2e6c4939409.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/id-e582d746fa456d9a.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/kq9.0780a71d35d6daec.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/bvx.431f8699d5d17474.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/u2l.754edfc1a1629f43.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/jdp.955f308c9cc86bf0.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/4f-dcd38f432735dbe3.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-l1-873f7cf9169ca0ba.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-element-webauthn-get-594ac3b363fd9c1e.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-element-cookie-consent-link-42530d061f8f24aa.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-element-ghcc-consent-47aaf7da7816fc53.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-element-markdown-accessiblity-table-d38d4b248c023f33.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-element-toggle-switch-d84c21582809dda9.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-element-select-panel-1db988c3b2debb9f.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/yg2-1ef73bfd680141dc.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-react-partial-app-install-banner-partial-ed58f1b49a2d8d01.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-react-partial-global-nav-bar-35d9d7d577eabed0.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-react-partial-marketing-header-3b2417dd662f800a.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-lazy-react-partial-keyboard-shortcuts-dialog-b6b8a9a309bc3dc1.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/manifest.json",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/_global-navigation/payloads.json",
+      "method": "GET",
+      "http_status": 404
+    },
+    {
+      "path": "/testofschool/preflight/branch-and-tag-count",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/testofschool/preflight/recently-touched-branches",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/testofschool/preflight/latest-commit",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/u/185124418",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/testofschool/preflight/refs",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/testofschool/preflight/tree-commit-info",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/testofschool/preflight/_sidebar",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/u/185124418",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/github/collect",
+      "method": "POST",
+      "http_status": 204
+    },
+    {
+      "path": "/assets/ha8.0151bcf9a3c3b903.module.css",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/assets/chunk-ha8-e96acb615db969a6.js",
+      "method": "GET",
+      "http_status": 200
+    },
+    {
+      "path": "/github/collect",
+      "method": "POST",
+      "http_status": 204
+    },
+    {
+      "path": "/_private/browser/stats",
+      "method": "POST",
+      "http_status": 200
+    }
+  ],
+  "passed": true,
+  "status": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+    "pricing_image": {
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "usd_per_image": 0.0387,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-18",
+      "cost_basis": "image-output-list-price",
+      "billing_verified": false,
+      "priority_requested": false
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard · 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  },
+  "viewport": {
+    "objects": 18,
+    "colors": 7,
+    "cta_bottom_px": 837.4375,
+    "elements": [
+      "a.brand",
+      "nav.header-nav",
+      "div.eyebrow",
+      "h1#page-title",
+      "p.intro-copy",
+      "a.clip-review-link",
+      "h2#prompt-heading",
+      "form#prompt-form",
+      "p",
+      "h2#results-heading",
+      "h3#risk-heading",
+      "p#risk-detail",
+      "h3#why-heading",
+      "h3#better-heading",
+      "p.rewrite-description",
+      "span",
+      "span#cost-value",
+      "p#cost-note"
+    ]
+  },
+  "expected_surface_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+  "V_B": true,
+  "V_C": null,
+  "V_D": true,
+  "ended_at_utc": "2026-10-18T02:17:51.264994+00:00"
+}

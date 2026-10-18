@@ -1,0 +1,168 @@
+{
+  "recorded_at_utc": "2026-10-18T02:21:12.987766+00:00",
+  "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_raw.mp4",
+  "bytes": 9300697,
+  "sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+  "duration_seconds": 108.366667,
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      }
+    ],
+    "format": {
+      "duration": "108.366667",
+      "size": "9300697"
+    }
+  },
+  "clean": true,
+  "take_count": 1,
+  "selected_take": 1,
+  "original_take_retained_at": "/private/tmp/preflight-v4-demo-20261018-1118",
+  "prior_demo_backup": "/Users/felix/Desktop/AI Builder Cup 2026/evidence/preview_v3_demo_before_v4_20261018_1121",
+  "frames": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/01_home.png",
+      "bytes": 280502,
+      "sha256": "a5ce9cac18f8eb35bfda002cffd855fd58b8b68532e0f90b7553caa5505fa5ef",
+      "offset_seconds": 1.083
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/02_risk_and_score_details.png",
+      "bytes": 461759,
+      "sha256": "e84c424425688a0a0d1fff894cf86fc31ad78b83b671ca7621a9da2a0bee7cb4",
+      "offset_seconds": 19.522
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/03_historical_neighbours.png",
+      "bytes": 403690,
+      "sha256": "6ab65c27ed0968bbecb36085e9da54c6a03da4d832b12de7a8341bc1f3c7ee1b",
+      "offset_seconds": 24.963
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/04_better_prompt_copied.png",
+      "bytes": 427458,
+      "sha256": "bdb6ed36c5fd640a544de56baa7929615f191558d3b08645ab02433d56f95292",
+      "offset_seconds": 30.399
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/05_cached_original_preview.png",
+      "bytes": 378738,
+      "sha256": "7aa62d90ddca425cf7d6581b72fd5aa9fb03aca68faf885f0a9924457161011a",
+      "offset_seconds": 42.182
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/06_clip_uploaded.png",
+      "bytes": 431087,
+      "sha256": "455203ca398ad08db0d125447762c232733d0b68a9c0ea0323187acd5157d3fa",
+      "offset_seconds": 58.172
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/07_clip_verdict_and_feedback.png",
+      "bytes": 533630,
+      "sha256": "7d02f3d4be6983d8e0d688896a26f35a11678556acbb477a5f42d18f5d700383",
+      "offset_seconds": 79.065
+    },
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/frames/08_architecture_connections.png",
+      "bytes": 306794,
+      "sha256": "2c7437e3cecea2fd7c179d4c37902a20bd9ac0ce1f7bf6fe2b23fccbb1852695",
+      "offset_seconds": 91.479
+    }
+  ],
+  "beats": [
+    {
+      "beat": 1,
+      "label": "Home",
+      "start_seconds": 0.045,
+      "end_seconds": 5.158,
+      "steps": [
+        "home_at_rest"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 2,
+      "label": "Sample prompt → risk + why",
+      "start_seconds": 5.159,
+      "end_seconds": 28.036,
+      "steps": [
+        "sample_prompt_check",
+        "risk_and_explanation",
+        "why_and_neighbours"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 3,
+      "label": "Better prompt → risk drops → copy",
+      "start_seconds": 29.001,
+      "end_seconds": 34.487,
+      "steps": [
+        "better_prompt_and_copy"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 4,
+      "label": "Cached sample still + caption",
+      "start_seconds": 36.002,
+      "end_seconds": 42.248,
+      "steps": [
+        "cached_sample_preview"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 5,
+      "label": "Cached better-prompt still or skip",
+      "start_seconds": 44.002,
+      "end_seconds": 49.986,
+      "steps": [
+        "cached_rewrite_preview_or_skip"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 6,
+      "label": "Clip upload → review → feedback-adjusted risk",
+      "start_seconds": 56.001,
+      "end_seconds": 85.154,
+      "steps": [
+        "clip_upload_and_review",
+        "verdict_and_feedback"
+      ],
+      "status": "pass"
+    },
+    {
+      "beat": 7,
+      "label": "Architecture image preview connection",
+      "start_seconds": 90.002,
+      "end_seconds": 98.525,
+      "steps": [
+        "architecture_service_connections"
+      ],
+      "status": "pass"
+    }
+  ],
+  "sample_risk_numbers": {
+    "p_fail": 0.4678787878787878,
+    "p_fail_before": 0.4678787878787878,
+    "p_fail_after": 0.15833333333333333,
+    "historical_p_fail": 0.5345454545454545,
+    "rewrite_source": "pinned-sample"
+  },
+  "image_model_calls": 0,
+  "preview_requests": 2,
+  "all11steps_pass": true,
+  "still_holds": [
+    3.318,
+    3.251
+  ]
+}

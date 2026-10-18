@@ -1,0 +1,17 @@
+test_19_of_19_is_incomplete (__main__.ProbeSafetyTests.test_19_of_19_is_incomplete) ... ok
+test_concurrent_reservations_cannot_cross_cap (__main__.ProbeSafetyTests.test_concurrent_reservations_cannot_cross_cap) ... ok
+test_higher_success_count_precedes_price (__main__.ProbeSafetyTests.test_higher_success_count_precedes_price) ... ok
+test_model_cannot_overlap_itself (__main__.ProbeSafetyTests.test_model_cannot_overlap_itself) ... ok
+test_only_verified_qa_cache_hit_refunds_potential_call (__main__.ProbeSafetyTests.test_only_verified_qa_cache_hit_refunds_potential_call) ... ok
+test_preregistration_cannot_change_after_first_reservation (__main__.ProbeSafetyTests.test_preregistration_cannot_change_after_first_reservation) ... ok
+test_price_breaks_success_tie (__main__.ProbeSafetyTests.test_price_breaks_success_tie) ... ok
+test_priority_cost_tracks_returned_traffic_type (__main__.ProbeSafetyTests.test_priority_cost_tracks_returned_traffic_type) ... ok
+test_result_requires_reservation_and_cannot_duplicate (__main__.ProbeSafetyTests.test_result_requires_reservation_and_cannot_duplicate) ... ok
+test_run_without_execute_cannot_call_provider (__main__.ProbeSafetyTests.test_run_without_execute_cannot_call_provider) ... ok
+test_unknown_attempt_stays_charged_and_cannot_retry (__main__.ProbeSafetyTests.test_unknown_attempt_stays_charged_and_cannot_retry) ... ok
+test_v4_scope_amendment_preserves_existing_call_and_excludes_v3 (__main__.ProbeSafetyTests.test_v4_scope_amendment_preserves_existing_call_and_excludes_v3) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.101s
+
+OK

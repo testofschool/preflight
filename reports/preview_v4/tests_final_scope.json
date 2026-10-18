@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-18T02:14:59.279009+00:00",
+  "pytest_passed": 144,
+  "pytest_subtests_passed": 11,
+  "exit_code": 0,
+  "junit_testcase_entries": 144,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "required_modules": {
+    "tests.test_preview_release_v4": 12,
+    "reports.preview_v4.test_probe_runner.ProbeSafetyTests": 12,
+    "reports.preview_v4.test_warm_runner.WarmSafetyTests": 5
+  },
+  "junit_path": "reports/preview_v4/tests_final_isolated.junit.xml",
+  "text_receipt": "reports/preview_v4/tests_final_isolated.txt",
+  "source_commit": "d638c0690cb17d60316922eb30a14f150fe7c23c",
+  "prior_scope_receipts_preserved": [
+    "reports/preview_v4/tests_final.txt",
+    "reports/preview_v4/tests_runtime_frozen.txt",
+    "reports/preview_v4/tests_final_expanded.txt"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-18T02:21:57.013090+00:00",
+  "method": "Root visually inspected all8 unedited exported1920x1080 frames with view_image; combined with recorder real-UI assertions and full-video decode",
+  "frames_inspected": 8,
+  "broken_images_seen": 0,
+  "risk_value_mismatches_seen": 0,
+  "preview_mode_mismatches_seen": 0,
+  "saved_label_frame": "demo/frames/05_cached_original_preview.png",
+  "saved_label": "Saved still · generated 2026-10-18 · 0 model calls · $0.00",
+  "saved_label_visible_hold_seconds": 3.318,
+  "rewrite_comparison_visible": "46.8% original → 15.8% rewrite",
+  "architecture_clause_visible": "Image preview — Active for sample prompts (saved stills); live generation limited",
+  "clip_review_limit": "Frame07 explicitly shows stored review reused and46.8%→46.8%; no newfeedback or video-accuracy claim",
+  "movie_sha256": "d1f3772d1187ee7ce1aeed1e0efe3f432c09337e90cc0b7113b6ca37aa94ab78",
+  "image_model_calls": 0,
+  "pass": true
+}

@@ -1,0 +1,79 @@
+{
+  "recorded_at_utc": "2026-10-18T02:14:51.489601+00:00",
+  "V_A": true,
+  "V_B": true,
+  "V_C": null,
+  "V_C_reason": "Not applicable: all three direct arms failed19/20; samples-only",
+  "V_D": true,
+  "V_E": true,
+  "V_F": true,
+  "production_commit": "d638c0690cb17d60316922eb30a14f150fe7c23c",
+  "candidate_revision": "preflight-00025-lij",
+  "build_id": "095a35c2-74ad-49cb-8ae8-507a6216ee74",
+  "runtime_source_sha256": "a3f7c0a10ebec2e00ff7bc7bfc01676c712405aff0a8dad55f8c82eef2364fa7",
+  "test_evidence": {
+    "passed": 144,
+    "subtests_passed": 11,
+    "warnings": 3,
+    "exit_code": 0,
+    "junit_cases": 144,
+    "promotion_guard_cases": 12,
+    "receipt": "tests_final_isolated.txt"
+  },
+  "app_allowance_before_promotion": {
+    "daily_limit": 60,
+    "day_count": 38,
+    "effective_day_utc": "2026-10-18",
+    "model_budget": {
+      "all_runs_today_conservative_attempts": 115,
+      "budget_date_kst": "2026-10-18",
+      "daily_cap": 85,
+      "historical_v3_attempts_excluded": 44,
+      "initial_image_calls": 0,
+      "known_measured_attempts_by_model": {
+        "gemini-2.5-flash-image": 29,
+        "gemini-3.1-flash-image": 20,
+        "gemini-3.1-flash-lite-image": 20
+      },
+      "known_measured_model_attempts": 69,
+      "known_zero_model_call_responses": 2,
+      "remaining": 14,
+      "scope": "preview_v4_only",
+      "today_conservative_attempts": 71,
+      "unknown_dispatch_reservations": 0,
+      "v4_effective_attempts": 71,
+      "v4_reserved_attempts": 71,
+      "verified_zero_call_qa_hits": 0
+    },
+    "preview_requests_made_by_snapshot": 0,
+    "provider_calls_made_by_snapshot": 0,
+    "recorded_at_kst": "2026-10-18T11:08:43.740746+09:00",
+    "remaining_admissions": 22,
+    "remaining_required_actions": {
+      "demo_sample_previews": 2,
+      "fits": true,
+      "fits_with_typed_requests": true,
+      "including2typed_self_QA_requests_conservatively": 14,
+      "required_sample_admissions": 12,
+      "sample_self_QA": 10
+    },
+    "reset_at_kst": "2026-10-19T09:00:00+09:00",
+    "reset_at_utc": "2026-10-19T00:00:00+00:00",
+    "snapshot_exists": true,
+    "source": "Firestore service_v1/preview-budget direct read",
+    "stored_day_utc": "2026-10-18"
+  },
+  "remaining_planned_preview_admissions": 12,
+  "preview_mode": "samples",
+  "selected_live_arm": null,
+  "image_model_attempts": 69,
+  "list_price_usd": 1.17230635,
+  "bound_evidence": [
+    "source_match.json",
+    "ui_candidate/summary.json",
+    "preflight_candidate.json",
+    "postcheck_candidate.json",
+    "final_probe_spend_summary.json",
+    "tests_final_isolated.junit.xml"
+  ]
+}

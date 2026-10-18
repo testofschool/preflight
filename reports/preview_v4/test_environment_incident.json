@@ -15,7 +15,7 @@
   "packages_reinstalled": false,
   "package_bytes_reconstructed": false,
   "runtime_or_docs_mutated": false,
-  "current_test_run_complete": false,
+  "current_test_run_complete": true,
   "existing_receipt_preserved": "reports/preview_v4/tests_final.txt (123 tests; predates current run)",
   "expanded_command": [
     "../.preflight-cloud-venv/bin/python",
@@ -37,5 +37,53 @@
   "matching_source_bytes": 181192,
   "matching_source_sha256": "77a6608b43d45dd0a10505425cc84623d7318e94ca5886d63b2b02a3862c7f78",
   "original_pyc_deleted": false,
-  "temporary_bytecode_cache": "/tmp/preflight-v4-pytest-cache"
+  "temporary_bytecode_cache": "/tmp/preflight-v4-pytest-cache",
+  "expanded_test_exit_code": -15,
+  "expanded_counts": "No pytest summary found",
+  "original_expanded_validation_complete": false,
+  "original_expanded_exit_code": -15,
+  "validation_status": "PASS in clean isolated exact-lock task environment",
+  "isolated_test_exit_code": 0,
+  "isolated_test_counts": "144 passed, 11 subtests passed, 3 warnings",
+  "isolated_test_environment": "/private/tmp/preflight-v4-testenv-d638c069",
+  "original_environment_unchanged": true,
+  "recovery_summary": "Native original-file recovery made partial progress; isolated installation of exact existing pins completed final validation without changing the original environment or repository locks",
+  "helper_cleanup": [
+    {
+      "checked_at_utc": "2026-10-18T02:15:52.904186+00:00",
+      "known_process_checks": [
+        {
+          "pid": 85268,
+          "role": "initial test receipt wrapper",
+          "status": "already_exited"
+        },
+        {
+          "pid": 85274,
+          "role": "initial blocked pytest",
+          "status": "already_exited"
+        },
+        {
+          "pid": 85934,
+          "role": "blocked fastapi pyc Swift coordinator",
+          "status": "already_exited"
+        },
+        {
+          "pid": 86216,
+          "role": "blocked expanded pytest",
+          "status": "already_exited"
+        },
+        {
+          "pid": 87836,
+          "role": "isolated successful expanded pytest",
+          "status": "already_exited"
+        }
+      ],
+      "owned_coordinator_cleanup": [],
+      "all_known_test_processes_exited": true,
+      "all_owned_coordinators_exited": true,
+      "system_FileProvider_or_CloudDrive_processes_touched": false,
+      "exact_lock_temp_environment_retained": "/private/tmp/preflight-v4-testenv-d638c069",
+      "receipts_retained": true
+    }
+  ]
 }

@@ -1,0 +1,120 @@
+{
+  "prepared_at_utc": "2026-10-18T02:11:26.659479+00:00",
+  "source_commit": "d638c0690cb17d60316922eb30a14f150fe7c23c",
+  "base_python": "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+  "environment_directory": "/private/tmp/preflight-v4-testenv-d638c069",
+  "cache_directory": "/Users/felix/.cache/uv",
+  "runtime_lock": {
+    "path": "requirements-cloud.lock",
+    "sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda"
+  },
+  "test_pin_source": {
+    "path": "requirements.lock",
+    "sha256": "fd0d204bd658866e0c4ea5739164346318fa456a6089e6fc4cd6ce959c2c7b09"
+  },
+  "additional_test_pins": [
+    "exceptiongroup==1.3.1",
+    "iniconfig==2.3.1",
+    "pluggy==1.7.0",
+    "Pygments==2.21.0",
+    "pytest==9.0.3",
+    "tomli==2.5.0"
+  ],
+  "additional_test_pin_file": "/private/tmp/preflight-v4-tests-dev-pins-d638c069.txt",
+  "policy": "Production cloud lock owns all runtime versions. Only test packages absent from that lock use their existing exact requirements.lock pins.",
+  "lock_files_changed": false,
+  "original_environment_changed": false,
+  "created": true,
+  "installed": true,
+  "commands": [
+    [
+      "uv",
+      "venv",
+      "--python",
+      "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "/private/tmp/preflight-v4-testenv-d638c069"
+    ],
+    [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/private/tmp/preflight-v4-testenv-d638c069/bin/python",
+      "-r",
+      "requirements-cloud.lock",
+      "-r",
+      "/private/tmp/preflight-v4-tests-dev-pins-d638c069.txt"
+    ]
+  ],
+  "expanded_test_arguments": [
+    "-m",
+    "pytest",
+    "-q",
+    "tests/",
+    "reports/preview_v4/test_probe_runner.py",
+    "reports/preview_v4/test_warm_runner.py"
+  ],
+  "create_command": [
+    "uv",
+    "venv",
+    "--python",
+    "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+    "/private/tmp/preflight-v4-testenv-d638c069"
+  ],
+  "create_exit_code": 0,
+  "create_finished_at_utc": "2026-10-18T02:12:46.909258+00:00",
+  "install_attempts": [
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/private/tmp/preflight-v4-testenv-d638c069/bin/python",
+        "-r",
+        "requirements-cloud.lock",
+        "-r",
+        "/private/tmp/preflight-v4-tests-dev-pins-d638c069.txt",
+        "--offline"
+      ],
+      "started_at_utc": "2026-10-18T02:12:53.563856+00:00",
+      "finished_at_utc": "2026-10-18T02:12:53.654821+00:00",
+      "exit_code": 1,
+      "log_path": "/private/tmp/preflight-v4-isolated-install-offline.log",
+      "network_enabled": false
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/private/tmp/preflight-v4-testenv-d638c069/bin/python",
+        "-r",
+        "requirements-cloud.lock",
+        "-r",
+        "/private/tmp/preflight-v4-tests-dev-pins-d638c069.txt"
+      ],
+      "started_at_utc": "2026-10-18T02:13:04.195890+00:00",
+      "finished_at_utc": "2026-10-18T02:13:07.643685+00:00",
+      "exit_code": 0,
+      "log_path": "/private/tmp/preflight-v4-isolated-install.log",
+      "network_enabled": true,
+      "purpose": "Exact pinned task test dependencies; no provider model calls"
+    }
+  ],
+  "installed_package_count": 113,
+  "expected_pinned_package_count": 113,
+  "version_mismatches": [],
+  "exact_pins_verified": true,
+  "runtime_lock_unchanged": true,
+  "test_pin_source_unchanged": true,
+  "verified_at_utc": "2026-10-18T02:13:41.994253+00:00",
+  "tests_passed": true,
+  "test_exit_code": 0,
+  "pytest_passed": 144,
+  "subtests_passed": 11,
+  "test_text_receipt": "reports/preview_v4/tests_final_isolated.txt",
+  "test_junit_receipt": "reports/preview_v4/tests_final_isolated.junit.xml",
+  "scope_receipt": "reports/preview_v4/tests_final_scope.json"
+}

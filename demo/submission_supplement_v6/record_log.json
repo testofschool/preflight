@@ -1,0 +1,185 @@
+{
+  "take": 1,
+  "started_at_utc": "2026-10-18T08:49:46.340870+00:00",
+  "steps": [
+    {
+      "name": "production_home_before",
+      "started_at_utc": "2026-10-18T08:49:46.342155+00:00",
+      "start_offset_seconds": 0.001,
+      "status": "pass",
+      "end_offset_seconds": 1.86,
+      "wall_seconds": 1.859
+    },
+    {
+      "name": "typed_own_prompt_and_check",
+      "started_at_utc": "2026-10-18T08:49:48.201706+00:00",
+      "start_offset_seconds": 1.861,
+      "status": "pass",
+      "observed": {
+        "prompt": "a dog catching a frisbee on a beach at sunset",
+        "risk_percent": "13.3",
+        "band": "lower"
+      },
+      "end_offset_seconds": 13.034,
+      "wall_seconds": 11.173
+    },
+    {
+      "name": "show_live_rewrite_and_risk_line",
+      "started_at_utc": "2026-10-18T08:49:59.374849+00:00",
+      "start_offset_seconds": 13.034,
+      "status": "pass",
+      "observed": {
+        "rewritten_prompt": "A dog catches a flying disc mid-air over the wet sand of a beach at sunset, clear focus, static shot.",
+        "risk_line": "13.3% original\n→\n3.3% rewrite",
+        "rewrite_source": "live"
+      },
+      "end_offset_seconds": 19.11,
+      "wall_seconds": 6.076
+    },
+    {
+      "name": "click_preview_and_show_real_limited_message",
+      "started_at_utc": "2026-10-18T08:50:05.454866+00:00",
+      "start_offset_seconds": 19.114,
+      "status": "pass",
+      "observed": {
+        "http_status": 503,
+        "detail": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works.",
+        "request_prompt_is_sample": false,
+        "image_model_calls": 0,
+        "zero_image_basis": "samples mode + non-sample request rejected at app.py pre-provider guard"
+      },
+      "end_offset_seconds": 25.59,
+      "wall_seconds": 6.476
+    },
+    {
+      "name": "open_what_this_score_is",
+      "started_at_utc": "2026-10-18T08:50:11.931145+00:00",
+      "start_offset_seconds": 25.59,
+      "status": "pass",
+      "observed": {
+        "visible_explanation": "What this score is: An estimate from 1,911 human pairwise votes on 2024-era AI videos of how often prompts like yours received a vote rejecting both clips. Not a calibrated probability for today’s models (held-out AUC about 0.67). Machine feedback can make the displayed score a mixed heuristic proxy, while the original human votes remain separate."
+      },
+      "end_offset_seconds": 27.942,
+      "wall_seconds": 2.352
+    }
+  ],
+  "network": [
+    {
+      "offset_seconds": 0.303,
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.298
+    },
+    {
+      "offset_seconds": 0.459,
+      "method": "GET",
+      "path": "/static/styles.css",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.147
+    },
+    {
+      "offset_seconds": 0.541,
+      "method": "GET",
+      "path": "/static/status.js",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.229
+    },
+    {
+      "offset_seconds": 0.574,
+      "method": "GET",
+      "path": "/static/postcheck.js",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.262
+    },
+    {
+      "offset_seconds": 0.58,
+      "method": "GET",
+      "path": "/static/app.js",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.268
+    },
+    {
+      "offset_seconds": 0.753,
+      "method": "GET",
+      "path": "/api/status",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.211,
+      "observed_response": {
+        "mode": "cloud",
+        "cloud_run": true,
+        "firestore": true,
+        "gemini": true,
+        "adk": true,
+        "postcheck": true,
+        "preview": true,
+        "agent_platform_session": true,
+        "preview_mode": "samples"
+      }
+    },
+    {
+      "offset_seconds": 13.021,
+      "method": "POST",
+      "path": "/preflight",
+      "status": 200,
+      "preview_cache": null,
+      "response_headers_after_seconds": 7.65,
+      "observed_response": {
+        "mode": "cloud",
+        "p_fail": 0.13333333333333333,
+        "historical_p_fail": 0.13333333333333333,
+        "risk_semantics": "Arithmetic mean of five Firestore human pairwise both-bad vote rates; not a calibrated failure probability.",
+        "rewrite_status": "improved",
+        "rewritten_prompt": "A dog catches a flying disc mid-air over the wet sand of a beach at sunset, clear focus, static shot.",
+        "p_fail_before": 0.13333333333333333,
+        "p_fail_after": 0.03333333333333333,
+        "supported": true,
+        "rewrite_source": "live"
+      }
+    },
+    {
+      "offset_seconds": 20.508,
+      "method": "POST",
+      "path": "/preview",
+      "status": 503,
+      "preview_cache": null,
+      "response_headers_after_seconds": 0.138,
+      "observed_response": {
+        "detail": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works."
+      }
+    }
+  ],
+  "request_failures": [],
+  "page_errors": [],
+  "frames": [
+    {
+      "name": "production_home_before",
+      "offset_seconds": 0.798,
+      "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/screens/01_production_home_before.png"
+    },
+    {
+      "name": "own_prompt_live_rewrite",
+      "offset_seconds": 14.055,
+      "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/screens/02_own_prompt_live_rewrite.png"
+    },
+    {
+      "name": "own_prompt_preview_limited",
+      "offset_seconds": 20.518,
+      "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/screens/03_own_prompt_preview_limited.png"
+    },
+    {
+      "name": "own_prompt_score_explanation",
+      "offset_seconds": 27.872,
+      "screenshot": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_supplement_v6/screens/04_own_prompt_score_explanation.png"
+    }
+  ],
+  "preview_decision": "on",
+  "warm_receipt": null,
+  "response_policy": "real UI requests only; no mocks, client retries or clipboard reads"
+}

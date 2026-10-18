@@ -1,0 +1,13 @@
+{
+  "automation_id": "preflight",
+  "kind": "heartbeat",
+  "status": "ACTIVE",
+  "target_thread_id": "01a14e18-24f3-73d3-b5c4-b055088dd1aa",
+  "scheduled_time_kst": "2026-10-18T21:30:00+09:00",
+  "one_occurrence": true,
+  "purpose": "Final Track F after B/D or at21:30 with whatever exists; skip quietly if already complete.",
+  "updated_for_human_video_resolution": true,
+  "submission_video": "demo/preflight_demo_submission_3m.mp4",
+  "backup_video_seconds": 172,
+  "new_caption_surface": "reports/final_v6/track_c_submission_caption_script.txt"
+}

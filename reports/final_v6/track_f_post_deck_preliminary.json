@@ -1,0 +1,524 @@
+{
+  "scope": "POST-DECK PREPARATORY READ-ONLY AUDIT; not final Track F pass",
+  "observed_at_kst": "2026-10-18T17:45:49+09:00",
+  "head": "a993aa5c4986b564cb9d379d657112d5ad7494a0",
+  "track_b": "Official-template deck exported and independently audited; public demo link still pending",
+  "track_d": "WAITING for Felix public YouTube URL",
+  "sources": {
+    "README.md": {
+      "sha256": "8f1dada68c563bb10f0d4aac0f24a06d0d36cad221422dc8d5e97961ec2c8ef9"
+    },
+    "docs/submission-notes.md": {
+      "sha256": "6f6f50c3c0158be358e50fae8353b1aa282dfbf83139ef7c2966e8a9cbdb9ed3"
+    },
+    "reports/final_v5/track_c_caption_script.txt": {
+      "sha256": "59495ac5035a517010a51b518711129299f46bd1716c56184614c585a5c6b419"
+    }
+  },
+  "live_receipt": "reports/final_v6/track_f_post_deck_preliminary_live_status.json",
+  "deck_pdf_exists": true,
+  "interpretation": "Required missing is restricted to v5 requirements. Expected absence is not a defect. Service flag semantic matches do not prove model version. URL placeholders are waiting inputs, not conflicts.",
+  "rows": [
+    {
+      "value": "Live URL: https://preflight-jcgro45veq-as.a.run.app",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "3,62,74",
+          "representation": "full URL; architecture link appends /architecture",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "3",
+          "representation": "full URL",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 11",
+          "representation": "Live URL: https://preflight-jcgro45veq-as.a.run.app",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "caption script: URLs appear in closing visual, not frozen C.2 narration",
+        "status response: endpoint does not echo its own origin"
+      ],
+      "conflicts": []
+    },
+    {
+      "value": "Repo URL: https://github.com/testofschool/preflight",
+      "appearances": [
+        {
+          "surface": "notes",
+          "location": "5",
+          "representation": "full URL",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 11",
+          "representation": "Repo URL: https://github.com/testofschool/preflight",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "README: no self-link required by v5",
+        "caption script: URLs appear in closing visual, not frozen C.2 narration",
+        "status: no repository metadata field"
+      ],
+      "conflicts": []
+    },
+    {
+      "value": "Video URL",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "3",
+          "representation": "<VIDEO_URL> placeholder",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "7",
+          "representation": "<VIDEO_URL> placeholder",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "page 11",
+          "representation": "Pending public upload",
+          "match_kind": "waiting placeholder"
+        }
+      ],
+      "required_missing": [
+        "README, notes and deck page 11: actual public YouTube URL pending Track D / Felix"
+      ],
+      "expected_absences": [
+        "caption script and status: no video-link field mandated"
+      ],
+      "conflicts": [],
+      "state": "WAITING, not a conflicting URL"
+    },
+    {
+      "value": "1,911",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "25,207",
+          "representation": "1,911 human pairwise votes",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "1,911 human pairwise votes",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "3",
+          "representation": "1,911 human votes",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 2,4,6,7",
+          "representation": "1,911",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "status: no dataset-count field"
+      ],
+      "conflicts": []
+    },
+    {
+      "value": "0.67",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "66",
+          "representation": "held-out risk AUC 0.67",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "held-out AUC 0.67",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "9",
+          "representation": "held-out AUC 0.67",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 9",
+          "representation": "0.67",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "status: no evaluation-metric field"
+      ],
+      "conflicts": [],
+      "caveat": "README also preserves precise five-seed 0.668329 and target 0.68. They are labeled distinct values; 0.67 is rounded, not conflicting."
+    },
+    {
+      "value": "46.8%",
+      "appearances": [
+        {
+          "surface": "caption script",
+          "location": "3",
+          "representation": "46.8 percent",
+          "match_kind": "semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 8",
+          "representation": "46.8%",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "README and notes: demo-specific risk pair not mandated by v5",
+        "status: no risk-example field"
+      ],
+      "conflicts": [],
+      "caveat": "README line 84 records frozen historical-only spoon/laptop 53.5%, explicitly distinct from displayed mixed proxy. Do not treat a different risk definition as a conflicting canonical example."
+    },
+    {
+      "value": "15.8%",
+      "appearances": [
+        {
+          "surface": "caption script",
+          "location": "4",
+          "representation": "15.8 percent",
+          "match_kind": "semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 8",
+          "representation": "15.8%",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "README and notes: demo-specific risk pair not mandated by v5",
+        "status: no risk-example field"
+      ],
+      "conflicts": []
+    },
+    {
+      "value": "$3.20 / three dollars",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "227",
+          "representation": "USD 3.20; eight seconds at USD 0.40/second",
+          "match_kind": "currency-format semantic"
+        },
+        {
+          "surface": "caption script",
+          "location": "5",
+          "representation": "about three dollars",
+          "match_kind": "approximate semantic"
+        },
+        {
+          "surface": "status",
+          "location": "/pricing/single_attempt_usd",
+          "representation": "3.2",
+          "match_kind": "numeric semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 4",
+          "representation": "$3.20 / three dollars",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "notes: example Veo-attempt price not mandated by v5"
+      ],
+      "conflicts": [],
+      "caveat": "about three dollars is the exact frozen v5 C.2 approximation; numeric 3.2 equals 3.20. Not a claim of executed Veo generation."
+    },
+    {
+      "value": "8/20",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "29,69",
+          "representation": "best probe P1 8/20; P2/P3 6/20",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "13",
+          "representation": "P1 8/20; P2/P3 6/20",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 9",
+          "representation": "8/20",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "caption script: frozen v5 C.2 says live generation failed too often without counts",
+        "status: no probe-result field"
+      ],
+      "conflicts": []
+    },
+    {
+      "value": "Gemini 3.5 Flash",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "37,55,139,163",
+          "representation": "Gemini 3.5 Flash",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "Gemini 3.5 Flash",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 6,7",
+          "representation": "Gemini 3.5 Flash",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [
+        "caption script: frozen v5 C.2 says Gemini without version",
+        "status: gemini=true flag; rewrite model name not exposed"
+      ],
+      "conflicts": [],
+      "caveat": "/pricing_image/model=gemini-2.5-flash-image is an image model and /pricing/model=Veo 3.1 Standard is illustrative video pricing; neither identifies or conflicts with the rewrite model."
+    },
+    {
+      "value": "Google ADK",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "38,54,162",
+          "representation": "Google ADK",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "Google ADK",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "4",
+          "representation": "Google ADK agent",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "status",
+          "location": "/adk",
+          "representation": "true",
+          "match_kind": "service-flag semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 6,7",
+          "representation": "Google ADK",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [],
+      "conflicts": []
+    },
+    {
+      "value": "Agent Platform Sessions",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "39,44,56,138,165",
+          "representation": "Agent Platform Sessions",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "Agent Platform Sessions",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "7",
+          "representation": "Agent Platform Sessions",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "status",
+          "location": "/agent_platform_session",
+          "representation": "true",
+          "match_kind": "service-flag semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 6,7",
+          "representation": "Agent Platform Sessions",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [],
+      "conflicts": []
+    },
+    {
+      "value": "Cloud Run",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "35,44,52,141,161,170,263",
+          "representation": "Cloud Run",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "Cloud Run",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "7",
+          "representation": "Cloud Run",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "status",
+          "location": "/cloud_run",
+          "representation": "true",
+          "match_kind": "service-flag semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 6,7",
+          "representation": "Cloud Run",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [],
+      "conflicts": []
+    },
+    {
+      "value": "Firestore",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "36,41,53,59,137,164,174,178,199,207,261,271",
+          "representation": "Cloud Firestore / Firestore",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "9",
+          "representation": "Cloud Firestore",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "7,8",
+          "representation": "Firestore",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "status",
+          "location": "/firestore",
+          "representation": "true",
+          "match_kind": "service-flag semantic"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 6,7",
+          "representation": "Firestore",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [],
+      "conflicts": []
+    },
+    {
+      "value": "samples: Active for sample prompts (saved stills); live generation limited",
+      "appearances": [
+        {
+          "surface": "README",
+          "location": "27",
+          "representation": "exact wording",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "notes",
+          "location": "11",
+          "representation": "exact wording",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "caption script",
+          "location": "5",
+          "representation": "five sample prompts use saved stills; zero model calls; live generation failed too often",
+          "match_kind": "semantic"
+        },
+        {
+          "surface": "status",
+          "location": "/preview_mode and /preview_mode_message",
+          "representation": "samples; exact wording",
+          "match_kind": "literal"
+        },
+        {
+          "surface": "deck",
+          "location": "pages 7",
+          "representation": "samples: Active for sample prompts (saved stills); live generation limited",
+          "match_kind": "literal / whitespace normalized"
+        }
+      ],
+      "required_missing": [],
+      "expected_absences": [],
+      "conflicts": []
+    }
+  ],
+  "actual_conflicts": [],
+  "production_doc_edits": [],
+  "final_timing": "Still preliminary: D awaits a public URL; final Track F must run after B and D, or at 21:30 KST with whatever exists.",
+  "deck": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/docs/Preflight_pitch_deck.pdf",
+    "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+    "bytes": 660305,
+    "page_count": 11,
+    "under_5000000_bytes": true
+  },
+  "outside_canonical_rows": [
+    {
+      "issue": "Official video duration requirement vs retained final file",
+      "surfaces": "Deck page 11 native label 3 Minutes; parent-observed dashboard 3–4 minutes; current final MP4 172 seconds / 2:52",
+      "state": "UNRESOLVED; not duration-eligibility PASS; video unchanged"
+    }
+  ]
+}

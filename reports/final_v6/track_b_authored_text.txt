@@ -1,0 +1,121 @@
+PAGE 1 (template slide 1)
+Team Details
+Team name: testofschool
+Team leader name: Jung Min Kang
+Problem Statement: People who pay per generation for AI video only learn a clip is unusable after they have paid for it.
+
+PAGE 2 (template slide 3)
+Brief about the idea
+Preflight: check an AI-video prompt before you pay
+"you still burn credits on the failed attempt"
+Trustpilot, Runway review, Sept 2026
+"Only one of the generations was usable for my purposes"
+Trustpilot, Sept 2026
+"I'm tired of wasting valuable credits on bad footage, I simply can't use"
+Adobe Community
+"I recommend a lo-res preview render before having to spend actual credits"
+Adobe Community
+In a 2024 public benchmark (GenAI-Bench), 21% of 1,911 human pairwise votes rejected both videos.
+
+PAGE 3 (template slide 4)
+Opportunities
+Refunds cover generation errors, not finished clips that are unusable.
+Nothing sits before "pay".
+Who pays today
+Per-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: "I lose too many credits doing trial and error" (219 votes).
+Who would buy a pre-pay step
+Studios and agencies running generation pipelines. Generator platforms as an embedded step.
+Built by a Seoul producer who ran generative-video pipelines for 2.5 years. Tested by a teammate in India.
+No revenue or market-size figure is claimed.
+
+PAGE 4 (template slide 5)
+List of features offered by the solution
+Preflight: three rungs before you pay
+Risk check (free)
+Failure-risk estimate from 1,911 human votes, with the nearest historical prompts as evidence.
+Gemini rewrite
+Kept only if the estimated risk drops.
+A still before a $3.20 Veo attempt
+Veo 3.1, 8 s at $0.40/s (Google pricing page).
+After generation: upload a clip for a Gemini second look. Its verdict is stored separately as feedback.
+
+PAGE 5 (template slide 6)
+Process flow diagram or Use-case diagram
+Every generator's loop: prompt → pay → generate → judge → re-prompt.
+Preflight adds a risk check, a lower-risk rewrite and a still before "pay".
+Saved original still
+Saved rewrite still
+
+PAGE 6 (template slide 8)
+Architecture diagram of the proposed solution
+Browser request and Google Cloud services
+Browser
+Cloud Run
+FastAPI
+asia-southeast1
+Google ADK
+rewrite agent
+Gemini 3.5 Flash
+Vertex AI
+Tools
+Nearest prompts
+IRT difficulty
+Cloud Firestore
+1,911 votes
+IRT parameters
+Feedback
+Saved stills
+Agent Platform
+Sessions
+Clip review: Gemini video understanding
+Still preview: Gemini image model
+
+PAGE 7 (template slide 9)
+Technologies to be used in the solution
+Cloud Run (FastAPI, asia-southeast1)
+Hosts the browser request workflow.
+Google ADK + Gemini 3.5 Flash on Vertex AI
+Rewrite agent with Agent Platform Sessions. Tools retrieve nearby prompts and IRT difficulty.
+Cloud Firestore
+Stores 1,911 votes, IRT parameters, feedback and saved stills.
+Gemini video understanding + Gemini image model
+Clip second look and still preview.
+Active for sample prompts (saved stills); live generation limited
+
+PAGE 8 (template slide 11)
+Snapshots of the prototype
+a spoon and a laptop: 46.8% → 15.8% estimated risk after the Gemini rewrite.
+Risk + why
+Better prompt
+Saved still
+0 model calls
+$0.00
+
+A still cannot judge motion, flicker or timing.
+
+PAGE 9 (template slide 12)
+Prototype Performance report/Benchmarking
+What we measured, and the limits
+Held-out AUC 0.67
+Historical signal, not a calibrated probability for today's models.
+Live image generation
+60 test calls across three Gemini image models. Best 8/20 under shared capacity.
+Judges see saved stills for the 5 samples, labelled "0 model calls · $0.00".
+Clip-review accuracy: not measured
+
+PAGE 10 (template slide 13)
+Additional Details/Future Development (if any)
+Next
+Live stills with dedicated image capacity.
+Separate tabs for check and clip review.
+Non-English vote data before scoring non-English prompts.
+On-page emphasis of the risk drop.
+
+PAGE 11 (template slide 14)
+Provide links to your:
+GitHub Public Repository
+https://github.com/testofschool/preflight
+Demo Video Link (3 Minutes)
+Pending public upload
+Final Product Link
+https://preflight-jcgro45veq-as.a.run.app

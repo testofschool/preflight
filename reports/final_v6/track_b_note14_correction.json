@@ -1,0 +1,11 @@
+{
+  "before_sha256": "91c297f1ec8e77953403897d245166229177f629bfafe7eb6aff9a7f49f865e7",
+  "after_sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a",
+  "after_bytes": 1979965,
+  "changed_parts": [
+    "ppt/notesSlides/notesSlide14.xml"
+  ],
+  "only_note14_changed": true,
+  "source_correction": "Both links are in docs/submission-notes.md; do not say both came from README.",
+  "PDF_unchanged": true
+}

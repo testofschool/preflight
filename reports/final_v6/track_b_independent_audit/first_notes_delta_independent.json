@@ -1,0 +1,38 @@
+{
+  "observed_at_kst": "2026-10-18T17:48:23+09:00",
+  "before_sha256": "137ea04bec138b894af93818d6a168126013ca4700f21654a81136c3c588d94a",
+  "after_sha256": "91c297f1ec8e77953403897d245166229177f629bfafe7eb6aff9a7f49f865e7",
+  "after_bytes": 1979974,
+  "changed_parts": [
+    "ppt/notesSlides/notesSlide1.xml",
+    "ppt/notesSlides/notesSlide11.xml",
+    "ppt/notesSlides/notesSlide12.xml",
+    "ppt/notesSlides/notesSlide13.xml",
+    "ppt/notesSlides/notesSlide14.xml",
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/notesSlides/notesSlide6.xml",
+    "ppt/notesSlides/notesSlide8.xml",
+    "ppt/notesSlides/notesSlide9.xml"
+  ],
+  "added_parts": [],
+  "removed_parts": [],
+  "non_notes_changes": [],
+  "notes_text": {
+    "ppt/notesSlides/notesSlide1.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 1.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.",
+    "ppt/notesSlides/notesSlide11.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 5.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nVisual evidence: demo/frames/02_risk_and_score_details.png and 04_better_prompt_copied.png, plus frame-05 byte-matched saved still asset docs/deck_assets/spoon_original.jpg.",
+    "ppt/notesSlides/notesSlide12.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 7.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nAll measured figures and claim limits are exactly the supplied v5 row 7. The deck build did not run a new evaluation.",
+    "ppt/notesSlides/notesSlide13.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 9.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.",
+    "ppt/notesSlides/notesSlide14.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) README links and pending-upload state.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nKnown links reproduced from README: https://github.com/testofschool/preflight and https://preflight-jcgro45veq-as.a.run.app\nVideo URL has not been supplied. Pending public upload is displayed. The template-origin 3 Minutes label is a field label, not a measured-duration claim.",
+    "ppt/notesSlides/notesSlide3.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 2.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nKnown quote link (first quote), reproduced from README: https://www.trustpilot.com/reviews/6a9f952dc2a80e997c67354a\nKnown quote link (preview request), reproduced from README: https://community.adobe.com/questions-404/wasted-generative-credits-on-bad-results-1479378\nOther quote source labels: Trustpilot, Sept 2026; Adobe Community, as supplied in v5. No missing individual quote URL was invented.\nDataset link, reproduced from README: https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench",
+    "ppt/notesSlides/notesSlide4.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 3 and 8.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nRefund-policy link, reproduced from README: https://help.runwayml.com/hc/en-us/articles/34266159290003-Can-I-have-credits-refunded\nRunway review counts, Adobe feature-request votes, buyer hypotheses and producer history are the supplied v5 facts; no separate URL for an unspecified review/feature-request page was invented.",
+    "ppt/notesSlides/notesSlide5.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 4.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nCost source label: Google pricing page, as supplied in v5. No new price estimate or claim was introduced.",
+    "ppt/notesSlides/notesSlide6.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 3 and 5.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nVisual evidence: docs/deck_assets/spoon_original.jpg and spoon_rewritten.jpg. Byte-identical saved assets verified in reports/final_v6/track_b_saved_stills.json.",
+    "ppt/notesSlides/notesSlide8.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 6.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nArchitecture facts: supplied v5 row 6; existing README Architecture and Google Cloud services sections.",
+    "ppt/notesSlides/notesSlide9.xml": "Content canon: Felix-supplied CODEX_ONESHOT_preflight_final_v5, Track B row(s) 6 and 7.\nCanonical local copy: reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md. Wording shortened only within the authorized table facts.\nService facts: supplied v5 rows 6 and 7; current samples wording is reproduced from README."
+  },
+  "pdf_sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+  "pdf_bytes": 660305,
+  "pdf_unchanged": true
+}

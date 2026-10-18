@@ -1,0 +1,14 @@
+{
+  "own_original_outside_complete_original_and_rewrite_sample_whitelist": true,
+  "own_rewrite_outside_complete_original_and_rewrite_sample_whitelist": true,
+  "preview_UI_payload_selection": "static/app.js241-243 selects the accepted rewrite for Preview a still; this exact non-sample rewrite is shown in captured UI. Network receipt does not log request bodies.",
+  "frozen_base_capture_script_unchanged": true,
+  "recorded_typed_prompt": "a dog catching a frisbee on a beach at sunset",
+  "recorded_rewrite_source": "live",
+  "recorded_rewrite_status": "improved",
+  "request_specific_observed_risk_percent": {
+    "before": 13.3,
+    "after": 3.3
+  },
+  "image_count_provenance_boundary": "No visible cumulative counter; hardcoded API generations=0 is not evidence of usage. The recorded HTTP503 non-sample request path, source guard, and sample-mode flags support zero image-model calls for this new preview interaction."
+}

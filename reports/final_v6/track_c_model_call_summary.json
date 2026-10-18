@@ -1,0 +1,18 @@
+{
+  "production_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "own_prompt": "a dog catching a frisbee on a beach at sunset",
+  "rewrite_source": "live",
+  "risk_before_percent": 13.333333333333334,
+  "risk_after_percent": 3.3333333333333335,
+  "planner_model_calls": 3,
+  "rewrite_model_calls": 1,
+  "image_model_calls": 0,
+  "veo_calls": 0,
+  "visible_counter_before": "NOT SHOWN: no such counter is present in the UI",
+  "visible_counter_after": "NOT SHOWN: no such counter is present in the UI",
+  "status_generations_before": 0,
+  "status_generations_after": 0,
+  "status_generations_is_meter": false,
+  "billed_spend": "UNMEASURED",
+  "model_call_count_source": "API response agent_trace; not independent provider billing logs"
+}

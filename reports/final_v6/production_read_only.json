@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-10-18T08:51:18.258399+00:00",
+  "method": "read-only gcloud run services describe; sanitized whitelist only",
+  "latest_ready_revision": "preflight-00027-pit",
+  "traffic": [
+    {
+      "revisionName": "preflight-00016-tuk",
+      "percent": 0,
+      "tag": "postcheck-candidate"
+    },
+    {
+      "revisionName": "preflight-00021-sus",
+      "percent": 0,
+      "tag": "preview-v3-copy"
+    },
+    {
+      "revisionName": "preflight-00025-lij",
+      "percent": 0,
+      "tag": "preview-v4-candidate"
+    },
+    {
+      "revisionName": "preflight-00027-pit",
+      "percent": 100,
+      "tag": "admission-v5-candidate"
+    }
+  ],
+  "preview_env": {
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": "500",
+    "PREFLIGHT_PREVIEW_ENABLED": "true",
+    "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+    "PREFLIGHT_PREVIEW_WARM_ENABLED": "false"
+  },
+  "container_images": [
+    "asia-southeast1-docker.pkg.dev/gen-lang-client-0070223631/preflight/app@sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932"
+  ],
+  "mutations": 0,
+  "expected_production_revision": "preflight-00027-pit",
+  "production_at100": true
+}

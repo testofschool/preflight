@@ -1,0 +1,18 @@
+{
+  "presentations": {
+    "command": "mark_artifact_operation_started.mjs --operation-kind create --expected-output-count 2 --output-format pptx",
+    "exit_code": 0,
+    "successful_invocations": 1
+  },
+  "pdf": {
+    "command": "mark_artifact_operation_started.mjs --operation-kind create --expected-output-count 1 --output-format pdf",
+    "exit_code": 0,
+    "successful_invocations": 1
+  },
+  "initial_invalid_invocation": {
+    "format": "pptx,pdf",
+    "exit_code": 2,
+    "result": "rejected usage; corrected to supported format before authoring"
+  },
+  "native_App_validation": "LibreOffice headless export only, private UserInstallation; not inspected in PowerPoint; existing GUI process not altered."
+}

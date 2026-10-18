@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-10-18T08:41:25.328124+00:00",
+  "method": "Saved /preview cache retrieval only; native read confirmed both live and warm generation false first.",
+  "native_revision": "preflight-00027-pit",
+  "live_enabled": false,
+  "warm_enabled": false,
+  "assets": [
+    {
+      "path": "docs/deck_assets/spoon_original.jpg",
+      "bytes": 76625,
+      "sha256": "ec93ee2616e1b65ac4cad0d2d82aabebe5f913900d9af9a3cde26c2915fa0121",
+      "variant": "original",
+      "cache": "hit",
+      "model_calls": 0,
+      "cost_usd": 0,
+      "matches_v5_saved_image": true
+    },
+    {
+      "path": "docs/deck_assets/spoon_rewritten.jpg",
+      "bytes": 65720,
+      "sha256": "8dac9ce3a56559eb67a707a322be16a59dc91e19557b77480ef1aec2f6738ea7",
+      "variant": "rewrite",
+      "cache": "hit",
+      "model_calls": 0,
+      "cost_usd": 0,
+      "matches_v5_saved_image": true
+    }
+  ],
+  "total_model_calls": 0,
+  "total_cost_usd": 0
+}

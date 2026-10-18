@@ -1,0 +1,36 @@
+{
+  "visible_in_app_before": "NOT SHOWN",
+  "visible_in_app_after": "NOT SHOWN",
+  "status_generations_before": 0,
+  "status_generations_after": 0,
+  "status_field_hardcoded_in_source": true,
+  "is_a_cumulative_meter": false,
+  "image_model_calls_for_this_recorded_typed_preview": 0,
+  "zero_image_basis": "Recorded single non-sample /preview returned exact HTTP503 limited copy while preview_mode=samples; inspected source guard rejects it before provider.generate. This is request-path evidence, not a cumulative usage counter.",
+  "source_guard_precedes_provider": true,
+  "source_file_sha256": "6a4049031c7d4d5e98ccb0428a76235acd9e97275b73ff1431a8ec3adda87612",
+  "network": [
+    {
+      "method": "GET",
+      "path": "/api/status",
+      "status": 200,
+      "rewrite_source": null,
+      "detail": null
+    },
+    {
+      "method": "POST",
+      "path": "/preflight",
+      "status": 200,
+      "rewrite_source": "live",
+      "detail": null
+    },
+    {
+      "method": "POST",
+      "path": "/preview",
+      "status": 503,
+      "rewrite_source": null,
+      "detail": "Live stills are limited to the sample prompts during judging \u2014 shared Gemini image capacity. The risk check still works."
+    }
+  ],
+  "PASS": true
+}

@@ -1,0 +1,71 @@
+{
+  "source": "official google/fonts",
+  "commit": "bd8f81ddb5c74d5c8897b36ad88b440266245103",
+  "source_url": "https://raw.githubusercontent.com/google/fonts/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/googlesansflex/GoogleSansFlex%5BROND%2Copsz%2Cslnt%2Cwdth%2Cwght%5D.ttf",
+  "license_url": "https://github.com/google/fonts/blob/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/googlesansflex/OFL.txt",
+  "source_sha256": "a9ac770798857d5e8ac593ced42b22e40a7c08cec98319f92b0eccc2783a77ba",
+  "instance_axes": {
+    "wght": [
+      400,
+      500,
+      600
+    ],
+    "wdth": 100,
+    "opsz": 14,
+    "slnt": 0,
+    "ROND": 0
+  },
+  "aliases": [
+    "Google Sans Flex",
+    "Google Sans Flex Medium",
+    "Google Sans Flex SemiBold"
+  ],
+  "font_files": {
+    "GoogleSansFlex.ttf": {
+      "bytes": 130976,
+      "sha256": "6a23e1c222aface16030dc2f944669cd07d522845d70ae1a161083d501c1ae0d",
+      "head_created": 3582178904,
+      "head_modified": 3875157501
+    },
+    "GoogleSansFlexMedium.ttf": {
+      "bytes": 131220,
+      "sha256": "f8d03532e677bd9b2e05d8383b97b560f3cb3e00384f09f354747c5963d19143",
+      "head_created": 3582178904,
+      "head_modified": 3875157503
+    },
+    "GoogleSansFlexSemiBold.ttf": {
+      "bytes": 131280,
+      "sha256": "eed0eeabd7f4576fe7fa7f3368444053f187ce9f43336e2552d8e051d37897cf",
+      "head_created": 3582178904,
+      "head_modified": 3875157506
+    }
+  },
+  "registration": "CoreText CTFontManagerRegisterFontsForURL scope=3 session; no existing font files modified; no fonts copied to user/system font directories; unregister after final export.",
+  "PDF_embedded_fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBAAAAA+GoogleSansFlexSemiBold        TrueType          WinAnsi          yes yes yes    239  0\nCAAAAA+GoogleSansFlex                TrueType          WinAnsi          yes yes yes    244  0\nDAAAAA+GoogleSansFlexMedium          TrueType          WinAnsi          yes yes yes    254  0\nEAAAAA+LucidaGrande                  TrueType          WinAnsi          yes yes yes    249  0\n",
+  "fontTools_version": "4.61.1",
+  "determinism_note": "Reproduction script freezes the final font head.modified timestamps and disables timestamp recalculation; source hash, axes, names and fontTools version pin the remaining specification.",
+  "reproduction_check": {
+    "GoogleSansFlex.ttf": {
+      "reproduced_sha256": "6a23e1c222aface16030dc2f944669cd07d522845d70ae1a161083d501c1ae0d",
+      "matches_final_export_font": true
+    },
+    "GoogleSansFlexMedium.ttf": {
+      "reproduced_sha256": "f8d03532e677bd9b2e05d8383b97b560f3cb3e00384f09f354747c5963d19143",
+      "matches_final_export_font": true
+    },
+    "GoogleSansFlexSemiBold.ttf": {
+      "reproduced_sha256": "eed0eeabd7f4576fe7fa7f3368444053f187ce9f43336e2552d8e051d37897cf",
+      "matches_final_export_font": true
+    }
+  },
+  "new_content_symbol_fallback": {
+    "family": "Lucida Grande",
+    "characters": "five U+2192 right arrows only",
+    "PDF_pages": {
+      "5": 4,
+      "8": 1
+    },
+    "body_letters_or_digits": 0,
+    "receipt": "reports/final_v6/track_b_symbol_fallback.json"
+  }
+}

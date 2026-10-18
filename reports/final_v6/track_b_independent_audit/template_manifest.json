@@ -1,0 +1,631 @@
+{
+  "template_path": "docs/template/aibc_template.pptx",
+  "sha256": "29923ab726aa1382946c70ff527c769f0b9e95a55e889f2e01e7ad62641ea629",
+  "parts": {
+    "ppt/theme/theme1.xml": "b39f0976c9654dec98415a7c744a075ad0ceae88eee6f13d9ca624f3815b75e3",
+    "ppt/theme/theme2.xml": "528b7c8f48252376fcb7f100455962d47d5d8bc8bc4a0b60f9152b5bbd0221c9",
+    "ppt/slideLayouts/slideLayout1.xml": "ef9e0cbe7d1d9c3747da40fbc906ea7a19b1b6856cb81ec387c8db6db2486539",
+    "ppt/slideLayouts/_rels/slideLayout1.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout2.xml": "7587835d06b1804f2d88260c334886f19be4e5135ab5f1db974b8d46a191123a",
+    "ppt/slideLayouts/_rels/slideLayout2.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout3.xml": "78878be04f8b6c00b804e23a8bb7cb952e4e701645964cf23558cb41a726bcd9",
+    "ppt/slideLayouts/_rels/slideLayout3.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout4.xml": "00843640f7d997d299121bf1b2b67aaa9d435d40e379322c4df625a994821f4e",
+    "ppt/slideLayouts/_rels/slideLayout4.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout5.xml": "8b7034f1b7ba9b343666b2f95ab163d75da9a098b55c68e5f0302e707fcc48c0",
+    "ppt/slideLayouts/_rels/slideLayout5.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout6.xml": "7eb96b58a4f4ed86e2903dc0889497b8231c3f9103a1b3e18bb4f8304975e456",
+    "ppt/slideLayouts/_rels/slideLayout6.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout7.xml": "40c0a47ece3399a0ed85c9881ad9b5325afa8b719803786e53d8cf51faa93f3d",
+    "ppt/slideLayouts/_rels/slideLayout7.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout8.xml": "2ee2371c1e20e999fe7ba54b5b2078c4b50e75ab59f25747b3284d2fb7479f7f",
+    "ppt/slideLayouts/_rels/slideLayout8.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout9.xml": "739fc11252366cc3368da05553027589792871f1e8f1ff265354295764a8140f",
+    "ppt/slideLayouts/_rels/slideLayout9.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout10.xml": "481ac34220b3de0e0f3555f373ea2d96b0317b1b5a9cfddc66a53a0f0b07c310",
+    "ppt/slideLayouts/_rels/slideLayout10.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideLayouts/slideLayout11.xml": "26ac5aed0efc99a1112a3762364b9dc609a79d52827d87f0a615f9932c25e8e5",
+    "ppt/slideLayouts/_rels/slideLayout11.xml.rels": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140",
+    "ppt/slideMasters/slideMaster1.xml": "aa1faa2698cec70002ff6aa7c4a5f0ae93b9d7a47aa370f6cb82ff64443ffb1c",
+    "ppt/slideMasters/_rels/slideMaster1.xml.rels": "1cd2f45ca2c9e7a802cb2391fb55f3d30c1d8124ae8e2d0ed503d03140d487e1"
+  },
+  "slides": [
+    {
+      "part": "ppt/slides/slide1.xml",
+      "text": "Team Details\nTeam name: \nTeam leader name: \nProblem Statement: ",
+      "shapes": [
+        {
+          "id": "54",
+          "name": "Google Shape;54;p13",
+          "text": "Team Details\nTeam name: \nTeam leader name: \nProblem Statement: ",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"146600\" y=\"2902694\"/><a:ext cx=\"8760000\" cy=\"2003700\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "2100",
+            "1800",
+            "1800",
+            "1800"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide2.xml",
+      "text": "Note:\n Please download this template to make your edits and submit the final version.\nTo download, go to File > Download > Microsoft PowerPoint (.PPTX). Kindly refrain from sending edit requests.",
+      "shapes": [
+        {
+          "id": "62",
+          "name": "Google Shape;62;p14",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"9144000\" cy=\"5143500\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "63",
+          "name": "Google Shape;63;p14",
+          "text": "Note:\n Please download this template to make your edits and submit the final version.\nTo download, go to File > Download > Microsoft PowerPoint (.PPTX). Kindly refrain from sending edit requests.",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"5092475\" y=\"1968750\"/><a:ext cx=\"3311400\" cy=\"1206000\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex"
+          ],
+          "sizes": [
+            "1100",
+            "1100",
+            "1100",
+            "1100",
+            "1100"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide3.xml",
+      "text": "Brief about the idea",
+      "shapes": [
+        {
+          "id": "70",
+          "name": "Google Shape;70;p15",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "71",
+          "name": "Google Shape;71;p15",
+          "text": "Brief about the idea",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide4.xml",
+      "text": "Opportunities\nHow different is it from any of the other existing ideas?\nHow will it be able to solve the problem?\nUSP of the proposed solution",
+      "shapes": [
+        {
+          "id": "78",
+          "name": "Google Shape;78;p16",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "79",
+          "name": "Google Shape;79;p16",
+          "text": "Opportunities\nHow different is it from any of the other existing ideas?\nHow will it be able to solve the problem?\nUSP of the proposed solution",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"1366200\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600",
+            "1600",
+            "1300",
+            "1300",
+            "1300"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "text": "List of features offered by the solution",
+      "shapes": [
+        {
+          "id": "86",
+          "name": "Google Shape;86;p17",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "87",
+          "name": "Google Shape;87;p17",
+          "text": "List of features offered by the solution",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide6.xml",
+      "text": "Process flow diagram or Use-case diagram",
+      "shapes": [
+        {
+          "id": "94",
+          "name": "Google Shape;94;p18",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "95",
+          "name": "Google Shape;95;p18",
+          "text": "Process flow diagram or Use-case diagram",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide7.xml",
+      "text": "Wireframes/Mock diagrams of the proposed solution (optional)",
+      "shapes": [
+        {
+          "id": "102",
+          "name": "Google Shape;102;p19",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "103",
+          "name": "Google Shape;103;p19",
+          "text": "Wireframes/Mock diagrams of the proposed solution (optional)",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide8.xml",
+      "text": "Architecture diagram of the proposed solution",
+      "shapes": [
+        {
+          "id": "110",
+          "name": "Google Shape;110;p20",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "111",
+          "name": "Google Shape;111;p20",
+          "text": "Architecture diagram of the proposed solution",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide9.xml",
+      "text": "Technologies to be used in the solution",
+      "shapes": [
+        {
+          "id": "118",
+          "name": "Google Shape;118;p21",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "119",
+          "name": "Google Shape;119;p21",
+          "text": "Technologies to be used in the solution",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide10.xml",
+      "text": "Estimated implementation cost (optional)",
+      "shapes": [
+        {
+          "id": "126",
+          "name": "Google Shape;126;p22",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "127",
+          "name": "Google Shape;127;p22",
+          "text": "Estimated implementation cost (optional)",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide11.xml",
+      "text": "Snapshots of the prototype",
+      "shapes": [
+        {
+          "id": "134",
+          "name": "Google Shape;134;p23",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "135",
+          "name": "Google Shape;135;p23",
+          "text": "Snapshots of the prototype",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide12.xml",
+      "text": "Prototype Performance report/Benchmarking",
+      "shapes": [
+        {
+          "id": "142",
+          "name": "Google Shape;142;p24",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "143",
+          "name": "Google Shape;143;p24",
+          "text": "Prototype Performance report/Benchmarking",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide13.xml",
+      "text": "Additional Details/Future Development (if any)",
+      "shapes": [
+        {
+          "id": "150",
+          "name": "Google Shape;150;p25",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "151",
+          "name": "Google Shape;151;p25",
+          "text": "Additional Details/Future Development (if any)",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"561900\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide14.xml",
+      "text": "Provide links to your:\nGitHub Public Repository\nDemo Video Link (3 Minutes)\nFinal Product Link",
+      "shapes": [
+        {
+          "id": "158",
+          "name": "Google Shape;158;p26",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        },
+        {
+          "id": "159",
+          "name": "Google Shape;159;p26",
+          "text": "Provide links to your:\nGitHub Public Repository\nDemo Video Link (3 Minutes)\nFinal Product Link",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"265350\" y=\"663825\"/><a:ext cx=\"8943000\" cy=\"1333800\"/></a:xfrm>",
+          "fonts": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "sizes": [
+            "1600"
+          ]
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide15.xml",
+      "text": "",
+      "shapes": [
+        {
+          "id": "166",
+          "name": "Google Shape;166;p27",
+          "text": "",
+          "xfrm": "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:c=\"http://schemas.openxmlformats.org/drawingml/2006/chart\" xmlns:dgm=\"http://schemas.openxmlformats.org/drawingml/2006/diagram\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:pvml=\"urn:schemas-microsoft-com:office:powerpoint\" xmlns:com=\"http://schemas.openxmlformats.org/drawingml/2006/compatibility\" xmlns:p14=\"http://schemas.microsoft.com/office/powerpoint/2010/main\" xmlns:p15=\"http://schemas.microsoft.com/office/powerpoint/2012/main\" xmlns:ahyp=\"http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor\"><a:off x=\"-29250\" y=\"5071875\"/><a:ext cx=\"9173400\" cy=\"97800\"/></a:xfrm>",
+          "fonts": [],
+          "sizes": []
+        }
+      ]
+    },
+    {
+      "part": "ppt/slides/slide16.xml",
+      "text": "",
+      "shapes": []
+    }
+  ],
+  "media": [
+    {
+      "part": "ppt/media/image1.png",
+      "sha256": "e387cc0bab211aec3cd50cccb0e41741a38302e29072fb92012f71c6ccb2de68",
+      "bytes": 65165,
+      "ocr_text": "Submission Template | Al Builder Cup @) +x\n\nio)\no\n\nit\n\n\u00a9%Yb &\n\n\\\n\nEdit View Insert\n\nNew\nOpen\nimport slides\n\nMake 2 copy\n\nShare\nEmail\nDownload\nApprovals\nTurn into video\n\nRecord video\n\nRename\nMove\n\nAdd a shortcut to Drive\n\na\n\nFormat Slide Arrange Tools Extensions Help\n\n102% ~ | RT N+\n\nMicrosoft PowerPoint (.pptx)\nODP document (.odp)\n\nPDF document (.pdf)\n\nPlain text (.txt)\n\nJPEG image (jpg, current slide)\nPNG image (.png, current slide)\n\nScalable Vector Graphics (.svg, current slide)",
+      "ocr_numeric_tokens": [
+        "2",
+        "102%"
+      ],
+      "visual_numeric_classification": "Template-only Google Slides download-instruction screenshot. Visible UI includes 102% zoom, slide-thumbnail indices 1/2/3/4, ruler digits 1/2 and Ctrl+O shortcut. None is a Preflight claim."
+    },
+    {
+      "part": "ppt/media/image4.png",
+      "sha256": "25b5b25e6506e1d715643a38a82181f0ef480e35f252027761e709230fcca6da",
+      "bytes": 209476,
+      "ocr_text": "Google Cloud ii2S\nAl\u00e9Builder 3\nCUP Bein ee,",
+      "ocr_numeric_tokens": [
+        "3"
+      ],
+      "visual_numeric_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    },
+    {
+      "part": "ppt/media/image5.png",
+      "sha256": "125250c8cd8ee14c7c295c671d598b7f61a9b2ddfca3d6d412919451d67fac8b",
+      "bytes": 186669,
+      "ocr_text": "Google Cloud fi2S\n\nAsBuilder Thank you\n\nOxy",
+      "ocr_numeric_tokens": [],
+      "visual_numeric_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    },
+    {
+      "part": "ppt/media/image3.png",
+      "sha256": "1c933514ae7f45c41aaf876bd2bd523f08c6d7d36c4f3427d5f5bda5e2e3644c",
+      "bytes": 176294,
+      "ocr_text": "Google Cloud \u00a7 ii2S\nAlBuilder >",
+      "ocr_numeric_tokens": [],
+      "visual_numeric_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    },
+    {
+      "part": "ppt/media/image2.png",
+      "sha256": "fe56749b9b507a95656da3b3e0a84cbc6417e540ddab4c220b7cfec5cbfdf585",
+      "bytes": 8554,
+      "ocr_text": "Google Cloud ABuilder Cup n2s",
+      "ocr_numeric_tokens": [],
+      "visual_numeric_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    }
+  ],
+  "slide_size_emu": {
+    "cy": "5143500",
+    "cx": "9144000"
+  }
+}

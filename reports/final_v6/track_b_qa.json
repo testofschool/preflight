@@ -1,0 +1,121 @@
+{
+  "status": "PASS; video URL pending",
+  "pdf": {
+    "path": "docs/Preflight_pitch_deck.pdf",
+    "bytes": 660305,
+    "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+    "pages": 11,
+    "max_bytes": 5000000,
+    "within_size_limit": true
+  },
+  "pptx": {
+    "path": "docs/Preflight_pitch_deck.pptx",
+    "bytes": 1979965,
+    "sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a"
+  },
+  "renders": {
+    "dpi": 50,
+    "count": 11,
+    "dimensions": [
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ],
+      [
+        500,
+        282
+      ]
+    ],
+    "paths": [
+      "docs/deck_check/page-01.png",
+      "docs/deck_check/page-02.png",
+      "docs/deck_check/page-03.png",
+      "docs/deck_check/page-04.png",
+      "docs/deck_check/page-05.png",
+      "docs/deck_check/page-06.png",
+      "docs/deck_check/page-07.png",
+      "docs/deck_check/page-08.png",
+      "docs/deck_check/page-09.png",
+      "docs/deck_check/page-10.png",
+      "docs/deck_check/page-11.png"
+    ]
+  },
+  "visual_review": "All 11 pages inspected at120 dpi; page8 after final crop repair re-inspected. No text cutoff, overflow or broken diagram observed. Final contact sheet regenerated.",
+  "numbers": {
+    "unique": 22,
+    "unsupported": [],
+    "author_parser_unique": 22,
+    "independent_audit_qualification": {
+      "independent_native_digit_occurrences": 33,
+      "independent_unique_native_tokens": 24,
+      "exceptions": [
+        {
+          "token": "3",
+          "source": "original official-template 3 Minutes field label",
+          "classification": "template duration quantity; not an authored Preflight result"
+        },
+        {
+          "token": "45",
+          "source": "required exact live URL identifier",
+          "classification": "identifier, not quantity"
+        },
+        {
+          "token": "2",
+          "source": "unchanged H2S logo raster image",
+          "classification": "brand proper-name digit, visual/OCR inventory separate from native-text count"
+        }
+      ],
+      "unsupported_newly_authored_Preflight_quantities_after_classification": 0,
+      "not_a_claim_that_every_visible_numeric_token_is_a_v5_quantity": true,
+      "independent_report": "reports/final_v6/track_b_independent_audit/REPORT.md"
+    }
+  },
+  "native_architecture": {
+    "template_slide": 8,
+    "PDF_page": 6,
+    "boxes": 6,
+    "connectors": 5,
+    "all_editable": true
+  },
+  "video_link_field": "Pending public upload",
+  "optional_final_check_still": "Not added: actual before/after saved stills fill available process-slide body; optional final-check image only if space condition not met.",
+  "PDF_export_command": "soffice '-env:UserInstallation=file:///tmp/preflight-v6-lo-export' --headless --convert-to pdf --outdir docs docs/Preflight_pitch_deck.pptx",
+  "source_template_unchanged": true,
+  "sources_in_speaker_notes": "Supplied v5 row mapping; known README quote/source URLs; known live/repo URLs from docs/submission-notes.md. Notes-only additions/correction, PDF unchanged."
+}

@@ -1,0 +1,24 @@
+{
+  "received_date_kst": "2026-10-18",
+  "human_resolution": "Option 2: the new 3\u20134 minute version becomes the submission video. Preserve 2:52 backup unchanged.",
+  "support_evidence": "Human reports written Hack2skill support answer on Oct16: The required demo video should be 3\u20134 minutes long. This reply was supplied by the human; email itself was not read in this turn.",
+  "current_form_independently_observed": "3 to 4 minute / Demo Video Link (3-4 minutes)",
+  "new_target_seconds": 200,
+  "acceptable_seconds": [
+    190,
+    215
+  ],
+  "new_source": "Real additional production footage only: own prompt, live Gemini rewrite, limited-preview message, score explanation.",
+  "output": "demo/preflight_demo_submission_3m.mp4",
+  "image_model_calls_allowed": 0,
+  "runtime_changes_allowed": false,
+  "backup_sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+  "timing_resolution": "Human confirmed preserve scene order; insert after saved-still beat about1:20, add1:40 new-segment check;2:20 is an extra clip-review check, not new-segment placement requirement.",
+  "required_frame_seconds": [
+    5,
+    70,
+    100,
+    140,
+    180
+  ]
+}

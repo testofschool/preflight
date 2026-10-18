@@ -17,3 +17,11 @@ logs/server.log
 # Raw image probes and advisory locks remain local; numerical receipts are committed.
 /reports/preview_v4/probe_images/
 /reports/preview_v4/*.lock
+
+# Local presentation exports, font experiments, and dependency links.
+/reports/final_v6/track_b_build/
+
+# New submission recording sources and generated caption intermediates stay local.
+/demo/submission_assets_v6/
+/demo/submission_supplement_v6/*.mp4
+/demo/submission_supplement_v6/browser/

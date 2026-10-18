@@ -1,0 +1,156 @@
+{
+  "checked_at_utc": "2026-10-18T08:50:54.616216+00:00",
+  "baseline": "a993aa5c4986b564cb9d379d657112d5ad7494a0",
+  "runtime_files": 25,
+  "all_unchanged": true,
+  "files": [
+    {
+      "path": "Dockerfile",
+      "sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+      "matches_start": true
+    },
+    {
+      "path": "app.py",
+      "sha256": "6a4049031c7d4d5e98ccb0428a76235acd9e97275b73ff1431a8ec3adda87612",
+      "matches_start": true
+    },
+    {
+      "path": "artifacts/engine.json",
+      "sha256": "86c4d83e322f245e49a6955fbf5ff9ec1c42878496df2569d0026fbb3862db4c",
+      "matches_start": true
+    },
+    {
+      "path": "artifacts/prompt_vectors.npz",
+      "sha256": "b065286f75281a534b03f7128f358f7e8c117483fd3b4c38257e3135c163df93",
+      "matches_start": true
+    },
+    {
+      "path": "artifacts/vectorizer.joblib",
+      "sha256": "96991f7877dd73c7591ab4414ae25bef5c1fbd1923b16d0c6f59149f9a5eaf6e",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/__init__.py",
+      "sha256": "1924d6e58e04bb9bf2b24da901655c180fca7c3bfd5ada6a450219304a6601bd",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/postcheck.py",
+      "sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/preview.py",
+      "sha256": "148db9a788a20574a03d2cd8bdda9fa648062f53fb58d0a8c063a7bc5f27aeb4",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/rewrite_agent.py",
+      "sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/sample_rewrites.json",
+      "sha256": "01459f9113276e7de4fa0ca9022b642b945aa0784fe57431d74491b0e1b54cf8",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/sample_rewrites.py",
+      "sha256": "3a963aa6a10cd841397b3c6b2fe6a8231f4db54522106e1195e90c93f530be80",
+      "matches_start": true
+    },
+    {
+      "path": "cloud/store.py",
+      "sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+      "matches_start": true
+    },
+    {
+      "path": "preflight_core/__init__.py",
+      "sha256": "1a8a8528e1c31eff6855aff58f5d95cc522f0c6d4202edd52cad1c041e36dc74",
+      "matches_start": true
+    },
+    {
+      "path": "preflight_core/dataset.py",
+      "sha256": "8fc6c7fd8241aed00583dfcb0da43c3fed3f4dfe4a4a70cf6c881752bb87378c",
+      "matches_start": true
+    },
+    {
+      "path": "preflight_core/engine.py",
+      "sha256": "02f8e06159f10b5b737a7134699c14c8555dd5f147e5256e3234fdf0610945a2",
+      "matches_start": true
+    },
+    {
+      "path": "preflight_core/irt.py",
+      "sha256": "9e0fa2cb2d09d45c8f8dcfab128ff7af3999b538e98f01d272575ded7e49475b",
+      "matches_start": true
+    },
+    {
+      "path": "preflight_core/provenance.py",
+      "sha256": "2197142586a660c52955a69b4a7218874365a20ef5f6a666bda9b5cc4feeef47",
+      "matches_start": true
+    },
+    {
+      "path": "requirements-cloud.lock",
+      "sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+      "matches_start": true
+    },
+    {
+      "path": "static/app.js",
+      "sha256": "398424c91ceaf32f4144a96c1a93877d759ffaba9d72adaeb167715136721496",
+      "matches_start": true
+    },
+    {
+      "path": "static/architecture.html",
+      "sha256": "8ea4e0e9bd8128f75179039deea646afcc2d4609ae4aa47444729603d1c5048e",
+      "matches_start": true
+    },
+    {
+      "path": "static/architecture.js",
+      "sha256": "b5e9bfbc02ccaa70ba30d2622b935ad79bd08815b952f5c5d711cd15356efb2d",
+      "matches_start": true
+    },
+    {
+      "path": "static/index.html",
+      "sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+      "matches_start": true
+    },
+    {
+      "path": "static/postcheck.js",
+      "sha256": "5806f7349f9e5e394f3959c5e882030569623d9563a6057ae5dab9c6150fc0af",
+      "matches_start": true
+    },
+    {
+      "path": "static/status.js",
+      "sha256": "a7d439385363778389fe1aaced1c44fb34a0f2fd5c3e8e8c9b0a9fd32019c997",
+      "matches_start": true
+    },
+    {
+      "path": "static/styles.css",
+      "sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+      "matches_start": true
+    }
+  ],
+  "tags": {
+    "aibc-2026-submission": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+    "aibc-2026-submission-v2": "bdcdecdf6db6b0c2bebea8a35ed350de5f005940",
+    "aibc-2026-submission-v3": "d638c0690cb17d60316922eb30a14f150fe7c23c"
+  },
+  "tags_unchanged": true,
+  "backup_videos": [
+    {
+      "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_final.mp4",
+      "bytes": 8109690,
+      "sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+      "matches_backup": true
+    },
+    {
+      "path": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_2m52s.mp4",
+      "bytes": 8109690,
+      "sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+      "matches_backup": true
+    }
+  ],
+  "script_record_demo_sha256": "77d33e48d8763c3d5199f5545d4716b36b5b75e6b853d3fc8cc55b708ce772a8",
+  "script_record_demo_matches_start": true,
+  "check_timing": "During new capture; final scope check follows export."
+}

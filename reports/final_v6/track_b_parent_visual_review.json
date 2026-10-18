@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-10-18T08:49:43.423947+00:00",
+  "pdf_sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+  "review_method": "Parent visually inspected contact sheet and each of the 11 final 50-dpi page images; independent auditor inspected every page at 120 dpi.",
+  "pages": [
+    {
+      "path": "docs/deck_check/page-01.png",
+      "sha256": "0f7771c24bac512488f5499c180a5947f1b6d594ccb251f8ea8f7fad1d520d3c",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-02.png",
+      "sha256": "6971edcb180b93df6fcbc6ccdd4a6c704f2a8aa189d62714e4b668566c3f0c87",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-03.png",
+      "sha256": "43c02fece383e18542a8f9ae81bc79a3951f645f1bb8b5240cc12a44f64b50bd",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-04.png",
+      "sha256": "bdb4ab5d28f0be179d794acafbb5632261c56ee532a1d4057a17e9ba3221d817",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-05.png",
+      "sha256": "09d007b850930a26b1fc597eca020597641797d4de94c51ba0d1f5a09574c077",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-06.png",
+      "sha256": "ddf7dcd6ce6529b510e87619309b2c24298e4c4e75497a57d7dbfb7dcdbf1c4e",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-07.png",
+      "sha256": "d2d6650f0c8f76bdc7a55eda232be4c3ec00a7631514a88395fe68301c63d60e",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-08.png",
+      "sha256": "35406c07ec07c58132942e942ab016a05bf72b59e7d23148f75536317fbc23da",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-09.png",
+      "sha256": "e1cc0a3cc3401ab3955227045a66a30b3accc3124897e76e683b4bb9ea2c8ccc",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-10.png",
+      "sha256": "1499847dff41f56f4d08c3f0aa518a2e7fb79e16f00c8ebfa49a3b9b6f03fda8",
+      "parent_visually_inspected": true
+    },
+    {
+      "path": "docs/deck_check/page-11.png",
+      "sha256": "8b3ec8f979ab183f1300d4d846a1ddb380d865e1eb4faedf8a36abc44c25c224",
+      "parent_visually_inspected": true
+    }
+  ],
+  "observations": "All required sections, complete quotes, actual saved stills, readable screenshot text and editable architecture represented. No visible clipping, missing field, tofu or unintended overlap observed. Link page explicitly pending public upload.",
+  "submission_ready": false,
+  "pending": "Human public YouTube URL and final submission-video review."
+}

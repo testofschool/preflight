@@ -1,0 +1,192 @@
+{
+  "status": "PASS for authored Preflight figures with disclosed template/URL/logo exceptions",
+  "method": "pdftotext -layout, numeric token comparison against exact Track B table only",
+  "unique_pdf_numeric_tokens": 22,
+  "tokens": {
+    "$0.00": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        8,
+        9
+      ]
+    },
+    "$0.40": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        4
+      ]
+    },
+    "$3.20": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        4
+      ]
+    },
+    "0": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ]
+    },
+    "0.67": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        9
+      ]
+    },
+    "1,911": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        2,
+        4,
+        6,
+        7
+      ]
+    },
+    "1.1/5": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        3
+      ]
+    },
+    "15.8%": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        8
+      ]
+    },
+    "2.5": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        3
+      ]
+    },
+    "2024": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        2
+      ]
+    },
+    "2026": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        2,
+        3
+      ]
+    },
+    "21%": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        2
+      ]
+    },
+    "219": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        3
+      ]
+    },
+    "3": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        3,
+        4,
+        6,
+        7,
+        11
+      ]
+    },
+    "3.1": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        4
+      ]
+    },
+    "3.5": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    "340": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        3
+      ]
+    },
+    "46.8%": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        8
+      ]
+    },
+    "5": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        3,
+        6,
+        7,
+        8,
+        9,
+        11
+      ]
+    },
+    "60": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        9
+      ]
+    },
+    "8": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        4,
+        8,
+        9
+      ]
+    },
+    "8/20": {
+      "in_exact_v5_table": true,
+      "pdf_pages": [
+        9
+      ]
+    }
+  },
+  "unsupported_numeric_tokens": [],
+  "exact_full_quote_checks": {
+    "you still burn credits on the failed attempt": true,
+    "Only one of the generations was usable for my purposes": true,
+    "I'm tired of wasting valuable credits on bad footage, I simply can't use": true,
+    "I recommend a lo-res preview render before having to spend actual credits": true
+  },
+  "template_origin_label": "Demo Video Link (3 Minutes) is retained template label; actual video duration is not claimed by deck.",
+  "independent_audit_qualification": {
+    "independent_native_digit_occurrences": 33,
+    "independent_unique_native_tokens": 24,
+    "exceptions": [
+      {
+        "token": "3",
+        "source": "original official-template 3 Minutes field label",
+        "classification": "template duration quantity; not an authored Preflight result"
+      },
+      {
+        "token": "45",
+        "source": "required exact live URL identifier",
+        "classification": "identifier, not quantity"
+      },
+      {
+        "token": "2",
+        "source": "unchanged H2S logo raster image",
+        "classification": "brand proper-name digit, visual/OCR inventory separate from native-text count"
+      }
+    ],
+    "unsupported_newly_authored_Preflight_quantities_after_classification": 0,
+    "not_a_claim_that_every_visible_numeric_token_is_a_v5_quantity": true,
+    "independent_report": "reports/final_v6/track_b_independent_audit/REPORT.md"
+  }
+}

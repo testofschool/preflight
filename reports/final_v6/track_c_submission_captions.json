@@ -1,0 +1,474 @@
+[
+  {
+    "start_frame": 0,
+    "end_frame": 120,
+    "start": 0,
+    "end": 4,
+    "text": "People who generate AI video pay per attempt. Here is what they say.",
+    "lines": [
+      "People who generate AI video pay per attempt. Here is what they say."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_00.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 120,
+    "end_frame": 210,
+    "start": 4,
+    "end": 7,
+    "text": "\"You still burn credits on the failed attempt.\"",
+    "lines": [
+      "\"You still burn credits on the failed attempt.\""
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_01.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 210,
+    "end_frame": 300,
+    "start": 7,
+    "end": 10,
+    "text": "\"Only one of the generations was usable.\"",
+    "lines": [
+      "\"Only one of the generations was usable.\""
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_02.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 300,
+    "end_frame": 390,
+    "start": 10,
+    "end": 13,
+    "text": "",
+    "lines": [],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_03.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 390,
+    "end_frame": 480,
+    "start": 13,
+    "end": 16,
+    "text": "\"I recommend a lo-res preview before having to spend actual credits.\"",
+    "lines": [
+      "\"I recommend a lo-res preview before having to spend actual credits.\""
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_04.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 480,
+    "end_frame": 660,
+    "start": 16.0,
+    "end": 22.0,
+    "text": "Preflight is that step before you pay.",
+    "lines": [
+      "Preflight is that step before you pay."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_05.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 660,
+    "end_frame": 728,
+    "start": 22.0,
+    "end": 24.266666666666666,
+    "text": "Paste a prompt.",
+    "lines": [
+      "Paste a prompt."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_06.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 728,
+    "end_frame": 978,
+    "start": 24.266666666666666,
+    "end": 32.6,
+    "text": "Preflight compares it with 1,911 human votes on earlier AI videos",
+    "lines": [
+      "Preflight compares it with 1,911 human votes on earlier AI videos"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_07.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 978,
+    "end_frame": 1250,
+    "start": 32.6,
+    "end": 41.666666666666664,
+    "text": "and returns a risk estimate, with the closest past prompts as evidence.",
+    "lines": [
+      "and returns a risk estimate, with the closest past prompts as evidence."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_08.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1250,
+    "end_frame": 1500,
+    "start": 41.666666666666664,
+    "end": 50.0,
+    "text": "For \"a spoon and a laptop\", the estimate is 46.8 percent.",
+    "lines": [
+      "For \"a spoon and a laptop\", the estimate is 46.8 percent."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_09.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1500,
+    "end_frame": 1600,
+    "start": 50.0,
+    "end": 53.333333333333336,
+    "text": "Then a Google ADK agent on Gemini rewrites the prompt",
+    "lines": [
+      "Then a Google ADK agent on Gemini rewrites the prompt"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_10.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1600,
+    "end_frame": 1700,
+    "start": 53.333333333333336,
+    "end": 56.666666666666664,
+    "text": "and keeps the rewrite only if the estimated risk drops.",
+    "lines": [
+      "and keeps the rewrite only if the estimated risk drops."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_11.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1700,
+    "end_frame": 1800,
+    "start": 56.666666666666664,
+    "end": 60.0,
+    "text": "Here it drops to 15.8 percent. Copy it and go.",
+    "lines": [
+      "Here it drops to 15.8 percent. Copy it and go."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_12.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1800,
+    "end_frame": 1892,
+    "start": 60.0,
+    "end": 63.06666666666667,
+    "text": "Before paying about three dollars for an eight-second video,",
+    "lines": [
+      "Before paying about three dollars for an eight-second video,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_13.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1892,
+    "end_frame": 1983,
+    "start": 63.06666666666667,
+    "end": 66.1,
+    "text": "you can look at a still of the scene.",
+    "lines": [
+      "you can look at a still of the scene."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_14.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 1983,
+    "end_frame": 2075,
+    "start": 66.1,
+    "end": 69.16666666666667,
+    "text": "For judging, the five sample prompts use saved stills:",
+    "lines": [
+      "For judging, the five sample prompts use saved stills:"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_15.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 2075,
+    "end_frame": 2176,
+    "start": 69.16666666666667,
+    "end": 72.53333333333333,
+    "text": "zero model calls, zero cost, and the label says so.",
+    "lines": [
+      "zero model calls, zero cost, and the label says so."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_16.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 2176,
+    "end_frame": 2298,
+    "start": 72.53333333333333,
+    "end": 76.6,
+    "text": "In our tests, live image generation failed too often under shared capacity,",
+    "lines": [
+      "In our tests, live image generation failed too often under shared capacity,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_17.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 2298,
+    "end_frame": 2400,
+    "start": 76.6,
+    "end": 80.0,
+    "text": "so we did not put it in front of you.",
+    "lines": [
+      "so we did not put it in front of you."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_18.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 2400,
+    "end_frame": 3042,
+    "start": 80.0,
+    "end": 101.4,
+    "source_start_frame": 0,
+    "source_end_frame": 642,
+    "text": "Your own prompt gets a live Gemini rewrite too.",
+    "font_px": 43,
+    "lines": [
+      "Your own prompt gets a live Gemini rewrite too."
+    ],
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_assets_v6/caption_new_0.png",
+    "source": "new real production capture"
+  },
+  {
+    "start_frame": 3042,
+    "end_frame": 3264,
+    "start": 101.4,
+    "end": 108.8,
+    "source_start_frame": 642,
+    "source_end_frame": 864,
+    "text": "Live stills are limited to the samples during judging, and the page says so.",
+    "font_px": 43,
+    "lines": [
+      "Live stills are limited to the samples during judging, and the page says so."
+    ],
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_assets_v6/caption_new_1.png",
+    "source": "new real production capture"
+  },
+  {
+    "start_frame": 3264,
+    "end_frame": 3487,
+    "start": 108.8,
+    "end": 116.23333333333333,
+    "source_start_frame": 864,
+    "source_end_frame": 1087,
+    "text": "Every number comes with what it is and what it is not.",
+    "font_px": 43,
+    "lines": [
+      "Every number comes with what it is and what it is not."
+    ],
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/submission_assets_v6/caption_new_2.png",
+    "source": "new real production capture"
+  },
+  {
+    "start_frame": 3487,
+    "end_frame": 3657,
+    "start": 116.23333333333333,
+    "end": 121.9,
+    "text": "After you generate, upload the clip.",
+    "lines": [
+      "After you generate, upload the clip."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_19.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 3657,
+    "end_frame": 3884,
+    "start": 121.9,
+    "end": 129.46666666666667,
+    "text": "Gemini takes a second look at sampled frames,",
+    "lines": [
+      "Gemini takes a second look at sampled frames,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_20.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 3884,
+    "end_frame": 4253,
+    "start": 129.46666666666667,
+    "end": 141.76666666666668,
+    "text": "and its verdict is stored as separate feedback next to the human votes.",
+    "lines": [
+      "and its verdict is stored as separate feedback next to the human votes."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_21.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 4253,
+    "end_frame": 4537,
+    "start": 141.76666666666668,
+    "end": 151.23333333333332,
+    "text": "It is a second pair of eyes, not a verdict.",
+    "lines": [
+      "It is a second pair of eyes, not a verdict."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_22.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 4537,
+    "end_frame": 4726,
+    "start": 151.23333333333332,
+    "end": 157.53333333333333,
+    "text": "Everything runs on Google Cloud: Cloud Run, Firestore,",
+    "lines": [
+      "Everything runs on Google Cloud: Cloud Run, Firestore,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_23.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 4726,
+    "end_frame": 4987,
+    "start": 157.53333333333333,
+    "end": 166.23333333333332,
+    "text": "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions.",
+    "lines": [
+      "Gemini on Vertex AI, an ADK agent with Agent Platform Sessions."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_24.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 4987,
+    "end_frame": 5155,
+    "start": 166.23333333333332,
+    "end": 171.83333333333334,
+    "text": "The architecture: one prompt, a traceable check,",
+    "lines": [
+      "The architecture: one prompt, a traceable check,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_25.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 5155,
+    "end_frame": 5347,
+    "start": 171.83333333333334,
+    "end": 178.23333333333332,
+    "text": "tools for evidence and difficulty, Firestore as memory.",
+    "lines": [
+      "tools for evidence and difficulty, Firestore as memory."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_26.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 5347,
+    "end_frame": 5437,
+    "start": 178.23333333333332,
+    "end": 181.23333333333332,
+    "text": "The limits are on the page.",
+    "lines": [
+      "The limits are on the page."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_27.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 5437,
+    "end_frame": 5587,
+    "start": 181.23333333333332,
+    "end": 186.23333333333332,
+    "text": "The risk score is a historical signal, held-out AUC 0.67,",
+    "lines": [
+      "The risk score is a historical signal, held-out AUC 0.67,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_28.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 5587,
+    "end_frame": 5677,
+    "start": 186.23333333333332,
+    "end": 189.23333333333332,
+    "text": "not a promise about today's models.",
+    "lines": [
+      "not a promise about today's models."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_29.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 5677,
+    "end_frame": 5767,
+    "start": 189.23333333333332,
+    "end": 192.23333333333332,
+    "text": "Clip-review accuracy is not measured yet.",
+    "lines": [
+      "Clip-review accuracy is not measured yet."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_30.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 5767,
+    "end_frame": 6045,
+    "start": 192.23333333333332,
+    "end": 201.5,
+    "text": "Built in Seoul by a producer who paid for these failures,",
+    "lines": [
+      "Built in Seoul by a producer who paid for these failures,"
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_31.png",
+    "source": "original v5 burned captions"
+  },
+  {
+    "start_frame": 6045,
+    "end_frame": 6247,
+    "start": 201.5,
+    "end": 208.23333333333332,
+    "text": "tested from India. Preflight: know before you pay.",
+    "lines": [
+      "tested from India. Preflight: know before you pay."
+    ],
+    "font_px": 43,
+    "asset": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/final_assets/caption_32.png",
+    "source": "original v5 burned captions"
+  }
+]

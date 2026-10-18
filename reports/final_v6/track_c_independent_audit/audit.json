@@ -1,0 +1,286 @@
+{
+  "auditor": "Independent deck agent, read-only video audit",
+  "checked_at_utc": "2026-10-18T08:53:00.523891+00:00",
+  "native": {
+    "duration_seconds": 208.233333,
+    "within_human_accepted_190_to_215": true,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": "30/1",
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "frame_count": 6247,
+    "audio_stream": false,
+    "loudness_lufs": null,
+    "PASS": true
+  },
+  "identity": {
+    "final_path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/demo/preflight_demo_submission_3m.mp4",
+    "final_bytes": 11869949,
+    "final_sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+    "desktop_copy": "/Users/felix/Desktop/UPLOAD_THIS_Preflight_AIBC2026_3m28s.mp4",
+    "desktop_copy_sha256": "6ebd825cbe8cbc1810c81d9592ac4e21028340a4ed92dbafb840cd5d684703a2",
+    "desktop_copy_bytes": 11869949,
+    "copy_matches": true,
+    "backup_sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+    "backup_original_sha256_expected": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+    "backup_unchanged": true,
+    "backup_desktop_sha256": "4bbe0168a40156c06718c53df736ecd90e2314b0539629bed0cc3fa947bdda03",
+    "backup_desktop_unchanged": true
+  },
+  "full_decode": {
+    "exit_code": 0,
+    "stderr": "",
+    "PASS": true
+  },
+  "captions": {
+    "source_C2_reconstructed_exact": true,
+    "all_v5_cues_text_and_order_exact": true,
+    "old_cue_count": 33,
+    "old_active_cue_count": 32,
+    "new_cue_count": 3,
+    "new_captions": [
+      "Your own prompt gets a live Gemini rewrite too.",
+      "Live stills are limited to the samples during judging, and the page says so.",
+      "Every number comes with what it is and what it is not."
+    ],
+    "new_caption_numeric_digits": [],
+    "timeline_contiguous": true,
+    "inherited_frame_offsets_exact": true,
+    "all_active_cues_checked": 35,
+    "all_active_cues_burned_PASS": true,
+    "minimum_font_px": 43,
+    "max_lines": 1,
+    "midpoint_method": "Actual exported MP4 frame at every active cue midpoint; expected alpha-backed caption asset glyph pixels must be >95% bright and pill background median red<80.",
+    "PASS": true
+  },
+  "source_and_network_evidence": {
+    "visible_in_app_before": "NOT SHOWN",
+    "visible_in_app_after": "NOT SHOWN",
+    "status_generations_before": 0,
+    "status_generations_after": 0,
+    "status_field_hardcoded_in_source": true,
+    "is_a_cumulative_meter": false,
+    "image_model_calls_for_this_recorded_typed_preview": 0,
+    "zero_image_basis": "Recorded single non-sample /preview returned exact HTTP503 limited copy while preview_mode=samples; inspected source guard rejects it before provider.generate. This is request-path evidence, not a cumulative usage counter.",
+    "source_guard_precedes_provider": true,
+    "source_file_sha256": "6a4049031c7d4d5e98ccb0428a76235acd9e97275b73ff1431a8ec3adda87612",
+    "network": [
+      {
+        "method": "GET",
+        "path": "/api/status",
+        "status": 200,
+        "rewrite_source": null,
+        "detail": null
+      },
+      {
+        "method": "POST",
+        "path": "/preflight",
+        "status": 200,
+        "rewrite_source": "live",
+        "detail": null
+      },
+      {
+        "method": "POST",
+        "path": "/preview",
+        "status": 503,
+        "rewrite_source": null,
+        "detail": "Live stills are limited to the sample prompts during judging \u2014 shared Gemini image capacity. The risk check still works."
+      }
+    ],
+    "PASS": true
+  },
+  "preserved_beat_comparisons": [
+    {
+      "backup_seconds": 5,
+      "new_seconds": 5,
+      "mean_abs_channel_difference": 0.10343766075102881,
+      "fraction_within20_per_channel": 1.0,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 30,
+      "new_seconds": 30,
+      "mean_abs_channel_difference": 0.14159577546296295,
+      "fraction_within20_per_channel": 0.9999998392489712,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 70,
+      "new_seconds": 70,
+      "mean_abs_channel_difference": 0.18184751157407408,
+      "fraction_within20_per_channel": 0.9999996784979424,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 79.5,
+      "new_seconds": 79.5,
+      "mean_abs_channel_difference": 0.21424382716049384,
+      "fraction_within20_per_channel": 0.9999998392489712,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 80.5,
+      "new_seconds": 116.73333333333333,
+      "mean_abs_channel_difference": 0.23906201774691357,
+      "fraction_within20_per_channel": 0.9999985532407407,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 100,
+      "new_seconds": 136.23333333333335,
+      "mean_abs_channel_difference": 0.29620740097736625,
+      "fraction_within20_per_channel": 0.9999995177469135,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 130,
+      "new_seconds": 166.23333333333335,
+      "mean_abs_channel_difference": 0.026874839248971192,
+      "fraction_within20_per_channel": 0.9999937307098765,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 145,
+      "new_seconds": 181.23333333333335,
+      "mean_abs_channel_difference": 0.024083879886831274,
+      "fraction_within20_per_channel": 0.9999995177469135,
+      "PASS": true
+    },
+    {
+      "backup_seconds": 171,
+      "new_seconds": 207.23333333333335,
+      "mean_abs_channel_difference": 0.014312628600823045,
+      "fraction_within20_per_channel": 1.0,
+      "PASS": true
+    }
+  ],
+  "check_frames": [
+    {
+      "seconds": 5,
+      "path": "reports/final_v6/track_c_independent_audit/check_005s.png",
+      "sha256": "549f27c70b3787142dd3602026a5ed13970e108284a39a6581433ed7cae66950",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 70,
+      "path": "reports/final_v6/track_c_independent_audit/check_070s.png",
+      "sha256": "c8669cc0aad39016e0e5f22e2bcf47e01b35f4970f37362f516dbd7b3d004abc",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 95,
+      "path": "reports/final_v6/track_c_independent_audit/check_095s.png",
+      "sha256": "f3e8a36d58665e32719e2058c448f715bf0dcbc27cf3fef4ebc6873cfb8dd5f9",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 100,
+      "path": "reports/final_v6/track_c_independent_audit/check_100s.png",
+      "sha256": "e820136258c78fbc01a66be2e1cc2643cb515396a3ad8da2eaa52811ce83f6d3",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 102,
+      "path": "reports/final_v6/track_c_independent_audit/check_102s.png",
+      "sha256": "b14628d9d5d83c3747f696ee0561ed9f07af062ba775cfe66332b2d5396a1382",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 110,
+      "path": "reports/final_v6/track_c_independent_audit/check_110s.png",
+      "sha256": "668d861805ebb619eefdf6107500e72682e93a1e613d7676bd2258110d1a8c15",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 140,
+      "path": "reports/final_v6/track_c_independent_audit/check_140s.png",
+      "sha256": "6390eaaf6f32dcbd086476c0330560d3f2b3a2c5bfd92727f38c392af8f5efa5",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "seconds": 180,
+      "path": "reports/final_v6/track_c_independent_audit/check_180s.png",
+      "sha256": "6ab1256efc7a61e9b330cee5740d640486c44b91da10e41d46ff3acfea1a773e",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "visual_review": "PASS: all 8 independently decoded requested/action frames plus all 3 new-caption midpoint frames visually inspected. No unreadable new caption, fabricated number claim, text overflow, or introduced UI replacement observed. The 1:40 frame is new-segment action; the 1:42 frame explicitly shows the limitation. The 2:20 frame remains clip review as approved.",
+  "visual_review_PASS": true,
+  "automated_PASS": true,
+  "visual_observations": [
+    {
+      "seconds": 5,
+      "observed": "Quote intro and large burned caption readable; unchanged original beat."
+    },
+    {
+      "seconds": 70,
+      "observed": "Saved rewrite still and zero-model-call/zero-cost label visible; original caption readable."
+    },
+    {
+      "seconds": 95,
+      "observed": "Live typed-prompt rewrite visible, 13.3% original to 3.3% rewrite line. These figures belong to the distinct own prompt, not the spoon sample."
+    },
+    {
+      "seconds": 100,
+      "observed": "Within new segment; UI is moving toward preview action, own-prompt caption readable. Limited message is not yet shown at this exact frame."
+    },
+    {
+      "seconds": 102,
+      "observed": "Real red limited-preview message and matching large caption both visible, no generated image."
+    },
+    {
+      "seconds": 110,
+      "observed": "What this score is expanded; 1,911/0.67 historical-signal explanation and preview-limited message visible, large caption readable."
+    },
+    {
+      "seconds": 140,
+      "observed": "Existing clip-review result, machine-feedback separation and source synthetic-clip label visible; original caption readable."
+    },
+    {
+      "seconds": 180,
+      "observed": "Limits card, AUC 0.67, best 8/20, zero sample calls/cost, clip-review accuracy unmeasured visible; original caption readable."
+    }
+  ],
+  "supplement_source_crosscheck": {
+    "own_original_outside_complete_original_and_rewrite_sample_whitelist": true,
+    "own_rewrite_outside_complete_original_and_rewrite_sample_whitelist": true,
+    "preview_UI_payload_selection": "static/app.js241-243 selects the accepted rewrite for Preview a still; this exact non-sample rewrite is shown in captured UI. Network receipt does not log request bodies.",
+    "frozen_base_capture_script_unchanged": true,
+    "recorded_typed_prompt": "a dog catching a frisbee on a beach at sunset",
+    "recorded_rewrite_source": "live",
+    "recorded_rewrite_status": "improved",
+    "request_specific_observed_risk_percent": {
+      "before": 13.3,
+      "after": 3.3
+    },
+    "image_count_provenance_boundary": "No visible cumulative counter; hardcoded API generations=0 is not evidence of usage. The recorded HTTP503 non-sample request path, source guard, and sample-mode flags support zero image-model calls for this new preview interaction."
+  },
+  "PASS": true
+}

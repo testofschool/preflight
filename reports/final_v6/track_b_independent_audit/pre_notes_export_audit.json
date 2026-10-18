@@ -1,0 +1,637 @@
+{
+  "read_only": true,
+  "template_sha256": "29923ab726aa1382946c70ff527c769f0b9e95a55e889f2e01e7ad62641ea629",
+  "pptx": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/docs/Preflight_pitch_deck.pptx",
+    "sha256": "137ea04bec138b894af93818d6a168126013ca4700f21654a81136c3c588d94a",
+    "bytes": 1975855
+  },
+  "pdf": {
+    "path": "/Users/felix/Desktop/AI Builder Cup 2026/preflight/docs/Preflight_pitch_deck.pdf",
+    "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+    "bytes": 660305,
+    "page_count": 11,
+    "under_5000000_bytes": true
+  },
+  "slide_xml_part_count_including_orphans": 16,
+  "slide_count": 11,
+  "same_slide_count": false,
+  "displayed_slide_parts": [
+    "ppt/slides/slide1.xml",
+    "ppt/slides/slide3.xml",
+    "ppt/slides/slide4.xml",
+    "ppt/slides/slide5.xml",
+    "ppt/slides/slide6.xml",
+    "ppt/slides/slide8.xml",
+    "ppt/slides/slide9.xml",
+    "ppt/slides/slide11.xml",
+    "ppt/slides/slide12.xml",
+    "ppt/slides/slide13.xml",
+    "ppt/slides/slide14.xml"
+  ],
+  "omitted_template_slides": [
+    "ppt/slides/slide2.xml",
+    "ppt/slides/slide7.xml",
+    "ppt/slides/slide10.xml",
+    "ppt/slides/slide15.xml",
+    "ppt/slides/slide16.xml"
+  ],
+  "slide_size_emu": {
+    "cy": "5143500",
+    "cx": "9144000"
+  },
+  "same_slide_size": true,
+  "shared_parts": [
+    {
+      "part": "ppt/theme/theme1.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/theme/theme2.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout1.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout1.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout2.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout2.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout3.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout3.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout4.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout4.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout5.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout5.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout6.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout6.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout7.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout7.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout8.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout8.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout9.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout9.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout10.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout10.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/slideLayout11.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideLayouts/_rels/slideLayout11.xml.rels",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideMasters/slideMaster1.xml",
+      "present": true,
+      "byte_identical": true
+    },
+    {
+      "part": "ppt/slideMasters/_rels/slideMaster1.xml.rels",
+      "present": true,
+      "byte_identical": true
+    }
+  ],
+  "all_shared_parts_byte_identical": true,
+  "native_media": [
+    {
+      "part": "ppt/media/image1.png",
+      "present": true,
+      "byte_identical": true,
+      "native_image_text_classification": "Template-only Google Slides download-instruction screenshot. Visible UI includes 102% zoom, slide-thumbnail indices 1/2/3/4, ruler digits 1/2 and Ctrl+O shortcut. None is a Preflight claim."
+    },
+    {
+      "part": "ppt/media/image4.png",
+      "present": true,
+      "byte_identical": true,
+      "native_image_text_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    },
+    {
+      "part": "ppt/media/image5.png",
+      "present": true,
+      "byte_identical": true,
+      "native_image_text_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    },
+    {
+      "part": "ppt/media/image3.png",
+      "present": true,
+      "byte_identical": true,
+      "native_image_text_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    },
+    {
+      "part": "ppt/media/image2.png",
+      "present": true,
+      "byte_identical": true,
+      "native_image_text_classification": "Template branding image. H2S is a proper-name logo; OCR numeric 3 is a false positive. No quantitative Preflight claim."
+    }
+  ],
+  "all_native_media_byte_identical": true,
+  "slide_1_shape_54_present": true,
+  "slide_1_shape_54_same_bounds": true,
+  "slide_1_all_nontext_xml_identical": true,
+  "explicit_fonts": [
+    "",
+    "Arial",
+    "Google Sans Flex",
+    "Google Sans Flex Medium",
+    "Google Sans Flex SemiBold"
+  ],
+  "original_shape_differences": [
+    {
+      "part": "ppt/slides/slide1.xml",
+      "shape": "54",
+      "changes": {
+        "text": {
+          "before": "Team Details\nTeam name: \nTeam leader name: \nProblem Statement: ",
+          "after": "Team Details\nTeam name: testofschool\nTeam leader name: Jung Min Kang\nProblem Statement: People who pay per generation for AI video only learn a clip is unusable after they have paid for it."
+        }
+      }
+    },
+    {
+      "part": "ppt/slides/slide4.xml",
+      "shape": "79",
+      "changes": {
+        "text": {
+          "before": "Opportunities\nHow different is it from any of the other existing ideas?\nHow will it be able to solve the problem?\nUSP of the proposed solution",
+          "after": "Opportunities"
+        },
+        "fonts": {
+          "before": [
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "after": [
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold",
+            "Google Sans Flex SemiBold"
+          ]
+        },
+        "sizes": {
+          "before": [
+            "1600",
+            "1600",
+            "1300",
+            "1300",
+            "1300"
+          ],
+          "after": [
+            "1600"
+          ]
+        }
+      }
+    },
+    {
+      "part": "ppt/slides/slide14.xml",
+      "shape": "159",
+      "changes": {
+        "text": {
+          "before": "Provide links to your:\nGitHub Public Repository\nDemo Video Link (3 Minutes)\nFinal Product Link",
+          "after": "Provide links to your:"
+        },
+        "fonts": {
+          "before": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ],
+          "after": [
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium",
+            "Google Sans Flex Medium"
+          ]
+        }
+      }
+    }
+  ],
+  "v5_table_numeric_tokens": [
+    "0",
+    "0.00",
+    "0.40",
+    "0.67",
+    "02",
+    "04",
+    "05",
+    "1",
+    "1,911",
+    "1.1/5",
+    "15.8%",
+    "2.5",
+    "2024",
+    "2026",
+    "21%",
+    "219",
+    "3.1",
+    "3.20",
+    "3.5",
+    "340",
+    "46.8%",
+    "5",
+    "60",
+    "8",
+    "8/20"
+  ],
+  "native_template_text_numeric_tokens": [
+    "3"
+  ],
+  "pdf_numeric_occurrences": [
+    {
+      "page": 2,
+      "token": "2026",
+      "context": "l burn credits on the failed attempt\" Trustpilot, Runway review, Sept 2026   \"Only one of the generations was usable for my purposes\" Trustpilot, Sept 2026   \"I'm t",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 2,
+      "token": "2026",
+      "context": "y one of the generations was usable for my purposes\" Trustpilot, Sept 2026   \"I'm tired of wasting valuable credits on bad footage, I simply can't use\" Adobe Commun",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 2,
+      "token": "2024",
+      "context": "render before having to spend actual credits\" Adobe Community    In a 2024 public benchmark (GenAI-Bench), 21% of 1,911 human pairwise votes rejected both videos. ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 2,
+      "token": "21%",
+      "context": "credits\" Adobe Community    In a 2024 public benchmark (GenAI-Bench), 21% of 1,911 human pairwise votes rejected both videos. ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 2,
+      "token": "1,911",
+      "context": "\" Adobe Community    In a 2024 public benchmark (GenAI-Bench), 21% of 1,911 human pairwise votes rejected both videos. ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 3,
+      "token": "1.1/5",
+      "context": "efore \"pay\".  Who pays today Per-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: \"I lose too many credits doing trial",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 3,
+      "token": "340",
+      "context": ".  Who pays today Per-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: \"I lose too many credits doing trial and erro",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 3,
+      "token": "2026",
+      "context": "Per-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: \"I lose too many credits doing trial and error\" (219 votes). Who",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 3,
+      "token": "219",
+      "context": "obe feature request: \"I lose too many credits doing trial and error\" (219 votes). Who would buy a pre-pay step Studios and agencies running generation pipelines. G",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 3,
+      "token": "2.5",
+      "context": "tep. Built by a Seoul producer who ran generative-video pipelines for 2.5 years. Tested by a teammate in India. No revenue or market-size figure is claimed. ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 4,
+      "token": "1,911",
+      "context": "ree rungs before you pay Risk check (free) Failure-risk estimate from 1,911 human votes, with the nearest historical prompts as evidence.  Gemini rewrite Kept only i",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 4,
+      "token": "3.20",
+      "context": "ini rewrite Kept only if the estimated risk drops.  A still before a $3.20 Veo attempt Veo 3.1, 8 s at $0.40/s (Google pricing page). After generation: upload a cli",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 4,
+      "token": "3.1",
+      "context": " if the estimated risk drops.  A still before a $3.20 Veo attempt Veo 3.1, 8 s at $0.40/s (Google pricing page). After generation: upload a clip for a Gemini secon",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 4,
+      "token": "8",
+      "context": "he estimated risk drops.  A still before a $3.20 Veo attempt Veo 3.1, 8 s at $0.40/s (Google pricing page). After generation: upload a clip for a Gemini second l",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 4,
+      "token": "0.40",
+      "context": "ated risk drops.  A still before a $3.20 Veo attempt Veo 3.1, 8 s at $0.40/s (Google pricing page). After generation: upload a clip for a Gemini second look. Its ve",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 6,
+      "token": "1,911",
+      "context": "          FastAPI             rewrite agent     Nearest prompts       1,911 votes               asia-southeast1        Gemini 3.5 Flash     IRT difficulty   IRT para",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 6,
+      "token": "1",
+      "context": "ent     Nearest prompts       1,911 votes               asia-southeast1        Gemini 3.5 Flash     IRT difficulty   IRT parameters                              ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table technical or brand identifier digits; verify context"
+    },
+    {
+      "page": 6,
+      "token": "3.5",
+      "context": "prompts       1,911 votes               asia-southeast1        Gemini 3.5 Flash     IRT difficulty   IRT parameters                                         Vertex ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 7,
+      "token": "1",
+      "context": "ologies to be used in the solution  Cloud Run (FastAPI, asia-southeast1) Hosts the browser request workflow.  Google ADK + Gemini 3.5 Flash on Vertex AI Rewrite ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table technical or brand identifier digits; verify context"
+    },
+    {
+      "page": 7,
+      "token": "3.5",
+      "context": "-southeast1) Hosts the browser request workflow.  Google ADK + Gemini 3.5 Flash on Vertex AI Rewrite agent with Agent Platform Sessions. Tools retrieve nearby prom",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 7,
+      "token": "1,911",
+      "context": "s retrieve nearby prompts and IRT difficulty.  Cloud Firestore Stores 1,911 votes, IRT parameters, feedback and saved stills.  Gemini video understanding + Gemini im",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 8,
+      "token": "46.8%",
+      "context": "Snapshots of the prototype  a spoon and a laptop: 46.8% \u2192 15.8% estimated risk after the Gemini rewrite.  Risk + why                             ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 8,
+      "token": "15.8%",
+      "context": "Snapshots of the prototype  a spoon and a laptop: 46.8% \u2192 15.8% estimated risk after the Gemini rewrite.  Risk + why                                  Bet",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 8,
+      "token": "0",
+      "context": "                                                                      0 model calls                                                                      $0.00   ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 8,
+      "token": "0.00",
+      "context": "                                                                     $0.00                                                                       A still cannot judg",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 9,
+      "token": "0.67",
+      "context": "ce report/Benchmarking  What we measured, and the limits Held-out AUC 0.67 Historical signal, not a calibrated probability for today's models.  Live image generatio",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 9,
+      "token": "60",
+      "context": "t a calibrated probability for today's models.  Live image generation 60 test calls across three Gemini image models. Best 8/20 under shared capacity. Judges see ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 9,
+      "token": "8/20",
+      "context": "image generation 60 test calls across three Gemini image models. Best 8/20 under shared capacity. Judges see saved stills for the 5 samples, labelled \"0 model calls",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 9,
+      "token": "5",
+      "context": "els. Best 8/20 under shared capacity. Judges see saved stills for the 5 samples, labelled \"0 model calls \u00b7 $0.00\".  Clip-review accuracy: not measured ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 9,
+      "token": "0",
+      "context": "shared capacity. Judges see saved stills for the 5 samples, labelled \"0 model calls \u00b7 $0.00\".  Clip-review accuracy: not measured ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 9,
+      "token": "0.00",
+      "context": "Judges see saved stills for the 5 samples, labelled \"0 model calls \u00b7 $0.00\".  Clip-review accuracy: not measured ",
+      "literal_token_in_v5_table": true,
+      "class": "v5-table numeric quantity or model-version token; verify context"
+    },
+    {
+      "page": 11,
+      "token": "3",
+      "context": "epository https://github.com/testofschool/preflight  Demo Video Link (3 Minutes) Pending public upload  Final Product Link https://preflight-jcgro45veq-as.a.run.",
+      "literal_token_in_v5_table": false,
+      "class": "EXTRA native-template duration quantity: 3 Minutes; final video is 172 seconds, so unresolved duration requirement conflict"
+    },
+    {
+      "page": 11,
+      "token": "45",
+      "context": "tes) Pending public upload  Final Product Link https://preflight-jcgro45veq-as.a.run.app ",
+      "literal_token_in_v5_table": false,
+      "class": "EXTRA URL identifier digits, not a quantity"
+    }
+  ],
+  "numeric_exceptions": [
+    {
+      "page": 11,
+      "token": "3",
+      "context": "epository https://github.com/testofschool/preflight  Demo Video Link (3 Minutes) Pending public upload  Final Product Link https://preflight-jcgro45veq-as.a.run.",
+      "literal_token_in_v5_table": false,
+      "class": "EXTRA native-template duration quantity: 3 Minutes; final video is 172 seconds, so unresolved duration requirement conflict"
+    },
+    {
+      "page": 11,
+      "token": "45",
+      "context": "tes) Pending public upload  Final Product Link https://preflight-jcgro45veq-as.a.run.app ",
+      "literal_token_in_v5_table": false,
+      "class": "EXTRA URL identifier digits, not a quantity"
+    }
+  ],
+  "caveats": [
+    "PDF text extraction does not read embedded screenshots or image text.",
+    "Native template image OCR and manual classification are in template_manifest.json.",
+    "Token whitelist membership does not establish claim correctness; inspect contexts.",
+    "Original-shape differences must be classified as intentional content fill or reported formatting changes.",
+    "Visual review of every rendered page is separately required."
+  ]
+}

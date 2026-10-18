@@ -1,0 +1,250 @@
+{
+  "caveat": "OCR is a supplement, not authoritative. H2S logo digits are manually inventoried; false positives must not become claims. Native PDF text inventory is in export_audit.json.",
+  "pages": [
+    {
+      "page": 1,
+      "render": "reports/final_v6/track_b_build/full_page-01.png",
+      "ocr_text": "Google Cloud fi2S he\n\nAt@Builder \\ a\n\nTeam Details\n\na. Team name: testofschool\n\nb. Team leader name: Jung Min Kang\nc. Problem Statement: People who pay per generation for Al video only\nlearn a clip is unusable after they have paid for it.\n\n",
+      "numeric_occurrences": [
+        {
+          "token": "2",
+          "context": "Google Cloud fi2S he  At@Builder \\ a  Team Details  a. Team name: testofschool  b",
+          "literal_v5_table_token": false
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "render": "reports/final_v6/track_b_build/full_page-02.png",
+      "ocr_text": "Builder Cup\n\nGoogle Clot\n\nBrief about the idea\nPreflight: check an Al-video prompt before you pay\n\n\u201cyou still burn credits on the failed attempt\"\n\nTrustpilot, Runway review, Sept 2026\n\n\u201cOnly one of the generations was usable for my purposes\"\n\nTrustpilot, Sept 2026\n\n\u201cI'm tired of wasting valuable credits on bad footage, | simply can't use\"\n\nAdobe Community\n\n\u201c| recommend a lo-res preview render before having to spend actual credits\"\n\nAdobe Community\n\nIn a 2024 public benchmark (GenAlI-Bench), 21% of 1,911 human pairwise votes rejected both videos.\n",
+      "numeric_occurrences": [
+        {
+          "token": "2026",
+          "context": " failed attempt\"  Trustpilot, Runway review, Sept 2026  \u201cOnly one of the generations was usable for my purposes\"  Trust",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "2026",
+          "context": "ons was usable for my purposes\"  Trustpilot, Sept 2026  \u201cI'm tired of wasting valuable credits on bad footage, | simply",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "2024",
+          "context": "g to spend actual credits\"  Adobe Community  In a 2024 public benchmark (GenAlI-Bench), 21% of 1,911 human pairwise vot",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "21%",
+          "context": "unity  In a 2024 public benchmark (GenAlI-Bench), 21% of 1,911 human pairwise votes rejected both videos. ",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "1,911",
+          "context": "In a 2024 public benchmark (GenAlI-Bench), 21% of 1,911 human pairwise votes rejected both videos. ",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "render": "reports/final_v6/track_b_build/full_page-03.png",
+      "ocr_text": "Google Cloud\n\nBuilder Cup\n\nOpportunities\n\nRefunds cover generation errors, not finished clips that are unusable.\nNothing sits before \"pay\".\n\nWho pays today\n\nPer-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature\nrequest: \"I lose too many credits doing trial and error\" (219 votes).\n\nWho would buy a pre-pay step\nStudios and agencies running generation pipelines. Generator platforms as an embedded step.\n\nBuilt by a Seoul producer who ran generative-video pipelines for 2.5 years. Tested by a teammate\nin India.\n\nNo revenue or market-size figure is claimed.\n",
+      "numeric_occurrences": [
+        {
+          "token": "1.1/5",
+          "context": "s today  Per-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: \"I lose too",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "340",
+          "context": "r-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: \"I lose too many cre",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "2026",
+          "context": "s. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature request: \"I lose too many credits doing trial an",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "219",
+          "context": " \"I lose too many credits doing trial and error\" (219 votes).  Who would buy a pre-pay step Studios and agencies runni",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "2.5",
+          "context": "l producer who ran generative-video pipelines for 2.5 years. Tested by a teammate in India.  No revenue or market-size",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "render": "reports/final_v6/track_b_build/full_page-04.png",
+      "ocr_text": "Google Cloud Builder Cup\n\nList of features offered by the solution\n\nPreflight: three rungs before you pay\nRisk check (free)\n\nFailure-risk estimate from 1,911 human votes, with the nearest historical prompts as evidence.\n\nGemini rewrite\nKept only if the estimated risk drops.\n\nAstill before a $3.20 Veo attempt\nVeo 31, 8s at $0.40/s (Google pricing page).\n\nAfter generation: upload a clip for a Gemini second look. Its verdict is stored separately as\nfeedback.\n",
+      "numeric_occurrences": [
+        {
+          "token": "1,911",
+          "context": "pay Risk check (free)  Failure-risk estimate from 1,911 human votes, with the nearest historical prompts as evidence.  G",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "3.20",
+          "context": "ly if the estimated risk drops.  Astill before a $3.20 Veo attempt Veo 31, 8s at $0.40/s (Google pricing page).  After ",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "31",
+          "context": "isk drops.  Astill before a $3.20 Veo attempt Veo 31, 8s at $0.40/s (Google pricing page).  After generation: upload ",
+          "literal_v5_table_token": false
+        },
+        {
+          "token": "8",
+          "context": "drops.  Astill before a $3.20 Veo attempt Veo 31, 8s at $0.40/s (Google pricing page).  After generation: upload a c",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "0.40",
+          "context": " Astill before a $3.20 Veo attempt Veo 31, 8s at $0.40/s (Google pricing page).  After generation: upload a clip for a ",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "render": "reports/final_v6/track_b_build/full_page-05.png",
+      "ocr_text": "Google Cloud AWBuilder Cup\n\nProcess flow diagram or Use-case diagram\nEvery generator's loop: prompt ~ pay ~ generate \u2014 judge \u2014 re-prompt.\n\nPreflight adds a risk check, a lower-risk rewrite and a still before \"pay\".\n\nSaved original still Saved rewrite still\n\n",
+      "numeric_occurrences": []
+    },
+    {
+      "page": 6,
+      "render": "reports/final_v6/track_b_build/full_page-06.png",
+      "ocr_text": "Google Clou\n\nBuilder Cup\n\nArchitecture diagram of the proposed solution\n\nBrowser request and Google Cloud services\n\nBrowser Cloud Run Google ADK Tools Cloud Firestore\nFastAPI rewrite agent Nearest prompts 1,911 votes\nasia-southeast1 Gemini 3.5 Flash IRT difficulty IRT parameters\n\u2014 \u2014 \u2014\nVertex Al Feedback\nSaved stills\n\n|\n\nAgent Platform\nSessions\n\nClip review: Gemini video understanding\n\nStill preview: Gemini image model\n",
+      "numeric_occurrences": [
+        {
+          "token": "1,911",
+          "context": "d Firestore FastAPI rewrite agent Nearest prompts 1,911 votes asia-southeast1 Gemini 3.5 Flash IRT difficulty IRT parame",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "1",
+          "context": "e agent Nearest prompts 1,911 votes asia-southeast1 Gemini 3.5 Flash IRT difficulty IRT parameters \u2014 \u2014 \u2014 Vertex Al F",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "3.5",
+          "context": "earest prompts 1,911 votes asia-southeast1 Gemini 3.5 Flash IRT difficulty IRT parameters \u2014 \u2014 \u2014 Vertex Al Feedback Sav",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "render": "reports/final_v6/track_b_build/full_page-07.png",
+      "ocr_text": "Google Cloud\n\nBuilder Cup\n\nTechnologies to be used in the solution\n\nCloud Run (FastAPI, asia-southeast1)\n\nHosts the browser request workflow.\n\nGoogle ADK + Gemini 3.5 Flash on Vertex Al\n\nRewrite agent with Agent Platform Sessions. Tools retrieve nearby prompts and IRT difficulty.\nCloud Firestore\n\nStores 1,911 votes, IRT parameters, feedback and saved stills.\n\nGemini video understanding + Gemini image model\n\nClip second look and still preview.\n\nActive for sample prompts (saved stills); live generation limited\n",
+      "numeric_occurrences": [
+        {
+          "token": "1",
+          "context": "n the solution  Cloud Run (FastAPI, asia-southeast1)  Hosts the browser request workflow.  Google ADK + Gemini 3.5 F",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "3.5",
+          "context": "he browser request workflow.  Google ADK + Gemini 3.5 Flash on Vertex Al  Rewrite agent with Agent Platform Sessions. ",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "1,911",
+          "context": "ompts and IRT difficulty. Cloud Firestore  Stores 1,911 votes, IRT parameters, feedback and saved stills.  Gemini video ",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "render": "reports/final_v6/track_b_build/full_page-08.png",
+      "ocr_text": "Google Clot Builder Cup\n\nSnapshots of the prototype\n\na spoon and a laptop: 46.8% \u2014 15.8% estimated risk after the Gemini rewrite.\n\nRisk + why Better prompt Saved still\n46.8 re \u2014=\n3 laptop under sot indoor\nwgrtn,\nText neighbour nda Nomen eee O model calls\n$0.00\n\nAstill cannot judge\nit del fa = ee motion, flicker or\nSE eee - apace : timing.\n\n",
+      "numeric_occurrences": [
+        {
+          "token": "46.8%",
+          "context": "Snapshots of the prototype  a spoon and a laptop: 46.8% \u2014 15.8% estimated risk after the Gemini rewrite.  Risk + why Bet",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "15.8%",
+          "context": "s of the prototype  a spoon and a laptop: 46.8% \u2014 15.8% estimated risk after the Gemini rewrite.  Risk + why Better prom",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "46.8",
+          "context": "ni rewrite.  Risk + why Better prompt Saved still 46.8 re \u2014= 3 laptop under sot indoor wgrtn, Text neighbour nda Nomen ",
+          "literal_v5_table_token": false
+        },
+        {
+          "token": "3",
+          "context": "  Risk + why Better prompt Saved still 46.8 re \u2014= 3 laptop under sot indoor wgrtn, Text neighbour nda Nomen eee O mo",
+          "literal_v5_table_token": false
+        },
+        {
+          "token": "0.00",
+          "context": "grtn, Text neighbour nda Nomen eee O model calls $0.00  Astill cannot judge it del fa = ee motion, flicker or SE eee - ",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "render": "reports/final_v6/track_b_build/full_page-09.png",
+      "ocr_text": "Google Cloud\n\nBuilder Cup\n\nPrototype Performance report/Benchmarking\n\nWhat we measured, and the limits\nHeld-out AUC 0.67\n\nHistorical signal, not a calibrated probability for today's models.\n\nLive image generation\n60 test calls across three Gemini image models. Best 8/20 under shared capacity.\nJudges see saved stills for the 5 samples, labelled \"O model calls - $0.00\".\n\nClip-review accuracy: not measured\n",
+      "numeric_occurrences": [
+        {
+          "token": "0.67",
+          "context": "ng  What we measured, and the limits Held-out AUC 0.67  Historical signal, not a calibrated probability for today's mod",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "60",
+          "context": "bility for today's models.  Live image generation 60 test calls across three Gemini image models. Best 8/20 under sha",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "8/20",
+          "context": "test calls across three Gemini image models. Best 8/20 under shared capacity. Judges see saved stills for the 5 samples",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "5",
+          "context": " shared capacity. Judges see saved stills for the 5 samples, labelled \"O model calls - $0.00\".  Clip-review accuracy",
+          "literal_v5_table_token": true
+        },
+        {
+          "token": "0.00",
+          "context": "lls for the 5 samples, labelled \"O model calls - $0.00\".  Clip-review accuracy: not measured ",
+          "literal_v5_table_token": true
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "render": "reports/final_v6/track_b_build/full_page-10.png",
+      "ocr_text": "Google Cloud AWBuilder Cup\n\nAdditional Details/Future Development (if any)\n\nNext\n\nLive stills with dedicated image capacity.\n\nSeparate tabs for check and clip review.\n\nNon-English vote data before scoring non-English prompts.\n\nOn-page emphasis of the risk drop.\n",
+      "numeric_occurrences": []
+    },
+    {
+      "page": 11,
+      "render": "reports/final_v6/track_b_build/full_page-11.png",
+      "ocr_text": "Google Cloud AWBuilder Cup\n\nProvide links to your:\n\nGitHub Public Repository\nhttps://github.com/testofschool/preflight\n\nDemo Video Link (3 Minutes)\nPending public upload\n\nFinal Product Link\nhttps://preflight-jcgro45veq-as.a.run.app\n\n",
+      "numeric_occurrences": [
+        {
+          "token": "3",
+          "context": "thub.com/testofschool/preflight  Demo Video Link (3 Minutes) Pending public upload  Final Product Link https://prefl",
+          "literal_v5_table_token": false
+        },
+        {
+          "token": "45",
+          "context": "upload  Final Product Link https://preflight-jcgro45veq-as.a.run.app  ",
+          "literal_v5_table_token": false
+        }
+      ]
+    }
+  ]
+}

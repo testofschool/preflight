@@ -1,0 +1,24 @@
+{
+  "before_sha256": "137ea04bec138b894af93818d6a168126013ca4700f21654a81136c3c588d94a",
+  "after_sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a",
+  "after_bytes": 1979965,
+  "changed_parts": [
+    "ppt/notesSlides/notesSlide1.xml",
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/notesSlides/notesSlide6.xml",
+    "ppt/notesSlides/notesSlide8.xml",
+    "ppt/notesSlides/notesSlide9.xml",
+    "ppt/notesSlides/notesSlide11.xml",
+    "ppt/notesSlides/notesSlide12.xml",
+    "ppt/notesSlides/notesSlide13.xml",
+    "ppt/notesSlides/notesSlide14.xml"
+  ],
+  "added_parts": [],
+  "removed_parts": [],
+  "only_notes_parts_changed": true,
+  "PDF_sha256_unchanged": true,
+  "first_notes_after_sha256": "91c297f1ec8e77953403897d245166229177f629bfafe7eb6aff9a7f49f865e7",
+  "note14_source_correction_receipt": "track_b_note14_correction.json"
+}

@@ -1,6 +1,6 @@
 # Preflight — check an AI-video prompt before you pay to generate it.
 
-[Live prototype](https://preflight-jcgro45veq-as.a.run.app) · Demo video: `<VIDEO_URL>` · Pitch deck: `docs/Preflight_pitch_deck.pdf` (pending Felix's PDF export).
+[Live prototype](https://preflight-jcgro45veq-as.a.run.app) · Demo video: `<VIDEO_URL>` · [Pitch deck PDF](docs/Preflight_pitch_deck.pdf).
 
 ## The problem, in users' words
 

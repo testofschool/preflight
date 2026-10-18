@@ -1,0 +1,22 @@
+{
+  "acquired_at_utc": "2026-10-18T08:36:51.839596+00:00",
+  "acquisition_step": 3,
+  "method": "Existing signed-in Chrome session -> Hack2skill dashboard -> Submissions -> Template Download -> Google Slides PPTX export",
+  "template_public_url": "https://docs.google.com/presentation/d/13rg7vW43mEH6DkpuusAE6fdoEylSFz8waNpE4RLzoUg/edit",
+  "local_path": "docs/template/aibc_template.pptx",
+  "template_bytes": 960223,
+  "template_sha256": "29923ab726aa1382946c70ff527c769f0b9e95a55e889f2e01e7ad62641ea629",
+  "login_performed": false,
+  "password_or_clipboard_read": false,
+  "form_submission_performed": false,
+  "v5_named_file_found_initially": false,
+  "v5_source": "Original user-pasted attachment from prior turn, copied verbatim to reports/final_v6/CODEX_ONESHOT_preflight_final_v5.md",
+  "v5_source_sha256": "5c439e2a9424b7217dc9ef467140a61eef8bc2a5ad1d6c7c3bfceeff80d5cfd5",
+  "official_video_duration_conflict": {
+    "dashboard_instruction": "Participants must submit a 3 to 4 minute video demonstration of their solution.",
+    "input_label": "Demo Video Link (3-4 minutes)",
+    "template_link_slide_label": "Demo Video Link (3 Minutes)",
+    "requested_v6_seconds": 172,
+    "action": "Preserve172s copy; optional user question pending; continue deck."
+  }
+}

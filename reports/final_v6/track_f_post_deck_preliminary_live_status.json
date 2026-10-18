@@ -1,0 +1,50 @@
+{
+  "fetched_at_kst": "2026-10-18T17:45:49+09:00",
+  "request_url": "https://preflight-jcgro45veq-as.a.run.app/api/status",
+  "method": "GET",
+  "response": {
+    "mode": "cloud",
+    "label": "Connected research preview",
+    "cloud_run": true,
+    "gemini": true,
+    "adk": true,
+    "agent_platform_session": true,
+    "firestore": true,
+    "postcheck": true,
+    "preview": true,
+    "preview_mode": "samples",
+    "preview_mode_message": "Image preview \u2014 Active for sample prompts (saved stills); live generation limited",
+    "pricing_image": {
+      "model": "gemini-2.5-flash-image",
+      "size": "1K",
+      "usd_per_image": 0.0387,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked_date": "2026-10-18",
+      "cost_basis": "image-output-list-price",
+      "billing_verified": false,
+      "priority_requested": false
+    },
+    "generations": 0,
+    "sample_prompts": [
+      "a cat and a dog",
+      "a spoon and a laptop",
+      "a bicycle and a car",
+      "indoor gymnasium",
+      "a purple clock"
+    ],
+    "pricing": {
+      "model": "Veo 3.1 Standard \u00b7 720p/1080p + audio",
+      "usd_per_second": 0.4,
+      "duration_seconds": 8,
+      "single_attempt_usd": 3.2,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+      "checked_date": "2026-10-16",
+      "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+    },
+    "rate_limit": {
+      "checks": 20,
+      "seconds": 60,
+      "scope": "shared Firestore transaction"
+    }
+  }
+}

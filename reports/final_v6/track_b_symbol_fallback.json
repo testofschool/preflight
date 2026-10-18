@@ -1,0 +1,25 @@
+[
+  {
+    "page": 5,
+    "characters": "\u2192\u2192\u2192\u2192",
+    "codepoints": [
+      "U+2192",
+      "U+2192",
+      "U+2192",
+      "U+2192"
+    ],
+    "fonts": [
+      "EAAAAA+LucidaGrande"
+    ]
+  },
+  {
+    "page": 8,
+    "characters": "\u2192",
+    "codepoints": [
+      "U+2192"
+    ],
+    "fonts": [
+      "EAAAAA+LucidaGrande"
+    ]
+  }
+]

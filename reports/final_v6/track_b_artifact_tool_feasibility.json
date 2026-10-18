@@ -1,0 +1,24 @@
+{
+  "artifact_tool_import": "PASS, 16 source slides; final deck PASS,11 slides through finalizer",
+  "artifact_tool_roundtrip_template_resource_comparison": {
+    "ppt/slideMasters/": {
+      "source_parts": 2,
+      "byte_identical_parts": 0
+    },
+    "ppt/slideLayouts/": {
+      "source_parts": 22,
+      "byte_identical_parts": 0
+    },
+    "ppt/theme/": {
+      "source_parts": 2,
+      "byte_identical_parts": 0
+    }
+  },
+  "artifact_tool_PDF_export": "FAIL: Cannot find module #standard-fonts/Helvetica, MODULE_NOT_FOUND from installed bundled @oai/artifact-tool",
+  "decision": "Use surgical OOXML final deck to preserve template resources, and LibreOffice PDF export with reference fonts. No bundled runtime source modified.",
+  "font_attempts": {
+    "SAL_FONTPATH": "ineffective; PDF substituted LiberationSans",
+    "private_profile_user_fonts": "ineffective; PDF substituted LiberationSans",
+    "CoreText_session_registration": "effective; final PDF embeds reference font families"
+  }
+}

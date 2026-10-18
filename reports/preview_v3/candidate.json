@@ -1,0 +1,31 @@
+{
+  "revision": "preflight-00019-kow",
+  "url": "https://preview-v3---preflight-jcgro45veq-as.a.run.app",
+  "primary_url": "https://preflight-jcgro45veq-as.a.run.app",
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    },
+    {
+      "revisionName": "preflight-00019-kow",
+      "tag": "preview-v3",
+      "url": "https://preview-v3---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "timeout_seconds": 60,
+  "env_changes": {
+    "PREFLIGHT_PREVIEW_ENABLED": {
+      "before": "false",
+      "after": "true"
+    }
+  },
+  "timeout_change": {
+    "before": 40,
+    "after": 60
+  },
+  "all_other_spec_fields_identical": true,
+  "runtime_source_sha256": "960f56aebdaccfdb2e87c4870f647e565b3b0ae68d2f27d2519bd03de2ce0ff0"
+}

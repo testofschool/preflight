@@ -1,0 +1,58 @@
+{
+  "base_head": "be67f075d75abdb76c3305404e6076d0949594d7",
+  "original_tag": "dd12f279e364cbd217a4178b51c1d270cacebbdd",
+  "url": "https://preflight-jcgro45veq-as.a.run.app",
+  "revision": "preflight-00016-tuk",
+  "traffic": [
+    {
+      "percent": 100,
+      "revisionName": "preflight-00016-tuk",
+      "tag": "postcheck-candidate",
+      "url": "https://postcheck-candidate---preflight-jcgro45veq-as.a.run.app"
+    }
+  ],
+  "timeout_seconds": 40,
+  "concurrency": 80,
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "1Gi"
+    }
+  },
+  "allowed_env": {
+    "PREFLIGHT_MODE": "cloud",
+    "PREFLIGHT_FIRESTORE_DATABASE": "preflight-aibc",
+    "PREFLIGHT_GEMINI_BACKEND": "vertex",
+    "PREFLIGHT_GEMINI_LOCATION": "asia-southeast1",
+    "PREFLIGHT_GEMINI_MODEL": "gemini-3.5-flash",
+    "PREFLIGHT_TOTAL_REQUEST_LIMIT": "1000",
+    "PREFLIGHT_IMAGE_MODEL": "gemini-3.1-flash-lite-image",
+    "PREFLIGHT_IMAGE_MODEL_FALLBACK": "gemini-3.1-flash-image",
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": "60",
+    "PREFLIGHT_PREVIEW_ENABLED": "false",
+    "PREFLIGHT_IMAGE_PRIMARY_UNSERVED": "false",
+    "PREFLIGHT_IMAGE_LOCATION": "global"
+  },
+  "preview-budget": {
+    "request_timestamps": [
+      1792211236.150873,
+      1792211275.3684826
+    ],
+    "day": "2026-10-17",
+    "day_count": 16
+  },
+  "request-budget": null,
+  "existing_preview_documents": 9,
+  "today_kst_preview_request_logs": [
+    {
+      "timestamp": "2026-10-18T00:25:32.180044Z",
+      "status": 503,
+      "revision": "preflight-00016-tuk"
+    },
+    {
+      "timestamp": "2026-10-18T00:25:21.617194Z",
+      "status": 422,
+      "revision": "preflight-00016-tuk"
+    }
+  ]
+}

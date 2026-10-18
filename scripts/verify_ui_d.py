@@ -51,7 +51,7 @@ def main():
         result["passed"] = (result["cta_bottom"] <= 900 and result["textarea_rows"] == "6"
                             and result["mode_in_footer"] and result["session_row_hidden"] and result["session_row_in_footer"]
                             and result["score_collapsed"] and result["preflight_status"] == 200
-                            and result["preview_disabled"] and result["preview_tooltip"] == "Preview unavailable in this region"
+                            and result["preview_disabled"] and result["preview_tooltip"] == "Preview is busy right now — try again in a minute. The risk check still works."
                             and result["architecture_image_row"] and all(result["overflow_checks"])
                             and not result["console_errors"])
         Path(f"reports/{args.prefix}_ui.json").write_text(json.dumps(result, indent=2) + "\n")

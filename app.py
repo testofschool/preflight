@@ -18,7 +18,7 @@ from uuid import uuid4
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from starlette.datastructures import UploadFile
@@ -216,39 +216,61 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
 
     @service.post("/preview")
     async def preview(body: PreviewInput, response: Response):
-        if not connected:
-            raise HTTPException(503, detail="Preview needs the connected service.")
-        if service.state.previewer is None:
-            raise HTTPException(503, detail="Preview is unavailable right now. The risk check still works.")
+        from cloud.preview import PreviewGenerationError, FALLBACK
         from cloud.store import StoreRateLimited, StoreBudgetExhausted, prompt_id
+        busy_copy = "Preview is busy right now — try again in a minute. The risk check still works."
+        if not connected or service.state.previewer is None:
+            raise HTTPException(503, detail=busy_copy)
         started = monotonic()
+        deadline = started + 44
+        attempts, model_calls, fallback_used = 0, 0, False
+        provider = service.state.previewer
+        model, size = provider.model, provider.size
+        model_attempts = []
+
+        def cache_key(used_model, used_size):
+            return hashlib.sha256(json.dumps(["preview-v1", body.prompt, used_model, used_size],
+                ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
+
         try:
-            await asyncio.to_thread(service.state.store.admit_preview)
-            provider = service.state.previewer
-            pricing = image_pricing()
-            key = hashlib.sha256(json.dumps(["preview-v1", body.prompt, provider.model, provider.size],
-                                           ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
-            cached = await asyncio.to_thread(service.state.store.get_preview, key)
-            if cached:
-                jpeg = cached["bytes"]
-                calls, cache = 0, "hit"
-            else:
-                async with asyncio.timeout(30):
-                    jpeg = await provider.generate(body.prompt)
-                calls, cache = 1, "miss"
-                if len(jpeg) <= 900 * 1024:
-                    await asyncio.to_thread(service.state.store.save_preview, key,
-                        {"bytes": jpeg, "model": provider.model, "size": provider.size,
-                         "created_at": datetime.now(timezone.utc), "prompt_id": prompt_id(body.prompt)})
+            async with asyncio.timeout_at(deadline):
+                await asyncio.to_thread(service.state.store.admit_preview)
+                cached = None
+                for used_model, used_size in provider.cache_models:
+                    cached = await asyncio.to_thread(service.state.store.get_preview, cache_key(used_model, used_size))
+                    if cached:
+                        model, size = used_model, used_size
+                        break
+                if cached:
+                    jpeg, cache = cached["bytes"], "hit"
+                    cost_usd = 0.045 if size == "0.5K" else 0.0336
+                    fallback_used = model == FALLBACK
                 else:
-                    cache = "skip-size"
-            response.headers["X-Preview-Cache"] = cache
-            return {"image_data_url": "data:image/jpeg;base64," + base64.b64encode(jpeg).decode(),
-                    "model": provider.model, "size": provider.size, "aspect_ratio": "16:9",
-                    "cost_usd": pricing["usd_per_image"], "pricing_source": pricing["source"],
-                    "pricing_checked_date": pricing["checked_date"],
-                    "latency_ms": round((monotonic() - started) * 1000), "model_calls": calls,
-                    "synthid": True, "caption": CAPTION}
+                    result = await provider.generate(body.prompt, deadline=deadline - .5)
+                    jpeg, model, size = result.jpeg, result.model, result.size
+                    cost_usd = result.cost_usd
+                    attempts, model_calls = result.attempts, result.model_calls
+                    fallback_used, model_attempts = result.fallback_used, result.model_attempts
+                    cache = "miss"
+                    if len(jpeg) <= 900 * 1024:
+                        try:
+                            # Persistence is best effort within the same request deadline.
+                            async with asyncio.timeout(min(1, max(.01, deadline - monotonic() - .1))):
+                                await asyncio.to_thread(service.state.store.save_preview, cache_key(model, size),
+                                    {"bytes": jpeg, "model": model, "size": size,
+                                     "created_at": datetime.now(timezone.utc), "prompt_id": prompt_id(body.prompt)})
+                        except Exception:
+                            cache = "skip-store"
+                    else:
+                        cache = "skip-size"
+                response.headers["X-Preview-Cache"] = cache
+                return {"image_data_url": "data:image/jpeg;base64," + base64.b64encode(jpeg).decode(),
+                        "model": model, "size": size, "aspect_ratio": "16:9",
+                        "cost_usd": cost_usd, "pricing_source": PRICING_IMAGE["source"],
+                        "pricing_checked_date": PRICING_IMAGE["checked_date"],
+                        "latency_ms": round((monotonic() - started) * 1000), "model_calls": model_calls,
+                        "attempts": attempts, "fallback_used": fallback_used, "model_attempts": model_attempts,
+                        "synthid": True, "caption": CAPTION}
         except StoreRateLimited as error:
             raise HTTPException(429, detail=f"Try again in {error.retry_after} s",
                                 headers={"Retry-After": str(error.retry_after)}) from None
@@ -258,8 +280,15 @@ def create_app(artifact_dir: Path | None = None, *, mode: str | None = None,
             raise HTTPException(429, detail="The daily preview allowance has been reached.",
                                 headers={"Retry-After": str(retry)}) from None
         except Exception as error:
-            raise HTTPException(503, detail="Preview is unavailable right now. The risk check still works.",
-                                headers={"X-Preflight-Error": type(error).__name__}) from None
+            if isinstance(error, PreviewGenerationError):
+                attempts = model_calls = error.attempts
+                model, fallback_used = error.model, error.fallback_used
+                model_attempts = error.model_attempts
+                size = "0.5K" if fallback_used else provider.size
+            return JSONResponse(status_code=503, content={"detail": busy_copy, "attempts": attempts,
+                "model_calls": model_calls, "model": model, "size": size, "fallback_used": fallback_used,
+                "model_attempts": model_attempts, "latency_ms": round((monotonic() - started) * 1000)},
+                headers={"X-Preflight-Error": type(error).__name__})
 
     @service.post("/postcheck")
     async def postcheck(request: Request):

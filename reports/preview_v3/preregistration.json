@@ -1,0 +1,348 @@
+{
+  "checked_at_kst": "2026-10-18T09:35:53.401541+09:00",
+  "fresh_prompts_sha256": "703c365b0e87f69d912e234f5e1fe1789f06607aba7a45b17217599c17d909a5",
+  "distinct": 20,
+  "existing_keys": 0,
+  "rows": [
+    {
+      "prompt": "a cat and a dog sitting beside a cobalt watering can on a marigold rug, in an October eighteenth morning still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "aae54ba496b772b3cc6a7dc568976257d7ca77293a6574fb9c25899788781d5a",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "75489d1ff99fd0c66d13dec12ab25a8e32e5da8878ca10becc49432054b1ede9",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a spoon and a laptop on a pale oak table beside a coral linen napkin, in an October eighteenth morning still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "7f808585276fda2fc1ae6eee9c20f8e865e9ac2b55de0731751fb325856fc38b",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "dcdc92d09d0902a9b52d25d28ed324bcf6756b9bcd07a2e7b1eb1e26ca9a38d4",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a bicycle and a car parked by a sage garden gate with three terracotta pots, in an October eighteenth morning still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "af1b9d77d6e7f5d6af5eaf16b8e883377cdc402fb92a8727e39c06090dc99887",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "a1e8d2021b9d299ba2eb07b4d0a4b9e154592522c73c88a48b5414ea00568945",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "indoor gymnasium with folded teal mats beneath a sunlit east window, in an October eighteenth morning still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "9cb298a1f3b6854b081e5751a954cd1b34f3d8629cdda405be84024ec0111e72",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "c8b46adb0983e7aec7dc82901bb035fafbedf6b4c5a7547fe47dd86a8898d219",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a purple clock on a cream wall above a narrow walnut shelf and an empty vase, in an October eighteenth morning still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "08f5ea5385ebab9bbd0d62c9706996c18899e5f292a677ea96e2539361cdbfa2",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "63200c95d703ab344703cac119b1b5b32e21a34d3060939e250815e1ee9b9e60",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a cat and a dog resting near a mustard armchair and a round woven basket, in an October eighteenth noon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "490b50f527ebbf42dd957ec5d39c80b89a6967c067c7a76b2979b9769a20f01e",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "287f289e5d38bf5b99d8037e87c26be63151aa333fedec6e9415fa6ff82b372b",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a spoon and a laptop on a granite counter beside a folded plum kitchen towel, in an October eighteenth noon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "7549ce77407cde65c122eed7eaa39bba7c71cae6b288c6738c246759636fff85",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "0d657ed8f50b66ee5f66596c128895d458e4e61f982fe5884922034fbe186103",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a bicycle and a car beside a white brick courtyard wall with a blue wooden bench, in an October eighteenth noon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "3ff46104794cf49a2b2f1347dbb6bf71de811a78a822031a58d66e541235ca19",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "93420149a5b979fd95f2bcacc68c5e1b3370833c0c65732dd1a6dbe3c8779b3a",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "indoor gymnasium with a red basketball on the polished floor beside stacked wooden benches, in an October eighteenth noon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "76c20ef20f4be61eb277ee88df877e3cd17e5faf98f2657eaedd58059ab213df",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "51476f64e27d1beb1f35eeb767179443920b7033f6674c55b4a31c55350e04a7",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a purple clock above a mint cabinet beside a framed drawing of a single leaf, in an October eighteenth noon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "731f9831f0e65cbfcd5ef4a39ff88041c94274491c931ab89ead2a471876cd64",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "397c415ac31854cf66c1b4d7aa1527a4f22a59e7030bb82deb194b7ed0e46f78",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a cat and a dog beside a low cedar table beneath a softly shaded balcony window, in an October eighteenth afternoon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "5a2634c88755a8c071cf6d486b20e09f157ba2a69773b0238232f689143b866f",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "339d4cc7bca8f7e4620eaab13180c361d62d94e92728b73eb6ce5a4767c12620",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a spoon and a laptop beside an amber glass cup on a charcoal felt desk mat, in an October eighteenth afternoon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "8fd46b2829a72c5fc9a6fce5717e735c858e490054fb19d6b08360ea78dff449",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "d0fbebe3ee99fc3f308a9e31c45e1009fade5f0b28ac00b4ccbc5aa271e40e51",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a bicycle and a car on a quiet gravel drive beside a tall copper planter, in an October eighteenth afternoon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "d7face5d20c71acf295e9dbe7fd2a55929c0420e8eae6cb26e768327a2b58e75",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "f570f00f1ac4be5ed8e8347eabbf65ca55771f97db5ebbceedc8ae573113e0f0",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "indoor gymnasium with yellow floor markings and an empty blue equipment trolley, in an October eighteenth afternoon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "f956b32dd49aff99a4c72fc90dd10e1c7ab1e60b3bb676a5918888b3230d88ac",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "76a3e25112e40dd7eeab14c596fcc50f0e716b8a654c98c36fed3229cd183d49",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a purple clock beside a small paper calendar on a dusty rose studio wall, in an October eighteenth afternoon still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "0ff7d08af937b6bd79f15222f5abf77675a18b7ac94188f9a35c62ba914e4309",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "82c21b5c0878128290a780a5c5f83d940338ba64f2d9df73970fcba7efdb7c26",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a cat and a dog on an olive blanket beside a closed wicker picnic hamper, in an October eighteenth evening still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "706544bf5ada5e541e5ab114b8ca3e90d1de7252923def8255175abebdfe8977",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "a87986e21a8f7245c4ba62a33df1b73133145b15f879b4132f6a4d6630f0d7f1",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a spoon and a laptop beside a neatly rolled indigo scarf on a birch workbench, in an October eighteenth evening still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "6603873ffad0ec5d0ea4d1371b44ca043f7e7bef9be7f91e24ffc199dacc9c44",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "49fdc6f6daac2e061a7affa43dd0ddf947f49e63e9c8499138339bf38e96a408",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a bicycle and a car beneath a simple wooden shelter beside a silver rain barrel, in an October eighteenth evening still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "87a1fd09106f7fd3e6f675ff5dc7b36cfa2358f88b6d7f1bd1d72b59c48cd017",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "58db152a5ba6f6839f51fac2b1f1a5a5b46b371f7cd40c248395541ae8350715",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "indoor gymnasium with a folded green divider curtain beside a row of empty grey chairs, in an October eighteenth evening still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "5c2c89809e16207eb7adafe9c5b7c0cedc0fe51fbe2691cf9962ab9adf0e6521",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "416dfb3c05115bcf0b79e11b84585ac2c58465aed7e506a3ec71369380a9109f",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "prompt": "a purple clock above a lavender sideboard with one small ceramic pear, in an October eighteenth evening still-life study.",
+      "cache_keys_before_run": [
+        {
+          "model": "gemini-3.1-flash-lite-image",
+          "size": "1K",
+          "key": "0fbe19d3af77d4e9959da3af57bb2586969313cc3fa8d6b79179945a6beb1e6b",
+          "exists": false
+        },
+        {
+          "model": "gemini-3.1-flash-image",
+          "size": "0.5K",
+          "key": "c33af3f0a62b61b3bbd396d9f6003f92b9c78d3254dc8dfb398741905ceaf6c7",
+          "exists": false
+        }
+      ]
+    }
+  ]
+}

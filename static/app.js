@@ -207,7 +207,7 @@
     spinner.setAttribute("aria-hidden", "true");
     action.append(text, spinner);
     action.disabled = serviceStatus?.preview !== true;
-    if (action.disabled) action.title = "Preview unavailable in this region";
+    if (action.disabled) action.title = "Preview is busy right now — try again in a minute. The risk check still works.";
     const output = document.createElement("div");
     output.setAttribute("aria-live", "polite");
     let busy = false;
@@ -230,10 +230,10 @@
           const retry = Number(response.headers.get("Retry-After"));
           if (response.status === 429 && retry > 0) retryAt = Date.now() + retry * 1000;
           throw new Error(response.status === 429 && retry > 0 ? `Try again in ${retry} s` :
-            typeof data.detail === "string" ? data.detail : "Preview is unavailable right now. The risk check still works.");
+            typeof data.detail === "string" ? data.detail : "Preview is busy right now — try again in a minute. The risk check still works.");
         }
         if (typeof data.image_data_url !== "string" || !data.image_data_url.startsWith("data:image/jpeg;base64,"))
-          throw new Error("Preview is unavailable right now. The risk check still works.");
+          throw new Error("Preview is busy right now — try again in a minute. The risk check still works.");
         const image = document.createElement("img");
         image.src = data.image_data_url;
         image.alt = "Image model still for the selected prompt";

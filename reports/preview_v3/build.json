@@ -1,0 +1,7 @@
+{
+  "build_id": "4fc00bf6-d3aa-4a03-811c-392459b6b974",
+  "input_sha256": "960f56aebdaccfdb2e87c4870f647e565b3b0ae68d2f27d2519bd03de2ce0ff0",
+  "region": "asia-southeast1",
+  "status": "SUCCESS",
+  "image_tag": "asia-southeast1-docker.pkg.dev/[PROJECT]/preflight/app:960f56aebdaccfdb2e87"
+}

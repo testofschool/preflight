@@ -1,0 +1,6 @@
+{
+  "files_checked": 441,
+  "dataless_count": 0,
+  "initial_readable_files": 428,
+  "method": "Every workspace file read; initial iCloud pyc placeholders materialized with brctl; final dataless flag check before candidate build"
+}

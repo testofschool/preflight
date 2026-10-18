@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 from PIL import Image
 
 from app import create_app
-from cloud.preview import CAPTION, PRIMARY
+from cloud.preview import CAPTION, PRIMARY, FALLBACK, PreviewResult
 from cloud.store import FirestoreDifficultyStore
 from test_cloud_api import ConnectedRewrite
 from test_store import MemoryClient
@@ -28,6 +28,7 @@ class PreviewStore(FirestoreDifficultyStore):
 
 class Provider:
     model, size = PRIMARY, "1K"
+    cache_models = [(PRIMARY, "1K"), (FALLBACK, "0.5K")]
 
     def __init__(self):
         self.calls = 0
@@ -35,9 +36,9 @@ class Provider:
         Image.new("RGB", (160, 90), "green").save(buffer, "JPEG", quality=82)
         self.jpeg = buffer.getvalue()
 
-    async def generate(self, prompt):
+    async def generate(self, prompt, **kwargs):
         self.calls += 1
-        return self.jpeg
+        return PreviewResult(self.jpeg, self.model, self.size, .0336, 1, False)
 
 
 @pytest.fixture
@@ -93,14 +94,14 @@ def test_oversized_image_not_cached(connected):
 
 def test_provider_exception_is_redacted(connected):
     client, _, provider = connected
-    async def fail(prompt):
+    async def fail(prompt, **kwargs):
         raise RuntimeError("private provider message")
     provider.generate = fail
     result = call(client)
     assert result.status_code == 503
     assert result.headers["x-preflight-error"] == "RuntimeError"
     assert "private provider message" not in result.text
-    assert result.json()["detail"] == "Preview is unavailable right now. The risk check still works."
+    assert result.json()["detail"] == "Preview is busy right now — try again in a minute. The risk check still works."
 
 
 def test_unknown_field_forbidden(connected):
@@ -115,7 +116,7 @@ def test_caption_exact(connected):
 def test_local_preview_unavailable():
     with TestClient(create_app(mode="local-g0")) as client:
         assert client.get("/api/status").json()["preview"] is False
-        assert call(client).json()["detail"] == "Preview needs the connected service."
+        assert call(client).json()["detail"] == "Preview is busy right now — try again in a minute. The risk check still works."
 
 
 def test_ceiling_and_utc_reset(connected, monkeypatch):
@@ -129,3 +130,57 @@ def test_ceiling_and_utc_reset(connected, monkeypatch):
     store.client.documents["service_v1/preview-budget"]["day"] = "2000-01-01"
     store.admit_preview()
     assert store.client.documents["service_v1/preview-budget"]["day_count"] == 1
+
+
+def test_fallback_is_cached_under_actual_model_and_reported(connected):
+    import hashlib
+    import json
+    client, store, provider = connected
+    async def fallback(prompt, **kwargs):
+        provider.calls += 3
+        return PreviewResult(provider.jpeg, FALLBACK, "0.5K", .045, 3, True)
+    provider.generate = fallback
+    first = call(client)
+    assert first.status_code == 200
+    data = first.json()
+    assert (data["model"], data["size"], data["cost_usd"], data["attempts"], data["fallback_used"], data["model_calls"]) == (
+        FALLBACK, "0.5K", .045, 3, True, 3)
+    key = hashlib.sha256(json.dumps(["preview-v1", "a cat and a dog", FALLBACK, "0.5K"],
+        separators=(",", ":")).encode()).hexdigest()
+    assert "previews_v1/" + key in store.client.documents
+    second = call(client)
+    assert second.headers["x-preview-cache"] == "hit"
+    assert (second.json()["model"], second.json()["attempts"], second.json()["model_calls"], second.json()["fallback_used"]) == (
+        FALLBACK, 0, 0, True)
+    assert provider.calls == 3
+
+
+def test_primary_cache_is_preferred_over_fallback(connected):
+    import hashlib
+    import json
+    client, store, provider = connected
+    for model, size in provider.cache_models:
+        key = hashlib.sha256(json.dumps(["preview-v1", "a cat and a dog", model, size], separators=(",", ":")).encode()).hexdigest()
+        store.save_preview(key, {"bytes": provider.jpeg, "model": model, "size": size})
+    response = call(client)
+    assert response.headers["x-preview-cache"] == "hit"
+    assert response.json()["model"] == PRIMARY
+    assert response.json()["fallback_used"] is False
+    assert provider.calls == 0
+
+
+def test_failure_keeps_attempt_receipt_without_provider_detail(connected):
+    from cloud.preview import PreviewGenerationError
+    client, _, provider = connected
+    trail = [{"model": PRIMARY, "size": "1K", "attempt": 1, "outcome": "retryable_error", "code": 503},
+             {"model": PRIMARY, "size": "1K", "attempt": 2, "outcome": "retryable_error", "code": 503},
+             {"model": FALLBACK, "size": "0.5K", "attempt": 3, "outcome": "timeout"}]
+    async def fail(prompt, **kwargs):
+        raise PreviewGenerationError(attempts=3, model=FALLBACK, fallback_used=True, model_attempts=trail)
+    provider.generate = fail
+    response = call(client)
+    assert response.status_code == 503
+    assert response.json()["attempts"] == response.json()["model_calls"] == 3
+    assert response.json()["fallback_used"] is True
+    assert response.json()["model"] == FALLBACK
+    assert response.json()["model_attempts"] == trail

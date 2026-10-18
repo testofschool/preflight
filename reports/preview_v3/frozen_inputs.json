@@ -1,0 +1,110 @@
+[
+  {
+    "file": "Dockerfile",
+    "before_bytes": 787,
+    "after_bytes": 787,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa",
+    "after_sha256": "eec8585f0efaf92acba744850a26612b956e4849180d3672e8b82356b115a3fa"
+  },
+  {
+    "file": "requirements-cloud.txt",
+    "before_bytes": 136,
+    "after_bytes": 136,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "255c6ca0e2b42e841aabef498310cadc82078a8b560ba4b8beb585226ea8dcf6",
+    "after_sha256": "255c6ca0e2b42e841aabef498310cadc82078a8b560ba4b8beb585226ea8dcf6"
+  },
+  {
+    "file": "requirements-cloud.lock",
+    "before_bytes": 2553,
+    "after_bytes": 2553,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda",
+    "after_sha256": "5a1f55003ac63c77bbdae66d35e14c415de7d8af93a159bba8b7ef871137cbda"
+  },
+  {
+    "file": "requirements.txt",
+    "before_bytes": 141,
+    "after_bytes": 141,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "947ba93af6167710740a7ec3c3af354abcfa5c0d050b042cdb6ad4ef0f2d899d",
+    "after_sha256": "947ba93af6167710740a7ec3c3af354abcfa5c0d050b042cdb6ad4ef0f2d899d"
+  },
+  {
+    "file": "requirements.lock",
+    "before_bytes": 557,
+    "after_bytes": 557,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "fd0d204bd658866e0c4ea5739164346318fa456a6089e6fc4cd6ce959c2c7b09",
+    "after_sha256": "fd0d204bd658866e0c4ea5739164346318fa456a6089e6fc4cd6ce959c2c7b09"
+  },
+  {
+    "file": "scripts/release_cloud.py",
+    "before_bytes": 6645,
+    "after_bytes": 6645,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "bd731c420fa32d53ab0ce8ce09d738d129db800f1905e7a2efa39faaf5dec1f0",
+    "after_sha256": "bd731c420fa32d53ab0ce8ce09d738d129db800f1905e7a2efa39faaf5dec1f0"
+  },
+  {
+    "file": "cloudbuild.yaml",
+    "before_bytes": 145,
+    "after_bytes": 145,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01",
+    "after_sha256": "a5a20cd2108c9d657e1beb0ec27c128e584d6306f3fcb001f8db887a23a65f01"
+  },
+  {
+    "file": "cloud/store.py",
+    "before_bytes": 18244,
+    "after_bytes": 18244,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550",
+    "after_sha256": "4ed0eab285f68c4b70c5c6987e0188f089d1ca427e19e77e1a44dac24f377550"
+  },
+  {
+    "file": "cloud/rewrite_agent.py",
+    "before_bytes": 20199,
+    "after_bytes": 20199,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+    "after_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35"
+  },
+  {
+    "file": "cloud/postcheck.py",
+    "before_bytes": 18142,
+    "after_bytes": 18142,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979",
+    "after_sha256": "b0b408320a56bbda7c3db051e5d3bfac23c4fd1a8198df1fe4390c3bf4b7a979"
+  },
+  {
+    "file": "static/index.html",
+    "before_bytes": 12964,
+    "after_bytes": 12964,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792",
+    "after_sha256": "471aadd24485949fa35bb8d4a858b3c0e2cc666baedf35f3b166d8b1be7df792"
+  },
+  {
+    "file": "static/styles.css",
+    "before_bytes": 25464,
+    "after_bytes": 25464,
+    "byte_delta": 0,
+    "identical": true,
+    "before_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58",
+    "after_sha256": "eb8a45b5c85d5f533cbde1adf4e6e96f697a0a9f2a07ebc05722919cb2d19b58"
+  }
+]

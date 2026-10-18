@@ -1,0 +1,120 @@
+{
+  "checked_at_utc": "2026-10-18T09:28:25.699104+00:00",
+  "audit_mode": "existing receipt files and source only",
+  "new_live_gate_or_model_calls": 0,
+  "cloud_or_billing_settings_changes": 0,
+  "receipt_snapshot": "reports/track_j/cost_receipt_scan_rows.json",
+  "receipt_snapshot_sha256": "2f1495c481fee9f657f55bbeacf426304287dae65592ce963c917937998b8a55",
+  "source_sha256": "8a2635e7ad429e91eae3e525ff60423ad8005cc14e4f8955e2610be139407d35",
+  "code_model_request_limits_per_check": {
+    "planner": 6,
+    "candidate_rewrite": 1,
+    "code_evidence": [
+      {
+        "file": "cloud/rewrite_agent.py",
+        "start_line": 230,
+        "end_line": 241,
+        "exact_source": "        proposal_task: asyncio.Task | None = None\n\n        async def rewrite(prompt: str, reasons: list[str]) -> dict:\n            \"\"\"Ask Gemini for meaning-preserving candidates using the retrieved historical evidence.\"\"\"\n            nonlocal proposal_task\n            if prompt != original:\n                raise RewriteUnavailable(\"Rewrite tool must preserve the original request\")\n            if proposal_task is None:\n                state[\"candidate_model_calls\"] += 1\n                proposal_task = asyncio.create_task(\n                    self.candidate_generator(original, reasons[:2], state.get(\"evidence\", []))\n                )"
+      },
+      {
+        "file": "cloud/rewrite_agent.py",
+        "start_line": 271,
+        "end_line": 277,
+        "exact_source": "            if state[\"phase\"] == \"complete\":\n                return LlmResponse(content=types.Content(role=\"model\", parts=[types.Part(text=\"Rewrite candidates were measured; server guard will select a strict improvement only.\")]))\n            if state[\"planner_calls\"] >= 6:\n                raise RewriteUnavailable(\"Gemini did not finish the required tool phases\")\n            state[\"planner_calls\"] += 1\n            llm_request.config.tool_config = types.ToolConfig(\n                function_calling_config=types.FunctionCallingConfig(mode=\"ANY\", allowed_function_names=allowed)"
+      },
+      {
+        "file": "cloud/rewrite_agent.py",
+        "start_line": 313,
+        "end_line": 317,
+        "exact_source": "                async for event in runner.run_async(\n                    user_id=user_id,\n                    session_id=session.id,\n                    new_message=types.Content(role=\"user\", parts=[types.Part(text=original)]),\n                    run_config=RunConfig(max_llm_calls=8),"
+      }
+    ],
+    "interpretation": "The before-model scheduler rejects the seventh planner model request. The rewrite tool creates and stores one shared candidate-generation task; later rewrite tool invocations await the same task. RunConfig max_llm_calls=8 is a separate looser runner limit."
+  },
+  "maxima": {
+    "planner": {
+      "recorded_calls": 378,
+      "maximum_input_call": {
+        "stage": "planner",
+        "prompt_tokens": 5058,
+        "output_tokens": 169,
+        "receipt": "reports/cloud_latency.json",
+        "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+        "json_pointer": "$/validation/5/response/agent_trace/token_usage/3",
+        "usage": {
+          "stage": "planner",
+          "prompt_token_count": 5058,
+          "candidates_token_count": 169,
+          "total_token_count": 5227
+        }
+      },
+      "maximum_output_call": {
+        "stage": "planner",
+        "prompt_tokens": 5058,
+        "output_tokens": 169,
+        "receipt": "reports/cloud_latency.json",
+        "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+        "json_pointer": "$/validation/5/response/agent_trace/token_usage/3",
+        "usage": {
+          "stage": "planner",
+          "prompt_token_count": 5058,
+          "candidates_token_count": 169,
+          "total_token_count": 5227
+        }
+      }
+    },
+    "rewrite": {
+      "recorded_calls": 126,
+      "maximum_input_call": {
+        "stage": "rewrite",
+        "prompt_tokens": 911,
+        "output_tokens": 128,
+        "receipt": "reports/postcheck_canary_live.json",
+        "receipt_sha256": "427ce70a820c26cd62c80e0ee02e0b23155d1768a505954e9673efd65e698ef3",
+        "json_pointer": "$/rows/2/attempt/response/agent_trace/token_usage/2",
+        "usage": {
+          "stage": "rewrite",
+          "prompt_token_count": 911,
+          "candidates_token_count": 128,
+          "total_token_count": 1039
+        }
+      },
+      "maximum_output_call": {
+        "stage": "rewrite",
+        "prompt_tokens": 840,
+        "output_tokens": 151,
+        "receipt": "reports/cloud_latency.json",
+        "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+        "json_pointer": "$/validation/5/response/agent_trace/token_usage/2",
+        "usage": {
+          "stage": "rewrite",
+          "prompt_token_count": 840,
+          "candidates_token_count": 151,
+          "total_token_count": 991
+        }
+      }
+    }
+  },
+  "envelope_tokens_per_check": {
+    "input": 31259,
+    "output_response_and_reasoning": 1165
+  },
+  "standard_regional_gemini_35_flash_list_price_usd_per_million": {
+    "input": "1.65",
+    "output_response_and_reasoning": "9.90",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+  },
+  "per_check_envelope_usd": "0.06311085",
+  "additional_checks": 2000,
+  "projection_2000_checks_usd": "126.22170000",
+  "formula": "2000 * (((6*5058 + 911)*1.65 + (6*169 + 151)*9.90) / 1000000) = 126.2217 USD",
+  "interpretation": "Recorded per-call input/output maxima expanded to all 6 planner +1 candidate-generation calls allowed by current code. This is a conservative receipt-based call-limit envelope, not a guaranteed future spending bound.",
+  "guaranteed_future_hard_upper_bound": "UNVERIFIABLE_FROM_RECORDED_TOKEN_COUNTS",
+  "limitations": [
+    "Planner and candidate output/input maxima can come from different recorded calls.",
+    "Future per-call inputs may exceed observed maxima, including larger prompts or growing reused session history.",
+    "Future output can exceed recorded output maxima; code max_output_tokens values are 2000 per planner and1000 for candidate generation, rather than169/151 observed maxima.",
+    "Failed/partial calls and thoughts metadata missing from completed response receipts can prevent complete inference accounting.",
+    "Covers only Gemini text inference for preflight; excludes infrastructure, managed sessions, postcheck/video, taxes, credits, and future price changes."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "additional_subtest_count": 11,
+  "adjusted_boundary_test": "test_total_request_limit_accepts_3000_and_rejects_invalid_settings",
+  "errors": 0,
+  "failures": 0,
+  "pass": true,
+  "recorded_at_kst": "2026-10-18T18:34:16.593803+09:00",
+  "skipped": 0,
+  "source_commit": "59fb23b262af480709461b648e84d26010e26060",
+  "store_sha256": "6c134b90f67d6579ff0d2f2519b8477009c6563bdeeec693328940e9358b8ff3",
+  "testcase_rows": 201,
+  "tests": 212,
+  "xml_path": "reports/track_j/tests.xml",
+  "xml_sha256": "1f550b739b8fbde78a08c3012fe9bb24e45fca105b8800c99382cc061279dede"
+}

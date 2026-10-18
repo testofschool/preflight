@@ -1,0 +1,4793 @@
+{
+  "checked_at_utc": "2026-10-18T09:16:56.137974+00:00",
+  "rows": [
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/calibration/0/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2464,
+      "candidate_tokens": 347,
+      "billable_output_tokens_including_total_residual": 347,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 624,
+          "candidates_token_count": 82,
+          "total_token_count": 706
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 104,
+          "total_token_count": 936
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 782,
+          "candidates_token_count": 122,
+          "total_token_count": 904
+        }
+      ],
+      "list_price_usd_per_check": "0.0075009"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/calibration/1/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5017,
+      "candidate_tokens": 342,
+      "billable_output_tokens_including_total_residual": 342,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1078,
+          "candidates_token_count": 39,
+          "total_token_count": 1117
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1476,
+          "candidates_token_count": 82,
+          "total_token_count": 1558
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 102,
+          "total_token_count": 934
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1631,
+          "candidates_token_count": 119,
+          "total_token_count": 1750
+        }
+      ],
+      "list_price_usd_per_check": "0.01166385"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/calibration/2/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7541,
+      "candidate_tokens": 366,
+      "billable_output_tokens_including_total_residual": 366,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1899,
+          "candidates_token_count": 39,
+          "total_token_count": 1938
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2307,
+          "candidates_token_count": 91,
+          "total_token_count": 2398
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 856,
+          "candidates_token_count": 109,
+          "total_token_count": 965
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2479,
+          "candidates_token_count": 127,
+          "total_token_count": 2606
+        }
+      ],
+      "list_price_usd_per_check": "0.01606605"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/calibration/3/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10034,
+      "candidate_tokens": 382,
+      "billable_output_tokens_including_total_residual": 382,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2738,
+          "candidates_token_count": 39,
+          "total_token_count": 2777
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3135,
+          "candidates_token_count": 91,
+          "total_token_count": 3226
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 846,
+          "candidates_token_count": 117,
+          "total_token_count": 963
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3315,
+          "candidates_token_count": 135,
+          "total_token_count": 3450
+        }
+      ],
+      "list_price_usd_per_check": "0.0203379"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/calibration/4/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12419,
+      "candidate_tokens": 320,
+      "billable_output_tokens_including_total_residual": 320,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3606,
+          "candidates_token_count": 33,
+          "total_token_count": 3639
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3932,
+          "candidates_token_count": 87,
+          "total_token_count": 4019
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 799,
+          "candidates_token_count": 91,
+          "total_token_count": 890
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4082,
+          "candidates_token_count": 109,
+          "total_token_count": 4191
+        }
+      ],
+      "list_price_usd_per_check": "0.02365935"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/calibration/5/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14827,
+      "candidate_tokens": 336,
+      "billable_output_tokens_including_total_residual": 336,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4353,
+          "candidates_token_count": 35,
+          "total_token_count": 4388
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4739,
+          "candidates_token_count": 87,
+          "total_token_count": 4826
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 839,
+          "candidates_token_count": 98,
+          "total_token_count": 937
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4896,
+          "candidates_token_count": 116,
+          "total_token_count": 5012
+        }
+      ],
+      "list_price_usd_per_check": "0.02779095"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2490,
+      "candidate_tokens": 384,
+      "billable_output_tokens_including_total_residual": 384,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 624,
+          "candidates_token_count": 87,
+          "total_token_count": 711
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 837,
+          "candidates_token_count": 120,
+          "total_token_count": 957
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 803,
+          "candidates_token_count": 138,
+          "total_token_count": 941
+        }
+      ],
+      "list_price_usd_per_check": "0.0079101"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5114,
+      "candidate_tokens": 374,
+      "billable_output_tokens_including_total_residual": 374,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1100,
+          "candidates_token_count": 39,
+          "total_token_count": 1139
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1498,
+          "candidates_token_count": 87,
+          "total_token_count": 1585
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 837,
+          "candidates_token_count": 108,
+          "total_token_count": 945
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1679,
+          "candidates_token_count": 140,
+          "total_token_count": 1819
+        }
+      ],
+      "list_price_usd_per_check": "0.0121407"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7735,
+      "candidate_tokens": 370,
+      "billable_output_tokens_including_total_residual": 370,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1965,
+          "candidates_token_count": 39,
+          "total_token_count": 2004
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2373,
+          "candidates_token_count": 87,
+          "total_token_count": 2460
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 852,
+          "candidates_token_count": 113,
+          "total_token_count": 965
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2545,
+          "candidates_token_count": 131,
+          "total_token_count": 2676
+        }
+      ],
+      "list_price_usd_per_check": "0.01642575"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10229,
+      "candidate_tokens": 364,
+      "billable_output_tokens_including_total_residual": 364,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2808,
+          "candidates_token_count": 39,
+          "total_token_count": 2847
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3205,
+          "candidates_token_count": 87,
+          "total_token_count": 3292
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 842,
+          "candidates_token_count": 110,
+          "total_token_count": 952
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3374,
+          "candidates_token_count": 128,
+          "total_token_count": 3502
+        }
+      ],
+      "list_price_usd_per_check": "0.02048145"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12606,
+      "candidate_tokens": 391,
+      "billable_output_tokens_including_total_residual": 391,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3656,
+          "candidates_token_count": 33,
+          "total_token_count": 3689
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3982,
+          "candidates_token_count": 88,
+          "total_token_count": 4070
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 800,
+          "candidates_token_count": 126,
+          "total_token_count": 926
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4168,
+          "candidates_token_count": 144,
+          "total_token_count": 4312
+        }
+      ],
+      "list_price_usd_per_check": "0.0246708"
+    },
+    {
+      "receipt": "reports/cloud_latency.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 15206,
+      "candidate_tokens": 443,
+      "billable_output_tokens_including_total_residual": 443,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4461,
+          "candidates_token_count": 35,
+          "total_token_count": 4496
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4847,
+          "candidates_token_count": 88,
+          "total_token_count": 4935
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 840,
+          "candidates_token_count": 151,
+          "total_token_count": 991
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 5058,
+          "candidates_token_count": 169,
+          "total_token_count": 5227
+        }
+      ],
+      "list_price_usd_per_check": "0.0294756"
+    },
+    {
+      "receipt": "reports/cloud_latency_cd.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "70dd2b8f2f3afc443a3c1da401c6a403fe7cd037646e9a2db4d388a488839ae1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2513,
+      "candidate_tokens": 376,
+      "billable_output_tokens_including_total_residual": 376,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 77,
+          "total_token_count": 717
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 827,
+          "candidates_token_count": 114,
+          "total_token_count": 941
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 816,
+          "candidates_token_count": 146,
+          "total_token_count": 962
+        }
+      ],
+      "list_price_usd_per_check": "0.00786885"
+    },
+    {
+      "receipt": "reports/cloud_latency_cd.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "70dd2b8f2f3afc443a3c1da401c6a403fe7cd037646e9a2db4d388a488839ae1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5136,
+      "candidate_tokens": 371,
+      "billable_output_tokens_including_total_residual": 371,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1109,
+          "candidates_token_count": 39,
+          "total_token_count": 1148
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1519,
+          "candidates_token_count": 74,
+          "total_token_count": 1593
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 824,
+          "candidates_token_count": 120,
+          "total_token_count": 944
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1684,
+          "candidates_token_count": 138,
+          "total_token_count": 1822
+        }
+      ],
+      "list_price_usd_per_check": "0.0121473"
+    },
+    {
+      "receipt": "reports/cloud_latency_cd.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "70dd2b8f2f3afc443a3c1da401c6a403fe7cd037646e9a2db4d388a488839ae1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7770,
+      "candidate_tokens": 340,
+      "billable_output_tokens_including_total_residual": 340,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1980,
+          "candidates_token_count": 39,
+          "total_token_count": 2019
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2400,
+          "candidates_token_count": 75,
+          "total_token_count": 2475
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 840,
+          "candidates_token_count": 104,
+          "total_token_count": 944
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2550,
+          "candidates_token_count": 122,
+          "total_token_count": 2672
+        }
+      ],
+      "list_price_usd_per_check": "0.0161865"
+    },
+    {
+      "receipt": "reports/cloud_latency_cd.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "70dd2b8f2f3afc443a3c1da401c6a403fe7cd037646e9a2db4d388a488839ae1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10257,
+      "candidate_tokens": 347,
+      "billable_output_tokens_including_total_residual": 347,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2818,
+          "candidates_token_count": 39,
+          "total_token_count": 2857
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3227,
+          "candidates_token_count": 76,
+          "total_token_count": 3303
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 831,
+          "candidates_token_count": 107,
+          "total_token_count": 938
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3381,
+          "candidates_token_count": 125,
+          "total_token_count": 3506
+        }
+      ],
+      "list_price_usd_per_check": "0.02035935"
+    },
+    {
+      "receipt": "reports/cloud_latency_cd.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "70dd2b8f2f3afc443a3c1da401c6a403fe7cd037646e9a2db4d388a488839ae1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12571,
+      "candidate_tokens": 359,
+      "billable_output_tokens_including_total_residual": 359,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3649,
+          "candidates_token_count": 33,
+          "total_token_count": 3682
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3987,
+          "candidates_token_count": 74,
+          "total_token_count": 4061
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 786,
+          "candidates_token_count": 117,
+          "total_token_count": 903
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4149,
+          "candidates_token_count": 135,
+          "total_token_count": 4284
+        }
+      ],
+      "list_price_usd_per_check": "0.02429625"
+    },
+    {
+      "receipt": "reports/cloud_latency_cd.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "70dd2b8f2f3afc443a3c1da401c6a403fe7cd037646e9a2db4d388a488839ae1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 15101,
+      "candidate_tokens": 329,
+      "billable_output_tokens_including_total_residual": 329,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4445,
+          "candidates_token_count": 35,
+          "total_token_count": 4480
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4843,
+          "candidates_token_count": 73,
+          "total_token_count": 4916
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 825,
+          "candidates_token_count": 102,
+          "total_token_count": 927
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4988,
+          "candidates_token_count": 119,
+          "total_token_count": 5107
+        }
+      ],
+      "list_price_usd_per_check": "0.02817375"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "117190d2ca33b0bab1da641913eb99885d4196851f0df8f8d9761994a0cffb2e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2479,
+      "candidate_tokens": 305,
+      "billable_output_tokens_including_total_residual": 305,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 78,
+          "total_token_count": 718
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 828,
+          "candidates_token_count": 78,
+          "total_token_count": 906
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 781,
+          "candidates_token_count": 110,
+          "total_token_count": 891
+        }
+      ],
+      "list_price_usd_per_check": "0.00710985"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "117190d2ca33b0bab1da641913eb99885d4196851f0df8f8d9761994a0cffb2e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 4872,
+      "candidate_tokens": 347,
+      "billable_output_tokens_including_total_residual": 347,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1023,
+          "candidates_token_count": 39,
+          "total_token_count": 1062
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1433,
+          "candidates_token_count": 78,
+          "total_token_count": 1511
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 828,
+          "candidates_token_count": 106,
+          "total_token_count": 934
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1588,
+          "candidates_token_count": 124,
+          "total_token_count": 1712
+        }
+      ],
+      "list_price_usd_per_check": "0.0114741"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "117190d2ca33b0bab1da641913eb99885d4196851f0df8f8d9761994a0cffb2e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7447,
+      "candidate_tokens": 330,
+      "billable_output_tokens_including_total_residual": 330,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1848,
+          "candidates_token_count": 39,
+          "total_token_count": 1887
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2292,
+          "candidates_token_count": 83,
+          "total_token_count": 2375
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 866,
+          "candidates_token_count": 95,
+          "total_token_count": 961
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2441,
+          "candidates_token_count": 113,
+          "total_token_count": 2554
+        }
+      ],
+      "list_price_usd_per_check": "0.01555455"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "117190d2ca33b0bab1da641913eb99885d4196851f0df8f8d9761994a0cffb2e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 9964,
+      "candidate_tokens": 307,
+      "billable_output_tokens_including_total_residual": 307,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2726,
+          "candidates_token_count": 39,
+          "total_token_count": 2765
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3135,
+          "candidates_token_count": 78,
+          "total_token_count": 3213
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 833,
+          "candidates_token_count": 86,
+          "total_token_count": 919
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3270,
+          "candidates_token_count": 104,
+          "total_token_count": 3374
+        }
+      ],
+      "list_price_usd_per_check": "0.0194799"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "117190d2ca33b0bab1da641913eb99885d4196851f0df8f8d9761994a0cffb2e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12221,
+      "candidate_tokens": 301,
+      "billable_output_tokens_including_total_residual": 301,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3545,
+          "candidates_token_count": 33,
+          "total_token_count": 3578
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3883,
+          "candidates_token_count": 68,
+          "total_token_count": 3951
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 780,
+          "candidates_token_count": 91,
+          "total_token_count": 871
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4013,
+          "candidates_token_count": 109,
+          "total_token_count": 4122
+        }
+      ],
+      "list_price_usd_per_check": "0.02314455"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "117190d2ca33b0bab1da641913eb99885d4196851f0df8f8d9761994a0cffb2e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14556,
+      "candidate_tokens": 289,
+      "billable_output_tokens_including_total_residual": 289,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4267,
+          "candidates_token_count": 35,
+          "total_token_count": 4302
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4665,
+          "candidates_token_count": 74,
+          "total_token_count": 4739
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 826,
+          "candidates_token_count": 74,
+          "total_token_count": 900
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4798,
+          "candidates_token_count": 106,
+          "total_token_count": 4904
+        }
+      ],
+      "list_price_usd_per_check": "0.0268785"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_before_status_restore.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "6639c202f6e78458e5601c24428e4d20a81200ba7d81b8330c567185556151a1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2487,
+      "candidate_tokens": 318,
+      "billable_output_tokens_including_total_residual": 318,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 79,
+          "total_token_count": 719
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 829,
+          "candidates_token_count": 84,
+          "total_token_count": 913
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 788,
+          "candidates_token_count": 116,
+          "total_token_count": 904
+        }
+      ],
+      "list_price_usd_per_check": "0.00725175"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_before_status_restore.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "6639c202f6e78458e5601c24428e4d20a81200ba7d81b8330c567185556151a1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 4951,
+      "candidate_tokens": 326,
+      "billable_output_tokens_including_total_residual": 326,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1050,
+          "candidates_token_count": 39,
+          "total_token_count": 1089
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1460,
+          "candidates_token_count": 79,
+          "total_token_count": 1539
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 829,
+          "candidates_token_count": 88,
+          "total_token_count": 917
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1612,
+          "candidates_token_count": 120,
+          "total_token_count": 1732
+        }
+      ],
+      "list_price_usd_per_check": "0.01139655"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_before_status_restore.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "6639c202f6e78458e5601c24428e4d20a81200ba7d81b8330c567185556151a1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7553,
+      "candidate_tokens": 345,
+      "billable_output_tokens_including_total_residual": 345,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1880,
+          "candidates_token_count": 39,
+          "total_token_count": 1919
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2324,
+          "candidates_token_count": 85,
+          "total_token_count": 2409
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 868,
+          "candidates_token_count": 102,
+          "total_token_count": 970
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2481,
+          "candidates_token_count": 119,
+          "total_token_count": 2600
+        }
+      ],
+      "list_price_usd_per_check": "0.01587795"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_before_status_restore.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "6639c202f6e78458e5601c24428e4d20a81200ba7d81b8330c567185556151a1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10091,
+      "candidate_tokens": 285,
+      "billable_output_tokens_including_total_residual": 285,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2772,
+          "candidates_token_count": 39,
+          "total_token_count": 2811
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3181,
+          "candidates_token_count": 78,
+          "total_token_count": 3259
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 833,
+          "candidates_token_count": 75,
+          "total_token_count": 908
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3305,
+          "candidates_token_count": 93,
+          "total_token_count": 3398
+        }
+      ],
+      "list_price_usd_per_check": "0.01947165"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_before_status_restore.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "6639c202f6e78458e5601c24428e4d20a81200ba7d81b8330c567185556151a1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12258,
+      "candidate_tokens": 315,
+      "billable_output_tokens_including_total_residual": 315,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3554,
+          "candidates_token_count": 33,
+          "total_token_count": 3587
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3892,
+          "candidates_token_count": 70,
+          "total_token_count": 3962
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 782,
+          "candidates_token_count": 97,
+          "total_token_count": 879
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4030,
+          "candidates_token_count": 115,
+          "total_token_count": 4145
+        }
+      ],
+      "list_price_usd_per_check": "0.0233442"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_before_status_restore.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "6639c202f6e78458e5601c24428e4d20a81200ba7d81b8330c567185556151a1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14628,
+      "candidate_tokens": 286,
+      "billable_output_tokens_including_total_residual": 286,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4292,
+          "candidates_token_count": 35,
+          "total_token_count": 4327
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4690,
+          "candidates_token_count": 73,
+          "total_token_count": 4763
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 825,
+          "candidates_token_count": 73,
+          "total_token_count": 898
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4821,
+          "candidates_token_count": 105,
+          "total_token_count": 4926
+        }
+      ],
+      "list_price_usd_per_check": "0.0269676"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_isolated.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "39fc8124e7474c14de9523a8602ec87ab951d74f6a3e5cbc2cb1f60b74c622c3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2498,
+      "candidate_tokens": 314,
+      "billable_output_tokens_including_total_residual": 314,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 87,
+          "total_token_count": 727
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 78,
+          "total_token_count": 916
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 790,
+          "candidates_token_count": 110,
+          "total_token_count": 900
+        }
+      ],
+      "list_price_usd_per_check": "0.0072303"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_isolated.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "39fc8124e7474c14de9523a8602ec87ab951d74f6a3e5cbc2cb1f60b74c622c3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5023,
+      "candidate_tokens": 306,
+      "billable_output_tokens_including_total_residual": 306,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1073,
+          "candidates_token_count": 39,
+          "total_token_count": 1112
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1483,
+          "candidates_token_count": 87,
+          "total_token_count": 1570
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 74,
+          "total_token_count": 912
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1629,
+          "candidates_token_count": 106,
+          "total_token_count": 1735
+        }
+      ],
+      "list_price_usd_per_check": "0.01131735"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_isolated.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "39fc8124e7474c14de9523a8602ec87ab951d74f6a3e5cbc2cb1f60b74c622c3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7551,
+      "candidate_tokens": 328,
+      "billable_output_tokens_including_total_residual": 328,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1882,
+          "candidates_token_count": 39,
+          "total_token_count": 1921
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2326,
+          "candidates_token_count": 85,
+          "total_token_count": 2411
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 868,
+          "candidates_token_count": 93,
+          "total_token_count": 961
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2475,
+          "candidates_token_count": 111,
+          "total_token_count": 2586
+        }
+      ],
+      "list_price_usd_per_check": "0.01570635"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_isolated.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "39fc8124e7474c14de9523a8602ec87ab951d74f6a3e5cbc2cb1f60b74c622c3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10087,
+      "candidate_tokens": 349,
+      "billable_output_tokens_including_total_residual": 349,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2760,
+          "candidates_token_count": 39,
+          "total_token_count": 2799
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3169,
+          "candidates_token_count": 78,
+          "total_token_count": 3247
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 833,
+          "candidates_token_count": 107,
+          "total_token_count": 940
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3325,
+          "candidates_token_count": 125,
+          "total_token_count": 3450
+        }
+      ],
+      "list_price_usd_per_check": "0.02009865"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_isolated.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "39fc8124e7474c14de9523a8602ec87ab951d74f6a3e5cbc2cb1f60b74c622c3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12477,
+      "candidate_tokens": 348,
+      "billable_output_tokens_including_total_residual": 348,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3620,
+          "candidates_token_count": 33,
+          "total_token_count": 3653
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3958,
+          "candidates_token_count": 73,
+          "total_token_count": 4031
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 785,
+          "candidates_token_count": 112,
+          "total_token_count": 897
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4114,
+          "candidates_token_count": 130,
+          "total_token_count": 4244
+        }
+      ],
+      "list_price_usd_per_check": "0.02403225"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_candidate_isolated.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "39fc8124e7474c14de9523a8602ec87ab951d74f6a3e5cbc2cb1f60b74c622c3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14994,
+      "candidate_tokens": 343,
+      "billable_output_tokens_including_total_residual": 343,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4404,
+          "candidates_token_count": 35,
+          "total_token_count": 4439
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4802,
+          "candidates_token_count": 79,
+          "total_token_count": 4881
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 831,
+          "candidates_token_count": 106,
+          "total_token_count": 937
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4957,
+          "candidates_token_count": 123,
+          "total_token_count": 5080
+        }
+      ],
+      "list_price_usd_per_check": "0.0281358"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "0fff8169afb8cf0ce8f81f465acce4676cc40e60aca9b217b333cc3d980e34d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2519,
+      "candidate_tokens": 382,
+      "billable_output_tokens_including_total_residual": 382,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 79,
+          "total_token_count": 719
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 829,
+          "candidates_token_count": 116,
+          "total_token_count": 945
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 820,
+          "candidates_token_count": 148,
+          "total_token_count": 968
+        }
+      ],
+      "list_price_usd_per_check": "0.00793815"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "0fff8169afb8cf0ce8f81f465acce4676cc40e60aca9b217b333cc3d980e34d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5138,
+      "candidate_tokens": 328,
+      "billable_output_tokens_including_total_residual": 328,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1112,
+          "candidates_token_count": 39,
+          "total_token_count": 1151
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1522,
+          "candidates_token_count": 79,
+          "total_token_count": 1601
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 829,
+          "candidates_token_count": 89,
+          "total_token_count": 918
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1675,
+          "candidates_token_count": 121,
+          "total_token_count": 1796
+        }
+      ],
+      "list_price_usd_per_check": "0.0117249"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "0fff8169afb8cf0ce8f81f465acce4676cc40e60aca9b217b333cc3d980e34d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7771,
+      "candidate_tokens": 342,
+      "billable_output_tokens_including_total_residual": 342,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1953,
+          "candidates_token_count": 39,
+          "total_token_count": 1992
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2397,
+          "candidates_token_count": 85,
+          "total_token_count": 2482
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 868,
+          "candidates_token_count": 100,
+          "total_token_count": 968
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2553,
+          "candidates_token_count": 118,
+          "total_token_count": 2671
+        }
+      ],
+      "list_price_usd_per_check": "0.01620795"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "0fff8169afb8cf0ce8f81f465acce4676cc40e60aca9b217b333cc3d980e34d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10317,
+      "candidate_tokens": 299,
+      "billable_output_tokens_including_total_residual": 299,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2845,
+          "candidates_token_count": 39,
+          "total_token_count": 2884
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3254,
+          "candidates_token_count": 78,
+          "total_token_count": 3332
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 833,
+          "candidates_token_count": 82,
+          "total_token_count": 915
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3385,
+          "candidates_token_count": 100,
+          "total_token_count": 3485
+        }
+      ],
+      "list_price_usd_per_check": "0.01998315"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "0fff8169afb8cf0ce8f81f465acce4676cc40e60aca9b217b333cc3d980e34d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12564,
+      "candidate_tokens": 324,
+      "billable_output_tokens_including_total_residual": 324,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3655,
+          "candidates_token_count": 33,
+          "total_token_count": 3688
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3993,
+          "candidates_token_count": 69,
+          "total_token_count": 4062
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 781,
+          "candidates_token_count": 102,
+          "total_token_count": 883
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4135,
+          "candidates_token_count": 120,
+          "total_token_count": 4255
+        }
+      ],
+      "list_price_usd_per_check": "0.0239382"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "0fff8169afb8cf0ce8f81f465acce4676cc40e60aca9b217b333cc3d980e34d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14988,
+      "candidate_tokens": 274,
+      "billable_output_tokens_including_total_residual": 274,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4414,
+          "candidates_token_count": 35,
+          "total_token_count": 4449
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4812,
+          "candidates_token_count": 73,
+          "total_token_count": 4885
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 825,
+          "candidates_token_count": 67,
+          "total_token_count": 892
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4937,
+          "candidates_token_count": 99,
+          "total_token_count": 5036
+        }
+      ],
+      "list_price_usd_per_check": "0.0274428"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary_before_status_restore.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "c54c236a9b28ad3a622b4da23aa8acab5b4d654f3af17167041e89e76bfc5993",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2517,
+      "candidate_tokens": 392,
+      "billable_output_tokens_including_total_residual": 392,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 79,
+          "total_token_count": 719
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 829,
+          "candidates_token_count": 128,
+          "total_token_count": 957
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 818,
+          "candidates_token_count": 146,
+          "total_token_count": 964
+        }
+      ],
+      "list_price_usd_per_check": "0.00803385"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary_before_status_restore.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "c54c236a9b28ad3a622b4da23aa8acab5b4d654f3af17167041e89e76bfc5993",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5127,
+      "candidate_tokens": 324,
+      "billable_output_tokens_including_total_residual": 324,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1109,
+          "candidates_token_count": 39,
+          "total_token_count": 1148
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1519,
+          "candidates_token_count": 79,
+          "total_token_count": 1598
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 829,
+          "candidates_token_count": 87,
+          "total_token_count": 916
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1670,
+          "candidates_token_count": 119,
+          "total_token_count": 1789
+        }
+      ],
+      "list_price_usd_per_check": "0.01166715"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary_before_status_restore.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "c54c236a9b28ad3a622b4da23aa8acab5b4d654f3af17167041e89e76bfc5993",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7691,
+      "candidate_tokens": 359,
+      "billable_output_tokens_including_total_residual": 359,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1924,
+          "candidates_token_count": 39,
+          "total_token_count": 1963
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2368,
+          "candidates_token_count": 84,
+          "total_token_count": 2452
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 867,
+          "candidates_token_count": 109,
+          "total_token_count": 976
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2532,
+          "candidates_token_count": 127,
+          "total_token_count": 2659
+        }
+      ],
+      "list_price_usd_per_check": "0.01624425"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary_before_status_restore.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "c54c236a9b28ad3a622b4da23aa8acab5b4d654f3af17167041e89e76bfc5993",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10277,
+      "candidate_tokens": 297,
+      "billable_output_tokens_including_total_residual": 297,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2832,
+          "candidates_token_count": 39,
+          "total_token_count": 2871
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3241,
+          "candidates_token_count": 78,
+          "total_token_count": 3319
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 833,
+          "candidates_token_count": 81,
+          "total_token_count": 914
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3371,
+          "candidates_token_count": 99,
+          "total_token_count": 3470
+        }
+      ],
+      "list_price_usd_per_check": "0.01989735"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary_before_status_restore.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "c54c236a9b28ad3a622b4da23aa8acab5b4d654f3af17167041e89e76bfc5993",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12510,
+      "candidate_tokens": 309,
+      "billable_output_tokens_including_total_residual": 309,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3639,
+          "candidates_token_count": 33,
+          "total_token_count": 3672
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3977,
+          "candidates_token_count": 70,
+          "total_token_count": 4047
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 782,
+          "candidates_token_count": 94,
+          "total_token_count": 876
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4112,
+          "candidates_token_count": 112,
+          "total_token_count": 4224
+        }
+      ],
+      "list_price_usd_per_check": "0.0237006"
+    },
+    {
+      "receipt": "reports/cloud_latency_d_primary_before_status_restore.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "c54c236a9b28ad3a622b4da23aa8acab5b4d654f3af17167041e89e76bfc5993",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14912,
+      "candidate_tokens": 313,
+      "billable_output_tokens_including_total_residual": 313,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4382,
+          "candidates_token_count": 35,
+          "total_token_count": 4417
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4780,
+          "candidates_token_count": 78,
+          "total_token_count": 4858
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 830,
+          "candidates_token_count": 91,
+          "total_token_count": 921
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4920,
+          "candidates_token_count": 109,
+          "total_token_count": 5029
+        }
+      ],
+      "list_price_usd_per_check": "0.0277035"
+    },
+    {
+      "receipt": "reports/cloud_latency_postcheck_release.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "beaa0a5dca68dd1189f33c6ebac941adf080e2b8c682fe948196365c6d9549d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2499,
+      "candidate_tokens": 359,
+      "billable_output_tokens_including_total_residual": 359,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 78,
+          "total_token_count": 718
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 828,
+          "candidates_token_count": 112,
+          "total_token_count": 940
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 801,
+          "candidates_token_count": 130,
+          "total_token_count": 931
+        }
+      ],
+      "list_price_usd_per_check": "0.00767745"
+    },
+    {
+      "receipt": "reports/cloud_latency_postcheck_release.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "beaa0a5dca68dd1189f33c6ebac941adf080e2b8c682fe948196365c6d9549d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5030,
+      "candidate_tokens": 385,
+      "billable_output_tokens_including_total_residual": 385,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1067,
+          "candidates_token_count": 39,
+          "total_token_count": 1106
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1477,
+          "candidates_token_count": 78,
+          "total_token_count": 1555
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 828,
+          "candidates_token_count": 118,
+          "total_token_count": 946
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1658,
+          "candidates_token_count": 150,
+          "total_token_count": 1808
+        }
+      ],
+      "list_price_usd_per_check": "0.012111"
+    },
+    {
+      "receipt": "reports/cloud_latency_postcheck_release.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "beaa0a5dca68dd1189f33c6ebac941adf080e2b8c682fe948196365c6d9549d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7737,
+      "candidate_tokens": 337,
+      "billable_output_tokens_including_total_residual": 337,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1969,
+          "candidates_token_count": 39,
+          "total_token_count": 2008
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2389,
+          "candidates_token_count": 76,
+          "total_token_count": 2465
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 841,
+          "candidates_token_count": 102,
+          "total_token_count": 943
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2538,
+          "candidates_token_count": 120,
+          "total_token_count": 2658
+        }
+      ],
+      "list_price_usd_per_check": "0.01610235"
+    },
+    {
+      "receipt": "reports/cloud_latency_postcheck_release.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "beaa0a5dca68dd1189f33c6ebac941adf080e2b8c682fe948196365c6d9549d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10238,
+      "candidate_tokens": 312,
+      "billable_output_tokens_including_total_residual": 312,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2817,
+          "candidates_token_count": 39,
+          "total_token_count": 2856
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3226,
+          "candidates_token_count": 77,
+          "total_token_count": 3303
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 89,
+          "total_token_count": 921
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3363,
+          "candidates_token_count": 107,
+          "total_token_count": 3470
+        }
+      ],
+      "list_price_usd_per_check": "0.0199815"
+    },
+    {
+      "receipt": "reports/cloud_latency_postcheck_release.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "beaa0a5dca68dd1189f33c6ebac941adf080e2b8c682fe948196365c6d9549d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12513,
+      "candidate_tokens": 316,
+      "billable_output_tokens_including_total_residual": 316,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3638,
+          "candidates_token_count": 33,
+          "total_token_count": 3671
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3976,
+          "candidates_token_count": 72,
+          "total_token_count": 4048
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 784,
+          "candidates_token_count": 97,
+          "total_token_count": 881
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4115,
+          "candidates_token_count": 114,
+          "total_token_count": 4229
+        }
+      ],
+      "list_price_usd_per_check": "0.02377485"
+    },
+    {
+      "receipt": "reports/cloud_latency_postcheck_release.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "beaa0a5dca68dd1189f33c6ebac941adf080e2b8c682fe948196365c6d9549d1",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14921,
+      "candidate_tokens": 307,
+      "billable_output_tokens_including_total_residual": 307,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4388,
+          "candidates_token_count": 35,
+          "total_token_count": 4423
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4786,
+          "candidates_token_count": 74,
+          "total_token_count": 4860
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 826,
+          "candidates_token_count": 90,
+          "total_token_count": 916
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4921,
+          "candidates_token_count": 108,
+          "total_token_count": 5029
+        }
+      ],
+      "list_price_usd_per_check": "0.02765895"
+    },
+    {
+      "receipt": "reports/final_v6/track_c_supplement_capture.json",
+      "json_pointer": "$/preflight_response/agent_trace",
+      "receipt_sha256": "b3f4bb3752ff9ff343335003becaefb23c3ff5924d1169fc50a0790c60691c57",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2656,
+      "candidate_tokens": 349,
+      "billable_output_tokens_including_total_residual": 349,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 236,
+          "candidates_token_count": 51,
+          "total_token_count": 287
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 689,
+          "candidates_token_count": 94,
+          "total_token_count": 783
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 884,
+          "candidates_token_count": 93,
+          "total_token_count": 977
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 847,
+          "candidates_token_count": 111,
+          "total_token_count": 958
+        }
+      ],
+      "list_price_usd_per_check": "0.0078375"
+    },
+    {
+      "receipt": "reports/postcheck_canary_live.json",
+      "json_pointer": "$/rows/2/attempt/response/agent_trace",
+      "receipt_sha256": "427ce70a820c26cd62c80e0ee02e0b23155d1768a505954e9673efd65e698ef3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2921,
+      "candidate_tokens": 486,
+      "billable_output_tokens_including_total_residual": 486,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 258,
+          "candidates_token_count": 95,
+          "total_token_count": 353
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 768,
+          "candidates_token_count": 117,
+          "total_token_count": 885
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 911,
+          "candidates_token_count": 128,
+          "total_token_count": 1039
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 984,
+          "candidates_token_count": 146,
+          "total_token_count": 1130
+        }
+      ],
+      "list_price_usd_per_check": "0.00963105"
+    },
+    {
+      "receipt": "reports/preview_v3/preflight_candidate.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "b2d78f3ed38a4ba5fc5206713c0ba9bf252e3190fa14784ba868c5fc4c0aa9bb",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2490,
+      "candidate_tokens": 312,
+      "billable_output_tokens_including_total_residual": 312,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 87,
+          "total_token_count": 727
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 84,
+          "total_token_count": 922
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 782,
+          "candidates_token_count": 102,
+          "total_token_count": 884
+        }
+      ],
+      "list_price_usd_per_check": "0.0071973"
+    },
+    {
+      "receipt": "reports/preview_v3/preflight_candidate.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "b2d78f3ed38a4ba5fc5206713c0ba9bf252e3190fa14784ba868c5fc4c0aa9bb",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 4928,
+      "candidate_tokens": 322,
+      "billable_output_tokens_including_total_residual": 322,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1041,
+          "candidates_token_count": 39,
+          "total_token_count": 1080
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1451,
+          "candidates_token_count": 87,
+          "total_token_count": 1538
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 89,
+          "total_token_count": 927
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1598,
+          "candidates_token_count": 107,
+          "total_token_count": 1705
+        }
+      ],
+      "list_price_usd_per_check": "0.011319"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_candidate.json",
+      "json_pointer": "$/rows/0/response/agent_trace",
+      "receipt_sha256": "5e7952f5a9e84402052aa283d079903cfde31d16262254096a33b5f5cc5bcc7c",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2632,
+      "candidate_tokens": 397,
+      "billable_output_tokens_including_total_residual": 397,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 675,
+          "candidates_token_count": 98,
+          "total_token_count": 773
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 862,
+          "candidates_token_count": 113,
+          "total_token_count": 975
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 857,
+          "candidates_token_count": 131,
+          "total_token_count": 988
+        }
+      ],
+      "list_price_usd_per_check": "0.0082731"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_candidate.json",
+      "json_pointer": "$/rows/1/response/agent_trace",
+      "receipt_sha256": "5e7952f5a9e84402052aa283d079903cfde31d16262254096a33b5f5cc5bcc7c",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2630,
+      "candidate_tokens": 402,
+      "billable_output_tokens_including_total_residual": 402,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 675,
+          "candidates_token_count": 95,
+          "total_token_count": 770
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 859,
+          "candidates_token_count": 117,
+          "total_token_count": 976
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 858,
+          "candidates_token_count": 135,
+          "total_token_count": 993
+        }
+      ],
+      "list_price_usd_per_check": "0.0083193"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_candidate.json",
+      "json_pointer": "$/rows/2/response/agent_trace",
+      "receipt_sha256": "5e7952f5a9e84402052aa283d079903cfde31d16262254096a33b5f5cc5bcc7c",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2670,
+      "candidate_tokens": 453,
+      "billable_output_tokens_including_total_residual": 453,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 678,
+          "candidates_token_count": 94,
+          "total_token_count": 772
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 861,
+          "candidates_token_count": 136,
+          "total_token_count": 997
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 893,
+          "candidates_token_count": 168,
+          "total_token_count": 1061
+        }
+      ],
+      "list_price_usd_per_check": "0.0088902"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_candidate.json",
+      "json_pointer": "$/rows/3/response/agent_trace",
+      "receipt_sha256": "5e7952f5a9e84402052aa283d079903cfde31d16262254096a33b5f5cc5bcc7c",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2602,
+      "candidate_tokens": 354,
+      "billable_output_tokens_including_total_residual": 354,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 680,
+          "candidates_token_count": 83,
+          "total_token_count": 763
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 851,
+          "candidates_token_count": 99,
+          "total_token_count": 950
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 833,
+          "candidates_token_count": 117,
+          "total_token_count": 950
+        }
+      ],
+      "list_price_usd_per_check": "0.0077979"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_candidate.json",
+      "json_pointer": "$/rows/4/response/agent_trace",
+      "receipt_sha256": "5e7952f5a9e84402052aa283d079903cfde31d16262254096a33b5f5cc5bcc7c",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2565,
+      "candidate_tokens": 358,
+      "billable_output_tokens_including_total_residual": 358,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 236,
+          "candidates_token_count": 51,
+          "total_token_count": 287
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 665,
+          "candidates_token_count": 77,
+          "total_token_count": 742
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 845,
+          "candidates_token_count": 106,
+          "total_token_count": 951
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 819,
+          "candidates_token_count": 124,
+          "total_token_count": 943
+        }
+      ],
+      "list_price_usd_per_check": "0.00777645"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_candidate.json",
+      "json_pointer": "$/rows/5/response/agent_trace",
+      "receipt_sha256": "5e7952f5a9e84402052aa283d079903cfde31d16262254096a33b5f5cc5bcc7c",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2473,
+      "candidate_tokens": 364,
+      "billable_output_tokens_including_total_residual": 364,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 235,
+          "candidates_token_count": 49,
+          "total_token_count": 284
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 618,
+          "candidates_token_count": 97,
+          "total_token_count": 715
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 827,
+          "candidates_token_count": 93,
+          "total_token_count": 920
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 793,
+          "candidates_token_count": 125,
+          "total_token_count": 918
+        }
+      ],
+      "list_price_usd_per_check": "0.00768405"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_warm_candidate.json",
+      "json_pointer": "$/rows/0/response/agent_trace",
+      "receipt_sha256": "ba540ea8d226e416fa699a8c080b7ddb4badb5c79402e0b6a3f38dbce824462e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2632,
+      "candidate_tokens": 388,
+      "billable_output_tokens_including_total_residual": 388,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 675,
+          "candidates_token_count": 101,
+          "total_token_count": 776
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 865,
+          "candidates_token_count": 107,
+          "total_token_count": 972
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 854,
+          "candidates_token_count": 125,
+          "total_token_count": 979
+        }
+      ],
+      "list_price_usd_per_check": "0.008184"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_warm_candidate.json",
+      "json_pointer": "$/rows/1/response/agent_trace",
+      "receipt_sha256": "ba540ea8d226e416fa699a8c080b7ddb4badb5c79402e0b6a3f38dbce824462e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2635,
+      "candidate_tokens": 394,
+      "billable_output_tokens_including_total_residual": 394,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 675,
+          "candidates_token_count": 101,
+          "total_token_count": 776
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 865,
+          "candidates_token_count": 110,
+          "total_token_count": 975
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 857,
+          "candidates_token_count": 128,
+          "total_token_count": 985
+        }
+      ],
+      "list_price_usd_per_check": "0.00824835"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_warm_candidate.json",
+      "json_pointer": "$/rows/2/response/agent_trace",
+      "receipt_sha256": "ba540ea8d226e416fa699a8c080b7ddb4badb5c79402e0b6a3f38dbce824462e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2636,
+      "candidate_tokens": 411,
+      "billable_output_tokens_including_total_residual": 411,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 678,
+          "candidates_token_count": 90,
+          "total_token_count": 768
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 857,
+          "candidates_token_count": 124,
+          "total_token_count": 981
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 863,
+          "candidates_token_count": 142,
+          "total_token_count": 1005
+        }
+      ],
+      "list_price_usd_per_check": "0.0084183"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_warm_candidate.json",
+      "json_pointer": "$/rows/3/response/agent_trace",
+      "receipt_sha256": "ba540ea8d226e416fa699a8c080b7ddb4badb5c79402e0b6a3f38dbce824462e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2603,
+      "candidate_tokens": 347,
+      "billable_output_tokens_including_total_residual": 347,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 238,
+          "candidates_token_count": 55,
+          "total_token_count": 293
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 680,
+          "candidates_token_count": 86,
+          "total_token_count": 766
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 854,
+          "candidates_token_count": 94,
+          "total_token_count": 948
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 831,
+          "candidates_token_count": 112,
+          "total_token_count": 943
+        }
+      ],
+      "list_price_usd_per_check": "0.00773025"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_warm_candidate.json",
+      "json_pointer": "$/rows/4/response/agent_trace",
+      "receipt_sha256": "ba540ea8d226e416fa699a8c080b7ddb4badb5c79402e0b6a3f38dbce824462e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2574,
+      "candidate_tokens": 364,
+      "billable_output_tokens_including_total_residual": 364,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 236,
+          "candidates_token_count": 51,
+          "total_token_count": 287
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 665,
+          "candidates_token_count": 81,
+          "total_token_count": 746
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 849,
+          "candidates_token_count": 107,
+          "total_token_count": 956
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 824,
+          "candidates_token_count": 125,
+          "total_token_count": 949
+        }
+      ],
+      "list_price_usd_per_check": "0.0078507"
+    },
+    {
+      "receipt": "reports/preview_v4/preflight_warm_candidate.json",
+      "json_pointer": "$/rows/5/response/agent_trace",
+      "receipt_sha256": "ba540ea8d226e416fa699a8c080b7ddb4badb5c79402e0b6a3f38dbce824462e",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2462,
+      "candidate_tokens": 357,
+      "billable_output_tokens_including_total_residual": 357,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 235,
+          "candidates_token_count": 49,
+          "total_token_count": 284
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 618,
+          "candidates_token_count": 97,
+          "total_token_count": 715
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 827,
+          "candidates_token_count": 97,
+          "total_token_count": 924
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 782,
+          "candidates_token_count": 114,
+          "total_token_count": 896
+        }
+      ],
+      "list_price_usd_per_check": "0.0075966"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/samples/0/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2500,
+      "candidate_tokens": 332,
+      "billable_output_tokens_including_total_residual": 332,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 87,
+          "total_token_count": 727
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 94,
+          "total_token_count": 932
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 792,
+          "candidates_token_count": 112,
+          "total_token_count": 904
+        }
+      ],
+      "list_price_usd_per_check": "0.0074118"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/samples/1/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2611,
+      "candidate_tokens": 351,
+      "billable_output_tokens_including_total_residual": 351,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 674,
+          "candidates_token_count": 88,
+          "total_token_count": 762
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 871,
+          "candidates_token_count": 103,
+          "total_token_count": 974
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 836,
+          "candidates_token_count": 121,
+          "total_token_count": 957
+        }
+      ],
+      "list_price_usd_per_check": "0.00778305"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/samples/2/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2472,
+      "candidate_tokens": 332,
+      "billable_output_tokens_including_total_residual": 332,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 639,
+          "candidates_token_count": 67,
+          "total_token_count": 706
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 822,
+          "candidates_token_count": 104,
+          "total_token_count": 926
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 781,
+          "candidates_token_count": 122,
+          "total_token_count": 903
+        }
+      ],
+      "list_price_usd_per_check": "0.0073656"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/samples/3/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2277,
+      "candidate_tokens": 328,
+      "billable_output_tokens_including_total_residual": 328,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 227,
+          "candidates_token_count": 33,
+          "total_token_count": 260
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 565,
+          "candidates_token_count": 66,
+          "total_token_count": 631
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 778,
+          "candidates_token_count": 106,
+          "total_token_count": 884
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 707,
+          "candidates_token_count": 123,
+          "total_token_count": 830
+        }
+      ],
+      "list_price_usd_per_check": "0.00700425"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/samples/4/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2453,
+      "candidate_tokens": 316,
+      "billable_output_tokens_including_total_residual": 316,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 228,
+          "candidates_token_count": 35,
+          "total_token_count": 263
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 626,
+          "candidates_token_count": 79,
+          "total_token_count": 705
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 831,
+          "candidates_token_count": 92,
+          "total_token_count": 923
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 768,
+          "candidates_token_count": 110,
+          "total_token_count": 878
+        }
+      ],
+      "list_price_usd_per_check": "0.00717585"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/bounded_gym_repeats/0/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2342,
+      "candidate_tokens": 382,
+      "billable_output_tokens_including_total_residual": 382,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 227,
+          "candidates_token_count": 33,
+          "total_token_count": 260
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 565,
+          "candidates_token_count": 91,
+          "total_token_count": 656
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 803,
+          "candidates_token_count": 120,
+          "total_token_count": 923
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 747,
+          "candidates_token_count": 138,
+          "total_token_count": 885
+        }
+      ],
+      "list_price_usd_per_check": "0.0076461"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/bounded_gym_repeats/1/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2332,
+      "candidate_tokens": 362,
+      "billable_output_tokens_including_total_residual": 362,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 227,
+          "candidates_token_count": 33,
+          "total_token_count": 260
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 565,
+          "candidates_token_count": 91,
+          "total_token_count": 656
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 803,
+          "candidates_token_count": 110,
+          "total_token_count": 913
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 737,
+          "candidates_token_count": 128,
+          "total_token_count": 865
+        }
+      ],
+      "list_price_usd_per_check": "0.0074316"
+    },
+    {
+      "receipt": "reports/preview_v4/sample_rewrites_acquisition.json",
+      "json_pointer": "$/bounded_gym_repeats/2/rewrite/agent_trace",
+      "receipt_sha256": "2c2d8ca8f644ddfad559dfb1c4bd3c25725f12f8a36d098fefa6e8f808153c76",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2338,
+      "candidate_tokens": 374,
+      "billable_output_tokens_including_total_residual": 374,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 227,
+          "candidates_token_count": 33,
+          "total_token_count": 260
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 565,
+          "candidates_token_count": 91,
+          "total_token_count": 656
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 803,
+          "candidates_token_count": 116,
+          "total_token_count": 919
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 743,
+          "candidates_token_count": 134,
+          "total_token_count": 877
+        }
+      ],
+      "list_price_usd_per_check": "0.0075603"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/0/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2308,
+      "candidate_tokens": 339,
+      "billable_output_tokens_including_total_residual": 339,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 225,
+          "candidates_token_count": 37,
+          "total_token_count": 262
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 562,
+          "candidates_token_count": 81,
+          "total_token_count": 643
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 805,
+          "candidates_token_count": 102,
+          "total_token_count": 907
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 716,
+          "candidates_token_count": 119,
+          "total_token_count": 835
+        }
+      ],
+      "list_price_usd_per_check": "0.0071643"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/1/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2521,
+      "candidate_tokens": 332,
+      "billable_output_tokens_including_total_residual": 332,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 634,
+          "candidates_token_count": 97,
+          "total_token_count": 731
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 862,
+          "candidates_token_count": 82,
+          "total_token_count": 944
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 799,
+          "candidates_token_count": 114,
+          "total_token_count": 913
+        }
+      ],
+      "list_price_usd_per_check": "0.00744645"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/2/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2316,
+      "candidate_tokens": 322,
+      "billable_output_tokens_including_total_residual": 322,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 568,
+          "candidates_token_count": 79,
+          "total_token_count": 647
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 810,
+          "candidates_token_count": 93,
+          "total_token_count": 903
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 712,
+          "candidates_token_count": 111,
+          "total_token_count": 823
+        }
+      ],
+      "list_price_usd_per_check": "0.0070092"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/3/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2458,
+      "candidate_tokens": 321,
+      "billable_output_tokens_including_total_residual": 321,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 624,
+          "candidates_token_count": 82,
+          "total_token_count": 706
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 84,
+          "total_token_count": 916
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 776,
+          "candidates_token_count": 116,
+          "total_token_count": 892
+        }
+      ],
+      "list_price_usd_per_check": "0.0072336"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/4/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2278,
+      "candidate_tokens": 306,
+      "billable_output_tokens_including_total_residual": 306,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 225,
+          "candidates_token_count": 37,
+          "total_token_count": 262
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 561,
+          "candidates_token_count": 73,
+          "total_token_count": 634
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 797,
+          "candidates_token_count": 89,
+          "total_token_count": 886
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 695,
+          "candidates_token_count": 107,
+          "total_token_count": 802
+        }
+      ],
+      "list_price_usd_per_check": "0.0067881"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/5/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2263,
+      "candidate_tokens": 285,
+      "billable_output_tokens_including_total_residual": 285,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 224,
+          "candidates_token_count": 35,
+          "total_token_count": 259
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 559,
+          "candidates_token_count": 86,
+          "total_token_count": 645
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 790,
+          "candidates_token_count": 73,
+          "total_token_count": 863
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 690,
+          "candidates_token_count": 91,
+          "total_token_count": 781
+        }
+      ],
+      "list_price_usd_per_check": "0.00655545"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/6/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2280,
+      "candidate_tokens": 282,
+      "billable_output_tokens_including_total_residual": 282,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 225,
+          "candidates_token_count": 37,
+          "total_token_count": 262
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 562,
+          "candidates_token_count": 82,
+          "total_token_count": 644
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 806,
+          "candidates_token_count": 74,
+          "total_token_count": 880
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 687,
+          "candidates_token_count": 89,
+          "total_token_count": 776
+        }
+      ],
+      "list_price_usd_per_check": "0.0065538"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/7/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2309,
+      "candidate_tokens": 350,
+      "billable_output_tokens_including_total_residual": 350,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 566,
+          "candidates_token_count": 79,
+          "total_token_count": 645
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 793,
+          "candidates_token_count": 107,
+          "total_token_count": 900
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 724,
+          "candidates_token_count": 125,
+          "total_token_count": 849
+        }
+      ],
+      "list_price_usd_per_check": "0.00727485"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/8/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2518,
+      "candidate_tokens": 363,
+      "billable_output_tokens_including_total_residual": 363,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 634,
+          "candidates_token_count": 90,
+          "total_token_count": 724
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 854,
+          "candidates_token_count": 108,
+          "total_token_count": 962
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 804,
+          "candidates_token_count": 126,
+          "total_token_count": 930
+        }
+      ],
+      "list_price_usd_per_check": "0.0077484"
+    },
+    {
+      "receipt": "reports/rewrites_live.json",
+      "json_pointer": "$/rows/9/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2439,
+      "candidate_tokens": 309,
+      "billable_output_tokens_including_total_residual": 309,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 623,
+          "candidates_token_count": 77,
+          "total_token_count": 700
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 89,
+          "total_token_count": 921
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 758,
+          "candidates_token_count": 104,
+          "total_token_count": 862
+        }
+      ],
+      "list_price_usd_per_check": "0.00708345"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/0/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2324,
+      "candidate_tokens": 298,
+      "billable_output_tokens_including_total_residual": 298,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 229,
+          "candidates_token_count": 37,
+          "total_token_count": 266
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 578,
+          "candidates_token_count": 81,
+          "total_token_count": 659
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 806,
+          "candidates_token_count": 81,
+          "total_token_count": 887
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 711,
+          "candidates_token_count": 99,
+          "total_token_count": 810
+        }
+      ],
+      "list_price_usd_per_check": "0.0067848"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/1/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2511,
+      "candidate_tokens": 319,
+      "billable_output_tokens_including_total_residual": 319,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 650,
+          "candidates_token_count": 76,
+          "total_token_count": 726
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 841,
+          "candidates_token_count": 93,
+          "total_token_count": 934
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 790,
+          "candidates_token_count": 111,
+          "total_token_count": 901
+        }
+      ],
+      "list_price_usd_per_check": "0.00730125"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/2/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2346,
+      "candidate_tokens": 321,
+      "billable_output_tokens_including_total_residual": 321,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 584,
+          "candidates_token_count": 76,
+          "total_token_count": 660
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 807,
+          "candidates_token_count": 94,
+          "total_token_count": 901
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 725,
+          "candidates_token_count": 112,
+          "total_token_count": 837
+        }
+      ],
+      "list_price_usd_per_check": "0.0070488"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/3/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2494,
+      "candidate_tokens": 306,
+      "billable_output_tokens_including_total_residual": 306,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 87,
+          "total_token_count": 727
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 74,
+          "total_token_count": 912
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 786,
+          "candidates_token_count": 106,
+          "total_token_count": 892
+        }
+      ],
+      "list_price_usd_per_check": "0.0071445"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/4/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2316,
+      "candidate_tokens": 324,
+      "billable_output_tokens_including_total_residual": 324,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 229,
+          "candidates_token_count": 37,
+          "total_token_count": 266
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 577,
+          "candidates_token_count": 69,
+          "total_token_count": 646
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 793,
+          "candidates_token_count": 100,
+          "total_token_count": 893
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 717,
+          "candidates_token_count": 118,
+          "total_token_count": 835
+        }
+      ],
+      "list_price_usd_per_check": "0.007029"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/5/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2324,
+      "candidate_tokens": 311,
+      "billable_output_tokens_including_total_residual": 311,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 228,
+          "candidates_token_count": 35,
+          "total_token_count": 263
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 575,
+          "candidates_token_count": 90,
+          "total_token_count": 665
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 794,
+          "candidates_token_count": 77,
+          "total_token_count": 871
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 727,
+          "candidates_token_count": 109,
+          "total_token_count": 836
+        }
+      ],
+      "list_price_usd_per_check": "0.0069135"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/6/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2294,
+      "candidate_tokens": 255,
+      "billable_output_tokens_including_total_residual": 255,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 229,
+          "candidates_token_count": 37,
+          "total_token_count": 266
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 578,
+          "candidates_token_count": 77,
+          "total_token_count": 655
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 801,
+          "candidates_token_count": 63,
+          "total_token_count": 864
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 686,
+          "candidates_token_count": 78,
+          "total_token_count": 764
+        }
+      ],
+      "list_price_usd_per_check": "0.0063096"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/7/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2326,
+      "candidate_tokens": 329,
+      "billable_output_tokens_including_total_residual": 329,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 582,
+          "candidates_token_count": 74,
+          "total_token_count": 656
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 788,
+          "candidates_token_count": 99,
+          "total_token_count": 887
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 726,
+          "candidates_token_count": 117,
+          "total_token_count": 843
+        }
+      ],
+      "list_price_usd_per_check": "0.007095"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/8/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2532,
+      "candidate_tokens": 366,
+      "billable_output_tokens_including_total_residual": 366,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 650,
+          "candidates_token_count": 75,
+          "total_token_count": 725
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 839,
+          "candidates_token_count": 117,
+          "total_token_count": 956
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 813,
+          "candidates_token_count": 135,
+          "total_token_count": 948
+        }
+      ],
+      "list_price_usd_per_check": "0.0078012"
+    },
+    {
+      "receipt": "reports/rewrites_postcheck_release.json",
+      "json_pointer": "$/rows/9/attempts/0/response/agent_trace",
+      "receipt_sha256": "aa91b71178543285c216a8f2177a8797048b8a25020af2859118f9757404d970",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2470,
+      "candidate_tokens": 328,
+      "billable_output_tokens_including_total_residual": 328,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 639,
+          "candidates_token_count": 67,
+          "total_token_count": 706
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 822,
+          "candidates_token_count": 102,
+          "total_token_count": 924
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 779,
+          "candidates_token_count": 120,
+          "total_token_count": 899
+        }
+      ],
+      "list_price_usd_per_check": "0.0073227"
+    },
+    {
+      "receipt": "reports/submission_closeout/cloud_latency.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "e4d47ab675f55d5b53e0f64f665e59716e727ec297d1734d270d78334c79d4e3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2512,
+      "candidate_tokens": 343,
+      "billable_output_tokens_including_total_residual": 343,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 230,
+          "candidates_token_count": 39,
+          "total_token_count": 269
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 640,
+          "candidates_token_count": 87,
+          "total_token_count": 727
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 93,
+          "total_token_count": 931
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 804,
+          "candidates_token_count": 124,
+          "total_token_count": 928
+        }
+      ],
+      "list_price_usd_per_check": "0.0075405"
+    },
+    {
+      "receipt": "reports/submission_closeout/cloud_latency.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "e4d47ab675f55d5b53e0f64f665e59716e727ec297d1734d270d78334c79d4e3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 4988,
+      "candidate_tokens": 316,
+      "billable_output_tokens_including_total_residual": 316,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1062,
+          "candidates_token_count": 39,
+          "total_token_count": 1101
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1472,
+          "candidates_token_count": 87,
+          "total_token_count": 1559
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 838,
+          "candidates_token_count": 86,
+          "total_token_count": 924
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1616,
+          "candidates_token_count": 104,
+          "total_token_count": 1720
+        }
+      ],
+      "list_price_usd_per_check": "0.0113586"
+    },
+    {
+      "receipt": "reports/submission_closeout/cloud_latency.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "e4d47ab675f55d5b53e0f64f665e59716e727ec297d1734d270d78334c79d4e3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7591,
+      "candidate_tokens": 316,
+      "billable_output_tokens_including_total_residual": 316,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1895,
+          "candidates_token_count": 39,
+          "total_token_count": 1934
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2339,
+          "candidates_token_count": 85,
+          "total_token_count": 2424
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 868,
+          "candidates_token_count": 80,
+          "total_token_count": 948
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2489,
+          "candidates_token_count": 112,
+          "total_token_count": 2601
+        }
+      ],
+      "list_price_usd_per_check": "0.01565355"
+    },
+    {
+      "receipt": "reports/submission_closeout/cloud_latency.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "e4d47ab675f55d5b53e0f64f665e59716e727ec297d1734d270d78334c79d4e3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10121,
+      "candidate_tokens": 333,
+      "billable_output_tokens_including_total_residual": 333,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2774,
+          "candidates_token_count": 39,
+          "total_token_count": 2813
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3183,
+          "candidates_token_count": 78,
+          "total_token_count": 3261
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 833,
+          "candidates_token_count": 99,
+          "total_token_count": 932
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3331,
+          "candidates_token_count": 117,
+          "total_token_count": 3448
+        }
+      ],
+      "list_price_usd_per_check": "0.01999635"
+    },
+    {
+      "receipt": "reports/submission_closeout/cloud_latency.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "e4d47ab675f55d5b53e0f64f665e59716e727ec297d1734d270d78334c79d4e3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12438,
+      "candidate_tokens": 363,
+      "billable_output_tokens_including_total_residual": 363,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3604,
+          "candidates_token_count": 33,
+          "total_token_count": 3637
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3942,
+          "candidates_token_count": 74,
+          "total_token_count": 4016
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 786,
+          "candidates_token_count": 119,
+          "total_token_count": 905
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4106,
+          "candidates_token_count": 137,
+          "total_token_count": 4243
+        }
+      ],
+      "list_price_usd_per_check": "0.0241164"
+    },
+    {
+      "receipt": "reports/submission_closeout/cloud_latency.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "e4d47ab675f55d5b53e0f64f665e59716e727ec297d1734d270d78334c79d4e3",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14974,
+      "candidate_tokens": 317,
+      "billable_output_tokens_including_total_residual": 317,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4404,
+          "candidates_token_count": 35,
+          "total_token_count": 4439
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4802,
+          "candidates_token_count": 74,
+          "total_token_count": 4876
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 826,
+          "candidates_token_count": 95,
+          "total_token_count": 921
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4942,
+          "candidates_token_count": 113,
+          "total_token_count": 5055
+        }
+      ],
+      "list_price_usd_per_check": "0.0278454"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/calibration/0/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2464,
+      "candidate_tokens": 347,
+      "billable_output_tokens_including_total_residual": 347,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 624,
+          "candidates_token_count": 82,
+          "total_token_count": 706
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 104,
+          "total_token_count": 936
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 782,
+          "candidates_token_count": 122,
+          "total_token_count": 904
+        }
+      ],
+      "list_price_usd_per_check": "0.0075009"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/calibration/1/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5017,
+      "candidate_tokens": 342,
+      "billable_output_tokens_including_total_residual": 342,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1078,
+          "candidates_token_count": 39,
+          "total_token_count": 1117
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1476,
+          "candidates_token_count": 82,
+          "total_token_count": 1558
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 102,
+          "total_token_count": 934
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1631,
+          "candidates_token_count": 119,
+          "total_token_count": 1750
+        }
+      ],
+      "list_price_usd_per_check": "0.01166385"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/calibration/2/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7541,
+      "candidate_tokens": 366,
+      "billable_output_tokens_including_total_residual": 366,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1899,
+          "candidates_token_count": 39,
+          "total_token_count": 1938
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2307,
+          "candidates_token_count": 91,
+          "total_token_count": 2398
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 856,
+          "candidates_token_count": 109,
+          "total_token_count": 965
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2479,
+          "candidates_token_count": 127,
+          "total_token_count": 2606
+        }
+      ],
+      "list_price_usd_per_check": "0.01606605"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/calibration/3/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10034,
+      "candidate_tokens": 382,
+      "billable_output_tokens_including_total_residual": 382,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2738,
+          "candidates_token_count": 39,
+          "total_token_count": 2777
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3135,
+          "candidates_token_count": 91,
+          "total_token_count": 3226
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 846,
+          "candidates_token_count": 117,
+          "total_token_count": 963
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3315,
+          "candidates_token_count": 135,
+          "total_token_count": 3450
+        }
+      ],
+      "list_price_usd_per_check": "0.0203379"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/calibration/4/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12419,
+      "candidate_tokens": 320,
+      "billable_output_tokens_including_total_residual": 320,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3606,
+          "candidates_token_count": 33,
+          "total_token_count": 3639
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3932,
+          "candidates_token_count": 87,
+          "total_token_count": 4019
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 799,
+          "candidates_token_count": 91,
+          "total_token_count": 890
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4082,
+          "candidates_token_count": 109,
+          "total_token_count": 4191
+        }
+      ],
+      "list_price_usd_per_check": "0.02365935"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/calibration/5/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 14827,
+      "candidate_tokens": 336,
+      "billable_output_tokens_including_total_residual": 336,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4353,
+          "candidates_token_count": 35,
+          "total_token_count": 4388
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4739,
+          "candidates_token_count": 87,
+          "total_token_count": 4826
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 839,
+          "candidates_token_count": 98,
+          "total_token_count": 937
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4896,
+          "candidates_token_count": 116,
+          "total_token_count": 5012
+        }
+      ],
+      "list_price_usd_per_check": "0.02779095"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/validation/0/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2490,
+      "candidate_tokens": 384,
+      "billable_output_tokens_including_total_residual": 384,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 624,
+          "candidates_token_count": 87,
+          "total_token_count": 711
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 837,
+          "candidates_token_count": 120,
+          "total_token_count": 957
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 803,
+          "candidates_token_count": 138,
+          "total_token_count": 941
+        }
+      ],
+      "list_price_usd_per_check": "0.0079101"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/validation/1/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 5114,
+      "candidate_tokens": 374,
+      "billable_output_tokens_including_total_residual": 374,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1100,
+          "candidates_token_count": 39,
+          "total_token_count": 1139
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1498,
+          "candidates_token_count": 87,
+          "total_token_count": 1585
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 837,
+          "candidates_token_count": 108,
+          "total_token_count": 945
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 1679,
+          "candidates_token_count": 140,
+          "total_token_count": 1819
+        }
+      ],
+      "list_price_usd_per_check": "0.0121407"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/validation/2/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 7735,
+      "candidate_tokens": 370,
+      "billable_output_tokens_including_total_residual": 370,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 1965,
+          "candidates_token_count": 39,
+          "total_token_count": 2004
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2373,
+          "candidates_token_count": 87,
+          "total_token_count": 2460
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 852,
+          "candidates_token_count": 113,
+          "total_token_count": 965
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 2545,
+          "candidates_token_count": 131,
+          "total_token_count": 2676
+        }
+      ],
+      "list_price_usd_per_check": "0.01642575"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/validation/3/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 10229,
+      "candidate_tokens": 364,
+      "billable_output_tokens_including_total_residual": 364,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 2808,
+          "candidates_token_count": 39,
+          "total_token_count": 2847
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3205,
+          "candidates_token_count": 87,
+          "total_token_count": 3292
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 842,
+          "candidates_token_count": 110,
+          "total_token_count": 952
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3374,
+          "candidates_token_count": 128,
+          "total_token_count": 3502
+        }
+      ],
+      "list_price_usd_per_check": "0.02048145"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/validation/4/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 12606,
+      "candidate_tokens": 391,
+      "billable_output_tokens_including_total_residual": 391,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 3656,
+          "candidates_token_count": 33,
+          "total_token_count": 3689
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 3982,
+          "candidates_token_count": 88,
+          "total_token_count": 4070
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 800,
+          "candidates_token_count": 126,
+          "total_token_count": 926
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4168,
+          "candidates_token_count": 144,
+          "total_token_count": 4312
+        }
+      ],
+      "list_price_usd_per_check": "0.0246708"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/cloud_latency.json",
+      "json_pointer": "$/validation/5/response/agent_trace",
+      "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 15206,
+      "candidate_tokens": 443,
+      "billable_output_tokens_including_total_residual": 443,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 4461,
+          "candidates_token_count": 35,
+          "total_token_count": 4496
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 4847,
+          "candidates_token_count": 88,
+          "total_token_count": 4935
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 840,
+          "candidates_token_count": 151,
+          "total_token_count": 991
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 5058,
+          "candidates_token_count": 169,
+          "total_token_count": 5227
+        }
+      ],
+      "list_price_usd_per_check": "0.0294756"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/0/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2308,
+      "candidate_tokens": 339,
+      "billable_output_tokens_including_total_residual": 339,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 225,
+          "candidates_token_count": 37,
+          "total_token_count": 262
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 562,
+          "candidates_token_count": 81,
+          "total_token_count": 643
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 805,
+          "candidates_token_count": 102,
+          "total_token_count": 907
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 716,
+          "candidates_token_count": 119,
+          "total_token_count": 835
+        }
+      ],
+      "list_price_usd_per_check": "0.0071643"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/1/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2521,
+      "candidate_tokens": 332,
+      "billable_output_tokens_including_total_residual": 332,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 634,
+          "candidates_token_count": 97,
+          "total_token_count": 731
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 862,
+          "candidates_token_count": 82,
+          "total_token_count": 944
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 799,
+          "candidates_token_count": 114,
+          "total_token_count": 913
+        }
+      ],
+      "list_price_usd_per_check": "0.00744645"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/2/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2316,
+      "candidate_tokens": 322,
+      "billable_output_tokens_including_total_residual": 322,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 568,
+          "candidates_token_count": 79,
+          "total_token_count": 647
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 810,
+          "candidates_token_count": 93,
+          "total_token_count": 903
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 712,
+          "candidates_token_count": 111,
+          "total_token_count": 823
+        }
+      ],
+      "list_price_usd_per_check": "0.0070092"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/3/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2458,
+      "candidate_tokens": 321,
+      "billable_output_tokens_including_total_residual": 321,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 624,
+          "candidates_token_count": 82,
+          "total_token_count": 706
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 84,
+          "total_token_count": 916
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 776,
+          "candidates_token_count": 116,
+          "total_token_count": 892
+        }
+      ],
+      "list_price_usd_per_check": "0.0072336"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/4/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2278,
+      "candidate_tokens": 306,
+      "billable_output_tokens_including_total_residual": 306,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 225,
+          "candidates_token_count": 37,
+          "total_token_count": 262
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 561,
+          "candidates_token_count": 73,
+          "total_token_count": 634
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 797,
+          "candidates_token_count": 89,
+          "total_token_count": 886
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 695,
+          "candidates_token_count": 107,
+          "total_token_count": 802
+        }
+      ],
+      "list_price_usd_per_check": "0.0067881"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/5/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2263,
+      "candidate_tokens": 285,
+      "billable_output_tokens_including_total_residual": 285,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 224,
+          "candidates_token_count": 35,
+          "total_token_count": 259
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 559,
+          "candidates_token_count": 86,
+          "total_token_count": 645
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 790,
+          "candidates_token_count": 73,
+          "total_token_count": 863
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 690,
+          "candidates_token_count": 91,
+          "total_token_count": 781
+        }
+      ],
+      "list_price_usd_per_check": "0.00655545"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/6/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2280,
+      "candidate_tokens": 282,
+      "billable_output_tokens_including_total_residual": 282,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 225,
+          "candidates_token_count": 37,
+          "total_token_count": 262
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 562,
+          "candidates_token_count": 82,
+          "total_token_count": 644
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 806,
+          "candidates_token_count": 74,
+          "total_token_count": 880
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 687,
+          "candidates_token_count": 89,
+          "total_token_count": 776
+        }
+      ],
+      "list_price_usd_per_check": "0.0065538"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/7/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2309,
+      "candidate_tokens": 350,
+      "billable_output_tokens_including_total_residual": 350,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 566,
+          "candidates_token_count": 79,
+          "total_token_count": 645
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 793,
+          "candidates_token_count": 107,
+          "total_token_count": 900
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 724,
+          "candidates_token_count": 125,
+          "total_token_count": 849
+        }
+      ],
+      "list_price_usd_per_check": "0.00727485"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/8/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2518,
+      "candidate_tokens": 363,
+      "billable_output_tokens_including_total_residual": 363,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 634,
+          "candidates_token_count": 90,
+          "total_token_count": 724
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 854,
+          "candidates_token_count": 108,
+          "total_token_count": 962
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 804,
+          "candidates_token_count": 126,
+          "total_token_count": 930
+        }
+      ],
+      "list_price_usd_per_check": "0.0077484"
+    },
+    {
+      "receipt": "reports/track_a_before_postcheck/rewrites_live.json",
+      "json_pointer": "$/rows/9/attempts/0/response/agent_trace",
+      "receipt_sha256": "ba6a2d6d0b039f432f4cd476175d6524322f224b6d6935e89656b2610f429626",
+      "model": "gemini-3.5-flash",
+      "backend": "vertex",
+      "prompt_tokens": 2439,
+      "candidate_tokens": 309,
+      "billable_output_tokens_including_total_residual": 309,
+      "model_requests": 4,
+      "usage": [
+        {
+          "stage": "planner",
+          "prompt_token_count": 226,
+          "candidates_token_count": 39,
+          "total_token_count": 265
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 623,
+          "candidates_token_count": 77,
+          "total_token_count": 700
+        },
+        {
+          "stage": "rewrite",
+          "prompt_token_count": 832,
+          "candidates_token_count": 89,
+          "total_token_count": 921
+        },
+        {
+          "stage": "planner",
+          "prompt_token_count": 758,
+          "candidates_token_count": 104,
+          "total_token_count": 862
+        }
+      ],
+      "list_price_usd_per_check": "0.00708345"
+    }
+  ]
+}

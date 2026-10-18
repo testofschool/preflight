@@ -1,0 +1,82 @@
+{
+  "allowance_after_promotion": {
+    "checked_at_kst": "2026-10-18T18:37:58.255665+09:00",
+    "effective_limit": 3000,
+    "read_only": true,
+    "remaining": 2794,
+    "stored_last_admission_limit": 3000,
+    "used": 206
+  },
+  "allowed_env": {
+    "PREFLIGHT_FIRESTORE_DATABASE": "preflight-aibc",
+    "PREFLIGHT_GEMINI_BACKEND": "vertex",
+    "PREFLIGHT_GEMINI_LOCATION": "asia-southeast1",
+    "PREFLIGHT_GEMINI_MODEL": "gemini-3.5-flash",
+    "PREFLIGHT_IMAGE_LIVE_ARM": "P2",
+    "PREFLIGHT_IMAGE_LOCATION": "global",
+    "PREFLIGHT_IMAGE_MODEL": "gemini-3.1-flash-lite-image",
+    "PREFLIGHT_IMAGE_MODEL_FALLBACK": "gemini-3.1-flash-image",
+    "PREFLIGHT_IMAGE_PRIMARY_UNSERVED": "false",
+    "PREFLIGHT_MODE": "cloud",
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": "500",
+    "PREFLIGHT_PREVIEW_ENABLED": "true",
+    "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+    "PREFLIGHT_PREVIEW_WARM_ENABLED": "false",
+    "PREFLIGHT_TOTAL_REQUEST_LIMIT": "3000"
+  },
+  "anonymous_clone_pass": true,
+  "build_id": "f991c8fe-38aa-4776-8b1c-9634a7c4114d",
+  "cloud_build_runtime_source_sha256": "5ecfefe996dd08ef9dc9fe4bdc38e7dc735e28c487018a426fb6521918e88a21",
+  "concurrency": 80,
+  "cumulative_check_gate_attempts": 2,
+  "exact_http_attempts": 5,
+  "gate_passed": true,
+  "git_runtime_source_sha256": "5ecfefe996dd08ef9dc9fe4bdc38e7dc735e28c487018a426fb6521918e88a21",
+  "history_scan_hit_count": 0,
+  "image_digest": "sha256:335aa2ed7565f80a2b0e491fe1138c4e09f6362acb1099e30d8b3acc3a4b0d8a",
+  "native_provenance_pass": true,
+  "normalized_spec_sha256": "d2bcc60e89cd5d9e1aeb1f1d0c60d8950d92dda014b266331200b83bba6ec20e",
+  "pass": true,
+  "recorded_at_kst": "2026-10-18T18:37:58.256200+09:00",
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "1Gi"
+    }
+  },
+  "revision": "preflight-00029-teb",
+  "runtime_annotations": {
+    "autoscaling.knative.dev/maxScale": "2",
+    "run.googleapis.com/startup-cpu-boost": "true"
+  },
+  "source_commit": "59fb23b262af480709461b648e84d26010e26060",
+  "source_tag": "aibc-2026-submission-v4",
+  "timeout_seconds": 40,
+  "traffic": [
+    {
+      "percent": 0,
+      "revision": "preflight-00016-tuk",
+      "tag": "postcheck-candidate"
+    },
+    {
+      "percent": 0,
+      "revision": "preflight-00021-sus",
+      "tag": "preview-v3-copy"
+    },
+    {
+      "percent": 0,
+      "revision": "preflight-00025-lij",
+      "tag": "preview-v4-candidate"
+    },
+    {
+      "percent": 0,
+      "revision": "preflight-00027-pit",
+      "tag": "admission-v5-candidate"
+    },
+    {
+      "percent": 100,
+      "revision": "preflight-00029-teb",
+      "tag": "track-j-candidate"
+    }
+  ]
+}

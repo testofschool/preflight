@@ -1,0 +1,65 @@
+{
+  "allowance_before_candidate": {
+    "checked_at_kst": "2026-10-18T18:34:20.371228+09:00",
+    "effective_limit": 1000,
+    "read_only": true,
+    "remaining": 796,
+    "stored_last_admission_limit": 1000,
+    "used": 204
+  },
+  "allowed_env": {
+    "PREFLIGHT_FIRESTORE_DATABASE": "preflight-aibc",
+    "PREFLIGHT_GEMINI_BACKEND": "vertex",
+    "PREFLIGHT_GEMINI_LOCATION": "asia-southeast1",
+    "PREFLIGHT_GEMINI_MODEL": "gemini-3.5-flash",
+    "PREFLIGHT_IMAGE_LIVE_ARM": "P2",
+    "PREFLIGHT_IMAGE_LOCATION": "global",
+    "PREFLIGHT_IMAGE_MODEL": "gemini-3.1-flash-lite-image",
+    "PREFLIGHT_IMAGE_MODEL_FALLBACK": "gemini-3.1-flash-image",
+    "PREFLIGHT_IMAGE_PRIMARY_UNSERVED": "false",
+    "PREFLIGHT_MODE": "cloud",
+    "PREFLIGHT_PREVIEW_DAILY_LIMIT": "500",
+    "PREFLIGHT_PREVIEW_ENABLED": "true",
+    "PREFLIGHT_PREVIEW_LIVE_ENABLED": "false",
+    "PREFLIGHT_PREVIEW_WARM_ENABLED": "false",
+    "PREFLIGHT_TOTAL_REQUEST_LIMIT": "1000"
+  },
+  "concurrency": 80,
+  "image_digest": "sha256:4bf0668ae549f7ab924f17e36105b621f1f25676aefb6e53e06154db4384e932",
+  "normalized_spec_sha256": "cd1d6b0f169147063858766f7b1934a776a182836c1313fbc8592ea882c85ff3",
+  "recorded_at_kst": "2026-10-18T18:34:20.371293+09:00",
+  "resources": {
+    "limits": {
+      "cpu": "1",
+      "memory": "1Gi"
+    }
+  },
+  "revision": "preflight-00027-pit",
+  "runtime_annotations": {
+    "autoscaling.knative.dev/maxScale": "2",
+    "run.googleapis.com/startup-cpu-boost": "true"
+  },
+  "timeout_seconds": 40,
+  "traffic": [
+    {
+      "percent": 0,
+      "revision": "preflight-00016-tuk",
+      "tag": "postcheck-candidate"
+    },
+    {
+      "percent": 0,
+      "revision": "preflight-00021-sus",
+      "tag": "preview-v3-copy"
+    },
+    {
+      "percent": 0,
+      "revision": "preflight-00025-lij",
+      "tag": "preview-v4-candidate"
+    },
+    {
+      "percent": 100,
+      "revision": "preflight-00027-pit",
+      "tag": "admission-v5-candidate"
+    }
+  ]
+}

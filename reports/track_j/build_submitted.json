@@ -1,0 +1,24 @@
+{
+  "source_commit": "59fb23b262af480709461b648e84d26010e26060",
+  "parent_commit": "8d155f0c0f15db2513df294cb09f7999c57e5dff",
+  "runtime_source_sha256": "5ecfefe996dd08ef9dc9fe4bdc38e7dc735e28c487018a426fb6521918e88a21",
+  "runtime_file_count": 25,
+  "code_files_changed": [
+    "cloud/store.py",
+    "tests/test_store.py"
+  ],
+  "suite": {
+    "tests": 212,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pytest_test_cases": 201,
+  "pytest_subtests": 11,
+  "full_suite_command": "python -B -m pytest -q --junitxml=reports/track_j/tests.xml",
+  "recorded_at_kst": "2026-10-18T18:33:18.624968+09:00",
+  "build_id": "f991c8fe-38aa-4776-8b1c-9634a7c4114d",
+  "build_status": "QUEUED",
+  "build_submissions": 1,
+  "frozen_snapshot": true
+}

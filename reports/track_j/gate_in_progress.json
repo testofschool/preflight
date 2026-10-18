@@ -1,0 +1,88 @@
+{
+  "allowance_before_gate": {
+    "checked_at_kst": "2026-10-18T18:37:05.092846+09:00",
+    "effective_limit": 3000,
+    "read_only": true,
+    "remaining": 2796,
+    "stored_last_admission_limit": 1000,
+    "used": 204
+  },
+  "http_attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "path": "/api/status",
+      "probe": "status",
+      "state": "finished"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "path": "/preflight",
+      "probe": "sample_preflight",
+      "state": "finished"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "path": "/preflight",
+      "probe": "typed_preflight",
+      "state": "finished"
+    },
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "path": "/preview",
+      "probe": "sample_preview",
+      "state": "finished"
+    },
+    {
+      "attempt": 1,
+      "http_status": 503,
+      "path": "/preview",
+      "probe": "typed_preview",
+      "state": "finished"
+    }
+  ],
+  "no_retries": true,
+  "pass": false,
+  "recorded_at_kst": "2026-10-18T18:37:36.366703+09:00",
+  "revision": "preflight-00029-teb",
+  "sample_preflight": {
+    "http_status": 200,
+    "p_fail": 0.4678787878787878,
+    "p_fail_after": 0.15833333333333333,
+    "prompt": "a spoon and a laptop",
+    "rewrite_model_calls_this_request": 0,
+    "rewrite_source": "pinned-sample"
+  },
+  "sample_preview": {
+    "cache": "hit",
+    "cache_header": "hit",
+    "cost_usd": 0.0,
+    "generated_at": "2026-10-18T01:50:23.555926+00:00",
+    "http_status": 200,
+    "image_bytes": 76625,
+    "image_sha256": "ec93ee2616e1b65ac4cad0d2d82aabebe5f913900d9af9a3cde26c2915fa0121",
+    "metadata_label": "Saved still \u00b7 generated 2026-10-18 \u00b7 0 model calls \u00b7 $0.00",
+    "model": "gemini-2.5-flash-image",
+    "model_calls": 0
+  },
+  "status": {
+    "http_status": 200,
+    "preview": true,
+    "preview_mode": "samples"
+  },
+  "typed_preflight": {
+    "http_status": 200,
+    "p_fail": 0.13333333333333333,
+    "p_fail_after": 0.0,
+    "prompt": "a dog catching a frisbee on a beach at sunset",
+    "rewrite_model_calls_this_request": null,
+    "rewrite_source": "live"
+  },
+  "typed_preview": {
+    "detail": "Live stills are limited to the sample prompts during judging \u2014 shared Gemini image capacity. The risk check still works.",
+    "http_status": 503
+  }
+}

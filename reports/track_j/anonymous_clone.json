@@ -1,0 +1,17 @@
+{
+  "all_prior_tag_commits_unchanged": true,
+  "annotated_tag_object": "a59bf91d65d81096b3bc930ef8eebf0e73b89b79",
+  "cloned_source_commit": "59fb23b262af480709461b648e84d26010e26060",
+  "credential_helper": "empty",
+  "credentials_provided": false,
+  "git_hooks": "disabled",
+  "global_config": "/dev/null",
+  "pass": true,
+  "raw_diagnostics_saved": false,
+  "recorded_at_kst": "2026-10-18T18:37:47.101538+09:00",
+  "runtime_file_count": 25,
+  "runtime_source_sha256": "5ecfefe996dd08ef9dc9fe4bdc38e7dc735e28c487018a426fb6521918e88a21",
+  "source_tag": "aibc-2026-submission-v4",
+  "system_config_disabled": true,
+  "temporary_clone_removed": true
+}

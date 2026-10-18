@@ -1,0 +1,17 @@
+{
+  "recorded_at_kst": "2026-10-18T18:33:28.623561+09:00",
+  "scope": "Local preparation parser correction only; no suite rerun, harness invocation, cloud mutation, or HTTP gate attempt",
+  "old_assumption": "testcase row count equals testsuite tests count",
+  "xml_suite_counts": {
+    "tests": 212,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "testcase_rows": 201,
+  "additional_subtest_count": 11,
+  "xml_sha256": "1f550b739b8fbde78a08c3012fe9bb24e45fca105b8800c99382cc061279dede",
+  "correction": "Record successful pytest subtests separately; require no failures, errors, or skipped entries and successful adjusted boundary testcase",
+  "failed_runtime_gate": false,
+  "binary_provenance_capture": "Corrected in SafeOperations.binary_command; original runtime blobs stay bytes"
+}

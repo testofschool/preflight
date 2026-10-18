@@ -1,0 +1,10 @@
+{
+  "local_preparation_initial_assertion": "Expected JUnit tests201; actual212 including11subtests",
+  "test_cases": 201,
+  "subtests": 11,
+  "all_passed": true,
+  "test_reruns": 0,
+  "cloud_mutations_before_correction": 0,
+  "live_gate_attempts_before_correction": 0,
+  "runtime_changes_for_correction": 0
+}

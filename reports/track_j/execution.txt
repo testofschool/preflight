@@ -1,0 +1,1 @@
+{"pass": true, "revision": "preflight-00029-teb", "traffic_percent": 100, "source_commit": "59fb23b262af480709461b648e84d26010e26060", "image_digest": "sha256:335aa2ed7565f80a2b0e491fe1138c4e09f6362acb1099e30d8b3acc3a4b0d8a", "used": 206, "limit": 3000, "http_gate_attempts": 5}

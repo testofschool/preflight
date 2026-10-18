@@ -1,0 +1,84 @@
+{
+  "checked_at_utc": "2026-10-18T09:16:56.137974+00:00",
+  "read_only_cloud_audit": true,
+  "new_preflight_preview_model_calls": 0,
+  "runtime_baseline_revision": "preflight-00027-pit",
+  "runtime_model_env_live_read": {
+    "PREFLIGHT_GEMINI_BACKEND": "vertex",
+    "PREFLIGHT_GEMINI_LOCATION": "asia-southeast1",
+    "PREFLIGHT_GEMINI_MODEL": "gemini-3.5-flash"
+  },
+  "receipt_files_scanned": 349,
+  "receipt_entries_with_complete_recorded_usage": 126,
+  "receipt_parse_skips": [],
+  "price": {
+    "model": "gemini-3.5-flash",
+    "tier": "Standard on-demand non-global endpoint",
+    "input_usd_per_million": "1.65",
+    "output_response_and_reasoning_usd_per_million": "9.90",
+    "official_url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+    "redirected_official_url": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+    "input_table_subrow_quote": "Non-global* | $1.65 | $1.65 | $0.165 | $0.165",
+    "output_table_subrow_quote": "Non-global* | $9.90 | $9.90 | N/A | N/A",
+    "output_type_quote": "Text output (response and reasoning)",
+    "price_header_quote": "Price (/1M tokens)"
+  },
+  "maximum_recorded_check": {
+    "receipt": "reports/cloud_latency.json",
+    "json_pointer": "$/validation/5/response/agent_trace",
+    "receipt_sha256": "0880fb0eb4204390e05cdabac1e85568b4a02d90c11c94c942d6d0c63b5754ba",
+    "model": "gemini-3.5-flash",
+    "backend": "vertex",
+    "prompt_tokens": 15206,
+    "candidate_tokens": 443,
+    "billable_output_tokens_including_total_residual": 443,
+    "model_requests": 4,
+    "usage": [
+      {
+        "stage": "planner",
+        "prompt_token_count": 4461,
+        "candidates_token_count": 35,
+        "total_token_count": 4496
+      },
+      {
+        "stage": "planner",
+        "prompt_token_count": 4847,
+        "candidates_token_count": 88,
+        "total_token_count": 4935
+      },
+      {
+        "stage": "rewrite",
+        "prompt_token_count": 840,
+        "candidates_token_count": 151,
+        "total_token_count": 991
+      },
+      {
+        "stage": "planner",
+        "prompt_token_count": 5058,
+        "candidates_token_count": 169,
+        "total_token_count": 5227
+      }
+    ],
+    "list_price_usd_per_check": "0.0294756"
+  },
+  "projection_2000_repeats_of_most_expensive_recorded_check_usd": "58.9512000",
+  "projection_formula": "2000 * ((15206 * 1.65 + 443 * 9.90) / 1000000)",
+  "separate_recorded_maxima_envelope": {
+    "input_tokens_per_check": 15206,
+    "output_tokens_per_check": 486,
+    "projection_2000_checks_usd": "59.8026",
+    "formula": "2000 * ((15206 * 1.65 + 486 * 9.90) / 1000000)",
+    "maxima_may_come_from_different_checks": true
+  },
+  "guaranteed_future_worst_case": "UNVERIFIABLE_FROM_RECORDED_TOKEN_COUNTS",
+  "limitations": [
+    "Projection is based on recorded per-check usage, not a bound on future checks or actual billing.",
+    "The API accepts arbitrary prompt text up to 4000 characters and optional existing session_id; existing-session history can grow and be replayed.",
+    "Recorded checks each have 3 planner requests and 1 rewrite request; code permits up to 6 planner requests plus 1 candidate-generation request.",
+    "Usage records omit an explicit thoughts_token_count. Conservative output calculation uses max(candidates_token_count, total_token_count - prompt_token_count). In scanned entries the residual equaled recorded candidates for every call.",
+    "Failed requests may incur unrecorded model work; complete successful response receipts do not bound every admitted request.",
+    "Sample preflight uses a saved rewrite and can have zero live Gemini rewrite calls. Projection assumes live checks.",
+    "Cumulative admission also covers postcheck; this projection covers preflight text inference only.",
+    "Excludes Cloud Run, Firestore, managed-session charges, postcheck/video processing, taxes, currency conversion, credits/discounts, and future pricing changes."
+  ]
+}

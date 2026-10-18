@@ -1,0 +1,10 @@
+{
+  "checked_at_utc": "2026-10-18T09:15:52.348482+00:00",
+  "read_only": true,
+  "cloud_settings_changed": false,
+  "identifiers_redacted": true,
+  "billing_enabled": true,
+  "status": "UNVERIFIABLE",
+  "stage": "read billing budgets",
+  "error": "ERROR: (gcloud.billing.budgets.list) [[REDACTED_ACCOUNT]] does not have permission to access billingAccounts instance [[REDACTED_ID]] (or it may not exist): Cloud Billing Budget API has not been used in project [REDACTED_ID] before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/billingbudgets.googleapis.com/overview?project=[REDACTED_ID] then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. This command is authenticated as [REDACTED_ACCOUNT] which is the active account specified by the [core/account] property.\nCloud Billing Budget API has not been used in project [REDACTED_ID] before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/billingbudgets.googleapis.com/overview?project=[REDACTED_ID] then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.\nGoogle developers console API activation\nhttps://console.developers.google.com/apis/api/billingbudgets.googleapis.com/overview?project=[REDACTED_ID]\n- '@type': type.googleapis.com/google.rpc.ErrorInfo\n  domain: googleapis.com\n  metadata:\n    activationUrl: https://console.developers.google.com/apis/api/billingbudgets.googleapis.com/overview?project=[REDACTED_ID]\n    consumer: projects/[REDACTED_ID]\n    containerInfo: [REDACTED_ID]\n    service: billingbudgets.googleapis.com\n    serviceTitle: Cloud Billing Budget API\n  reason: SERVICE_DISABLED\n"
+}

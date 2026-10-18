@@ -83,7 +83,7 @@ Open the [live prototype](https://preflight-jcgro45veq-as.a.run.app), choose a s
 
 These ranges describe the frozen historical predictor (recorded values: 30.7%, 53.5%, 43.3%, 6.5%, 5.7%). The displayed mixed proxy can change with separately counted machine feedback; a rewrite can safely abstain. [Sample receipt](reports/local_latency.json).
 
-**Max 20 checks/min shared** across the service, with a cumulative allowance of at most 1,000 admitted checks. No video generation is requested. For clip review, upload an MP4 you already have (up to 30 MiB and 30 seconds) and enter what should happen.
+**Max 20 checks/min shared** across the service, with a cumulative allowance currently configured to 3,000 admitted checks. No video generation is requested. For clip review, upload an MP4 you already have (up to 30 MiB and 30 seconds) and enter what should happen.
 
 ## Run the local fallback
 
@@ -193,7 +193,7 @@ Supply configuration through the runtime environment or the deployment’s crede
 | `PREFLIGHT_GEMINI_MODEL` | Gemini model selection; current target is `gemini-3.5-flash` |
 | `PREFLIGHT_SESSION_ENGINE_ID` | Runtime-only managed-session application resource |
 | `PREFLIGHT_FIRESTORE_DATABASE` | Dedicated named database; current database is `preflight-aibc`; the default database is rejected |
-| `PREFLIGHT_TOTAL_REQUEST_LIMIT` | Cumulative admitted-check allowance; default and maximum are 1,000 |
+| `PREFLIGHT_TOTAL_REQUEST_LIMIT` | Cumulative admitted-check allowance; default 1,000, maximum 3,000; production configured to 3,000 |
 | `GEMINI_API_KEY` | Only for an explicitly selected API-key backend; unused by the production Vertex path |
 
 Application Default Credentials are required for the production Vertex and Firestore path. Keep credentials and resource identifiers out of source, screenshots, command transcripts, and committed logs. The pre-commit guard scans worktree files and staged blobs for forbidden credential markers without printing values.
@@ -258,7 +258,7 @@ Clip-accuracy check’s canonical status and evidence are reproduced in Detailed
 
 ## Operational limits
 
-Prompts are limited to 4,000 characters. Cloud mode uses a shared Firestore transaction to admit at most 20 checks per rolling minute across instances, with a cumulative allowance of at most 1,000 admitted checks. Admission can count a request even if a later external step fails. The local fallback retains a process-local 20-per-minute limiter. These are service-wide budgets, not per-user allowances.
+Prompts are limited to 4,000 characters. Cloud mode uses a shared Firestore transaction to admit at most 20 checks per rolling minute across instances, with a cumulative allowance currently configured to 3,000 admitted checks. Admission can count a request even if a later external step fails. The local fallback retains a process-local 20-per-minute limiter. These are service-wide budgets, not per-user allowances.
 
 Invalid input receives HTTP 422, exhausted budgets HTTP 429, and an unavailable connected service HTTP 503. Clip uploads are capped at 30 MiB to stay below Cloud Run’s HTTP/1 request limit; the server must also verify the 30-second duration limit. There is no login and no public video-generation endpoint. A shared budget is not an authentication system.
 

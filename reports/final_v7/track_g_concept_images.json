@@ -1,0 +1,25 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "generation_count": 2,
+  "generation_cap": 3,
+  "model_name_exactly_returned": "UNREPORTED",
+  "model_disclosure_reason": "Both tool responses returned an image URL and output hint, without a model field or model name.",
+  "product_image_generation_calls": 0,
+  "video_generation_calls": 0,
+  "assets": [
+    {
+      "slide": 2,
+      "saved_original": "docs/deck_assets/v7/concept_spent_attempts.png",
+      "deck_asset": "docs/deck_assets/v7/concept_spent_attempts.jpg",
+      "inspection": "Accepted. Photographic still life of blank film and spent tokens. No text, numbers, logos, screens, people, faces, hands or garbled marks observed.",
+      "prompt": "Use case: photorealistic-natural\nAsset type: landscape concept photograph for a restrained presentation slide about wasted AI-video attempts.\nPrimary request: a photographic still life of an unfinished loose strip of blank photographic film beside a small stack and scattered spent metal tokens on an ivory desk. The film strip trails off, suggesting an incomplete attempt. No hands or people.\nStyle/medium: refined editorial still-life photography with real material textures, soft daylight and subtle shadows. Wide horizontal composition, photographed slightly from above, objects grouped on the right with quiet ivory negative space to the left.\nColor palette: warm ivory, deep teal objects, a single muted coral token accent.\nConstraints: no text of any kind, no letters or numbers, no logos, no brand marks, no watermarks, no screens, no UI, no faces, no human body parts. Film frames are blank, with no readable markings. Make it look like a carefully composed real photograph, not a glossy 3D render."
+    },
+    {
+      "slide": 11,
+      "saved_original": "docs/deck_assets/v7/concept_before_shot.png",
+      "deck_asset": "docs/deck_assets/v7/concept_before_shot.jpg",
+      "inspection": "Accepted. Blank matte teal film slate and coral pencil in daylight. No text, numbers, logos, screens, people, faces, hands or garbled marks observed.",
+      "prompt": "Use case: photorealistic-natural\nAsset type: landscape concept photograph for the closing slide of a restrained presentation about checking before paying for an AI video.\nPrimary request: a single blank deep-teal film slate resting on a warm ivory desk before filming begins. A small muted coral pencil lies beside it. No other props or people.\nStyle/medium: refined editorial still-life photography, tactile matte materials, soft natural daylight, subtle real shadows. Wide horizontal framing from a slight high angle. Slate arranged toward the right with quiet ivory space on the left.\nConstraints: absolutely no text, numbers, letters, writing, logos, brand marks, watermarks, screens, UI, faces, people or hands. The film slate is entirely blank. No glossy synthetic render appearance."
+    }
+  ]
+}

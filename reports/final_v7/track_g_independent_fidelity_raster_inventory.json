@@ -1,0 +1,150 @@
+[
+  {
+    "asset": "docs/deck_assets/v7/concept_spent_attempts.jpg",
+    "source": "docs/deck_assets/v7/concept_spent_attempts.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "cH\n\n18\n\nAA Ke\n\nch\n\nman\n\nof\n\nSs\n\nss\n\noom\n\noe om\n\nSs\n\noe? %\n\n'o!\n\nDe\n\nce\n\noo\u00ae\n\nae oe\n\n=o oe\n\neg 5\n",
+    "ocr_numeric_tokens": [
+      "18",
+      "5"
+    ],
+    "visual_classification": "No visible text/numerals/logos; OCR18/5 are film/token texture false positives."
+  },
+  {
+    "asset": "docs/deck_assets/v7/concept_before_shot.jpg",
+    "source": "docs/deck_assets/v7/concept_before_shot.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "= |\n",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  },
+  {
+    "asset": "docs/deck_assets/v7/risk_card_crop.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "Risk\n\n46.8\u00bb\n\nMb\n\ned heuristic risk estimate\n",
+    "ocr_numeric_tokens": [
+      "46.8"
+    ],
+    "visual_classification": "Visible allowed46.8%; real product rationale/risk copy is image evidence."
+  },
+  {
+    "asset": "docs/deck_assets/v7/better_prompt_crop.jpg",
+    "source": "demo/frames/04_better_prompt_copied.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "Better prompt\n\noven ESTinaTeD RASK\n\n\u2018Sample rewrte (saved)\n\nA static, high-angle shot of a desk where a metallic spoon,\n\nlies neatly beside a closed laptop under soft indoor\n\nlighting.\n\n46.8% original ~ 25.8% rewrite\n\n| eve\n\nThis estimate miNGs human votes and separate machine clip reviews,\n\n\u2018lower score does not guarantee a better vdeo.\n\n\u2018The rewrite isin English; non-English words were not scored.\n",
+    "ocr_numeric_tokens": [
+      "46.8%",
+      "25.8%"
+    ],
+    "visual_classification": "Visible 46.8% and15.8%; OCR25.8% is a false reading, confirmed visually. Real product copy is image evidence."
+  },
+  {
+    "asset": "docs/deck_assets/v7/spoon_original_square.jpg",
+    "source": "docs/deck_assets/spoon_original.jpg",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "\u2014\u2014\u2014\n\n\u2014\u2014\n",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  },
+  {
+    "asset": "docs/deck_assets/v7/paste_crop.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "a spoon and a laptop\n",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  },
+  {
+    "asset": "docs/deck_assets/v7/why_crop.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "Why\n\n\u2018Text neighbours \u201ca spoon and a laptop\u201d and \u201catv and a\n\nlaptop\u201d support an estimated risk score of 46.8%. The\n\nscore uses nearby evidence and any separately stored\n\nclip feedback; itis not a calibrated probability that a\n\ncurrent video mode! fails.\n",
+    "ocr_numeric_tokens": [
+      "46.8%"
+    ],
+    "visual_classification": "Visible allowed46.8%; real product rationale/risk copy is image evidence."
+  },
+  {
+    "asset": "docs/deck_assets/v7/earlier_header_crop.jpg",
+    "source": "../evidence/preflight-20261016/final-cloud-desktop.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "How it works 7\n\n\u00a9 CLOUD MODE\n\nA preflight.\n\n\u2014 AN EARLY CHECK FOR YOUR VIDEO PROMPT\n\nBefore the first frame.\n\nLook for signs of a difficult prompt before spending on a generation.\n\nfe SESSION ACTIVE\n\naa\n\nPlatt\n",
+    "ocr_numeric_tokens": [
+      "7"
+    ],
+    "visual_classification": "OCR7 is the external-link arrow, not a quantity."
+  },
+  {
+    "asset": "docs/deck_assets/v7/current_header_crop.jpg",
+    "source": "reports/first_viewport_d_primary/first_viewport.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "How it works 7\n\nA preflight.\n\n\u2014 AN EARLY CHECK FOR YOUR VIDEO PROMPT\n\nBefore the first frame.\n\nLook for signs of a difficult prompt before spending on a generation.\n\nHave a clip al\n\nec a ee\n\na\n\nBS NRE\n",
+    "ocr_numeric_tokens": [
+      "7"
+    ],
+    "visual_classification": "OCR7 is the external-link arrow, not a quantity."
+  },
+  {
+    "asset": "docs/deck_assets/v7/risk_wide_round2.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "Risk\n\n46.8\u00bb\n\nMixed heuristic risk estimat\n",
+    "ocr_numeric_tokens": [
+      "46.8"
+    ],
+    "visual_classification": "Visible allowed46.8%; real product rationale/risk copy is image evidence."
+  },
+  {
+    "asset": "docs/deck_assets/v7/why_tight_round2.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "\u2018Text neighbours \u201ca spoon and a laptop\" and \u201ca tv and a\n\nlaptop\u201d support an estimated risk score of 46.8%. The\n",
+    "ocr_numeric_tokens": [
+      "46.8%"
+    ],
+    "visual_classification": "Visible allowed46.8%; real product rationale/risk copy is image evidence."
+  },
+  {
+    "asset": "docs/deck_assets/v7/rewrite_tight_round2.jpg",
+    "source": "demo/frames/04_better_prompt_copied.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "A static, high-angle shot of a desk where a metallic spoon\n\nlies neatly beside a closed laptop under soft indoor\n\nlighting.\n",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  },
+  {
+    "asset": "docs/deck_assets/v7/still_wide_round2.jpg",
+    "source": "docs/deck_assets/spoon_original.jpg",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  },
+  {
+    "asset": "docs/deck_assets/v7/spoon_rewrite_nologo_round2.jpg",
+    "source": "docs/deck_assets/spoon_rewritten.jpg",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "\"0a\n\n, =\n",
+    "ocr_numeric_tokens": [
+      "0"
+    ],
+    "visual_classification": "No visible numeric quantity; OCR0 is a curved photographic form, verified visually. No product pixels synthesized."
+  },
+  {
+    "asset": "docs/deck_assets/v7/earlier_header_large_round2.jpg",
+    "source": "../evidence/preflight-20261016/final-cloud-desktop.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "A preflight.\n\n\u2014 AN EARLY CHECK FOR YOUR VIDEO PROMPT\n\nBefore the first frame.\n\nLook for signs of a difficult prompt before spending on a generation.\n\nfe SESSION ACTIVE\n\no\n\nPlatt\n",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  },
+  {
+    "asset": "docs/deck_assets/v7/current_header_large_round2.jpg",
+    "source": "reports/first_viewport_d_primary/first_viewport.png",
+    "crop_or_resampling_exactly_reproduced": true,
+    "ocr_text": "A preflight.\n\n\u2014 AN EARLY CHECK FOR YOUR VIDEO PROMPT\n\nBefore the first frame.\n\nLook for signs of a difficult prompt before spending on a generation.\n\nHave a clip al\n",
+    "ocr_numeric_tokens": [],
+    "visual_classification": "No visible numeric quantities."
+  }
+]

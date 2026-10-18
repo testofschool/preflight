@@ -1,0 +1,1503 @@
+{
+  "scope": "Read-only independent technical artifact fidelity, not isolated visual rubric.",
+  "artifacts": {
+    "template": {
+      "path": "docs/template/aibc_template.pptx",
+      "bytes": 960223,
+      "sha256": "29923ab726aa1382946c70ff527c769f0b9e95a55e889f2e01e7ad62641ea629"
+    },
+    "v6_pptx": {
+      "path": "reports/final_v7/track_g_build/v6_fallback/Preflight_pitch_deck.pptx",
+      "bytes": 1979965,
+      "sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a"
+    },
+    "v6_pdf": {
+      "path": "reports/final_v7/track_g_build/v6_fallback/Preflight_pitch_deck.pdf",
+      "bytes": 660305,
+      "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0"
+    },
+    "pptx": {
+      "path": "docs/Preflight_pitch_deck.pptx",
+      "bytes": 2563693,
+      "sha256": "8f74a48a011500d84081f2c162feadd0ad13efb5b28198ea77a3af999144bf9a"
+    },
+    "pdf": {
+      "path": "docs/Preflight_pitch_deck.pdf",
+      "bytes": 934571,
+      "sha256": "88d9807dd8016803f05826f0a62953b04538b6760600528b791d06973cc72c4a"
+    }
+  },
+  "zip_integrity_error": null,
+  "malformed_xml": [],
+  "missing_internal_targets": [],
+  "preserved_parts": {
+    "ppt/slideMasters/": {
+      "count": 2,
+      "identical_count": 2,
+      "parts": [
+        {
+          "part": "ppt/slideMasters/slideMaster1.xml",
+          "identical": true,
+          "sha256": "aa1faa2698cec70002ff6aa7c4a5f0ae93b9d7a47aa370f6cb82ff64443ffb1c"
+        },
+        {
+          "part": "ppt/slideMasters/_rels/slideMaster1.xml.rels",
+          "identical": true,
+          "sha256": "1cd2f45ca2c9e7a802cb2391fb55f3d30c1d8124ae8e2d0ed503d03140d487e1"
+        }
+      ]
+    },
+    "ppt/slideLayouts/": {
+      "count": 22,
+      "identical_count": 22,
+      "parts": [
+        {
+          "part": "ppt/slideLayouts/slideLayout1.xml",
+          "identical": true,
+          "sha256": "ef9e0cbe7d1d9c3747da40fbc906ea7a19b1b6856cb81ec387c8db6db2486539"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout1.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout2.xml",
+          "identical": true,
+          "sha256": "7587835d06b1804f2d88260c334886f19be4e5135ab5f1db974b8d46a191123a"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout2.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout3.xml",
+          "identical": true,
+          "sha256": "78878be04f8b6c00b804e23a8bb7cb952e4e701645964cf23558cb41a726bcd9"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout3.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout4.xml",
+          "identical": true,
+          "sha256": "00843640f7d997d299121bf1b2b67aaa9d435d40e379322c4df625a994821f4e"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout4.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout5.xml",
+          "identical": true,
+          "sha256": "8b7034f1b7ba9b343666b2f95ab163d75da9a098b55c68e5f0302e707fcc48c0"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout5.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout6.xml",
+          "identical": true,
+          "sha256": "7eb96b58a4f4ed86e2903dc0889497b8231c3f9103a1b3e18bb4f8304975e456"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout6.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout7.xml",
+          "identical": true,
+          "sha256": "40c0a47ece3399a0ed85c9881ad9b5325afa8b719803786e53d8cf51faa93f3d"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout7.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout8.xml",
+          "identical": true,
+          "sha256": "2ee2371c1e20e999fe7ba54b5b2078c4b50e75ab59f25747b3284d2fb7479f7f"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout8.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout9.xml",
+          "identical": true,
+          "sha256": "739fc11252366cc3368da05553027589792871f1e8f1ff265354295764a8140f"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout9.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout10.xml",
+          "identical": true,
+          "sha256": "481ac34220b3de0e0f3555f373ea2d96b0317b1b5a9cfddc66a53a0f0b07c310"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout10.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        },
+        {
+          "part": "ppt/slideLayouts/slideLayout11.xml",
+          "identical": true,
+          "sha256": "26ac5aed0efc99a1112a3762364b9dc609a79d52827d87f0a615f9932c25e8e5"
+        },
+        {
+          "part": "ppt/slideLayouts/_rels/slideLayout11.xml.rels",
+          "identical": true,
+          "sha256": "d0344f01a88cbd0698659341a47250aab5624a431ba4a6721b61926358142140"
+        }
+      ]
+    },
+    "ppt/theme/": {
+      "count": 2,
+      "identical_count": 2,
+      "parts": [
+        {
+          "part": "ppt/theme/theme1.xml",
+          "identical": true,
+          "sha256": "b39f0976c9654dec98415a7c744a075ad0ceae88eee6f13d9ca624f3815b75e3"
+        },
+        {
+          "part": "ppt/theme/theme2.xml",
+          "identical": true,
+          "sha256": "528b7c8f48252376fcb7f100455962d47d5d8bc8bc4a0b60f9152b5bbd0221c9"
+        }
+      ]
+    },
+    "ppt/fonts/": {
+      "count": 6,
+      "identical_count": 6,
+      "parts": [
+        {
+          "part": "ppt/fonts/GoogleSansFlex-regular.fntdata",
+          "identical": true,
+          "sha256": "76c59244d6d55a5dc542cb2e3376876f0d89781b6512409d86bf09cf1a760f4b"
+        },
+        {
+          "part": "ppt/fonts/GoogleSansFlex-bold.fntdata",
+          "identical": true,
+          "sha256": "ef43ec2513d4a41a4366d1ea58ca7d8855891b191e343c716a244a3f8231d599"
+        },
+        {
+          "part": "ppt/fonts/GoogleSansFlexSemiBold-regular.fntdata",
+          "identical": true,
+          "sha256": "6d770952ae327e7ef737d92fcb451c61a8da1922a554f2b2348df47c60e1ccc0"
+        },
+        {
+          "part": "ppt/fonts/GoogleSansFlexMedium-regular.fntdata",
+          "identical": true,
+          "sha256": "2c1401ecfbe6ef1846f86bf4650548a1f75abb22c13163a6c5090fea4fad22a9"
+        },
+        {
+          "part": "ppt/fonts/GoogleSansFlexMedium-bold.fntdata",
+          "identical": true,
+          "sha256": "ef43ec2513d4a41a4366d1ea58ca7d8855891b191e343c716a244a3f8231d599"
+        },
+        {
+          "part": "ppt/fonts/GoogleSansFlexSemiBold-bold.fntdata",
+          "identical": true,
+          "sha256": "ef43ec2513d4a41a4366d1ea58ca7d8855891b191e343c716a244a3f8231d599"
+        }
+      ]
+    },
+    "ppt/media/": {
+      "count": 5,
+      "identical_count": 5,
+      "parts": [
+        {
+          "part": "ppt/media/image1.png",
+          "identical": true,
+          "sha256": "e387cc0bab211aec3cd50cccb0e41741a38302e29072fb92012f71c6ccb2de68"
+        },
+        {
+          "part": "ppt/media/image4.png",
+          "identical": true,
+          "sha256": "25b5b25e6506e1d715643a38a82181f0ef480e35f252027761e709230fcca6da"
+        },
+        {
+          "part": "ppt/media/image5.png",
+          "identical": true,
+          "sha256": "125250c8cd8ee14c7c295c671d598b7f61a9b2ddfca3d6d412919451d67fac8b"
+        },
+        {
+          "part": "ppt/media/image3.png",
+          "identical": true,
+          "sha256": "1c933514ae7f45c41aaf876bd2bd523f08c6d7d36c4f3427d5f5bda5e2e3644c"
+        },
+        {
+          "part": "ppt/media/image2.png",
+          "identical": true,
+          "sha256": "fe56749b9b507a95656da3b3e0a84cbc6417e540ddab4c220b7cfec5cbfdf585"
+        }
+      ]
+    }
+  },
+  "slide1_all_nontext_xml_identical_to_template": true,
+  "slide1_xml_identical_to_v6": true,
+  "displayed_slide_parts": [
+    "ppt/slides/slide1.xml",
+    "ppt/slides/slide3.xml",
+    "ppt/slides/slide4.xml",
+    "ppt/slides/slide5.xml",
+    "ppt/slides/slide6.xml",
+    "ppt/slides/slide8.xml",
+    "ppt/slides/slide9.xml",
+    "ppt/slides/slide11.xml",
+    "ppt/slides/slide12.xml",
+    "ppt/slides/slide13.xml",
+    "ppt/slides/slide17.xml",
+    "ppt/slides/slide14.xml"
+  ],
+  "displayed_slide_count": 12,
+  "slide_size_emu": {
+    "cy": "5143500",
+    "cx": "9144000"
+  },
+  "same_slide_size": true,
+  "package_deltas_vs_v6": {
+    "changed": [
+      "ppt/notesSlides/notesSlide3.xml",
+      "ppt/notesSlides/notesSlide4.xml",
+      "ppt/notesSlides/notesSlide5.xml",
+      "ppt/notesSlides/notesSlide6.xml",
+      "ppt/notesSlides/notesSlide8.xml",
+      "ppt/notesSlides/notesSlide9.xml",
+      "ppt/notesSlides/notesSlide11.xml",
+      "ppt/notesSlides/notesSlide12.xml",
+      "ppt/notesSlides/notesSlide13.xml",
+      "ppt/notesSlides/notesSlide14.xml",
+      "ppt/slides/slide3.xml",
+      "ppt/slides/_rels/slide3.xml.rels",
+      "ppt/slides/slide4.xml",
+      "ppt/slides/slide5.xml",
+      "ppt/slides/_rels/slide5.xml.rels",
+      "ppt/slides/slide6.xml",
+      "ppt/slides/_rels/slide6.xml.rels",
+      "ppt/slides/slide8.xml",
+      "ppt/slides/slide9.xml",
+      "ppt/slides/slide11.xml",
+      "ppt/slides/_rels/slide11.xml.rels",
+      "ppt/slides/slide12.xml",
+      "ppt/slides/slide13.xml",
+      "ppt/slides/_rels/slide13.xml.rels",
+      "ppt/slides/slide14.xml",
+      "ppt/slides/_rels/slide14.xml.rels",
+      "ppt/presentation.xml",
+      "ppt/_rels/presentation.xml.rels",
+      "[Content_Types].xml"
+    ],
+    "added": [
+      "ppt/media/preflight_better_prompt_crop.jpg",
+      "ppt/media/preflight_concept_before_shot.jpg",
+      "ppt/media/preflight_concept_spent_attempts.jpg",
+      "ppt/media/preflight_current_header_crop.jpg",
+      "ppt/media/preflight_earlier_header_crop.jpg",
+      "ppt/media/preflight_paste_crop.jpg",
+      "ppt/media/preflight_risk_card_crop.jpg",
+      "ppt/media/preflight_spoon_original_square.jpg",
+      "ppt/media/preflight_why_crop.jpg",
+      "ppt/notesSlides/_rels/notesSlide17.xml.rels",
+      "ppt/notesSlides/notesSlide17.xml",
+      "ppt/slides/_rels/slide17.xml.rels",
+      "ppt/slides/slide17.xml"
+    ],
+    "removed": []
+  },
+  "explicit_font_families": [
+    "",
+    "Arial",
+    "Google Sans Flex",
+    "Google Sans Flex Medium",
+    "Google Sans Flex SemiBold"
+  ],
+  "authored_colors_added_vs_v6": [
+    "B4563B",
+    "EF7F60"
+  ],
+  "colors_removed_vs_v6": [],
+  "pdf_page_count": 12,
+  "pdf_info": "Creator:         Impress\nProducer:        LibreOffice 26.2.4.2 (AARCH64)\nCreationDate:    Sun Oct 18 18:44:20 2026 KST\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           12\nEncrypted:       no\nPage size:       720 x 405.014 pts\nPage rot:        0\nFile size:       934571 bytes\nOptimized:       no\nPDF version:     1.7\n",
+  "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBAAAAA+GoogleSansFlexSemiBold        TrueType          WinAnsi          yes yes yes    341  0\nCAAAAA+GoogleSansFlex                TrueType          WinAnsi          yes yes yes    346  0\nDAAAAA+GoogleSansFlexMedium          TrueType          WinAnsi          yes yes yes    356  0\nEAAAAA+LucidaGrande                  TrueType          WinAnsi          yes yes yes    351  0\n",
+  "banned_word_hits": [],
+  "numeric_occurrences": [
+    {
+      "page": 2,
+      "token": "2024",
+      "classification": "Allowed quantity token; see context",
+      "context": "ng to spend actual credits\u201d Adobe Community  2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Concept p"
+    },
+    {
+      "page": 2,
+      "token": "21%",
+      "classification": "Allowed quantity token; see context",
+      "context": " credits\u201d Adobe Community  2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Concept photo: built-in im"
+    },
+    {
+      "page": 2,
+      "token": "1,911",
+      "classification": "Allowed quantity token; see context",
+      "context": "s\u201d Adobe Community  2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Concept photo: built-in image tool,"
+    },
+    {
+      "page": 3,
+      "token": "1.1/5",
+      "classification": "Allowed quantity token; see context",
+      "context": " errors, not unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes.                     "
+    },
+    {
+      "page": 3,
+      "token": "340",
+      "classification": "Allowed quantity token; see context",
+      "context": ", not unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes.                          "
+    },
+    {
+      "page": 3,
+      "token": "219",
+      "classification": "Allowed quantity token; see context",
+      "context": " 1.1/5 (340 reviews). Adobe preview request: 219 votes.                                 Preflight            Prompt   "
+    },
+    {
+      "page": 4,
+      "token": "1,911",
+      "classification": "Allowed quantity token; see context",
+      "context": "Three checks before you spend.     Risk from 1,911 human votes Historical, uncalibrated                                 "
+    },
+    {
+      "page": 4,
+      "token": "$3.20",
+      "classification": "Allowed quantity token; see context",
+      "context": "drops                       A still before a $3.20 video  Sources: actual demo frames and saved spoon/laptop still. Vide"
+    },
+    {
+      "page": 7,
+      "token": "3.5",
+      "classification": "User-mapped Gemini 3.5 technology identifier",
+      "context": "         Firestore                    Gemini 3.5                   Google ADK                   Agent     Gemini image"
+    },
+    {
+      "page": 7,
+      "token": "3.5",
+      "classification": "User-mapped Gemini 3.5 technology identifier",
+      "context": "vice inventory and deployed workflow. Gemini 3.5 Flash is a model identifier, not a measured quantity. "
+    },
+    {
+      "page": 8,
+      "token": "46.8%",
+      "classification": "Allowed quantity token; see context",
+      "context": " bill.                                       46.8%                                                                      "
+    },
+    {
+      "page": 8,
+      "token": "15.8%",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                             15.8% Estimated risk after Gemini rewrite, with saved stills before video p"
+    },
+    {
+      "page": 9,
+      "token": "0",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                             0 model calls                  0.67                                    "
+    },
+    {
+      "page": 9,
+      "token": "0.67",
+      "classification": "Allowed quantity token; see context",
+      "context": "              0 model calls                  0.67                                                         8/20         "
+    },
+    {
+      "page": 9,
+      "token": "8/20",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                             8/20                                                                      "
+    },
+    {
+      "page": 9,
+      "token": "$0.00",
+      "classification": "Allowed quantity token; see context",
+      "context": "sult                                         $0.00                held-out AUC                                          "
+    },
+    {
+      "page": 9,
+      "token": "60",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                             60 calls               historical signal                                "
+    },
+    {
+      "page": 10,
+      "token": "10",
+      "classification": "Allowed quantity token; see context",
+      "context": "elopment (if any)  Felix builds. Sidhant: QA 10, 6 shipped.                                                          "
+    },
+    {
+      "page": 10,
+      "token": "6",
+      "classification": "Allowed quantity token; see context",
+      "context": "ment (if any)  Felix builds. Sidhant: QA 10, 6 shipped.                                                             "
+    },
+    {
+      "page": 10,
+      "token": "2.5",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                QA           2.5 years                                                                "
+    },
+    {
+      "page": 10,
+      "token": "30",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                     Objects 30 \u2192 18. Colours 23 \u2192 7. Next: live stills, tabs, non-English. Sources: "
+    },
+    {
+      "page": 10,
+      "token": "18",
+      "classification": "Allowed quantity token; see context",
+      "context": "                                Objects 30 \u2192 18. Colours 23 \u2192 7. Next: live stills, tabs, non-English. Sources: teamm"
+    },
+    {
+      "page": 10,
+      "token": "23",
+      "classification": "Allowed quantity token; see context",
+      "context": "                    Objects 30 \u2192 18. Colours 23 \u2192 7. Next: live stills, tabs, non-English. Sources: teammate QA and s"
+    },
+    {
+      "page": 10,
+      "token": "7",
+      "classification": "Allowed quantity token; see context",
+      "context": "               Objects 30 \u2192 18. Colours 23 \u2192 7. Next: live stills, tabs, non-English. Sources: teammate QA and separ"
+    },
+    {
+      "page": 11,
+      "token": "46.8%",
+      "classification": "Allowed quantity token; see context",
+      "context": "nds skip unusable clips.   Spoon and laptop: 46.8% \u2192 15.8%, still before a $3.20 video.    Preflight: know before you pa"
+    },
+    {
+      "page": 11,
+      "token": "15.8%",
+      "classification": "Allowed quantity token; see context",
+      "context": " unusable clips.   Spoon and laptop: 46.8% \u2192 15.8%, still before a $3.20 video.    Preflight: know before you pay. Sourc"
+    },
+    {
+      "page": 11,
+      "token": "$3.20",
+      "classification": "Allowed quantity token; see context",
+      "context": "on and laptop: 46.8% \u2192 15.8%, still before a $3.20 video.    Preflight: know before you pay. Sources: Runway refund poli"
+    },
+    {
+      "page": 12,
+      "token": "3",
+      "classification": "Official-template duration label",
+      "context": "com/testofschool/preflight  Demo Video Link (3 Minutes) Pending public upload  Final Product Link https://preflight-"
+    },
+    {
+      "page": 12,
+      "token": "45",
+      "classification": "URL identifier",
+      "context": "d  Final Product Link https://preflight-jcgro45veq-as.a.run.app "
+    }
+  ],
+  "unsupported_numeric_occurrences": [],
+  "per_slide": [
+    {
+      "page": 1,
+      "source_slide": 1,
+      "headline": "",
+      "headline_words": 0,
+      "authored_body": [],
+      "body_words_excluding_all_source_lines": 24,
+      "explanatory_footer_prose": "",
+      "footer_prose_words": 0,
+      "body_words_including_explanatory_footer": 24,
+      "source_text": [],
+      "template_exception": true,
+      "template_fields": [
+        {
+          "name": "Google Shape;54;p13",
+          "text": "Team Details\nTeam name: testofschool\nTeam leader name: Jung Min Kang\nProblem Statement: People who pay per generation for AI video only learn a clip is unusable after they have paid for it."
+        }
+      ],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 0.0,
+      "raster_picture_area_percent": 0.0,
+      "geometry_checks": [],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true,
+      "filled_values": [
+        "testofschool",
+        "Jung Min Kang",
+        "People who pay per generation for AI video only learn a clip is unusable after they have paid for it."
+      ],
+      "filled_content_words": 24
+    },
+    {
+      "page": 2,
+      "source_slide": 3,
+      "headline": "You pay first. You find out later.",
+      "headline_words": 7,
+      "authored_body": [
+        "\u201cyou still burn credits on the failed attempt\u201d",
+        "\u201ca lo-res preview render before having to spend actual credits\u201d"
+      ],
+      "body_words_excluding_all_source_lines": 18,
+      "explanatory_footer_prose": "",
+      "footer_prose_words": 0,
+      "body_words_including_explanatory_footer": 18,
+      "source_text": [
+        "Trustpilot, Runway review",
+        "Adobe Community",
+        "2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Concept photo: built-in image tool, model UNREPORTED."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 41.92,
+      "raster_picture_area_percent": 41.92,
+      "geometry_checks": [
+        {
+          "name": "Concept photo: spent attempts",
+          "match": true,
+          "geometry": {
+            "x": 3.24,
+            "y": 1.76,
+            "w": 6.45,
+            "h": 3.65
+          },
+          "kind": "raster picture"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 3,
+      "source_slide": 4,
+      "headline": "A check belongs before pay.",
+      "headline_words": 5,
+      "authored_body": [
+        "Refunds cover errors, not unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes.",
+        "Prompt",
+        "Pay",
+        "Generate",
+        "Judge",
+        "Re-prompt",
+        "Preflight"
+      ],
+      "body_words_excluding_all_source_lines": 22,
+      "explanatory_footer_prose": "",
+      "footer_prose_words": 0,
+      "body_words_including_explanatory_footer": 22,
+      "source_text": [
+        "Sources: Runway credit-refund policy and Trustpilot; Adobe Community preview request. Figures supplied for this submission."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 40.77,
+      "raster_picture_area_percent": 0.0,
+      "geometry_checks": [
+        {
+          "name": "Workflow Prompt",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 2.42,
+            "w": 1.61,
+            "h": 2.85
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Workflow Pay",
+          "match": true,
+          "geometry": {
+            "x": 2.3,
+            "y": 2.42,
+            "w": 1.61,
+            "h": 2.85
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Workflow Generate",
+          "match": true,
+          "geometry": {
+            "x": 4.17,
+            "y": 2.42,
+            "w": 1.61,
+            "h": 2.85
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Workflow Judge",
+          "match": true,
+          "geometry": {
+            "x": 6.04,
+            "y": 2.42,
+            "w": 1.61,
+            "h": 2.85
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Workflow Re-prompt",
+          "match": true,
+          "geometry": {
+            "x": 7.91,
+            "y": 2.42,
+            "w": 1.61,
+            "h": 2.85
+          },
+          "kind": "native requested diagram/card"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 4,
+      "source_slide": 5,
+      "headline": "Three checks before you spend.",
+      "headline_words": 5,
+      "authored_body": [
+        "Risk from 1,911 human votes\nHistorical, uncalibrated",
+        "Gemini rewrite, kept only if risk drops",
+        "A still before a $3.20 video"
+      ],
+      "body_words_excluding_all_source_lines": 20,
+      "explanatory_footer_prose": "A still does not test motion.",
+      "footer_prose_words": 6,
+      "body_words_including_explanatory_footer": 26,
+      "source_text": [
+        "Sources: actual demo frames and saved spoon/laptop still. Video price: Google pricing page. A still does not test motion."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 41.38,
+      "raster_picture_area_percent": 41.38,
+      "geometry_checks": [
+        {
+          "name": "Real product risk crop",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 1.89,
+            "w": 3.0,
+            "h": 1.7868339895013123
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Real product better-prompt crop",
+          "match": true,
+          "geometry": {
+            "x": 3.5,
+            "y": 1.89,
+            "w": 3.0,
+            "h": 2.97413823272091
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Real saved still, square crop",
+          "match": true,
+          "geometry": {
+            "x": 6.57,
+            "y": 1.89,
+            "w": 3.0,
+            "h": 3.0
+          },
+          "kind": "raster picture"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 5,
+      "source_slide": 6,
+      "headline": "Paste. Check. Rewrite. Look.",
+      "headline_words": 4,
+      "authored_body": [
+        "Paste",
+        "Risk + why",
+        "Better prompt",
+        "Still / clip review"
+      ],
+      "body_words_excluding_all_source_lines": 10,
+      "explanatory_footer_prose": "",
+      "footer_prose_words": 0,
+      "body_words_including_explanatory_footer": 10,
+      "source_text": [
+        "Source: demo/frames. Storyboard labels describe the sequence; each product crop is from the real recorded application."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 45.04,
+      "raster_picture_area_percent": 24.04,
+      "geometry_checks": [
+        {
+          "name": "Process storyboard panel 0",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 2.02,
+            "w": 2.16,
+            "h": 2.92
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Actual paste thumbnail",
+          "match": true,
+          "geometry": {
+            "x": 0.51,
+            "y": 2.12,
+            "w": 2.0,
+            "h": 0.6398392388451444
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Process storyboard panel 1",
+          "match": true,
+          "geometry": {
+            "x": 2.74,
+            "y": 2.02,
+            "w": 2.16,
+            "h": 2.92
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Actual risk thumbnail",
+          "match": true,
+          "geometry": {
+            "x": 2.82,
+            "y": 2.16,
+            "w": 2.0,
+            "h": 1.1912226596675415
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Actual why thumbnail",
+          "match": true,
+          "geometry": {
+            "x": 2.82,
+            "y": 3.48,
+            "w": 2.0,
+            "h": 0.9009011373578303
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Process storyboard panel 2",
+          "match": true,
+          "geometry": {
+            "x": 5.05,
+            "y": 2.02,
+            "w": 2.16,
+            "h": 2.92
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Actual rewrite thumbnail",
+          "match": true,
+          "geometry": {
+            "x": 5.13,
+            "y": 2.14,
+            "w": 2.0,
+            "h": 1.9827580927384076
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Process storyboard panel 3",
+          "match": true,
+          "geometry": {
+            "x": 7.36,
+            "y": 2.02,
+            "w": 2.16,
+            "h": 2.92
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Actual saved-still thumbnail",
+          "match": true,
+          "geometry": {
+            "x": 7.44,
+            "y": 2.14,
+            "w": 2.0,
+            "h": 2.0
+          },
+          "kind": "raster picture"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 6,
+      "source_slide": 8,
+      "headline": "One request, a traceable check.",
+      "headline_words": 5,
+      "authored_body": [
+        "Browser",
+        "Cloud Run\nFastAPI",
+        "Google ADK\nGemini rewrite",
+        "Nearest prompts\nIRT",
+        "Firestore",
+        "Agent Platform\nSessions"
+      ],
+      "body_words_excluding_all_source_lines": 15,
+      "explanatory_footer_prose": "Rewrite agent uses tools and session persistence; image and video understanding appear next.",
+      "footer_prose_words": 13,
+      "body_words_including_explanatory_footer": 28,
+      "source_text": [
+        "Source: deployed application architecture. Rewrite agent uses tools and session persistence; image and video understanding appear next."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 43.0,
+      "raster_picture_area_percent": 0.0,
+      "geometry_checks": [
+        {
+          "name": "Architecture node 0",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 2.0,
+            "w": 2.82,
+            "h": 1.44
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Architecture node 1",
+          "match": true,
+          "geometry": {
+            "x": 3.59,
+            "y": 2.0,
+            "w": 2.82,
+            "h": 1.44
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Architecture node 2",
+          "match": true,
+          "geometry": {
+            "x": 6.75,
+            "y": 2.0,
+            "w": 2.82,
+            "h": 1.44
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Architecture node 3",
+          "match": true,
+          "geometry": {
+            "x": 6.75,
+            "y": 3.76,
+            "w": 2.82,
+            "h": 1.44
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Architecture node 4",
+          "match": true,
+          "geometry": {
+            "x": 3.59,
+            "y": 3.76,
+            "w": 2.82,
+            "h": 1.44
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Architecture node 5",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 3.76,
+            "w": 2.82,
+            "h": 1.44
+          },
+          "kind": "native requested diagram/card"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 7,
+      "source_slide": 9,
+      "headline": "All on Google Cloud.",
+      "headline_words": 4,
+      "authored_body": [
+        "Cloud Run",
+        "Firestore",
+        "Gemini 3.5 Flash\n(Vertex AI)",
+        "Google ADK",
+        "Agent Platform\nSessions",
+        "Gemini image +\nvideo understanding"
+      ],
+      "body_words_excluding_all_source_lines": 18,
+      "explanatory_footer_prose": "Gemini 3.5 Flash is a model identifier, not a measured quantity.",
+      "footer_prose_words": 11,
+      "body_words_including_explanatory_footer": 29,
+      "source_text": [
+        "Source: README service inventory and deployed workflow. Gemini 3.5 Flash is a model identifier, not a measured quantity."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 44.12,
+      "raster_picture_area_percent": 0.0,
+      "geometry_checks": [
+        {
+          "name": "Technology chip 0",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 2.07,
+            "w": 1.43,
+            "h": 2.9
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Technology chip 1",
+          "match": true,
+          "geometry": {
+            "x": 1.97,
+            "y": 2.07,
+            "w": 1.43,
+            "h": 2.9
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Technology chip 2",
+          "match": true,
+          "geometry": {
+            "x": 3.51,
+            "y": 2.07,
+            "w": 1.43,
+            "h": 2.9
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Technology chip 3",
+          "match": true,
+          "geometry": {
+            "x": 5.05,
+            "y": 2.07,
+            "w": 1.43,
+            "h": 2.9
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Technology chip 4",
+          "match": true,
+          "geometry": {
+            "x": 6.59,
+            "y": 2.07,
+            "w": 1.43,
+            "h": 2.9
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Technology chip 5",
+          "match": true,
+          "geometry": {
+            "x": 8.13,
+            "y": 2.07,
+            "w": 1.43,
+            "h": 2.9
+          },
+          "kind": "native requested diagram/card"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 8,
+      "source_slide": 11,
+      "headline": "See the risk before the bill.",
+      "headline_words": 6,
+      "authored_body": [
+        "46.8%",
+        "15.8%",
+        "Estimated risk after Gemini rewrite, with saved stills before video payment. Uncalibrated. A still cannot judge motion."
+      ],
+      "body_words_excluding_all_source_lines": 19,
+      "explanatory_footer_prose": "Original left, Gemini rewrite right.",
+      "footer_prose_words": 5,
+      "body_words_including_explanatory_footer": 24,
+      "source_text": [
+        "Source: saved original and rewritten spoon/laptop assets; real sample decision. Original left, Gemini rewrite right."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 40.62,
+      "raster_picture_area_percent": 40.62,
+      "geometry_checks": [
+        {
+          "name": "Actual saved original still",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 1.84,
+            "w": 4.51,
+            "h": 2.536874453193351
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Actual saved rewrite still",
+          "match": true,
+          "geometry": {
+            "x": 5.06,
+            "y": 1.84,
+            "w": 4.51,
+            "h": 2.536874453193351
+          },
+          "kind": "raster picture"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 9,
+      "source_slide": 12,
+      "headline": "Measured, with the limits shown.",
+      "headline_words": 5,
+      "authored_body": [
+        "0.67",
+        "held-out AUC\nhistorical signal",
+        "8/20",
+        "best live image result\n60 calls\nsaved stills for judging",
+        "0 model calls",
+        "$0.00",
+        "per saved still"
+      ],
+      "body_words_excluding_all_source_lines": 23,
+      "explanatory_footer_prose": "Historical AUC is uncalibrated; clip-review accuracy remains unmeasured.",
+      "footer_prose_words": 8,
+      "body_words_including_explanatory_footer": 31,
+      "source_text": [
+        "Source: held-out evaluation and live-image probe receipts. Historical AUC is uncalibrated; clip-review accuracy remains unmeasured."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 50.43,
+      "raster_picture_area_percent": 0.0,
+      "geometry_checks": [
+        {
+          "name": "Metric card 0",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 2.0,
+            "w": 3.0,
+            "h": 3.15
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Metric card 1",
+          "match": true,
+          "geometry": {
+            "x": 3.51,
+            "y": 2.0,
+            "w": 3.0,
+            "h": 3.15
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Metric card 2",
+          "match": true,
+          "geometry": {
+            "x": 6.59,
+            "y": 2.0,
+            "w": 3.0,
+            "h": 3.15
+          },
+          "kind": "native requested diagram/card"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 10,
+      "source_slide": 13,
+      "headline": "Felix builds. Sidhant: QA 10, 6 shipped.",
+      "headline_words": 7,
+      "authored_body": [
+        "F",
+        "IRT preprints\n2.5 years",
+        "S",
+        "QA",
+        "Earlier interface",
+        "After teammate QA",
+        "Objects 30 \u2192 18. Colours 23 \u2192 7.",
+        "Next: live stills, tabs, non-English."
+      ],
+      "body_words_excluding_all_source_lines": 25,
+      "explanatory_footer_prose": "Header crops show an earlier checked state and current screen, not the count samples.",
+      "footer_prose_words": 14,
+      "body_words_including_explanatory_footer": 39,
+      "source_text": [
+        "Sources: teammate QA and separate first-viewport audit. Header crops show an earlier checked state and current screen, not the count samples."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 42.83,
+      "raster_picture_area_percent": 20.4,
+      "geometry_checks": [
+        {
+          "name": "Felix initials card",
+          "match": true,
+          "geometry": {
+            "x": 0.43,
+            "y": 2.0,
+            "w": 2.08,
+            "h": 3.03
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Sidhant initials card",
+          "match": true,
+          "geometry": {
+            "x": 2.64,
+            "y": 2.0,
+            "w": 2.08,
+            "h": 3.03
+          },
+          "kind": "native requested diagram/card"
+        },
+        {
+          "name": "Genuine earlier checked-state header crop",
+          "match": true,
+          "geometry": {
+            "x": 4.94,
+            "y": 2.0,
+            "w": 4.63,
+            "h": 1.2276520122484689
+          },
+          "kind": "raster picture"
+        },
+        {
+          "name": "Genuine current first-screen header crop",
+          "match": true,
+          "geometry": {
+            "x": 4.94,
+            "y": 3.38,
+            "w": 4.63,
+            "h": 1.2276520122484689
+          },
+          "kind": "raster picture"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 11,
+      "source_slide": 17,
+      "headline": "Know before you pay.",
+      "headline_words": 4,
+      "authored_body": [
+        "Generators bill attempts. Refunds skip unusable clips.",
+        "Spoon and laptop: 46.8% \u2192 15.8%, still before a $3.20 video.",
+        "Preflight: know before you pay."
+      ],
+      "body_words_excluding_all_source_lines": 23,
+      "explanatory_footer_prose": "",
+      "footer_prose_words": 0,
+      "body_words_including_explanatory_footer": 23,
+      "source_text": [
+        "Sources: Runway refund policy and saved spoon/laptop example. Concept photo: built-in image tool, model UNREPORTED."
+      ],
+      "template_exception": false,
+      "template_fields": [],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 41.92,
+      "raster_picture_area_percent": 41.92,
+      "geometry_checks": [
+        {
+          "name": "Concept photo: before the shot",
+          "match": true,
+          "geometry": {
+            "x": 3.24,
+            "y": 1.76,
+            "w": 6.45,
+            "h": 3.65
+          },
+          "kind": "raster picture"
+        }
+      ],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true
+    },
+    {
+      "page": 12,
+      "source_slide": 14,
+      "headline": "",
+      "headline_words": 0,
+      "authored_body": [],
+      "body_words_excluding_all_source_lines": 5,
+      "explanatory_footer_prose": "",
+      "footer_prose_words": 0,
+      "body_words_including_explanatory_footer": 5,
+      "source_text": [],
+      "template_exception": true,
+      "template_fields": [
+        {
+          "name": "Google Shape;159;p26",
+          "text": "Provide links to your:"
+        },
+        {
+          "name": "Submission links",
+          "text": "GitHub Public Repository\nhttps://github.com/testofschool/preflight\nDemo Video Link (3 Minutes)\nPending public upload\nFinal Product Link\nhttps://preflight-jcgro45veq-as.a.run.app"
+        }
+      ],
+      "render_size": [
+        500,
+        282
+      ],
+      "requested_native_visual_or_raster_area_percent": 0.0,
+      "raster_picture_area_percent": 0.0,
+      "geometry_checks": [],
+      "manifest_headline_matches": true,
+      "manifest_body_matches": true,
+      "section_title_preserved": true,
+      "link_content_values": [
+        "https://github.com/testofschool/preflight",
+        "Pending public upload",
+        "https://preflight-jcgro45veq-as.a.run.app"
+      ],
+      "link_content_words": 5
+    }
+  ],
+  "pdf_font_usage": {
+    "/BAAAAA+GoogleSansFlexSemiBold": {
+      "pages": [
+        1,
+        3
+      ],
+      "characters": 25,
+      "text_by_page": "body text in separate PDF text inventory"
+    },
+    "/CAAAAA+GoogleSansFlex": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "characters": 2688,
+      "text_by_page": "body text in separate PDF text inventory"
+    },
+    "/DAAAAA+GoogleSansFlexMedium": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "characters": 735,
+      "text_by_page": "body text in separate PDF text inventory"
+    },
+    "/EAAAAA+LucidaGrande": {
+      "pages": [
+        10,
+        11
+      ],
+      "characters": 4,
+      "text_by_page": {
+        "10": "\u2192 \u2192",
+        "11": "\u2192"
+      }
+    }
+  },
+  "preservation_pass": true,
+  "artifact_core_pass": true,
+  "raw_native_text_pass": true,
+  "conservative_body_budget_fails": [
+    4,
+    6,
+    7,
+    9,
+    10
+  ],
+  "gate_status": "FAIL",
+  "raster_inventory": "reports/final_v7/track_g_independent_fidelity_raster_inventory.json",
+  "raster_inventory_summary": "Every listed derivative exactly reproduced from declared original using crop/thumbnail/JPEG only. No synthesized product UI. OCR false positives visually classified. Real screenshot copy not added to authored native-word count; its visible text remains subject to isolated visual rubric.",
+  "section_title_format_checks": [
+    {
+      "source_slide": 3,
+      "title": "Brief about the idea",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 4,
+      "title": "Opportunities",
+      "first_paragraph_xml_identical": false,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true,
+      "original_difference_classification": "Original trailing line break removed in v6 together with instructional paragraphs; unchanged in v7. Title text/style/shape geometry preserved."
+    },
+    {
+      "source_slide": 5,
+      "title": "List of features offered by the solution",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 6,
+      "title": "Process flow diagram or Use-case diagram",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 8,
+      "title": "Architecture diagram of the proposed solution",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 9,
+      "title": "Technologies to be used in the solution",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 11,
+      "title": "Snapshots of the prototype",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 12,
+      "title": "Prototype Performance report/Benchmarking",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 13,
+      "title": "Additional Details/Future Development (if any)",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    },
+    {
+      "source_slide": 14,
+      "title": "Provide links to your:",
+      "first_paragraph_xml_identical": true,
+      "shape_geometry_identical": true,
+      "first_paragraph_xml_identical_to_v6": true
+    }
+  ]
+}

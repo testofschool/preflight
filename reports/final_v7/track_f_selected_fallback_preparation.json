@@ -1,0 +1,478 @@
+{
+  "scope": "SELECTED V6 FALLBACK PREPARATION ONLY; final F awaits trigger after D or21:30 KST",
+  "observed_at_kst": "2026-10-18T18:59:22.151169+09:00",
+  "head": "246b176763b6ace5af426939431566e09d1f925a",
+  "artifacts": {
+    "README.md": {
+      "sha256": "2668126039bc7807b7614d591bfa118b0c06b3be396572f9bedaa1d1f3a8d177",
+      "bytes": 30934
+    },
+    "docs/submission-notes.md": {
+      "sha256": "6f6f50c3c0158be358e50fae8353b1aa282dfbf83139ef7c2966e8a9cbdb9ed3",
+      "bytes": 1524
+    },
+    "docs/Preflight_pitch_deck.pdf": {
+      "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+      "bytes": 660305
+    },
+    "demo/preflight_demo_submission_3m.mp4": {
+      "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+      "bytes": 11708270
+    },
+    "reports/final_v7/track_i_submission_caption_script.txt": {
+      "sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08",
+      "bytes": 1833
+    },
+    "reports/final_v7/track_i_submission_captions.json": {
+      "sha256": "8b6ac612d21ab3bf1eccef76a16589f8ec2c84f82499775ed076faac9b1c3c4c",
+      "bytes": 15225
+    }
+  },
+  "brief_description": {
+    "characters": 952,
+    "limit": 1024,
+    "sha256": "3bac4ff63ca67bf51c54d329abad0c3cb16da13f697bd35e3041e40959f6ef23"
+  },
+  "api_status": {
+    "http_status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "date": "Sun, 18 Oct 2026 09:59:22 GMT"
+    },
+    "body": {
+      "mode": "cloud",
+      "label": "Connected research preview",
+      "cloud_run": true,
+      "gemini": true,
+      "adk": true,
+      "agent_platform_session": true,
+      "firestore": true,
+      "postcheck": true,
+      "preview": true,
+      "preview_mode": "samples",
+      "preview_mode_message": "Image preview — Active for sample prompts (saved stills); live generation limited",
+      "pricing_image": {
+        "model": "gemini-2.5-flash-image",
+        "size": "1K",
+        "usd_per_image": 0.0387,
+        "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "checked_date": "2026-10-18",
+        "cost_basis": "image-output-list-price",
+        "billing_verified": false,
+        "priority_requested": false
+      },
+      "generations": 0,
+      "sample_prompts": [
+        "a cat and a dog",
+        "a spoon and a laptop",
+        "a bicycle and a car",
+        "indoor gymnasium",
+        "a purple clock"
+      ],
+      "pricing": {
+        "model": "Veo 3.1 Standard · 720p/1080p + audio",
+        "usd_per_second": 0.4,
+        "duration_seconds": 8,
+        "single_attempt_usd": 3.2,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+        "checked_date": "2026-10-16",
+        "assumption": "Illustrative budget only; historical both-bad rate is not calibrated to Veo."
+      },
+      "rate_limit": {
+        "checks": 20,
+        "seconds": 60,
+        "scope": "shared Firestore transaction"
+      }
+    }
+  },
+  "selected_deck": "v6 fallback: G failed its permitted correction; selection supplied by root and artifact identity independently verified",
+  "deck_pages": 11,
+  "read_only_scope": {
+    "product_POSTs": 0,
+    "model_calls": 0,
+    "cloud_mutations": 0,
+    "docs_runtime_edits": 0,
+    "git_actions": 0,
+    "status_method": "GET",
+    "status_url": "https://preflight-jcgro45veq-as.a.run.app/api/status"
+  },
+  "rows": [
+    {
+      "row": 1,
+      "value": "Live URL: https://preflight-jcgro45veq-as.a.run.app",
+      "present": [
+        "README lines 3,62,74",
+        "notes lines 3",
+        "selected deck pages 11",
+        "actual selected MP4 3:20 closing card: preflight-jcgro45veq-as.a.run.app; same destination"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "Caption text has no URL; closing visual supplies it.",
+        "Status endpoint does not echo its own origin."
+      ],
+      "caveat": "",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 2,
+      "value": "Repo URL: https://github.com/testofschool/preflight",
+      "present": [
+        "notes lines 5",
+        "selected deck pages 11",
+        "actual selected MP4 3:20 closing card: github.com/testofschool/preflight; same destination"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "README self-link is not required.",
+        "Caption text has no URL; closing visual supplies it.",
+        "Status has no repository metadata field."
+      ],
+      "caveat": "",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 3,
+      "value": "Video URL",
+      "present": [
+        "README lines 3",
+        "notes lines 7",
+        "selected deck pages 11"
+      ],
+      "required_missing": [
+        "README line3: <VIDEO_URL>",
+        "notes line7: <VIDEO_URL>",
+        "selected fallback deck page11: Pending public upload"
+      ],
+      "not_applicable_or_expected_absence": [
+        "Self-referential video link is not required in the captions, video, or status."
+      ],
+      "caveat": "No actual YouTube URL exists to compare or verify. Placeholders do not establish URL equality or public visibility.",
+      "conflicts": [],
+      "state": "WAITING"
+    },
+    {
+      "row": 4,
+      "value": "1,911",
+      "present": [
+        "README lines 25,207",
+        "notes lines 9",
+        "captions lines 7",
+        "selected deck pages 2,4,6,7",
+        "actual selected MP4 0:29 caption; 2:50 architecture card"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "Status has no dataset-count field."
+      ],
+      "caveat": "Human pairwise votes are historical GenAI-Bench evidence, not current-model success probability.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 5,
+      "value": "0.67",
+      "present": [
+        "README lines 66",
+        "notes lines 9",
+        "captions lines 31",
+        "selected deck pages 9",
+        "actual selected MP4 3:04 limits card/caption"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "Status has no AUC field."
+      ],
+      "caveat": "README precise mean 0.668329 and target0.68 have distinct roles; 0.67 is the displayed rounded historical AUC.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 6,
+      "value": "46.8%",
+      "present": [
+        "captions lines 9",
+        "selected deck pages 8",
+        "actual selected MP4 0:45 UI/caption; 0:58 spoon/laptop rewrite card"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "README/notes are not required to repeat this demo-specific risk pair.",
+        "Status has no demo-risk field."
+      ],
+      "caveat": "Canonical spoon/laptop mixed-proxy example. Historical-only53.5% and the separate dog/frisbee13.3% are different definitions or contexts.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 7,
+      "value": "15.8%",
+      "present": [
+        "captions lines 12",
+        "selected deck pages 8",
+        "actual selected MP4 0:58 spoon/laptop UI/caption"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "README/notes are not required to repeat this demo-specific risk pair.",
+        "Status has no demo-risk field."
+      ],
+      "caveat": "Canonical spoon/laptop saved rewrite. Selected I own-prompt dog/frisbee13.3%→6.7% is a separately recorded live text rewrite.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 8,
+      "value": "$3.20 / about three dollars",
+      "present": [
+        "README lines 227",
+        "captions lines 13",
+        "selected deck pages 4",
+        "actual selected MP4 1:02 approximate caption; 0:58 and1:45 UI price basis",
+        "fresh status pricing.single_attempt_usd=3.2; duration_seconds=8; usd_per_second=0.4"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "Notes are not required to repeat the per-attempt illustration."
+      ],
+      "caveat": "USD3.20 for8s at USD0.40/s is illustrative, not executed Veo generation or measured savings. $6.01 and$3.69 shown in separate sample/own-prompt total-budget illustrations are not per-attempt prices.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 9,
+      "value": "8/20",
+      "present": [
+        "README lines 29,69",
+        "notes lines 13",
+        "selected deck pages 9",
+        "actual selected MP4 3:04 limits card: Best8/20"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "Caption narration says live generation failed too often without the count.",
+        "Status has no probe-result field."
+      ],
+      "caveat": "Best of the60 live-image test calls; remains below the19/20 reliability gate.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 10,
+      "value": "Gemini 3.5 Flash",
+      "present": [
+        "README lines 37,55,139,163",
+        "notes lines 9",
+        "selected deck pages 6,7",
+        "actual selected MP4 2:50 architecture card",
+        "reports/track_j/promotion.json allowed_env.PREFLIGHT_GEMINI_MODEL=gemini-3.5-flash (retained J receipt, not a new cloud read)"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [
+        "Caption narration says Gemini without model version.",
+        "Fresh status has gemini=true, not a rewrite model identifier."
+      ],
+      "caveat": "The fresh status image-pricing model and illustrative Veo model describe different roles. Retained post-J promotion config identifies PREFLIGHT_GEMINI_MODEL=gemini-3.5-flash.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 11,
+      "value": "Google ADK",
+      "present": [
+        "README lines 38,54,100,162",
+        "notes lines 9",
+        "captions lines 10",
+        "selected deck pages 6,7",
+        "actual selected MP4 2:35 architecture/caption;2:50 card",
+        "fresh status adk=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [],
+      "caveat": "",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 12,
+      "value": "Agent Platform Sessions",
+      "present": [
+        "README lines 39,44,56,138,165",
+        "notes lines 9",
+        "captions lines 27",
+        "selected deck pages 6,7",
+        "actual selected MP4 2:42 caption;2:50 card",
+        "fresh status agent_platform_session=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [],
+      "caveat": "Managed sessions do not imply Agent Engine runtime hosting.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 13,
+      "value": "Cloud Run",
+      "present": [
+        "README lines 35,44,52,141,161,170,263",
+        "notes lines 9",
+        "captions lines 26",
+        "selected deck pages 6,7",
+        "actual selected MP4 2:35 caption/live architecture;2:50 card",
+        "fresh status cloud_run=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [],
+      "caveat": "",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 14,
+      "value": "Firestore",
+      "present": [
+        "README lines 36,41,53,59,104,137,164,174,178,195,199,209,261,271",
+        "notes lines 9",
+        "captions lines 26,29",
+        "selected deck pages 6,7",
+        "actual selected MP4 2:35 caption/live architecture;2:50 card",
+        "fresh status firestore=true (readiness flag)"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [],
+      "caveat": "",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    },
+    {
+      "row": 15,
+      "value": "samples: Active for sample prompts (saved stills); live generation limited",
+      "present": [
+        "README lines 27,29,41",
+        "notes lines 9,11",
+        "captions lines 15,17,20",
+        "selected deck pages 6,7,9",
+        "actual selected MP4 1:10 saved-still caption;1:30 saved-still mode label;1:45 limited message;3:04 limits card",
+        "fresh status preview=true; preview_mode=samples; exact preview_mode_message=Image preview — Active for sample prompts (saved stills); live generation limited"
+      ],
+      "required_missing": [],
+      "not_applicable_or_expected_absence": [],
+      "caveat": "Zero model calls/$0.00 refer to serving saved stills; the own-prompt rewrite is live text work. Fresh status generations=0 is hard-coded, not cumulative usage accounting.",
+      "conflicts": [],
+      "state": "CONSISTENT WITHIN PREPARATION SCOPE"
+    }
+  ],
+  "video_url_equality": {
+    "state": "WAITING",
+    "README": "<VIDEO_URL>",
+    "notes": "<VIDEO_URL>",
+    "selected_deck": "Pending public upload",
+    "actual_YouTube_URLs_found": 0,
+    "equality_verified": false,
+    "public_visibility_verified": false
+  },
+  "actual_video_frame_checks": [
+    {
+      "seconds": 29,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "ba64f1cb3e34bba8df30cc764535b01d9c6d638b8b868e6a49529d1f7c1ed247",
+      "bytes": 351441
+    },
+    {
+      "seconds": 45,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "369cec01ce3eaf3c1442eae3ef92d97836d009a270073427c17ee6a491993f42",
+      "bytes": 443303
+    },
+    {
+      "seconds": 58,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "e79b724952086b242d83e687c6bc43e085f38ef7b97f8ec9a0d237e7b26933ea",
+      "bytes": 380511
+    },
+    {
+      "seconds": 62,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "a595bac03cc80b79387c8c04fcdc638a1106f62e862b534302a8300d3db4d8fc",
+      "bytes": 426471
+    },
+    {
+      "seconds": 70,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "c8669cc0aad39016e0e5f22e2bcf47e01b35f4970f37362f516dbd7b3d004abc",
+      "bytes": 419143
+    },
+    {
+      "seconds": 90,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "929402b9ac8f48d56547b004a5bf98a70816b750b6721ab97b5e2d083fb97222",
+      "bytes": 387351
+    },
+    {
+      "seconds": 105,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "a2d00c2ad7558909230ed8a9afb0b2c24b9aa8a1cea838888a78b4d03016539f",
+      "bytes": 414796
+    },
+    {
+      "seconds": 110,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "914825971bb88318e5681d2daafcf210eb1108c04e7dd1f0786f0fc1b24da550",
+      "bytes": 439369
+    },
+    {
+      "seconds": 155,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "c3c8abf7f92740cc3680544cebf72faedc26cbcf215b30af977dfb7678015448",
+      "bytes": 407341
+    },
+    {
+      "seconds": 162,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "a2d7f28c1f2f3faacb4dde317b3b100cd4cc0d1c03eef6fbd953f0313fbb73d6",
+      "bytes": 351032
+    },
+    {
+      "seconds": 170,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "143b46ed97b0d301fb070a2b169c7831dbcfdef0bcd1c6f0b7294a7dc4ba57e7",
+      "bytes": 279564
+    },
+    {
+      "seconds": 184,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "2fcee747444dd1fb828acbec063e92487c394518a8512f21919a07897eeae1aa",
+      "bytes": 365135
+    },
+    {
+      "seconds": 200,
+      "source_video": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "bdd6eebbfc41470d22b46e018993e5ca581ba2b7da9ef595f6366ed95d1d69e4",
+      "bytes": 190775
+    }
+  ],
+  "video_frame_check_scope": "13 newly extracted selected-MP4 timestamps inspected as a contact sheet; 0:58,2:50,3:20 also inspected at full resolution; prior I 1:30 and1:45 frames inspected at full resolution. This is not a rerun of all35 burned-caption cues or full-decode gate.",
+  "captions": {
+    "manifest_cues": 36,
+    "nonempty_cues": 35,
+    "script_lines": 35,
+    "script_and_manifest_text_equal": true
+  },
+  "context_distinctions": [
+    "Canonical spoon/laptop:46.8%→15.8%; selected I dog/frisbee live rewrite:13.3%→6.7%; old v6 dog/frisbee13.3%→3.3% is superseded for the selected video.",
+    "Historical-only spoon/laptop53.5% is explicitly a different definition from the displayed mixed proxy.",
+    "Per-attempt USD3.20 differs from total-budget illustrations$6.01/$3.69.",
+    "Three current README allowance sentences are reconciled:lines86/261 configured3,000;line196 default1,000,max3,000,production3,000. Retained J promotion receipt records the3,000 configuration; fresh status does not expose that cap.",
+    "J owner intentionally preserved the invalid-config error string in cloud/store.py:93. It is outside the15 canonical rows and is not classified as an F consistency conflict."
+  ],
+  "result": {
+    "final_pass_performed": false,
+    "canonical_rows_checked": 15,
+    "canonical_conflicts_found": 0,
+    "required_missing_rows": 1,
+    "missing_input": "Public YouTube URL",
+    "overall": "PREPARATION ONLY / WAITING FOR D OR21:30 TRIGGER; not a final pass or submission-ready verdict"
+  }
+}

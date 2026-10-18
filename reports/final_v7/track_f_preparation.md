@@ -33,3 +33,27 @@ Potential conflict to avoid: product pictures and the “before pay” claim mus
 No production POST, image-model call, Veo call, runtime edit, cloud mutation, commit or push was made. TLS verification used the installed certifi CA bundle after the host default trust failed.
 
 Primary preparation receipt: `track_f_preparation.json`. Prior v6 audits informed row selection only; their frame conclusions will not be promoted to evidence for replaced v7 material.
+
+## Preparation refresh after Track I, while Track J is in progress
+
+Observed 2026-10-18T18:33:27.805601+09:00; HEAD `59fb23b262af480709461b648e84d26010e26060`. This remains preparation only. The final pass awaits the root trigger after D or at 21:30 KST, and must use the post-J source/runtime baseline.
+
+Selected actual Track I MP4: `demo/preflight_demo_submission_3m.mp4`, **208.233333 seconds**, **11,708,270 bytes**, SHA-256 `710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565`. Actual bytes match the Track I facts; ffprobe confirms 1920×1080, 30 fps and 6,247 frames. Caption-script SHA-256 `8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08`; manifest SHA-256 `8b6ac612d21ab3bf1eccef76a16589f8ec2c84f82499775ed076faac9b1c3c4c`.
+
+The 1:30 frame visibly shows the own dog/frisbee prompt result **13.3% → 6.7%**, the full rewrite text and the saved-still mode label. The 1:45 frame visibly shows the limited-live-still message. These are separate from the canonical spoon/laptop **46.8% → 15.8%** example. The selected v7 video supersedes the v6 own-prompt **13.3% → 3.3%** recording; the different live rewrite is not a conflicting value for the spoon/laptop example.
+
+J leaves the source default at 1,000 (`cloud/store.py:89`) and raises the validated cumulative maximum to 3,000 (`cloud/store.py:92`). Three README claims require reconciliation after successful J; notes have no such cap/default claim.
+
+| Surface | Exact current claim | Truth after successful J |
+| --- | --- | --- |
+| `README.md:86` | **Max 20 checks/min shared** across the service, with a cumulative allowance of at most 1,000 admitted checks. | FALSE: cumulative maximum becomes 3,000, while the rolling 20/minute limit remains unchanged. |
+| `README.md:196` |  /  `PREFLIGHT_TOTAL_REQUEST_LIMIT`  /  Cumulative admitted-check allowance; default and maximum are 1,000  /  | PARTIALLY FALSE: default remains 1,000; maximum becomes 3,000. |
+| `README.md:261` | Cloud mode uses a shared Firestore transaction to admit at most 20 checks per rolling minute across instances, with a cumulative allowance of at most 1,000 admitted checks. | FALSE: cumulative maximum becomes 3,000, while the rolling 20/minute limit remains unchanged. |
+
+Additional observation for the J owner: `cloud/store.py:93` still says “between one and 1000” in the invalid-configuration error text while the adjacent validation ceiling is 3,000. No edits were made. The final audit must not claim zero conflicts while the stale maximum prose remains. The prior status GET remains a pre-J snapshot; no current-runtime conclusion is drawn from it.
+
+## Post-J reconciliation by root
+
+The three README allowance statements identified above are now corrected in the working tree: default 1,000, maximum 3,000, production configured to 3,000. Their earlier FALSE/PARTIALLY FALSE labels describe the historical preparation snapshot, not the corrected current text. Root independently read the native post-J service/revision/image/environment and recomputed all 25 runtime file hashes; `post_j_scope_baseline.json` records that PASS.
+
+The old invalid-configuration error wording remains under J's expressly bounded one-line runtime scope. It is recorded as a known implementation limitation, separate from the requested fifteen presentation-consistency rows. No further runtime edit is authorized here. This section still does not constitute the final timed Track F pass.

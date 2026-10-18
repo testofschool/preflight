@@ -1,0 +1,260 @@
+--- selected v6 PDF
++++ FAILED corrected v7 candidate PDF SHA0695c9768a0881349197ccbc53b0e614d1f2161f4083e4eddc093be804c49610
+@@ -7,142 +7,168 @@
+  Brief about the idea
+ 
+-Preflight: check an AI-video prompt before you pay
++You pay first. You find out later.
+ 
+-"you still burn credits on the failed attempt"
+-Trustpilot, Runway review, Sept 2026
++“you still burn credits
++on the failed attempt”
+ 
+ 
+-"Only one of the generations was usable for my purposes"
+-Trustpilot, Sept 2026
+-
+-
+-"I'm tired of wasting valuable credits on bad footage, I simply can't use"
+-Adobe Community
+-
+-
+-"I recommend a lo-res preview render before having to spend actual credits"
+-Adobe Community
+-
+-
+-
+-In a 2024 public benchmark (GenAI-Bench), 21% of 1,911 human pairwise votes rejected both videos.
+--Opportunities
+-
+-Refunds cover generation errors, not finished clips that are unusable.
+-Nothing sits before "pay".
+-
+-Who pays today
+-Per-generation buyers. Runway TrustScore 1.1/5 from 340 reviews (Sept 2026). Adobe feature
+-request: "I lose too many credits doing trial and error" (219 votes).
+-Who would buy a pre-pay step
+-Studios and agencies running generation pipelines. Generator platforms as an embedded step.
+-Built by a Seoul producer who ran generative-video pipelines for 2.5 years. Tested by a teammate
+-in India.
+-No revenue or market-size figure is claimed.
+--List of features offered by the solution
+-
+-Preflight: three rungs before you pay
+-Risk check (free)
+-Failure-risk estimate from 1,911 human votes, with the nearest historical prompts as evidence.
+-
+-Gemini rewrite
+-Kept only if the estimated risk drops.
+-
+-A still before a $3.20 Veo attempt
+-Veo 3.1, 8 s at $0.40/s (Google pricing page).
+-After generation: upload a clip for a Gemini second look. Its verdict is stored separately as
+-feedback.
+--Process flow diagram or Use-case diagram
+-
+-Every generator's loop: prompt → pay → generate → judge → re-prompt.
+-
+-Preflight adds a risk check, a lower-risk rewrite and a still before "pay".
++Trustpilot, Runway review
+ 
+ 
+ 
+ 
+-Saved original still                              Saved rewrite still
++“a lo-res preview
++render before having
++to spend actual
++credits”
++Adobe Community
++
++2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Conceptual photograph.
+ -Architecture diagram of the proposed solution
++Opportunities
+ 
+-Browser request and Google Cloud services
+-
+-
+-Browser          Cloud Run             Google ADK             Tools        Cloud Firestore
+-                  FastAPI             rewrite agent     Nearest prompts       1,911 votes
+-              asia-southeast1        Gemini 3.5 Flash     IRT difficulty   IRT parameters
+-                                        Vertex AI                             Feedback
+-                                                                             Saved stills
++A check belongs before pay.
++Refunds cover errors, not unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes.
++                                Preflight
+ 
+ 
+ 
+ 
+-                                     Agent Platform
+-                                       Sessions
+-
+-
+-Clip review: Gemini video understanding
+-Still preview: Gemini image model
+--Technologies to be used in the solution
+-
+-Cloud Run (FastAPI, asia-southeast1)
+-Hosts the browser request workflow.
+-
+-Google ADK + Gemini 3.5 Flash on Vertex AI
+-Rewrite agent with Agent Platform Sessions. Tools retrieve nearby prompts and IRT difficulty.
+-
+-Cloud Firestore
+-Stores 1,911 votes, IRT parameters, feedback and saved stills.
+-
+-Gemini video understanding + Gemini image model
+-Clip second look and still preview.
+-Active for sample prompts (saved stills); live generation limited
+--Snapshots of the prototype
+-
+-a spoon and a laptop: 46.8% → 15.8% estimated risk after the Gemini rewrite.
+-
+-Risk + why                                  Better prompt            Saved still
++       Prompt                                   Pay                          Generate   Judge   Re-prompt
+ 
+ 
+ 
+ 
+-                                                                     0 model calls
+-                                                                     $0.00
++Sources: Runway credit-refund policy, Trustpilot, Adobe Community preview request.
+++List of features offered by the solution
+ 
+-                                                                     A still cannot judge
+-                                                                     motion, flicker or
+-                                                                     timing.
++Three checks before you spend.
++
++
++
++
++Risk from 1,911 human votes
++Historical, uncalibrated
++
++
++                                                            Gemini rewrite, kept only if risk drops   A still before a $3.20 video
++                                                                                                      Motion untested
++Sources: demo/frames, saved spoon/laptop still, Google video pricing page.
+++Process flow diagram or Use-case diagram
++
++Paste. Check. Rewrite. Look.
++  1    Paste                                        2   Risk + why
++
++
++
++
++ 3     Better prompt                                4   Still / clip review
++
++
++
++
++Source: demo/frames and saved spoon/laptop still.
+++Architecture diagram of the proposed solution
++
++One request, a traceable check.
++
++
++                   Browser                                                Cloud Run    Google ADK
++                                                                           FastAPI    Gemini rewrite
++
++
++
++
++            Agent Platform                                                Firestore   Nearest prompts
++              Sessions                                                                      IRT
++
++
++Source: deployed application architecture and README service inventory.
+++Technologies to be used in the solution
++
++All on Google Cloud.
++
++
++
++     Cloud Run                     Firestore              Gemini 3.5    Google ADK       Agent     Gemini image +
++                                                             Flash                      Platform       video
++                                                          (Vertex AI)                   Sessions   understanding
++
++
++
++
++         Hosts                       Stores                Rewrites     Orchestrates   Remembers   Stills/reviews
++
++
++
++
++Source: README service inventory and deployed workflow.
+++Snapshots of the prototype
++
++See the estimate before the bill.
++Original prompt                                               Rewritten prompt
++
++
++
++
++                                46.8%                                            15.8%
++Uncalibrated prompt estimates. Scene changed. Saved stills cannot establish video improvement or judge motion.
++Sources: saved original and rewritten spoon/laptop outputs.
+  Prototype Performance report/Benchmarking
+ 
+-What we measured, and the limits
+-Held-out AUC 0.67
+-Historical signal, not a calibrated probability for today's models.
++Measured, with the limits shown.
+ 
+-Live image generation
+-60 test calls across three Gemini image models. Best 8/20 under shared capacity.
+-Judges see saved stills for the 5 samples, labelled "0 model calls · $0.00".
+ 
+-Clip-review accuracy: not measured
++                                                                                                 0 model calls
++                 0.67                                                          8/20
++                                                                     valid images, best probe       $0.00
++      held-out historical AUC                                         60 calls across probes
++
++                                                                                                per saved-image replay
++
++
++
++Risk uncalibrated. Clip accuracy unmeasured.
++Sources: held-out evaluation, live-image probes, saved-image cache receipts.
+  Additional Details/Future Development (if any)
+ 
++Felix builds. Sidhant: 10 QA points, 6 fixes.
++  F     IRT preprints, 2.5 years                                         S   shipped   Objects 30 → 18. Colours 23 → 7.
+ 
+-Next
++Earlier interface                                                       After teammate QA
+ 
+-Live stills with dedicated image capacity.
+ 
+-Separate tabs for check and clip review.
+ 
+-Non-English vote data before scoring non-English prompts.
+ 
+-On-page emphasis of the risk drop.
++Next: live stills, tabs, non-English.
++Sources: teammate QA, first-viewport audit, archival header captures.
+++Point–Reason–Example–Point
++
++Check before you pay.
++
++Generators bill
++attempts. Refunds skip
++unusable clips.
++
++
++Uncalibrated
++spoon/laptop estimate:
++46.8% → 15.8%, saved still
++before $3.20 video.
++
++
++Preflight: check before
++you pay.
++Sources: Runway refund policy, saved spoon/laptop example; conceptual photograph.
+  Provide links to your:
+ 

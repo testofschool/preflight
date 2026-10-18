@@ -1,0 +1,23 @@
+[
+  {
+    "font": "GoogleSansFlex.ttf",
+    "action": "unregister",
+    "scope": "session",
+    "success": true,
+    "error_pointer": null
+  },
+  {
+    "font": "GoogleSansFlexMedium.ttf",
+    "action": "unregister",
+    "scope": "session",
+    "success": true,
+    "error_pointer": null
+  },
+  {
+    "font": "GoogleSansFlexSemiBold.ttf",
+    "action": "unregister",
+    "scope": "session",
+    "success": true,
+    "error_pointer": null
+  }
+]

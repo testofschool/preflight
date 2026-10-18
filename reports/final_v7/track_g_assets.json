@@ -1,0 +1,259 @@
+[
+  {
+    "path": "docs/deck_assets/v7/concept_spent_attempts.jpg",
+    "source": "docs/deck_assets/v7/concept_spent_attempts.png",
+    "crop": null,
+    "square_crop": false,
+    "pixels": [
+      1600,
+      900
+    ],
+    "bytes": 204641,
+    "sha256": "07404da6388f0283f1c4f8ce58193534a69f86ea033e42c57b13cddb083db141"
+  },
+  {
+    "path": "docs/deck_assets/v7/concept_before_shot.jpg",
+    "source": "docs/deck_assets/v7/concept_before_shot.png",
+    "crop": null,
+    "square_crop": false,
+    "pixels": [
+      1600,
+      900
+    ],
+    "bytes": 194420,
+    "sha256": "ccf331822ae2037a65e7135eb296ccf99bbdb2bc5fb2d54acb4012d7e732f9ac"
+  },
+  {
+    "path": "docs/deck_assets/v7/risk_card_crop.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop": [
+      895,
+      110,
+      1214,
+      300
+    ],
+    "square_crop": false,
+    "pixels": [
+      319,
+      190
+    ],
+    "bytes": 8986,
+    "sha256": "fefc5f2ef1425859d6c9a7cf56ff7fb9e1d36ebc6d0366a91da78edb6e77c5ec"
+  },
+  {
+    "path": "docs/deck_assets/v7/better_prompt_crop.jpg",
+    "source": "demo/frames/04_better_prompt_copied.png",
+    "crop": [
+      1250,
+      110,
+      1598,
+      455
+    ],
+    "square_crop": false,
+    "pixels": [
+      348,
+      345
+    ],
+    "bytes": 25818,
+    "sha256": "51a922a69452bd5418e47fe4d2a694960d0a9378b08c34674b347e48b81085bc"
+  },
+  {
+    "path": "docs/deck_assets/v7/spoon_original_square.jpg",
+    "source": "docs/deck_assets/spoon_original.jpg",
+    "crop": null,
+    "square_crop": true,
+    "pixels": [
+      768,
+      768
+    ],
+    "bytes": 62415,
+    "sha256": "6397edea4eb32d4a6b89e70d603e9fa829c5a95ba12fee015fead1376da0d1d7"
+  },
+  {
+    "path": "docs/deck_assets/v7/paste_crop.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop": [
+      320,
+      119,
+      817,
+      278
+    ],
+    "square_crop": false,
+    "pixels": [
+      497,
+      159
+    ],
+    "bytes": 4474,
+    "sha256": "f9f9f2215b550190e00d018231db589b8a8897a4e22c50240f50ada964575ae0"
+  },
+  {
+    "path": "docs/deck_assets/v7/why_crop.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop": [
+      897,
+      566,
+      1230,
+      716
+    ],
+    "square_crop": false,
+    "pixels": [
+      333,
+      150
+    ],
+    "bytes": 15069,
+    "sha256": "2da52e803b3db82bbabf0061f1658bacbdcc6f902d26045a253b536e0aa0c244"
+  },
+  {
+    "path": "docs/deck_assets/v7/earlier_header_crop.jpg",
+    "source": "../evidence/preflight-20261016/final-cloud-desktop.png",
+    "crop": [
+      60,
+      0,
+      1380,
+      350
+    ],
+    "square_crop": false,
+    "pixels": [
+      1320,
+      350
+    ],
+    "bytes": 39968,
+    "sha256": "8d91e42355d00a7e12d9479b94392602795c0d2571025ab552f04d00720f5980"
+  },
+  {
+    "path": "docs/deck_assets/v7/current_header_crop.jpg",
+    "source": "reports/first_viewport_d_primary/first_viewport.png",
+    "crop": [
+      60,
+      0,
+      1380,
+      350
+    ],
+    "square_crop": false,
+    "pixels": [
+      1320,
+      350
+    ],
+    "bytes": 40770,
+    "sha256": "da011d2017b8dedd1225feee061bca99a5cc47ca004f66d3b30bef976d29e940"
+  },
+  {
+    "path": "docs/deck_assets/v7/risk_wide_round2.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop": [
+      885,
+      110,
+      1598,
+      300
+    ],
+    "square_crop": false,
+    "pixels": [
+      713,
+      190
+    ],
+    "bytes": 13066,
+    "sha256": "3241332ad88620a3f8d18a5151ad4ecd88147bcb93bf993190b267271c9a10e4"
+  },
+  {
+    "path": "docs/deck_assets/v7/why_tight_round2.jpg",
+    "source": "demo/frames/02_risk_and_score_details.png",
+    "crop": [
+      897,
+      620,
+      1230,
+      660
+    ],
+    "square_crop": false,
+    "pixels": [
+      333,
+      40
+    ],
+    "bytes": 6459,
+    "sha256": "8242102691d78ea81c06798f5c206262c8659927273ebe9c0b78944f244dd6fb"
+  },
+  {
+    "path": "docs/deck_assets/v7/rewrite_tight_round2.jpg",
+    "source": "demo/frames/04_better_prompt_copied.png",
+    "crop": [
+      1265,
+      225,
+      1580,
+      285
+    ],
+    "square_crop": false,
+    "pixels": [
+      315,
+      60
+    ],
+    "bytes": 8013,
+    "sha256": "21f176fd7519711a9cf92c4bd6f76fa422b1acd1bd0eb7cd97853d03165a6229"
+  },
+  {
+    "path": "docs/deck_assets/v7/still_wide_round2.jpg",
+    "source": "docs/deck_assets/spoon_original.jpg",
+    "crop": [
+      0,
+      300,
+      1344,
+      662
+    ],
+    "square_crop": false,
+    "pixels": [
+      1344,
+      362
+    ],
+    "bytes": 71109,
+    "sha256": "e5ee8b1494353092091f9d7ca71c4ea80d4774a05a306e8506492a2545734fdd"
+  },
+  {
+    "path": "docs/deck_assets/v7/spoon_rewrite_nologo_round2.jpg",
+    "source": "docs/deck_assets/spoon_rewritten.jpg",
+    "crop": [
+      240,
+      100,
+      1344,
+      728
+    ],
+    "square_crop": false,
+    "pixels": [
+      1104,
+      628
+    ],
+    "bytes": 76761,
+    "sha256": "775c3b093630e20bb2f465d52c40fe71261af902b0e76f7cf04adea250a67f84"
+  },
+  {
+    "path": "docs/deck_assets/v7/earlier_header_large_round2.jpg",
+    "source": "../evidence/preflight-20261016/final-cloud-desktop.png",
+    "crop": [
+      60,
+      0,
+      660,
+      340
+    ],
+    "square_crop": false,
+    "pixels": [
+      600,
+      340
+    ],
+    "bytes": 32673,
+    "sha256": "2ca5368e84e2d5be15f571f1536a32ba561129b36f15ac6b333a711a108e1192"
+  },
+  {
+    "path": "docs/deck_assets/v7/current_header_large_round2.jpg",
+    "source": "reports/first_viewport_d_primary/first_viewport.png",
+    "crop": [
+      60,
+      0,
+      660,
+      340
+    ],
+    "square_crop": false,
+    "pixels": [
+      600,
+      340
+    ],
+    "bytes": 32457,
+    "sha256": "7f8dc6c7107ad90260feaa8d2e4c5dc0ebb78a19711ddd490d77628c68a7af41"
+  }
+]

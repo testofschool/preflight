@@ -1,0 +1,494 @@
+{
+  "1": {
+    "source_slide": 1,
+    "template_exception": true
+  },
+  "2": {
+    "headline": "You pay first. You find out later.",
+    "body": [
+      "\u201cyou still burn credits on the failed attempt\u201d",
+      "\u201ca lo-res preview render before having to spend actual credits\u201d"
+    ],
+    "sources": [
+      "2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Conceptual photograph."
+    ],
+    "visual_regions": [
+      {
+        "kind": "raster picture",
+        "name": "Concept photo: spent attempts",
+        "x": 3.24,
+        "y": 1.76,
+        "w": 6.45,
+        "h": 3.65,
+        "asset": "docs/deck_assets/v7/concept_spent_attempts.jpg"
+      }
+    ],
+    "source_slide": 3,
+    "template_exception": false
+  },
+  "3": {
+    "headline": "A check belongs before pay.",
+    "body": [
+      "Refunds cover errors, not unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes.",
+      "Prompt",
+      "Pay",
+      "Generate",
+      "Judge",
+      "Re-prompt",
+      "Preflight"
+    ],
+    "sources": [
+      "Sources: Runway credit-refund policy, Trustpilot, Adobe Community preview request."
+    ],
+    "visual_regions": [
+      {
+        "kind": "native requested diagram/card",
+        "name": "Workflow Prompt",
+        "x": 0.43,
+        "y": 2.42,
+        "w": 1.61,
+        "h": 2.85
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Workflow Pay",
+        "x": 2.3000000000000003,
+        "y": 2.42,
+        "w": 1.61,
+        "h": 2.85
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Workflow Generate",
+        "x": 4.17,
+        "y": 2.42,
+        "w": 1.61,
+        "h": 2.85
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Workflow Judge",
+        "x": 6.04,
+        "y": 2.42,
+        "w": 1.61,
+        "h": 2.85
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Workflow Re-prompt",
+        "x": 7.91,
+        "y": 2.42,
+        "w": 1.61,
+        "h": 2.85
+      }
+    ],
+    "source_slide": 4,
+    "template_exception": false
+  },
+  "4": {
+    "headline": "Three checks before you spend.",
+    "body": [
+      "Risk from 1,911 human votes\nHistorical, uncalibrated",
+      "Gemini rewrite, kept only if risk drops",
+      "A still before a $3.20 video\nMotion untested"
+    ],
+    "sources": [
+      "Sources: demo/frames, saved spoon/laptop still, Google video pricing page."
+    ],
+    "visual_regions": [
+      {
+        "kind": "raster picture",
+        "name": "Real product risk crop",
+        "x": 0.43,
+        "y": 1.89,
+        "w": 3.0,
+        "h": 1.786833855799373,
+        "asset": "docs/deck_assets/v7/risk_card_crop.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Real product better-prompt crop",
+        "x": 3.5,
+        "y": 1.89,
+        "w": 3.0,
+        "h": 2.9741379310344827,
+        "asset": "docs/deck_assets/v7/better_prompt_crop.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Real saved still, square crop",
+        "x": 6.57,
+        "y": 1.89,
+        "w": 3.0,
+        "h": 3.0,
+        "asset": "docs/deck_assets/v7/spoon_original_square.jpg"
+      }
+    ],
+    "source_slide": 5,
+    "template_exception": false
+  },
+  "5": {
+    "headline": "Paste. Check. Rewrite. Look.",
+    "body": [
+      "1",
+      "Paste",
+      "2",
+      "Risk + why",
+      "3",
+      "Better prompt",
+      "4",
+      "Still / clip review"
+    ],
+    "sources": [
+      "Source: demo/frames and saved spoon/laptop still."
+    ],
+    "visual_regions": [
+      {
+        "kind": "raster picture",
+        "name": "Actual pasted prompt thumbnail",
+        "x": 0.43,
+        "y": 2.03,
+        "w": 4.55,
+        "h": 1.4556338028169014,
+        "asset": "docs/deck_assets/v7/paste_crop.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Actual risk thumbnail",
+        "x": 5.1,
+        "y": 2.03,
+        "w": 4.55,
+        "h": 1.2124824684431978,
+        "asset": "docs/deck_assets/v7/risk_wide_round2.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Actual why sentence thumbnail",
+        "x": 5.1,
+        "y": 3.29,
+        "w": 4.55,
+        "h": 0.5465465465465466,
+        "asset": "docs/deck_assets/v7/why_tight_round2.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Actual rewrite sentence thumbnail",
+        "x": 0.43,
+        "y": 4.09,
+        "w": 4.55,
+        "h": 0.8666666666666667,
+        "asset": "docs/deck_assets/v7/rewrite_tight_round2.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Actual saved still thumbnail",
+        "x": 5.1,
+        "y": 4.09,
+        "w": 4.55,
+        "h": 1.2255208333333332,
+        "asset": "docs/deck_assets/v7/still_wide_round2.jpg"
+      }
+    ],
+    "source_slide": 6,
+    "template_exception": false
+  },
+  "6": {
+    "headline": "One request, a traceable check.",
+    "body": [
+      "Browser",
+      "Cloud Run\nFastAPI",
+      "Google ADK\nGemini rewrite",
+      "Nearest prompts\nIRT",
+      "Firestore",
+      "Agent Platform\nSessions"
+    ],
+    "sources": [
+      "Source: deployed application architecture and README service inventory."
+    ],
+    "visual_regions": [
+      {
+        "kind": "native requested diagram/card",
+        "name": "Architecture node 0",
+        "x": 0.43,
+        "y": 2.0,
+        "w": 2.82,
+        "h": 1.44
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Architecture node 1",
+        "x": 3.59,
+        "y": 2.0,
+        "w": 2.82,
+        "h": 1.44
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Architecture node 2",
+        "x": 6.75,
+        "y": 2.0,
+        "w": 2.82,
+        "h": 1.44
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Architecture node 3",
+        "x": 6.75,
+        "y": 3.76,
+        "w": 2.82,
+        "h": 1.44
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Architecture node 4",
+        "x": 3.59,
+        "y": 3.76,
+        "w": 2.82,
+        "h": 1.44
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Architecture node 5",
+        "x": 0.43,
+        "y": 3.76,
+        "w": 2.82,
+        "h": 1.44
+      }
+    ],
+    "source_slide": 8,
+    "template_exception": false
+  },
+  "7": {
+    "headline": "All on Google Cloud.",
+    "body": [
+      "Cloud Run",
+      "Hosts",
+      "Firestore",
+      "Stores",
+      "Gemini 3.5 Flash\n(Vertex AI)",
+      "Rewrites",
+      "Google ADK",
+      "Orchestrates",
+      "Agent Platform\nSessions",
+      "Remembers",
+      "Gemini image +\nvideo understanding",
+      "Stills/reviews"
+    ],
+    "sources": [
+      "Source: README service inventory and deployed workflow."
+    ],
+    "visual_regions": [
+      {
+        "kind": "native requested diagram/card",
+        "name": "Technology chip 0",
+        "x": 0.43,
+        "y": 2.07,
+        "w": 1.43,
+        "h": 2.9
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Technology chip 1",
+        "x": 1.97,
+        "y": 2.07,
+        "w": 1.43,
+        "h": 2.9
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Technology chip 2",
+        "x": 3.5100000000000002,
+        "y": 2.07,
+        "w": 1.43,
+        "h": 2.9
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Technology chip 3",
+        "x": 5.05,
+        "y": 2.07,
+        "w": 1.43,
+        "h": 2.9
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Technology chip 4",
+        "x": 6.59,
+        "y": 2.07,
+        "w": 1.43,
+        "h": 2.9
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Technology chip 5",
+        "x": 8.13,
+        "y": 2.07,
+        "w": 1.43,
+        "h": 2.9
+      }
+    ],
+    "source_slide": 9,
+    "template_exception": false
+  },
+  "8": {
+    "headline": "See the estimate before the bill.",
+    "body": [
+      "Original prompt",
+      "Rewritten prompt",
+      "46.8%",
+      "15.8%",
+      "Uncalibrated prompt estimates. Scene changed. Saved stills cannot establish video improvement or judge motion."
+    ],
+    "sources": [
+      "Sources: saved original and rewritten spoon/laptop outputs."
+    ],
+    "visual_regions": [
+      {
+        "kind": "raster picture",
+        "name": "Actual saved original still; apparent edge retained",
+        "x": 0.43,
+        "y": 1.98,
+        "w": 4.51,
+        "h": 2.577142857142857,
+        "asset": "docs/deck_assets/spoon_original.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Actual saved rewrite still; faithful logo-free crop",
+        "x": 5.06,
+        "y": 1.98,
+        "w": 4.51,
+        "h": 2.5654710144927533,
+        "asset": "docs/deck_assets/v7/spoon_rewrite_nologo_round2.jpg"
+      }
+    ],
+    "source_slide": 11,
+    "template_exception": false
+  },
+  "9": {
+    "headline": "Measured, with the limits shown.",
+    "body": [
+      "0.67",
+      "held-out historical AUC",
+      "8/20",
+      "valid images, best probe\n60 calls across probes",
+      "0 model calls",
+      "$0.00",
+      "per saved-image replay",
+      "Risk uncalibrated. Clip accuracy unmeasured."
+    ],
+    "sources": [
+      "Sources: held-out evaluation, live-image probes, saved-image cache receipts."
+    ],
+    "visual_regions": [
+      {
+        "kind": "native requested diagram/card",
+        "name": "Metric card 0",
+        "x": 0.43,
+        "y": 2.0,
+        "w": 3.0,
+        "h": 3.15
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Metric card 1",
+        "x": 3.5100000000000002,
+        "y": 2.0,
+        "w": 3.0,
+        "h": 3.15
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Metric card 2",
+        "x": 6.59,
+        "y": 2.0,
+        "w": 3.0,
+        "h": 3.15
+      }
+    ],
+    "source_slide": 12,
+    "template_exception": false
+  },
+  "10": {
+    "headline": "Felix builds. Sidhant: 10 QA points, 6 fixes.",
+    "body": [
+      "F",
+      "IRT preprints, 2.5 years",
+      "S",
+      "shipped",
+      "Objects 30 \u2192 18. Colours 23 \u2192 7.",
+      "Earlier interface",
+      "After teammate QA",
+      "Next: live stills, tabs, non-English."
+    ],
+    "sources": [
+      "Sources: teammate QA, first-viewport audit, archival header captures."
+    ],
+    "visual_regions": [
+      {
+        "kind": "native requested diagram/card",
+        "name": "Felix initials card",
+        "x": 0.43,
+        "y": 1.77,
+        "w": 4.51,
+        "h": 0.37
+      },
+      {
+        "kind": "native requested diagram/card",
+        "name": "Sidhant initials and QA card",
+        "x": 5.06,
+        "y": 1.77,
+        "w": 4.51,
+        "h": 0.37
+      },
+      {
+        "kind": "raster picture",
+        "name": "Genuine earlier checked-state header crop",
+        "x": 0.43,
+        "y": 2.48,
+        "w": 4.51,
+        "h": 2.5556666666666663,
+        "asset": "docs/deck_assets/v7/earlier_header_large_round2.jpg"
+      },
+      {
+        "kind": "raster picture",
+        "name": "Genuine current initial-screen header crop",
+        "x": 5.06,
+        "y": 2.48,
+        "w": 4.51,
+        "h": 2.5556666666666663,
+        "asset": "docs/deck_assets/v7/current_header_large_round2.jpg"
+      }
+    ],
+    "source_slide": 13,
+    "template_exception": false
+  },
+  "11": {
+    "headline": "Check before you pay.",
+    "body": [
+      "Generators bill attempts. Refunds skip unusable clips.",
+      "Uncalibrated spoon/laptop estimate: 46.8% \u2192 15.8%, saved still before $3.20 video.",
+      "Preflight: check before you pay."
+    ],
+    "sources": [
+      "Sources: Runway refund policy, saved spoon/laptop example; conceptual photograph."
+    ],
+    "visual_regions": [
+      {
+        "kind": "raster picture",
+        "name": "Concept photo: before the shot",
+        "x": 3.24,
+        "y": 1.76,
+        "w": 6.45,
+        "h": 3.65,
+        "asset": "docs/deck_assets/v7/concept_before_shot.jpg"
+      }
+    ],
+    "source_slide": 17,
+    "template_exception": false
+  },
+  "12": {
+    "source_slide": 14,
+    "template_exception": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "FAILED G candidate only; not selected for submission",
+  "pdf_path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pdf",
+  "pdf_sha256": "0695c9768a0881349197ccbc53b0e614d1f2161f4083e4eddc093be804c49610",
+  "render_dpi": 50,
+  "render_pages": 12,
+  "selected_public_pdf": "docs/Preflight_pitch_deck.pdf",
+  "selected_public_pdf_sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0"
+}

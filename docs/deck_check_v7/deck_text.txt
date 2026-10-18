@@ -1,0 +1,173 @@
+Team Details
+
+    a. Team name: testofschool
+    b. Team leader name: Jung Min Kang
+    c. Problem Statement: People who pay per generation for AI video only
+       learn a clip is unusable after they have paid for it.
+Brief about the idea
+
+You pay first. You find out later.
+
+“you still burn credits
+on the failed attempt”
+
+
+Trustpilot, Runway review
+
+
+
+
+“a lo-res preview
+render before having
+to spend actual
+credits”
+Adobe Community
+
+2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Conceptual photograph.
+Opportunities
+
+A check belongs before pay.
+Refunds cover errors, not unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes.
+                                Preflight
+
+
+
+
+       Prompt                                   Pay                          Generate   Judge   Re-prompt
+
+
+
+
+Sources: Runway credit-refund policy, Trustpilot, Adobe Community preview request.
+List of features offered by the solution
+
+Three checks before you spend.
+
+
+
+
+Risk from 1,911 human votes
+Historical, uncalibrated
+
+
+                                                            Gemini rewrite, kept only if risk drops   A still before a $3.20 video
+                                                                                                      Motion untested
+Sources: demo/frames, saved spoon/laptop still, Google video pricing page.
+Process flow diagram or Use-case diagram
+
+Paste. Check. Rewrite. Look.
+  1    Paste                                        2   Risk + why
+
+
+
+
+ 3     Better prompt                                4   Still / clip review
+
+
+
+
+Source: demo/frames and saved spoon/laptop still.
+Architecture diagram of the proposed solution
+
+One request, a traceable check.
+
+
+                   Browser                                                Cloud Run    Google ADK
+                                                                           FastAPI    Gemini rewrite
+
+
+
+
+            Agent Platform                                                Firestore   Nearest prompts
+              Sessions                                                                      IRT
+
+
+Source: deployed application architecture and README service inventory.
+Technologies to be used in the solution
+
+All on Google Cloud.
+
+
+
+     Cloud Run                     Firestore              Gemini 3.5    Google ADK       Agent     Gemini image +
+                                                             Flash                      Platform       video
+                                                          (Vertex AI)                   Sessions   understanding
+
+
+
+
+         Hosts                       Stores                Rewrites     Orchestrates   Remembers   Stills/reviews
+
+
+
+
+Source: README service inventory and deployed workflow.
+Snapshots of the prototype
+
+See the estimate before the bill.
+Original prompt                                               Rewritten prompt
+
+
+
+
+                                46.8%                                            15.8%
+Uncalibrated prompt estimates. Scene changed. Saved stills cannot establish video improvement or judge motion.
+Sources: saved original and rewritten spoon/laptop outputs.
+Prototype Performance report/Benchmarking
+
+Measured, with the limits shown.
+
+
+                                                                                                 0 model calls
+                 0.67                                                          8/20
+                                                                     valid images, best probe       $0.00
+      held-out historical AUC                                         60 calls across probes
+
+                                                                                                per saved-image replay
+
+
+
+Risk uncalibrated. Clip accuracy unmeasured.
+Sources: held-out evaluation, live-image probes, saved-image cache receipts.
+Additional Details/Future Development (if any)
+
+Felix builds. Sidhant: 10 QA points, 6 fixes.
+  F     IRT preprints, 2.5 years                                         S   shipped   Objects 30 → 18. Colours 23 → 7.
+
+Earlier interface                                                       After teammate QA
+
+
+
+
+Next: live stills, tabs, non-English.
+Sources: teammate QA, first-viewport audit, archival header captures.
+Point–Reason–Example–Point
+
+Check before you pay.
+
+Generators bill
+attempts. Refunds skip
+unusable clips.
+
+
+Uncalibrated
+spoon/laptop estimate:
+46.8% → 15.8%, saved still
+before $3.20 video.
+
+
+Preflight: check before
+you pay.
+Sources: Runway refund policy, saved spoon/laptop example; conceptual photograph.
+Provide links to your:
+
+
+GitHub Public Repository
+https://github.com/testofschool/preflight
+
+Demo Video Link (3 Minutes)
+Pending public upload
+
+Final Product Link
+https://preflight-jcgro45veq-as.a.run.app
+

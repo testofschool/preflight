@@ -71,5 +71,73 @@
     "Status service booleans establish advertised readiness flags, not measured quality or rewrite model version.",
     "Status generations=0 is not a cumulative meter.",
     "Public YouTube URL is missing; D and URL-equality gate remain WAITING."
-  ]
+  ],
+  "updated_at_kst": "2026-10-18T18:33:27.805601+09:00",
+  "track_i_binding": {
+    "observed_at_kst": "2026-10-18T18:33:27.805601+09:00",
+    "head": "59fb23b262af480709461b648e84d26010e26060",
+    "selected_video": {
+      "path": "demo/preflight_demo_submission_3m.mp4",
+      "sha256": "710146243d0a87c9cb3195a3d21f1ba8fd7070d95936a27e65da093358e42565",
+      "bytes": 11708270,
+      "duration_seconds": 208.233333,
+      "facts_hash_matches": true
+    },
+    "caption_script": {
+      "path": "reports/final_v7/track_i_submission_caption_script.txt",
+      "sha256": "8565d8809ff60cc3297db1d2eb1c17e62b8d74ae678e938f84c59dd10e191f08"
+    },
+    "caption_manifest": {
+      "path": "reports/final_v7/track_i_submission_captions.json",
+      "sha256": "8b6ac612d21ab3bf1eccef76a16589f8ec2c84f82499775ed076faac9b1c3c4c"
+    },
+    "own_prompt": {
+      "prompt": "a dog catching a frisbee on a beach at sunset",
+      "original_risk_percent": 13.3,
+      "rewrite_risk_percent": 6.7,
+      "visual_frame": "demo/submission_check_v7/01m30s.png",
+      "context": "Actual Track I recapture; distinct from canonical spoon/laptop 46.8% -> 15.8%. Supersedes v6 own-prompt 13.3% -> 3.3% as the selected-video evidence."
+    },
+    "limited_message": {
+      "visual_frame": "demo/submission_check_v7/01m45s.png",
+      "observed": "Live stills are limited to the sample prompts during judging — shared Gemini image capacity. The risk check still works."
+    },
+    "verification_scope": "Selected actual MP4 bytes hashed and ffprobe checked; 1:30 and 1:45 supplied frame artifacts visually inspected. This is a preparation binding, not a final full-video or consistency verdict."
+  },
+  "pending_j_prose_audit": {
+    "state": "J IN PROGRESS; final runtime/source baseline must be bound after J completes",
+    "source_observed": {
+      "file": "cloud/store.py",
+      "default_line": 89,
+      "default_value": 1000,
+      "ceiling_line": 92,
+      "ceiling_value": 3000,
+      "error_text_line": 93,
+      "error_text_observed": "The total request limit must be between one and 1000",
+      "code_sha256": "6c134b90f67d6579ff0d2f2519b8477009c6563bdeeec693328940e9358b8ff3"
+    },
+    "readme_claims": [
+      {
+        "file": "README.md",
+        "line": 86,
+        "text": "**Max 20 checks/min shared** across the service, with a cumulative allowance of at most 1,000 admitted checks.",
+        "after_successful_j": "FALSE: cumulative maximum becomes 3,000, while the rolling 20/minute limit remains unchanged."
+      },
+      {
+        "file": "README.md",
+        "line": 196,
+        "text": "| `PREFLIGHT_TOTAL_REQUEST_LIMIT` | Cumulative admitted-check allowance; default and maximum are 1,000 |",
+        "after_successful_j": "PARTIALLY FALSE: default remains 1,000; maximum becomes 3,000."
+      },
+      {
+        "file": "README.md",
+        "line": 261,
+        "text": "Cloud mode uses a shared Firestore transaction to admit at most 20 checks per rolling minute across instances, with a cumulative allowance of at most 1,000 admitted checks.",
+        "after_successful_j": "FALSE: cumulative maximum becomes 3,000, while the rolling 20/minute limit remains unchanged."
+      }
+    ],
+    "submission_notes_result": "No cumulative-cap, ceiling or default claim found. Existing notes remain true for the scoped J change.",
+    "edits_performed": "None to README, notes, source, tests, runtime or root report.",
+    "final_audit_requirement": "Recheck these claims against J final source and runtime receipts; do not declare 0 conflicts while stale maximum prose remains."
+  }
 }

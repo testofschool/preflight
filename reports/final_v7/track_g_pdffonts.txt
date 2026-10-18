@@ -1,0 +1,6 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+BAAAAA+GoogleSansFlexSemiBold        TrueType          WinAnsi          yes yes yes    368  0
+CAAAAA+GoogleSansFlex                TrueType          WinAnsi          yes yes yes    378  0
+DAAAAA+GoogleSansFlexMedium          TrueType          WinAnsi          yes yes yes    383  0
+EAAAAA+LucidaGrande                  TrueType          WinAnsi          yes yes yes    373  0

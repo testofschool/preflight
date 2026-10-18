@@ -1,0 +1,28 @@
+{
+  "G_status": "FAIL after one consolidated correction round",
+  "selected_deck": "v6 fallback",
+  "candidate_files": [
+    {
+      "path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pdf",
+      "sha256": "0695c9768a0881349197ccbc53b0e614d1f2161f4083e4eddc093be804c49610",
+      "bytes": 916424
+    },
+    {
+      "path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pptx",
+      "sha256": "588f2f9aed4b7e3df9c5bb2edcd84e7748f603e14e2102b6559cf0a7614fb184",
+      "bytes": 2715215
+    }
+  ],
+  "selected_files": [
+    {
+      "path": "docs/Preflight_pitch_deck.pdf",
+      "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+      "bytes": 660305
+    },
+    {
+      "path": "docs/Preflight_pitch_deck.pptx",
+      "sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a",
+      "bytes": 1979965
+    }
+  ]
+}

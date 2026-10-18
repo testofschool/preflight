@@ -1,0 +1,90 @@
+{
+  "content_canon": "v6 byte-identical fallback plus user v7 map",
+  "format_canon": "official template, v6 OOXML and LibreOffice export, Google Sans Flex aliases",
+  "displayed_slide_parts": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    11,
+    12,
+    13,
+    17,
+    14
+  ],
+  "slide1_xml_byte_identical_to_v6": true,
+  "pptx_bytes": 2715215,
+  "pptx_sha256": "588f2f9aed4b7e3df9c5bb2edcd84e7748f603e14e2102b6559cf0a7614fb184",
+  "shared_resources": {
+    "ppt/slideMasters/": {
+      "count": 2,
+      "byte_identical": 2
+    },
+    "ppt/slideLayouts/": {
+      "count": 22,
+      "byte_identical": 22
+    },
+    "ppt/theme/": {
+      "count": 2,
+      "byte_identical": 2
+    },
+    "ppt/fonts/": {
+      "count": 6,
+      "byte_identical": 6
+    }
+  },
+  "all_original_media_preserved": true,
+  "changed_existing_parts": [
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/notesSlides/notesSlide6.xml",
+    "ppt/notesSlides/notesSlide8.xml",
+    "ppt/notesSlides/notesSlide9.xml",
+    "ppt/notesSlides/notesSlide11.xml",
+    "ppt/notesSlides/notesSlide12.xml",
+    "ppt/notesSlides/notesSlide13.xml",
+    "ppt/notesSlides/notesSlide14.xml",
+    "ppt/slides/slide3.xml",
+    "ppt/slides/_rels/slide3.xml.rels",
+    "ppt/slides/slide4.xml",
+    "ppt/slides/slide5.xml",
+    "ppt/slides/_rels/slide5.xml.rels",
+    "ppt/slides/slide6.xml",
+    "ppt/slides/_rels/slide6.xml.rels",
+    "ppt/slides/slide8.xml",
+    "ppt/slides/slide9.xml",
+    "ppt/slides/slide11.xml",
+    "ppt/slides/_rels/slide11.xml.rels",
+    "ppt/slides/slide12.xml",
+    "ppt/slides/slide13.xml",
+    "ppt/slides/_rels/slide13.xml.rels",
+    "ppt/slides/slide14.xml",
+    "ppt/slides/_rels/slide14.xml.rels",
+    "ppt/presentation.xml",
+    "ppt/_rels/presentation.xml.rels",
+    "[Content_Types].xml"
+  ],
+  "added_parts": [
+    "ppt/slides/_rels/slide17.xml.rels",
+    "ppt/notesSlides/notesSlide17.xml",
+    "ppt/notesSlides/_rels/notesSlide17.xml.rels",
+    "ppt/media/preflight_concept_spent_attempts.jpg",
+    "ppt/media/preflight_risk_card_crop.jpg",
+    "ppt/media/preflight_better_prompt_crop.jpg",
+    "ppt/media/preflight_spoon_original_square.jpg",
+    "ppt/media/preflight_paste_crop.jpg",
+    "ppt/media/preflight_risk_wide_round2.jpg",
+    "ppt/media/preflight_why_tight_round2.jpg",
+    "ppt/media/preflight_rewrite_tight_round2.jpg",
+    "ppt/media/preflight_still_wide_round2.jpg",
+    "ppt/media/preflight_spoon_rewrite_nologo_round2.jpg",
+    "ppt/media/preflight_earlier_header_large_round2.jpg",
+    "ppt/media/preflight_current_header_large_round2.jpg",
+    "ppt/media/preflight_concept_before_shot.jpg",
+    "ppt/slides/slide17.xml"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "read_only_verification": true,
+  "all_match": true,
+  "v6_shipping_files_byte_identical_to_frozen_fallback": true,
+  "files": [
+    {
+      "path": "docs/Preflight_pitch_deck.pdf",
+      "sha256": "7f056e614806efd563daee155bd8a0c0f194bbbec64edd6557e77c61a401aef0",
+      "bytes": 660305,
+      "matches_expected": true,
+      "pdfinfo": "Creator:         Impress\nProducer:        LibreOffice 26.2.4.2 (AARCH64)\nCreationDate:    Sun Oct 18 17:42:49 2026 KST\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           11\nEncrypted:       no\nPage size:       720 x 405.014 pts\nPage rot:        0\nFile size:       660305 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "pages": 11
+    },
+    {
+      "path": "docs/Preflight_pitch_deck.pptx",
+      "sha256": "00850a0a470aae3dbbc579e6cd22ed63748e10c7da247e8c2b4441bd60503a4a",
+      "bytes": 1979965,
+      "matches_expected": true
+    },
+    {
+      "path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pdf",
+      "sha256": "0695c9768a0881349197ccbc53b0e614d1f2161f4083e4eddc093be804c49610",
+      "bytes": 916424,
+      "matches_expected": true,
+      "pdfinfo": "Creator:         Impress\nProducer:        LibreOffice 26.2.4.2 (AARCH64)\nCreationDate:    Sun Oct 18 18:55:43 2026 KST\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          yes\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           12\nEncrypted:       no\nPage size:       720 x 405.014 pts\nPage rot:        0\nFile size:       916424 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "pages": 12
+    },
+    {
+      "path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pptx",
+      "sha256": "588f2f9aed4b7e3df9c5bb2edcd84e7748f603e14e2102b6559cf0a7614fb184",
+      "bytes": 2715215,
+      "matches_expected": true
+    }
+  ],
+  "selection": "Overall G FAIL after separate visual review; v6 ships. Corrected v7 technical PASS remains bound to preserved candidate hashes, not docs paths after restore."
+}

@@ -1,0 +1,30 @@
+{
+  "head": "8d155f0c0f15db2513df294cb09f7999c57e5dff",
+  "rows": [
+    {
+      "target": 1,
+      "normalization": "NFC",
+      "matches": 0,
+      "grep_exit": 1
+    },
+    {
+      "target": 1,
+      "normalization": "NFD",
+      "matches": 0,
+      "grep_exit": 1
+    },
+    {
+      "target": 2,
+      "normalization": "NFC",
+      "matches": 0,
+      "grep_exit": 1
+    },
+    {
+      "target": 2,
+      "normalization": "NFD",
+      "matches": 0,
+      "grep_exit": 1
+    }
+  ],
+  "PASS": true
+}

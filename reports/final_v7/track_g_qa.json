@@ -1,0 +1,411 @@
+{
+  "pdf": {
+    "path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pdf",
+    "bytes": 916424,
+    "sha256": "0695c9768a0881349197ccbc53b0e614d1f2161f4083e4eddc093be804c49610",
+    "pages": 12
+  },
+  "pptx": {
+    "path": "reports/final_v7/candidate_v7/Preflight_v7_FAILED_G.pptx",
+    "bytes": 2715215,
+    "sha256": "588f2f9aed4b7e3df9c5bb2edcd84e7748f603e14e2102b6559cf0a7614fb184"
+  },
+  "word_count_method": "Whitespace token count, stricter than lexical word count for standalone arrows, plus signs and slashes; numbers count as tokens. Includes every authored content label and every explanatory caveat. Filled template cover/link values are counted as 24/5; organizer labels/sections are excluded. Only pure citations and quote/image attributions are excluded. Embedded screenshot text is separately real product evidence, not additional authored prose.",
+  "rows": [
+    {
+      "page": 1,
+      "actual_raster_area_render_percent": 0.0,
+      "template_exception": true,
+      "headline_words": 0,
+      "body_words": 24,
+      "picture_visual_area_render_percent": 0.0,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 2,
+      "actual_raster_area_render_percent": 41.92,
+      "template_exception": false,
+      "headline_words": 7,
+      "body_words": 18,
+      "picture_visual_area_render_percent": 41.92,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "2024",
+          "class": "whitelisted quantitative token",
+          "context": "d actual credits\u201d Adobe Community  2024 GenAI-Bench: 21% of 1,911 human votes reject"
+        },
+        {
+          "token": "21%",
+          "class": "whitelisted quantitative token",
+          "context": "Adobe Community  2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. C"
+        },
+        {
+          "token": "1,911",
+          "class": "whitelisted quantitative token",
+          "context": "ommunity  2024 GenAI-Bench: 21% of 1,911 human votes rejected both videos. Conceptual"
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": "UNREPORTED",
+      "mechanical_pass": true
+    },
+    {
+      "page": 3,
+      "actual_raster_area_render_percent": 0.0,
+      "template_exception": false,
+      "headline_words": 5,
+      "body_words": 22,
+      "picture_visual_area_render_percent": 40.77,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "1.1/5",
+          "class": "whitelisted quantitative token",
+          "context": "ot unusable finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 vo"
+        },
+        {
+          "token": "340",
+          "class": "whitelisted quantitative token",
+          "context": "able finished clips. Runway 1.1/5 (340 reviews). Adobe preview request: 219 votes. "
+        },
+        {
+          "token": "219",
+          "class": "whitelisted quantitative token",
+          "context": "0 reviews). Adobe preview request: 219 votes.                                 Prefl"
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 4,
+      "actual_raster_area_render_percent": 41.38,
+      "template_exception": false,
+      "headline_words": 5,
+      "body_words": 22,
+      "picture_visual_area_render_percent": 41.38,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "1,911",
+          "class": "whitelisted quantitative token",
+          "context": "ks before you spend.     Risk from 1,911 human votes Historical, uncalibrated        "
+        },
+        {
+          "token": "3.20",
+          "class": "whitelisted quantitative token",
+          "context": " if risk drops   A still before a $3.20 video                                       "
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 5,
+      "actual_raster_area_render_percent": 42.66,
+      "template_exception": false,
+      "headline_words": 4,
+      "body_words": 14,
+      "picture_visual_area_render_percent": 42.66,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "1",
+          "class": "explicit user-map structural process ordinal identifier",
+          "context": "am  Paste. Check. Rewrite. Look.   1    Paste                                    "
+        },
+        {
+          "token": "2",
+          "class": "explicit user-map structural process ordinal identifier",
+          "context": "                                   2   Risk + why      3     Better prompt       "
+        },
+        {
+          "token": "3",
+          "class": "explicit user-map structural process ordinal identifier",
+          "context": "               2   Risk + why      3     Better prompt                           "
+        },
+        {
+          "token": "4",
+          "class": "explicit user-map structural process ordinal identifier",
+          "context": "mpt                                4   Still / clip review     Source: demo/frame"
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 6,
+      "actual_raster_area_render_percent": 0.0,
+      "template_exception": false,
+      "headline_words": 5,
+      "body_words": 15,
+      "picture_visual_area_render_percent": 43.0,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 7,
+      "actual_raster_area_render_percent": 0.0,
+      "template_exception": false,
+      "headline_words": 4,
+      "body_words": 24,
+      "picture_visual_area_render_percent": 44.12,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "3.5",
+          "class": "explicit user-map model identifier Gemini 3.5 Flash",
+          "context": "     Firestore              Gemini 3.5    Google ADK       Agent     Gemini image +"
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 8,
+      "actual_raster_area_render_percent": 41.26,
+      "template_exception": false,
+      "headline_words": 6,
+      "body_words": 20,
+      "picture_visual_area_render_percent": 41.26,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "46.8%",
+          "class": "whitelisted quantitative token",
+          "context": "                                   46.8%                                            1"
+        },
+        {
+          "token": "15.8%",
+          "class": "whitelisted quantitative token",
+          "context": "                                   15.8% Uncalibrated prompt estimates. Scene changed"
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 9,
+      "actual_raster_area_render_percent": 0.0,
+      "template_exception": false,
+      "headline_words": 5,
+      "body_words": 25,
+      "picture_visual_area_render_percent": 50.43,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "0",
+          "class": "whitelisted quantitative token",
+          "context": "                                   0 model calls                  0.67           "
+        },
+        {
+          "token": "0.67",
+          "class": "whitelisted quantitative token",
+          "context": "    0 model calls                  0.67                                             "
+        },
+        {
+          "token": "8/20",
+          "class": "whitelisted quantitative token",
+          "context": "                                   8/20                                             "
+        },
+        {
+          "token": "0.00",
+          "class": "whitelisted quantitative token",
+          "context": "   valid images, best probe       $0.00       held-out historical AUC               "
+        },
+        {
+          "token": "60",
+          "class": "whitelisted quantitative token",
+          "context": "                                   60 calls across probes                         "
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 10,
+      "actual_raster_area_render_percent": 40.94,
+      "template_exception": false,
+      "headline_words": 8,
+      "body_words": 25,
+      "picture_visual_area_render_percent": 46.7,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "10",
+          "class": "whitelisted quantitative token",
+          "context": "t (if any)  Felix builds. Sidhant: 10 QA points, 6 fixes.   F     IRT preprints, 2"
+        },
+        {
+          "token": "6",
+          "class": "whitelisted quantitative token",
+          "context": "lix builds. Sidhant: 10 QA points, 6 fixes.   F     IRT preprints, 2.5 years     "
+        },
+        {
+          "token": "2.5",
+          "class": "whitelisted quantitative token",
+          "context": "s, 6 fixes.   F     IRT preprints, 2.5 years                                       "
+        },
+        {
+          "token": "30",
+          "class": "whitelisted quantitative token",
+          "context": "             S   shipped   Objects 30 \u2192 18. Colours 23 \u2192 7.  Earlier interface    "
+        },
+        {
+          "token": "18",
+          "class": "whitelisted quantitative token",
+          "context": "        S   shipped   Objects 30 \u2192 18. Colours 23 \u2192 7.  Earlier interface         "
+        },
+        {
+          "token": "23",
+          "class": "whitelisted quantitative token",
+          "context": "shipped   Objects 30 \u2192 18. Colours 23 \u2192 7.  Earlier interface                     "
+        },
+        {
+          "token": "7",
+          "class": "whitelisted quantitative token",
+          "context": "ed   Objects 30 \u2192 18. Colours 23 \u2192 7.  Earlier interface                         "
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    },
+    {
+      "page": 11,
+      "actual_raster_area_render_percent": 41.92,
+      "template_exception": false,
+      "headline_words": 4,
+      "body_words": 23,
+      "picture_visual_area_render_percent": 41.92,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "46.8%",
+          "class": "whitelisted quantitative token",
+          "context": "ncalibrated spoon/laptop estimate: 46.8% \u2192 15.8%, saved still before $3.20 video.   P"
+        },
+        {
+          "token": "15.8%",
+          "class": "whitelisted quantitative token",
+          "context": "ted spoon/laptop estimate: 46.8% \u2192 15.8%, saved still before $3.20 video.   Preflight"
+        },
+        {
+          "token": "3.20",
+          "class": "whitelisted quantitative token",
+          "context": "46.8% \u2192 15.8%, saved still before $3.20 video.   Preflight: check before you pay. So"
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": "UNREPORTED",
+      "mechanical_pass": true
+    },
+    {
+      "page": 12,
+      "actual_raster_area_render_percent": 0.0,
+      "template_exception": true,
+      "headline_words": 0,
+      "body_words": 5,
+      "picture_visual_area_render_percent": 0.0,
+      "render_pixels": [
+        500,
+        282
+      ],
+      "area_method": "Union of actual main raster-picture and explicitly requested native diagram/card rectangles mapped to 50-dpi render pixels. Overlaps counted once. Header/footer excluded.",
+      "banned_hits": [],
+      "numbers": [
+        {
+          "token": "3",
+          "class": "unchanged template field label (3 Minutes)",
+          "context": "school/preflight  Demo Video Link (3 Minutes) Pending public upload  Final Produc"
+        },
+        {
+          "token": "45",
+          "class": "native URL identifier digits",
+          "context": "roduct Link https://preflight-jcgro45veq-as.a.run.app "
+        }
+      ],
+      "unsupported_numeric_count": 0,
+      "generated_image_model": null,
+      "mechanical_pass": true
+    }
+  ],
+  "banned_total": 0,
+  "unsupported_numeric_total": 0,
+  "mechanical_pass": true,
+  "font_output": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBAAAAA+GoogleSansFlexSemiBold        TrueType          WinAnsi          yes yes yes    368  0\nCAAAAA+GoogleSansFlex                TrueType          WinAnsi          yes yes yes    378  0\nDAAAAA+GoogleSansFlexMedium          TrueType          WinAnsi          yes yes yes    383  0\nEAAAAA+LucidaGrande                  TrueType          WinAnsi          yes yes yes    373  0\n",
+  "model_generations": 2,
+  "generated_model_exact_return": "UNREPORTED",
+  "product_image_model_calls": 0,
+  "claim_boundary": "Mechanical checks only. Author and independent visual reviews are recorded separately.",
+  "artifact_status": "FAILED G candidate evidence; selected deliverable is v6 fallback"
+}
